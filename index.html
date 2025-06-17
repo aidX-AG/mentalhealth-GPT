@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mentalhealth-GPT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+  <div class="min-h-screen flex flex-col items-center justify-center p-8">
+    <h1 class="text-3xl font-bold mb-6">🧠 Verschlüsselter Upload</h1>
+    
+    <form id="uploadForm" class="w-full max-w-md bg-gray-800 rounded-lg p-6 space-y-4">
+      <input type="file" id="fileInput" class="w-full text-white bg-gray-700 p-2 rounded" required>
+      
+      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+        Datei verschlüsselt hochladen
+      </button>
+
+      <p id="status" class="text-sm text-gray-400 mt-2"></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const file = document.getElementById('fileInput').files[0];
+      if (!file) return;
+
+      document.getElementById('status').textContent = '🔒 Verschlüsselung läuft...';
+
+      const reader = new FileReader();
+      reader.onload = function () {
+        // Simulierter AES-Verschlüsselungsschritt (Platzhalter)
+        const encrypted = btoa(reader.result); // NICHT sicher, nur Demo!
+        console.log("Encrypted (Base64):", encrypted);
+        document.getElementById('status').textContent = '✅ Verschlüsselt. Upload bereit (folgt).';
+      };
+      reader.readAsBinaryString(file);
+    });
+  </script>
+</body>
+</html>
