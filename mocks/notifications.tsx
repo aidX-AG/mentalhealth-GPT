@@ -9,7 +9,7 @@ export const notifications = [
             </>
         ),
         time: "1 mins. ago",
-        category: "UI8 Production",
+        category: "Therapies",
         online: true,
         new: true,
         url: "/",
@@ -24,7 +24,7 @@ export const notifications = [
             </>
         ),
         time: "5 mins. ago",
-        category: "UI8 Production",
+        category: "Therapies",
         online: true,
         new: true,
         url: "/",
@@ -39,7 +39,7 @@ export const notifications = [
             </>
         ),
         time: "20 mins. ago",
-        category: "UI8 Production",
+        category: "Therapies",
         online: false,
         new: false,
         url: "/",
@@ -54,7 +54,7 @@ export const notifications = [
             </>
         ),
         time: "56 mins. ago",
-        category: "UI8 Production",
+        category: "Therapies",
         online: true,
         new: false,
         url: "/",
@@ -69,7 +69,7 @@ export const notifications = [
             </>
         ),
         time: "2 hours ago",
-        category: "UI8 Production",
+        category: "Therapies",
         online: true,
         new: false,
         url: "/",

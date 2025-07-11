@@ -1,14 +1,14 @@
 export const chatList = [
     {
         id: "0",
-        title: "Welcome",
+        title: "Transcripts",
         counter: 48,
         color: "#404446",
         url: "/generation-socials-post",
     },
     {
         id: "1",
-        title: "UI8 Production",
+        title: "Therapies",
         counter: 16,
         color: "#8E55EA",
         url: "/",
