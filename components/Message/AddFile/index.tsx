@@ -30,7 +30,7 @@ const AddFile = ({}: AddFileProps) => {
                         <div className="flex justify-center items-center w-16 h-16 mx-auto mb-6 bg-n-1 rounded-full">
                             <Icon name="upload" />
                         </div>
-                        <div className="h5">Upload to Brainwave</div>
+                        <div className="h5">Upload to mentalhealthGPT</div>
                         <div className="base2">
                             You can add prompts after uploading.
                         </div>
