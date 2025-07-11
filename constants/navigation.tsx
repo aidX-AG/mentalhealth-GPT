@@ -5,28 +5,34 @@ export const navigation = [
         color: "#8E55EA",
         url: "/therapy-support",
     },
-    {
-        title: "Video Analysis",
-        icon: "play-circle",
-        color: "#D84C10",
-        url: "/video-generation",
-    },
-    {
-        title: "Documentation & Reporting",
-        icon: "trophy",
-        color: "#0084FF",
-        url: "/education-feedback",
+    { 
+        title: "Supervision & Training",
+        icon: "lightbulb",
+        color: "#FACC15",
+        url: "/supervision-training",
     },
     {
         title: "Diagnosis Support",
         icon: "codepen",
         color: "#52BA69",
-        url: "/code-generation",
+        url: "/diagnosis-support",
     },
     {
         title: "Audio Transcription & Notes",
         icon: "music-note",
         color: "#E68A1D",
-        url: "/audio-generation",
+        url: "/audio-transcription",
+    },
+    {
+        title: "Video Analysis",
+        icon: "play-circle",
+        color: "#D84C10",
+        url: "/video-analysis",  
+    },
+    {
+        title: "Documentation & Reporting",
+        icon: "trophy",
+        color: "#0084FF",
+        url: "/documentation-reports",
     },
 ];
