@@ -36,7 +36,7 @@ const Message = ({
                         autoFocus
                         value={value}
                         onChange={onChange}
-                        placeholder={placeholder || "Ask Brainwave anything"}
+                        placeholder={placeholder || "Ask mentalhealthGPT anything"}
                     />
                     {value === "" ? (
                         <button className={`${stylesButton}`}>
