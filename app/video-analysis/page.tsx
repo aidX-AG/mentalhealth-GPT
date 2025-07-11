@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import VideoGenerationPage from "@/templates/VideoGenerationPage";
+import VideoAnalysisPage from "@/templates/VideoAnalysisPage";
 
-const VideoGeneration: NextPage = () => {
-    return <VideoGenerationPage />;
+const VideoAnalysis: NextPage = () => {
+    return <VideoAnalysisPage />;
 };
 
-export default VideoGeneration;
+export default VideoAnalysis;
