@@ -12,7 +12,7 @@ const SupervisionTrainingPage = () => {
 
     return (
         <Layout>
-            <Chat title="Supervision & Training Session">
+            <Chat title="Supervision & Training">
                 <Question
                     document="session-case.pdf"
                     content="Please review this supervision case and provide constructive feedback for the trainee. Focus on communication, assessment quality, and risk handling."
