@@ -6,23 +6,25 @@ import Chat from "@/components/Chat";
 import Message from "@/components/Message";
 import Question from "@/components/Question";
 import Answer from "@/components/Answer";
-import Code from "@/components/Code";
 
-import { writeCodeChat } from "@/mocks/writeCodeChat";
-
-const CodeGenerationPage = () => {
+const DiagnosisSupportPage = () => {
     const [message, setMessage] = useState<string>("");
 
     return (
         <Layout>
-            <Chat title="Create welcome form">
+            <Chat title="Diagnosis Support">
                 <Question
-                    content="Write code (HTML, CSS and JS) for a simple welcome page and form with 3 input fields and a dropdown with 2 buttons, cancel and send, then run test with my Codepen project."
+                    document="diagnosis-case.pdf"
+                    content="Please review this clinical case and suggest possible diagnoses. Highlight any important symptoms or behavioral patterns."
                     time="Just now"
                 />
-                <Answer loading />
-                <Answer time="Just now">
-                    <Code items={writeCodeChat} />
+                <Answer>
+                    <div className="mt-6 p-6 bg-green-100 border-l-4 border-green-500 text-green-900 rounded-lg shadow-md">
+                        <p className="text-lg leading-relaxed font-medium">
+                            🚧 The AI functionality for <strong>Diagnosis Support</strong> is currently under development. <br />
+                            It will gradually become available as we integrate specialized models to support mental health diagnostics.
+                        </p>
+                    </div>
                 </Answer>
             </Chat>
             <Message
@@ -33,4 +35,4 @@ const CodeGenerationPage = () => {
     );
 };
 
-export default CodeGenerationPage;
+export default DiagnosisSupportPage;
