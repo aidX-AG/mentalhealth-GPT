@@ -6,50 +6,38 @@ import Chat from "@/components/Chat";
 import Message from "@/components/Message";
 import Question from "@/components/Question";
 import Answer from "@/components/Answer";
-import Services from "@/components/Services";
-import Audio from "@/components/Audio";
 
-const AudioGenerationPage = () => {
+const AudioTranscriptionPage = () => {
     const [message, setMessage] = useState<string>("");
 
     return (
         <Layout>
-            <Chat title="Hello">
+            <Chat title="Audio Transcription & Notes">
                 <Question content="Hello 🙂" time="Just now" />
-                <Answer>Hello! How can I help you today?</Answer>
+                <Answer>Hello! How can I assist you with audio transcription today?</Answer>
+
                 <Question content="Show me what you can do" time="Just now" />
-                <Answer loading />
+
                 <Answer time="Just now">
-                    <Services />
+                    <p className="text-base leading-relaxed">
+                        Our AI can securely transcribe audio recordings from therapy sessions, structure the content,
+                        and generate clear, professional summaries — all with end-to-end encryption.
+                        <br />
+                        Simply upload a recorded session. All patient information remains strictly confidential and is protected 
+                        by strong encryption directly in your browser, during transfer, and back again — ensuring full privacy at every step.
+                    </p>
                 </Answer>
-                <Question
-                    content={
-                        <>
-                            <p>Text to speech voice:</p>
-                            <p>
-                                Introducing &quot;Brainwave&quot;, an AI-powered
-                                product that can turn any written script into
-                                high-quality audio. Using advanced natural
-                                language processing and text-to-speech
-                                technology, Speechify can generate realistic and
-                                natural-sounding voices in multiple languages,
-                                allowing you to create audiobooks, podcasts, and
-                                other audio content with ease. Additionally,
-                                Speechify offers a wide range of customization
-                                options, including different voices, speaking
-                                styles, and even emotions, so you can create
-                                audio that perfectly matches your brand or
-                                project. With Speechify, creating audio content
-                                has never been easier.
-                            </p>
-                        </>
-                    }
-                    time="Just now"
-                />
+
                 <Answer time="Just now">
-                    <Audio />
+                    <div className="mt-6 p-6 bg-yellow-100 border-l-4 border-yellow-400 text-yellow-800 rounded-lg shadow-md">
+                        <p className="text-lg leading-relaxed font-medium">
+                            🚧 The AI model for <strong>Audio Transcription & Notes</strong> is currently under development. <br />
+                            It will soon provide accurate transcription and note-taking support for clinical documentation.
+                        </p>
+                    </div>
                 </Answer>
             </Chat>
+
             <Message
                 value={message}
                 onChange={(e: any) => setMessage(e.target.value)}
@@ -58,4 +46,4 @@ const AudioGenerationPage = () => {
     );
 };
 
-export default AudioGenerationPage;
+export default AudioTranscriptionPage;
