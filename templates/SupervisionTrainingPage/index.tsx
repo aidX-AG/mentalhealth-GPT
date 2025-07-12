@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import Layout from "@/components/Layout";
 import Chat from "@/components/Chat";
 import Question from "@/components/Question";
 import Answer from "@/components/Answer";
+import Message from "@/components/Message";
 
 const SupervisionTrainingPage = () => {
+    const [message, setMessage] = useState<string>("");
+
     return (
         <Layout>
             <Chat title="Supervision & Training Session">
@@ -24,9 +28,13 @@ const SupervisionTrainingPage = () => {
                     </div>
                 </Answer>
             </Chat>
+
+            <Message
+                value={message}
+                onChange={(e: any) => setMessage(e.target.value)}
+            />
         </Layout>
     );
 };
 
 export default SupervisionTrainingPage;
-
