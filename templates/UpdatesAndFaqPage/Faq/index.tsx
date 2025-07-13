@@ -32,7 +32,7 @@ const Faq = ({ items }: FaqProps) => (
             <div className="mb-8 base1 text-n-4">
                 Let’s ask the smartest AI Chat
             </div>
-            <button className="btn-blue">Ask Brainwave</button>
+            <button className="btn-blue">Ask mentalhealthGPT</button>
         </div>
     </>
 );
