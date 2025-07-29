@@ -25,7 +25,7 @@ const ApplicationsPage = () => {
                     Applications
                 </div>
                 <div className="mb-8 body1 text-n-4 md:mb-6 md:body1S">
-                    Browse and install apps to simplify your life with Brainwave
+                    Browse and install apps to simplify your life with mentalhealthGPT
                 </div>
                 <form
                     className="mb-8"
