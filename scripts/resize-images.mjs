@@ -10,7 +10,7 @@ const processImage = async (file) => {
   const base = path.basename(file, ext);
 
   // Skip already resized images (e.g. hero-640.jpg)
-  if (base.match(/-\d+$/)) return;
+  if (base.match(/-(640|1280|1920)$/)) return;
 
   const inputPath = path.join(inputDir, file);
   const buffer = await fs.readFile(inputPath);

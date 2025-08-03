@@ -3,11 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    // Startet die Entwicklungsumgebung (lokal, mit Hot Reloading)
     "dev": "next dev",
+
+    // Erstellt den Produktionsbuild (ohne Export)
     "build": "next build",
+
+    // Exportiert die App als statische Website in /out
     "export": "next export",
+
+    // Startet die App im Produktionsmodus (z. B. bei Hosting mit Node.js)
     "start": "next start",
-    "lint": "next lint"
+
+    // Führt Linting (Code-Qualitätsprüfung) aus
+    "lint": "next lint",
+
+    // 📦 Neues Skript: Skaliert automatisch alle Bilder im Ordner public/images
+    // für responsive Darstellung (z. B. hero.jpg → hero-640.jpg, hero-1280.jpg etc.)
+    "resize-images": "node scripts/resize-images.mjs"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
@@ -35,6 +48,10 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-textarea-autosize": "^8.4.0",
     "scroll-lock": "^2.1.5",
+
+    // 📷 Sharp wird verwendet zur Bildskalierung im resize-images Script
+    "sharp": "^0.34.3",
+
     "tailwind-merge": "^1.10.0",
     "tailwind-scrollbar": "^3.0.0"
   },
