@@ -9,6 +9,7 @@ interface ResponsiveImageProps extends React.ImgHTMLAttributes<HTMLImageElement>
     src: string;
     width: number;
   }[];
+  fill?: boolean; // ➕ Neu: Optionales fill
 }
 
 const Image = ({
@@ -18,6 +19,7 @@ const Image = ({
   width,
   height,
   sources = [],
+  fill = false,
   ...rest
 }: ResponsiveImageProps) => {
   const [loaded, setLoaded] = useState(false);
@@ -36,8 +38,9 @@ const Image = ({
       srcSet={srcSet}
       sizes="(max-width: 768px) 100vw, 768px"
       alt={alt}
-      width={width}
-      height={height}
+      width={fill ? undefined : width}
+      height={fill ? undefined : height}
+      style={fill ? { width: "100%", height: "100%", objectFit: "cover" } : undefined}
       onLoad={() => setLoaded(true)}
       {...rest}
     />
