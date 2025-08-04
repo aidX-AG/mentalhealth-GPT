@@ -41,7 +41,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Weglot Integration */}
+        {/* 🌍 hreflang Links für Sprachversionen */}
+        <link rel="alternate" hrefLang="en" href="https://mentalhealth-gpt.ch" />
+        <link rel="alternate" hrefLang="de" href="https://de.mentalhealth-gpt.ch" />
+        <link rel="alternate" hrefLang="fr" href="https://fr.mentalhealth-gpt.ch" />
+
+        {/* 🌐 Weglot Integration mit auto_switch */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -51,7 +56,10 @@ export default function RootLayout({
                 s.async=true;
                 s.src="https://cdn.weglot.com/weglot.min.js";
                 s.onload=function(){
-                  Weglot.initialize({ api_key: "wg_d9cb54c80d40ded6bb70278dc06ee7f97" });
+                  Weglot.initialize({
+                    api_key: "wg_d9cb54c80d40ded6bb70278dc06ee7f97",
+                    auto_switch: true
+                  });
                 };
                 document.head.appendChild(s);
               })();
@@ -59,7 +67,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-7 antialiased md:bg-n-1 dark:text-n-1 dark:md:bg-n-6`}>
+      <body
+        className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-7 antialiased md:bg-n-1 dark:text-n-1 dark:md:bg-n-6`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
