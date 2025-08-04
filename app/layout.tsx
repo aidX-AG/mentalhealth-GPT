@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Karla } from "next/font/google";
 import "./globals.css";
-import WeglotStatic from "../components/WeglotStatic";
+import WeglotScript from "../components/WeglotScript";
 
 const inter = Inter({
   weight: ["500", "600", "700"],
@@ -32,7 +32,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className="invisible" // 🚫 wird durch WeglotStatic entfernt
+      className="invisible" // 🚫 wird durch WeglotScript entfernt
     >
       <head>
         <meta charSet="utf-8" />
@@ -73,7 +73,7 @@ export default function RootLayout({
       <body
         className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-7 antialiased md:bg-n-1 dark:text-n-1 dark:md:bg-n-6`}
       >
-        <WeglotStatic />
+        <WeglotScript />
         {children}
       </body>
     </html>
