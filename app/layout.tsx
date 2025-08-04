@@ -46,22 +46,38 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="de" href="https://de.mentalhealth-gpt.ch" />
         <link rel="alternate" hrefLang="fr" href="https://fr.mentalhealth-gpt.ch" />
 
-        {/* 🌐 Weglot Integration mit auto_switch */}
+        {/* 🌐 Weglot Integration mit Hydration-Fix */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function(){
-                var s=document.createElement("script");
-                s.type="text/javascript";
-                s.async=true;
-                s.src="https://cdn.weglot.com/weglot.min.js";
-                s.onload=function(){
-                  Weglot.initialize({
-                    api_key: "wg_d9cb54c80d40ded6bb70278dc06ee7f97",
-                    auto_switch: true
-                  });
-                };
-                document.head.appendChild(s);
+              (function () {
+                function loadWeglot() {
+                  var s = document.createElement("script");
+                  s.type = "text/javascript";
+                  s.async = true;
+                  s.src = "https://cdn.weglot.com/weglot.min.js";
+                  s.onload = function () {
+                    Weglot.initialize({
+                      api_key: "wg_d9cb54c80d40ded6bb70278dc06ee7f97",
+                      autoSwitch: true,
+                      detectLanguage: true
+                    });
+
+                    Weglot.on('initialized', function () {
+                      const lang = Weglot.getCurrentLang();
+                      setTimeout(() => {
+                        Weglot.switchTo(lang);
+                      }, 100);
+                    });
+                  };
+                  document.head.appendChild(s);
+                }
+
+                if (document.readyState === 'complete') {
+                  loadWeglot();
+                } else {
+                  window.addEventListener('load', loadWeglot);
+                }
               })();
             `,
           }}
