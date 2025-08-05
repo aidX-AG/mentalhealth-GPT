@@ -9,13 +9,10 @@
     "start": "next start",
     "lint": "next lint",
 
-    // ⬇ Bildoptimierungsskript für JPG/PNG ➝ WebP + Resizing
     "optimize-images": "bash ./scripts/optimize-images.sh",
 
-    // ⬇ Automatisch vor jedem Build (optional, aber empfehlenswert!)
     "prebuild": "npm run optimize-images",
 
-    // ⬇ Optionales Logging danach
     "postoptimize-images": "echo '✅ Bilder optimiert. Baue Projekt...'"
   },
   "dependencies": {
