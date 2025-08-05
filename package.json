@@ -8,7 +8,15 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "resize-images": "node scripts/resize-images.mjs"
+
+    // ⬇ Bildoptimierungsskript für JPG/PNG ➝ WebP + Resizing
+    "optimize-images": "bash ./scripts/optimize-images.sh",
+
+    // ⬇ Automatisch vor jedem Build (optional, aber empfehlenswert!)
+    "prebuild": "npm run optimize-images",
+
+    // ⬇ Optionales Logging danach
+    "postoptimize-images": "echo '✅ Bilder optimiert. Baue Projekt...'"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
