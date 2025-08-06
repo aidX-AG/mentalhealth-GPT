@@ -11,9 +11,6 @@
 
     "optimize-images": "bash ./scripts/optimize-images.sh",
 
-    "prebuild": "npm run optimize-images",
-
-    "postoptimize-images": "echo '✅ Bilder optimiert. Baue Projekt...'"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
