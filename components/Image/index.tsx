@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 
 interface ResponsiveImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  src: string;               // Basis ohne Endung, z. B. "/images/hero"
+  src: string;                // Pfad ohne Endung (z.B. "images/hero" ohne führenden /)
   alt: string;
-  widths?: number[];         // Breakpoints, z. B. [480, 960, 1440]
+  widths?: number[];
   fill?: boolean;
-  format?: "webp" | "jpg" | "png"; // Primärformat (webp bevorzugt)
-  fallbackFormat?: "jpg" | "png";  // Fallback für <img> und <source>
+  format?: "webp" | "jpg" | "png";
+  fallbackFormat?: "jpg" | "png";
+  basePath?: string;
+  sizes?: string;
+  disableFade?: boolean;
+  eager?: boolean;
 }
 
 const Image = ({
@@ -17,52 +21,70 @@ const Image = ({
   fill = false,
   format = "webp",
   fallbackFormat = "jpg",
+  basePath = "/",
+  sizes = "100vw",
+  disableFade = true,
+  eager = false,
   ...rest
 }: ResponsiveImageProps) => {
   const [loaded, setLoaded] = useState(false);
+  const defaultWidth = widths[Math.floor(widths.length / 2)];
 
-  const generateSrcSet = (ext: string) =>
-    widths.map((w) => `${src}-${w}w.${ext} ${w}w`).join(", ");
+  // 1. Pfadsanierung (entfernt doppelte Schrägstriche)
+  const sanitizePath = (path: string) => path.replace(/([^:]\/)\/+/g, '$1');
 
-  const defaultSrc = `${src}-${widths[1]}w.${fallbackFormat}`;
+  // 2. Generiere korrekte Pfade
+  const generateSrc = (width: number, ext: string) => {
+    const cleanSrc = src.startsWith('/') ? src.slice(1) : src;
+    return sanitizePath(`${basePath}${cleanSrc}-${width}w.${ext}`);
+  };
+
+  // 3. Debugging
+  useEffect(() => {
+    console.log('Image paths:', {
+      webp: widths.map(w => generateSrc(w, 'webp')),
+      fallback: widths.map(w => generateSrc(w, fallbackFormat)),
+      default: generateSrc(defaultWidth, fallbackFormat)
+    });
+  }, [src]);
 
   return (
     <picture>
-      {/* WebP first */}
+      {/* WebP Quelle */}
       {format === "webp" && (
         <source
           type="image/webp"
-          srcSet={generateSrcSet("webp")}
-          sizes="(max-width: 768px) 100vw, 768px"
+          srcSet={widths.map(w => `${generateSrc(w, 'webp')} ${w}w`).join(', ')}
+          sizes={sizes}
         />
       )}
 
-      {/* Fallback: jpg/png */}
+      {/* Fallback Quelle */}
       <source
-        srcSet={generateSrcSet(fallbackFormat)}
-        sizes="(max-width: 768px) 100vw, 768px"
+        type={fallbackFormat === 'jpg' ? 'image/jpeg' : `image/${fallbackFormat}`}
+        srcSet={widths.map(w => `${generateSrc(w, fallbackFormat)} ${w}w`).join(', ')}
+        sizes={sizes}
       />
 
+      {/* Fallback <img> */}
       <img
-        className={`inline-block align-top transition-opacity duration-300 ${
-          loaded ? "opacity-100" : "opacity-0"
-        } ${className}`}
-        src={defaultSrc}
+        className={`inline-block align-top ${!disableFade ? `transition-opacity duration-300 ${loaded ? 'opacity-100' : 'opacity-0'}` : ''} ${className}`}
+        src={generateSrc(defaultWidth, fallbackFormat)}
         alt={alt}
         width={fill ? undefined : rest.width}
         height={fill ? undefined : rest.height}
-        style={
-          fill
-            ? {
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }
-            : undefined
-        }
-        onLoad={() => setLoaded(true)}
-        loading="lazy"
+        style={fill ? { 
+          width: '100%', 
+          height: '100%', 
+          objectFit: 'cover' 
+        } : rest.style}
+        loading={eager ? "eager" : "lazy"}
         decoding="async"
+        onLoad={() => setLoaded(true)}
+        onError={(e) => {
+          console.error('Failed to load image:', e.currentTarget.src);
+          setLoaded(true); // Fallback anzeigen
+        }}
         {...rest}
       />
     </picture>
