@@ -8,8 +8,7 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-
-    "optimize-images": "bash ./scripts/optimize-images.sh",
+    "optimize-images": "bash ./scripts/optimize-images.sh"
 
   },
   "dependencies": {

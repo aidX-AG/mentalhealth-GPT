@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 interface ResponsiveImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  src: string;                // Pfad ohne Endung (z.B. "images/hero" ohne führenden /)
+  src: string;                // Nur Basisname (z.B. "avatar-1" oder "images/avatar-1")
   alt: string;
   widths?: number[];
   fill?: boolean;
@@ -30,18 +30,21 @@ const Image = ({
   const [loaded, setLoaded] = useState(false);
   const defaultWidth = widths[Math.floor(widths.length / 2)];
 
-  // 1. Pfadsanierung (entfernt doppelte Schrägstriche)
-  const sanitizePath = (path: string) => path.replace(/([^:]\/)\/+/g, '$1');
-
-  // 2. Generiere korrekte Pfade
-  const generateSrc = (width: number, ext: string) => {
-    const cleanSrc = src.startsWith('/') ? src.slice(1) : src;
-    return sanitizePath(`${basePath}${cleanSrc}-${width}w.${ext}`);
+  // 1. Entfernt alle Dateiendungen und führende Schrägstriche
+  const cleanBaseName = (path: string) => {
+    return path
+      .replace(/^\//, '')
+      .replace(/\.(jpg|jpeg|png|webp)$/i, '');
   };
 
-  // 3. Debugging
+  // 2. Generiert korrekte Pfade ohne doppelte Erweiterungen
+  const generateSrc = (width: number, ext: string) => {
+    return `${basePath}${cleanBaseName(src)}-${width}w.${ext}`;
+  };
+
+  // 3. Debug-Ausgabe
   useEffect(() => {
-    console.log('Image paths:', {
+    console.log('Generierte Bildpfade:', {
       webp: widths.map(w => generateSrc(w, 'webp')),
       fallback: widths.map(w => generateSrc(w, fallbackFormat)),
       default: generateSrc(defaultWidth, fallbackFormat)
@@ -82,8 +85,14 @@ const Image = ({
         decoding="async"
         onLoad={() => setLoaded(true)}
         onError={(e) => {
-          console.error('Failed to load image:', e.currentTarget.src);
-          setLoaded(true); // Fallback anzeigen
+          console.error('Bild konnte nicht geladen werden:', {
+            src: e.currentTarget.src,
+            expectedPaths: {
+              webp: generateSrc(defaultWidth, 'webp'),
+              fallback: generateSrc(defaultWidth, fallbackFormat)
+            }
+          });
+          setLoaded(true);
         }}
         {...rest}
       />
