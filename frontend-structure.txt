@@ -1,0 +1,805 @@
+.
+├── app
+│   ├── applications
+│   │   └── page.tsx
+│   ├── audio-transcription
+│   │   └── page.tsx
+│   ├── checkout
+│   │   └── page.tsx
+│   ├── diagnosis-support
+│   │   └── page.tsx
+│   ├── documentation-reports
+│   │   └── page.tsx
+│   ├── favicon.ico
+│   ├── generation-socials-post
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout Kopie.tsx
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── pagelist
+│   │   └── page.tsx
+│   ├── pricing
+│   │   └── page.tsx
+│   ├── providers.tsx
+│   ├── sign-in
+│   │   └── page.tsx
+│   ├── supervision-training
+│   │   └── page.tsx
+│   ├── thanks
+│   │   └── page.tsx
+│   ├── theme.tsx
+│   ├── therapy-support
+│   │   └── page.tsx
+│   ├── updates-and-faq
+│   │   └── page.tsx
+│   └── video-analysis
+│       └── page.tsx
+├── components
+│   ├── Actions
+│   │   └── index.tsx
+│   ├── AddChatList
+│   │   ├── index.tsx
+│   │   └── User
+│   ├── Adjust
+│   │   └── index.tsx
+│   ├── Answer
+│   │   ├── Actions
+│   │   ├── index.tsx
+│   │   └── Loading
+│   ├── Audio
+│   │   └── index.tsx
+│   ├── AudioPlayer
+│   │   └── index.tsx
+│   ├── Chat
+│   │   ├── Actions
+│   │   └── index.tsx
+│   ├── Checkbox
+│   │   └── index.tsx
+│   ├── Code
+│   │   └── index.tsx
+│   ├── Export
+│   │   └── index.tsx
+│   ├── FaqItem
+│   │   └── index.tsx
+│   ├── Feedback
+│   │   ├── Assessment
+│   │   ├── Details
+│   │   └── index.tsx
+│   ├── Field
+│   │   └── index.tsx
+│   ├── Icon
+│   │   ├── index.tsx
+│   │   └── lucide-icons.ts
+│   ├── Image
+│   │   ├── index.tsx
+│   │   └── index.tsx.bak
+│   ├── Layout
+│   │   ├── Burger
+│   │   └── index.tsx
+│   ├── LeftSidebar
+│   │   ├── ChatList
+│   │   ├── index.tsx
+│   │   ├── Navigation
+│   │   ├── Profile
+│   │   └── ToggleTheme
+│   ├── Logo
+│   │   └── index.tsx
+│   ├── Menu
+│   │   └── index.tsx
+│   ├── Message
+│   │   ├── AddFile
+│   │   ├── Files
+│   │   └── index.tsx
+│   ├── Modal
+│   │   └── index.tsx
+│   ├── ModalShareChat
+│   │   └── index.tsx
+│   ├── MultiSelect
+│   │   └── index.tsx
+│   ├── Notify
+│   │   └── index.tsx
+│   ├── Photo
+│   │   └── index.tsx
+│   ├── Question
+│   │   ├── Document
+│   │   └── index.tsx
+│   ├── Radio
+│   │   └── index.tsx
+│   ├── RightSidebar
+│   │   ├── ChatEmpty
+│   │   ├── ChatItem
+│   │   ├── index.tsx
+│   │   ├── Notifications
+│   │   └── Profile
+│   ├── SchedulePost
+│   │   └── index.tsx
+│   ├── ScheduleResult
+│   │   └── index.tsx
+│   ├── Search
+│   │   ├── index.tsx
+│   │   └── Item
+│   ├── Select
+│   │   └── index.tsx
+│   ├── Settings
+│   │   ├── Appearance
+│   │   ├── Applications
+│   │   ├── ChatExport
+│   │   ├── DeleteAccount
+│   │   ├── EditProfile
+│   │   ├── index.tsx
+│   │   ├── Menu
+│   │   ├── Notifications
+│   │   ├── Password
+│   │   ├── Sessions
+│   │   └── Team
+│   ├── SliderRange
+│   │   └── index.tsx
+│   ├── SocialsPost
+│   │   ├── Details
+│   │   ├── index.tsx
+│   │   ├── Post
+│   │   └── Preview
+│   ├── Switch
+│   │   └── index.tsx
+│   ├── Test
+│   │   └── index.tsx
+│   ├── Users
+│   │   └── index.tsx
+│   └── Video
+│       ├── index.tsx
+│       └── View
+├── constants
+│   ├── export.tsx
+│   ├── navigation.tsx
+│   └── settings.tsx
+├── frontend-structure.txt
+├── mocks
+│   ├── applications.tsx
+│   ├── chatHistory.tsx
+│   ├── chatList.tsx
+│   ├── faq.tsx
+│   ├── members.tsx
+│   ├── notifications.tsx
+│   ├── people.tsx
+│   ├── price.tsx
+│   ├── resultSearch.tsx
+│   ├── socialsPost.tsx
+│   ├── updates.tsx
+│   └── writeCodeChat.tsx
+├── next-env.d.ts
+├── next.config.mjs
+├── out
+│   ├── _next
+│   │   ├── mZNcfxAYZ9naNHuSLC0vP
+│   │   └── static
+│   ├── 404.html
+│   ├── applications.html
+│   ├── applications.txt
+│   ├── audio-transcription.html
+│   ├── audio-transcription.txt
+│   ├── checkout.html
+│   ├── checkout.txt
+│   ├── diagnosis-support.html
+│   ├── diagnosis-support.txt
+│   ├── documentation-reports.html
+│   ├── documentation-reports.txt
+│   ├── favicon.ico
+│   ├── fb-og-image.jpg
+│   ├── generation-socials-post.html
+│   ├── generation-socials-post.txt
+│   ├── images
+│   │   ├── apple.svg
+│   │   ├── audio-1.svg
+│   │   ├── audio-edited.svg
+│   │   ├── audio-mp3.svg
+│   │   ├── audio-wav.svg
+│   │   ├── audio.svg
+│   │   ├── avatar-1-1440w.jpg
+│   │   ├── avatar-1-1440w.webp
+│   │   ├── avatar-1-480w.jpg
+│   │   ├── avatar-1-480w.webp
+│   │   ├── avatar-1-960w.jpg
+│   │   ├── avatar-1-960w.webp
+│   │   ├── avatar-1.jpg
+│   │   ├── avatar-1440w.jpg
+│   │   ├── avatar-1440w.webp
+│   │   ├── avatar-2-1440w.jpg
+│   │   ├── avatar-2-1440w.webp
+│   │   ├── avatar-2-480w.jpg
+│   │   ├── avatar-2-480w.webp
+│   │   ├── avatar-2-960w.jpg
+│   │   ├── avatar-2-960w.webp
+│   │   ├── avatar-2.jpg
+│   │   ├── avatar-3-1440w.jpg
+│   │   ├── avatar-3-1440w.webp
+│   │   ├── avatar-3-480w.jpg
+│   │   ├── avatar-3-480w.webp
+│   │   ├── avatar-3-960w.jpg
+│   │   ├── avatar-3-960w.webp
+│   │   ├── avatar-3.jpg
+│   │   ├── avatar-4-1440w.jpg
+│   │   ├── avatar-4-1440w.webp
+│   │   ├── avatar-4-480w.jpg
+│   │   ├── avatar-4-480w.webp
+│   │   ├── avatar-4-960w.jpg
+│   │   ├── avatar-4-960w.webp
+│   │   ├── avatar-4.jpg
+│   │   ├── avatar-480w.jpg
+│   │   ├── avatar-480w.webp
+│   │   ├── avatar-5-1440w.jpg
+│   │   ├── avatar-5-1440w.webp
+│   │   ├── avatar-5-480w.jpg
+│   │   ├── avatar-5-480w.webp
+│   │   ├── avatar-5-960w.jpg
+│   │   ├── avatar-5-960w.webp
+│   │   ├── avatar-5.jpg
+│   │   ├── avatar-6-1440w.jpg
+│   │   ├── avatar-6-1440w.webp
+│   │   ├── avatar-6-480w.jpg
+│   │   ├── avatar-6-480w.webp
+│   │   ├── avatar-6-960w.jpg
+│   │   ├── avatar-6-960w.webp
+│   │   ├── avatar-6.jpg
+│   │   ├── avatar-960w.jpg
+│   │   ├── avatar-960w.webp
+│   │   ├── avatar-chat-1440w.jpg
+│   │   ├── avatar-chat-1440w.webp
+│   │   ├── avatar-chat-480w.jpg
+│   │   ├── avatar-chat-480w.webp
+│   │   ├── avatar-chat-960w.jpg
+│   │   ├── avatar-chat-960w.webp
+│   │   ├── avatar-chat.jpg
+│   │   ├── avatar.jpg
+│   │   ├── buffer.svg
+│   │   ├── chrome.svg
+│   │   ├── create-pic-1440w.png
+│   │   ├── create-pic-1440w.webp
+│   │   ├── create-pic-480w.png
+│   │   ├── create-pic-480w.webp
+│   │   ├── create-pic-960w.png
+│   │   ├── create-pic-960w.webp
+│   │   ├── create-pic.png
+│   │   ├── discord.svg
+│   │   ├── document.svg
+│   │   ├── duolingo.svg
+│   │   ├── facebook.svg
+│   │   ├── faq-image.svg
+│   │   ├── google.svg
+│   │   ├── history-image-1440w.jpg
+│   │   ├── history-image-1440w.webp
+│   │   ├── history-image-480w.jpg
+│   │   ├── history-image-480w.webp
+│   │   ├── history-image-960w.jpg
+│   │   ├── history-image-960w.webp
+│   │   ├── history-image.jpg
+│   │   ├── image-blue.svg
+│   │   ├── image-purple.svg
+│   │   ├── invite.svg
+│   │   ├── link.svg
+│   │   ├── logo-1440w.jpg
+│   │   ├── logo-1440w.webp
+│   │   ├── logo-480w.jpg
+│   │   ├── logo-480w.webp
+│   │   ├── logo-960w.jpg
+│   │   ├── logo-960w.webp
+│   │   ├── logo-chat-1440w.png
+│   │   ├── logo-chat-1440w.webp
+│   │   ├── logo-chat-480w.png
+│   │   ├── logo-chat-480w.webp
+│   │   ├── logo-chat-960w.png
+│   │   ├── logo-chat-960w.webp
+│   │   ├── logo-chat.png
+│   │   ├── logo-chat.svg
+│   │   ├── logo-chat.webp
+│   │   ├── logo-dark-1440w.jpg
+│   │   ├── logo-dark-1440w.webp
+│   │   ├── logo-dark-480w.jpg
+│   │   ├── logo-dark-480w.webp
+│   │   ├── logo-dark-960w.jpg
+│   │   ├── logo-dark-960w.webp
+│   │   ├── logo-dark.jpg
+│   │   ├── logo-dark.svg
+│   │   ├── logo.jpg
+│   │   ├── logo.svg
+│   │   ├── midjourney.svg
+│   │   ├── note-blue.svg
+│   │   ├── note-purple.svg
+│   │   ├── open-ai.svg
+│   │   ├── photo-1-1440w.jpg
+│   │   ├── photo-1-1440w.webp
+│   │   ├── photo-1-480w.jpg
+│   │   ├── photo-1-480w.webp
+│   │   ├── photo-1-960w.jpg
+│   │   ├── photo-1-960w.webp
+│   │   ├── photo-1.jpg
+│   │   ├── photo-1440w.jpg
+│   │   ├── photo-1440w.webp
+│   │   ├── photo-2-1440w.jpg
+│   │   ├── photo-2-1440w.webp
+│   │   ├── photo-2-480w.jpg
+│   │   ├── photo-2-480w.webp
+│   │   ├── photo-2-960w.jpg
+│   │   ├── photo-2-960w.webp
+│   │   ├── photo-2.jpg
+│   │   ├── photo-3-1440w.jpg
+│   │   ├── photo-3-1440w.webp
+│   │   ├── photo-3-480w.jpg
+│   │   ├── photo-3-480w.webp
+│   │   ├── photo-3-960w.jpg
+│   │   ├── photo-3-960w.webp
+│   │   ├── photo-3.jpg
+│   │   ├── photo-480w.jpg
+│   │   ├── photo-480w.webp
+│   │   ├── photo-960w.jpg
+│   │   ├── photo-960w.webp
+│   │   ├── photo.jpg
+│   │   ├── post-pic-1440w.jpg
+│   │   ├── post-pic-1440w.webp
+│   │   ├── post-pic-480w.jpg
+│   │   ├── post-pic-480w.webp
+│   │   ├── post-pic-960w.jpg
+│   │   ├── post-pic-960w.webp
+│   │   ├── post-pic.jpg
+│   │   ├── safari.svg
+│   │   ├── slack.svg
+│   │   ├── smile-heart-eyes-1440w.png
+│   │   ├── smile-heart-eyes-1440w.webp
+│   │   ├── smile-heart-eyes-480w.png
+│   │   ├── smile-heart-eyes-480w.webp
+│   │   ├── smile-heart-eyes-960w.png
+│   │   ├── smile-heart-eyes-960w.webp
+│   │   ├── smile-heart-eyes.png
+│   │   ├── smile-unamused-1440w.png
+│   │   ├── smile-unamused-1440w.webp
+│   │   ├── smile-unamused-480w.png
+│   │   ├── smile-unamused-480w.webp
+│   │   ├── smile-unamused-960w.png
+│   │   ├── smile-unamused-960w.webp
+│   │   ├── smile-unamused.png
+│   │   ├── spotify.svg
+│   │   ├── theme-dark.svg
+│   │   ├── theme-light.svg
+│   │   ├── twitter.svg
+│   │   ├── ui8.svg
+│   │   ├── update-chatbot-desktop-1440w.jpg
+│   │   ├── update-chatbot-desktop-1440w.webp
+│   │   ├── update-chatbot-desktop-480w.jpg
+│   │   ├── update-chatbot-desktop-480w.webp
+│   │   ├── update-chatbot-desktop-960w.jpg
+│   │   ├── update-chatbot-desktop-960w.webp
+│   │   ├── update-data-privacy-1440w.jpg
+│   │   ├── update-data-privacy-1440w.webp
+│   │   ├── update-data-privacy-480w.jpg
+│   │   ├── update-data-privacy-480w.webp
+│   │   ├── update-data-privacy-960w.jpg
+│   │   ├── update-data-privacy-960w.webp
+│   │   ├── update-full-stack-1440w.jpg
+│   │   ├── update-full-stack-1440w.webp
+│   │   ├── update-full-stack-480w.jpg
+│   │   ├── update-full-stack-480w.webp
+│   │   ├── update-full-stack-960w.jpg
+│   │   ├── update-full-stack-960w.webp
+│   │   ├── update-good-data-1440w.jpg
+│   │   ├── update-good-data-1440w.webp
+│   │   ├── update-good-data-480w.jpg
+│   │   ├── update-good-data-480w.webp
+│   │   ├── update-good-data-960w.jpg
+│   │   ├── update-good-data-960w.webp
+│   │   ├── update-pic-1-1440w.jpg
+│   │   ├── update-pic-1-1440w.webp
+│   │   ├── update-pic-1-480w.jpg
+│   │   ├── update-pic-1-480w.webp
+│   │   ├── update-pic-1-960w.jpg
+│   │   ├── update-pic-1-960w.webp
+│   │   ├── update-pic-1.jpg
+│   │   ├── update-pic-2-1440w.jpg
+│   │   ├── update-pic-2-1440w.webp
+│   │   ├── update-pic-2-480w.jpg
+│   │   ├── update-pic-2-480w.webp
+│   │   ├── update-pic-2-960w.jpg
+│   │   ├── update-pic-2-960w.webp
+│   │   ├── update-pic-2.jpg
+│   │   ├── update-pic-3-1440w.jpg
+│   │   ├── update-pic-3-1440w.webp
+│   │   ├── update-pic-3-480w.jpg
+│   │   ├── update-pic-3-480w.webp
+│   │   ├── update-pic-3-960w.jpg
+│   │   ├── update-pic-3-960w.webp
+│   │   ├── update-pic-3.jpg
+│   │   ├── update-pic-4-1440w.jpg
+│   │   ├── update-pic-4-1440w.webp
+│   │   ├── update-pic-4-480w.jpg
+│   │   ├── update-pic-4-480w.webp
+│   │   ├── update-pic-4-960w.jpg
+│   │   ├── update-pic-4-960w.webp
+│   │   ├── update-pic-4.jpg
+│   │   ├── update-pic-dark-1-1440w.jpg
+│   │   ├── update-pic-dark-1-1440w.webp
+│   │   ├── update-pic-dark-1-480w.jpg
+│   │   ├── update-pic-dark-1-480w.webp
+│   │   ├── update-pic-dark-1-960w.jpg
+│   │   ├── update-pic-dark-1-960w.webp
+│   │   ├── update-pic-dark-1.jpg
+│   │   ├── update-pic-dark-2-1440w.jpg
+│   │   ├── update-pic-dark-2-1440w.webp
+│   │   ├── update-pic-dark-2-480w.jpg
+│   │   ├── update-pic-dark-2-480w.webp
+│   │   ├── update-pic-dark-2-960w.jpg
+│   │   ├── update-pic-dark-2-960w.webp
+│   │   ├── update-pic-dark-2.jpg
+│   │   ├── update-pic-dark-3-1440w.jpg
+│   │   ├── update-pic-dark-3-1440w.webp
+│   │   ├── update-pic-dark-3-480w.jpg
+│   │   ├── update-pic-dark-3-480w.webp
+│   │   ├── update-pic-dark-3-960w.jpg
+│   │   ├── update-pic-dark-3-960w.webp
+│   │   ├── update-pic-dark-3.jpg
+│   │   ├── update-pic-dark-4-1440w.jpg
+│   │   ├── update-pic-dark-4-1440w.webp
+│   │   ├── update-pic-dark-4-480w.jpg
+│   │   ├── update-pic-dark-4-480w.webp
+│   │   ├── update-pic-dark-4-960w.jpg
+│   │   ├── update-pic-dark-4-960w.webp
+│   │   ├── update-pic-dark-4.jpg
+│   │   ├── video-pic-1-1440w.jpg
+│   │   ├── video-pic-1-1440w.webp
+│   │   ├── video-pic-1-480w.jpg
+│   │   ├── video-pic-1-480w.webp
+│   │   ├── video-pic-1-960w.jpg
+│   │   ├── video-pic-1-960w.webp
+│   │   ├── video-pic-1.jpg
+│   │   ├── video-pic-1440w.jpg
+│   │   ├── video-pic-1440w.webp
+│   │   ├── video-pic-480w.jpg
+│   │   ├── video-pic-480w.webp
+│   │   ├── video-pic-960w.jpg
+│   │   ├── video-pic-960w.webp
+│   │   ├── video-pic.jpg
+│   │   └── wip-portrait.jpg
+│   ├── index.html
+│   ├── index.txt
+│   ├── pagelist.html
+│   ├── pagelist.txt
+│   ├── pricing.html
+│   ├── pricing.txt
+│   ├── sign-in.html
+│   ├── sign-in.txt
+│   ├── supervision-training.html
+│   ├── supervision-training.txt
+│   ├── thanks.html
+│   ├── thanks.txt
+│   ├── therapy-support.html
+│   ├── therapy-support.txt
+│   ├── twitter-card.jpg
+│   ├── updates-and-faq.html
+│   ├── updates-and-faq.txt
+│   ├── video-analysis.html
+│   └── video-analysis.txt
+├── out.zip
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   ├── fb-og-image.jpg
+│   ├── images
+│   │   ├── apple.svg
+│   │   ├── audio-1.svg
+│   │   ├── audio-edited.svg
+│   │   ├── audio-mp3.svg
+│   │   ├── audio-wav.svg
+│   │   ├── audio.svg
+│   │   ├── avatar-1-1440w.jpg
+│   │   ├── avatar-1-1440w.webp
+│   │   ├── avatar-1-480w.jpg
+│   │   ├── avatar-1-480w.webp
+│   │   ├── avatar-1-960w.jpg
+│   │   ├── avatar-1-960w.webp
+│   │   ├── avatar-1.jpg
+│   │   ├── avatar-1440w.jpg
+│   │   ├── avatar-1440w.webp
+│   │   ├── avatar-2-1440w.jpg
+│   │   ├── avatar-2-1440w.webp
+│   │   ├── avatar-2-480w.jpg
+│   │   ├── avatar-2-480w.webp
+│   │   ├── avatar-2-960w.jpg
+│   │   ├── avatar-2-960w.webp
+│   │   ├── avatar-2.jpg
+│   │   ├── avatar-3-1440w.jpg
+│   │   ├── avatar-3-1440w.webp
+│   │   ├── avatar-3-480w.jpg
+│   │   ├── avatar-3-480w.webp
+│   │   ├── avatar-3-960w.jpg
+│   │   ├── avatar-3-960w.webp
+│   │   ├── avatar-3.jpg
+│   │   ├── avatar-4-1440w.jpg
+│   │   ├── avatar-4-1440w.webp
+│   │   ├── avatar-4-480w.jpg
+│   │   ├── avatar-4-480w.webp
+│   │   ├── avatar-4-960w.jpg
+│   │   ├── avatar-4-960w.webp
+│   │   ├── avatar-4.jpg
+│   │   ├── avatar-480w.jpg
+│   │   ├── avatar-480w.webp
+│   │   ├── avatar-5-1440w.jpg
+│   │   ├── avatar-5-1440w.webp
+│   │   ├── avatar-5-480w.jpg
+│   │   ├── avatar-5-480w.webp
+│   │   ├── avatar-5-960w.jpg
+│   │   ├── avatar-5-960w.webp
+│   │   ├── avatar-5.jpg
+│   │   ├── avatar-6-1440w.jpg
+│   │   ├── avatar-6-1440w.webp
+│   │   ├── avatar-6-480w.jpg
+│   │   ├── avatar-6-480w.webp
+│   │   ├── avatar-6-960w.jpg
+│   │   ├── avatar-6-960w.webp
+│   │   ├── avatar-6.jpg
+│   │   ├── avatar-960w.jpg
+│   │   ├── avatar-960w.webp
+│   │   ├── avatar-chat-1440w.jpg
+│   │   ├── avatar-chat-1440w.webp
+│   │   ├── avatar-chat-480w.jpg
+│   │   ├── avatar-chat-480w.webp
+│   │   ├── avatar-chat-960w.jpg
+│   │   ├── avatar-chat-960w.webp
+│   │   ├── avatar-chat.jpg
+│   │   ├── avatar.jpg
+│   │   ├── buffer.svg
+│   │   ├── chrome.svg
+│   │   ├── create-pic-1440w.png
+│   │   ├── create-pic-1440w.webp
+│   │   ├── create-pic-480w.png
+│   │   ├── create-pic-480w.webp
+│   │   ├── create-pic-960w.png
+│   │   ├── create-pic-960w.webp
+│   │   ├── create-pic.png
+│   │   ├── discord.svg
+│   │   ├── document.svg
+│   │   ├── duolingo.svg
+│   │   ├── facebook.svg
+│   │   ├── faq-image.svg
+│   │   ├── google.svg
+│   │   ├── history-image-1440w.jpg
+│   │   ├── history-image-1440w.webp
+│   │   ├── history-image-480w.jpg
+│   │   ├── history-image-480w.webp
+│   │   ├── history-image-960w.jpg
+│   │   ├── history-image-960w.webp
+│   │   ├── history-image.jpg
+│   │   ├── image-blue.svg
+│   │   ├── image-purple.svg
+│   │   ├── invite.svg
+│   │   ├── link.svg
+│   │   ├── logo-1440w.webp
+│   │   ├── logo-480w.webp
+│   │   ├── logo-960w.webp
+│   │   ├── logo-chat-1440w.png
+│   │   ├── logo-chat-1440w.webp
+│   │   ├── logo-chat-480w.png
+│   │   ├── logo-chat-480w.webp
+│   │   ├── logo-chat-960w.png
+│   │   ├── logo-chat-960w.webp
+│   │   ├── logo-chat.png
+│   │   ├── logo-chat.svg
+│   │   ├── logo-chat.webp
+│   │   ├── logo-dark-1440w.webp
+│   │   ├── logo-dark-480w.webp
+│   │   ├── logo-dark-960w.webp
+│   │   ├── logo-dark.jpg
+│   │   ├── logo-dark.svg
+│   │   ├── logo-dark.webp
+│   │   ├── logo.jpg
+│   │   ├── logo.svg
+│   │   ├── logo.webp
+│   │   ├── midjourney.svg
+│   │   ├── note-blue.svg
+│   │   ├── note-purple.svg
+│   │   ├── open-ai.svg
+│   │   ├── photo-1-1440w.jpg
+│   │   ├── photo-1-1440w.webp
+│   │   ├── photo-1-480w.jpg
+│   │   ├── photo-1-480w.webp
+│   │   ├── photo-1-960w.jpg
+│   │   ├── photo-1-960w.webp
+│   │   ├── photo-1.jpg
+│   │   ├── photo-1440w.jpg
+│   │   ├── photo-1440w.webp
+│   │   ├── photo-2-1440w.jpg
+│   │   ├── photo-2-1440w.webp
+│   │   ├── photo-2-480w.jpg
+│   │   ├── photo-2-480w.webp
+│   │   ├── photo-2-960w.jpg
+│   │   ├── photo-2-960w.webp
+│   │   ├── photo-2.jpg
+│   │   ├── photo-3-1440w.jpg
+│   │   ├── photo-3-1440w.webp
+│   │   ├── photo-3-480w.jpg
+│   │   ├── photo-3-480w.webp
+│   │   ├── photo-3-960w.jpg
+│   │   ├── photo-3-960w.webp
+│   │   ├── photo-3.jpg
+│   │   ├── photo-480w.jpg
+│   │   ├── photo-480w.webp
+│   │   ├── photo-960w.jpg
+│   │   ├── photo-960w.webp
+│   │   ├── photo.jpg
+│   │   ├── post-pic-1440w.jpg
+│   │   ├── post-pic-1440w.webp
+│   │   ├── post-pic-480w.jpg
+│   │   ├── post-pic-480w.webp
+│   │   ├── post-pic-960w.jpg
+│   │   ├── post-pic-960w.webp
+│   │   ├── post-pic.jpg
+│   │   ├── safari.svg
+│   │   ├── slack.svg
+│   │   ├── smile-heart-eyes-1440w.png
+│   │   ├── smile-heart-eyes-1440w.webp
+│   │   ├── smile-heart-eyes-480w.png
+│   │   ├── smile-heart-eyes-480w.webp
+│   │   ├── smile-heart-eyes-960w.png
+│   │   ├── smile-heart-eyes-960w.webp
+│   │   ├── smile-heart-eyes.png
+│   │   ├── smile-unamused-1440w.png
+│   │   ├── smile-unamused-1440w.webp
+│   │   ├── smile-unamused-480w.png
+│   │   ├── smile-unamused-480w.webp
+│   │   ├── smile-unamused-960w.png
+│   │   ├── smile-unamused-960w.webp
+│   │   ├── smile-unamused.png
+│   │   ├── spotify.svg
+│   │   ├── theme-dark.svg
+│   │   ├── theme-light.svg
+│   │   ├── twitter.svg
+│   │   ├── ui8.svg
+│   │   ├── update-chatbot-desktop-1440w.jpg
+│   │   ├── update-chatbot-desktop-1440w.webp
+│   │   ├── update-chatbot-desktop-480w.jpg
+│   │   ├── update-chatbot-desktop-480w.webp
+│   │   ├── update-chatbot-desktop-960w.jpg
+│   │   ├── update-chatbot-desktop-960w.webp
+│   │   ├── update-data-privacy-1440w.jpg
+│   │   ├── update-data-privacy-1440w.webp
+│   │   ├── update-data-privacy-480w.jpg
+│   │   ├── update-data-privacy-480w.webp
+│   │   ├── update-data-privacy-960w.jpg
+│   │   ├── update-data-privacy-960w.webp
+│   │   ├── update-full-stack-1440w.jpg
+│   │   ├── update-full-stack-1440w.webp
+│   │   ├── update-full-stack-480w.jpg
+│   │   ├── update-full-stack-480w.webp
+│   │   ├── update-full-stack-960w.jpg
+│   │   ├── update-full-stack-960w.webp
+│   │   ├── update-good-data-1440w.jpg
+│   │   ├── update-good-data-1440w.webp
+│   │   ├── update-good-data-480w.jpg
+│   │   ├── update-good-data-480w.webp
+│   │   ├── update-good-data-960w.jpg
+│   │   ├── update-good-data-960w.webp
+│   │   ├── update-pic-1-1440w.jpg
+│   │   ├── update-pic-1-1440w.webp
+│   │   ├── update-pic-1-480w.jpg
+│   │   ├── update-pic-1-480w.webp
+│   │   ├── update-pic-1-960w.jpg
+│   │   ├── update-pic-1-960w.webp
+│   │   ├── update-pic-1.jpg
+│   │   ├── update-pic-2-1440w.jpg
+│   │   ├── update-pic-2-1440w.webp
+│   │   ├── update-pic-2-480w.jpg
+│   │   ├── update-pic-2-480w.webp
+│   │   ├── update-pic-2-960w.jpg
+│   │   ├── update-pic-2-960w.webp
+│   │   ├── update-pic-2.jpg
+│   │   ├── update-pic-3-1440w.jpg
+│   │   ├── update-pic-3-1440w.webp
+│   │   ├── update-pic-3-480w.jpg
+│   │   ├── update-pic-3-480w.webp
+│   │   ├── update-pic-3-960w.jpg
+│   │   ├── update-pic-3-960w.webp
+│   │   ├── update-pic-3.jpg
+│   │   ├── update-pic-4-1440w.jpg
+│   │   ├── update-pic-4-1440w.webp
+│   │   ├── update-pic-4-480w.jpg
+│   │   ├── update-pic-4-480w.webp
+│   │   ├── update-pic-4-960w.jpg
+│   │   ├── update-pic-4-960w.webp
+│   │   ├── update-pic-4.jpg
+│   │   ├── update-pic-dark-1-1440w.jpg
+│   │   ├── update-pic-dark-1-1440w.webp
+│   │   ├── update-pic-dark-1-480w.jpg
+│   │   ├── update-pic-dark-1-480w.webp
+│   │   ├── update-pic-dark-1-960w.jpg
+│   │   ├── update-pic-dark-1-960w.webp
+│   │   ├── update-pic-dark-1.jpg
+│   │   ├── update-pic-dark-2-1440w.jpg
+│   │   ├── update-pic-dark-2-1440w.webp
+│   │   ├── update-pic-dark-2-480w.jpg
+│   │   ├── update-pic-dark-2-480w.webp
+│   │   ├── update-pic-dark-2-960w.jpg
+│   │   ├── update-pic-dark-2-960w.webp
+│   │   ├── update-pic-dark-2.jpg
+│   │   ├── update-pic-dark-3-1440w.jpg
+│   │   ├── update-pic-dark-3-1440w.webp
+│   │   ├── update-pic-dark-3-480w.jpg
+│   │   ├── update-pic-dark-3-480w.webp
+│   │   ├── update-pic-dark-3-960w.jpg
+│   │   ├── update-pic-dark-3-960w.webp
+│   │   ├── update-pic-dark-3.jpg
+│   │   ├── update-pic-dark-4-1440w.jpg
+│   │   ├── update-pic-dark-4-1440w.webp
+│   │   ├── update-pic-dark-4-480w.jpg
+│   │   ├── update-pic-dark-4-480w.webp
+│   │   ├── update-pic-dark-4-960w.jpg
+│   │   ├── update-pic-dark-4-960w.webp
+│   │   ├── update-pic-dark-4.jpg
+│   │   ├── video-pic-1-1440w.jpg
+│   │   ├── video-pic-1-1440w.webp
+│   │   ├── video-pic-1-480w.jpg
+│   │   ├── video-pic-1-480w.webp
+│   │   ├── video-pic-1-960w.jpg
+│   │   ├── video-pic-1-960w.webp
+│   │   ├── video-pic-1.jpg
+│   │   ├── video-pic-1440w.jpg
+│   │   ├── video-pic-1440w.webp
+│   │   ├── video-pic-480w.jpg
+│   │   ├── video-pic-480w.webp
+│   │   ├── video-pic-960w.jpg
+│   │   ├── video-pic-960w.webp
+│   │   ├── video-pic.jpg
+│   │   ├── wip-portrait-1440w.jpg
+│   │   ├── wip-portrait-1440w.webp
+│   │   ├── wip-portrait-480w.jpg
+│   │   ├── wip-portrait-480w.webp
+│   │   ├── wip-portrait-960w.jpg
+│   │   ├── wip-portrait-960w.webp
+│   │   └── wip-portrait.jpg
+│   └── twitter-card.jpg
+├── README.md
+├── scripts
+│   ├── optimize-images.sh
+│   └── resize-images.mjs
+├── tailwind.config.ts
+├── templates
+│   ├── ApplicationsPage
+│   │   ├── Application
+│   │   └── index.tsx
+│   ├── AudioTranscriptionPage
+│   │   └── index.tsx
+│   ├── CheckoutPage
+│   │   ├── Details
+│   │   ├── Form
+│   │   └── index.tsx
+│   ├── DiagnosisSupportPage
+│   │   └── index.tsx
+│   ├── DocumentationReportsPage
+│   │   └── index.tsx
+│   ├── GenerationSocialsPostPage
+│   │   └── index.tsx
+│   ├── HomePage
+│   │   ├── index.tsx
+│   │   └── Main
+│   ├── PageListPage
+│   │   └── index.tsx
+│   ├── PricingPage
+│   │   ├── Faq
+│   │   ├── index.tsx
+│   │   └── Main
+│   ├── SignInPage
+│   │   ├── Form
+│   │   └── index.tsx
+│   ├── SupervisionTrainingPage
+│   │   └── index.tsx
+│   ├── ThanksPage
+│   │   └── index.tsx
+│   ├── TherapySupportPage
+│   │   └── index.tsx
+│   ├── UpdatesAndFaqPage
+│   │   ├── Faq
+│   │   ├── index.tsx
+│   │   └── Updates
+│   └── VideoAnalysisPage
+│       └── index.tsx
+├── tsconfig.json
+└── yarn.lock
+
+124 directories, 679 files

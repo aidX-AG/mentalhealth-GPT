@@ -9,7 +9,6 @@
     "start": "next start",
     "lint": "next lint",
     "optimize-images": "bash ./scripts/optimize-images.sh"
-
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
@@ -23,6 +22,8 @@
     "@types/react-syntax-highlighter": "^15.5.6",
     "@types/scroll-lock": "^2.1.0",
     "framer-motion": "^11.1.7",
+    "i18next": "^25.3.2",
+    "i18next-scanner": "^4.6.0",
     "lucide-react": "^0.525.0",
     "next": "14.2.3",
     "rc-slider": "^10.1.1",
@@ -31,6 +32,7 @@
     "react-datepicker": "^4.10.0",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.0",
+    "react-i18next": "^15.6.1",
     "react-input-mask": "^3.0.0-alpha.2",
     "react-responsive": "^9.0.2",
     "react-select": "^5.7.2",
