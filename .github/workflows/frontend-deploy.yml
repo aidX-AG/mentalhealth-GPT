@@ -1,0 +1,48 @@
+name: Frontend Deploy to Proxy Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Frontend
+        run: npm run build
+
+      - name: Create Zip Archive of Static Files
+        run: zip -r out.zip out
+
+      - name: Upload Zip to Proxy Server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: proxy-server
+          username: ubuntu
+          key: ${{ secrets.FRONTEND_DEPLOY_KEY }}
+          source: "out.zip"
+          target: "/tmp"
+
+      - name: Deploy via SSH with rsync
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: proxy-server
+          username: ubuntu
+          key: ${{ secrets.FRONTEND_DEPLOY_KEY }}
+          script: |
+            rm -rf /tmp/out
+            unzip -o /tmp/out.zip -d /tmp/
+            sudo rsync -av --delete /tmp/out/ /opt/docker/nginx/html/
