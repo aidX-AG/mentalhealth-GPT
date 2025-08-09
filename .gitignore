@@ -6,3 +6,4 @@ node_modules/
 .vscode/
 out/
 out.zip
+locales/en.backup.*
