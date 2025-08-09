@@ -18,7 +18,7 @@ const GenerationSocialsPostPage = () => {
 
     return (
         <Layout>
-            <Chat title={i18next.t("generation-socials-post.chattitle_promotional_content_01", { defaultValue: "Promotional content" })}>
+            <Chat title={i18next.t("generation-socials-post.chat.title", { defaultValue: "Promotional content" })}>
                 <Question
                     content="Create promotional content for this post to share on social media with the link: https://dribbble.com/shots/17687623-Hiring-Platform-Mobile-App with link and hashtag for Twitter, Facebook"
                     time="Just now"

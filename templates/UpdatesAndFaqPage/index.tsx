@@ -26,9 +26,9 @@ const UpdatesAndFaqPage = () => {
                     <Icon className="fill-n-4" name="close" />
                 </button>
                 <div className="max-w-[58.5rem] mx-auto">
-                    <div className="mb-4 h2 md:pr-16 md:h3">{i18next.t("updates-and-faq.div_updates_faq_01", { defaultValue: "Updates & FAQ" })}</div>
+                    <div className="mb-4 h2 md:pr-16 md:h3">{i18next.t("updates-and-faq.sections.title", { defaultValue: "Updates & FAQ" })}</div>
                     <div className="mb-12 body1 text-n-4 md:mb-6">
-                        {i18next.t("updates-and-faq.div_features_fixes_improvements_02", { defaultValue: "Features, fixes & improvements." })}</div>
+                        {i18next.t("updates-and-faq.sections.subtitle", { defaultValue: "Features, fixes & improvements." })}</div>
                     <Tab.Group defaultIndex={0}>
                         <Tab.List className="mb-12 md:mb-6 space-x-3">
                             {tanNavigation.map((button, index) => (

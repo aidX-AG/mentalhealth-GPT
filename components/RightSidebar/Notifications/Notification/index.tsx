@@ -16,7 +16,7 @@ const Notification = ({ item }: NotificationProps) => (
                 className="rounded-full object-cover"
                 src={item.avatar}
                 fill
-                alt={i18next.t("common.imagealt_avatar_01", { defaultValue: "Avatar" })}
+                alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
             />
             {item.online && (
                 <div className="absolute right-0 bottom-0 w-4.5 h-4.5 rounded-full border-4 border-n-1 bg-primary-2 dark:border-n-7"></div>

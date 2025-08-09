@@ -25,7 +25,7 @@ const Device = ({ item }: DeviceProps) => (
                 <p>{item.date}</p>
             </div>
         </div>
-        <button className="btn-stroke-light shrink-0 ml-4">{i18next.t("common.div_revoke_01", { defaultValue: "Revoke" })}</button>
+        <button className="btn-stroke-light shrink-0 ml-4">{i18next.t("common.sections.revoke", { defaultValue: "Revoke" })}</button>
     </div>
 );
 

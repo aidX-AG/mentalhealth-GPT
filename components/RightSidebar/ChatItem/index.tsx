@@ -19,12 +19,12 @@ const ChatItem = ({ item }: ChatItemProps) => {
         setActive(true);
         toast((t) => (
             <Notify iconCheck>
-                <div className="mr-6 ml-3 h6">{i18next.t("common.notify_1_chat_archived_01", { defaultValue: "1 chat archived" })}</div>
+                <div className="mr-6 ml-3 h6">{i18next.t("common.notify.chat-archived", { defaultValue: "1 chat archived" })}</div>
                 <button
                     className="btn-blue btn-medium ml-3"
                     onClick={() => toast.dismiss(t.id)}
                 >
-                    {i18next.t("common.notify_undo_02", { defaultValue: "Undo" })}</button>
+                    {i18next.t("common.notify.undo", { defaultValue: "Undo" })}</button>
             </Notify>
         ));
     };

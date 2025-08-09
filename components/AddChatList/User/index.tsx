@@ -33,7 +33,7 @@ const User = ({ item }: UserProps) => {
                     className="object-cover rounded-full"
                     src={item.avatar}
                     fill
-                    alt={i18next.t("common.imagealt_avatar_01", { defaultValue: "Avatar" })}
+                    alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
                 />
             </div>
             <div className="mr-auto base2 font-semibold text-n-5 dark:text-n-3">

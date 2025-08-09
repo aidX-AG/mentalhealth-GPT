@@ -21,12 +21,12 @@ const SchedulePost = ({}: SchedulePostProps) => {
 
     return (
         <div>
-            <div className="mb-5 font-bold">{i18next.t("common.div_schedule_your_post_with_buffer_01", { defaultValue: "Schedule your post with Buffer" })}</div>
+            <div className="mb-5 font-bold">{i18next.t("common.sections.schedule-with-buffer", { defaultValue: "Schedule your post with Buffer" })}</div>
             <div className="p-5 bg-n-1 rounded-xl dark:bg-n-6">
                 <div className="flex mb-4 space-x-4 md:block md:space-x-0">
                     <div className="basis-1/2 md:mb-4">
                         <div className="mb-2 base2 font-semibold">
-                            {i18next.t("common.div_choose_date_02", { defaultValue: "Choose date" })}</div>
+                            {i18next.t("common.form.choose-date", { defaultValue: "Choose date" })}</div>
                         <div className="relative">
                             <DatePicker
                                 className="w-full h-12 pl-[2.625rem] border-2 border-n-4/25 bg-transparent rounded-xl font-inter base2 text-n-6 outline-none transition-colors focus:border-primary-1 dark:text-n-3"
@@ -45,7 +45,7 @@ const SchedulePost = ({}: SchedulePostProps) => {
                         </div>
                     </div>
                     <div className="basis-1/2">
-                        <div className="mb-2 base2 font-semibold">{i18next.t("common.div_time_03", { defaultValue: "Time" })}</div>
+                        <div className="mb-2 base2 font-semibold">{i18next.t("common.form.time", { defaultValue: "Time" })}</div>
                         <div className="relative">
                             <DatePicker
                                 className="w-full h-12 pl-[2.625rem] border-2 border-n-4/25 bg-transparent rounded-xl font-inter base2 text-n-6 outline-none transition-colors focus:border-primary-1 dark:text-n-3"
@@ -68,9 +68,9 @@ const SchedulePost = ({}: SchedulePostProps) => {
                         className="w-4 h-4 mr-3 fill-n-4/50 dark:text-n-4"
                         name="info-circle"
                     />
-                    {i18next.t("common.div_scheduled_in_your_current_timezone_04", { defaultValue: "Scheduled in your current timezone" })}</div>
+                    {i18next.t("common.form.timezone-note", { defaultValue: "Scheduled in your current timezone" })}</div>
                 <div className="text-right">
-                    <button className="btn-dark md:w-full">{i18next.t("common.div_schedule_05", { defaultValue: "Schedule" })}</button>
+                    <button className="btn-dark md:w-full">{i18next.t("common.buttons.schedule", { defaultValue: "Schedule" })}</button>
                 </div>
             </div>
         </div>

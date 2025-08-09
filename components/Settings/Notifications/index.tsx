@@ -69,7 +69,7 @@ const Notifications = ({}: NotificationsProps) => {
     return (
         <form className="" action="" onSubmit={() => console.log("Submit")}>
             <div className="flex items-center mb-8">
-                <div className="mr-auto h4">{i18next.t("common.div_notifications_01", { defaultValue: "Notifications" })}</div>
+                <div className="mr-auto h4">{i18next.t("common.sections.notifications", { defaultValue: "Notifications" })}</div>
                 <Switch
                     value={notifications}
                     setValue={handleNotificationsChange}

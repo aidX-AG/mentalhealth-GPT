@@ -48,7 +48,7 @@ const Item = ({ item }: ItemProps) => {
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/4cR7E79X8Ys"
-                    title={i18next.t("common.iframetitle_you_tube_video_player_01", { defaultValue: "YouTube video player" })}
+                    title={i18next.t("common.misc.youtube-player", { defaultValue: "YouTube video player" })}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
             </Modal>

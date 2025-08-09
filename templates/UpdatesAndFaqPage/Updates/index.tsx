@@ -64,7 +64,7 @@ const Updates = ({ items }: UpdatesProps) => {
                 })}
             </div>
             <div className="text-center">
-                <button className="btn-stroke-light">{i18next.t("updates-and-faq.div_load_more_01", { defaultValue: "Load more" })}</button>
+                <button className="btn-stroke-light">{i18next.t("updates-and-faq.buttons.load-more", { defaultValue: "Load more" })}</button>
             </div>
         </>
     );

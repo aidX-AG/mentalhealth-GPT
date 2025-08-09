@@ -31,7 +31,7 @@ const Radio = ({ items, value, setValue }: RadioProps) => {
                 >
                     <div className="flex mb-1">
                         <div className="base2 dark:text-n-4">
-                            {i18next.t("checkout.div_pay_01", { defaultValue: "Pay" })}{item.title}
+                            {i18next.t("checkout.sections.pay", { defaultValue: "Pay" })}{item.title}
                         </div>
                         <Icon
                             className="ml-auto fill-primary-1 opacity-0 transition-opacity ui-checked:opacity-100"
@@ -40,10 +40,10 @@ const Radio = ({ items, value, setValue }: RadioProps) => {
                     </div>
                     <div className="flex items-center">
                         <div className="base1 font-semibold">
-                            {i18next.t("checkout.div_text_02", { defaultValue: "$" })}{item.value}{i18next.t("checkout.div_month_03", { defaultValue: "/month" })}</div>
+                            {i18next.t("checkout.sections.currency-symbol", { defaultValue: "$" })}{item.value}{i18next.t("checkout.sections.per-month", { defaultValue: "/month" })}</div>
                         {item.save && (
                             <div className="ml-auto px-2 base2 bg-primary-2/15 rounded text-[#0C923C]">
-                                {i18next.t("checkout.node_save_04", { defaultValue: "Save" })}{item.save}{i18next.t("checkout.node_text_05", { defaultValue: "%" })}</div>
+                                {i18next.t("checkout.badges.save", { defaultValue: "Save" })}{item.save}{i18next.t("checkout.badges.percent", { defaultValue: "%" })}</div>
                         )}
                     </div>
                 </RadioGroup.Option>

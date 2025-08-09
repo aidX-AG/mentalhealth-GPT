@@ -23,9 +23,9 @@ const ApplicationsPage = () => {
                     <Icon className="fill-n-4" name="close" />
                 </button>
                 <div className="h3 leading-[4rem] md:mb-3 md:h3">
-                    {i18next.t("applications.div_applications_01", { defaultValue: "Applications" })}</div>
+                    {i18next.t("applications.sections.title", { defaultValue: "Applications" })}</div>
                 <div className="mb-8 body1 text-n-4 md:mb-6 md:body1S">
-                    {i18next.t("applications.div_browse_and_install_apps_to_02", { defaultValue: "Browse and install apps to simplify your life with mentalhealthGPT" })}</div>
+                    {i18next.t("applications.body.browse-install-apps", { defaultValue: "Browse and install apps to simplify your life with mentalhealthGPT" })}</div>
                 <form
                     className="mb-8"
                     action=""
@@ -45,13 +45,13 @@ const ApplicationsPage = () => {
                             className="w-full h-16 pl-13 pr-6 bg-n-2 border-2 border-transparent rounded-xl outline-none base1 text-n-7 transition-colors placeholder:text-n-4 focus:border-n-3 focus:bg-transparent dark:bg-n-7 dark:text-n-1 dark:focus:bg-n-6 dark:focus:border-n-7"
                             type="text"
                             name="search"
-                            placeholder={i18next.t("applications.inputplaceholder_search_by_app_name_or_04", { defaultValue: "Search by app name or category" })}
+                            placeholder={i18next.t("applications.form.search-placeholder", { defaultValue: "Search by app name or category" })}
                             value={search}
                             onChange={(e: any) => setSearch(e.target.value)}
                         />
                     </div>
                 </form>
-                <div className="mb-11 h6 text-n-4 md:mb-6">{i18next.t("applications.div_suggested_apps_03", { defaultValue: "Suggested apps" })}</div>
+                <div className="mb-11 h6 text-n-4 md:mb-6">{i18next.t("applications.sections.suggested-apps", { defaultValue: "Suggested apps" })}</div>
                 <div className="flex flex-wrap -mx-7 -mt-16 2xl:-mx-4 2xl:-mt-12 md:block md:mt-0 md:mx-0">
                     {applications.map((application) => (
                         <Application item={application} key={application.id} />

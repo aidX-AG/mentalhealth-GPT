@@ -12,7 +12,7 @@ const Logo = ({ className = "", dark = false }: LogoProps) => (
     <Image
       className="w-full h-auto"
       src={dark ? "images/logo-dark" : "images/logo"}
-      alt={i18next.t("common.imagealt_aid_x_01", { defaultValue: "aidX" })}
+      alt={i18next.t("common.alt.aidx", { defaultValue: "aidX" })}
       widths={[480, 960, 1440]}
       format="webp"
       fallbackFormat="jpg"

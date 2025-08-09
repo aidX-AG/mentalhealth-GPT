@@ -15,7 +15,7 @@ const Files = ({ image, document }: FilesProps) => (
                     className="rounded-xl object-cover"
                     src={image}
                     fill
-                    alt={i18next.t("common.imagealt_avatar_01", { defaultValue: "Avatar" })}
+                    alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
                 />
                 <button className="group absolute top-2 right-2 w-8 h-8 rounded-full bg-n-1 text-0 transition-colors hover:bg-accent-1">
                     <Icon

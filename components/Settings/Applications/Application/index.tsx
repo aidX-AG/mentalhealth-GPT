@@ -21,7 +21,7 @@ const Application = ({ item }: ApplicationProps) => (
             <div className="caption1 text-n-4/50">{item.date}</div>
         </div>
         <button className="btn-stroke-light shrink-0 ml-4 invisible opacity-0 transition-all group-hover:visible group-hover:opacity-100 xl:visible xl:opacity-100">
-            {i18next.t("common.div_deauthorize_01", { defaultValue: "Deauthorize" })}</button>
+            {i18next.t("common.sections.deauthorize", { defaultValue: "Deauthorize" })}</button>
     </div>
 );
 

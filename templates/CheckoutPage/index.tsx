@@ -11,9 +11,9 @@ const CheckoutPage = () => {
             <div className="px-15 py-12 2xl:px-10 2xl:py-14 xl:px-8 lg:pt-20 md:pt-5 md:px-6">
                 <div className="max-w-[58.25rem] mx-auto">
                     <div className="mb-4 h2 md:h3 md:pr-16">
-                        {i18next.t("checkout.div_ai_chat_made_affordable_01", { defaultValue: "AI chat made affordable" })}</div>
+                        {i18next.t("checkout.sections.hero-title", { defaultValue: "AI chat made affordable" })}</div>
                     <div className="body1 text-n-4 md:body2">
-                        {i18next.t("checkout.div_pricing_plans_for_every_budget_02", { defaultValue: "Pricing Plans for every budget - Unlock the power of AI" })}</div>
+                        {i18next.t("checkout.body.hero-subtitle", { defaultValue: "Pricing Plans for every budget - Unlock the power of AI" })}</div>
                     <div className="flex justify-between mt-10 pt-16 border-t border-n-3 lg:block lg:mt-6 lg:pt-0 lg:border-0 md:mt-10 md:border-t md:pt-4 dark:border-n-5">
                         <div className="w-full max-w-[20.375rem] lg:max-w-full lg:mb-8">
                             <Details />

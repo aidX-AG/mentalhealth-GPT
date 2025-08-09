@@ -53,7 +53,7 @@ const Code = ({ items }: CodeProps) => {
                                 className="w-4 h-4 mr-1 fill-n-1"
                                 name="check-thin"
                             />
-                            {i18next.t("common.node_copied_01", { defaultValue: "Copied!" })}</div>
+                            {i18next.t("common.badges.copied", { defaultValue: "Copied!" })}</div>
                     ) : (
                         items
                             .filter((x) => x.id === value)
@@ -64,7 +64,7 @@ const Code = ({ items }: CodeProps) => {
                                     onCopy={onCopy}
                                 >
                                     <button className="shrink-0 ml-3 caption1 font-semibold text-n-1 transition-colors hover:text-primary-1 md:hidden">
-                                        {i18next.t("common.copytoclipboard_copy_code_02", { defaultValue: "Copy code" })}</button>
+                                        {i18next.t("common.actions.copy-code", { defaultValue: "Copy code" })}</button>
                                 </CopyToClipboard>
                             ))
                     )}
@@ -93,10 +93,10 @@ const Code = ({ items }: CodeProps) => {
                 </div>
             </div>
             <div className="">
-                {i18next.t("common.div_note_this_is_just_an_03", { defaultValue: "Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side." })}</div>
+                {i18next.t("common.body.form-example-note", { defaultValue: "Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side." })}</div>
             <div className="flex justify-between items-center pl-4 pr-1 py-1 rounded-xl bg-n-1 shadow-[0_0_1rem_0.5rem_rgba(0,0,0,0.07)] dark:bg-n-6/50">
-                {i18next.t("common.div_i_have_created_a_project_04", { defaultValue: "I have created a project in your Codepen account" })}<button className="shrink-0 btn-dark btn-medium ml-4">
-                    <span>{i18next.t("common.button_view_05", { defaultValue: "View" })}</span>
+                {i18next.t("common.body.created-project", { defaultValue: "I have created a project in your Codepen account" })}<button className="shrink-0 btn-dark btn-medium ml-4">
+                    <span>{i18next.t("common.buttons.view", { defaultValue: "View" })}</span>
                     <Icon name="external-link" />
                 </button>
             </div>

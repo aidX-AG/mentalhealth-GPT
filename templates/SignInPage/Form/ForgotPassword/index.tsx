@@ -20,12 +20,12 @@ const ForgotPassword = ({ onClick }: ForgotPasswordProps) => {
                     className="mr-4 transition-transform group-hover:-translate-x-1 dark:fill-n-1"
                     name="arrow-prev"
                 />
-                {i18next.t("sign-in.fragment_reset_your_password_01", { defaultValue: "Reset your password" })}</button>
+                {i18next.t("sign-in.fragments.reset-password", { defaultValue: "Reset your password" })}</button>
             <form action="" onSubmit={() => console.log("Submit")}>
                 <Field
                     className="mb-6"
                     classInput="dark:bg-n-7 dark:border-n-7 dark:focus:bg-transparent"
-                    placeholder={i18next.t("sign-in.fieldplaceholder_email_03", { defaultValue: "Email" })}
+                    placeholder={i18next.t("sign-in.placeholders.email", { defaultValue: "Email" })}
                     icon="email"
                     type="email"
                     value={email}
@@ -36,7 +36,7 @@ const ForgotPassword = ({ onClick }: ForgotPasswordProps) => {
                     className="btn-blue btn-large w-full mb-6"
                     type="submit"
                 >
-                    {i18next.t("sign-in.form_reset_password_02", { defaultValue: "Reset password" })}</button>
+                    {i18next.t("sign-in.buttons.reset-password", { defaultValue: "Reset password" })}</button>
             </form>
         </>
     );

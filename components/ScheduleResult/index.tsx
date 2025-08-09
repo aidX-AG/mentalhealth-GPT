@@ -4,18 +4,18 @@ type ScheduleResultProps = {};
 
 const ScheduleResult = ({}: ScheduleResultProps) => (
     <div className="">
-        <div className="mb-3 font-bold">{i18next.t("common.div_you_are_done_01", { defaultValue: "You are done!" })}</div>
+        <div className="mb-3 font-bold">{i18next.t("common.misc.done", { defaultValue: "You are done!" })}</div>
         <div className="mb-5">
-            {i18next.t("common.div_your_post_has_been_scheduled_02", { defaultValue: "Your post has been scheduled for February 14th, 2023 at 11:30 and will be shared through" })}{" "}
+            {i18next.t("common.misc.post-scheduled", { defaultValue: "Your post has been scheduled for February 14th, 2023 at 11:30 and will be shared through" })}{" "}
             <a
                 className="text-primary-1"
                 href="https://buffer.com/"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                {i18next.t("common.div_buffer_03", { defaultValue: "Buffer" })}</a>
-            {i18next.t("common.div_text_04", { defaultValue: "." })}</div>
-        <button className="btn-dark btn-small">{i18next.t("common.div_view_on_buffer_05", { defaultValue: "View on Buffer" })}</button>
+                {i18next.t("common.misc.buffer", { defaultValue: "Buffer" })}</a>
+            {i18next.t("common.misc.period", { defaultValue: "." })}</div>
+        <button className="btn-dark btn-small">{i18next.t("common.links.view-on-buffer", { defaultValue: "View on Buffer" })}</button>
     </div>
 );
 

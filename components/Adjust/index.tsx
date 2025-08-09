@@ -18,16 +18,16 @@ const Adjust = ({ image }: AdjustProps) => (
             />
         </div>
         <div className="mt-6">
-            <SliderRange className="mb-2" title={i18next.t("common.sliderrangetitle_exposure_03", { defaultValue: "Exposure" })} />
-            <SliderRange className="mb-2" title={i18next.t("common.sliderrangetitle_contrast_04", { defaultValue: "Contrast" })} />
-            <SliderRange className="mb-2" title={i18next.t("common.sliderrangetitle_highlights_05", { defaultValue: "Highlights" })} />
-            <SliderRange className="mb-2" title={i18next.t("common.sliderrangetitle_shadows_06", { defaultValue: "Shadows" })} />
-            <SliderRange className="mb-2" title={i18next.t("common.sliderrangetitle_white_07", { defaultValue: "White" })} />
-            <SliderRange className="" title={i18next.t("common.sliderrangetitle_blacks_08", { defaultValue: "Blacks" })} />
+            <SliderRange className="mb-2" title={i18next.t("common.controls.exposure", { defaultValue: "Exposure" })} />
+            <SliderRange className="mb-2" title={i18next.t("common.controls.contrast", { defaultValue: "Contrast" })} />
+            <SliderRange className="mb-2" title={i18next.t("common.controls.highlights", { defaultValue: "Highlights" })} />
+            <SliderRange className="mb-2" title={i18next.t("common.controls.shadows", { defaultValue: "Shadows" })} />
+            <SliderRange className="mb-2" title={i18next.t("common.controls.white", { defaultValue: "White" })} />
+            <SliderRange className="" title={i18next.t("common.controls.blacks", { defaultValue: "Blacks" })} />
         </div>
         <div className="flex space-x-3 mt-6">
-            <button className="btn-blue w-full">{i18next.t("common.div_auto_01", { defaultValue: "Auto" })}</button>
-            <button className="btn-stroke-light w-full">{i18next.t("common.div_reset_02", { defaultValue: "Reset" })}</button>
+            <button className="btn-blue w-full">{i18next.t("common.misc.auto", { defaultValue: "Auto" })}</button>
+            <button className="btn-stroke-light w-full">{i18next.t("common.misc.reset", { defaultValue: "Reset" })}</button>
         </div>
     </div>
 );

@@ -41,7 +41,7 @@ const AudioPlayer = ({ edit, onSave }: AudioPlayerProps) => {
                             }
                             width={532}
                             height={39}
-                            alt={i18next.t("common.imagealt_audio_06", { defaultValue: "Audio" })}
+                            alt={i18next.t("common.alt.audio", { defaultValue: "Audio" })}
                         />
                     </div>
                 </div>
@@ -49,7 +49,7 @@ const AudioPlayer = ({ edit, onSave }: AudioPlayerProps) => {
                     <>
                         <div className="p-3.5 border-t border-n-3 dark:border-n-5">
                             <span className="bg-primary-1 text-n-1">
-                                {i18next.t("common.div_introducing_quot_brainwavequot_an_aipowe_01", { defaultValue: "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any" })}</span>{" "}
+                                {i18next.t("common.body.introducing-brainwave", { defaultValue: "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any" })}</span>{" "}
                             written script into high-quality audio. Using
                             advanced natural language processing and
                             text-to-speech technology, Speechify can generate
@@ -65,19 +65,19 @@ const AudioPlayer = ({ edit, onSave }: AudioPlayerProps) => {
                         </div>
                         <div className="flex justify-between items-center px-3.5 pt-3.5 pb-2.5 border-t border-n-3 dark:border-n-5">
                             <div className="caption1 text-n-4/75">
-                                {i18next.t("common.div_609_characters_02", { defaultValue: "609 characters" })}</div>
+                                {i18next.t("common.misc.characters-609", { defaultValue: "609 characters" })}</div>
                             <button
                                 className="btn-blue btn-medium"
                                 onClick={onSave}
                             >
-                                {i18next.t("common.div_save_03", { defaultValue: "Save" })}</button>
+                                {i18next.t("common.misc.save", { defaultValue: "Save" })}</button>
                         </div>
                     </>
                 )}
             </div>
             <div className="flex justify-between mt-2 caption2 text-n-4">
-                <div>{i18next.t("common.div_021_04", { defaultValue: "0:21" })}</div>
-                <div>{i18next.t("common.div_102_05", { defaultValue: "1:02" })}</div>
+                <div>{i18next.t("common.misc.time-021", { defaultValue: "0:21" })}</div>
+                <div>{i18next.t("common.misc.time-102", { defaultValue: "1:02" })}</div>
             </div>
         </div>
     );

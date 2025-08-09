@@ -40,7 +40,7 @@ const Profile = ({}: ProfileProps) => {
                             className="rounded-full object-cover"
                             src="/images/avatar.jpg"
                             fill
-                            alt={i18next.t("common.imagealt_avatar_03", { defaultValue: "Avatar" })}
+                            alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
                         />
                         <div className="absolute -right-0.75 -bottom-0.75 w-4.5 h-4.5 bg-primary-2 rounded-full border-4 border-n-1 dark:border-n-6"></div>
                     </Menu.Button>
@@ -59,14 +59,14 @@ const Profile = ({}: ProfileProps) => {
                                         className="rounded-full object-cover"
                                         src="/images/avatar.jpg"
                                         fill
-                                        alt={i18next.t("common.imagealt_avatar_04", { defaultValue: "Avatar" })}
+                                        alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
                                     />
                                     <div className="absolute right-0 bottom-0 w-4.5 h-4.5 bg-primary-2 rounded-full border-4 border-n-1 dark:border-n-7"></div>
                                 </div>
                                 <div className="pl-4">
-                                    <div className="h6">{i18next.t("common.div_tran_mau_tri_tam_01", { defaultValue: "Tran Mau Tri Tam" })}</div>
+                                    <div className="h6">{i18next.t("common.misc.author-name", { defaultValue: "Tran Mau Tri Tam" })}</div>
                                     <div className="caption1 text-n-4">
-                                        {i18next.t("common.div_lead_visual_designer_at_ui8_02", { defaultValue: "Lead visual designer at UI8" })}</div>
+                                        {i18next.t("common.misc.role-label", { defaultValue: "Lead visual designer at UI8" })}</div>
                                 </div>
                             </div>
                             <div className="px-4 bg-n-2 rounded-xl dark:bg-n-6">

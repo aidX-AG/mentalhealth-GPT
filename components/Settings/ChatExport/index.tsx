@@ -53,10 +53,10 @@ const ChatExport = ({}: ChatExportProps) => {
 
     return (
         <form className="" action="" onSubmit={() => console.log("Submit")}>
-            <div className="mb-8 h4">{i18next.t("common.form_chat_export_01", { defaultValue: "Chat export" })}</div>
+            <div className="mb-8 h4">{i18next.t("common.form.chat-export", { defaultValue: "Chat export" })}</div>
             <div className="flex items-center mb-8">
                 <div className="mr-auto base2 text-n-4">
-                    {i18next.t("common.div_select_chat_list_to_export_02", { defaultValue: "Select chat list to export" })}</div>
+                    {i18next.t("common.form.select-chat-list", { defaultValue: "Select chat list to export" })}</div>
                 <Switch
                     value={exportChat}
                     setValue={handleNotificationsChange}
@@ -95,7 +95,7 @@ const ChatExport = ({}: ChatExportProps) => {
             </div>
             <div className="inline-flex bg-primary-1 rounded-xl md:w-full">
                 <button className="btn-blue pr-4 rounded-r-none md:grow">
-                    {i18next.t("common.div_download_conversation_03", { defaultValue: "Download conversation" })}</button>
+                    {i18next.t("common.form.download-conversation", { defaultValue: "Download conversation" })}</button>
                 <div className=" self-center w-0.25 h-8 bg-n-1/20"></div>
                 <Select
                     classButton="h-12 rounded-l-none rounded-r-xl shadow-[inset_0_0_0_0.0625rem_#0084FF] bg-transparent text-n-1 font-semibold dark:bg-transparent"

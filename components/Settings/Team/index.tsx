@@ -8,10 +8,10 @@ type TeamProps = {};
 const Team = ({}: TeamProps) => (
     <>
         <div className="flex items-center mb-8 md:mb-6">
-            <div className="mr-auto h4">{i18next.t("common.div_members_01", { defaultValue: "Members" })}</div>
-            <button className="btn-blue">{i18next.t("common.div_invite_02", { defaultValue: "Invite" })}</button>
+            <div className="mr-auto h4">{i18next.t("common.sections.members", { defaultValue: "Members" })}</div>
+            <button className="btn-blue">{i18next.t("common.sections.invite", { defaultValue: "Invite" })}</button>
         </div>
-        <div className="py-3 base2 text-n-4">{i18next.t("common.fragment_42_members_03", { defaultValue: "42 members" })}</div>
+        <div className="py-3 base2 text-n-4">{i18next.t("common.fragments.members-count", { defaultValue: "42 members" })}</div>
         <div className="mb-6">
             {members.map((member, index) => (
                 <Member

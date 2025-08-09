@@ -20,7 +20,7 @@ const Question = ({ content, image, document, time }: QuestionProps) => (
                         className="rounded-xl object-cover"
                         src={image}
                         fill
-                        alt={i18next.t("common.imagealt_avatar_01", { defaultValue: "Avatar" })}
+                        alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
                     />
                 </div>
             )}
@@ -37,7 +37,7 @@ const Question = ({ content, image, document, time }: QuestionProps) => (
                     className="object-cover"
                     src="/images/wip-portrait.jpg"
                     fill
-                    alt={i18next.t("common.imagealt_wip_02", { defaultValue: "WIP" })}
+                    alt={i18next.t("common.alt.wip", { defaultValue: "WIP" })}
                 />
             </div>
         </div>

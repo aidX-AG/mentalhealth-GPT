@@ -44,10 +44,10 @@ const Video = ({}: VideoProps) => {
         <div className="">
             <View />
             <div className="mt-4">
-                {i18next.t("common.div_based_on_the_gender_identified_01", { defaultValue: "Based on the gender identified in the uploaded image, the video has been automatically generated with a male voice. However, you have the option to customize your video by selecting from the available options below." })}</div>
+                {i18next.t("common.body.gender-note", { defaultValue: "Based on the gender identified in the uploaded image, the video has been automatically generated with a male voice. However, you have the option to customize your video by selecting from the available options below." })}</div>
             <div className="flex flex-wrap">
                 <button className="btn-dark btn-small mr-4 mt-4">
-                    <span>{i18next.t("common.button_download_02", { defaultValue: "Download" })}</span>
+                    <span>{i18next.t("common.buttons.download", { defaultValue: "Download" })}</span>
                     <Icon name="download" />
                 </button>
                 <Select
@@ -60,7 +60,7 @@ const Video = ({}: VideoProps) => {
                     up
                 />
                 <Select
-                    title={i18next.t("common.selecttitle_voice_03", { defaultValue: "Voice" })}
+                    title={i18next.t("common.labels.voice", { defaultValue: "Voice" })}
                     icon="volume"
                     className="mr-4 mt-4"
                     items={voices}

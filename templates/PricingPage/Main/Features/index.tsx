@@ -8,12 +8,12 @@ type FeaturesProps = {
 const Features = ({ items }: FeaturesProps) => (
     <div className="lg:hidden">
         <div className="flex mb-8 h4">
-            <div className="w-[14.875rem] h4">{i18next.t("pricing.div_core_features_01", { defaultValue: "Core features" })}</div>
-            <div className="hidden flex-1 px-8 2xl:block">{i18next.t("pricing.div_free_02", { defaultValue: "Free" })}</div>
+            <div className="w-[14.875rem] h4">{i18next.t("pricing.sections.core-features", { defaultValue: "Core features" })}</div>
+            <div className="hidden flex-1 px-8 2xl:block">{i18next.t("pricing.sections.free", { defaultValue: "Free" })}</div>
             <div className="hidden flex-1 px-8 text-[#0F9F43] 2xl:block">
-                {i18next.t("pricing.div_pro_03", { defaultValue: "Pro" })}</div>
+                {i18next.t("pricing.sections.pro", { defaultValue: "Pro" })}</div>
             <div className="hidden flex-1 px-8 text-[#3E90F0] 2xl:block">
-                {i18next.t("pricing.div_enterprise_04", { defaultValue: "Enterprise" })}</div>
+                {i18next.t("pricing.sections.enterprise", { defaultValue: "Enterprise" })}</div>
         </div>
         <div className="">
             {items.map((item: any) => (
@@ -40,7 +40,7 @@ const Features = ({ items }: FeaturesProps) => (
                             name={item.pro ? "check-thin" : "close"}
                         />
                         {item.id === "4" && (
-                            <div className="ml-3 base2">{i18next.t("pricing.node_via_email_05", { defaultValue: "Via email" })}</div>
+                            <div className="ml-3 base2">{i18next.t("pricing.badges.via-email", { defaultValue: "Via email" })}</div>
                         )}
                     </div>
                     <div className="flex items-center flex-1 px-8">
@@ -51,7 +51,7 @@ const Features = ({ items }: FeaturesProps) => (
                             name={item.enterprise ? "check-thin" : "close"}
                         />
                         {item.id === "4" && (
-                            <div className="ml-3 base2">{i18next.t("pricing.node_chat_247_06", { defaultValue: "Chat 24/7" })}</div>
+                            <div className="ml-3 base2">{i18next.t("pricing.badges.chat-247", { defaultValue: "Chat 24/7" })}</div>
                         )}
                     </div>
                 </div>

@@ -85,7 +85,7 @@ const MultiSelect = ({
                 getOptionLabel={getOptionLabel}
                 getOptionValue={getOptionValue}
                 formatOptionLabel={formatOptionLabel}
-                placeholder={i18next.t("common.selectplaceholder_name_member_01", { defaultValue: "Name member" })}
+                placeholder={i18next.t("common.placeholders.member-name", { defaultValue: "Name member" })}
                 noOptionsMessage={() => "No people found"}
                 components={{
                     Option: DetailsOption,

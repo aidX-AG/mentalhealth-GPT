@@ -27,10 +27,10 @@ const Member = ({ item, style }: MemberProps) => {
                     <div className="base1 font-semibold">{item.name}</div>
                     {item.admin && (
                         <div className="ml-2 px-3 py-0.5 bg-[#FF97E8] rounded caption1 font-semibold">
-                            {i18next.t("common.node_admin_01", { defaultValue: "Admin" })}</div>
+                            {i18next.t("common.badges.admin", { defaultValue: "Admin" })}</div>
                     )}
                 </div>
-                <div className="caption1 text-n-4/50">{i18next.t("common.div_text_02", { defaultValue: "@" })}{item.login}</div>
+                <div className="caption1 text-n-4/50">{i18next.t("common.misc.at", { defaultValue: "@" })}{item.login}</div>
             </div>
             <Actions className="invisible opacity-0 transition-all group-hover:visible group-hover:opacity-100 xl:visible xl:opacity-100" />
         </div>
