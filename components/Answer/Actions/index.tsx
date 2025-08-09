@@ -4,6 +4,7 @@ import { toast } from "react-hot-toast";
 import Image from "@/components/Image";
 import Notify from "@/components/Notify";
 import ModalShareChat from "@/components/ModalShareChat";
+import i18next from "i18next";
 
 type ActionsProps = {};
 
@@ -17,7 +18,7 @@ const Actions = ({}: ActionsProps) => {
         setCopied(true);
         toast((t) => (
             <Notify iconCheck>
-                <div className="ml-3 h6">Content copied</div>
+                <div className="ml-3 h6">{i18next.t("common.notify_content_copied_01", { defaultValue: "Content copied" })}</div>
             </Notify>
         ));
     };
@@ -25,13 +26,12 @@ const Actions = ({}: ActionsProps) => {
     const handleClick = () => {
         toast((t) => (
             <Notify iconCheck>
-                <div className="mr-6 ml-3 h6">1 chat archived</div>
+                <div className="mr-6 ml-3 h6">{i18next.t("common.notify_1_chat_archived_02", { defaultValue: "1 chat archived" })}</div>
                 <button
                     className="btn-blue btn-medium ml-3"
                     onClick={() => toast.dismiss(t.id)}
                 >
-                    Undo
-                </button>
+                    {i18next.t("common.notify_undo_03", { defaultValue: "Undo" })}</button>
             </Notify>
         ));
     };
@@ -42,9 +42,9 @@ const Actions = ({}: ActionsProps) => {
     return (
         <>
             <CopyToClipboard text="Content" onCopy={onCopy}>
-                <button className={`${styleButton} md:hidden`}>Copy</button>
+                <button className={`${styleButton} md:hidden`}>{i18next.t("common.copytoclipboard_copy_04", { defaultValue: "Copy" })}</button>
             </CopyToClipboard>
-            <button className={styleButton}>Regenerate response</button>
+            <button className={styleButton}>{i18next.t("common.fragment_regenerate_response_05", { defaultValue: "Regenerate response" })}</button>
             {!share && !archive && (
                 <div className="flex ml-3 px-1 space-x-1 bg-n-3 rounded-md md:hidden dark:bg-n-7">
                     <button className="" onClick={() => setShare(true)}>
@@ -52,7 +52,7 @@ const Actions = ({}: ActionsProps) => {
                             src="/images/smile-heart-eyes.png"
                             width={24}
                             height={24}
-                            alt="Smile heart eyes"
+                            alt={i18next.t("common.imagealt_smile_heart_eyes_08", { defaultValue: "Smile heart eyes" })}
                         />
                     </button>
                     <button className="" onClick={() => setArchive(true)}>
@@ -60,7 +60,7 @@ const Actions = ({}: ActionsProps) => {
                             src="/images/smile-unamused.png"
                             width={24}
                             height={24}
-                            alt="Smile unamused"
+                            alt={i18next.t("common.imagealt_smile_unamused_09", { defaultValue: "Smile unamused" })}
                         />
                     </button>
                 </div>
@@ -74,10 +74,9 @@ const Actions = ({}: ActionsProps) => {
                         src="/images/smile-heart-eyes.png"
                         width={24}
                         height={24}
-                        alt="Smile heart eyes"
+                        alt={i18next.t("common.imagealt_smile_heart_eyes_10", { defaultValue: "Smile heart eyes" })}
                     />
-                    Share
-                </button>
+                    {i18next.t("common.node_share_06", { defaultValue: "Share" })}</button>
             )}
             {archive && (
                 <button
@@ -88,10 +87,9 @@ const Actions = ({}: ActionsProps) => {
                         src="/images/smile-unamused.png"
                         width={24}
                         height={24}
-                        alt="Smile unamused"
+                        alt={i18next.t("common.imagealt_smile_unamused_11", { defaultValue: "Smile unamused" })}
                     />
-                    Archive chat
-                </button>
+                    {i18next.t("common.node_archive_chat_07", { defaultValue: "Archive chat" })}</button>
             )}
             <ModalShareChat
                 visible={visibleModal}

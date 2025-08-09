@@ -2,6 +2,7 @@ import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Select from "@/components/Select";
 import { useState } from "react";
+import i18next from "i18next";
 
 type UserProps = {
     item: any;
@@ -32,7 +33,7 @@ const User = ({ item }: UserProps) => {
                     className="object-cover rounded-full"
                     src={item.avatar}
                     fill
-                    alt="Avatar"
+                    alt={i18next.t("common.imagealt_avatar_01", { defaultValue: "Avatar" })}
                 />
             </div>
             <div className="mr-auto base2 font-semibold text-n-5 dark:text-n-3">

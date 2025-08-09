@@ -1,6 +1,7 @@
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Details from "../Details";
+import i18next from "i18next";
 
 type PostProps = {
     item: any;
@@ -31,26 +32,26 @@ const Post = ({ item }: PostProps) => (
                 {item.tags.map((tag: any, index: number) => (
                     <span className="text-primary-1" key={index}>
                         {" "}
-                        #{tag}
+                        {i18next.t("common.node_text_01", { defaultValue: "#" })}{tag}
                     </span>
                 ))}
             </div>
             <Details images={item.images} />
             <div className="flex flex-wrap mt-1 -ml-3 md:-mr-2">
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>Share now</span>
+                    <span>{i18next.t("common.button_share_now_02", { defaultValue: "Share now" })}</span>
                     <Icon name="external-link" />
                 </button>
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>Edit</span>
+                    <span>{i18next.t("common.button_edit_03", { defaultValue: "Edit" })}</span>
                     <Icon name="edit" />
                 </button>
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>New variation</span>
+                    <span>{i18next.t("common.button_new_variation_04", { defaultValue: "New variation" })}</span>
                     <Icon name="plus" />
                 </button>
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>Copy</span>
+                    <span>{i18next.t("common.button_copy_05", { defaultValue: "Copy" })}</span>
                     <Icon name="copy" />
                 </button>
             </div>

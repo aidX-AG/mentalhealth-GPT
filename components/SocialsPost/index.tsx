@@ -1,6 +1,7 @@
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Post from "./Post";
+import i18next from "i18next";
 
 type ImageType = {
     id: string;
@@ -23,9 +24,7 @@ type SocialsPostProps = {
 const SocialsPost = ({ items }: SocialsPostProps) => (
     <div className="">
         <div>
-            Here&apos;s an example of promotional content optimized for Twitter
-            and Facebook:
-        </div>
+            {i18next.t("common.div_hereaposs_an_example_of_promotional_01", { defaultValue: "Here&apos;s an example of promotional content optimized for Twitter and Facebook:" })}</div>
         <div className="mt-5">
             {items.map((x) => (
                 <Post item={x} key={x.id} />
@@ -33,7 +32,7 @@ const SocialsPost = ({ items }: SocialsPostProps) => (
         </div>
         <div className="mt-5">
             <div className="flex items-center mb-3">
-                <div>Share with</div>
+                <div>{i18next.t("common.div_share_with_02", { defaultValue: "Share with" })}</div>
                 <div className="ml-3 text-0">
                     <svg
                         className="fill-n-7 dark:fill-n-1"
@@ -59,15 +58,15 @@ const SocialsPost = ({ items }: SocialsPostProps) => (
             </div>
             <div className="flex flex-wrap -mt-4 -ml-4 md:block md:ml-0">
                 <button className="btn-dark btn-medium ml-4 mt-4 px-4 rounded-md md:w-full md:ml-0">
-                    <span>Add to Queue</span>
+                    <span>{i18next.t("common.button_add_to_queue_03", { defaultValue: "Add to Queue" })}</span>
                     <Icon name="share" />
                 </button>
                 <button className="btn-white btn-medium ml-4 mt-4 px-4 rounded-md md:w-full md:ml-0">
-                    <span>Share now</span>
+                    <span>{i18next.t("common.button_share_now_04", { defaultValue: "Share now" })}</span>
                     <Icon name="share-1" />
                 </button>
                 <button className="btn-white btn-medium ml-4 mt-4 px-4 rounded-md md:w-full md:ml-0">
-                    <span>Schedule post</span>
+                    <span>{i18next.t("common.button_schedule_post_05", { defaultValue: "Schedule post" })}</span>
                     <Icon name="calendar-check" />
                 </button>
             </div>

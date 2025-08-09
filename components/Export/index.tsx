@@ -2,6 +2,7 @@ import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 
 import { exportImage, exportAudio } from "@/constants/export";
+import i18next from "i18next";
 
 type ExportProps = {
     typeImage?: boolean;
@@ -58,7 +59,7 @@ const Export = ({ typeImage }: ExportProps) => {
                 <div className="relative flex justify-center items-center shrink-0 w-10 h-10 mr-4 rounded-full">
                     <Icon className="dark:fill-n-1" name="dots" />
                 </div>
-                <div className="base2 font-semibold">More</div>
+                <div className="base2 font-semibold">{i18next.t("common.button_more_01", { defaultValue: "More" })}</div>
             </button>
         </div>
     );

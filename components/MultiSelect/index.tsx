@@ -1,6 +1,7 @@
 import Select, { components } from "react-select";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
+import i18next from "i18next";
 
 const { Option, MultiValueRemove } = components;
 
@@ -84,7 +85,7 @@ const MultiSelect = ({
                 getOptionLabel={getOptionLabel}
                 getOptionValue={getOptionValue}
                 formatOptionLabel={formatOptionLabel}
-                placeholder="Name member"
+                placeholder={i18next.t("common.selectplaceholder_name_member_01", { defaultValue: "Name member" })}
                 noOptionsMessage={() => "No people found"}
                 components={{
                     Option: DetailsOption,

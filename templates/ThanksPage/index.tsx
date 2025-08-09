@@ -6,6 +6,7 @@ import Icon from "@/components/Icon";
 import Menu from "@/components/Menu";
 
 import { navigation } from "@/constants/navigation";
+import i18next from "i18next";
 
 const ThanksPage = () => {
     return (
@@ -17,23 +18,17 @@ const ThanksPage = () => {
                             <Icon className="w-12 h-12" name="check-thin" />
                         </div>
                         <div className="mb-6 h2 2xl:h3 xl:h4 lg:text-center">
-                            Thank you for your purchase!
-                        </div>
+                            {i18next.t("thanks.div_thank_you_for_your_purchase_01", { defaultValue: "Thank you for your purchase!" })}</div>
                         <div className="mb-8 body1 text-n-4 xl:body2 lg:text-center">
-                            Your order has been received and is currently being
-                            processed. You will receive an email confirmation
-                            with your order details shortly.
-                        </div>
+                            {i18next.t("thanks.div_your_order_has_been_received_02", { defaultValue: "Your order has been received and is currently being processed. You will receive an email confirmation with your order details shortly." })}</div>
                         <div className="flex xl:block lg:flex lg:space-x-4 md:block md:space-x-0 md:space-y-3">
                             <Link
                                 className="btn-stroke-light mr-3 xl:w-full xl:mr-0 xl:mb-4 lg:mb-0"
                                 href="/pricing"
                             >
-                                Manage subscription
-                            </Link>
+                                {i18next.t("thanks.div_manage_subscription_03", { defaultValue: "Manage subscription" })}</Link>
                             <Link className="btn-blue xl:w-full" href="/">
-                                Start new chat
-                            </Link>
+                                {i18next.t("thanks.div_start_new_chat_04", { defaultValue: "Start new chat" })}</Link>
                         </div>
                     </div>
                     <Menu

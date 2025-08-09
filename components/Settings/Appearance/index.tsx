@@ -3,6 +3,7 @@ import { useColorMode } from "@chakra-ui/color-mode";
 import { twMerge } from "tailwind-merge";
 import Image from "@/components/Image";
 import Select from "@/components/Select";
+import i18next from "i18next";
 
 const languages = [
     {
@@ -42,8 +43,8 @@ const Appearance = ({}: AppearanceProps) => {
 
     return (
         <>
-            <div className="mb-8 h4">Appearance</div>
-            <div className="mb-5 base1 font-semibold">Appearance</div>
+            <div className="mb-8 h4">{i18next.t("common.fragment_appearance_01", { defaultValue: "Appearance" })}</div>
+            <div className="mb-5 base1 font-semibold">{i18next.t("common.fragment_appearance_02", { defaultValue: "Appearance" })}</div>
             <div className="flex mb-8 pr-12 space-x-8 md:pr-0">
                 {items.map((item, index) => (
                     <button
@@ -71,8 +72,7 @@ const Appearance = ({}: AppearanceProps) => {
             </div>
             <div className="flex items-center md:block">
                 <div className="mr-auto base1 font-semibold md:mb-4">
-                    Primary language
-                </div>
+                    {i18next.t("common.div_primary_language_03", { defaultValue: "Primary language" })}</div>
                 <Select
                     className="min-w-[13.125rem]"
                     classButton="bg-n-3/75 dark:bg-n-6 dark:shadow-[inset_0_0_0_0.0625rem_#232627]"

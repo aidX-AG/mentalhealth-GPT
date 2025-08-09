@@ -6,6 +6,7 @@ import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
 import Modal from "@/components/Modal";
 import AddChatList from "@/components/AddChatList";
+import i18next from "i18next";
 
 type ChatListType = {
     id: string;
@@ -38,7 +39,7 @@ const ChatList = ({ visible, items }: ChatListProps) => {
                             className="fill-n-4 transition-transform ui-open:rotate-180"
                             name="arrow-down"
                         />
-                        {!visible && <div className="ml-5">Chat list</div>}
+                        {!visible && <div className="ml-5">{i18next.t("common.node_chat_list_01", { defaultValue: "Chat list" })}</div>}
                     </Disclosure.Button>
                     <Transition
                         enter="transition duration-100 ease-out"
@@ -95,7 +96,7 @@ const ChatList = ({ visible, items }: ChatListProps) => {
                         className="fill-n-4 transition-colors group-hover:fill-n-3"
                         name="plus-circle"
                     />
-                    {!visible && <div className="ml-5">New list</div>}
+                    {!visible && <div className="ml-5">{i18next.t("common.node_new_list_02", { defaultValue: "New list" })}</div>}
                 </button>
             </div>
             <Modal

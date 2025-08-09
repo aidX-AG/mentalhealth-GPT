@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "@/components/Image";
+import i18next from "i18next";
 
 type ItemProps = {
     item: any;
@@ -23,7 +24,7 @@ const Item = ({ item }: ItemProps) => (
                             className="rounded-full object-cover"
                             src={x.avatar}
                             fill
-                            alt="Avatar"
+                            alt={i18next.t("common.imagealt_avatar_03", { defaultValue: "Avatar" })}
                         />
                         {x.online && (
                             <div className="absolute -right-0.25 -bottom-0.25 w-4.5 h-4.5 bg-primary-2 rounded-full border-4 border-n-1 transition-colors group-hover:border-[#F3F5F7] dark:border-n-7 dark:group-hover:border-n-6"></div>
@@ -41,16 +42,15 @@ const Item = ({ item }: ItemProps) => (
                         {x.time}
                     </div>
                     <div className="absolute top-1/2 right-5 -translate-y-1/2 px-2 rounded bg-n-1 caption1 font-semibold text-n-4 hidden group-hover:block md:right-0 dark:bg-n-5 dark:text-n-3">
-                        Jump
-                    </div>
+                        {i18next.t("common.link_jump_01", { defaultValue: "Jump" })}</div>
                     <div className="absolute top-1/2 -translate-y-1/2 left-full flex items-center ml-9 px-3 py-2 bg-n-7 rounded-lg whitespace-nowrap text-n-4 base2 invisible opacity-0 transition-all group-hover:visible group-hover:opacity-100 2xl:hidden dark:bg-n-2">
-                        Last edited by{" "}
+                        {i18next.t("common.link_last_edited_by_02", { defaultValue: "Last edited by" })}{" "}
                         <div className="relative shrink-0 w-5 h-5 mx-2">
                             <Image
                                 className="rounded-full object-cover"
                                 src={x.avatar}
                                 fill
-                                alt="Avatar"
+                                alt={i18next.t("common.imagealt_avatar_04", { defaultValue: "Avatar" })}
                             />
                         </div>
                         <span className="mr-2 font-semibold text-n-1 dark:text-n-7">

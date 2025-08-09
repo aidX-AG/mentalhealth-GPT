@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "@/components/Image";
+import i18next from "i18next";
 
 type LogoProps = {
   className?: string;
@@ -11,7 +12,7 @@ const Logo = ({ className = "", dark = false }: LogoProps) => (
     <Image
       className="w-full h-auto"
       src={dark ? "images/logo-dark" : "images/logo"}
-      alt="aidX"
+      alt={i18next.t("common.imagealt_aid_x_01", { defaultValue: "aidX" })}
       widths={[480, 960, 1440]}
       format="webp"
       fallbackFormat="jpg"

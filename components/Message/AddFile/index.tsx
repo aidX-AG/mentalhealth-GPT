@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/Icon";
 import Modal from "@/components/Modal";
+import i18next from "i18next";
 
 type AddFileProps = {};
 
@@ -30,10 +31,9 @@ const AddFile = ({}: AddFileProps) => {
                         <div className="flex justify-center items-center w-16 h-16 mx-auto mb-6 bg-n-1 rounded-full">
                             <Icon name="upload" />
                         </div>
-                        <div className="h5">Upload to mentalhealthGPT</div>
+                        <div className="h5">{i18next.t("common.div_upload_to_mentalhealth_gpt_01", { defaultValue: "Upload to mentalhealthGPT" })}</div>
                         <div className="base2">
-                            You can add prompts after uploading.
-                        </div>
+                            {i18next.t("common.div_you_can_add_prompts_after_02", { defaultValue: "You can add prompts after uploading." })}</div>
                     </div>
                 </div>
             </Modal>

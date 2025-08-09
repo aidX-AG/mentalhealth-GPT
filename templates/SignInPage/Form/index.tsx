@@ -6,6 +6,7 @@ import Image from "@/components/Image";
 import SignIn from "./SignIn";
 import CreateAccount from "./CreateAccount";
 import ForgotPassword from "./ForgotPassword";
+import i18next from "i18next";
 
 const tabNav = ["Sign in", "Create account"];
 
@@ -45,7 +46,7 @@ const Form = ({}: FormProps) => {
                                 height={24}
                                 alt=""
                             />
-                            <span className="ml-4">Continue with Google</span>
+                            <span className="ml-4">{i18next.t("sign-in.button_continue_with_google_01", { defaultValue: "Continue with Google" })}</span>
                         </button>
                         <button className="btn-stroke-light btn-large w-full">
                             <Image
@@ -54,13 +55,12 @@ const Form = ({}: FormProps) => {
                                 height={24}
                                 alt=""
                             />
-                            <span className="ml-4">Continue with Apple</span>
+                            <span className="ml-4">{i18next.t("sign-in.button_continue_with_apple_02", { defaultValue: "Continue with Apple" })}</span>
                         </button>
                         <div className="flex items-center my-8 md:my-4">
                             <span className="grow h-0.25 bg-n-4/50"></span>
                             <span className="shrink-0 mx-5 text-n-4/50">
-                                OR
-                            </span>
+                                {i18next.t("sign-in.div_or_03", { defaultValue: "OR" })}</span>
                             <span className="grow h-0.25 bg-n-4/50"></span>
                         </div>
                         <Tab.Panels>

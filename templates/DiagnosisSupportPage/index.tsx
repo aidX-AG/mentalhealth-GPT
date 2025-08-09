@@ -6,13 +6,14 @@ import Chat from "@/components/Chat";
 import Message from "@/components/Message";
 import Question from "@/components/Question";
 import Answer from "@/components/Answer";
+import i18next from "i18next";
 
 const DiagnosisSupportPage = () => {
     const [message, setMessage] = useState<string>("");
 
     return (
         <Layout>
-            <Chat title="Diagnosis Support">
+            <Chat title={i18next.t("diagnosis-support.chattitle_diagnosis_support_05", { defaultValue: "Diagnosis Support" })}>
                 <Question
                     document="diagnosis-case.pdf"
                     content="Please review this clinical case and suggest possible diagnoses. Highlight any important symptoms or behavioral patterns."
@@ -21,9 +22,8 @@ const DiagnosisSupportPage = () => {
                 <Answer>
                     <div className="mt-6 p-6 bg-green-100 border-l-4 border-green-500 text-green-900 rounded-lg shadow-md">
                         <p className="text-lg leading-relaxed font-medium">
-                            🚧 The AI functionality for <strong>Diagnosis Support</strong> is currently under development. <br />
-                            It will gradually become available as we integrate specialized models to support mental health diagnostics.
-                        </p>
+                            {i18next.t("diagnosis-support.div_the_ai_functionality_for_01", { defaultValue: "🚧 The AI functionality for" })}<strong>{i18next.t("diagnosis-support.p_diagnosis_support_02", { defaultValue: "Diagnosis Support" })}</strong> {i18next.t("diagnosis-support.div_is_currently_under_development_03", { defaultValue: "is currently under development." })}<br />
+                            {i18next.t("diagnosis-support.div_it_will_gradually_become_available_04", { defaultValue: "It will gradually become available as we integrate specialized models to support mental health diagnostics." })}</p>
                     </div>
                 </Answer>
             </Chat>

@@ -1,5 +1,6 @@
 import Image from "@/components/Image";
 import Document from "./Document";
+import i18next from "i18next";
 
 type QuestionProps = {
     content: any;
@@ -19,7 +20,7 @@ const Question = ({ content, image, document, time }: QuestionProps) => (
                         className="rounded-xl object-cover"
                         src={image}
                         fill
-                        alt="Avatar"
+                        alt={i18next.t("common.imagealt_avatar_01", { defaultValue: "Avatar" })}
                     />
                 </div>
             )}
@@ -36,7 +37,7 @@ const Question = ({ content, image, document, time }: QuestionProps) => (
                     className="object-cover"
                     src="/images/wip-portrait.jpg"
                     fill
-                    alt="WIP"
+                    alt={i18next.t("common.imagealt_wip_02", { defaultValue: "WIP" })}
                 />
             </div>
         </div>

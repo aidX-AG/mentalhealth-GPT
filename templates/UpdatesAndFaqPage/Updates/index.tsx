@@ -4,6 +4,7 @@ import { useColorMode } from "@chakra-ui/color-mode";
 import Icon from "@/components/Icon";
 import Image from "@/components/Image";
 import { LucideIconMap } from "@/components/Icon/lucide-icons";
+import i18next from "i18next";
 
 type UpdatesItems = {
     id: string;
@@ -63,7 +64,7 @@ const Updates = ({ items }: UpdatesProps) => {
                 })}
             </div>
             <div className="text-center">
-                <button className="btn-stroke-light">Load more</button>
+                <button className="btn-stroke-light">{i18next.t("updates-and-faq.div_load_more_01", { defaultValue: "Load more" })}</button>
             </div>
         </>
     );

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Icon from "@/components/Icon";
 import Select from "@/components/Select";
 import Item from "./Item";
+import i18next from "i18next";
 
 const createdOptions = [
     {
@@ -77,7 +78,7 @@ const Search = ({ items }: SearchProps) => {
                     className="w-full h-22 pl-24 pr-5 bg-transparent border-none outline-none h5 text-n-7 placeholder:text-n-4/50 md:h-18 md:pl-18 dark:text-n-1"
                     type="text"
                     name="search"
-                    placeholder="Search"
+                    placeholder={i18next.t("common.inputplaceholder_search_01", { defaultValue: "Search" })}
                     value={search}
                     onChange={(e: any) => setSearch(e.target.value)}
                 />
@@ -98,7 +99,7 @@ const Search = ({ items }: SearchProps) => {
                             className="w-full h-11 pl-11 pr-4 bg-transparent shadow-[inset_0_0_0_0.0625rem_#DADBDC] rounded-full outline-none caption1 text-n-7 transition-shadow focus:shadow-[inset_0_0_0_0.125rem_#0084FF] placeholder:text-n-4 dark:shadow-[inset_0_0_0_0.0625rem_#2A2E2F] dark:text-n-1 dark:focus:shadow-[inset_0_0_0_0.125rem_#0084FF]"
                             type="text"
                             name="search"
-                            placeholder="Search ..."
+                            placeholder={i18next.t("common.inputplaceholder_search_02", { defaultValue: "Search ..." })}
                             value={searchTitle}
                             onChange={(e: any) =>
                                 setSearchTitle(e.target.value)
@@ -112,7 +113,7 @@ const Search = ({ items }: SearchProps) => {
                         classIcon="w-5 h-5 fill-n-4/50"
                         classArrow="dark:fill-n-4"
                         icon="user-check"
-                        placeholder="Created by"
+                        placeholder={i18next.t("common.selectplaceholder_created_by_03", { defaultValue: "Created by" })}
                         items={createdOptions}
                         value={createdBy}
                         onChange={setCreatedBy}
@@ -124,7 +125,7 @@ const Search = ({ items }: SearchProps) => {
                         classIcon="w-5 h-5 fill-n-4/50"
                         classArrow="dark:fill-n-4"
                         icon="clock"
-                        placeholder="Date"
+                        placeholder={i18next.t("common.selectplaceholder_date_04", { defaultValue: "Date" })}
                         items={dates}
                         value={date}
                         onChange={setDate}
