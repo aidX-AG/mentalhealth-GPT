@@ -5,6 +5,7 @@ import MultiSelect from "@/components/MultiSelect";
 import User from "./User";
 
 import { people } from "@/mocks/people";
+import i18next from "i18next";
 
 const colors = [
     {
@@ -75,19 +76,19 @@ const AddChatList = ({ onCancel }: AddChatListProps) => {
 
     return (
         <div className="p-12 lg:px-8 md:pt-6 md:px-5 md:pb-6">
-            <div className="mb-8 h4">Add chat list</div>
+            <div className="mb-8 h4">{i18next.t("common.headings.add-chat-list", { defaultValue: "Add chat list" })}</div>
             <div className="relative z-10 flex mb-8 md:block">
                 <Field
                     className="grow mr-3 md:mr-0 md:mb-3"
-                    label="Name"
-                    placeholder="Name"
+                    label={i18next.t("common.labels.name", { defaultValue: "Name" })}
+                    placeholder={i18next.t("common.placeholders.name", { defaultValue: "Name" })}
                     icon="chat-1"
                     value={name}
                     onChange={(e: any) => setName(e.target.value)}
                     required
                 />
                 <Select
-                    label="Color"
+                    label={i18next.t("common.labels.color", { defaultValue: "Color" })}
                     className="shrink-0 min-w-[14.5rem]"
                     items={colors}
                     value={color}
@@ -95,8 +96,7 @@ const AddChatList = ({ onCancel }: AddChatListProps) => {
                 />
             </div>
             <div className="flex mb-2 base2 font-semibold">
-                Invite team member
-            </div>
+                {i18next.t("common.sections.invite-member", { defaultValue: "Invite team member" })}</div>
             <div className="mb-8 p-5 border border-n-3 rounded-xl md:p-0 md:border-none dark:border-n-5">
                 <div className="relative z-5">
                     <MultiSelect
@@ -117,17 +117,15 @@ const AddChatList = ({ onCancel }: AddChatListProps) => {
                     />
                 </div>
                 <div className="mb-5 caption1 text-n-4/50">
-                    Only people invited in this list can access
-                </div>
+                    {i18next.t("common.body.access-note", { defaultValue: "Only people invited in this list can access" })}</div>
                 {users.map((user) => (
                     <User item={user} key={user.id} />
                 ))}
             </div>
             <div className="flex justify-end">
                 <button className="btn-stroke-light mr-3" onClick={onCancel}>
-                    Cancel
-                </button>
-                <button className="btn-blue">Add list</button>
+                    {i18next.t("common.buttons.cancel", { defaultValue: "Cancel" })}</button>
+                <button className="btn-blue">{i18next.t("common.buttons.add-list", { defaultValue: "Add list" })}</button>
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Field from "@/components/Field";
+import i18next from "i18next";
 
 type SignInProps = {
     onClick: () => void;
@@ -14,7 +15,7 @@ const SignIn = ({ onClick }: SignInProps) => {
             <Field
                 className="mb-4"
                 classInput="dark:bg-n-7 dark:border-n-7 dark:focus:bg-transparent"
-                placeholder="Username or email"
+                placeholder={i18next.t("sign-in.placeholders.username-or-email", { defaultValue: "Username or email" })}
                 icon="email"
                 value={name}
                 onChange={(e: any) => setName(e.target.value)}
@@ -23,7 +24,7 @@ const SignIn = ({ onClick }: SignInProps) => {
             <Field
                 className="mb-2"
                 classInput="dark:bg-n-7 dark:border-n-7 dark:focus:bg-transparent"
-                placeholder="Password"
+                placeholder={i18next.t("sign-in.placeholders.password", { defaultValue: "Password" })}
                 icon="lock"
                 type="password"
                 value={password}
@@ -35,11 +36,9 @@ const SignIn = ({ onClick }: SignInProps) => {
                 type="button"
                 onClick={onClick}
             >
-                Forgot password?
-            </button>
+                {i18next.t("sign-in.misc.forgot-password", { defaultValue: "Forgot password?" })}</button>
             <button className="btn-blue btn-large w-full" type="submit">
-                Sign in with Brainwave
-            </button>
+                {i18next.t("sign-in.misc.sign-in-with-brainwave", { defaultValue: "Sign in with Brainwave" })}</button>
         </form>
     );
 };

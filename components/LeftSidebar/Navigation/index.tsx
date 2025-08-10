@@ -2,6 +2,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
+import i18next from "i18next";
 
 type NavigationType = {
     title: string;
@@ -48,8 +49,7 @@ const Navigation = ({ visible, items }: NavigationProps) => {
                         {!visible && <div className="ml-5">{item.title}</div>}
                         {item.title === "Search" && !visible && (
                             <div className="ml-auto px-2 rounded-md bg-n-4/50 caption1 font-semibold text-n-3">
-                                ⌘ F
-                            </div>
+                                {i18next.t("common.badges.cmd-f", { defaultValue: "⌘ F" })}</div>
                         )}
                     </button>
                 )

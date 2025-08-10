@@ -1,5 +1,6 @@
 import FaqItem from "@/components/FaqItem";
 import Image from "@/components/Image";
+import i18next from "i18next";
 
 type FaqItems = {
     id: string;
@@ -28,11 +29,10 @@ const Faq = ({ items }: FaqProps) => (
                     alt=""
                 />
             </div>
-            <div className="mb-1 h5">Can’t find any answer?</div>
+            <div className="mb-1 h5">{i18next.t("updates-and-faq.sections.question", { defaultValue: "Can’t find any answer?" })}</div>
             <div className="mb-8 base1 text-n-4">
-                Let’s ask the smartest AI Chat
-            </div>
-            <button className="btn-blue">Ask mentalhealthGPT</button>
+                {i18next.t("updates-and-faq.sections.lets-ask-ai", { defaultValue: "Let’s ask the smartest AI Chat" })}</div>
+            <button className="btn-blue">{i18next.t("updates-and-faq.buttons.ask-mh-gpt", { defaultValue: "Ask mentalhealthGPT" })}</button>
         </div>
     </>
 );

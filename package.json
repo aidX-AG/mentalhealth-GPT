@@ -8,7 +8,11 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "optimize-images": "bash ./scripts/optimize-images.sh"
+    "optimize-images": "bash ./scripts/optimize-images.sh",
+    "i18n:codemod:dry": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts",
+    "i18n:codemod:write": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write",
+    "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include 'components/YourFile.tsx'",
+    "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
@@ -23,6 +27,8 @@
     "@types/scroll-lock": "^2.1.0",
     "framer-motion": "^11.1.7",
     "i18next": "^25.3.2",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "i18next-http-backend": "^3.0.2",
     "i18next-scanner": "^4.6.0",
     "lucide-react": "^0.525.0",
     "next": "^14.2.31",
@@ -45,14 +51,23 @@
   },
   "devDependencies": {
     "@rvxlab/tailwind-plugin-ios-full-height": "^1.1.0",
-    "@types/node": "^20",
+    "@types/change-case": "^0.0.30",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.19.10",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/yargs": "^17.0.33",
+    "change-case": "^5.4.4",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "fast-glob": "^3.3.3",
+    "fs-extra": "^11.3.1",
     "postcss": "^8",
     "postcss-import": "^15.1.0",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "ts-morph": "^26.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "yargs": "^18.0.0"
   }
 }

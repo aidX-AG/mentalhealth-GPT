@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Field from "@/components/Field";
+import i18next from "i18next";
 
 type PasswordProps = {};
 
@@ -10,11 +11,11 @@ const Password = ({}: PasswordProps) => {
 
     return (
         <form className="" action="" onSubmit={() => console.log("Submit")}>
-            <div className="mb-8 h4 md:mb-6">Password</div>
+            <div className="mb-8 h4 md:mb-6">{i18next.t("common.form.password", { defaultValue: "Password" })}</div>
             <Field
                 className="mb-6"
-                label="Password"
-                placeholder="Password"
+                label={i18next.t("common.labels.password", { defaultValue: "Password" })}
+                placeholder={i18next.t("common.placeholders.password", { defaultValue: "Password" })}
                 type="password"
                 icon="lock"
                 value={oldPassword}
@@ -23,8 +24,8 @@ const Password = ({}: PasswordProps) => {
             />
             <Field
                 className="mb-6"
-                label="New password"
-                placeholder="New password"
+                label={i18next.t("common.labels.new-password", { defaultValue: "New password" })}
+                placeholder={i18next.t("common.placeholders.new-password", { defaultValue: "New password" })}
                 note="Minimum 8 characters"
                 type="password"
                 icon="lock"
@@ -34,8 +35,8 @@ const Password = ({}: PasswordProps) => {
             />
             <Field
                 className="mb-6"
-                label="Confirm new password"
-                placeholder="Confirm new password"
+                label={i18next.t("common.labels.confirm-new-password", { defaultValue: "Confirm new password" })}
+                placeholder={i18next.t("common.placeholders.confirm-new-password", { defaultValue: "Confirm new password" })}
                 note="Minimum 8 characters"
                 type="password"
                 icon="lock"
@@ -43,7 +44,7 @@ const Password = ({}: PasswordProps) => {
                 onChange={(e: any) => setConfirmPassword(e.target.value)}
                 required
             />
-            <button className="btn-blue w-full">Change password</button>
+            <button className="btn-blue w-full">{i18next.t("common.form.change-password", { defaultValue: "Change password" })}</button>
         </form>
     );
 };

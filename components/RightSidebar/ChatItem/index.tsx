@@ -6,6 +6,7 @@ import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Users from "@/components/Users";
 import Notify from "@/components/Notify";
+import i18next from "i18next";
 
 type ChatItemProps = {
     item: any;
@@ -18,13 +19,12 @@ const ChatItem = ({ item }: ChatItemProps) => {
         setActive(true);
         toast((t) => (
             <Notify iconCheck>
-                <div className="mr-6 ml-3 h6">1 chat archived</div>
+                <div className="mr-6 ml-3 h6">{i18next.t("common.notify.chat-archived", { defaultValue: "1 chat archived" })}</div>
                 <button
                     className="btn-blue btn-medium ml-3"
                     onClick={() => toast.dismiss(t.id)}
                 >
-                    Undo
-                </button>
+                    {i18next.t("common.notify.undo", { defaultValue: "Undo" })}</button>
             </Notify>
         ));
     };

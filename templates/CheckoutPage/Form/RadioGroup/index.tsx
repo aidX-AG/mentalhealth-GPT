@@ -1,5 +1,6 @@
 import { RadioGroup } from "@headlessui/react";
 import Icon from "@/components/Icon";
+import i18next from "i18next";
 
 type RadioType = {
     id: string;
@@ -30,7 +31,7 @@ const Radio = ({ items, value, setValue }: RadioProps) => {
                 >
                     <div className="flex mb-1">
                         <div className="base2 dark:text-n-4">
-                            Pay {item.title}
+                            {i18next.t("checkout.sections.pay", { defaultValue: "Pay" })}{item.title}
                         </div>
                         <Icon
                             className="ml-auto fill-primary-1 opacity-0 transition-opacity ui-checked:opacity-100"
@@ -39,12 +40,10 @@ const Radio = ({ items, value, setValue }: RadioProps) => {
                     </div>
                     <div className="flex items-center">
                         <div className="base1 font-semibold">
-                            ${item.value}/month
-                        </div>
+                            {i18next.t("checkout.sections.currency-symbol", { defaultValue: "$" })}{item.value}{i18next.t("checkout.sections.per-month", { defaultValue: "/month" })}</div>
                         {item.save && (
                             <div className="ml-auto px-2 base2 bg-primary-2/15 rounded text-[#0C923C]">
-                                Save {item.save}%
-                            </div>
+                                {i18next.t("checkout.badges.save", { defaultValue: "Save" })}{item.save}{i18next.t("checkout.badges.percent", { defaultValue: "%" })}</div>
                         )}
                     </div>
                 </RadioGroup.Option>

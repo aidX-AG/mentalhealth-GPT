@@ -8,6 +8,7 @@ import LeftSidebar from "@/components/LeftSidebar";
 import RightSidebar from "@/components/RightSidebar";
 import Icon from "@/components/Icon";
 import Burger from "./Burger";
+import i18next from "i18next";
 
 type LayoutProps = {
     smallSidebar?: boolean;
@@ -46,7 +47,7 @@ const Layout = ({
     return (
         <>
             <Head>
-                <title>Brainwave</title>
+                <title>{i18next.t("common.sections.brand", { defaultValue: "Brainwave" })}</title>
             </Head>
             <div
                 className={`pr-6 bg-n-7 md:p-0 md:bg-n-1 dark:md:bg-n-6 md:overflow-hidden ${

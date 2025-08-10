@@ -3,6 +3,7 @@ import InputMask from "react-input-mask";
 import Icon from "@/components/Icon";
 import RadioGroup from "./RadioGroup";
 import Foot from "./Foot";
+import i18next from "i18next";
 
 const plans = [
     {
@@ -50,16 +51,15 @@ const Form = ({}: FormProps) => {
     return (
         <form action="" onSubmit={() => console.log("Submit")}>
             <div className="flex items-center mb-3 base2">
-                <div className="mr-auto dark:text-n-4">Plan</div>
-                <div className="mr-5 text-n-4">Change currency</div>
+                <div className="mr-auto dark:text-n-4">{i18next.t("checkout.sections.plan", { defaultValue: "Plan" })}</div>
+                <div className="mr-5 text-n-4">{i18next.t("checkout.sections.change-currency", { defaultValue: "Change currency" })}</div>
                 <div className="px-3 py-0.5 bg-n-3 rounded font-semibol dark:bg-n-7 dark:text-n-1">
-                    USD
-                </div>
+                    {i18next.t("checkout.sections.usd", { defaultValue: "USD" })}</div>
             </div>
             <RadioGroup items={plans} value={plan} setValue={setPlan} />
             <div className="mb-3 border border-n-3 rounded-xl dark:border-n-5">
                 <div className="p-5">
-                    <div className="mb-3 base2 text-n-5">Billing email</div>
+                    <div className="mb-3 base2 text-n-5">{i18next.t("checkout.sections.billing-email", { defaultValue: "Billing email" })}</div>
                     <div className="relative">
                         <Icon
                             className="absolute top-0 left-0 pointer-events-none fill-n-4/50"
@@ -69,7 +69,7 @@ const Form = ({}: FormProps) => {
                             className={`${styleInput} pl-11`}
                             type="email"
                             name="email"
-                            placeholder="Email address"
+                            placeholder={i18next.t("checkout.form.email", { defaultValue: "Email address" })}
                             value={email}
                             onChange={(e: any) => setEmail(e.target.value)}
                             required
@@ -77,7 +77,7 @@ const Form = ({}: FormProps) => {
                     </div>
                 </div>
                 <div className="p-5 border-t border-n-3 dark:border-n-5">
-                    <div className="mb-3 base2 text-n-5">Card details</div>
+                    <div className="mb-3 base2 text-n-5">{i18next.t("checkout.sections.card-details", { defaultValue: "Card details" })}</div>
                     <div className="flex md:flex-wrap">
                         <div className="relative grow md:w-full md:mb-4">
                             <Icon
@@ -89,7 +89,7 @@ const Form = ({}: FormProps) => {
                                 {...cardNumber}
                                 type="tel"
                                 onChange={onChange}
-                                placeholder="Card number"
+                                placeholder={i18next.t("checkout.form.card-number", { defaultValue: "Card number" })}
                                 required
                             />
                         </div>
@@ -97,7 +97,7 @@ const Form = ({}: FormProps) => {
                             <InputMask
                                 className={`${styleInput} text-center md:text-left`}
                                 mask="99 / 99"
-                                placeholder="MM / YY"
+                                placeholder={i18next.t("checkout.form.mm-yy", { defaultValue: "MM / YY" })}
                                 type="tel"
                                 value={date}
                                 onChange={(e: any) => setDate(e.target.value)}
@@ -108,7 +108,7 @@ const Form = ({}: FormProps) => {
                             <InputMask
                                 className={`${styleInput} text-center`}
                                 mask="999"
-                                placeholder="CVC"
+                                placeholder={i18next.t("checkout.form.cvc", { defaultValue: "CVC" })}
                                 type="tel"
                                 value={code}
                                 onChange={(e: any) => setCode(e.target.value)}
