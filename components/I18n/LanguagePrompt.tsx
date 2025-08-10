@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import i18n from "@/app/i18n.client";
+import i18n from "../../app/i18n.client";
 
 const SEEN_KEY = "mhgpt_lang_seen_at";
 const COOLDOWN_MS = 1000 * 24 * 60 * 60 * 1000; // ~1000 Tage
