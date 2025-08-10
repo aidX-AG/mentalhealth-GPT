@@ -3,7 +3,7 @@ import { Providers } from "./providers";
 import { Inter, Karla } from "next/font/google";
 import "./globals.css";
 import I18nProvider from "./i18n-provider";
-import LanguagePrompt from "@/components/LanguagePrompt";
+import LanguagePrompt from "@/components/I18n/LanguagePrompt";
 
 const inter = Inter({
   weight: ["500", "600", "700"],
