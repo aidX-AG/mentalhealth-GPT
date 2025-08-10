@@ -5,7 +5,6 @@ import { initReactI18next } from "react-i18next";
 import HttpBackend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-// ---- Deine Namespaces (unverändert) ----
 const ns = [
   "common",
   "pricing",
@@ -26,43 +25,57 @@ const ns = [
 
 if (!i18n.isInitialized) {
   i18n
-    .use(HttpBackend)                // lädt JSONs via HTTP
-    .use(LanguageDetector)           // erkennt Sprache (Query, Cookie, localStorage, Browser)
-    .use(initReactI18next)           // bindet an react-i18next
+    .use(HttpBackend)        // JSON via HTTP
+    .use(LanguageDetector)   // Sprache erkennen
+    .use(initReactI18next)   // React-Bindung
     .init({
-      // ⬇️ WELCHE Sprachen sind erlaubt:
+      // Erlaubte Sprachen
       supportedLngs: ["de", "fr", "en"],
 
-      // ⬇️ Fallback, wenn erkannte Sprache/Datei fehlt (sicher auf EN lassen)
-      //    Wenn du *Deutsch als Standard* willst, setze hier "de".
+      // Standard-Fallback (lass "en", oder stell auf "de", wenn du willst)
       fallbackLng: "en",
 
-      // ⬇️ NUR Basis-Sprachen nutzen (de statt de-CH, fr statt fr-CH)
+      // WICHTIG: Normalisierung von de-CH -> de, FR -> fr, etc.
       load: "languageOnly",
       nonExplicitSupportedLngs: true,
-      lowerCaseLng: true,            // "DE" -> "de"
-      cleanCode: true,               // "de-CH" -> "de"
+      lowerCaseLng: true,
+      cleanCode: true,
 
       defaultNS: "common",
       ns,
 
-      // ⬇️ Wo liegen die JSON-Dateien
       backend: {
         loadPath: "/locales/{{lng}}/{{ns}}.json",
       },
 
-      // ⬇️ Reihenfolge der Erkennung – Query hat oberste Priorität
+      // Querystring hat Vorrang
       detection: {
         order: ["querystring", "localStorage", "cookie", "navigator"],
-        lookupQuerystring: "lng",    // ?lng=de
+        lookupQuerystring: "lng", // ?lng=de
         lookupCookie: "lng",
-        caches: ["localStorage", "cookie"],  // gemerkte Wahl speichern
+        caches: ["localStorage", "cookie"],
       },
 
       interpolation: { escapeValue: false },
-      // zum Debuggen kurz aktivieren, danach wieder aus:
-      // debug: process.env.NODE_ENV === "development",
       react: { useSuspense: true },
+      // debug: process.env.NODE_ENV === "development",
+    })
+    .then(() => {
+      // URL-Parameter hart durchsetzen (überstimmt alte Caches sicher)
+      if (typeof window !== "undefined") {
+        const params = new URLSearchParams(window.location.search);
+        const raw = params.get("lng");
+        if (raw) {
+          const lang = raw.toLowerCase().replace("_", "-").split("-")[0]; // "de-CH" -> "de"
+          if (["de", "fr", "en"].includes(lang)) {
+            i18n.changeLanguage(lang);
+            try {
+              localStorage.setItem("i18nextLng", lang);
+            } catch {}
+            document.cookie = `lng=${lang}; Max-Age=31536000; path=/`;
+          }
+        }
+      }
     });
 }
 
