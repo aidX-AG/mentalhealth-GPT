@@ -1,7 +1,101 @@
-Perfekt – hier ist die vollständige und sauber formatierte Datei docs/deploy-frontend.md, die du direkt via nano einfügen kannst:
+
+Kurz wichtig: In deiner Umgebung liegt der NGINX-Docroot unter /opt/docker/nginx/html (nicht /opt/frontend). Ich habe den Pfad im Dokument unten korrigiert.
+
+1) Datei anlegen/ändern
+
+cd ~/git/frontend-git
+mkdir -p docs
+nano docs/deploy-frontend.md
+
+2) Inhalt einfügen (korrigierte Version)
+
+# 🚀 Deployment-Dokumentation: Frontend (Next.js)
+
+## 📦 Projekt: mentalhealthGPT  
+Ziel: Bereitstellung des statischen HTML-Frontends via NGINX auf dem Proxy-Server.
+
+---
+
+## 🔧 Voraussetzungen
+
+- GitHub-Repository: `aidX-AG/mentalhealth-GPT`
+- Proxy-Server mit NGINX (Docker), **Zielverzeichnis: `/opt/docker/nginx/html/`**
+- SSH-Zugang vom Mac auf den Proxy
+- Auf dem Proxy: `git`, `node`, `npm` installiert (Host, **nicht** im Container)
+- Frontend-Repo auf dem Proxy: `~/git/frontend-git/`
+
+---
+
+## ⚙️ Manueller Deploy-Prozess
+
+### 1) Lokale Entwicklung
+```bash
+git checkout dev
+# Änderungen machen
+git commit -am "Feature XYZ"
+git push origin dev
+
+2) Merge & Push nach Produktion (main)
+
+git checkout main
+git merge dev
+git push origin main
+
+3) Auf den Proxy verbinden
+
+ssh ubuntu@proxy-server
+
+4) Deployment starten
+
+cd ~/git/frontend-git
+./deploy-frontend.sh
+
 
 ⸻
 
+🛠️ deploy-frontend.sh
+
+#!/bin/bash
+set -e
+cd ~/git/frontend-git || exit 1
+git pull origin main
+npm install
+npm run build
+sudo rm -rf /opt/docker/nginx/html/*
+sudo cp -r ./out/* /opt/docker/nginx/html/
+echo "✅ Deployment abgeschlossen."
+
+Es wird nur der Inhalt aus out/ nach /opt/docker/nginx/html/ kopiert, nicht der Ordner selbst.
+
+⸻
+
+📂 Struktur (Proxy-Server)
+
+/opt/docker/nginx/html/    # NGINX Root (statischer Build)
+/home/ubuntu/git/frontend-git/  # Git-Klon (Branch: main)
+
+
+⸻
+
+❌ Bitte NICHT
+	•	Keine Code-Änderungen direkt auf dem Proxy committen/pushen
+	•	Nicht mit anderen Branches als main deployen
+
+⸻
+
+✅ Optionales Housekeeping
+	•	npm install -g npm@latest
+	•	npm audit fix (oder vorsichtig --force)
+	•	Deploy-Skript nur via SSH ausführen
+
+⸻
+
+Stand:10.  August 2025 – Maintainer: Peter Wildhaber
+
+⸻
+
+
+alte Version:
 
 # 🚀 Deployment-Dokumentation: Frontend (Next.js)
 
