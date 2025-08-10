@@ -1,14 +1,14 @@
 {
-  "video-analysis.chat.greeting": "Hello! How can I assist you with video analysis today?",
-  "video-analysis.text.coming-soon": "Our AI-powered video analysis is coming soon.",
-  "video-analysis.text.value-prop-part1": "It will help analyze therapy session recordings",
-  "video-analysis.text.value-prop-part2": ", detect key themes, nonverbal cues, and therapeutic dynamics — all with full end-to-end security.",
-  "video-analysis.text.security": "Your video data is protected at every step: in your browser, during upload, and throughout the AI-based processing.",
-  "video-analysis.text.in-development": "This feature is currently in development —",
-  "video-analysis.text.stay-tuned": "stay tuned!",
-  "video-analysis.sections.icon": "🚧",
-  "video-analysis.sections.title": "Video Analysis",
-  "video-analysis.text.feature-benefit": "is a powerful feature that will provide secure, AI-generated insights into therapeutic sessions.",
-  "video-analysis.text.launch-excitement": "We’re excited to launch this soon — enabling deeper reflection, supervision, and professional growth.",
-  "video-analysis.chat.title": "Video Analysis"
+    "video-analysis.chat.greeting": "Bonjour, comment puis-je vous aider à réaliser une analyse vidéo aujourd'hui ?",
+    "video-analysis.text.coming-soon": "Notre analyse vidéo alimentée par l'IA sera bientôt disponible.",
+    "video-analysis.text.value-prop-part1": "Il permet d'analyser les enregistrements des séances de thérapie",
+    "video-analysis.text.value-prop-part2": "le logiciel de gestion de l'information permet de détecter les thèmes clés, les indices non verbaux et les dynamiques thérapeutiques, tout en bénéficiant d'une sécurité totale de bout en bout.",
+    "video-analysis.text.security": "Vos données vidéo sont protégées à chaque étape : dans votre navigateur, pendant le téléchargement et tout au long du traitement basé sur l'IA.",
+    "video-analysis.text.in-development": "Cette fonctionnalité est actuellement en cours de développement -",
+    "video-analysis.text.stay-tuned": "restez à l'écoute !",
+    "video-analysis.sections.icon": "🚧",
+    "video-analysis.sections.title": "Analyse vidéo",
+    "video-analysis.text.feature-benefit": "est une fonctionnalité puissante qui fournira des informations sécurisées, générées par l'IA, sur les séances thérapeutiques.",
+    "video-analysis.text.launch-excitement": "Nous sommes impatients de le lancer bientôt, afin de permettre une réflexion, une supervision et une croissance professionnelle plus approfondies.",
+    "video-analysis.chat.title": "Analyse vidéo"
 }

@@ -1,6 +1,6 @@
 {
-  "applications.sections.title": "Applications",
-  "applications.body.browse-install-apps": "Browse and install apps to simplify your life with mentalhealthGPT",
-  "applications.sections.suggested-apps": "Suggested apps",
-  "applications.form.search-placeholder": "Search by app name or category"
+    "applications.sections.title": "Applications",
+    "applications.body.browse-install-apps": "Browse and install apps to simplify your life with mentalhealthGPT",
+    "applications.sections.suggested-apps": "Suggested apps",
+    "applications.form.search-placeholder": "Search by app name or category"
 }

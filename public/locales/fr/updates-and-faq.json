@@ -1,8 +1,8 @@
 {
-  "updates-and-faq.sections.title": "Updates & FAQ",
-  "updates-and-faq.sections.subtitle": "Features, fixes & improvements.",
-  "updates-and-faq.sections.question": "Can’t find any answer?",
-  "updates-and-faq.sections.lets-ask-ai": "Let’s ask the smartest AI Chat",
-  "updates-and-faq.buttons.ask-mh-gpt": "Ask mentalhealthGPT",
-  "updates-and-faq.buttons.load-more": "Load more"
+    "updates-and-faq.sections.title": "Mises à jour et FAQ",
+    "updates-and-faq.sections.subtitle": "Fonctionnalités, corrections et améliorations.",
+    "updates-and-faq.sections.question": "Vous ne trouvez pas de réponse ?",
+    "updates-and-faq.sections.lets-ask-ai": "Interrogeons le chat le plus intelligent de l'IA",
+    "updates-and-faq.buttons.ask-mh-gpt": "Demander à mentalhealthGPT",
+    "updates-and-faq.buttons.load-more": "En savoir plus"
 }

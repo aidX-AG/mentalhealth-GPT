@@ -1,15 +1,15 @@
 {
-  "pricing.sections.hero-title": "AI chat made affordable",
-  "pricing.sections.hero-subtitle": "Pricing Plans for every budget",
-  "pricing.sections.choose-plan": "Choose plan",
-  "pricing.sections.faq": "Frequently asked questions",
-  "pricing.sections.core-features": "Core features",
-  "pricing.sections.free": "Free",
-  "pricing.sections.pro": "Pro",
-  "pricing.sections.enterprise": "Enterprise",
-  "pricing.badges.via-email": "Via email",
-  "pricing.badges.chat-247": "Chat 24/7",
-  "pricing.badges.popular": "Popular",
-  "pricing.sections.currency-symbol": "$",
-  "pricing.sections.slash": "/"
+    "pricing.sections.hero-title": "KI-Chat erschwinglich gemacht",
+    "pricing.sections.hero-subtitle": "Preispläne für jedes Budget",
+    "pricing.sections.choose-plan": "Plan auswählen",
+    "pricing.sections.faq": "Häufig gestellte Fragen",
+    "pricing.sections.core-features": "Wesentliche Merkmale",
+    "pricing.sections.free": "Kostenlos",
+    "pricing.sections.pro": "Pro",
+    "pricing.sections.enterprise": "Unternehmen",
+    "pricing.badges.via-email": "Per E-Mail",
+    "pricing.badges.chat-247": "Chat 24\/7",
+    "pricing.badges.popular": "Beliebt",
+    "pricing.sections.currency-symbol": "$",
+    "pricing.sections.slash": "\/"
 }

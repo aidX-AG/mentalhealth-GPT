@@ -1,10 +1,10 @@
 {
-  "audio-transcription.chat.greeting": "Hello! How can I assist you with audio transcription today?",
-  "audio-transcription.text.capability": "Our AI can securely transcribe audio recordings from therapy sessions, structure the content, and generate clear, professional summaries — all with end-to-end encryption.",
-  "audio-transcription.text.upload-instructions": "Simply upload a recorded session. All patient information remains strictly confidential and is protected by strong encryption directly in your browser, during transfer, and back again — ensuring full privacy at every step.",
-  "audio-transcription.sections.banner-prefix": "🚧 The AI model for",
-  "audio-transcription.sections.title": "Audio Transcription & Notes",
-  "audio-transcription.sections.under-development": "is currently under development.",
-  "audio-transcription.sections.coming-soon": "It will soon provide accurate transcription and note-taking support for clinical documentation.",
-  "audio-transcription.chat.title": "Audio Transcription & Notes"
+    "audio-transcription.chat.greeting": "Hallo! Wie kann ich Ihnen heute bei der Audiotranskription helfen?",
+    "audio-transcription.text.capability": "Unsere KI kann Audioaufnahmen von Therapiesitzungen sicher transkribieren, den Inhalt strukturieren und klare, professionelle Zusammenfassungen erstellen - alles mit End-to-End-Verschlüsselung.",
+    "audio-transcription.text.upload-instructions": "Laden Sie einfach eine aufgezeichnete Sitzung hoch. Alle Patientendaten bleiben streng vertraulich und werden durch eine starke Verschlüsselung direkt in Ihrem Browser, während der Übertragung und wieder zurück, geschützt - so ist der Datenschutz bei jedem Schritt gewährleistet.",
+    "audio-transcription.sections.banner-prefix": "🚧 Das KI-Modell für",
+    "audio-transcription.sections.title": "Audio-Transkription & Notizen",
+    "audio-transcription.sections.under-development": "befindet sich derzeit in der Entwicklung.",
+    "audio-transcription.sections.coming-soon": "In Kürze wird es genaue Transkriptionen und Notizen für die klinische Dokumentation bereitstellen.",
+    "audio-transcription.chat.title": "Audio-Transkription & Notizen"
 }
