@@ -5,7 +5,6 @@ import { initReactI18next } from "react-i18next";
 import HttpBackend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-// NAMESPACES, die du hast (kannst du erweitern, wenn nötig)
 const ns = [
   "common",
   "pricing",
@@ -30,21 +29,20 @@ if (!i18n.isInitialized) {
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-      // Sprachen: erstmal nur en. Wenn de bereit ist: ["en","de"]
-      supportedLngs: ["en"],
+      // <-- HIER aktivieren wir de & fr
+      supportedLngs: ["en", "de", "fr"],
       fallbackLng: "en",
       defaultNS: "common",
       ns,
 
-      // JSONs werden aus /public/locales/... geladen
       backend: {
         loadPath: "/locales/{{lng}}/{{ns}}.json",
       },
 
       detection: {
-        // Reihenfolge: URL ?lng=, Cookie, localStorage, Browser
+        // Behalte deine Reihenfolge & 'lng' Query-Param bei
         order: ["querystring", "cookie", "localStorage", "navigator"],
-        lookupQuerystring: "lng",
+        lookupQuerystring: "lng",   // ?lng=de
         lookupCookie: "lng",
         caches: ["localStorage", "cookie"],
       },
