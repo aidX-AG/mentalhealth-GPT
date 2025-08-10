@@ -46,7 +46,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-1`}>
+      <body
+        className={`${karla.variable} ${inter.variable} bg-n-1 dark:bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-7 dark:text-n-1`}
+      >
         <I18nProvider>
           <Providers>{children}</Providers>
         </I18nProvider>
