@@ -1,27 +1,46 @@
 #!/bin/bash
+# === FRONTEND DEPLOYMENT SCRIPT (safe & incremental) ===
+# Ziel: /opt/docker/nginx/html
 
-# === FRONTEND DEPLOYMENT SCRIPT ===
-# Ort: ~/git/frontend-git/deploy-frontend.sh
-# Ausführung: direkt auf der Proxy-VM
+set -euo pipefail
 
-set -e  # Stoppe bei Fehlern
+REPO=~/git/frontend-git
+DEST=/opt/docker/nginx/html
 
-echo "➡️  Wechsle ins Projektverzeichnis..."
-cd ~/git/frontend-git || exit 1
+echo "➡️  Gehe ins Repo …"
+cd "$REPO"
 
-echo "⬇️  Hole neueste Änderungen von GitHub..."
+echo "⬇️  Pull main …"
 git pull origin main
 
-echo "📦 Installiere Abhängigkeiten (npm install)..."
-npm install
+echo "📦 npm ci …"
+npm ci
 
-echo "⚙️  Baue Frontend (npm run build)..."
+echo "⚙️  Build …"
 npm run build
 
-echo "🧹 Lösche alten HTML-Build im Zielverzeichnis..."
-sudo rm -rf /opt/docker/nginx/html/*
+echo "📁 Stelle Zielstruktur sicher …"
+sudo mkdir -p "$DEST" \
+             "$DEST/locales/en" "$DEST/locales/de" "$DEST/locales/fr" \
+             "$DEST/images"
 
-echo "📁 Kopiere neuen Build nach /opt/docker/nginx/html/..."
-sudo cp -r ./out/* /opt/docker/nginx/html/
+echo "🚀 Sync Build (out/ → html/) mit --delete …"
+sudo rsync -av --delete --checksum --human-readable "$REPO/out/" "$DEST/"
 
-echo "✅ Deployment abgeschlossen!"
+echo "🗣️  Sync Locales (inkrementell, ohne delete) …"
+if [ -d "$REPO/public/locales" ]; then
+  sudo rsync -av --checksum --human-readable "$REPO/public/locales/en/" "$DEST/locales/en/"
+  sudo rsync -av --checksum --human-readable "$REPO/public/locales/de/" "$DEST/locales/de/"
+  sudo rsync -av --checksum --human-readable "$REPO/public/locales/fr/" "$DEST/locales/fr/"
+else
+  echo "ℹ️  Keine public/locales gefunden – Überspringe."
+fi
+
+echo "🖼️  Sync Images (inkrementell, ohne delete) …"
+if [ -d "$REPO/public/images" ]; then
+  sudo rsync -av --checksum --human-readable "$REPO/public/images/" "$DEST/images/"
+else
+  echo "ℹ️  Keine public/images gefunden – Überspringe."
+fi
+
+echo "✅ Deployment fertig."
