@@ -11,7 +11,7 @@
     "optimize-images": "bash ./scripts/optimize-images.sh",
     "i18n:codemod:dry": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts",
     "i18n:codemod:write": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write",
-    "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include app/page.tsx",
+    "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include 'components/YourFile.tsx'",
     "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts"
   },
   "dependencies": {
@@ -29,6 +29,7 @@
     "i18next": "^25.3.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
+    "i18next-scanner": "^4.6.0",
     "lucide-react": "^0.525.0",
     "next": "14.2.3",
     "rc-slider": "^10.1.1",
