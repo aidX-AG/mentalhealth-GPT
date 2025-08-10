@@ -2,6 +2,7 @@ import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Loading from "./Loading";
 import Actions from "./Actions";
+import i18next from "i18next";
 
 type AnswerProps = {
     children?: React.ReactNode;
@@ -26,7 +27,7 @@ const Answer = ({ children, loading, time }: AnswerProps) => {
                         className="object-cover rounded-2xl"
                         src="/images/logo-chat.png"
                         fill
-                        alt="Avatar"
+                        alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
                     />
                 </div>
                 {loading ? (
@@ -35,8 +36,7 @@ const Answer = ({ children, loading, time }: AnswerProps) => {
                             className="w-4 h-4 mr-2 transition-colors group-hover:fill-primary-1 dark:fill-n-3"
                             name="pause-circle"
                         />
-                        Pause generating
-                    </button>
+                        {i18next.t("common.badges.pause-generating", { defaultValue: "Pause generating" })}</button>
                 ) : (
                     <div className="flex items-center">
                         <div className="caption1 text-n-4/50 dark:text-n-4">

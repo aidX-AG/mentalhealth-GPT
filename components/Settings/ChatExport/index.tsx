@@ -2,6 +2,7 @@ import { useState } from "react";
 import Switch from "@/components/Switch";
 import Icon from "@/components/Icon";
 import Select from "@/components/Select";
+import i18next from "i18next";
 
 const typesFile = [
     {
@@ -52,11 +53,10 @@ const ChatExport = ({}: ChatExportProps) => {
 
     return (
         <form className="" action="" onSubmit={() => console.log("Submit")}>
-            <div className="mb-8 h4">Chat export</div>
+            <div className="mb-8 h4">{i18next.t("common.form.chat-export", { defaultValue: "Chat export" })}</div>
             <div className="flex items-center mb-8">
                 <div className="mr-auto base2 text-n-4">
-                    Select chat list to export
-                </div>
+                    {i18next.t("common.form.select-chat-list", { defaultValue: "Select chat list to export" })}</div>
                 <Switch
                     value={exportChat}
                     setValue={handleNotificationsChange}
@@ -95,8 +95,7 @@ const ChatExport = ({}: ChatExportProps) => {
             </div>
             <div className="inline-flex bg-primary-1 rounded-xl md:w-full">
                 <button className="btn-blue pr-4 rounded-r-none md:grow">
-                    Download conversation
-                </button>
+                    {i18next.t("common.form.download-conversation", { defaultValue: "Download conversation" })}</button>
                 <div className=" self-center w-0.25 h-8 bg-n-1/20"></div>
                 <Select
                     classButton="h-12 rounded-l-none rounded-r-xl shadow-[inset_0_0_0_0.0625rem_#0084FF] bg-transparent text-n-1 font-semibold dark:bg-transparent"

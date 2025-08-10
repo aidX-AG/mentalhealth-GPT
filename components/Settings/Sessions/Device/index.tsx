@@ -1,4 +1,5 @@
 import Image from "@/components/Image";
+import i18next from "i18next";
 
 type DeviceProps = {
     item: any;
@@ -24,7 +25,7 @@ const Device = ({ item }: DeviceProps) => (
                 <p>{item.date}</p>
             </div>
         </div>
-        <button className="btn-stroke-light shrink-0 ml-4">Revoke</button>
+        <button className="btn-stroke-light shrink-0 ml-4">{i18next.t("common.sections.revoke", { defaultValue: "Revoke" })}</button>
     </div>
 );
 

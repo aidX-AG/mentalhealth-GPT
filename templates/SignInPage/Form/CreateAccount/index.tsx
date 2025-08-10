@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Field from "@/components/Field";
+import i18next from "i18next";
 
 type CreateAccountProps = {};
 
@@ -13,7 +14,7 @@ const CreateAccount = ({}: CreateAccountProps) => {
             <Field
                 className="mb-4"
                 classInput="dark:bg-n-7 dark:border-n-7 dark:focus:bg-transparent"
-                placeholder="Email"
+                placeholder={i18next.t("sign-in.placeholders.email", { defaultValue: "Email" })}
                 icon="email"
                 type="email"
                 value={email}
@@ -23,7 +24,7 @@ const CreateAccount = ({}: CreateAccountProps) => {
             <Field
                 className="mb-6"
                 classInput="dark:bg-n-7 dark:border-n-7 dark:focus:bg-transparent"
-                placeholder="Password"
+                placeholder={i18next.t("sign-in.placeholders.password", { defaultValue: "Password" })}
                 icon="lock"
                 type="password"
                 value={password}
@@ -31,25 +32,21 @@ const CreateAccount = ({}: CreateAccountProps) => {
                 required
             />
             <button className="btn-blue btn-large w-full mb-6" type="submit">
-                Create Account
-            </button>
+                {i18next.t("sign-in.buttons.create-account", { defaultValue: "Create Account" })}</button>
             <div className="text-center caption1 text-n-4">
-                By creating an account, you agree to our{" "}
+                {i18next.t("sign-in.text.by-creating-account", { defaultValue: "By creating an account, you agree to our" })}{" "}
                 <Link
                     className="text-n-5 transition-colors hover:text-n-7 dark:text-n-3 dark:hover:text-n-1"
                     href="/"
                 >
-                    Terms of Service
-                </Link>{" "}
-                and{" "}
+                    {i18next.t("sign-in.sections.terms-of-service", { defaultValue: "Terms of Service" })}</Link>{" "}
+                {i18next.t("sign-in.text.and", { defaultValue: "and" })}{" "}
                 <Link
                     className="text-n-5 transition-colors hover:text-n-7 dark:text-n-3 dark:hover:text-n-1"
                     href="/"
                 >
-                    Privacy & Cookie Statement
-                </Link>
-                .
-            </div>
+                    {i18next.t("sign-in.sections.privacy-cookie", { defaultValue: "Privacy & Cookie Statement" })}</Link>
+                {i18next.t("sign-in.text.period", { defaultValue: "." })}</div>
         </form>
     );
 };

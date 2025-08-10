@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Form from "./Form";
+import i18next from "i18next";
 
 const SignInPage = () => {
     return (
@@ -11,12 +12,9 @@ const SignInPage = () => {
             <div className="relative shrink-0 w-[40rem] p-20 overflow-hidden 2xl:w-[37.5rem] xl:w-[30rem] xl:p-10 lg:hidden">
                 <div className="max-w-[25.4rem]">
                     <div className="mb-4 h2 text-n-1">
-                        Unlock the power of AI
-                    </div>
+                        {i18next.t("sign-in.sections.hero-title", { defaultValue: "Unlock the power of AI" })}</div>
                     <div className="body1 text-n-3">
-                        Chat with the smartest AI - Experience the power of AI
-                        with us
-                    </div>
+                        {i18next.t("sign-in.sections.hero-subtitle", { defaultValue: "Chat with the smartest AI - Experience the power of AI with us" })}</div>
                 </div>
                 <div className="absolute top-52 left-5 right-5 h-[50rem] xl:top-24">
                     <Image

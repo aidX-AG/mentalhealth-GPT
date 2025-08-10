@@ -3,6 +3,7 @@ import Actions from "@/components/Actions";
 import Icon from "@/components/Icon";
 import Export from "@/components/Export";
 import Adjust from "@/components/Adjust";
+import i18next from "i18next";
 
 type PhotoProps = {
     content: string;
@@ -35,10 +36,10 @@ const Photo = ({ content, image, colorPicker }: PhotoProps) => (
                 className="mr-4 mt-4 2xl:w-[calc(50%-1rem)] 2xl:mx-2"
                 classButton="btn-dark 2xl:w-full"
                 classTitle="pl-3"
-                title="Exporting 1 photo"
+                title={i18next.t("common.actions.exporting-photo", { defaultValue: "Exporting 1 photo" })}
                 buttonInner={
                     <>
-                        <span>Export</span>
+                        <span>{i18next.t("common.fragments.export", { defaultValue: "Export" })}</span>
                         <Icon name="share" />
                     </>
                 }
@@ -47,17 +48,16 @@ const Photo = ({ content, image, colorPicker }: PhotoProps) => (
             </Actions>
             <button className="btn-white btn-small mr-4 mt-4 2xl:w-[calc(50%-1rem)] 2xl:mx-2 md:capitalize">
                 <span>
-                    <span className="md:hidden">Create</span> variation
-                </span>
+                    <span className="md:hidden">{i18next.t("common.misc.create", { defaultValue: "Create" })}</span> {i18next.t("common.buttons.variation", { defaultValue: "variation" })}</span>
                 <Icon name="plus-circle-stroke" />
             </button>
             <Actions
                 className="mr-4 mt-4 2xl:w-[calc(50%-1rem)] 2xl:mx-2"
                 classButton="btn-white ui-open:bg-n-4/50 2xl:w-full dark:ui-open:bg-n-1/20"
-                title="Adjust"
+                title={i18next.t("common.actions.adjust", { defaultValue: "Adjust" })}
                 buttonInner={
                     <>
-                        <span>Adjust</span>
+                        <span>{i18next.t("common.fragments.adjust", { defaultValue: "Adjust" })}</span>
                         <Icon name="share" />
                     </>
                 }
@@ -65,7 +65,7 @@ const Photo = ({ content, image, colorPicker }: PhotoProps) => (
                 <Adjust image={image} />
             </Actions>
             <button className="btn-white btn-small mt-4 2xl:w-[calc(50%-1rem)] 2xl:mx-2">
-                <span>Enhance</span>
+                <span>{i18next.t("common.buttons.enhance", { defaultValue: "Enhance" })}</span>
                 <Icon name="scale" />
             </button>
         </div>

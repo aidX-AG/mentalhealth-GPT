@@ -6,3 +6,8 @@ node_modules/
 .vscode/
 out/
 out.zip
+locales/en.backup.*
+
+# i18n backups & work files
+locales/en.backup.*
+i18n-key-mapping.work.csv

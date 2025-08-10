@@ -2,6 +2,7 @@ import { useState } from "react";
 import Select from "@/components/Select";
 import Icon from "@/components/Icon";
 import View from "./View";
+import i18next from "i18next";
 
 const languages = [
     {
@@ -43,14 +44,10 @@ const Video = ({}: VideoProps) => {
         <div className="">
             <View />
             <div className="mt-4">
-                Based on the gender identified in the uploaded image, the video
-                has been automatically generated with a male voice. However, you
-                have the option to customize your video by selecting from the
-                available options below.
-            </div>
+                {i18next.t("common.body.gender-note", { defaultValue: "Based on the gender identified in the uploaded image, the video has been automatically generated with a male voice. However, you have the option to customize your video by selecting from the available options below." })}</div>
             <div className="flex flex-wrap">
                 <button className="btn-dark btn-small mr-4 mt-4">
-                    <span>Download</span>
+                    <span>{i18next.t("common.buttons.download", { defaultValue: "Download" })}</span>
                     <Icon name="download" />
                 </button>
                 <Select
@@ -63,7 +60,7 @@ const Video = ({}: VideoProps) => {
                     up
                 />
                 <Select
-                    title="Voice"
+                    title={i18next.t("common.labels.voice", { defaultValue: "Voice" })}
                     icon="volume"
                     className="mr-4 mt-4"
                     items={voices}

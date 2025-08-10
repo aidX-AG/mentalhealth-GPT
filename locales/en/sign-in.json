@@ -1,0 +1,20 @@
+{
+  "sign-in.misc.forgot-password": "Forgot password?",
+  "sign-in.misc.sign-in-with-brainwave": "Sign in with Brainwave",
+  "sign-in.placeholders.username-or-email": "Username or email",
+  "sign-in.placeholders.password": "Password",
+  "sign-in.sections.hero-title": "Unlock the power of AI",
+  "sign-in.sections.hero-subtitle": "Chat with the smartest AI - Experience the power of AI with us",
+  "sign-in.buttons.continue-google": "Continue with Google",
+  "sign-in.buttons.continue-apple": "Continue with Apple",
+  "sign-in.sections.or": "OR",
+  "sign-in.buttons.create-account": "Create Account",
+  "sign-in.text.by-creating-account": "By creating an account, you agree to our",
+  "sign-in.sections.terms-of-service": "Terms of Service",
+  "sign-in.text.and": "and",
+  "sign-in.sections.privacy-cookie": "Privacy & Cookie Statement",
+  "sign-in.text.period": ".",
+  "sign-in.placeholders.email": "Email",
+  "sign-in.fragments.reset-password": "Reset your password",
+  "sign-in.buttons.reset-password": "Reset password"
+}

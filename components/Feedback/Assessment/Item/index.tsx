@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/Icon";
 import Modal from "@/components/Modal";
+import i18next from "i18next";
 
 type ItemProps = {
     item: any;
@@ -47,7 +48,7 @@ const Item = ({ item }: ItemProps) => {
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/4cR7E79X8Ys"
-                    title="YouTube video player"
+                    title={i18next.t("common.misc.youtube-player", { defaultValue: "YouTube video player" })}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
             </Modal>
