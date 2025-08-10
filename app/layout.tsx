@@ -37,10 +37,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           property="og:description"
           content="Expert AI for mental health – secure, private, and scientifically validated"
         />
-        <meta property="og:image" content="/Logo_V_4_0.png" />
+        <meta property="og:image" content="https://www.mentalhealth-gpt.ch/images/logo-960w.webp" />
+        <meta property="og:image:width" content="960" />
+        <meta property="og:image:height" content="960" />
+        <meta property="og:image:type" content="image/webp" />
         <meta property="og:url" content="https://www.mentalhealth-gpt.ch" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
