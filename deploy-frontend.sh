@@ -4,27 +4,38 @@
 
 set -euo pipefail
 
-REPO=~/git/frontend-git
-DEST=/opt/docker/nginx/html
+REPO="$HOME/git/frontend-git"
+DEST="/opt/docker/nginx/html"
 
 echo "➡️  Gehe ins Repo …"
 cd "$REPO"
 
 echo "⬇️  Pull main …"
-git pull origin main
+git pull --ff-only origin main
 
 echo "📦 npm ci …"
+# Reproduzierbare Builds aus package-lock; schneller & sicherer als 'npm install'
 npm ci
 
 echo "⚙️  Build …"
 npm run build
 
+# Next.js (App Router) schreibt bei 'output: export' nach ./out.
+# Falls es mal fehlschlägt, hier hart abbrechen, statt leeres Verzeichnis zu syncen.
+if [ ! -d "$REPO/out" ]; then
+  echo "❌ Build-Ausgabe fehlt: $REPO/out existiert nicht."
+  exit 1
+fi
+
 echo "📁 Stelle Zielstruktur sicher …"
-sudo mkdir -p "$DEST" \
-             "$DEST/locales/en" "$DEST/locales/de" "$DEST/locales/fr" \
-             "$DEST/images"
+sudo mkdir -p \
+  "$DEST" \
+  "$DEST/locales/en" "$DEST/locales/de" "$DEST/locales/fr" \
+  "$DEST/images"
 
 echo "🚀 Sync Build (out/ → html/) mit --delete …"
+# --delete nur für den Build-Ordner, damit alte _next-Assets & HTML wegkommen.
+# --checksum vermeidet unnötige Kopien bei gleicher Datei.
 sudo rsync -av --delete --checksum --human-readable "$REPO/out/" "$DEST/"
 
 echo "🗣️  Sync Locales (inkrementell, ohne delete) …"
