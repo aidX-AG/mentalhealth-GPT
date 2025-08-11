@@ -5,7 +5,8 @@ import { initReactI18next } from "react-i18next";
 import HttpBackend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 
-const ns = [
+// Namespaces zentral
+const namespaces = [
   "common",
   "pricing",
   "checkout",
@@ -21,60 +22,74 @@ const ns = [
   "therapy-support",
   "updates-and-faq",
   "video-analysis",
-];
+] as const;
+
+export type I18nNamespaces = (typeof namespaces)[number];
 
 if (!i18n.isInitialized) {
   i18n
-    .use(HttpBackend)        // JSON via HTTP
-    .use(LanguageDetector)   // Sprache erkennen
-    .use(initReactI18next)   // React-Bindung
+    .use(HttpBackend)
+    .use(LanguageDetector)
+    .use(initReactI18next)
     .init({
-      // Erlaubte Sprachen
+      // Sprachen & Fallback
       supportedLngs: ["de", "fr", "en"],
-
-      // Standard-Fallback (lass "en", oder stell auf "de", wenn du willst)
       fallbackLng: "en",
 
-      // WICHTIG: Normalisierung von de-CH -> de, FR -> fr, etc.
+      // Ländercodes normalisieren (de-CH -> de)
       load: "languageOnly",
       nonExplicitSupportedLngs: true,
       lowerCaseLng: true,
       cleanCode: true,
 
+      // Namespaces
       defaultNS: "common",
-      ns,
+      ns: namespaces,
+      partialBundledLanguages: true,
 
+      // Dateien laden
       backend: {
         loadPath: "/locales/{{lng}}/{{ns}}.json",
+        requestOptions: { cache: "no-store" }, // immer frisch
       },
 
-      // Querystring hat Vorrang
+      // Erkennung: Query > Cookie/LS > Browser
       detection: {
-        order: ["querystring", "localStorage", "cookie", "navigator"],
-        lookupQuerystring: "lng", // ?lng=de
-        lookupCookie: "lng",
+        order: ["querystring", "cookie", "localStorage", "navigator"],
+        lookupQuerystring: "lng",
+        lookupCookie: "i18nextLng",
+        lookupLocalStorage: "i18nextLng",
         caches: ["localStorage", "cookie"],
+        convertDetectedLanguage: (lng) => lng.toLowerCase().split("-")[0],
       },
 
+      // React
       interpolation: { escapeValue: false },
-      react: { useSuspense: true },
-      // debug: process.env.NODE_ENV === "development",
+      react: {
+        useSuspense: true,            // Suspense statt Fallback-EN rendern
+        bindI18n: "languageChanged loaded",
+        bindI18nStore: "added removed",
+      },
+
+      debug: process.env.NODE_ENV === "development",
     })
     .then(() => {
-      // URL-Parameter hart durchsetzen (überstimmt alte Caches sicher)
+      // Query-Param hart durchsetzen (?lng=de|fr|en)
       if (typeof window !== "undefined") {
-        const params = new URLSearchParams(window.location.search);
-        const raw = params.get("lng");
+        const raw = new URLSearchParams(window.location.search).get("lng");
         if (raw) {
-          const lang = raw.toLowerCase().replace("_", "-").split("-")[0]; // "de-CH" -> "de"
+          const lang = raw.toLowerCase().replace("_", "-").split("-")[0];
           if (["de", "fr", "en"].includes(lang)) {
             i18n.changeLanguage(lang);
-            try {
-              localStorage.setItem("i18nextLng", lang);
-            } catch {}
-            document.cookie = `lng=${lang}; Max-Age=31536000; path=/`;
+            try { localStorage.setItem("i18nextLng", lang); } catch {}
+            document.cookie = `i18nextLng=${lang}; Max-Age=31536000; path=/`;
           }
         }
+      }
+    })
+    .catch((err) => {
+      if (process.env.NODE_ENV === "development") {
+        console.error("i18n init failed:", err);
       }
     });
 }
