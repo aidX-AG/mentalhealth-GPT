@@ -6,6 +6,7 @@ import { Inter, Karla } from "next/font/google";
 import "./globals.css";
 import I18nProvider from "./i18n-provider";
 
+// Fonts
 const inter = Inter({
   weight: ["500", "600", "700"],
   subsets: ["latin"],
@@ -20,8 +21,10 @@ const karla = Karla({
   variable: "--font-karla",
 });
 
-// Client-only laden (nutzt navigator.*) → kein SSR
-const LanguagePrompt = dynamic(() => import("@/components/I18n/LanguagePrompt"), { ssr: false });
+// LanguagePrompt nutzt Browser-APIs -> nur client-seitig laden
+const LanguagePrompt = dynamic(() => import("@/components/I18n/LanguagePrompt"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: "mentalhealthGPT",
@@ -32,9 +35,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="description" content="Expert AI for mental health – secure, private, and scientifically validated" />
+        <meta
+          name="description"
+          content="Expert AI for mental health – secure, private, and scientifically validated"
+        />
         <meta property="og:title" content="mentalhealthGPT" />
-        <meta property="og:description" content="Expert AI for mental health – secure, private, and scientifically validated" />
+        <meta
+          property="og:description"
+          content="Expert AI for mental health – secure, private, and scientifically validated"
+        />
         <meta property="og:image" content="https://www.mentalhealth-gpt.ch/images/logo-960w.webp" />
         <meta property="og:image:width" content="960" />
         <meta property="og:image:height" content="960" />
@@ -45,7 +54,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
 
-      <body className={`${karla.variable} ${inter.variable} bg-n-1 dark:bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-7 dark:text-n-1`}>
+      <body
+        className={`${karla.variable} ${inter.variable} bg-n-1 dark:bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-7 dark:text-n-1`}
+      >
         {/* Suspense verhindert Flash-of-English, bis i18n-JSONs geladen sind */}
         <Suspense fallback={<div className="p-6 text-center opacity-70">Loading…</div>}>
           <I18nProvider>
