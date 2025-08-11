@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import dynamic from "next/dynamic";
+import nextDynamic from "next/dynamic";
 import { Providers } from "./providers";
 import { Inter, Karla } from "next/font/google";
 import "./globals.css";
 import I18nProvider from "./i18n-provider";
 
-// Fonts
+/** Erzwinge statische Ausgabe im ganzen App-Segment (hilft für output:'export') */
+export const dynamic = "force-static";
+export const revalidate = false;
+
+/* Fonts */
 const inter = Inter({
   weight: ["500", "600", "700"],
   subsets: ["latin"],
@@ -21,14 +25,16 @@ const karla = Karla({
   variable: "--font-karla",
 });
 
-// LanguagePrompt nutzt Browser-APIs -> nur client-seitig laden
-const LanguagePrompt = dynamic(() => import("@/components/I18n/LanguagePrompt"), {
-  ssr: false,
-});
+/* Client-only: nutzt navigator.* */
+const LanguagePrompt = nextDynamic(
+  () => import("@/components/I18n/LanguagePrompt"),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
   title: "mentalhealthGPT",
-  description: "Expert AI for mental health – secure, private, and scientifically validated",
+  description:
+    "Expert AI for mental health – secure, private, and scientifically validated",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -44,7 +50,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           property="og:description"
           content="Expert AI for mental health – secure, private, and scientifically validated"
         />
-        <meta property="og:image" content="https://www.mentalhealth-gpt.ch/images/logo-960w.webp" />
+        <meta
+          property="og:image"
+          content="https://www.mentalhealth-gpt.ch/images/logo-960w.webp"
+        />
         <meta property="og:image:width" content="960" />
         <meta property="og:image:height" content="960" />
         <meta property="og:image:type" content="image/webp" />
