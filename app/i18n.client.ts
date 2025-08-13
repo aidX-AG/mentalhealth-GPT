@@ -3,6 +3,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import HttpBackend from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 const namespaces = [
   "common","pricing","checkout","applications","audio-transcription",
@@ -14,14 +15,13 @@ const namespaces = [
 if (!i18n.isInitialized) {
   i18n
     .use(HttpBackend)
+    .use(LanguageDetector)              // ✅ Browser-Detektion
     .use(initReactI18next)
     .init({
-      // 👉 HART auf Deutsch
-      lng: "de",
+      // ❌ kein festes lng mehr
       fallbackLng: "de",
-      supportedLngs: ["de", "fr", "en"],
+      supportedLngs: ["de","fr","en"],
 
-      // 👉 explizit nur Basis-Sprachen (de statt de-CH)
       load: "languageOnly",
       cleanCode: true,
       nonExplicitSupportedLngs: true,
@@ -33,15 +33,28 @@ if (!i18n.isInitialized) {
 
       backend: {
         loadPath: "/locales/{{lng}}/{{ns}}.json",
-        requestOptions: { cache: "no-store" }, // zieh frisch
+        // Browser darf cachen (ETag/Cache-Control via NGINX)
+        requestOptions: {}, 
       },
 
-      // 👉 Detector AUS für den Test
-      detection: undefined as any,
+      detection: {
+        order: ["localStorage","cookie","htmlTag","navigator","querystring"],
+        caches: ["localStorage","cookie"],
+        lookupQuerystring: "lang",
+        cookieMinutes: 60*24*30, // 30 Tage
+      },
 
       interpolation: { escapeValue: false },
       react: { useSuspense: true },
       // debug: true,
+    });
+
+  // HTML <html lang="..."> synchron halten
+    i18n.on("languageChanged", (lng) => {
+      if (typeof document !== "undefined") {
+        const base = (lng || "de").split("-")[0].toLowerCase(); // z.B. de-CH -> de
+        document.documentElement.lang = base;
+      }
     });
 }
 
