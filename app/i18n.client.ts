@@ -47,6 +47,11 @@ if (!i18n.isInitialized) {
       interpolation: { escapeValue: false },
       react: { useSuspense: true },
       // debug: true,
+    })
+    .then(() => {
+      // ⬅️ NEU: alle Namespaces upfront laden,
+      // weil in vielen Komponenten direkt i18next.t(...) verwendet wird
+      i18n.loadNamespaces([...namespaces]);
     });
 
   // HTML <html lang="..."> synchron halten
@@ -57,7 +62,7 @@ if (!i18n.isInitialized) {
     }
   });
 
-  // ⬇️ NEU: für DevTools nutzbar machen (Konsole: window.i18next)
+  // ⬇️ DevTools-Helfer (Konsole: window.i18next)
   if (typeof window !== "undefined") {
     (window as any).i18next = i18n;
   }
