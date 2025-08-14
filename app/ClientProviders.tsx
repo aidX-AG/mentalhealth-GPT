@@ -1,30 +1,55 @@
-'use client';
+"use client";
 
-import './i18n.client';                         // ⚡ i18n einmalig initialisieren
-import i18n from './i18n.client';               // ⬅ nötig, um auf languageChanged zu hören
-import { Suspense, useEffect, useState } from 'react';
+import i18n from "./i18n.client";               // init + Events
+import { Suspense, useEffect, useState } from "react";
 
 export default function ClientProviders({ children }: { children: React.ReactNode }) {
-  // 1) Beim Mount aktuelle Sprache (basis, z.B. de aus de-CH) übernehmen
-  const [lng, setLng] = useState(() => (i18n.language || 'de').split('-')[0].toLowerCase());
+  const [ready, setReady] = useState(false);
+  const [lng, setLng] = useState(() =>
+    (i18n.language || "de").split("-")[0].toLowerCase()
+  );
 
-  // 2) Auf Sprachwechsel reagieren → Remount triggern
   useEffect(() => {
-    const handler = (newLng: string) => {
-      const base = (newLng || 'de').split('-')[0].toLowerCase();
+    let cancelled = false;
+
+    (async () => {
+      try {
+        // 1) Warten bis i18n initialisiert ist
+        if (!i18n.isInitialized) {
+          await new Promise<void>((resolve) => {
+            const onInit = () => {
+              i18n.off("initialized", onInit);
+              resolve();
+            };
+            i18n.on("initialized", onInit);
+          });
+        }
+
+        // 2) Alle Namespaces laden, bevor wir das erste Mal rendern
+        const ns = Array.isArray(i18n.options?.ns) ? (i18n.options!.ns as string[]) : [];
+        if (ns.length) {
+          await i18n.loadNamespaces(ns);
+        }
+      } finally {
+        if (!cancelled) setReady(true);
+      }
+    })();
+
+    // 3) Bei Sprachwechsel remounten (für direkte i18next.t(...) Aufrufe)
+    const onLang = (newLng: string) => {
+      const base = (newLng || "de").split("-")[0].toLowerCase();
       setLng(base);
-      // <html lang> wird bereits in i18n.client beim Wechsel gesetzt
     };
-    i18n.on('languageChanged', handler);
-    return () => i18n.off('languageChanged', handler);
+    i18n.on("languageChanged", onLang);
+
+    return () => {
+      cancelled = true;
+      i18n.off("languageChanged", onLang);
+    };
   }, []);
 
-  // 3) Vermeidet SSR/FOUC, bis Client bereit
-  const [ready, setReady] = useState(false);
-  useEffect(() => setReady(true), []);
-  if (!ready) return null;
+  if (!ready) return null; // verhindert EN-defaultValues beim ersten Render
 
-  // 4) WICHTIG: key={lng} erzwingt Remount des gesamten Subtrees bei Sprachwechsel
   return (
     <Suspense fallback={null}>
       <div key={lng}>{children}</div>
