@@ -34,7 +34,7 @@ if (!i18n.isInitialized) {
       backend: {
         loadPath: "/locales/{{lng}}/{{ns}}.json",
         // Browser darf cachen (ETag/Cache-Control via NGINX)
-        requestOptions: {}, 
+        requestOptions: {},
       },
 
       detection: {
@@ -50,12 +50,17 @@ if (!i18n.isInitialized) {
     });
 
   // HTML <html lang="..."> synchron halten
-    i18n.on("languageChanged", (lng) => {
-      if (typeof document !== "undefined") {
-        const base = (lng || "de").split("-")[0].toLowerCase(); // z.B. de-CH -> de
-        document.documentElement.lang = base;
-      }
-    });
+  i18n.on("languageChanged", (lng) => {
+    if (typeof document !== "undefined") {
+      const base = (lng || "de").split("-")[0].toLowerCase(); // z.B. de-CH -> de
+      document.documentElement.lang = base;
+    }
+  });
+
+  // ⬇️ NEU: für DevTools nutzbar machen (Konsole: window.i18next)
+  if (typeof window !== "undefined") {
+    (window as any).i18next = i18n;
+  }
 }
 
 export default i18n;
