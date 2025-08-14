@@ -18,10 +18,11 @@ if (!i18n.isInitialized) {
     .use(LanguageDetector)              // ✅ Browser-Detektion
     .use(initReactI18next)
     .init({
-      // ❌ kein festes lng mehr
+      // Keine feste Sprache — Browser/Storage entscheidet
       fallbackLng: "de",
       supportedLngs: ["de","fr","en"],
 
+      // de-CH -> de, saubere Codes
       load: "languageOnly",
       cleanCode: true,
       nonExplicitSupportedLngs: true,
@@ -33,29 +34,37 @@ if (!i18n.isInitialized) {
 
       backend: {
         loadPath: "/locales/{{lng}}/{{ns}}.json",
-        // Browser darf cachen (ETag/Cache-Control via NGINX)
-        requestOptions: {}, 
+        requestOptions: {}, // Caching regelt Nginx (ETag/Cache-Control)
       },
 
       detection: {
         order: ["localStorage","cookie","htmlTag","navigator","querystring"],
         caches: ["localStorage","cookie"],
         lookupQuerystring: "lang",
-        cookieMinutes: 60*24*30, // 30 Tage
+        cookieMinutes: 60 * 24 * 30,
       },
 
       interpolation: { escapeValue: false },
       react: { useSuspense: true },
       // debug: true,
+    })
+    .then(() => {
+      // 🔹 WICHTIG: Überall wird direkt i18next.t(...) genutzt → Namespaces upfront laden
+      i18n.loadNamespaces([...namespaces]);
     });
 
-  // HTML <html lang="..."> synchron halten
-    i18n.on("languageChanged", (lng) => {
-      if (typeof document !== "undefined") {
-        const base = (lng || "de").split("-")[0].toLowerCase(); // z.B. de-CH -> de
-        document.documentElement.lang = base;
-      }
-    });
+  // <html lang="..."> aktuell halten
+  i18n.on("languageChanged", (lng) => {
+    if (typeof document !== "undefined") {
+      const base = (lng || "de").split("-")[0].toLowerCase();
+      document.documentElement.lang = base;
+    }
+  });
+
+  // Für DevTools-Tests (Konsole): i18next.language / i18next.changeLanguage('fr')
+  if (typeof window !== "undefined") {
+    (window as any).i18next = i18n;
+  }
 }
 
 export default i18n;
