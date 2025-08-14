@@ -38,7 +38,7 @@ if (!i18n.isInitialized) {
       },
 
       detection: {
-        order: ["localStorage","cookie","htmlTag","navigator","querystring"],
+        order: ["localStorage","cookie","navigator","htmlTag","querystring"],
         caches: ["localStorage","cookie"],
         lookupQuerystring: "lang",
         cookieMinutes: 60*24*30, // 30 Tage
