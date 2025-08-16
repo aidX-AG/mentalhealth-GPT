@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import Icon from "@/components/Icon";
 import Modal from "@/components/Modal";
 import i18next from "i18next";
@@ -8,6 +9,8 @@ type ItemProps = {
 };
 
 const Item = ({ item }: ItemProps) => {
+  const { t: tCommon } = useTranslation("common");
+
     const [visible, setVisible] = useState<boolean>(false);
 
     return (
@@ -48,7 +51,7 @@ const Item = ({ item }: ItemProps) => {
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/4cR7E79X8Ys"
-                    title={i18next.t("common.misc.youtube-player", { defaultValue: "YouTube video player" })}
+                    title={tCommon("misc.youtube-player", { defaultValue: "YouTube video player" })}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 ></iframe>
             </Modal>

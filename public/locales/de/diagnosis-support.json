@@ -1,7 +1,7 @@
 {
-    "diagnosis-support.sections.banner-prefix": "🚧 Die KI-Funktionalität für",
-    "diagnosis-support.sections.title": "Unterstützung bei Diagnosen",
-    "diagnosis-support.sections.under-development": "befindet sich derzeit in der Entwicklung.",
-    "diagnosis-support.sections.coming-soon": "Sie wird nach und nach zur Verfügung stehen, wenn wir spezialisierte Modelle zur Unterstützung der psychiatrischen Diagnostik integrieren.",
-    "diagnosis-support.chat.title": "Unterstützung bei Diagnosen"
+  "diagnosis-support": {
+    "chat": {
+      "title": "Unterstützung bei Diagnosen"
+    }
+  }
 }

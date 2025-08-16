@@ -1,6 +1,7 @@
 {
-    "thanks.sections.title": "Merci pour votre achat !",
-    "thanks.sections.order-received": "Votre commande a été reçue et est en cours de traitement. Vous recevrez sous peu un courriel de confirmation contenant les détails de votre commande.",
-    "thanks.buttons.manage-subscription": "Gérer l'abonnement",
-    "thanks.buttons.start-new-chat": "Commencer un nouveau chat"
+  "thanks": {
+    "buttons": {
+      "start-new-chat": "Commencer un nouveau chat"
+    }
+  }
 }

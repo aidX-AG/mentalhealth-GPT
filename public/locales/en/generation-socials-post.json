@@ -1,3 +1,7 @@
 {
-    "generation-socials-post.chat.title": "Promotional content"
+  "generation-socials-post": {
+    "chat": {
+      "title": "Promotional content"
+    }
+  }
 }

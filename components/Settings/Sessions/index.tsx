@@ -1,4 +1,5 @@
 import Device from "./Device";
+import { useTranslation } from 'react-i18next';
 import i18next from "i18next";
 
 const devices = [
@@ -29,16 +30,16 @@ type SessionsProps = {};
 
 const Sessions = ({}: SessionsProps) => (
     <>
-        <div className="mb-8 h4 md:mb-6">{i18next.t("common.fragments.your-sessions", { defaultValue: "Your sessions" })}</div>
+        <div className="mb-8 h4 md:mb-6">{tCommon("fragments.your-sessions", { defaultValue: "Your sessions" })}</div>
         <div className="mb-8 base2 text-n-4 md:mb-6">
-            {i18next.t("common.fragments.device-list-note", { defaultValue: "This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize." })}</div>
-        <div className="py-3 base2 text-n-4">{i18next.t("common.fragments.devices", { defaultValue: "Devices" })}</div>
+            {tCommon("fragments.device-list-note", { defaultValue: "This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize." })}</div>
+        <div className="py-3 base2 text-n-4">{tCommon("fragments.devices", { defaultValue: "Devices" })}</div>
         <div className="mb-6">
             {devices.map((device) => (
                 <Device item={device} key={device.id} />
             ))}
         </div>
-        <button className="btn-blue w-full">{i18next.t("common.fragments.sign-out-all", { defaultValue: "Sign out all devices" })}</button>
+        <button className="btn-blue w-full">{tCommon("fragments.sign-out-all", { defaultValue: "Sign out all devices" })}</button>
     </>
 );
 

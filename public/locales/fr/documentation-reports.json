@@ -1,18 +1,7 @@
 {
-    "documentation-reports.chat.greeting": "Bonjour, comment puis-je vous aider à documenter et à établir des rapports aujourd'hui ?",
-    "documentation-reports.text.coming-capability": "Bientôt, vous pourrez générer",
-    "documentation-reports.text.professional-docs": "documentation et rapports professionnels",
-    "documentation-reports.text.use-cases": "- qu'il s'agisse d'un usage clinique, d'une demande d'assurance ou d'un dossier personnel de thérapie ou de séances de supervision.",
-    "documentation-reports.text.ai-helps-transform": "Notre IA vous aidera à transformer les transcriptions en",
-    "documentation-reports.text.clear-structured-confidential": "claire, structurée et confidentielle",
-    "documentation-reports.text.reports-automatically": "automatiquement.",
-    "documentation-reports.text.data-processed-with": "Toutes les données sont traitées avec",
-    "documentation-reports.text.end-to-end-encryption": "chiffrement de bout en bout",
-    "documentation-reports.text.privacy-protection": "afin de protéger la confidentialité des patients et de garantir un traitement sécurisé à chaque étape.",
-    "documentation-reports.sections.icon": "🚧",
-    "documentation-reports.sections.title": "Documentation et rapports",
-    "documentation-reports.sections.in-development": "est une nouvelle fonctionnalité passionnante qui est actuellement en cours de développement.",
-    "documentation-reports.text.value-prop": "Nous le construisons pour vous faire gagner du temps, réduire la charge administrative et améliorer la qualité de votre documentation",
-    "documentation-reports.text.stay-tuned": "restez à l'écoute !",
-    "documentation-reports.chat.title": "Documentation et rapports"
+  "documentation-reports": {
+    "chat": {
+      "title": "Documentation et rapports"
+    }
+  }
 }

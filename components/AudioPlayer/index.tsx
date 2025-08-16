@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
 import Image from "@/components/Image";
@@ -10,6 +11,8 @@ type AudioPlayerProps = {
 };
 
 const AudioPlayer = ({ edit, onSave }: AudioPlayerProps) => {
+  const { t: tCommon } = useTranslation("common");
+
     const [active, setActive] = useState<boolean>(true);
 
     return (
@@ -41,7 +44,7 @@ const AudioPlayer = ({ edit, onSave }: AudioPlayerProps) => {
                             }
                             width={532}
                             height={39}
-                            alt={i18next.t("common.alt.audio", { defaultValue: "Audio" })}
+                            alt={tCommon("alt.audio", { defaultValue: "Audio" })}
                         />
                     </div>
                 </div>
@@ -49,7 +52,7 @@ const AudioPlayer = ({ edit, onSave }: AudioPlayerProps) => {
                     <>
                         <div className="p-3.5 border-t border-n-3 dark:border-n-5">
                             <span className="bg-primary-1 text-n-1">
-                                {i18next.t("common.body.introducing-brainwave", { defaultValue: "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any" })}</span>{" "}
+                                {tCommon("body.introducing-brainwave", { defaultValue: "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any" })}</span>{" "}
                             written script into high-quality audio. Using
                             advanced natural language processing and
                             text-to-speech technology, Speechify can generate
@@ -65,19 +68,19 @@ const AudioPlayer = ({ edit, onSave }: AudioPlayerProps) => {
                         </div>
                         <div className="flex justify-between items-center px-3.5 pt-3.5 pb-2.5 border-t border-n-3 dark:border-n-5">
                             <div className="caption1 text-n-4/75">
-                                {i18next.t("common.misc.characters-609", { defaultValue: "609 characters" })}</div>
+                                {tCommon("misc.characters-609", { defaultValue: "609 characters" })}</div>
                             <button
                                 className="btn-blue btn-medium"
                                 onClick={onSave}
                             >
-                                {i18next.t("common.misc.save", { defaultValue: "Save" })}</button>
+                                {tCommon("misc.save", { defaultValue: "Save" })}</button>
                         </div>
                     </>
                 )}
             </div>
             <div className="flex justify-between mt-2 caption2 text-n-4">
-                <div>{i18next.t("common.misc.time-021", { defaultValue: "0:21" })}</div>
-                <div>{i18next.t("common.misc.time-102", { defaultValue: "1:02" })}</div>
+                <div>{tCommon("misc.time-021", { defaultValue: "0:21" })}</div>
+                <div>{tCommon("misc.time-102", { defaultValue: "1:02" })}</div>
             </div>
         </div>
     );

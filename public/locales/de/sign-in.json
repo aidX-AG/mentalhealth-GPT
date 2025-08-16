@@ -1,20 +1,7 @@
 {
-    "sign-in.misc.forgot-password": "Passwort vergessen?",
-    "sign-in.misc.sign-in-with-brainwave": "Mit mentalhealthGPT anmelden",
-    "sign-in.placeholders.username-or-email": "Benutzername oder E-Mail",
-    "sign-in.placeholders.password": "Passwort",
-    "sign-in.sections.hero-title": "Entfesseln Sie die Macht der KI",
-    "sign-in.sections.hero-subtitle": "Chatten Sie mit der intelligentesten KI - Erleben Sie mit uns die Macht der KI",
-    "sign-in.buttons.continue-google": "Weiter mit Google",
-    "sign-in.buttons.continue-apple": "Weiter mit Apple",
-    "sign-in.sections.or": "OR",
-    "sign-in.buttons.create-account": "Konto erstellen",
-    "sign-in.text.by-creating-account": "Durch die Erstellung eines Kontos erklären Sie sich mit unseren",
-    "sign-in.sections.terms-of-service": "Bedingungen der Dienstleistung",
-    "sign-in.text.and": "und",
-    "sign-in.sections.privacy-cookie": "Datenschutz & Cookie-Erklärung",
-    "sign-in.text.period": ".",
-    "sign-in.placeholders.email": "E-Mail",
-    "sign-in.fragments.reset-password": "Ihr Passwort zurücksetzen",
-    "sign-in.buttons.reset-password": "Passwort zurücksetzen"
+  "sign-in": {
+    "buttons": {
+      "reset-password": "Passwort zurücksetzen"
+    }
+  }
 }

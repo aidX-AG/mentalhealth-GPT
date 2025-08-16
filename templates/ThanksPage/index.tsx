@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslation } from 'react-i18next';
 import Layout from "@/components/Layout";
 import Icon from "@/components/Icon";
 import Menu from "@/components/Menu";
@@ -9,6 +10,8 @@ import { navigation } from "@/constants/navigation";
 import i18next from "i18next";
 
 const ThanksPage = () => {
+  const { t: tThanks } = useTranslation("thanks");
+
     return (
         <Layout smallSidebar hideRightSidebar>
             <div className="flex items-center grow p-15 lg:py-10 md:px-8">
@@ -18,17 +21,17 @@ const ThanksPage = () => {
                             <Icon className="w-12 h-12" name="check-thin" />
                         </div>
                         <div className="mb-6 h2 2xl:h3 xl:h4 lg:text-center">
-                            {i18next.t("thanks.sections.title", { defaultValue: "Thank you for your purchase!" })}</div>
+                            {tThanks("sections.title", { defaultValue: "Thank you for your purchase!" })}</div>
                         <div className="mb-8 body1 text-n-4 xl:body2 lg:text-center">
-                            {i18next.t("thanks.sections.order-received", { defaultValue: "Your order has been received and is currently being processed. You will receive an email confirmation with your order details shortly." })}</div>
+                            {tThanks("sections.order-received", { defaultValue: "Your order has been received and is currently being processed. You will receive an email confirmation with your order details shortly." })}</div>
                         <div className="flex xl:block lg:flex lg:space-x-4 md:block md:space-x-0 md:space-y-3">
                             <Link
                                 className="btn-stroke-light mr-3 xl:w-full xl:mr-0 xl:mb-4 lg:mb-0"
                                 href="/pricing"
                             >
-                                {i18next.t("thanks.buttons.manage-subscription", { defaultValue: "Manage subscription" })}</Link>
+                                {tThanks("buttons.manage-subscription", { defaultValue: "Manage subscription" })}</Link>
                             <Link className="btn-blue xl:w-full" href="/">
-                                {i18next.t("thanks.buttons.start-new-chat", { defaultValue: "Start new chat" })}</Link>
+                                {tThanks("buttons.start-new-chat", { defaultValue: "Start new chat" })}</Link>
                         </div>
                     </div>
                     <Menu

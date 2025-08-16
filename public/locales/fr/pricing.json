@@ -1,15 +1,7 @@
 {
-    "pricing.sections.hero-title": "L'IA en ligne à la portée de tous",
-    "pricing.sections.hero-subtitle": "Des plans tarifaires pour tous les budgets",
-    "pricing.sections.choose-plan": "Choisir un plan",
-    "pricing.sections.faq": "Questions fréquemment posées",
-    "pricing.sections.core-features": "Caractéristiques principales",
-    "pricing.sections.free": "Gratuit",
-    "pricing.sections.pro": "Pro",
-    "pricing.sections.enterprise": "Entreprise",
-    "pricing.badges.via-email": "Par courrier électronique",
-    "pricing.badges.chat-247": "Chat 24\/7",
-    "pricing.badges.popular": "Populaire",
-    "pricing.sections.currency-symbol": "$",
-    "pricing.sections.slash": "\/"
+  "pricing": {
+    "sections": {
+      "slash": "/"
+    }
+  }
 }

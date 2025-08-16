@@ -1,10 +1,7 @@
 {
-    "audio-transcription.chat.greeting": "Hello! How can I assist you with audio transcription today?",
-    "audio-transcription.text.capability": "Our AI can securely transcribe audio recordings from therapy sessions, structure the content, and generate clear, professional summaries — all with end-to-end encryption.",
-    "audio-transcription.text.upload-instructions": "Simply upload a recorded session. All patient information remains strictly confidential and is protected by strong encryption directly in your browser, during transfer, and back again — ensuring full privacy at every step.",
-    "audio-transcription.sections.banner-prefix": "🚧 The AI model for",
-    "audio-transcription.sections.title": "Audio Transcription & Notes",
-    "audio-transcription.sections.under-development": "is currently under development.",
-    "audio-transcription.sections.coming-soon": "It will soon provide accurate transcription and note-taking support for clinical documentation.",
-    "audio-transcription.chat.title": "Audio Transcription & Notes"
+  "audio-transcription": {
+    "chat": {
+      "title": "Audio Transcription & Notes"
+    }
+  }
 }

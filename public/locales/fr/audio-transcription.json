@@ -1,10 +1,7 @@
 {
-    "audio-transcription.chat.greeting": "Bonjour, comment puis-je vous aider avec la transcription audio aujourd'hui ?",
-    "audio-transcription.text.capability": "Notre IA peut transcrire en toute sécurité les enregistrements audio des séances de thérapie, structurer le contenu et générer des résumés clairs et professionnels, le tout avec un cryptage de bout en bout.",
-    "audio-transcription.text.upload-instructions": "Il suffit de télécharger une session enregistrée. Toutes les informations relatives aux patients restent strictement confidentielles et sont protégées par un cryptage puissant directement dans votre navigateur, pendant le transfert et à chaque retour, ce qui garantit une confidentialité totale à chaque étape.",
-    "audio-transcription.sections.banner-prefix": "🚧 Le modèle d'IA pour",
-    "audio-transcription.sections.title": "Transcription audio et notes",
-    "audio-transcription.sections.under-development": "est actuellement en cours de développement.",
-    "audio-transcription.sections.coming-soon": "Il fournira bientôt une transcription précise et une aide à la prise de notes pour la documentation clinique.",
-    "audio-transcription.chat.title": "Transcription audio et notes"
+  "audio-transcription": {
+    "chat": {
+      "title": "Transcription audio et notes"
+    }
+  }
 }

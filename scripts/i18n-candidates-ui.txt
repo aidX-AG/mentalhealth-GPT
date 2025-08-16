@@ -1,0 +1,521 @@
+components/AddChatList/User/index.tsx:14:        title: "Full access",
+components/AddChatList/User/index.tsx:18:        title: "Can view",
+components/AddChatList/User/index.tsx:22:        title: "Can start chat",
+components/AddChatList/User/index.tsx:36:                    alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/AddChatList/index.tsx:120:                    {i18next.t("common.body.access-note", { defaultValue: "Only people invited in this list can access" })}</div>
+components/AddChatList/index.tsx:127:                    {i18next.t("common.buttons.cancel", { defaultValue: "Cancel" })}</button>
+components/AddChatList/index.tsx:128:                <button className="btn-blue">{i18next.t("common.buttons.add-list", { defaultValue: "Add list" })}</button>
+components/AddChatList/index.tsx:13:        title: "Chinese Violet",
+components/AddChatList/index.tsx:18:        title: "Dodger blue",
+components/AddChatList/index.tsx:23:        title: "Golden Gate Bridge",
+components/AddChatList/index.tsx:28:        title: "Veronica",
+components/AddChatList/index.tsx:33:        title: "Sugus green",
+components/AddChatList/index.tsx:41:        name: "Janiya (you)",
+components/AddChatList/index.tsx:47:        name: "Doug",
+components/AddChatList/index.tsx:55:        title: "Full access",
+components/AddChatList/index.tsx:59:        title: "Can view",
+components/AddChatList/index.tsx:63:        title: "Can start chat",
+components/AddChatList/index.tsx:79:            <div className="mb-8 h4">{i18next.t("common.headings.add-chat-list", { defaultValue: "Add chat list" })}</div>
+components/AddChatList/index.tsx:83:                    label={i18next.t("common.labels.name", { defaultValue: "Name" })}
+components/AddChatList/index.tsx:84:                    placeholder={i18next.t("common.placeholders.name", { defaultValue: "Name" })}
+components/AddChatList/index.tsx:91:                    label={i18next.t("common.labels.color", { defaultValue: "Color" })}
+components/AddChatList/index.tsx:99:                {i18next.t("common.sections.invite-member", { defaultValue: "Invite team member" })}</div>
+components/Adjust/index.tsx:21:            <SliderRange className="mb-2" title={i18next.t("common.controls.exposure", { defaultValue: "Exposure" })} />
+components/Adjust/index.tsx:22:            <SliderRange className="mb-2" title={i18next.t("common.controls.contrast", { defaultValue: "Contrast" })} />
+components/Adjust/index.tsx:23:            <SliderRange className="mb-2" title={i18next.t("common.controls.highlights", { defaultValue: "Highlights" })} />
+components/Adjust/index.tsx:24:            <SliderRange className="mb-2" title={i18next.t("common.controls.shadows", { defaultValue: "Shadows" })} />
+components/Adjust/index.tsx:25:            <SliderRange className="mb-2" title={i18next.t("common.controls.white", { defaultValue: "White" })} />
+components/Adjust/index.tsx:26:            <SliderRange className="" title={i18next.t("common.controls.blacks", { defaultValue: "Blacks" })} />
+components/Adjust/index.tsx:29:            <button className="btn-blue w-full">{i18next.t("common.misc.auto", { defaultValue: "Auto" })}</button>
+components/Adjust/index.tsx:30:            <button className="btn-stroke-light w-full">{i18next.t("common.misc.reset", { defaultValue: "Reset" })}</button>
+components/Answer/Actions/index.tsx:13:    const [share, setShare] = useState<boolean>(false);
+components/Answer/Actions/index.tsx:21:                <div className="ml-3 h6">{i18next.t("common.notify.content-copied", { defaultValue: "Content copied" })}</div>
+components/Answer/Actions/index.tsx:29:                <div className="mr-6 ml-3 h6">{i18next.t("common.notify.chat-archived", { defaultValue: "1 chat archived" })}</div>
+components/Answer/Actions/index.tsx:34:                    {i18next.t("common.notify.undo", { defaultValue: "Undo" })}</button>
+components/Answer/Actions/index.tsx:45:                <button className={`${styleButton} md:hidden`}>{i18next.t("common.actions.copy", { defaultValue: "Copy" })}</button>
+components/Answer/Actions/index.tsx:47:            <button className={styleButton}>{i18next.t("common.fragments.regenerate-response", { defaultValue: "Regenerate response" })}</button>
+components/Answer/Actions/index.tsx:50:                    <button className="" onClick={() => setShare(true)}>
+components/Answer/Actions/index.tsx:55:                            alt={i18next.t("common.alt.smile-heart-eyes", { defaultValue: "Smile heart eyes" })}
+components/Answer/Actions/index.tsx:63:                            alt={i18next.t("common.alt.smile-unamused", { defaultValue: "Smile unamused" })}
+components/Answer/Actions/index.tsx:6:import ModalShareChat from "@/components/ModalShareChat";
+components/Answer/Actions/index.tsx:77:                        alt={i18next.t("common.alt.smile-heart-eyes", { defaultValue: "Smile heart eyes" })}
+components/Answer/Actions/index.tsx:79:                    {i18next.t("common.badges.share", { defaultValue: "Share" })}</button>
+components/Answer/Actions/index.tsx:90:                        alt={i18next.t("common.alt.smile-unamused", { defaultValue: "Smile unamused" })}
+components/Answer/Actions/index.tsx:92:                    {i18next.t("common.badges.archive-chat", { defaultValue: "Archive chat" })}</button>
+components/Answer/Actions/index.tsx:94:            <ModalShareChat
+components/Answer/index.tsx:30:                        alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/Answer/index.tsx:39:                        {i18next.t("common.badges.pause-generating", { defaultValue: "Pause generating" })}</button>
+components/Audio/index.tsx:103:                            <span>{i18next.t("common.fragments.export", { defaultValue: "Export" })}</span>
+components/Audio/index.tsx:108:                    <Export />
+components/Audio/index.tsx:114:                    <span>{i18next.t("common.buttons.edit", { defaultValue: "Edit" })}</span>
+components/Audio/index.tsx:127:                    title={i18next.t("common.labels.speed", { defaultValue: "Speed" })}
+components/Audio/index.tsx:12:        title: "English (US)",
+components/Audio/index.tsx:137:                        title={i18next.t("common.labels.voice", { defaultValue: "Voice" })}
+components/Audio/index.tsx:151:                        onChange={setVoice}
+components/Audio/index.tsx:16:        title: "French",
+components/Audio/index.tsx:20:        title: "Ukrainian",
+components/Audio/index.tsx:27:        title: "Normal",
+components/Audio/index.tsx:31:        title: "1.25x",
+components/Audio/index.tsx:35:        title: "1.5x",
+components/Audio/index.tsx:42:        title: "Female",
+components/Audio/index.tsx:46:        title: "Man",
+components/Audio/index.tsx:4:import Export from "@/components/Export";
+components/Audio/index.tsx:53:        title: "Jenny",
+components/Audio/index.tsx:57:        title: "Mark",
+components/Audio/index.tsx:61:        title: "Jack",
+components/Audio/index.tsx:68:        title: "😀 Friendly",
+components/Audio/index.tsx:72:        title: "😐 Neutral",
+components/Audio/index.tsx:76:        title: "😚 Kissing",
+components/Audio/index.tsx:87:    const [voice, setVoice] = useState<any>(voices[0]);
+components/Audio/index.tsx:93:                {i18next.t("common.body.audio-success", { defaultValue: "Your audio has been successfully generated. You may further customize it or simply download it for use." })}</div>
+components/Audio/index.tsx:98:                    title={i18next.t("common.actions.exporting-audio", { defaultValue: "Exporting 1 audio" })}
+components/AudioPlayer/index.tsx:44:                            alt={i18next.t("common.alt.audio", { defaultValue: "Audio" })}
+components/AudioPlayer/index.tsx:52:                                {i18next.t("common.body.introducing-brainwave", { defaultValue: "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any" })}</span>{" "}
+components/AudioPlayer/index.tsx:68:                                {i18next.t("common.misc.characters-609", { defaultValue: "609 characters" })}</div>
+components/AudioPlayer/index.tsx:73:                                {i18next.t("common.misc.save", { defaultValue: "Save" })}</button>
+components/AudioPlayer/index.tsx:79:                <div>{i18next.t("common.misc.time-021", { defaultValue: "0:21" })}</div>
+components/AudioPlayer/index.tsx:80:                <div>{i18next.t("common.misc.time-102", { defaultValue: "1:02" })}</div>
+components/Chat/Actions/index.tsx:15:            title: "Add to favorite list",
+components/Chat/Actions/index.tsx:21:            title: "Share",
+components/Chat/Actions/index.tsx:27:            title: "Duplicate chat",
+components/Chat/Actions/index.tsx:33:            title: "Delete chat",
+components/Chat/Actions/index.tsx:4:import ModalShareChat from "@/components/ModalShareChat";
+components/Chat/Actions/index.tsx:88:            <ModalShareChat
+components/Chat/index.tsx:3:import ModalShareChat from "@/components/ModalShareChat";
+components/Chat/index.tsx:48:            <ModalShareChat
+components/Code/index.tsx:56:                            {i18next.t("common.badges.copied", { defaultValue: "Copied!" })}</div>
+components/Code/index.tsx:67:                                        {i18next.t("common.actions.copy-code", { defaultValue: "Copy code" })}</button>
+components/Code/index.tsx:96:                {i18next.t("common.body.form-example-note", { defaultValue: "Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side." })}</div>
+components/Code/index.tsx:98:                {i18next.t("common.body.created-project", { defaultValue: "I have created a project in your Codepen account" })}<button className="shrink-0 btn-dark btn-medium ml-4">
+components/Code/index.tsx:99:                    <span>{i18next.t("common.buttons.view", { defaultValue: "View" })}</span>
+components/Export/index.tsx:11:const Export = ({ typeImage }: ExportProps) => {
+components/Export/index.tsx:12:    const items = typeImage ? exportImage : exportAudio;
+components/Export/index.tsx:62:                <div className="base2 font-semibold">{i18next.t("common.buttons.more", { defaultValue: "More" })}</div>
+components/Export/index.tsx:68:export default Export;
+components/Export/index.tsx:7:type ExportProps = {
+components/Feedback/Assessment/Item/index.tsx:51:                    title={i18next.t("common.misc.youtube-player", { defaultValue: "YouTube video player" })}
+components/Feedback/Assessment/index.tsx:43:                <div className="table-cell pl-5 py-2 md:hidden">{i18next.t("common.misc.hash", { defaultValue: "#" })}</div>
+components/Feedback/Assessment/index.tsx:45:                    {i18next.t("common.misc.incorrect-answer-5", { defaultValue: "Incorrect answer (5)" })}</div>
+components/Feedback/Assessment/index.tsx:47:                    {i18next.t("common.misc.correct-answer", { defaultValue: "Correct answer" })}</div>
+components/Feedback/Assessment/index.tsx:49:                    {i18next.t("common.misc.how", { defaultValue: "How" })}</div>
+components/Feedback/Assessment/index.tsx:4:const items = [
+components/Feedback/Details/index.tsx:13:                <div className="mb-1 h6">{i18next.t("common.misc.very-good", { defaultValue: "Very good!" })}</div>
+components/Feedback/Details/index.tsx:38:                        {i18next.t("common.misc.score-485", { defaultValue: "4.85" })}</div>
+components/Feedback/Details/index.tsx:43:            <span>{i18next.t("common.buttons.download", { defaultValue: "Download" })}</span>
+components/Feedback/index.tsx:14:            {i18next.t("common.sections.suggestion", { defaultValue: "Suggestion to improve your test" })}</div>
+components/Feedback/index.tsx:17:                <strong>{i18next.t("common.sections.read-regularly", { defaultValue: "Read regularly:" })}</strong> {i18next.t("common.body.reading-benefits", { defaultValue: "Reading is an excellent way to improve your vocabulary, grammar, and comprehension skills. Try to read a variety of materials, including books, newspapers, magazines, and online articles." })}</p>
+components/Feedback/index.tsx:19:                <strong>{i18next.t("common.sections.practice-writing", { defaultValue: "Practice writing:" })}</strong> {i18next.t("common.body.writing-benefits", { defaultValue: "Writing can help you improve your grammar, spelling, and sentence structure. Try to write regularly, even if it&apos;s just a short paragraph or a journal entry." })}</p>
+components/Feedback/index.tsx:21:                <strong>{i18next.t("common.sections.listen-to-english", { defaultValue: "Listen to English:" })}</strong> {i18next.t("common.body.listening-benefits", { defaultValue: "Listening to English podcasts, audiobooks, and videos can help you improve your listening and comprehension skills. It can also help you get used to different accents and intonations." })}</p>
+components/Feedback/index.tsx:23:                <strong>{i18next.t("common.sections.speak-with-natives", { defaultValue: "Speak with native speakers:" })}</strong> {i18next.t("common.body.speaking-benefits", { defaultValue: "Speaking with native speakers can help you improve your pronunciation, fluency, and confidence. You can find language exchange partners or join conversation groups online or in person." })}</p>
+components/Feedback/index.tsx:25:                <strong>{i18next.t("common.sections.learn-grammar-rules", { defaultValue: "Learn grammar rules:" })}</strong> {i18next.t("common.body.grammar-benefits", { defaultValue: "Learning the basic grammar rules can help you write and speak more accurately. Try to focus on one rule at a time and practice using it in your writing and speaking. There are many online resources, such as grammar books and videos, that can help you learn grammar rules." })}</p>
+components/I18n/LanguagePrompt.tsx:41:      title: "Diese Seite ist auf Deutsch verfügbar.",
+components/I18n/LanguagePrompt.tsx:46:      title: "Ce site est disponible en français.",
+components/I18n/LanguagePrompt.tsx:51:      title: "This site is available in English.",
+components/I18n/LanguageSwitcher.tsx:6:  { code: "en", label: "English" },
+components/I18n/LanguageSwitcher.tsx:7:  // { code: "de", label: "Deutsch" }, // aktivieren, sobald de da ist
+components/Icon/lucide-icons.ts:20:  Settings,
+components/Icon/lucide-icons.ts:44:  settings: Settings,
+components/Layout/index.tsx:50:                <title>{i18next.t("common.sections.brand", { defaultValue: "Brainwave" })}</title>
+components/LeftSidebar/ChatList/index.tsx:42:                        {!visible && <div className="ml-5">{i18next.t("common.badges.chat-list", { defaultValue: "Chat list" })}</div>}
+components/LeftSidebar/ChatList/index.tsx:99:                    {!visible && <div className="ml-5">{i18next.t("common.badges.new-list", { defaultValue: "New list" })}</div>}
+components/LeftSidebar/Navigation/index.tsx:52:                                {i18next.t("common.badges.cmd-f", { defaultValue: "⌘ F" })}</div>
+components/LeftSidebar/Profile/index.tsx:28:                        alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/LeftSidebar/Profile/index.tsx:36:                                {i18next.t("common.misc.author-name", { defaultValue: "Tran Mau Tri Tam" })}</div>
+components/LeftSidebar/Profile/index.tsx:38:                                {i18next.t("common.misc.author-email", { defaultValue: "tam@ui8.net" })}</div>
+components/LeftSidebar/Profile/index.tsx:41:                            {i18next.t("common.fragments.free", { defaultValue: "Free" })}</div>
+components/LeftSidebar/Profile/index.tsx:47:                    {i18next.t("common.badges.upgraded-to-pro", { defaultValue: "Upgraded to Pro" })}</Link>
+components/LeftSidebar/Profile/index.tsx:53:export default Profile;
+components/LeftSidebar/Profile/index.tsx:5:type ProfileProps = {
+components/LeftSidebar/Profile/index.tsx:9:const Profile = ({ visible }: ProfileProps) => (
+components/LeftSidebar/ToggleTheme/index.tsx:12:    const items = [
+components/LeftSidebar/ToggleTheme/index.tsx:14:            title: "Light",
+components/LeftSidebar/ToggleTheme/index.tsx:20:            title: "Dark",
+components/LeftSidebar/index.tsx:10:import Profile from "./Profile";
+components/LeftSidebar/index.tsx:123:                    <Profile visible={value} />
+components/LeftSidebar/index.tsx:142:                visible={visibleSettings}
+components/LeftSidebar/index.tsx:143:                onClose={() => setVisibleSettings(false)}
+components/LeftSidebar/index.tsx:145:                <Settings items={settings} />
+components/LeftSidebar/index.tsx:32:    const [visibleSettings, setVisibleSettings] = useState<boolean>(false);
+components/LeftSidebar/index.tsx:50:            title: "Chats",
+components/LeftSidebar/index.tsx:56:            title: "Search",
+components/LeftSidebar/index.tsx:62:            title: "Manage subscription",
+components/LeftSidebar/index.tsx:68:            title: "Updates & FAQ",
+components/LeftSidebar/index.tsx:74:            title: "Settings",
+components/LeftSidebar/index.tsx:77:            onClick: () => setVisibleSettings(true),
+components/LeftSidebar/index.tsx:7:import Settings from "@/components/Settings";
+components/Logo/index.tsx:15:      alt={i18next.t("common.alt.aidx", { defaultValue: "aidX" })}
+components/Message/AddFile/index.tsx:34:                        <div className="h5">{i18next.t("common.sections.upload-to-mh-gpt", { defaultValue: "Upload to mentalhealthGPT" })}</div>
+components/Message/AddFile/index.tsx:36:                            {i18next.t("common.sections.add-prompts-note", { defaultValue: "You can add prompts after uploading." })}</div>
+components/Message/Files/index.tsx:18:                    alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/ModalShareChat/index.tsx:12:type ModalShareChatProps = {
+components/ModalShareChat/index.tsx:17:const ModalShareChat = ({ visible, onClose }: ModalShareChatProps) => {
+components/ModalShareChat/index.tsx:28:                <div className="ml-3 h6">{i18next.t("common.notify.link-copied", { defaultValue: "Link copied" })}</div>
+components/ModalShareChat/index.tsx:48:                <div className="mb-8 h4">{i18next.t("common.form.share-chat", { defaultValue: "Share this chat" })}</div>
+components/ModalShareChat/index.tsx:50:                    {i18next.t("common.form.copy-link", { defaultValue: "Copy link" })}</div>
+components/ModalShareChat/index.tsx:54:                        placeholder={i18next.t("common.placeholders.link", { defaultValue: "Link" })}
+components/ModalShareChat/index.tsx:65:                            {i18next.t("common.actions.copy", { defaultValue: "Copy" })}</button>
+components/ModalShareChat/index.tsx:69:                    {i18next.t("common.form.share-to-members", { defaultValue: "Or share to members" })}</div>
+components/ModalShareChat/index.tsx:78:                        {i18next.t("common.buttons.cancel", { defaultValue: "Cancel" })}</button>
+components/ModalShareChat/index.tsx:79:                    <button className="btn-blue">{i18next.t("common.misc.share", { defaultValue: "Share" })}</button>
+components/ModalShareChat/index.tsx:86:export default ModalShareChat;
+components/MultiSelect/index.tsx:88:                placeholder={i18next.t("common.placeholders.member-name", { defaultValue: "Name member" })}
+components/Photo/index.tsx:39:                title={i18next.t("common.actions.exporting-photo", { defaultValue: "Exporting 1 photo" })}
+components/Photo/index.tsx:42:                        <span>{i18next.t("common.fragments.export", { defaultValue: "Export" })}</span>
+components/Photo/index.tsx:47:                <Export typeImage />
+components/Photo/index.tsx:4:import Export from "@/components/Export";
+components/Photo/index.tsx:51:                    <span className="md:hidden">{i18next.t("common.misc.create", { defaultValue: "Create" })}</span> {i18next.t("common.buttons.variation", { defaultValue: "variation" })}</span>
+components/Photo/index.tsx:57:                title={i18next.t("common.actions.adjust", { defaultValue: "Adjust" })}
+components/Photo/index.tsx:60:                        <span>{i18next.t("common.fragments.adjust", { defaultValue: "Adjust" })}</span>
+components/Photo/index.tsx:68:                <span>{i18next.t("common.buttons.enhance", { defaultValue: "Enhance" })}</span>
+components/Question/index.tsx:23:                        alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/Question/index.tsx:40:                    alt={i18next.t("common.alt.wip", { defaultValue: "WIP" })}
+components/RightSidebar/ChatItem/index.tsx:22:                <div className="mr-6 ml-3 h6">{i18next.t("common.notify.chat-archived", { defaultValue: "1 chat archived" })}</div>
+components/RightSidebar/ChatItem/index.tsx:27:                    {i18next.t("common.notify.undo", { defaultValue: "Undo" })}</button>
+components/RightSidebar/Notifications/Notification/index.tsx:19:                alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/RightSidebar/Notifications/index.tsx:101:export default Notifications;
+components/RightSidebar/Notifications/index.tsx:11:type NotificationsType = {
+components/RightSidebar/Notifications/index.tsx:22:type NotificationsProps = {
+components/RightSidebar/Notifications/index.tsx:23:    items: NotificationsType[];
+components/RightSidebar/Notifications/index.tsx:26:const Notifications = ({ items }: NotificationsProps) => {
+components/RightSidebar/Notifications/index.tsx:27:    const [visibleSettings, setVisibleSettings] = useState<boolean>(false);
+components/RightSidebar/Notifications/index.tsx:30:        setVisibleSettings(true);
+components/RightSidebar/Notifications/index.tsx:58:                                            {i18next.t("common.sections.notifications", { defaultValue: "Notifications" })}</div>
+components/RightSidebar/Notifications/index.tsx:5:import Settings from "@/components/Settings";
+components/RightSidebar/Notifications/index.tsx:92:                visible={visibleSettings}
+components/RightSidebar/Notifications/index.tsx:93:                onClose={() => setVisibleSettings(false)}
+components/RightSidebar/Notifications/index.tsx:95:                <Settings items={settings} activeItem={2} />
+components/RightSidebar/Profile/index.tsx:100:                <Settings items={settings} />
+components/RightSidebar/Profile/index.tsx:106:export default Profile;
+components/RightSidebar/Profile/index.tsx:11:type ProfileProps = {};
+components/RightSidebar/Profile/index.tsx:13:const Profile = ({}: ProfileProps) => {
+components/RightSidebar/Profile/index.tsx:14:    const [visibleSettings, setVisibleSettings] = useState<boolean>(false);
+components/RightSidebar/Profile/index.tsx:18:            title: "New version available",
+components/RightSidebar/Profile/index.tsx:23:            title: "Settings",
+components/RightSidebar/Profile/index.tsx:25:            onClick: () => setVisibleSettings(true),
+components/RightSidebar/Profile/index.tsx:28:            title: "Log out",
+components/RightSidebar/Profile/index.tsx:43:                            alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/RightSidebar/Profile/index.tsx:62:                                        alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/RightSidebar/Profile/index.tsx:67:                                    <div className="h6">{i18next.t("common.misc.author-name", { defaultValue: "Tran Mau Tri Tam" })}</div>
+components/RightSidebar/Profile/index.tsx:69:                                        {i18next.t("common.misc.role-label", { defaultValue: "Lead visual designer at UI8" })}</div>
+components/RightSidebar/Profile/index.tsx:6:import Settings from "@/components/Settings";
+components/RightSidebar/Profile/index.tsx:97:                visible={visibleSettings}
+components/RightSidebar/Profile/index.tsx:98:                onClose={() => setVisibleSettings(false)}
+components/RightSidebar/index.tsx:104:                        <span>{i18next.t("common.links.new-chat", { defaultValue: "New chat" })}</span>
+components/RightSidebar/index.tsx:108:            <ModalShareChat
+components/RightSidebar/index.tsx:41:                    <Notifications items={notifications} />
+components/RightSidebar/index.tsx:42:                    <Profile />
+components/RightSidebar/index.tsx:47:                        {i18next.t("common.misc.share", { defaultValue: "Share" })}</button>
+components/RightSidebar/index.tsx:50:                    <div className="base2 text-n-4/75">{i18next.t("common.sections.chat-history", { defaultValue: "Chat history" })}</div>
+components/RightSidebar/index.tsx:64:                                            {i18next.t("common.notify.clear-chat-history", { defaultValue: "Clear all chat history?" })}</div>
+components/RightSidebar/index.tsx:6:import ModalShareChat from "@/components/ModalShareChat";
+components/RightSidebar/index.tsx:72:                                                {i18next.t("common.buttons.cancel", { defaultValue: "Cancel" })}</button>
+components/RightSidebar/index.tsx:79:                                                {i18next.t("common.misc.yes", { defaultValue: "Yes" })}</button>
+components/RightSidebar/index.tsx:8:import Notifications from "./Notifications";
+components/RightSidebar/index.tsx:90:                                {i18next.t("common.buttons.clear-chat-history", { defaultValue: "Clear chat history" })}</div>
+components/RightSidebar/index.tsx:9:import Profile from "./Profile";
+components/SchedulePost/index.tsx:24:            <div className="mb-5 font-bold">{i18next.t("common.sections.schedule-with-buffer", { defaultValue: "Schedule your post with Buffer" })}</div>
+components/SchedulePost/index.tsx:29:                            {i18next.t("common.form.choose-date", { defaultValue: "Choose date" })}</div>
+components/SchedulePost/index.tsx:48:                        <div className="mb-2 base2 font-semibold">{i18next.t("common.form.time", { defaultValue: "Time" })}</div>
+components/SchedulePost/index.tsx:71:                    {i18next.t("common.form.timezone-note", { defaultValue: "Scheduled in your current timezone" })}</div>
+components/SchedulePost/index.tsx:73:                    <button className="btn-dark md:w-full">{i18next.t("common.buttons.schedule", { defaultValue: "Schedule" })}</button>
+components/ScheduleResult/index.tsx:16:                {i18next.t("common.misc.buffer", { defaultValue: "Buffer" })}</a>
+components/ScheduleResult/index.tsx:17:            {i18next.t("common.misc.period", { defaultValue: "." })}</div>
+components/ScheduleResult/index.tsx:18:        <button className="btn-dark btn-small">{i18next.t("common.links.view-on-buffer", { defaultValue: "View on Buffer" })}</button>
+components/ScheduleResult/index.tsx:7:        <div className="mb-3 font-bold">{i18next.t("common.misc.done", { defaultValue: "You are done!" })}</div>
+components/ScheduleResult/index.tsx:9:            {i18next.t("common.misc.post-scheduled", { defaultValue: "Your post has been scheduled for February 14th, 2023 at 11:30 and will be shared through" })}{" "}
+components/Search/Item/index.tsx:27:                            alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/Search/Item/index.tsx:45:                        {i18next.t("common.links.jump", { defaultValue: "Jump" })}</div>
+components/Search/Item/index.tsx:47:                        {i18next.t("common.links.last-edited-by", { defaultValue: "Last edited by" })}{" "}
+components/Search/Item/index.tsx:53:                                alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/Search/index.tsx:102:                            placeholder={i18next.t("common.placeholders.search-ellipsis", { defaultValue: "Search ..." })}
+components/Search/index.tsx:10:        title: "Video",
+components/Search/index.tsx:116:                        placeholder={i18next.t("common.placeholders.created-by", { defaultValue: "Created by" })}
+components/Search/index.tsx:128:                        placeholder={i18next.t("common.placeholders.date", { defaultValue: "Date" })}
+components/Search/index.tsx:14:        title: "Audio",
+components/Search/index.tsx:18:        title: "Code",
+components/Search/index.tsx:25:        title: "Today",
+components/Search/index.tsx:29:        title: "Last week",
+components/Search/index.tsx:33:        title: "Last 30 days",
+components/Search/index.tsx:81:                    placeholder={i18next.t("common.placeholders.search", { defaultValue: "Search" })}
+components/Settings/Appearance/index.tsx:11:        title: "English (United States)",
+components/Settings/Appearance/index.tsx:15:        title: "French",
+components/Settings/Appearance/index.tsx:19:        title: "Ukrainian",
+components/Settings/Appearance/index.tsx:29:    const items = [
+components/Settings/Appearance/index.tsx:31:            title: "Light mode",
+components/Settings/Appearance/index.tsx:37:            title: "Dark mode",
+components/Settings/Appearance/index.tsx:46:            <div className="mb-8 h4">{i18next.t("common.fragments.appearance", { defaultValue: "Appearance" })}</div>
+components/Settings/Appearance/index.tsx:47:            <div className="mb-5 base1 font-semibold">{i18next.t("common.fragments.appearance", { defaultValue: "Appearance" })}</div>
+components/Settings/Appearance/index.tsx:75:                    {i18next.t("common.sections.primary-language", { defaultValue: "Primary language" })}</div>
+components/Settings/Applications/Application/index.tsx:24:            {i18next.t("common.sections.deauthorize", { defaultValue: "Deauthorize" })}</button>
+components/Settings/Applications/index.tsx:12:            <div className="mr-auto h4">{i18next.t("common.sections.applications", { defaultValue: "Applications" })}</div>
+components/Settings/Applications/index.tsx:14:                {i18next.t("common.sections.add-apps", { defaultValue: "Add apps" })}</Link>
+components/Settings/Applications/index.tsx:16:        <div className="py-3 base2 text-n-4">{i18next.t("common.fragments.authorized-apps", { defaultValue: "Authorized apps" })}</div>
+components/Settings/ChatExport/index.tsx:10:        title: "PDF",
+components/Settings/ChatExport/index.tsx:114:export default ChatExport;
+components/Settings/ChatExport/index.tsx:14:        title: "DOC",
+components/Settings/ChatExport/index.tsx:18:        title: "JPG",
+components/Settings/ChatExport/index.tsx:22:type ChatExportProps = {};
+components/Settings/ChatExport/index.tsx:24:const ChatExport = ({}: ChatExportProps) => {
+components/Settings/ChatExport/index.tsx:25:    const [exportChat, setExportChat] = useState<boolean>(false);
+components/Settings/ChatExport/index.tsx:29:        { id: "0", title: "UI8 Production", color: "#3E90F0", isChecked: true },
+components/Settings/ChatExport/index.tsx:30:        { id: "1", title: "Favourite", color: "#8E55EA", isChecked: true },
+components/Settings/ChatExport/index.tsx:31:        { id: "2", title: "Archived", color: "#8C6584", isChecked: false },
+components/Settings/ChatExport/index.tsx:32:        { id: "3", title: "Deleted", color: "#D84C10", isChecked: false },
+components/Settings/ChatExport/index.tsx:45:    const handleNotificationsChange = (value: boolean) => {
+components/Settings/ChatExport/index.tsx:46:        setExportChat(value);
+components/Settings/ChatExport/index.tsx:56:            <div className="mb-8 h4">{i18next.t("common.form.chat-export", { defaultValue: "Chat export" })}</div>
+components/Settings/ChatExport/index.tsx:59:                    {i18next.t("common.form.select-chat-list", { defaultValue: "Select chat list to export" })}</div>
+components/Settings/ChatExport/index.tsx:62:                    setValue={handleNotificationsChange}
+components/Settings/ChatExport/index.tsx:98:                    {i18next.t("common.form.download-conversation", { defaultValue: "Download conversation" })}</button>
+components/Settings/DeleteAccount/index.tsx:12:            <div className="mb-8 h4">{i18next.t("common.form.delete-account-title", { defaultValue: "We’re sorry to see you go" })}</div>
+components/Settings/DeleteAccount/index.tsx:14:                {i18next.t("common.form.delete-account-warning", { defaultValue: "Warning: Deleting your account will permanently remove all of your data and cannot be undone. This includes your profile, chats, comments, and any other information associated with your account. Are you sure you want to proceed with deleting your account?" })}</div>
+components/Settings/DeleteAccount/index.tsx:17:                label={i18next.t("common.labels.your-password", { defaultValue: "Your password" })}
+components/Settings/DeleteAccount/index.tsx:18:                placeholder={i18next.t("common.placeholders.password", { defaultValue: "Password" })}
+components/Settings/DeleteAccount/index.tsx:22:                onChange={(e: any) => setPassword(e.target.value)}
+components/Settings/DeleteAccount/index.tsx:26:                {i18next.t("common.form.delete-account", { defaultValue: "Delete account" })}</button>
+components/Settings/DeleteAccount/index.tsx:8:    const [password, setPassword] = useState<string>("");
+components/Settings/EditProfile/index.tsx:26:            <div className="mb-8 h4 md:mb-6">{i18next.t("common.form.edit-profile", { defaultValue: "Edit profile" })}</div>
+components/Settings/EditProfile/index.tsx:28:                {i18next.t("common.form.avatar", { defaultValue: "Avatar" })}</div>
+components/Settings/EditProfile/index.tsx:36:                            alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/Settings/EditProfile/index.tsx:53:                            {i18next.t("common.form.upload-new-image", { defaultValue: "Upload new image" })}</button>
+components/Settings/EditProfile/index.tsx:56:                        <p>{i18next.t("common.form.size-recommendation", { defaultValue: "At least 800x800 px recommended." })}</p>
+components/Settings/EditProfile/index.tsx:57:                        <p>{i18next.t("common.form.allowed-formats", { defaultValue: "JPG or PNG and GIF is allowed" })}</p>
+components/Settings/EditProfile/index.tsx:63:                label={i18next.t("common.labels.name", { defaultValue: "Name" })}
+components/Settings/EditProfile/index.tsx:64:                placeholder={i18next.t("common.placeholders.username", { defaultValue: "Username" })}
+components/Settings/EditProfile/index.tsx:72:                label={i18next.t("common.labels.location", { defaultValue: "Location" })}
+components/Settings/EditProfile/index.tsx:73:                placeholder={i18next.t("common.placeholders.location", { defaultValue: "Location" })}
+components/Settings/EditProfile/index.tsx:7:type EditProfileProps = {};
+components/Settings/EditProfile/index.tsx:81:                label={i18next.t("common.labels.bio", { defaultValue: "Bio" })}
+components/Settings/EditProfile/index.tsx:82:                placeholder={i18next.t("common.placeholders.short-bio", { defaultValue: "Short bio" })}
+components/Settings/EditProfile/index.tsx:89:            <button className="btn-blue w-full">{i18next.t("common.form.save-changes", { defaultValue: "Save changes" })}</button>
+components/Settings/EditProfile/index.tsx:94:export default EditProfile;
+components/Settings/EditProfile/index.tsx:9:const EditProfile = ({}: EditProfileProps) => {
+components/Settings/Notifications/index.tsx:104:export default Notifications;
+components/Settings/Notifications/index.tsx:14:            title: "UI8 Platform",
+components/Settings/Notifications/index.tsx:16:                { id: "0", title: "New notifications", isChecked: true },
+components/Settings/Notifications/index.tsx:19:                    title: "Someone invite you to new chat",
+components/Settings/Notifications/index.tsx:22:                { id: "2", title: "Mentioned", isChecked: true },
+components/Settings/Notifications/index.tsx:27:            title: "From team",
+components/Settings/Notifications/index.tsx:29:                { id: "0", title: "New notifications", isChecked: false },
+components/Settings/Notifications/index.tsx:32:                    title: "Someone invite you to new chat",
+components/Settings/Notifications/index.tsx:35:                { id: "2", title: "Mentioned", isChecked: true },
+components/Settings/Notifications/index.tsx:40:            title: "From Brainwave app",
+components/Settings/Notifications/index.tsx:41:            checkboxs: [{ id: "0", title: "Mentioned", isChecked: true }],
+components/Settings/Notifications/index.tsx:58:    const handleNotificationsChange = (value: boolean) => {
+components/Settings/Notifications/index.tsx:59:        setNotifications(value);
+components/Settings/Notifications/index.tsx:6:type NotificationsProps = {};
+components/Settings/Notifications/index.tsx:72:                <div className="mr-auto h4">{i18next.t("common.sections.notifications", { defaultValue: "Notifications" })}</div>
+components/Settings/Notifications/index.tsx:75:                    setValue={handleNotificationsChange}
+components/Settings/Notifications/index.tsx:8:const Notifications = ({}: NotificationsProps) => {
+components/Settings/Notifications/index.tsx:9:    const [notifications, setNotifications] = useState<boolean>(true);
+components/Settings/Password/index.tsx:10:    const [confirmPassword, setConfirmPassword] = useState<string>("");
+components/Settings/Password/index.tsx:14:            <div className="mb-8 h4 md:mb-6">{i18next.t("common.form.password", { defaultValue: "Password" })}</div>
+components/Settings/Password/index.tsx:17:                label={i18next.t("common.labels.password", { defaultValue: "Password" })}
+components/Settings/Password/index.tsx:18:                placeholder={i18next.t("common.placeholders.password", { defaultValue: "Password" })}
+components/Settings/Password/index.tsx:21:                value={oldPassword}
+components/Settings/Password/index.tsx:22:                onChange={(e: any) => setOldPassword(e.target.value)}
+components/Settings/Password/index.tsx:27:                label={i18next.t("common.labels.new-password", { defaultValue: "New password" })}
+components/Settings/Password/index.tsx:28:                placeholder={i18next.t("common.placeholders.new-password", { defaultValue: "New password" })}
+components/Settings/Password/index.tsx:32:                value={newPassword}
+components/Settings/Password/index.tsx:33:                onChange={(e: any) => setNewPassword(e.target.value)}
+components/Settings/Password/index.tsx:38:                label={i18next.t("common.labels.confirm-new-password", { defaultValue: "Confirm new password" })}
+components/Settings/Password/index.tsx:39:                placeholder={i18next.t("common.placeholders.confirm-new-password", { defaultValue: "Confirm new password" })}
+components/Settings/Password/index.tsx:43:                value={confirmPassword}
+components/Settings/Password/index.tsx:44:                onChange={(e: any) => setConfirmPassword(e.target.value)}
+components/Settings/Password/index.tsx:47:            <button className="btn-blue w-full">{i18next.t("common.form.change-password", { defaultValue: "Change password" })}</button>
+components/Settings/Password/index.tsx:52:export default Password;
+components/Settings/Password/index.tsx:5:type PasswordProps = {};
+components/Settings/Password/index.tsx:7:const Password = ({}: PasswordProps) => {
+components/Settings/Password/index.tsx:8:    const [oldPassword, setOldPassword] = useState<string>("");
+components/Settings/Password/index.tsx:9:    const [newPassword, setNewPassword] = useState<string>("");
+components/Settings/Sessions/Device/index.tsx:28:        <button className="btn-stroke-light shrink-0 ml-4">{i18next.t("common.sections.revoke", { defaultValue: "Revoke" })}</button>
+components/Settings/Sessions/Device/index.tsx:32:export default Device;
+components/Settings/Sessions/Device/index.tsx:4:type DeviceProps = {
+components/Settings/Sessions/Device/index.tsx:8:const Device = ({ item }: DeviceProps) => (
+components/Settings/Sessions/index.tsx:14:        title: "Chrome on Macbook Pro",
+components/Settings/Sessions/index.tsx:1:import Device from "./Device";
+components/Settings/Sessions/index.tsx:21:        title: "Safari on Macbook Pro",
+components/Settings/Sessions/index.tsx:32:        <div className="mb-8 h4 md:mb-6">{i18next.t("common.fragments.your-sessions", { defaultValue: "Your sessions" })}</div>
+components/Settings/Sessions/index.tsx:34:            {i18next.t("common.fragments.device-list-note", { defaultValue: "This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize." })}</div>
+components/Settings/Sessions/index.tsx:35:        <div className="py-3 base2 text-n-4">{i18next.t("common.fragments.devices", { defaultValue: "Devices" })}</div>
+components/Settings/Sessions/index.tsx:38:                <Device item={device} key={device.id} />
+components/Settings/Sessions/index.tsx:41:        <button className="btn-blue w-full">{i18next.t("common.fragments.sign-out-all", { defaultValue: "Sign out all devices" })}</button>
+components/Settings/Sessions/index.tsx:7:        title: "Chrome on iPhone",
+components/Settings/Team/Actions/index.tsx:15:            title: "Make admin",
+components/Settings/Team/Actions/index.tsx:21:            title: "Delete member",
+components/Settings/Team/Member/index.tsx:30:                            {i18next.t("common.badges.admin", { defaultValue: "Admin" })}</div>
+components/Settings/Team/Member/index.tsx:33:                <div className="caption1 text-n-4/50">{i18next.t("common.misc.at", { defaultValue: "@" })}{item.login}</div>
+components/Settings/Team/index.tsx:11:            <div className="mr-auto h4">{i18next.t("common.sections.members", { defaultValue: "Members" })}</div>
+components/Settings/Team/index.tsx:12:            <button className="btn-blue">{i18next.t("common.sections.invite", { defaultValue: "Invite" })}</button>
+components/Settings/Team/index.tsx:14:        <div className="py-3 base2 text-n-4">{i18next.t("common.fragments.members-count", { defaultValue: "42 members" })}</div>
+components/Settings/index.tsx:15:type SettingsType = {
+components/Settings/index.tsx:21:type SettingsProps = {
+components/Settings/index.tsx:22:    items: SettingsType[];
+components/Settings/index.tsx:26:const Settings = ({ items, activeItem }: SettingsProps) => {
+components/Settings/index.tsx:55:                    {active.id === "edit-profile" && <EditProfile />}
+components/Settings/index.tsx:56:                    {active.id === "password" && <Password />}
+components/Settings/index.tsx:57:                    {active.id === "notifications" && <Notifications />}
+components/Settings/index.tsx:58:                    {active.id === "chat-export" && <ChatExport />}
+components/Settings/index.tsx:5:import EditProfile from "./EditProfile";
+components/Settings/index.tsx:6:import Password from "./Password";
+components/Settings/index.tsx:70:export default Settings;
+components/Settings/index.tsx:7:import Notifications from "./Notifications";
+components/Settings/index.tsx:8:import ChatExport from "./ChatExport";
+components/SocialsPost/Details/index.tsx:14:                    {i18next.t("common.sections.suggested-media", { defaultValue: "Suggested media" })}</div>
+components/SocialsPost/Details/index.tsx:16:                    {i18next.t("common.sections.media-rights-note", { defaultValue: "Make sure you have the rights to use the suggested media." })}</div>
+components/SocialsPost/Details/index.tsx:36:                    {i18next.t("common.sections.upload-media", { defaultValue: "Upload media" })}</div>
+components/SocialsPost/Post/index.tsx:35:                        {i18next.t("common.badges.at", { defaultValue: "#" })}{tag}
+components/SocialsPost/Post/index.tsx:42:                    <span>{i18next.t("common.buttons.share-now", { defaultValue: "Share now" })}</span>
+components/SocialsPost/Post/index.tsx:46:                    <span>{i18next.t("common.buttons.edit", { defaultValue: "Edit" })}</span>
+components/SocialsPost/Post/index.tsx:50:                    <span>{i18next.t("common.buttons.new-variation", { defaultValue: "New variation" })}</span>
+components/SocialsPost/Post/index.tsx:54:                    <span>{i18next.t("common.buttons.copy", { defaultValue: "Copy" })}</span>
+components/SocialsPost/index.tsx:27:            {i18next.t("common.sections.promo-example", { defaultValue: "Here&apos;s an example of promotional content optimized for Twitter and Facebook:" })}</div>
+components/SocialsPost/index.tsx:35:                <div>{i18next.t("common.sections.share-with", { defaultValue: "Share with" })}</div>
+components/SocialsPost/index.tsx:61:                    <span>{i18next.t("common.buttons.add-to-queue", { defaultValue: "Add to Queue" })}</span>
+components/SocialsPost/index.tsx:65:                    <span>{i18next.t("common.buttons.share-now", { defaultValue: "Share now" })}</span>
+components/SocialsPost/index.tsx:69:                    <span>{i18next.t("common.buttons.schedule-post", { defaultValue: "Schedule post" })}</span>
+components/Users/index.tsx:22:                    alt={i18next.t("common.alt.avatar", { defaultValue: "Avatar" })}
+components/Video/index.tsx:10:        title: "English (United States)",
+components/Video/index.tsx:14:        title: "French",
+components/Video/index.tsx:18:        title: "Ukrainian",
+components/Video/index.tsx:25:        title: "Jenny",
+components/Video/index.tsx:29:        title: "Mark",
+components/Video/index.tsx:33:        title: "Jack",
+components/Video/index.tsx:41:    const [voice, setVoice] = useState<any>(voices[0]);
+components/Video/index.tsx:47:                {i18next.t("common.body.gender-note", { defaultValue: "Based on the gender identified in the uploaded image, the video has been automatically generated with a male voice. However, you have the option to customize your video by selecting from the available options below." })}</div>
+components/Video/index.tsx:50:                    <span>{i18next.t("common.buttons.download", { defaultValue: "Download" })}</span>
+components/Video/index.tsx:63:                    title={i18next.t("common.labels.voice", { defaultValue: "Voice" })}
+components/Video/index.tsx:68:                    onChange={setVoice}
+constants/export.tsx:11:                title: "JPG Large",
+constants/export.tsx:12:                details: "Original + Settings",
+constants/export.tsx:18:        title: "Share",
+constants/export.tsx:21:                title: "Get a link",
+constants/export.tsx:25:                title: "Invite teammates",
+constants/export.tsx:31:        title: "Upload",
+constants/export.tsx:34:                title: "Facebook",
+constants/export.tsx:38:                title: "Twitter",
+constants/export.tsx:3:        title: "Export",
+constants/export.tsx:47:        title: "Export",
+constants/export.tsx:50:                title: ".MP3",
+constants/export.tsx:55:                title: ".WAV",
+constants/export.tsx:62:        title: "Share",
+constants/export.tsx:65:                title: "Get a link",
+constants/export.tsx:69:                title: "Invite teammates",
+constants/export.tsx:6:                title: "JPG Small",
+constants/export.tsx:75:        title: "Upload",
+constants/export.tsx:78:                title: "Spotify",
+constants/navigation.tsx:15:        title: "Diagnosis Support",
+constants/navigation.tsx:21:        title: "Audio Transcription & Notes",
+constants/navigation.tsx:27:        title: "Video Analysis",
+constants/navigation.tsx:33:        title: "Documentation & Reporting",
+constants/navigation.tsx:3:        title: "Therapy Support AI",
+constants/navigation.tsx:9:        title: "Supervision & Training",
+constants/settings.tsx:14:        title: "Notifications",
+constants/settings.tsx:19:        title: "Chat export",
+constants/settings.tsx:24:        title: "Sessions",
+constants/settings.tsx:29:        title: "Applications",
+constants/settings.tsx:34:        title: "Team",
+constants/settings.tsx:39:        title: "Appearance",
+constants/settings.tsx:44:        title: "Delete account",
+constants/settings.tsx:4:        title: "Edit profile",
+constants/settings.tsx:9:        title: "Password",
+mocks/applications.tsx:12:        title: "Midjourney",
+mocks/applications.tsx:13:        description: "Photo generation by AI",
+mocks/applications.tsx:20:        title: "Open AI",
+mocks/applications.tsx:21:        description: "AI development organization",
+mocks/applications.tsx:28:        title: "Peeps",
+mocks/applications.tsx:29:        description: "App description here",
+mocks/applications.tsx:36:        title: "Discord",
+mocks/applications.tsx:37:        description: "Chat and community platform",
+mocks/applications.tsx:44:        title: "Slack",
+mocks/applications.tsx:45:        description: "Team communication platform",
+mocks/applications.tsx:4:        title: "UI8",
+mocks/applications.tsx:52:        title: "Duolingo",
+mocks/applications.tsx:53:        description: "Language learning app",
+mocks/applications.tsx:5:        description: "Design resources marketplace",
+mocks/applications.tsx:60:        title: "Sapiens",
+mocks/applications.tsx:61:        description: "App description here",
+mocks/applications.tsx:68:        title: "App name",
+mocks/applications.tsx:69:        description: "App description here",
+mocks/chatHistory.tsx:13:        title: "Welcome page with input",
+mocks/chatHistory.tsx:23:        title: "Photo retouch",
+mocks/chatHistory.tsx:36:        title: "Auto generate title",
+mocks/chatHistory.tsx:4:        title: "aidX AI UI",
+mocks/chatList.tsx:11:        title: "Therapies",
+mocks/chatList.tsx:18:        title: "Favorites",
+mocks/chatList.tsx:25:        title: "Archived",
+mocks/chatList.tsx:4:        title: "Transcripts",
+mocks/faq.tsx:13:        title: "Is mentalhealthGPT compliant with medical privacy laws?",
+mocks/faq.tsx:20:        title: "What makes mentalhealthGPT different from other chatbots like ChatGPT or DeepSeek?",
+mocks/faq.tsx:27:        title: "What do the different AI chat areas mean (therapy, supervision, documentation etc.)?",
+mocks/faq.tsx:34:        title: "How do I know the responses are safe and clinically appropriate?",
+mocks/faq.tsx:41:        title: "Is mentalhealthGPT available in multiple languages?",
+mocks/faq.tsx:48:        title: "Can I use mentalhealthGPT as an individual professional and as part of an institution?",
+mocks/faq.tsx:55:        title: "Can we have our own dedicated mental health AI specialist?",
+mocks/faq.tsx:6:        title: "How is patient data protected when using mentalhealthGPT?",
+mocks/members.tsx:11:        name: "Josianne",
+mocks/members.tsx:18:        name: "Ellis",
+mocks/members.tsx:25:        name: "Alvah",
+mocks/members.tsx:32:        name: "Chaim",
+mocks/members.tsx:39:        name: "Kellen",
+mocks/members.tsx:4:        name: "Tyrique",
+mocks/notifications.tsx:22:                <strong>Pinkie</strong> invited you to&nbsp;
+mocks/notifications.tsx:23:                <strong>Welcome form</strong>
+mocks/notifications.tsx:37:                <strong>Clementina</strong> invited you to&nbsp;
+mocks/notifications.tsx:38:                <strong>Photo retouch</strong>
+mocks/notifications.tsx:52:                <strong>Elmira</strong> mention you in&nbsp;
+mocks/notifications.tsx:53:                <strong>Welcome page</strong>
+mocks/notifications.tsx:67:                <strong>Dexter</strong> invited you to&nbsp;
+mocks/notifications.tsx:68:                <strong>Photo retouch</strong>
+mocks/notifications.tsx:7:                <strong>Wilfred</strong> invited you to&nbsp;
+mocks/notifications.tsx:82:                <strong>Wilfred</strong> invited you to&nbsp;
+mocks/notifications.tsx:83:                <strong>Photo retouch</strong>
+mocks/notifications.tsx:8:                <strong>Photo retouch</strong>
+mocks/notifications.tsx:97:                <strong>Pinkie</strong> invited you to&nbsp;
+mocks/notifications.tsx:98:                <strong>Welcome form</strong>
+mocks/people.tsx:10:        name: "Wowa",
+mocks/people.tsx:16:        name: "Tom",
+mocks/people.tsx:22:        name: "Jack",
+mocks/people.tsx:28:        name: "Antonio",
+mocks/people.tsx:34:        name: "Enthony",
+mocks/people.tsx:40:        name: "Jony",
+mocks/people.tsx:46:        name: "Tomy",
+mocks/people.tsx:4:        name: "Anthony",
+mocks/people.tsx:52:        name: "Vlad",
+mocks/people.tsx:58:        name: "Kent",
+mocks/price.tsx:103:        title: "Dedicated account manager",
+mocks/price.tsx:19:        title: "Pro",
+mocks/price.tsx:23:        description: "More advanced AI capabilities",
+mocks/price.tsx:35:        title: "Enterprise",
+mocks/price.tsx:39:        description: "For large team and business",
+mocks/price.tsx:4:        title: "Free",
+mocks/price.tsx:54:        title: "Access full to AI capabilities",
+mocks/price.tsx:61:        title: "Access to documentation",
+mocks/price.tsx:68:        title: "Enterprise-level support",
+mocks/price.tsx:75:        title: "Enterprise-level support",
+mocks/price.tsx:7:        description: "Basic chat functionality",
+mocks/price.tsx:82:        title: "Support",
+mocks/price.tsx:89:        title: "Integration with CRMs",
+mocks/price.tsx:96:        title: "Customizable AI models",
+mocks/resultSearch.tsx:10:                title: "How can I be more productive?",
+mocks/resultSearch.tsx:21:                title: "How can I learn a new language quickly?",
+mocks/resultSearch.tsx:32:                title: "Write a Welcome Page in HTML and CSS",
+mocks/resultSearch.tsx:43:                title: "How can I optimize my code for search engine optimization (SEO)",
+mocks/resultSearch.tsx:4:        title: "Today",
+mocks/resultSearch.tsx:54:                title: "How can I make my website more secure against cyber attacks?",
+mocks/resultSearch.tsx:66:        title: "Last 30 days",
+mocks/resultSearch.tsx:71:                title: "What's the best way to implement a database in my web application?",
+mocks/resultSearch.tsx:82:                title: "What is the best way to prepare for a job interview?",
+mocks/updates.tsx:11:        content: `
+mocks/updates.tsx:16:        title: "Secure Frontend Interface Launched",
+mocks/updates.tsx:26:        title: "AI Systems Ready in European Data Center",
+mocks/updates.tsx:36:        title: "Data Privacy Infrastructure Live in Switzerland",
+mocks/updates.tsx:6:        title: "Bringing It All Together: mentalhealthGPT Enters Integration Phase",
+mocks/writeCodeChat.tsx:10:            <p>Please fill out the form below:</p>
+mocks/writeCodeChat.tsx:14:                <button type="button" class="cancel-button">Cancel</button>
+mocks/writeCodeChat.tsx:15:                <button type="submit" class="send-button">Send</button>
+mocks/writeCodeChat.tsx:4:        <title>Welcome Page</title>
+mocks/writeCodeChat.tsx:82:        title: "HTML",
+mocks/writeCodeChat.tsx:88:        title: "CSS",
+mocks/writeCodeChat.tsx:94:        title: "JS",
+mocks/writeCodeChat.tsx:9:            <h1>Welcome!</h1>

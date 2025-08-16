@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import { Disclosure, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -22,6 +23,8 @@ type ChatListProps = {
 };
 
 const ChatList = ({ visible, items }: ChatListProps) => {
+  const { t: tCommon } = useTranslation("common");
+
     const [visibleModal, setVisibleModal] = useState<boolean>(false);
 
     const pathname = usePathname();
@@ -39,7 +42,7 @@ const ChatList = ({ visible, items }: ChatListProps) => {
                             className="fill-n-4 transition-transform ui-open:rotate-180"
                             name="arrow-down"
                         />
-                        {!visible && <div className="ml-5">{i18next.t("common.badges.chat-list", { defaultValue: "Chat list" })}</div>}
+                        {!visible && <div className="ml-5">{tCommon("badges.chat-list", { defaultValue: "Chat list" })}</div>}
                     </Disclosure.Button>
                     <Transition
                         enter="transition duration-100 ease-out"
@@ -96,7 +99,7 @@ const ChatList = ({ visible, items }: ChatListProps) => {
                         className="fill-n-4 transition-colors group-hover:fill-n-3"
                         name="plus-circle"
                     />
-                    {!visible && <div className="ml-5">{i18next.t("common.badges.new-list", { defaultValue: "New list" })}</div>}
+                    {!visible && <div className="ml-5">{tCommon("badges.new-list", { defaultValue: "New list" })}</div>}
                 </button>
             </div>
             <Modal

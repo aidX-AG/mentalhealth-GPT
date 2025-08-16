@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import AudioPlayer from "@/components/AudioPlayer";
 import Actions from "@/components/Actions";
 import Export from "@/components/Export";
@@ -80,6 +81,8 @@ const smiles = [
 type AudioProps = {};
 
 const Audio = ({}: AudioProps) => {
+  const { t: tCommon } = useTranslation("common");
+
     const [edit, setEdit] = useState<boolean>(false);
     const [language, setLanguage] = useState<any>(languages[0]);
     const [speed, setSpeed] = useState<any>(speeds[0]);
@@ -90,17 +93,17 @@ const Audio = ({}: AudioProps) => {
     return (
         <div className="">
             <div className="mb-4">
-                {i18next.t("common.body.audio-success", { defaultValue: "Your audio has been successfully generated. You may further customize it or simply download it for use." })}</div>
+                {tCommon("body.audio-success", { defaultValue: "Your audio has been successfully generated. You may further customize it or simply download it for use." })}</div>
             <AudioPlayer edit={edit} onSave={() => setEdit(false)} />
             <div className="flex flex-wrap">
                 <Actions
                     className="mr-4 mt-4 md:w-[calc(50%-0.5rem)] md:mr-2"
-                    title={i18next.t("common.actions.exporting-audio", { defaultValue: "Exporting 1 audio" })}
+                    title={tCommon("actions.exporting-audio", { defaultValue: "Exporting 1 audio" })}
                     classButton="btn-dark md:w-full"
                     classTitle="pl-3"
                     buttonInner={
                         <>
-                            <span>{i18next.t("common.fragments.export", { defaultValue: "Export" })}</span>
+                            <span>{tCommon("fragments.export", { defaultValue: "Export" })}</span>
                             <Icon name="share" />
                         </>
                     }
@@ -111,7 +114,7 @@ const Audio = ({}: AudioProps) => {
                     className="btn-white btn-small mr-4 mt-4 md:w-[calc(50%-0.5rem)] md:mr-0 md:ml-2"
                     onClick={() => setEdit(true)}
                 >
-                    <span>{i18next.t("common.buttons.edit", { defaultValue: "Edit" })}</span>
+                    <span>{tCommon("buttons.edit", { defaultValue: "Edit" })}</span>
                     <Icon name="edit" />
                 </button>
                 <Select
@@ -124,7 +127,7 @@ const Audio = ({}: AudioProps) => {
                 />
                 <Select
                     className="mr-4 mt-4 md:w-full md:mr-0"
-                    title={i18next.t("common.labels.speed", { defaultValue: "Speed" })}
+                    title={tCommon("labels.speed", { defaultValue: "Speed" })}
                     items={speeds}
                     value={speed}
                     onChange={setSpeed}
@@ -134,7 +137,7 @@ const Audio = ({}: AudioProps) => {
                 <div className="flex mr-4 mt-4 rounded-md shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.15)] bg-n-1 md:w-full md:mr-0 dark:bg-n-6 dark:shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.15),inset_0_0_0_0.0625rem_rgba(254,254,254,.1)]">
                     <Select
                         classButton="shadow-none bg-transparent ui-open:shadow-none dark:bg-transparent dark:shadow-none"
-                        title={i18next.t("common.labels.voice", { defaultValue: "Voice" })}
+                        title={tCommon("labels.voice", { defaultValue: "Voice" })}
                         items={genders}
                         value={gender}
                         onChange={setGender}

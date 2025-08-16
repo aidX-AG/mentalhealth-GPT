@@ -1,27 +1,7 @@
 {
-    "checkout.sections.hero-title": "KI-Chat erschwinglich gemacht",
-    "checkout.body.hero-subtitle": "Preispläne für jedes Budget - Erschließen Sie die Leistung von KI",
-    "checkout.sections.enterprise": "Unternehmen",
-    "checkout.sections.popular": "Beliebt",
-    "checkout.fragments.price-399": "CHF399",
-    "checkout.sections.monthly-plan": "Monatlicher Plan",
-    "checkout.sections.plan": "Plan",
-    "checkout.sections.change-currency": "Währung ändern",
-    "checkout.sections.usd": "CHF",
-    "checkout.sections.billing-email": "E-Mail für die Rechnungsstellung",
-    "checkout.sections.card-details": "Details zur Karte",
-    "checkout.form.email": "E-Mail Adresse",
-    "checkout.form.card-number": "Kartennummer",
-    "checkout.form.mm-yy": "MM \/ JJ",
-    "checkout.form.cvc": "CVC",
-    "checkout.body.security-note": "Gesichertes Formular mit CH Banking",
-    "checkout.sections.billed-now": "Jetzt in Rechnung gestellt: CHF 399",
-    "checkout.sections.apply-promo-code": "Promo-Code anwenden",
-    "checkout.body.billing-consent": "Wenn Sie auf &quot;Enterprise Plan starten&quot; klicken, erklären Sie sich damit einverstanden, dass Ihnen jeden Monat CHF 399 in Rechnung gestellt werden, sofern Sie nicht kündigen.",
-    "checkout.sections.cta-start-plan": "Enterprise Plan starten",
-    "checkout.sections.pay": "Bezahlen",
-    "checkout.sections.currency-symbol": "CHF",
-    "checkout.sections.per-month": "\/Monat",
-    "checkout.badges.save": "Speichern",
-    "checkout.badges.percent": "%"
+  "checkout": {
+    "badges": {
+      "percent": "%"
+    }
+  }
 }

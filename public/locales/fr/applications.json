@@ -1,6 +1,7 @@
 {
-    "applications.sections.title": "Applications",
-    "applications.body.browse-install-apps": "Parcourez et installez des applications pour vous simplifier la vie avec mentalhealthGPT",
-    "applications.sections.suggested-apps": "Applications suggérées",
-    "applications.form.search-placeholder": "Recherche par nom d'application ou par catégorie"
+  "applications": {
+    "form": {
+      "search-placeholder": "Recherche par nom d'application ou par catégorie"
+    }
+  }
 }

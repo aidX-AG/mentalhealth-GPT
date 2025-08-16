@@ -1,18 +1,7 @@
 {
-    "documentation-reports.chat.greeting": "Hello! How can I assist you with documentation and reporting today?",
-    "documentation-reports.text.coming-capability": "Soon you’ll be able to generate",
-    "documentation-reports.text.professional-docs": "professional documentation and reports",
-    "documentation-reports.text.use-cases": "— whether for clinical use, insurance submissions, or personal records of therapy and supervision sessions.",
-    "documentation-reports.text.ai-helps-transform": "Our AI will help you transform transcripts into",
-    "documentation-reports.text.clear-structured-confidential": "clear, structured, and confidential",
-    "documentation-reports.text.reports-automatically": "reports — automatically.",
-    "documentation-reports.text.data-processed-with": "All data is processed with",
-    "documentation-reports.text.end-to-end-encryption": "end-to-end encryption",
-    "documentation-reports.text.privacy-protection": "to protect patient confidentiality and ensure secure handling at every stage.",
-    "documentation-reports.sections.icon": "🚧",
-    "documentation-reports.sections.title": "Documentation & Reporting",
-    "documentation-reports.sections.in-development": "is an exciting new feature that’s currently in development.",
-    "documentation-reports.text.value-prop": "We’re building it to save you time, reduce admin load, and enhance the quality of your documentation —",
-    "documentation-reports.text.stay-tuned": "stay tuned!",
-    "documentation-reports.chat.title": "Documentation & Reporting"
+  "documentation-reports": {
+    "chat": {
+      "title": "Documentation & Reporting"
+    }
+  }
 }

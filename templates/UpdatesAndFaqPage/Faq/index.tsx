@@ -1,4 +1,5 @@
 import FaqItem from "@/components/FaqItem";
+import { useTranslation } from 'react-i18next';
 import Image from "@/components/Image";
 import i18next from "i18next";
 
@@ -29,10 +30,10 @@ const Faq = ({ items }: FaqProps) => (
                     alt=""
                 />
             </div>
-            <div className="mb-1 h5">{i18next.t("updates-and-faq.sections.question", { defaultValue: "Can’t find any answer?" })}</div>
+            <div className="mb-1 h5">{tUpdates-and-faq("sections.question", { defaultValue: "Can’t find any answer?" })}</div>
             <div className="mb-8 base1 text-n-4">
-                {i18next.t("updates-and-faq.sections.lets-ask-ai", { defaultValue: "Let’s ask the smartest AI Chat" })}</div>
-            <button className="btn-blue">{i18next.t("updates-and-faq.buttons.ask-mh-gpt", { defaultValue: "Ask mentalhealthGPT" })}</button>
+                {tUpdates-and-faq("sections.lets-ask-ai", { defaultValue: "Let’s ask the smartest AI Chat" })}</div>
+            <button className="btn-blue">{tUpdates-and-faq("buttons.ask-mh-gpt", { defaultValue: "Ask mentalhealthGPT" })}</button>
         </div>
     </>
 );

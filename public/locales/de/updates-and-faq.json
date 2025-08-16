@@ -1,8 +1,7 @@
 {
-    "updates-and-faq.sections.title": "Aktualisierungen und FAQ",
-    "updates-and-faq.sections.subtitle": "Funktionen, Korrekturen und Verbesserungen.",
-    "updates-and-faq.sections.question": "Sie können keine Antwort finden?",
-    "updates-and-faq.sections.lets-ask-ai": "Fragen wir den intelligentesten KI-Chat",
-    "updates-and-faq.buttons.ask-mh-gpt": "Fragen Sie mentalhealthGPT",
-    "updates-and-faq.buttons.load-more": "Mehr laden"
+  "updates-and-faq": {
+    "buttons": {
+      "load-more": "Mehr laden"
+    }
+  }
 }

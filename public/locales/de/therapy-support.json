@@ -1,5 +1,7 @@
 {
-    "therapy-support.sections.greeting": "🧠 Hallo! Ich bin Ihr KI Therapie-Support.",
-    "therapy-support.sections.instructions": "Schildern Sie uns Ihren Fall, die spezifischen Symptome oder fragen Sie nach therapeutischen Strategien.",
-    "therapy-support.chat.title": "KI Therapieunterstützung"
+  "therapy-support": {
+    "chat": {
+      "title": "KI Therapieunterstützung"
+    }
+  }
 }

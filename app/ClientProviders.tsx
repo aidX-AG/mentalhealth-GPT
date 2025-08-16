@@ -2,6 +2,7 @@
 
 import i18n from "./i18n.client";               // init + Events
 import { Suspense, useEffect, useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 export default function ClientProviders({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);

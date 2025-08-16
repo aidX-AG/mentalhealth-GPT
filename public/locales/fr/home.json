@@ -1,4 +1,7 @@
 {
-    "home.sections.brand": "santé mentaleGPT",
-    "home.sections.tagline": "Une expertise en laquelle vous avez confiance. La protection de la vie privée que vous contrôlez. Une science qui donne des moyens d'action."
+  "home": {
+    "sections": {
+      "tagline": "Une expertise en laquelle vous avez confiance. La protection de la vie privée que vous contrôlez. Une science qui donne des moyens d'action."
+    }
+  }
 }

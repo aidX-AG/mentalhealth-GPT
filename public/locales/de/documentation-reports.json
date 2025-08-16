@@ -1,18 +1,7 @@
 {
-    "documentation-reports.chat.greeting": "Hallo! Wie kann ich Sie heute bei der Dokumentation und Berichterstattung unterstützen?",
-    "documentation-reports.text.coming-capability": "Bald werden Sie in der Lage sein",
-    "documentation-reports.text.professional-docs": "professionelle Dokumentation und Berichte",
-    "documentation-reports.text.use-cases": "- ob für klinische Zwecke, für Versicherungsanträge oder für persönliche Aufzeichnungen von Therapie- und Supervisions-Sitzungen.",
-    "documentation-reports.text.ai-helps-transform": "Unsere KI hilft Ihnen bei der Umwandlung von Transkripten in",
-    "documentation-reports.text.clear-structured-confidential": "klar, strukturiert und vertraulich",
-    "documentation-reports.text.reports-automatically": "berichte - automatisch.",
-    "documentation-reports.text.data-processed-with": "Alle Daten werden verarbeitet mit",
-    "documentation-reports.text.end-to-end-encryption": "end-to-End-Verschlüsselung",
-    "documentation-reports.text.privacy-protection": "um die Vertraulichkeit der Patienten zu schützen und eine sichere Handhabung in jeder Phase zu gewährleisten.",
-    "documentation-reports.sections.icon": "🚧",
-    "documentation-reports.sections.title": "Dokumentation und Reporting",
-    "documentation-reports.sections.in-development": "ist eine aufregende neue Funktion, die sich derzeit in der Entwicklung befindet.",
-    "documentation-reports.text.value-prop": "Wir entwickeln es, um Ihnen Zeit zu sparen, den Verwaltungsaufwand zu verringern und die Qualität Ihrer Dokumentation zu verbessern",
-    "documentation-reports.text.stay-tuned": "bleiben Sie dran!",
-    "documentation-reports.chat.title": "Dokumentation & Reporting"
+  "documentation-reports": {
+    "chat": {
+      "title": "Dokumentation & Reporting"
+    }
+  }
 }

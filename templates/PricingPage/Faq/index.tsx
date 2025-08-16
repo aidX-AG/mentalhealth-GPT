@@ -1,4 +1,5 @@
 import FaqItem from "@/components/FaqItem";
+import { useTranslation } from 'react-i18next';
 import i18next from "i18next";
 
 type FaqItemType = {
@@ -34,7 +35,7 @@ const Faq = () => (
     <div className="py-32 px-15 2xl:py-20 2xl:px-10 xl:px-8 dark:bg-n-7/25">
         <div className="max-w-[47.75rem] mx-auto">
             <div className="mb-12 text-center h3 lg:h4">
-                {i18next.t("pricing.sections.faq", { defaultValue: "Frequently asked questions" })}</div>
+                {tPricing("sections.faq", { defaultValue: "Frequently asked questions" })}</div>
             <div>
                 {faqPricing.map((x) => (
                     <FaqItem item={x} key={x.id} />

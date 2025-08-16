@@ -1,6 +1,7 @@
 {
-    "thanks.sections.title": "Vielen Dank für Ihren Kauf!",
-    "thanks.sections.order-received": "Ihre Bestellung ist eingegangen und wird derzeit bearbeitet. Sie erhalten in Kürze eine E-Mail-Bestätigung mit Ihren Bestelldaten.",
-    "thanks.buttons.manage-subscription": "Abonnement verwalten",
-    "thanks.buttons.start-new-chat": "Neuen Chat beginnen"
+  "thanks": {
+    "buttons": {
+      "start-new-chat": "Neuen Chat beginnen"
+    }
+  }
 }

@@ -1,4 +1,7 @@
 {
-    "home.sections.brand": "mentalhealthGPT",
-    "home.sections.tagline": "Fachwissen, dem Sie vertrauen. Datenschutz, den Sie kontrollieren. Wissenschaft, die Sie befähigt."
+  "home": {
+    "sections": {
+      "tagline": "Fachwissen, dem Sie vertrauen. Datenschutz, den Sie kontrollieren. Wissenschaft, die Sie befähigt."
+    }
+  }
 }

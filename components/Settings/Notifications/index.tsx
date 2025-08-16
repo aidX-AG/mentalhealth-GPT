@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import Switch from "@/components/Switch";
 import Checkbox from "@/components/Checkbox";
 import i18next from "i18next";
@@ -6,6 +7,8 @@ import i18next from "i18next";
 type NotificationsProps = {};
 
 const Notifications = ({}: NotificationsProps) => {
+  const { t: tCommon } = useTranslation("common");
+
     const [notifications, setNotifications] = useState<boolean>(true);
 
     const [checkboxes, setCheckboxes] = useState([
@@ -69,7 +72,7 @@ const Notifications = ({}: NotificationsProps) => {
     return (
         <form className="" action="" onSubmit={() => console.log("Submit")}>
             <div className="flex items-center mb-8">
-                <div className="mr-auto h4">{i18next.t("common.sections.notifications", { defaultValue: "Notifications" })}</div>
+                <div className="mr-auto h4">{tCommon("sections.notifications", { defaultValue: "Notifications" })}</div>
                 <Switch
                     value={notifications}
                     setValue={handleNotificationsChange}

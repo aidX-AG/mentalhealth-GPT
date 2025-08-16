@@ -1,4 +1,5 @@
 import Image from "@/components/Image";
+import { useTranslation } from 'react-i18next';
 import Icon from "@/components/Icon";
 import Details from "../Details";
 import i18next from "i18next";
@@ -32,26 +33,26 @@ const Post = ({ item }: PostProps) => (
                 {item.tags.map((tag: any, index: number) => (
                     <span className="text-primary-1" key={index}>
                         {" "}
-                        {i18next.t("common.badges.at", { defaultValue: "#" })}{tag}
+                        {tCommon("badges.at", { defaultValue: "#" })}{tag}
                     </span>
                 ))}
             </div>
             <Details images={item.images} />
             <div className="flex flex-wrap mt-1 -ml-3 md:-mr-2">
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>{i18next.t("common.buttons.share-now", { defaultValue: "Share now" })}</span>
+                    <span>{tCommon("buttons.share-now", { defaultValue: "Share now" })}</span>
                     <Icon name="external-link" />
                 </button>
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>{i18next.t("common.buttons.edit", { defaultValue: "Edit" })}</span>
+                    <span>{tCommon("buttons.edit", { defaultValue: "Edit" })}</span>
                     <Icon name="edit" />
                 </button>
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>{i18next.t("common.buttons.new-variation", { defaultValue: "New variation" })}</span>
+                    <span>{tCommon("buttons.new-variation", { defaultValue: "New variation" })}</span>
                     <Icon name="plus" />
                 </button>
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>{i18next.t("common.buttons.copy", { defaultValue: "Copy" })}</span>
+                    <span>{tCommon("buttons.copy", { defaultValue: "Copy" })}</span>
                     <Icon name="copy" />
                 </button>
             </div>

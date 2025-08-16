@@ -1,4 +1,5 @@
 import { usePathname } from "next/navigation";
+import { useTranslation } from 'react-i18next';
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
@@ -18,6 +19,8 @@ type NavigationProps = {
 };
 
 const Navigation = ({ visible, items }: NavigationProps) => {
+  const { t: tCommon } = useTranslation("common");
+
     const pathname = usePathname();
 
     return (
@@ -49,7 +52,7 @@ const Navigation = ({ visible, items }: NavigationProps) => {
                         {!visible && <div className="ml-5">{item.title}</div>}
                         {item.title === "Search" && !visible && (
                             <div className="ml-auto px-2 rounded-md bg-n-4/50 caption1 font-semibold text-n-3">
-                                {i18next.t("common.badges.cmd-f", { defaultValue: "⌘ F" })}</div>
+                                {tCommon("badges.cmd-f", { defaultValue: "⌘ F" })}</div>
                         )}
                     </button>
                 )
