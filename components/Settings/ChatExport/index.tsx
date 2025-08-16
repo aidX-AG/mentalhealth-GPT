@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import Switch from "@/components/Switch";
 import Icon from "@/components/Icon";
 import Select from "@/components/Select";
-import i18next from "i18next";
 
 const typesFile = [
     {
@@ -23,8 +21,6 @@ const typesFile = [
 type ChatExportProps = {};
 
 const ChatExport = ({}: ChatExportProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [exportChat, setExportChat] = useState<boolean>(false);
     const [typeFile, setTypeFile] = useState<any>(typesFile[0]);
 
@@ -56,10 +52,11 @@ const ChatExport = ({}: ChatExportProps) => {
 
     return (
         <form className="" action="" onSubmit={() => console.log("Submit")}>
-            <div className="mb-8 h4">{tCommon("form.chat-export", { defaultValue: "Chat export" })}</div>
+            <div className="mb-8 h4">Chat export</div>
             <div className="flex items-center mb-8">
                 <div className="mr-auto base2 text-n-4">
-                    {tCommon("form.select-chat-list", { defaultValue: "Select chat list to export" })}</div>
+                    Select chat list to export
+                </div>
                 <Switch
                     value={exportChat}
                     setValue={handleNotificationsChange}
@@ -98,7 +95,8 @@ const ChatExport = ({}: ChatExportProps) => {
             </div>
             <div className="inline-flex bg-primary-1 rounded-xl md:w-full">
                 <button className="btn-blue pr-4 rounded-r-none md:grow">
-                    {tCommon("form.download-conversation", { defaultValue: "Download conversation" })}</button>
+                    Download conversation
+                </button>
                 <div className=" self-center w-0.25 h-8 bg-n-1/20"></div>
                 <Select
                     classButton="h-12 rounded-l-none rounded-r-xl shadow-[inset_0_0_0_0.0625rem_#0084FF] bg-transparent text-n-1 font-semibold dark:bg-transparent"

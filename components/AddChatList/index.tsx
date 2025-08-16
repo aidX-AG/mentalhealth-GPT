@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import Field from "@/components/Field";
 import Select from "@/components/Select";
 import MultiSelect from "@/components/MultiSelect";
 import User from "./User";
 
 import { people } from "@/mocks/people";
-import i18next from "i18next";
 
 const colors = [
     {
@@ -70,8 +68,6 @@ type AddChatListProps = {
 };
 
 const AddChatList = ({ onCancel }: AddChatListProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [name, setName] = useState<string>("");
     const [color, setColor] = useState<any>(colors[1]);
     const [selectedOptions, setSelectedOptions] = useState([]);
@@ -79,19 +75,19 @@ const AddChatList = ({ onCancel }: AddChatListProps) => {
 
     return (
         <div className="p-12 lg:px-8 md:pt-6 md:px-5 md:pb-6">
-            <div className="mb-8 h4">{tCommon("headings.add-chat-list", { defaultValue: "Add chat list" })}</div>
+            <div className="mb-8 h4">Add chat list</div>
             <div className="relative z-10 flex mb-8 md:block">
                 <Field
                     className="grow mr-3 md:mr-0 md:mb-3"
-                    label={tCommon("labels.name", { defaultValue: "Name" })}
-                    placeholder={tCommon("placeholders.name", { defaultValue: "Name" })}
+                    label="Name"
+                    placeholder="Name"
                     icon="chat-1"
                     value={name}
                     onChange={(e: any) => setName(e.target.value)}
                     required
                 />
                 <Select
-                    label={tCommon("labels.color", { defaultValue: "Color" })}
+                    label="Color"
                     className="shrink-0 min-w-[14.5rem]"
                     items={colors}
                     value={color}
@@ -99,7 +95,8 @@ const AddChatList = ({ onCancel }: AddChatListProps) => {
                 />
             </div>
             <div className="flex mb-2 base2 font-semibold">
-                {tCommon("sections.invite-member", { defaultValue: "Invite team member" })}</div>
+                Invite team member
+            </div>
             <div className="mb-8 p-5 border border-n-3 rounded-xl md:p-0 md:border-none dark:border-n-5">
                 <div className="relative z-5">
                     <MultiSelect
@@ -120,15 +117,17 @@ const AddChatList = ({ onCancel }: AddChatListProps) => {
                     />
                 </div>
                 <div className="mb-5 caption1 text-n-4/50">
-                    {tCommon("body.access-note", { defaultValue: "Only people invited in this list can access" })}</div>
+                    Only people invited in this list can access
+                </div>
                 {users.map((user) => (
                     <User item={user} key={user.id} />
                 ))}
             </div>
             <div className="flex justify-end">
                 <button className="btn-stroke-light mr-3" onClick={onCancel}>
-                    {tCommon("buttons.cancel", { defaultValue: "Cancel" })}</button>
-                <button className="btn-blue">{tCommon("buttons.add-list", { defaultValue: "Add list" })}</button>
+                    Cancel
+                </button>
+                <button className="btn-blue">Add list</button>
             </div>
         </div>
     );

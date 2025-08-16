@@ -1,5 +1,4 @@
-import import { useTranslation } from "react-i18next";
-{ useState } from "react";
+import { useState } from "react";
 import Icon from "@/components/Icon";
 import ModalShareChat from "@/components/ModalShareChat";
 import Actions from "./Actions";

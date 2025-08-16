@@ -1,7 +1,5 @@
 import Icon from "@/components/Icon";
-import { useTranslation } from 'react-i18next';
 import Preview from "../Preview";
-import i18next from "i18next";
 
 type DetailsProps = {
     images: any;
@@ -12,9 +10,11 @@ const Details = ({ images }: DetailsProps) => (
         <div className="flex justify-between mb-2">
             <div className="">
                 <div className="caption1 font-semibold text-n-6 dark:text-n-3">
-                    {tCommon("sections.suggested-media", { defaultValue: "Suggested media" })}</div>
+                    Suggested media
+                </div>
                 <div className="caption2 text-n-4/75">
-                    {tCommon("sections.media-rights-note", { defaultValue: "Make sure you have the rights to use the suggested media." })}</div>
+                    Make sure you have the rights to use the suggested media.
+                </div>
             </div>
             <button className="group shrink-0 w-6.5 h-6.5 ml-6 md:-mt-1">
                 <Icon
@@ -34,7 +34,8 @@ const Details = ({ images }: DetailsProps) => (
                 />
                 <Icon className="dark:fill-n-1" name="image-up" />
                 <div className="mt-2 caption1 font-semibold text-n-6 dark:text-n-3">
-                    {tCommon("sections.upload-media", { defaultValue: "Upload media" })}</div>
+                    Upload media
+                </div>
             </div>
         </div>
     </div>

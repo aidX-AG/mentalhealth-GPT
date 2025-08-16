@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { toast } from "react-hot-toast";
@@ -13,7 +12,6 @@ import ChatEmpty from "./ChatEmpty";
 
 import { notifications } from "@/mocks/notifications";
 import { chatHistory } from "@/mocks/chatHistory";
-import i18next from "i18next";
 
 type RightSidebarProps = {
     className?: string;
@@ -21,8 +19,6 @@ type RightSidebarProps = {
 };
 
 const RightSidebar = ({ className, visible }: RightSidebarProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [clean, setClean] = useState<boolean>(false);
     const [visibleModal, setVisibleModal] = useState<boolean>(false);
 
@@ -47,10 +43,11 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                         className="btn-dark btn-medium"
                         onClick={() => setVisibleModal(true)}
                     >
-                        {tCommon("misc.share", { defaultValue: "Share" })}</button>
+                        Share
+                    </button>
                 </div>
                 <div className="absolute top-24 left-0 right-0 flex items-center px-9 md:px-6">
-                    <div className="base2 text-n-4/75">{tCommon("sections.chat-history", { defaultValue: "Chat history" })}</div>
+                    <div className="base2 text-n-4/75">Chat history</div>
                     <div className="ml-3 px-2 bg-n-3 rounded-lg caption1 text-n-4 dark:bg-n-5/50">
                         {clean ? "0" : "26/100"}
                     </div>
@@ -64,7 +61,8 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                                         iconDelete
                                     >
                                         <div className="ml-3 mr-6 h6 md:mx-0 md:my-2">
-                                            {tCommon("notify.clear-chat-history", { defaultValue: "Clear all chat history?" })}</div>
+                                            Clear all chat history?
+                                        </div>
                                         <div className="flex justify-center">
                                             <button
                                                 className="btn-stroke-light btn-medium md:min-w-[6rem]"
@@ -72,14 +70,16 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                                                     toast.dismiss(t.id)
                                                 }
                                             >
-                                                {tCommon("buttons.cancel", { defaultValue: "Cancel" })}</button>
+                                                Cancel
+                                            </button>
                                             <button
                                                 className="btn-blue btn-medium ml-3 md:min-w-[6rem]"
                                                 onClick={() =>
                                                     handleClickClear(t)
                                                 }
                                             >
-                                                {tCommon("misc.yes", { defaultValue: "Yes" })}</button>
+                                                Yes
+                                            </button>
                                         </div>
                                     </Notify>
                                 ))
@@ -90,7 +90,8 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                                 name="trash"
                             />
                             <div className="absolute min-w-[8rem] top-1/2 -translate-y-1/2 right-full mr-2 px-2 py-1 rounded-lg bg-n-7 caption1 text-n-1 invisible opacity-0 transition-opacity pointer-events-none lg:hidden after:absolute after:top-1/2 after:left-full after:-translate-y-1/2 after:w-0 after:h-0 after:border-t-4 after:border-l-4 after:border-b-4 after:border-r-4 after:border-r-transparent after:border-l-n-7 after:border-t-transparent after:border-b-transparent group-hover:opacity-100 group-hover:visible">
-                                {tCommon("buttons.clear-chat-history", { defaultValue: "Clear chat history" })}</div>
+                                Clear chat history
+                            </div>
                         </button>
                     )}
                 </div>
@@ -104,7 +105,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                 <div className="absolute left-0 right-0 bottom-0 p-6">
                     <Link className="btn-blue w-full" href="/">
                         <Icon name="plus" />
-                        <span>{tCommon("links.new-chat", { defaultValue: "New chat" })}</span>
+                        <span>New chat</span>
                     </Link>
                 </div>
             </div>

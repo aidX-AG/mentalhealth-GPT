@@ -1,7 +1,5 @@
 import Image from "@/components/Image";
-import { useTranslation } from 'react-i18next';
 import SliderRange from "@/components/SliderRange";
-import i18next from "i18next";
 
 type AdjustProps = {
     image: string;
@@ -19,16 +17,16 @@ const Adjust = ({ image }: AdjustProps) => (
             />
         </div>
         <div className="mt-6">
-            <SliderRange className="mb-2" title={tCommon("controls.exposure", { defaultValue: "Exposure" })} />
-            <SliderRange className="mb-2" title={tCommon("controls.contrast", { defaultValue: "Contrast" })} />
-            <SliderRange className="mb-2" title={tCommon("controls.highlights", { defaultValue: "Highlights" })} />
-            <SliderRange className="mb-2" title={tCommon("controls.shadows", { defaultValue: "Shadows" })} />
-            <SliderRange className="mb-2" title={tCommon("controls.white", { defaultValue: "White" })} />
-            <SliderRange className="" title={tCommon("controls.blacks", { defaultValue: "Blacks" })} />
+            <SliderRange className="mb-2" title="Exposure" />
+            <SliderRange className="mb-2" title="Contrast" />
+            <SliderRange className="mb-2" title="Highlights" />
+            <SliderRange className="mb-2" title="Shadows" />
+            <SliderRange className="mb-2" title="White" />
+            <SliderRange className="" title="Blacks" />
         </div>
         <div className="flex space-x-3 mt-6">
-            <button className="btn-blue w-full">{tCommon("misc.auto", { defaultValue: "Auto" })}</button>
-            <button className="btn-stroke-light w-full">{tCommon("misc.reset", { defaultValue: "Reset" })}</button>
+            <button className="btn-blue w-full">Auto</button>
+            <button className="btn-stroke-light w-full">Reset</button>
         </div>
     </div>
 );

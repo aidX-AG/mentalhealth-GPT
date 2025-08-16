@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useTranslation } from 'react-i18next';
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import { enablePageScroll, clearQueueScrollLocks } from "scroll-lock";
@@ -9,7 +8,6 @@ import LeftSidebar from "@/components/LeftSidebar";
 import RightSidebar from "@/components/RightSidebar";
 import Icon from "@/components/Icon";
 import Burger from "./Burger";
-import i18next from "i18next";
 
 type LayoutProps = {
     smallSidebar?: boolean;
@@ -24,8 +22,6 @@ const Layout = ({
     backUrl,
     children,
 }: LayoutProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [visibleSidebar, setVisibleSidebar] = useState<any>(
         smallSidebar || false
     );
@@ -50,7 +46,7 @@ const Layout = ({
     return (
         <>
             <Head>
-                <title>{tCommon("sections.brand", { defaultValue: "Brainwave" })}</title>
+                <title>Brainwave</title>
             </Head>
             <div
                 className={`pr-6 bg-n-7 md:p-0 md:bg-n-1 dark:md:bg-n-6 md:overflow-hidden ${

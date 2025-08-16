@@ -1,8 +1,6 @@
 import { CSSProperties } from "react";
-import { useTranslation } from 'react-i18next';
 import Image from "@/components/Image";
 import Actions from "../Actions";
-import i18next from "i18next";
 
 type MemberProps = {
     item: any;
@@ -10,8 +8,6 @@ type MemberProps = {
 };
 
 const Member = ({ item, style }: MemberProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     return (
         <div
             className="group relative flex items-center py-6 border-t border-n-3 cursor-pointer xl:cursor-default dark:border-n-6"
@@ -30,10 +26,11 @@ const Member = ({ item, style }: MemberProps) => {
                     <div className="base1 font-semibold">{item.name}</div>
                     {item.admin && (
                         <div className="ml-2 px-3 py-0.5 bg-[#FF97E8] rounded caption1 font-semibold">
-                            {tCommon("badges.admin", { defaultValue: "Admin" })}</div>
+                            Admin
+                        </div>
                     )}
                 </div>
-                <div className="caption1 text-n-4/50">{tCommon("misc.at", { defaultValue: "@" })}{item.login}</div>
+                <div className="caption1 text-n-4/50">@{item.login}</div>
             </div>
             <Actions className="invisible opacity-0 transition-all group-hover:visible group-hover:opacity-100 xl:visible xl:opacity-100" />
         </div>

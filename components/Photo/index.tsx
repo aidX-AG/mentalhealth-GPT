@@ -1,10 +1,8 @@
 import Image from "@/components/Image";
-import { useTranslation } from 'react-i18next';
 import Actions from "@/components/Actions";
 import Icon from "@/components/Icon";
 import Export from "@/components/Export";
 import Adjust from "@/components/Adjust";
-import i18next from "i18next";
 
 type PhotoProps = {
     content: string;
@@ -37,10 +35,10 @@ const Photo = ({ content, image, colorPicker }: PhotoProps) => (
                 className="mr-4 mt-4 2xl:w-[calc(50%-1rem)] 2xl:mx-2"
                 classButton="btn-dark 2xl:w-full"
                 classTitle="pl-3"
-                title={tCommon("actions.exporting-photo", { defaultValue: "Exporting 1 photo" })}
+                title="Exporting 1 photo"
                 buttonInner={
                     <>
-                        <span>{tCommon("fragments.export", { defaultValue: "Export" })}</span>
+                        <span>Export</span>
                         <Icon name="share" />
                     </>
                 }
@@ -49,16 +47,17 @@ const Photo = ({ content, image, colorPicker }: PhotoProps) => (
             </Actions>
             <button className="btn-white btn-small mr-4 mt-4 2xl:w-[calc(50%-1rem)] 2xl:mx-2 md:capitalize">
                 <span>
-                    <span className="md:hidden">{tCommon("misc.create", { defaultValue: "Create" })}</span> {tCommon("buttons.variation", { defaultValue: "variation" })}</span>
+                    <span className="md:hidden">Create</span> variation
+                </span>
                 <Icon name="plus-circle-stroke" />
             </button>
             <Actions
                 className="mr-4 mt-4 2xl:w-[calc(50%-1rem)] 2xl:mx-2"
                 classButton="btn-white ui-open:bg-n-4/50 2xl:w-full dark:ui-open:bg-n-1/20"
-                title={tCommon("actions.adjust", { defaultValue: "Adjust" })}
+                title="Adjust"
                 buttonInner={
                     <>
-                        <span>{tCommon("fragments.adjust", { defaultValue: "Adjust" })}</span>
+                        <span>Adjust</span>
                         <Icon name="share" />
                     </>
                 }
@@ -66,7 +65,7 @@ const Photo = ({ content, image, colorPicker }: PhotoProps) => (
                 <Adjust image={image} />
             </Actions>
             <button className="btn-white btn-small mt-4 2xl:w-[calc(50%-1rem)] 2xl:mx-2">
-                <span>{tCommon("buttons.enhance", { defaultValue: "Enhance" })}</span>
+                <span>Enhance</span>
                 <Icon name="scale" />
             </button>
         </div>

@@ -1,17 +1,13 @@
 import Image from "@/components/Image";
-import { useTranslation } from 'react-i18next';
 import Icon from "@/components/Icon";
 
 import { exportImage, exportAudio } from "@/constants/export";
-import i18next from "i18next";
 
 type ExportProps = {
     typeImage?: boolean;
 };
 
 const Export = ({ typeImage }: ExportProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const items = typeImage ? exportImage : exportAudio;
     return (
         <div className="">
@@ -62,7 +58,7 @@ const Export = ({ typeImage }: ExportProps) => {
                 <div className="relative flex justify-center items-center shrink-0 w-10 h-10 mr-4 rounded-full">
                     <Icon className="dark:fill-n-1" name="dots" />
                 </div>
-                <div className="base2 font-semibold">{tCommon("buttons.more", { defaultValue: "More" })}</div>
+                <div className="base2 font-semibold">More</div>
             </button>
         </div>
     );

@@ -1,11 +1,9 @@
 "use client";
 
 import { useColorMode } from "@chakra-ui/color-mode";
-import { useTranslation } from 'react-i18next';
 import Icon from "@/components/Icon";
 import Image from "@/components/Image";
 import { LucideIconMap } from "@/components/Icon/lucide-icons";
-import i18next from "i18next";
 
 type UpdatesItems = {
     id: string;
@@ -22,8 +20,6 @@ type UpdatesProps = {
 };
 
 const Updates = ({ items }: UpdatesProps) => {
-  const { t: tUpdates-and-faq } = useTranslation("updates-and-faq");
-
     const { colorMode } = useColorMode();
     const isDarkMode = colorMode === "dark";
 
@@ -67,7 +63,7 @@ const Updates = ({ items }: UpdatesProps) => {
                 })}
             </div>
             <div className="text-center">
-                <button className="btn-stroke-light">{tUpdates-and-faq("buttons.load-more", { defaultValue: "Load more" })}</button>
+                <button className="btn-stroke-light">Load more</button>
             </div>
         </>
     );

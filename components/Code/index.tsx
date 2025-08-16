@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { srcery } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
-import i18next from "i18next";
 
 type CodeType = {
     id: string;
@@ -19,8 +17,6 @@ type CodeProps = {
 };
 
 const Code = ({ items }: CodeProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [value, setValue] = useState<string>("0");
     const [copied, setCopied] = useState<boolean>(false);
 
@@ -56,7 +52,8 @@ const Code = ({ items }: CodeProps) => {
                                 className="w-4 h-4 mr-1 fill-n-1"
                                 name="check-thin"
                             />
-                            {tCommon("badges.copied", { defaultValue: "Copied!" })}</div>
+                            Copied!
+                        </div>
                     ) : (
                         items
                             .filter((x) => x.id === value)
@@ -67,7 +64,8 @@ const Code = ({ items }: CodeProps) => {
                                     onCopy={onCopy}
                                 >
                                     <button className="shrink-0 ml-3 caption1 font-semibold text-n-1 transition-colors hover:text-primary-1 md:hidden">
-                                        {tCommon("actions.copy-code", { defaultValue: "Copy code" })}</button>
+                                        Copy code
+                                    </button>
                                 </CopyToClipboard>
                             ))
                     )}
@@ -96,10 +94,14 @@ const Code = ({ items }: CodeProps) => {
                 </div>
             </div>
             <div className="">
-                {tCommon("body.form-example-note", { defaultValue: "Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side." })}</div>
+                Note: This is just an example of a simple HTML form. In a
+                real-world scenario, you would also want to include proper
+                validation and handling of the form data on the server side.
+            </div>
             <div className="flex justify-between items-center pl-4 pr-1 py-1 rounded-xl bg-n-1 shadow-[0_0_1rem_0.5rem_rgba(0,0,0,0.07)] dark:bg-n-6/50">
-                {tCommon("body.created-project", { defaultValue: "I have created a project in your Codepen account" })}<button className="shrink-0 btn-dark btn-medium ml-4">
-                    <span>{tCommon("buttons.view", { defaultValue: "View" })}</span>
+                I have created a project in your Codepen account
+                <button className="shrink-0 btn-dark btn-medium ml-4">
+                    <span>View</span>
                     <Icon name="external-link" />
                 </button>
             </div>

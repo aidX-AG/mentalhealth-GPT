@@ -1,14 +1,10 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import Icon from "@/components/Icon";
 import Modal from "@/components/Modal";
-import i18next from "i18next";
 
 type AddFileProps = {};
 
 const AddFile = ({}: AddFileProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [visible, setVisible] = useState<boolean>(false);
     return (
         <>
@@ -34,9 +30,10 @@ const AddFile = ({}: AddFileProps) => {
                         <div className="flex justify-center items-center w-16 h-16 mx-auto mb-6 bg-n-1 rounded-full">
                             <Icon name="upload" />
                         </div>
-                        <div className="h5">{tCommon("sections.upload-to-mh-gpt", { defaultValue: "Upload to mentalhealthGPT" })}</div>
+                        <div className="h5">Upload to mentalhealthGPT</div>
                         <div className="base2">
-                            {tCommon("sections.add-prompts-note", { defaultValue: "You can add prompts after uploading." })}</div>
+                            You can add prompts after uploading.
+                        </div>
                     </div>
                 </div>
             </Modal>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import { Menu, Transition } from "@headlessui/react";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
@@ -7,13 +6,10 @@ import Modal from "@/components/Modal";
 import Settings from "@/components/Settings";
 
 import { settings } from "@/constants/settings";
-import i18next from "i18next";
 
 type ProfileProps = {};
 
 const Profile = ({}: ProfileProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [visibleSettings, setVisibleSettings] = useState<boolean>(false);
 
     const menu = [
@@ -43,7 +39,7 @@ const Profile = ({}: ProfileProps) => {
                             className="rounded-full object-cover"
                             src="/images/avatar.jpg"
                             fill
-                            alt={tCommon("alt.avatar", { defaultValue: "Avatar" })}
+                            alt="Avatar"
                         />
                         <div className="absolute -right-0.75 -bottom-0.75 w-4.5 h-4.5 bg-primary-2 rounded-full border-4 border-n-1 dark:border-n-6"></div>
                     </Menu.Button>
@@ -62,14 +58,15 @@ const Profile = ({}: ProfileProps) => {
                                         className="rounded-full object-cover"
                                         src="/images/avatar.jpg"
                                         fill
-                                        alt={tCommon("alt.avatar", { defaultValue: "Avatar" })}
+                                        alt="Avatar"
                                     />
                                     <div className="absolute right-0 bottom-0 w-4.5 h-4.5 bg-primary-2 rounded-full border-4 border-n-1 dark:border-n-7"></div>
                                 </div>
                                 <div className="pl-4">
-                                    <div className="h6">{tCommon("misc.author-name", { defaultValue: "Tran Mau Tri Tam" })}</div>
+                                    <div className="h6">Tran Mau Tri Tam</div>
                                     <div className="caption1 text-n-4">
-                                        {tCommon("misc.role-label", { defaultValue: "Lead visual designer at UI8" })}</div>
+                                        Lead visual designer at UI8
+                                    </div>
                                 </div>
                             </div>
                             <div className="px-4 bg-n-2 rounded-xl dark:bg-n-6">

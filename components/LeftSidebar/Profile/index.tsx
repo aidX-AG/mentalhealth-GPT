@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { useTranslation } from 'react-i18next';
 import Image from "@/components/Image";
-import i18next from "i18next";
 
 type ProfileProps = {
     visible?: boolean;
@@ -26,7 +24,7 @@ const Profile = ({ visible }: ProfileProps) => (
                         className="rounded-full object-cover"
                         src="/images/avatar.jpg"
                         fill
-                        alt={tCommon("alt.avatar", { defaultValue: "Avatar" })}
+                        alt="Avatar"
                     />
                     <div className="absolute -right-0.75 -bottom-0.75 w-4.5 h-4.5 bg-primary-2 rounded-full border-4 border-n-6"></div>
                 </div>
@@ -34,18 +32,22 @@ const Profile = ({ visible }: ProfileProps) => (
                     <>
                         <div className="ml-4 mr-4">
                             <div className="base2 font-semibold text-n-1">
-                                {tCommon("misc.author-name", { defaultValue: "Tran Mau Tri Tam" })}</div>
+                                Tran Mau Tri Tam
+                            </div>
                             <div className="caption1 font-semibold text-n-3/50">
-                                {tCommon("misc.author-email", { defaultValue: "tam@ui8.net" })}</div>
+                                tam@ui8.net
+                            </div>
                         </div>
                         <div className="shrnik-0 ml-auto self-start px-3 bg-primary-2 rounded-lg caption1 font-bold text-n-7">
-                            {tCommon("fragments.free", { defaultValue: "Free" })}</div>
+                            Free
+                        </div>
                     </>
                 )}
             </div>
             {!visible && (
                 <Link className="btn-stroke-dark w-full mt-2" href="/pricing">
-                    {tCommon("badges.upgraded-to-pro", { defaultValue: "Upgraded to Pro" })}</Link>
+                    Upgraded to Pro
+                </Link>
             )}
         </div>
     </div>

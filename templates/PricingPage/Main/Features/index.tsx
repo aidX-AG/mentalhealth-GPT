@@ -1,6 +1,4 @@
 import Icon from "@/components/Icon";
-import { useTranslation } from 'react-i18next';
-import i18next from "i18next";
 
 type FeaturesProps = {
     items: any;
@@ -9,12 +7,14 @@ type FeaturesProps = {
 const Features = ({ items }: FeaturesProps) => (
     <div className="lg:hidden">
         <div className="flex mb-8 h4">
-            <div className="w-[14.875rem] h4">{tPricing("sections.core-features", { defaultValue: "Core features" })}</div>
-            <div className="hidden flex-1 px-8 2xl:block">{tPricing("sections.free", { defaultValue: "Free" })}</div>
+            <div className="w-[14.875rem] h4">Core features</div>
+            <div className="hidden flex-1 px-8 2xl:block">Free</div>
             <div className="hidden flex-1 px-8 text-[#0F9F43] 2xl:block">
-                {tPricing("sections.pro", { defaultValue: "Pro" })}</div>
+                Pro
+            </div>
             <div className="hidden flex-1 px-8 text-[#3E90F0] 2xl:block">
-                {tPricing("sections.enterprise", { defaultValue: "Enterprise" })}</div>
+                Enterprise
+            </div>
         </div>
         <div className="">
             {items.map((item: any) => (
@@ -41,7 +41,7 @@ const Features = ({ items }: FeaturesProps) => (
                             name={item.pro ? "check-thin" : "close"}
                         />
                         {item.id === "4" && (
-                            <div className="ml-3 base2">{tPricing("badges.via-email", { defaultValue: "Via email" })}</div>
+                            <div className="ml-3 base2">Via email</div>
                         )}
                     </div>
                     <div className="flex items-center flex-1 px-8">
@@ -52,7 +52,7 @@ const Features = ({ items }: FeaturesProps) => (
                             name={item.enterprise ? "check-thin" : "close"}
                         />
                         {item.id === "4" && (
-                            <div className="ml-3 base2">{tPricing("badges.chat-247", { defaultValue: "Chat 24/7" })}</div>
+                            <div className="ml-3 base2">Chat 24/7</div>
                         )}
                     </div>
                 </div>

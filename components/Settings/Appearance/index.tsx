@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import { useColorMode } from "@chakra-ui/color-mode";
 import { twMerge } from "tailwind-merge";
 import Image from "@/components/Image";
 import Select from "@/components/Select";
-import i18next from "i18next";
 
 const languages = [
     {
@@ -24,8 +22,6 @@ const languages = [
 type AppearanceProps = {};
 
 const Appearance = ({}: AppearanceProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const { colorMode, setColorMode } = useColorMode();
     const [language, setLanguage] = useState<any>(languages[0]);
 
@@ -46,8 +42,8 @@ const Appearance = ({}: AppearanceProps) => {
 
     return (
         <>
-            <div className="mb-8 h4">{tCommon("fragments.appearance", { defaultValue: "Appearance" })}</div>
-            <div className="mb-5 base1 font-semibold">{tCommon("fragments.appearance", { defaultValue: "Appearance" })}</div>
+            <div className="mb-8 h4">Appearance</div>
+            <div className="mb-5 base1 font-semibold">Appearance</div>
             <div className="flex mb-8 pr-12 space-x-8 md:pr-0">
                 {items.map((item, index) => (
                     <button
@@ -75,7 +71,8 @@ const Appearance = ({}: AppearanceProps) => {
             </div>
             <div className="flex items-center md:block">
                 <div className="mr-auto base1 font-semibold md:mb-4">
-                    {tCommon("sections.primary-language", { defaultValue: "Primary language" })}</div>
+                    Primary language
+                </div>
                 <Select
                     className="min-w-[13.125rem]"
                     classButton="bg-n-3/75 dark:bg-n-6 dark:shadow-[inset_0_0_0_0.0625rem_#232627]"

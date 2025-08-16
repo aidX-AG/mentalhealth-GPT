@@ -1,8 +1,6 @@
 import Select, { components } from "react-select";
-import { useTranslation } from 'react-i18next';
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
-import i18next from "i18next";
 
 const { Option, MultiValueRemove } = components;
 
@@ -51,8 +49,6 @@ const MultiSelect = ({
     selectedOptions,
     setSelectedOptions,
 }: MultiSelectProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const handleMultiSelectChange = (selectedOptions: any) => {
         setSelectedOptions(selectedOptions);
     };
@@ -88,7 +84,7 @@ const MultiSelect = ({
                 getOptionLabel={getOptionLabel}
                 getOptionValue={getOptionValue}
                 formatOptionLabel={formatOptionLabel}
-                placeholder={tCommon("placeholders.member-name", { defaultValue: "Name member" })}
+                placeholder="Name member"
                 noOptionsMessage={() => "No people found"}
                 components={{
                     Option: DetailsOption,
