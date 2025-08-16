@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { useTranslation } from 'react-i18next';
 import Image from "@/components/Image";
-import i18next from "i18next";
 
 type NotificationProps = {
     item: any;
@@ -17,7 +15,7 @@ const Notification = ({ item }: NotificationProps) => (
                 className="rounded-full object-cover"
                 src={item.avatar}
                 fill
-                alt={tCommon("alt.avatar", { defaultValue: "Avatar" })}
+                alt="Avatar"
             />
             {item.online && (
                 <div className="absolute right-0 bottom-0 w-4.5 h-4.5 rounded-full border-4 border-n-1 bg-primary-2 dark:border-n-7"></div>

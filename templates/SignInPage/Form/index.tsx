@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import { Tab } from "@headlessui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
 import Logo from "@/components/Logo";
@@ -7,15 +6,12 @@ import Image from "@/components/Image";
 import SignIn from "./SignIn";
 import CreateAccount from "./CreateAccount";
 import ForgotPassword from "./ForgotPassword";
-import i18next from "i18next";
 
 const tabNav = ["Sign in", "Create account"];
 
 type FormProps = {};
 
 const Form = ({}: FormProps) => {
-  const { t: tSign-in } = useTranslation("sign-in");
-
     const [forgot, setForgot] = useState<boolean>(false);
 
     const { colorMode } = useColorMode();
@@ -49,7 +45,7 @@ const Form = ({}: FormProps) => {
                                 height={24}
                                 alt=""
                             />
-                            <span className="ml-4">{tSign-in("buttons.continue-google", { defaultValue: "Continue with Google" })}</span>
+                            <span className="ml-4">Continue with Google</span>
                         </button>
                         <button className="btn-stroke-light btn-large w-full">
                             <Image
@@ -58,12 +54,13 @@ const Form = ({}: FormProps) => {
                                 height={24}
                                 alt=""
                             />
-                            <span className="ml-4">{tSign-in("buttons.continue-apple", { defaultValue: "Continue with Apple" })}</span>
+                            <span className="ml-4">Continue with Apple</span>
                         </button>
                         <div className="flex items-center my-8 md:my-4">
                             <span className="grow h-0.25 bg-n-4/50"></span>
                             <span className="shrink-0 mx-5 text-n-4/50">
-                                {tSign-in("sections.or", { defaultValue: "OR" })}</span>
+                                OR
+                            </span>
                             <span className="grow h-0.25 bg-n-4/50"></span>
                         </div>
                         <Tab.Panels>

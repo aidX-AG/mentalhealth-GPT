@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import { useTranslation } from 'react-i18next';
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-hot-toast";
 import Modal from "@/components/Modal";
@@ -8,7 +7,6 @@ import MultiSelect from "@/components/MultiSelect";
 import Notify from "@/components/Notify";
 
 import { people } from "@/mocks/people";
-import i18next from "i18next";
 
 type ModalShareChatProps = {
     visible: boolean;
@@ -16,8 +14,6 @@ type ModalShareChatProps = {
 };
 
 const ModalShareChat = ({ visible, onClose }: ModalShareChatProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [link, setLink] = useState<string>(
         "https://ui8.net/ui8/products/brainwave-ai-ui-design-kit"
     );
@@ -28,7 +24,7 @@ const ModalShareChat = ({ visible, onClose }: ModalShareChatProps) => {
         setCopied(true);
         toast((t) => (
             <Notify iconCheck>
-                <div className="ml-3 h6">{tCommon("notify.link-copied", { defaultValue: "Link copied" })}</div>
+                <div className="ml-3 h6">Link copied</div>
             </Notify>
         ));
     };
@@ -48,13 +44,14 @@ const ModalShareChat = ({ visible, onClose }: ModalShareChatProps) => {
                 action=""
                 onSubmit={() => console.log("Submit")}
             >
-                <div className="mb-8 h4">{tCommon("form.share-chat", { defaultValue: "Share this chat" })}</div>
+                <div className="mb-8 h4">Share this chat</div>
                 <div className="mb-4 base2 font-semibold text-n-6 dark:text-n-3">
-                    {tCommon("form.copy-link", { defaultValue: "Copy link" })}</div>
+                    Copy link
+                </div>
                 <div className="relative mb-8">
                     <Field
                         classInput="h-14 pr-[6.25rem] bg-n-2 truncate text-[1rem] text-n-4 border-transparent focus:bg-n-2 md:base2"
-                        placeholder={tCommon("placeholders.link", { defaultValue: "Link" })}
+                        placeholder="Link"
                         value={link}
                         onChange={(e: any) => setLink(e.target.value)}
                         required
@@ -65,11 +62,13 @@ const ModalShareChat = ({ visible, onClose }: ModalShareChatProps) => {
                             ref={copyButtonRef}
                             type="button"
                         >
-                            {tCommon("actions.copy", { defaultValue: "Copy" })}</button>
+                            Copy
+                        </button>
                     </CopyToClipboard>
                 </div>
                 <div className="mb-4 base2 font-semibold text-n-6 dark:text-n-3">
-                    {tCommon("form.share-to-members", { defaultValue: "Or share to members" })}</div>
+                    Or share to members
+                </div>
                 <MultiSelect
                     className="mb-8"
                     items={people}
@@ -78,8 +77,9 @@ const ModalShareChat = ({ visible, onClose }: ModalShareChatProps) => {
                 />
                 <div className="flex justify-end">
                     <button className="btn-stroke-light mr-3" onClick={onClose}>
-                        {tCommon("buttons.cancel", { defaultValue: "Cancel" })}</button>
-                    <button className="btn-blue">{tCommon("misc.share", { defaultValue: "Share" })}</button>
+                        Cancel
+                    </button>
+                    <button className="btn-blue">Share</button>
                 </div>
             </form>
         </Modal>

@@ -1,7 +1,6 @@
 "use client";
 
 import { Tab } from "@headlessui/react";
-import { useTranslation } from 'react-i18next';
 import { useRouter } from "next/navigation";
 import Layout from "@/components/Layout";
 import Icon from "@/components/Icon";
@@ -10,13 +9,10 @@ import Faq from "./Faq";
 
 import { updates } from "@/mocks/updates";
 import { faqs } from "@/mocks/faq";
-import i18next from "i18next";
 
 const tanNavigation = ["Updates", "FAQ"];
 
 const UpdatesAndFaqPage = () => {
-  const { t: tUpdates-and-faq } = useTranslation("updates-and-faq");
-
     const router = useRouter();
 
     return (
@@ -29,9 +25,10 @@ const UpdatesAndFaqPage = () => {
                     <Icon className="fill-n-4" name="close" />
                 </button>
                 <div className="max-w-[58.5rem] mx-auto">
-                    <div className="mb-4 h2 md:pr-16 md:h3">{tUpdates-and-faq("sections.title", { defaultValue: "Updates & FAQ" })}</div>
+                    <div className="mb-4 h2 md:pr-16 md:h3">Updates & FAQ</div>
                     <div className="mb-12 body1 text-n-4 md:mb-6">
-                        {tUpdates-and-faq("sections.subtitle", { defaultValue: "Features, fixes & improvements." })}</div>
+                        Features, fixes & improvements.
+                    </div>
                     <Tab.Group defaultIndex={0}>
                         <Tab.List className="mb-12 md:mb-6 space-x-3">
                             {tanNavigation.map((button, index) => (

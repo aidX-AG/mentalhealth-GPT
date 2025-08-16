@@ -1,6 +1,4 @@
 import Image from "@/components/Image";
-import { useTranslation } from 'react-i18next';
-import i18next from "i18next";
 
 type DeviceProps = {
     item: any;
@@ -26,7 +24,7 @@ const Device = ({ item }: DeviceProps) => (
                 <p>{item.date}</p>
             </div>
         </div>
-        <button className="btn-stroke-light shrink-0 ml-4">{tCommon("sections.revoke", { defaultValue: "Revoke" })}</button>
+        <button className="btn-stroke-light shrink-0 ml-4">Revoke</button>
     </div>
 );
 

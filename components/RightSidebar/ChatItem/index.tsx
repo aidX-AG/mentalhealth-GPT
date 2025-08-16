@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import { toast } from "react-hot-toast";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
@@ -7,27 +6,25 @@ import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Users from "@/components/Users";
 import Notify from "@/components/Notify";
-import i18next from "i18next";
 
 type ChatItemProps = {
     item: any;
 };
 
 const ChatItem = ({ item }: ChatItemProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [active, setActive] = useState<boolean>(false);
 
     const handleClick = () => {
         setActive(true);
         toast((t) => (
             <Notify iconCheck>
-                <div className="mr-6 ml-3 h6">{tCommon("notify.chat-archived", { defaultValue: "1 chat archived" })}</div>
+                <div className="mr-6 ml-3 h6">1 chat archived</div>
                 <button
                     className="btn-blue btn-medium ml-3"
                     onClick={() => toast.dismiss(t.id)}
                 >
-                    {tCommon("notify.undo", { defaultValue: "Undo" })}</button>
+                    Undo
+                </button>
             </Notify>
         ));
     };

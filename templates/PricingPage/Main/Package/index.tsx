@@ -1,8 +1,6 @@
 import { twMerge } from "tailwind-merge";
-import { useTranslation } from 'react-i18next';
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import i18next from "i18next";
 
 type PackageProps = {
     plan?: boolean;
@@ -23,20 +21,21 @@ const Package = ({ plan, item }: PackageProps) => (
                 </div>
                 {item.popular && (
                     <div className="shrink-0 ml-4 px-3 py-0.5 bg-[#FF97E8] rounded caption1 font-semibold text-n-7">
-                        {tPricing("badges.popular", { defaultValue: "Popular" })}</div>
+                        Popular
+                    </div>
                 )}
             </div>
             <div className="mb-6 base1 font-semibold">{item.description}</div>
             <div className="mb-2">
                 <span className="mr-2 h2">
-                    {tPricing("sections.currency-symbol", { defaultValue: "$" })}{plan ? item.priceYear : item.priceMonth}
+                    ${plan ? item.priceYear : item.priceMonth}
                 </span>
                 <span
                     className={twMerge(
                         `h4 text-n-4/50 ${item.popular && "text-n-4"}`
                     )}
                 >
-                    {tPricing("sections.slash", { defaultValue: "/" })}{plan ? "year" : "mo"}
+                    /{plan ? "year" : "mo"}
                 </span>
             </div>
             <div className="base1 text-n-4">{item.priceDetails}</div>

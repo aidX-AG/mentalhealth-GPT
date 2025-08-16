@@ -1,6 +1,4 @@
 import Image from "@/components/Image";
-import { useTranslation } from 'react-i18next';
-import i18next from "i18next";
 
 type UsersProps = {
     items: Array<string>;
@@ -20,7 +18,7 @@ const Users = ({ items, borderColor }: UsersProps) => (
                     className="rounded-full object-cover"
                     src={image}
                     fill
-                    alt={tCommon("alt.avatar", { defaultValue: "Avatar" })}
+                    alt="Avatar"
                 />
             </div>
         ))}

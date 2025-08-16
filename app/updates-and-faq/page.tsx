@@ -1,5 +1,4 @@
-import import { useTranslation } from "react-i18next";
-type { NextPage } from "next";
+import type { NextPage } from "next";
 import UpdatesAndFaqPage from "@/templates/UpdatesAndFaqPage";
 
 const UpdatesAndFaq: NextPage = () => {

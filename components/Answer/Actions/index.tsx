@@ -1,17 +1,13 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-hot-toast";
 import Image from "@/components/Image";
 import Notify from "@/components/Notify";
 import ModalShareChat from "@/components/ModalShareChat";
-import i18next from "i18next";
 
 type ActionsProps = {};
 
 const Actions = ({}: ActionsProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [copied, setCopied] = useState<boolean>(false);
     const [share, setShare] = useState<boolean>(false);
     const [archive, setArchive] = useState<boolean>(false);
@@ -21,7 +17,7 @@ const Actions = ({}: ActionsProps) => {
         setCopied(true);
         toast((t) => (
             <Notify iconCheck>
-                <div className="ml-3 h6">{tCommon("notify.content-copied", { defaultValue: "Content copied" })}</div>
+                <div className="ml-3 h6">Content copied</div>
             </Notify>
         ));
     };
@@ -29,12 +25,13 @@ const Actions = ({}: ActionsProps) => {
     const handleClick = () => {
         toast((t) => (
             <Notify iconCheck>
-                <div className="mr-6 ml-3 h6">{tCommon("notify.chat-archived", { defaultValue: "1 chat archived" })}</div>
+                <div className="mr-6 ml-3 h6">1 chat archived</div>
                 <button
                     className="btn-blue btn-medium ml-3"
                     onClick={() => toast.dismiss(t.id)}
                 >
-                    {tCommon("notify.undo", { defaultValue: "Undo" })}</button>
+                    Undo
+                </button>
             </Notify>
         ));
     };
@@ -45,9 +42,9 @@ const Actions = ({}: ActionsProps) => {
     return (
         <>
             <CopyToClipboard text="Content" onCopy={onCopy}>
-                <button className={`${styleButton} md:hidden`}>{tCommon("actions.copy", { defaultValue: "Copy" })}</button>
+                <button className={`${styleButton} md:hidden`}>Copy</button>
             </CopyToClipboard>
-            <button className={styleButton}>{tCommon("fragments.regenerate-response", { defaultValue: "Regenerate response" })}</button>
+            <button className={styleButton}>Regenerate response</button>
             {!share && !archive && (
                 <div className="flex ml-3 px-1 space-x-1 bg-n-3 rounded-md md:hidden dark:bg-n-7">
                     <button className="" onClick={() => setShare(true)}>
@@ -55,7 +52,7 @@ const Actions = ({}: ActionsProps) => {
                             src="/images/smile-heart-eyes.png"
                             width={24}
                             height={24}
-                            alt={tCommon("alt.smile-heart-eyes", { defaultValue: "Smile heart eyes" })}
+                            alt="Smile heart eyes"
                         />
                     </button>
                     <button className="" onClick={() => setArchive(true)}>
@@ -63,7 +60,7 @@ const Actions = ({}: ActionsProps) => {
                             src="/images/smile-unamused.png"
                             width={24}
                             height={24}
-                            alt={tCommon("alt.smile-unamused", { defaultValue: "Smile unamused" })}
+                            alt="Smile unamused"
                         />
                     </button>
                 </div>
@@ -77,9 +74,10 @@ const Actions = ({}: ActionsProps) => {
                         src="/images/smile-heart-eyes.png"
                         width={24}
                         height={24}
-                        alt={tCommon("alt.smile-heart-eyes", { defaultValue: "Smile heart eyes" })}
+                        alt="Smile heart eyes"
                     />
-                    {tCommon("badges.share", { defaultValue: "Share" })}</button>
+                    Share
+                </button>
             )}
             {archive && (
                 <button
@@ -90,9 +88,10 @@ const Actions = ({}: ActionsProps) => {
                         src="/images/smile-unamused.png"
                         width={24}
                         height={24}
-                        alt={tCommon("alt.smile-unamused", { defaultValue: "Smile unamused" })}
+                        alt="Smile unamused"
                     />
-                    {tCommon("badges.archive-chat", { defaultValue: "Archive chat" })}</button>
+                    Archive chat
+                </button>
             )}
             <ModalShareChat
                 visible={visibleModal}

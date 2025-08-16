@@ -1,9 +1,7 @@
 import Image from "@/components/Image";
-import { useTranslation } from 'react-i18next';
 import Icon from "@/components/Icon";
 import Select from "@/components/Select";
 import { useState } from "react";
-import i18next from "i18next";
 
 type UserProps = {
     item: any;
@@ -25,8 +23,6 @@ const typesAccess = [
 ];
 
 const User = ({ item }: UserProps) => {
-  const { t: tCommon } = useTranslation("common");
-
     const [typeAccess, setTypeAccess] = useState<any>(typesAccess[1]);
 
     return (
@@ -36,7 +32,7 @@ const User = ({ item }: UserProps) => {
                     className="object-cover rounded-full"
                     src={item.avatar}
                     fill
-                    alt={tCommon("alt.avatar", { defaultValue: "Avatar" })}
+                    alt="Avatar"
                 />
             </div>
             <div className="mr-auto base2 font-semibold text-n-5 dark:text-n-3">

@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { useTranslation } from 'react-i18next';
 import Image from "@/components/Image";
-import i18next from "i18next";
 
 type LogoProps = {
   className?: string;
@@ -13,7 +11,7 @@ const Logo = ({ className = "", dark = false }: LogoProps) => (
     <Image
       className="w-full h-auto"
       src={dark ? "images/logo-dark" : "images/logo"}
-      alt={tCommon("alt.aidx", { defaultValue: "aidX" })}
+      alt="aidX"
       widths={[480, 960, 1440]}
       format="webp"
       fallbackFormat="jpg"

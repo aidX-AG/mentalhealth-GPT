@@ -1,7 +1,5 @@
 import Image from "@/components/Image";
 import Document from "./Document";
-import i18next from "i18next";
-import { useTranslation } from 'react-i18next';
 
 type QuestionProps = {
     content: any;
@@ -21,7 +19,7 @@ const Question = ({ content, image, document, time }: QuestionProps) => (
                         className="rounded-xl object-cover"
                         src={image}
                         fill
-                        alt={t("common.alt.avatar", { defaultValue: "Avatar" })}
+                        alt="Avatar"
                     />
                 </div>
             )}
@@ -38,7 +36,7 @@ const Question = ({ content, image, document, time }: QuestionProps) => (
                     className="object-cover"
                     src="/images/wip-portrait.jpg"
                     fill
-                    alt={t("common.alt.wip", { defaultValue: "WIP" })}
+                    alt="WIP"
                 />
             </div>
         </div>

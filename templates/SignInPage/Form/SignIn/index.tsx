@@ -1,15 +1,11 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
 import Field from "@/components/Field";
-import i18next from "i18next";
 
 type SignInProps = {
     onClick: () => void;
 };
 
 const SignIn = ({ onClick }: SignInProps) => {
-  const { t: tSign-in } = useTranslation("sign-in");
-
     const [name, setName] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
@@ -18,7 +14,7 @@ const SignIn = ({ onClick }: SignInProps) => {
             <Field
                 className="mb-4"
                 classInput="dark:bg-n-7 dark:border-n-7 dark:focus:bg-transparent"
-                placeholder={tSign-in("placeholders.username-or-email", { defaultValue: "Username or email" })}
+                placeholder="Username or email"
                 icon="email"
                 value={name}
                 onChange={(e: any) => setName(e.target.value)}
@@ -27,7 +23,7 @@ const SignIn = ({ onClick }: SignInProps) => {
             <Field
                 className="mb-2"
                 classInput="dark:bg-n-7 dark:border-n-7 dark:focus:bg-transparent"
-                placeholder={tSign-in("placeholders.password", { defaultValue: "Password" })}
+                placeholder="Password"
                 icon="lock"
                 type="password"
                 value={password}
@@ -39,9 +35,11 @@ const SignIn = ({ onClick }: SignInProps) => {
                 type="button"
                 onClick={onClick}
             >
-                {tSign-in("misc.forgot-password", { defaultValue: "Forgot password?" })}</button>
+                Forgot password?
+            </button>
             <button className="btn-blue btn-large w-full" type="submit">
-                {tSign-in("misc.sign-in-with-brainwave", { defaultValue: "Sign in with Brainwave" })}</button>
+                Sign in with Brainwave
+            </button>
         </form>
     );
 };

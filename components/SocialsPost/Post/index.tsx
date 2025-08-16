@@ -1,8 +1,6 @@
 import Image from "@/components/Image";
-import { useTranslation } from 'react-i18next';
 import Icon from "@/components/Icon";
 import Details from "../Details";
-import i18next from "i18next";
 
 type PostProps = {
     item: any;
@@ -33,26 +31,26 @@ const Post = ({ item }: PostProps) => (
                 {item.tags.map((tag: any, index: number) => (
                     <span className="text-primary-1" key={index}>
                         {" "}
-                        {tCommon("badges.at", { defaultValue: "#" })}{tag}
+                        #{tag}
                     </span>
                 ))}
             </div>
             <Details images={item.images} />
             <div className="flex flex-wrap mt-1 -ml-3 md:-mr-2">
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>{tCommon("buttons.share-now", { defaultValue: "Share now" })}</span>
+                    <span>Share now</span>
                     <Icon name="external-link" />
                 </button>
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>{tCommon("buttons.edit", { defaultValue: "Edit" })}</span>
+                    <span>Edit</span>
                     <Icon name="edit" />
                 </button>
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>{tCommon("buttons.new-variation", { defaultValue: "New variation" })}</span>
+                    <span>New variation</span>
                     <Icon name="plus" />
                 </button>
                 <button className="btn-stroke-light btn-small ml-3 mt-3">
-                    <span>{tCommon("buttons.copy", { defaultValue: "Copy" })}</span>
+                    <span>Copy</span>
                     <Icon name="copy" />
                 </button>
             </div>
