@@ -1,3 +1,4 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { Inter, Karla } from "next/font/google";
@@ -21,30 +22,6 @@ export const metadata: Metadata = {
   title: "mentalhealthGPT",
   description:
     "Expert AI for mental health – secure, private, and scientifically validated",
-  openGraph: {
-    title: "mentalhealthGPT",
-    description:
-      "Expert AI for mental health – secure, private, and scientifically validated",
-    url: "https://www.mentalhealth-gpt.ch",
-    type: "website",
-    images: [
-      {
-        url: "/logo-1440w.webp",
-        width: 1440,
-        height: 960,
-        type: "image/webp",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "mentalhealthGPT",
-    description:
-      "Expert AI for mental health – secure, private, and scientifically validated",
-    images: ["/logo-1440w.webp"],
-  },
-  metadataBase: new URL("https://www.mentalhealth-gpt.ch"),
-  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
@@ -55,29 +32,77 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Weglot: Config VOR dem Script setzen (Subdirectories-ready) */}
+        {/* SEO + OG Metadata */}
+        <meta
+          name="description"
+          content="Expert AI for mental health – secure, private, and scientifically validated"
+        />
+        <meta property="og:title" content="mentalhealthGPT" />
+        <meta
+          property="og:description"
+          content="Expert AI for mental health – secure, private, and scientifically validated"
+        />
+        <meta property="og:image" content="/images/logo.webp" />
+        <meta property="og:url" content="https://www.mentalhealth-gpt.ch" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Weglot – NACH Hydration laden + Auswahl merken/anwenden */}
         <script
-          // NEXT_PUBLIC_WEGLOT_KEY in .env setzen: wg_...
           dangerouslySetInnerHTML={{
-            __html: `window.WeglotConfig={api_key:'${process.env.NEXT_PUBLIC_WEGLOT_KEY}'};`,
+            __html: `
+              (function () {
+                // 1) Konfiguration
+                window.WeglotConfig = {
+                  api_key: "${process.env.WEGLOT_API_KEY ?? ""}",
+                  wait_transition: true,
+                  auto_switch: false
+                };
+
+                // 2) Script erst nach vollständigem Seiten-Load laden
+                window.addEventListener('load', function () {
+                  var s = document.createElement('script');
+                  s.type = 'text/javascript';
+                  s.async = true;
+                  s.src = 'https://cdn.weglot.com/weglot.min.js';
+                  s.onload = function () {
+                    try {
+                      if (window.Weglot && window.Weglot.initialize) {
+                        window.Weglot.initialize(window.WeglotConfig);
+                      }
+
+                      // 3) Letzte Sprache wiederherstellen
+                      window.addEventListener('weglot:initialized', function () {
+                        try {
+                          var stored = localStorage.getItem('weglot_language');
+                          var current = window.Weglot.getCurrentLang && window.Weglot.getCurrentLang();
+                          if (stored && stored !== current && window.Weglot.switchTo) {
+                            window.Weglot.switchTo(stored);
+                          }
+                        } catch (e) { console.warn('Weglot restore lang failed', e); }
+                      });
+
+                      // 4) Sprachänderung speichern
+                      window.addEventListener('weglot:languagechanged', function (e) {
+                        try {
+                          var lang = (e && e.detail) || (window.Weglot.getCurrentLang && window.Weglot.getCurrentLang());
+                          if (lang) localStorage.setItem('weglot_language', lang);
+                        } catch (e) { console.warn('Weglot store lang failed', e); }
+                      });
+                    } catch (e) { console.warn('Weglot init error', e); }
+                  };
+                  document.head.appendChild(s);
+                });
+              })();
+            `,
           }}
         />
-        <script src="https://cdn.weglot.com/weglot.min.js" async />
-
-        {/* Basis-Meta */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#ffffff" />
-
-        {/* Fallback OG (zusätzlich zu metadata.openGraph) */}
-        <meta property="og:image" content="/logo-1440w.webp" />
-        <meta property="og:image:type" content="image/webp" />
-        <meta property="og:image:width" content="1440" />
-        <meta property="og:image:height" content="960" />
       </head>
       <body
-        className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em]`}
+        className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-1 antialiased`}
       >
-        {/* Dynamische/PII-Bereiche im Code mit className="notranslate" markieren */}
         <Providers>{children}</Providers>
       </body>
     </html>
