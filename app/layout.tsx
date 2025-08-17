@@ -49,6 +49,42 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+        {/* ✅ NEU: Frühzeitiger Redirect auf Subdirectory, bevor React hydriert */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  // 1) Letzte Sprache ans <html>-Tag schreiben (kosmetisch)
+                  var stored = localStorage.getItem('weglot_language');
+                  if (stored && stored !== 'en') {
+                    document.documentElement.lang = stored;
+                  }
+
+                  // 2) Protected Pfade NICHT umleiten (Assets, APIs, etc.)
+                  var path = location.pathname;
+                  var protectedPrefixes = [
+                    '/api/', '/_next/', '/favicon', '/images/', '/sitemap'
+                  ];
+                  var isProtected = protectedPrefixes.some(function (p) {
+                    return path.startsWith(p);
+                  });
+
+                  // 3) Falls Sprache ≠ en und wir noch nicht auf /{lang} sind → harte Navigation
+                  if (stored && stored !== 'en' && !isProtected) {
+                    var targetPrefix = '/' + stored;
+                    var alreadyOnLang = (path === targetPrefix) || path.startsWith(targetPrefix + '/');
+                    if (!alreadyOnLang) {
+                      var rest = path + location.search + location.hash;
+                      location.replace(targetPrefix + rest.replace(/^\\//, '/'));
+                    }
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+
         {/* Weglot – NACH Hydration laden + Auswahl merken/anwenden */}
         <script
           dangerouslySetInnerHTML={{
