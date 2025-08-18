@@ -50,27 +50,6 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {/* Weglot – 1x sauber initialisieren */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function () {
-                window.WeglotConfig = {
-                  api_key: "${process.env.WEGLOT_API_KEY ?? ""}",
-                  dynamic: { enabled: true, observe: true, refreshOnLoad: true },
-                  exclude_selectors: ['.notranslate'],
-                  auto_switch: false
-                };
-                var s = document.createElement('script');
-                s.type = 'text/javascript';
-                s.async = true;
-                s.src = 'https://cdn.weglot.com/weglot.min.js';
-                document.head.appendChild(s);
-              })();
-            `,
-          }}
-        />
       </head>
       <body
         className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-1 antialiased`}
