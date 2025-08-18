@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import { Inter, Karla } from "next/font/google";
 import "./globals.css";
 import WeglotRefresh from "./WeglotRefresh";   // 👈 hinzugefügt
+import { Suspense } from "react";              // 👈 hinzugefügt
 
 const inter = Inter({
   weight: ["500", "600", "700"],
@@ -72,10 +73,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-1 antialiased`}
+        className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em>`}
       >
         <WeglotRefresh />   {/* 👈 direkt nach <body> */}
-        <Providers>{children}</Providers>
+        <Suspense fallback={null}>
+          <Providers>{children}</Providers>
+        </Suspense>
       </body>
     </html>
   );
