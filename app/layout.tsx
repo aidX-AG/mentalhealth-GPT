@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { Inter, Karla } from "next/font/google";
 import "./globals.css";
-import WeglotRefresh from "./WeglotRefresh";   // 👈 hinzugefügt
-import { Suspense } from "react";              // 👈 hinzugefügt
+import WeglotRefresh from "./WeglotRefresh";
+import { Suspense } from "react";
 
 const inter = Inter({
   weight: ["500", "600", "700"],
@@ -73,10 +73,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em>`}
+        className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-1 antialiased`}
       >
-        <WeglotRefresh />   {/* 👈 direkt nach <body> */}
         <Suspense fallback={null}>
+          <WeglotRefresh />
           <Providers>{children}</Providers>
         </Suspense>
       </body>
