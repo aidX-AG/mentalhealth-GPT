@@ -3,52 +3,64 @@
 import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
+declare global {
+  interface Window {
+    Weglot?: {
+      refresh?: () => void;
+      getCurrentLang?: () => string;
+      switchTo?: (lang: string) => void;
+    };
+  }
+}
+
+const WG = typeof window !== 'undefined' ? window.Weglot : undefined;
+
 export default function WeglotRefresh() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    // Zugriff auf Weglot defensiv, damit TS bis zum Typ-Schritt nicht meckert
-    const WG = (typeof window !== 'undefined') ? window.Weglot : undefined;
+    // 1) Language from URL (/de, /fr → else en)
+    const langFromPath =
+      pathname?.startsWith('/de') ? 'de' :
+      pathname?.startsWith('/fr') ? 'fr' : 'en';
 
-    // Debug-Helper nur in Dev
-    const debug = (msg: string) => {
-      if (process.env.NODE_ENV === 'development') {
-        try {
-          const lang = WG?.getCurrentLang?.();
-          // eslint-disable-next-line no-console
-          console.log(`[WeglotRefresh] ${msg}`, { path: typeof window !== 'undefined' ? window.location.pathname : '', lang });
-        } catch {}
+    // 2) Force Weglot to that lang (prevents EN override after hydration)
+    const forceLanguage = () => {
+      const current = WG?.getCurrentLang?.();
+      if (WG?.switchTo && langFromPath && current !== langFromPath) {
+        WG.switchTo(langFromPath);
       }
     };
 
-    // 1) schneller Refresh kurz nach Hydration
+    // 3) First quick refresh
     const t1 = setTimeout(() => {
-      try {
-        WG?.refresh?.();
-        debug('Erster Refresh (150ms)');
-      } catch {}
+      forceLanguage();
+      WG?.refresh?.();
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[WeglotRefresh] first refresh @150ms', { langFromPath, current: WG?.getCurrentLang?.() });
+      }
     }, 150);
 
-    // 2) Fallback-Refresh etwas später (für langsame Teile / dynamische DOM-Updates)
+    // 4) Fallback refresh (a bit later)
     const t2 = setTimeout(() => {
-      try {
-        WG?.refresh?.();
-        debug('Fallback Refresh (400ms)');
-
-        // <html lang> angleichen (kosmetisch, hilft SEO/Switcher)
-        const currentLang = WG?.getCurrentLang?.();
-        if (currentLang && typeof document !== 'undefined' && document.documentElement.lang !== currentLang) {
-          document.documentElement.lang = currentLang;
-        }
-      } catch {}
+      forceLanguage();
+      WG?.refresh?.();
+      // Sync <html lang>
+      const current = WG?.getCurrentLang?.();
+      if (current && document.documentElement.lang !== current) {
+        document.documentElement.lang = current;
+      }
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[WeglotRefresh] fallback refresh @400ms', { langFromPath, current });
+      }
     }, 400);
 
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
     };
-  }, [pathname, searchParams]); // bei Route- oder Query-Wechsel erneut refreshen
+  }, [pathname, searchParams]);
 
   return null;
 }
