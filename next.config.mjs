@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: 'export',        // statischer Export (SSG)
   images: {
-    unoptimized: true,
+    unoptimized: true,     // KEINE _next/image-Proxy-URLs, direkt /images/… nutzen
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
