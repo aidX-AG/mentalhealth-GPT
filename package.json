@@ -5,13 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "optimize-images": "bash ./scripts/optimize-images.sh",
     "i18n:codemod:dry": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts",
     "i18n:codemod:write": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write",
-    "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include 'components/YourFile.tsx'",
+    "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include",
     "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts"
   },
   "dependencies": {
@@ -31,6 +30,7 @@
     "@types/react-syntax-highlighter": "^15.5.6",
     "@types/scroll-lock": "^2.1.0",
     "core-js": "^3.45.0",
+    "encoding": "^0.1.13",
     "framer-motion": "^11.1.7",
     "i18next": "^25.3.2",
     "i18next-browser-languagedetector": "^8.2.0",
