@@ -78,9 +78,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-
       <body
-        className={`${karla.variable} ${inter.variable} bg-n-7 font-sans text-[1rem] leading-6 -tracking-[.01em] text-n-1 antialiased`}
+        className={`${karla.variable} ${inter.variable} bg-white text-n-7 dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}
       >
         <Suspense fallback={<GlobalLoading />}>
           <TxClientProvider locale={lang}>
