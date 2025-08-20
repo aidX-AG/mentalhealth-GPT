@@ -59,8 +59,23 @@ export default function RootLayout({
   const lang = params?.locale || "en";
 
   return (
-    <html lang={lang}>
+    <html>
       <head>
+        {/* Setze <html lang> früh basierend auf Pfad (/de, /fr) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                try {
+                  var seg = (location.pathname.split('/')[1]||'').toLowerCase();
+                  var l = (seg === 'de' || seg === 'fr') ? seg : 'en';
+                  document.documentElement.setAttribute('lang', l);
+                } catch(e){}
+              })();
+            `,
+          }}
+        />
+
         {/* SEO + OG Metadata (bewusst unverändert gelassen) */}
         <meta
           name="description"
@@ -79,7 +94,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
-        className={`${karla.variable} ${inter.variable} bg-white text-n-7 dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}
+        className={`${karla.variable} ${inter.variable} bg-white text-black dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}
       >
         <Suspense fallback={<GlobalLoading />}>
           <TxClientProvider locale={lang}>
