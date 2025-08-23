@@ -1,7 +1,4 @@
 #!/bin/bash
-# === FRONTEND DEPLOYMENT SCRIPT (safe & incremental) ===
-# Ziel: /opt/docker/nginx/html
-
 set -euo pipefail
 
 REPO="$HOME/git/frontend-git"
@@ -10,28 +7,19 @@ DEST="/opt/docker/nginx/html"
 echo "➡️  Gehe ins Repo …"
 cd "$REPO"
 
-# ── ENV aus .env.local laden (für TRANSIFEX_TOKEN/SECRET, etc.)
-if [ -f ".env.local" ]; then
-  # nur Zeilen KEY=VALUE ohne Kommentare exportieren
-  export $(grep -E '^[A-Z0-9_]+=' .env.local | xargs) || true
-fi
-
-# Optional: sicherstellen, dass TX‑Token vorhanden sind (falls build -> tx:pull nutzt)
-if grep -q '"tx:pull"' package.json; then
-  : "${TRANSIFEX_TOKEN:?TRANSIFEX_TOKEN fehlt (in .env.local oder Environment setzen)}"
-  : "${TRANSIFEX_SECRET:?TRANSIFEX_SECRET fehlt (in .env.local oder Environment setzen)}"
-fi
+# ⬅️ NEU: TRANSIFEX_* aus .env.local ins Environment laden
+export $(grep -E '^(TRANSIFEX_TOKEN|TRANSIFEX_SECRET)=' .env.local | xargs)
 
 echo "⬇️  Pull main …"
 git pull --ff-only origin main
 
 echo "📦 npm ci …"
-npm ci --no-audit --no-fund
+npm ci
 
-echo "⚙️  Build …"
-npm run build
+echo "⚙️  Build (inkl. tx:pull) …"
+npm run build   # package.json ruft intern `tx:pull` auf
 
-# Next.js (App Router) mit `output: 'export'` schreibt nach ./out.
+# Build-Output prüfen
 if [ ! -d "$REPO/out" ]; then
   echo "❌ Build-Ausgabe fehlt: $REPO/out existiert nicht."
   exit 1
@@ -46,18 +34,21 @@ sudo mkdir -p \
 echo "🚀 Sync Build (out/ → html/) mit --delete …"
 sudo rsync -av --delete --checksum --human-readable "$REPO/out/" "$DEST/"
 
-echo "🗣️  Sync Locales (inkrementell, ohne delete) …"
-# ⚠️ Bei dir liegen die TX-Dateien unter ./locales/*.json (nicht in public/)
+echo "🗣️  Sync Locales (inkrementell) …"
+# ⬅️ aus $REPO/locales (nicht public/)
 if [ -d "$REPO/locales" ]; then
-  # Als JSON-Files direkt neben die Site legen (vom Client lesbar via nginx-Route /locales/)
-  sudo rsync -av --checksum --human-readable "$REPO/locales/en.json" "$DEST/locales/en/" 2>/dev/null || true
-  sudo rsync -av --checksum --human-readable "$REPO/locales/de.json" "$DEST/locales/de/" 2>/dev/null || true
-  sudo rsync -av --checksum --human-readable "$REPO/locales/fr.json" "$DEST/locales/fr/" 2>/dev/null || true
+  sudo rsync -av --checksum --human-readable "$REPO/locales/en/" "$DEST/locales/en/" 2>/dev/null || true
+  sudo rsync -av --checksum --human-readable "$REPO/locales/de/" "$DEST/locales/de/" 2>/dev/null || true
+  sudo rsync -av --checksum --human-readable "$REPO/locales/fr/" "$DEST/locales/fr/" 2>/dev/null || true
+  # Fallback für flache Dateien (en.json/de.json/fr.json)
+  [ -f "$REPO/locales/en.json" ] && sudo cp -f "$REPO/locales/en.json" "$DEST/locales/en.json"
+  [ -f "$REPO/locales/de.json" ] && sudo cp -f "$REPO/locales/de.json" "$DEST/locales/de.json"
+  [ -f "$REPO/locales/fr.json" ] && sudo cp -f "$REPO/locales/fr.json" "$DEST/locales/fr.json"
 else
-  echo "ℹ️  Ordner ./locales nicht gefunden – Überspringe."
+  echo "ℹ️  Keine locales/ gefunden – Überspringe."
 fi
 
-echo "🖼️  Sync Images (inkrementell, ohne delete) …"
+echo "🖼️  Sync Images (inkrementell) …"
 if [ -d "$REPO/public/images" ]; then
   sudo rsync -av --checksum --human-readable "$REPO/public/images/" "$DEST/images/"
 else

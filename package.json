@@ -12,7 +12,7 @@
     "i18n:codemod:write": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write",
     "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include",
     "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts",
-    "tx:pull": "npx txjs-cli pull --token $TRANSIFEX_TOKEN --secret $TRANSIFEX_SECRET -f locales/ --locale de --locale fr"
+    "tx:pull": "npx txjs-cli pull --token $TRANSIFEX_TOKEN --secret $TRANSIFEX_SECRET -f locales/ --locale en --locale de_CH --locale fr_CH && bash -lc '[[ -f locales/de_CH.json ]] && cp -f locales/de_CH.json locales/de.json; [[ -f locales/fr_CH.json ]] && cp -f locales/fr_CH.json locales/fr.json'"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
