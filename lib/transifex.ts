@@ -1,15 +1,15 @@
 // lib/transifex.ts
-import { tx } from '@transifex/native';
+import { tx } from "@transifex/native";
 
 /**
- * Verfügbare Locales zentral verwalten (für Routing/SSR später nützlich).
+ * Verfügbare Locales aus .env.local
  */
-export const LOCALES = (process.env.TX_LOCALES || 'en,de,fr')
-  .split(',')
+export const LOCALES = (process.env.TX_AVAILABLE_LOCALES || "en,de,fr")
+  .split(",")
   .map((s) => s.trim())
   .filter(Boolean);
 
-export const DEFAULT_LOCALE = process.env.TX_DEFAULT_LOCALE || 'en';
+export const DEFAULT_LOCALE = process.env.TX_DEFAULT_LOCALE || "en";
 
 /**
  * Doppel-Init verhindern (HMR/SSR).
@@ -21,10 +21,13 @@ declare global {
 
 if (!globalThis.__tx_initialized__) {
   tx.init({
-    token: process.env.NEXT_PUBLIC_TX_PUBLIC_TOKEN || '', // nur Public Token im Frontend verwenden
-    // KEIN sourceLocale: wird von tx.init() nicht unterstützt
+    token: process.env.TRANSIFEX_TOKEN || "", // Public/Read Token aus .env.local
   });
   globalThis.__tx_initialized__ = true;
 }
 
+/**
+ * tx = gesamte API, t = Shortcut für Übersetzungen
+ */
 export { tx };
+export const { t } = tx;

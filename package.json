@@ -1,17 +1,18 @@
 {
-  "name": "brainwave",
+  "name": "aidX",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run tx:pull && next build",
     "start": "next start",
     "lint": "next lint",
     "optimize-images": "bash ./scripts/optimize-images.sh",
     "i18n:codemod:dry": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts",
     "i18n:codemod:write": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write",
     "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include",
-    "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts"
+    "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts",
+    "tx:pull": "npx txjs-cli pull --token $TRANSIFEX_TOKEN --secret $TRANSIFEX_SECRET -f locales/ --locale de --locale fr"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
@@ -21,7 +22,6 @@
     "@eslint/object-schema": "^2.1.6",
     "@headlessui/react": "^1.7.13",
     "@headlessui/tailwindcss": "^0.1.2",
-    "@transifex/cli": "^7.1.4",
     "@transifex/native": "^7.1.4",
     "@transifex/react": "^7.1.4",
     "@types/react-copy-to-clipboard": "^5.0.4",
@@ -58,6 +58,7 @@
   },
   "devDependencies": {
     "@rvxlab/tailwind-plugin-ios-full-height": "^1.1.0",
+    "@transifex/cli": "^7.1.4",
     "@types/change-case": "^0.0.30",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.19.10",

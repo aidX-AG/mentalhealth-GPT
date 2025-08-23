@@ -2,7 +2,7 @@ import UpdatesAndFaqPage from "@/templates/UpdatesAndFaqPage";
 import { loadMessages, makeT } from "@/lib/i18n-static";
 
 export default function Page() {
-  const msgs = loadMessages("en");
+  const msgs = loadMessages("fr");
   const t = makeT(msgs);
 
   return (
