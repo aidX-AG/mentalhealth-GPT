@@ -1,3 +1,8 @@
-export default function FrenchHome() {
-  return <h1>Bienvenue sur mentalhealthGPT</h1>;
+import PageView from "@/templates/HomePage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
+
+export default function Page() {
+  const messages = loadMessages("fr");
+  const t = makeT(messages);
+  return <PageView />;
 }

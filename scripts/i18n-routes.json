@@ -1,0 +1,24 @@
+{
+  "ApplicationsPage": "applications",
+  "AudioTranscriptionPage": "audio-transcription",
+  "CheckoutPage": "checkout",
+  "DiagnosisSupportPage": "diagnosis-support",
+  "DocumentationReportsPage": "documentation-reports",
+  "GenerationSocialsPostPage": "generation-socials-post",
+  "HomePage": "",
+  "PageListPage": "pagelist",
+  "PricingPage": "pricing",
+  "SignInPage": "sign-in",
+  "SupervisionTrainingPage": "supervision-training",
+  "ThanksPage": "thanks",
+  "TherapySupportPage": "therapy-support",
+  "UpdatesAndFaqPage": {
+    "route": "updates-and-faq",
+    "props": {
+      "title": "Updates & FAQ",
+      "subtitle": "Features, fixes & improvements.",
+      "tabs": ["Updates", "FAQ"]
+    }
+  },
+  "VideoAnalysisPage": "video-analysis"
+}
