@@ -12,3 +12,5 @@ locales/en.backup.*
 locales/en.backup.*
 i18n-key-mapping.work.csv
 tsconfig.tsbuildinfo
+# Transifex pulled files
+locales/*.json
