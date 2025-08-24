@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# .env.local ins Environment laden (nur falls vorhanden)
+if [ -f ".env.local" ]; then
+  export $(grep -E '^(TRANSIFEX_TOKEN|TRANSIFEX_SECRET)=' .env.local | xargs)
+fi
+
 echo "➡️  Pulling locales from Transifex …"
 
 # Prüfen, ob Token/Secret gesetzt sind

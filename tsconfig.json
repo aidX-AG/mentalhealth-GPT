@@ -24,7 +24,8 @@
       "@/styles/*": ["styles/*"],
       "@/constants/*": ["constants/*"],
       "@/mocks/*": ["mocks/*"],
-      "@/utils/*": ["utils/*"]
+      "@/utils/*": ["utils/*"],
+      "@/lib/*": ["lib/*"]
     },
 
     "plugins": [{ "name": "next" }]

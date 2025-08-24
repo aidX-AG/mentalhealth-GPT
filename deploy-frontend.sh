@@ -28,22 +28,21 @@ fi
 echo "📁 Stelle Zielstruktur sicher …"
 sudo mkdir -p \
   "$DEST" \
-  "$DEST/locales/en" "$DEST/locales/de" "$DEST/locales/fr" \
+  "$DEST/locales" \
   "$DEST/images"
 
 echo "🚀 Sync Build (out/ → html/) mit --delete …"
 sudo rsync -av --delete --checksum --human-readable "$REPO/out/" "$DEST/"
 
 echo "🗣️  Sync Locales (inkrementell) …"
-# ⬅️ aus $REPO/locales (nicht public/)
 if [ -d "$REPO/locales" ]; then
-  sudo rsync -av --checksum --human-readable "$REPO/locales/en/" "$DEST/locales/en/" 2>/dev/null || true
-  sudo rsync -av --checksum --human-readable "$REPO/locales/de/" "$DEST/locales/de/" 2>/dev/null || true
-  sudo rsync -av --checksum --human-readable "$REPO/locales/fr/" "$DEST/locales/fr/" 2>/dev/null || true
-  # Fallback für flache Dateien (en.json/de.json/fr.json)
-  [ -f "$REPO/locales/en.json" ] && sudo cp -f "$REPO/locales/en.json" "$DEST/locales/en.json"
-  [ -f "$REPO/locales/de.json" ] && sudo cp -f "$REPO/locales/de.json" "$DEST/locales/de.json"
-  [ -f "$REPO/locales/fr.json" ] && sudo cp -f "$REPO/locales/fr.json" "$DEST/locales/fr.json"
+  sudo rsync -av --checksum --human-readable \
+    --include="*.json" --exclude="*" \
+    "$REPO/locales/" "$DEST/locales/"
+
+  # optionale Aliase (falls nur fr_CH/de_CH geliefert werden)
+  [ -f "$DEST/locales/de_CH.json" ] && sudo cp -f "$DEST/locales/de_CH.json" "$DEST/locales/de.json" || true
+  [ -f "$DEST/locales/fr_CH.json" ] && sudo cp -f "$DEST/locales/fr_CH.json" "$DEST/locales/fr.json" || true
 else
   echo "ℹ️  Keine locales/ gefunden – Überspringe."
 fi
