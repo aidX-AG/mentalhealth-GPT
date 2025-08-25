@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import AudioTranscriptionPage from "@/templates/AudioTranscriptionPage";
+import PageView from "@/templates/AudioTranscriptionPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const AudioTranscription: NextPage = () => {
-    return <AudioTranscriptionPage />;
-};
-
-export default AudioTranscription;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}

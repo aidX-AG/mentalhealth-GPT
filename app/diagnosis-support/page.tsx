@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import DiagnosisSupportPage from "@/templates/DiagnosisSupportPage";
+import PageView from "@/templates/DiagnosisSupportPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const DiagnosisSupport: NextPage = () => {
-    return <DiagnosisSupportPage />;
-};
-
-export default DiagnosisSupport;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}

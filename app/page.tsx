@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import HomePage from "@/templates/HomePage";
+import PageView from "@/templates/HomePage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const Home: NextPage = () => {
-    return <HomePage />;
-};
-
-export default Home;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}

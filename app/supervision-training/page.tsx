@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import SupervisionTrainingPage from "@/templates/SupervisionTrainingPage";
+import PageView from "@/templates/SupervisionTrainingPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const SupervisionTraining: NextPage = () => {
-    return <SupervisionTrainingPage />;
-};
-
-export default SupervisionTraining;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}

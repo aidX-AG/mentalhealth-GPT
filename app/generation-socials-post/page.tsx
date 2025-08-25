@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import GenerationSocialsPostPage from "@/templates/GenerationSocialsPostPage";
+import PageView from "@/templates/GenerationSocialsPostPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const GenerationSocialsPost: NextPage = () => {
-    return <GenerationSocialsPostPage />;
-};
-
-export default GenerationSocialsPost;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}

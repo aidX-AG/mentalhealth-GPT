@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import PageListPage from "@/templates/PageListPage";
+import PageView from "@/templates/PageListPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const PageList: NextPage = () => {
-    return <PageListPage />;
-};
-
-export default PageList;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}

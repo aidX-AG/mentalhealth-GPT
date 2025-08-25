@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import SignInPage from "@/templates/SignInPage";
+import PageView from "@/templates/SignInPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const SignIn: NextPage = () => {
-    return <SignInPage />;
-};
-
-export default SignIn;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}

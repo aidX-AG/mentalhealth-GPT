@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import DocumentationReportsPage from "@/templates/DocumentationReportsPage";
+import PageView from "@/templates/DocumentationReportsPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const DocumentationReports: NextPage = () => {
-    return <DocumentationReportsPage />;
-};
-
-export default DocumentationReports;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}

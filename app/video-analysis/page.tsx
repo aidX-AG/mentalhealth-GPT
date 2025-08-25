@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import VideoAnalysisPage from "@/templates/VideoAnalysisPage";
+import PageView from "@/templates/VideoAnalysisPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const VideoAnalysis: NextPage = () => {
-    return <VideoAnalysisPage />;
-};
-
-export default VideoAnalysis;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}

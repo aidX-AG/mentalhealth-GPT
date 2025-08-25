@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import ApplicationsPage from "@/templates/ApplicationsPage";
+import PageView from "@/templates/ApplicationsPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
 
-const Applications: NextPage = () => {
-    return <ApplicationsPage />;
-};
-
-export default Applications;
+export default function Page() {
+  const messages = loadMessages("en");
+  const t = makeT(messages);
+  return <PageView />;
+}
