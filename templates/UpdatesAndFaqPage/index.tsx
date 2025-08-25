@@ -6,16 +6,47 @@ import Layout from "@/components/Layout";
 import Icon from "@/components/Icon";
 import Updates from "./Updates";
 import Faq from "./Faq";
-import { updates } from "@/mocks/updates";
-import { faqs } from "@/mocks/faq";
+
+type FaqItemType = {
+  id: string;
+  title: string;
+  content: string;
+  defaultOpen: boolean;
+};
+
+type UpdatesItem = {
+  id: string;
+  title: string;
+  date: string;
+  icon: string;
+  imageLight: string;
+  imageDark: string;
+  content: string;
+};
 
 type Props = {
   title: string;
   subtitle: string;
   tabs: string[];
+  faqItems: FaqItemType[];
+  updatesItems: UpdatesItem[];
+  ctaTitle: string;
+  ctaSubtitle: string;
+  ctaButtonLabel: string;
+  loadMoreLabel: string;
 };
 
-const UpdatesAndFaqPage = ({ title, subtitle, tabs }: Props) => {
+const UpdatesAndFaqPage = ({
+  title,
+  subtitle,
+  tabs,
+  faqItems,
+  updatesItems,
+  ctaTitle,
+  ctaSubtitle,
+  ctaButtonLabel,
+  loadMoreLabel,
+}: Props) => {
   const router = useRouter();
 
   return (
@@ -46,10 +77,15 @@ const UpdatesAndFaqPage = ({ title, subtitle, tabs }: Props) => {
 
             <Tab.Panels>
               <Tab.Panel>
-                <Updates items={updates} />
+                <Updates items={updatesItems} loadMoreLabel={loadMoreLabel} />
               </Tab.Panel>
               <Tab.Panel>
-                <Faq items={faqs} />
+                <Faq
+                  items={faqItems}
+                  ctaTitle={ctaTitle}
+                  ctaSubtitle={ctaSubtitle}
+                  ctaButtonLabel={ctaButtonLabel}
+                />
               </Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
