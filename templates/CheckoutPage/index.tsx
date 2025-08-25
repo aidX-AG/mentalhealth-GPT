@@ -1,7 +1,3 @@
-nano templates/CheckoutPage/index.tsx
-``]
-Ersetze den Inhalt durch:
-```tsx
 "use client";
 
 import Layout from "@/components/Layout";
