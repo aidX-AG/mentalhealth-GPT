@@ -3,12 +3,17 @@
 import Layout from "@/components/Layout";
 import Main from "./Main";
 
-const HomePage = () => {
-    return (
-        <Layout>
-            <Main />
-        </Layout>
-    );
+type Props = {
+  heroTitle: string;
+  heroSubtitle: string;
+};
+
+const HomePage = ({ heroTitle, heroSubtitle }: Props) => {
+  return (
+    <Layout>
+      <Main heroTitle={heroTitle} heroSubtitle={heroSubtitle} />
+    </Layout>
+  );
 };
 
 export default HomePage;
