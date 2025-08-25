@@ -12,33 +12,37 @@ import ScheduleResult from "@/components/ScheduleResult";
 
 import { socailsPost } from "@/mocks/socialsPost";
 
-const GenerationSocialsPostPage = () => {
-    const [message, setMessage] = useState<string>("");
+type Props = {
+  chatTitle: string;
+  promptContent: string;
+  promptTime: string;
+};
 
-    return (
-        <Layout>
-            <Chat title="Promotional content">
-                <Question
-                    content="Create promotional content for this post to share on social media with the link: https://dribbble.com/shots/17687623-Hiring-Platform-Mobile-App with link and hashtag for Twitter, Facebook"
-                    time="Just now"
-                />
-                <Answer loading />
-                <Answer time="Just now">
-                    <SocialsPost items={socailsPost} />
-                </Answer>
-                <Answer time="Just now">
-                    <SchedulePost />
-                </Answer>
-                <Answer time="Just now">
-                    <ScheduleResult />
-                </Answer>
-            </Chat>
-            <Message
-                value={message}
-                onChange={(e: any) => setMessage(e.target.value)}
-            />
-        </Layout>
-    );
+const GenerationSocialsPostPage = ({
+  chatTitle,
+  promptContent,
+  promptTime,
+}: Props) => {
+  const [message, setMessage] = useState<string>("");
+
+  return (
+    <Layout>
+      <Chat title={chatTitle}>
+        <Question content={promptContent} time={promptTime} />
+        <Answer loading />
+        <Answer time={promptTime}>
+          <SocialsPost items={socailsPost} />
+        </Answer>
+        <Answer time={promptTime}>
+          <SchedulePost />
+        </Answer>
+        <Answer time={promptTime}>
+          <ScheduleResult />
+        </Answer>
+      </Chat>
+      <Message value={message} onChange={(e: any) => setMessage(e.target.value)} />
+    </Layout>
+  );
 };
 
 export default GenerationSocialsPostPage;
