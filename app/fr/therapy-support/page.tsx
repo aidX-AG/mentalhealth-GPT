@@ -13,7 +13,7 @@ export default function Page() {
       noticeTextPrefix={t("🚧 The AI functionality for ")}
       featureName={t("Therapy Support")}
       noticeTextSuffix={t(" is currently under development. It will soon be available with specialized models for therapy planning, reflection, and evidence‑based suggestions.")}
-      contactCta={t("Want to support this feature or learn more? Email")}
+      contactCta={t("Want to support mentalhealthGPT or learn more? Email")}
       contactEmail="hello@aidx.ch"
     />
   );
