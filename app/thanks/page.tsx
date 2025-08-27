@@ -1,9 +1,9 @@
 import PageView from "@/templates/ThanksPage";
 import { loadMessages, makeT } from "@/lib/i18n-static";
+import { makeNavigation } from "@/constants/navigation";
 
 export default function Page() {
-  const messages = loadMessages("en");
-  const t = makeT(messages);
+  const t = makeT(loadMessages("en"));
 
   return (
     <PageView
@@ -13,6 +13,7 @@ export default function Page() {
       )}
       manageSubscriptionLabel={t("Manage subscription")}
       startNewChatLabel={t("Start new chat")}
+      navigationItems={makeNavigation(t)} // ✅ hinzufügen
     />
   );
 }
