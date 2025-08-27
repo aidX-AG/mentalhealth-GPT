@@ -4,13 +4,20 @@ import Link from "next/link";
 import Layout from "@/components/Layout";
 import Icon from "@/components/Icon";
 import Menu from "@/components/Menu";
-import { navigation } from "@/constants/navigation";
+
+type NavItem = {
+  title: string;
+  icon: string;
+  color: string;
+  url: string;
+};
 
 type Props = {
   title: string;
   subtitle: string;
   manageSubscriptionLabel: string;
   startNewChatLabel: string;
+  navigationItems: NavItem[]; // ← bereits übersetzt vom Server (Page-Komponente)
 };
 
 const ThanksPage = ({
@@ -18,6 +25,7 @@ const ThanksPage = ({
   subtitle,
   manageSubscriptionLabel,
   startNewChatLabel,
+  navigationItems,
 }: Props) => {
   return (
     <Layout smallSidebar hideRightSidebar>
@@ -28,12 +36,8 @@ const ThanksPage = ({
               <Icon className="w-12 h-12" name="check-thin" />
             </div>
 
-            <div className="mb-6 h2 2xl:h3 xl:h4 lg:text-center">
-              {title}
-            </div>
-            <div className="mb-8 body1 text-n-4 xl:body2 lg:text-center">
-              {subtitle}
-            </div>
+            <div className="mb-6 h2 2xl:h3 xl:h4 lg:text-center">{title}</div>
+            <div className="mb-8 body1 text-n-4 xl:body2 lg:text-center">{subtitle}</div>
 
             <div className="flex xl:block lg:flex lg:space-x-4 md:block md:space-x-0 md:space-y-3">
               <Link className="btn-stroke-light mr-3 xl:w-full xl:mr-0 xl:mb-4 lg:mb-0" href="/pricing">
@@ -45,7 +49,7 @@ const ThanksPage = ({
             </div>
           </div>
 
-          <Menu className="shrink-0 w-[27.875rem] lg:w-full lg:mt-10" items={navigation} />
+          <Menu className="shrink-0 w-[27.875rem] lg:w-full lg:mt-10" items={navigationItems} />
         </div>
       </div>
     </Layout>
