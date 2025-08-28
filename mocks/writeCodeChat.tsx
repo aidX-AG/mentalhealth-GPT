@@ -1,3 +1,5 @@
+import { getT } from "@/lib/i18n-runtime";
+const t = getT();
 const htmlCode = `<!DOCTYPE html>
 <html>
     <head>
@@ -18,7 +20,6 @@ const htmlCode = `<!DOCTYPE html>
         <script src="script.js"></script>
     </body>
 </html>`;
-
 const cssCode = `.welcome-message {
     text-align: center;
     margin-top: 50px;
@@ -68,31 +69,25 @@ input, select {
     border-radius: 5px;
     cursor: pointer;
 }`;
-
 const jsCode = `const form = document.querySelector('form');
 const cancelButton = document.querySelector('.cancel-button');
         
 cancelButton.addEventListener('click', () => {
     form.reset();
 });`;
-
-export const writeCodeChat = [
-    {
-        id: "0",
-        title: "HTML",
-        language: "html",
-        value: htmlCode,
-    },
-    {
-        id: "1",
-        title: "CSS",
-        language: "css",
-        value: cssCode,
-    },
-    {
-        id: "2",
-        title: "JS",
-        language: "javascript",
-        value: jsCode,
-    },
-];
+export const writeCodeChat = [{
+  id: "0",
+  title: t("HTML"),
+  language: "html",
+  value: htmlCode
+}, {
+  id: "1",
+  title: t("CSS"),
+  language: "css",
+  value: cssCode
+}, {
+  id: "2",
+  title: t("JS"),
+  language: "javascript",
+  value: jsCode
+}];
