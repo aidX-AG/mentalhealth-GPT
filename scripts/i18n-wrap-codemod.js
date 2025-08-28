@@ -2,11 +2,12 @@
 // i18n-wrap-codemod.js
 //
 // Zweck
-//  - Wrapt statische Texte in .ts/.tsx (ohne "use client") mit t("key")
+//  - Wrapt statische Texte in .ts/.tsx (ohne "use client") mit t("EN-Text")
 //  - Fügt (falls fehlend) am Dateianfang ein:
 //       import { getT } from "@/lib/i18n-runtime";
 //       const t = getT();
-//  - Schreibt Transifex-Keys in i18n/<relativer_dateiname>.keys.ts (eindeutig!)
+//  - Schreibt Transifex-Keys in i18n/<relativer_pfad_ohne_ext>.keys.ts
+//    (eindeutig; z.B. i18n/constants__settings.keys.ts)
 //
 // WICHTIG
 //  - Client-Komponenten (mit "use client") werden ausgelassen
@@ -19,7 +20,6 @@
 
 const fs = require("fs");
 const path = require("path");
-const crypto = require("crypto");
 const { parse } = require("@babel/parser");
 const traverse = require("@babel/traverse").default;
 const generate = require("@babel/generator").default;
@@ -41,13 +41,6 @@ const SKIP_FILE = (file) =>
 function hasUseClientHeader(src) {
   const first = src.slice(0, 200);
   return /(^|\n)\s*["']use client["'];?/.test(first);
-}
-
-function keyFromText(sourceFile, text) {
-  const base = path.basename(sourceFile, path.extname(sourceFile));
-  const clean = String(text).replace(/\s+/g, " ").trim();
-  const hash = crypto.createHash("md5").update(clean).digest("hex").substring(0, 10);
-  return `${base}.${hash}`;
 }
 
 function isStringLiteralLike(node) {
@@ -133,17 +126,18 @@ function processFile(file) {
 
   const ast = parse(src, { sourceType: "module", plugins: ["jsx", "typescript"] });
 
-  const keys = new Map(); // key -> original
+  // EN-Quelltexte als Source in TX → wir sammeln alle Originaltexte de-duplicated
+  const phrases = new Set();
   let changed = false;
 
-  const addKey = (text) => {
-    const key = keyFromText(file, text);
-    if (!keys.has(key)) keys.set(key, text);
-    return key;
+  const recordPhrase = (text) => {
+    const clean = String(text).replace(/\s+/g, " ").trim();
+    if (clean) phrases.add(clean);
+    return clean;
   };
 
   traverse(ast, {
-    // 1) JSXText: <div>Hallo Welt</div>  ->  <div>{t("key")}</div>
+    // 1) JSXText: <div>Hello</div>  ->  <div>{t("Hello")}</div>
     JSXText(path) {
       const raw = path.node.value;
       const text = raw.replace(/\s+/g, " ").trim();
@@ -156,14 +150,14 @@ function processFile(file) {
         if (t.isIdentifier(callee, { name: "t" })) return;
       }
 
-      const key = addKey(text);
+      const phrase = recordPhrase(text);
       path.replaceWith(
-        t.jsxExpressionContainer(t.callExpression(t.identifier("t"), [t.stringLiteral(key)]))
+        t.jsxExpressionContainer(t.callExpression(t.identifier("t"), [t.stringLiteral(phrase)]))
       );
       changed = true;
     },
 
-    // 2) JSXAttribute: title="…" / placeholder="…"
+    // 2) JSXAttribute: title="…" / placeholder="…" / alt="…" etc.
     JSXAttribute(path) {
       const name = path.node.name;
       if (!t.isJSXIdentifier(name)) return;
@@ -180,9 +174,9 @@ function processFile(file) {
       const text = literalToString(val);
       if (!text || looksLikeCodeOrURL(text)) return;
 
-      const key = addKey(text);
+      const phrase = recordPhrase(text);
       path.node.value = t.jsxExpressionContainer(
-        t.callExpression(t.identifier("t"), [t.stringLiteral(key)])
+        t.callExpression(t.identifier("t"), [t.stringLiteral(phrase)])
       );
       changed = true;
     },
@@ -207,8 +201,8 @@ function processFile(file) {
       const text = literalToString(val);
       if (!text || looksLikeCodeOrURL(text)) return;
 
-      const k = addKey(text);
-      path.node.value = t.callExpression(t.identifier("t"), [t.stringLiteral(k)]);
+      const phrase = recordPhrase(text);
+      path.node.value = t.callExpression(t.identifier("t"), [t.stringLiteral(phrase)]);
       changed = true;
     },
   });
@@ -222,18 +216,21 @@ function processFile(file) {
   // Datei überschreiben
   fs.writeFileSync(file, code, "utf8");
 
-  // Keys-Datei schreiben: i18n/<basename>.keys.ts
-  const base = path.basename(file, path.extname(file));
-  const keysFile = path.join("i18n", `${base}.keys.ts`);
-  let out = `// Auto-generated TX keys for ${path.basename(file)}. Nicht zur Laufzeit importieren.\n`;
-  out += `// txjs-cli sammelt hier die t("…") Aufrufe ein.\n\n`;
+  // Keys-Datei schreiben: i18n/<relativer_pfad_ohne_ext>.keys.ts
+  const rel = path.relative(process.cwd(), file); // z.B. "constants/settings.tsx"
+  const norm = rel.replace(/[\\/]/g, "__").replace(/\.(ts|tsx)$/, ""); // "constants__settings"
+  const keysFile = path.join("i18n", `${norm}.keys.ts`);
+
+  let out = `// Auto-generated TX keys for ${rel}. Nicht zur Laufzeit importieren.\n`;
+  out += `// txjs-cli sammelt hier die t("…") Aufrufe ein.\n`;
+  out += `export {};\n\n`; // macht Datei zum Modul → kein 't'-Redeclare über mehrere Dateien
   out += `const t = (s: string): string => s;\n\n`;
 
-  const sorted = Array.from(keys.entries()).sort(([a], [b]) => a.localeCompare(b));
-  for (const [k, v] of sorted) {
-    const safe = String(v).replace(/\*\//g, "*\\/");
+  const sorted = Array.from(phrases).sort((a, b) => a.localeCompare(b));
+  for (const phrase of sorted) {
+    const safe = String(phrase).replace(/\*\//g, "*\\/");
     out += `// ${safe}\n`;
-    out += `t("${k}");\n`;
+    out += `t(${JSON.stringify(phrase)});\n`;
   }
 
   fs.mkdirSync(path.dirname(keysFile), { recursive: true });
