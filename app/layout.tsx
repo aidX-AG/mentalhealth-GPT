@@ -7,6 +7,10 @@ import { Suspense } from "react";
 import TxClientProvider from "./TxClientProvider";
 import GlobalLoading from "./GlobalLoading";
 
+// ✅ i18n (Server-Runtime)
+import { loadMessages, makeT } from "@/lib/i18n-static";
+import { setT } from "@/lib/i18n-runtime";
+
 const inter = Inter({
   weight: ["500", "600", "700"],
   subsets: ["latin"],
@@ -56,12 +60,17 @@ export default function RootLayout({
   children: React.ReactNode;
   params?: { locale?: string };
 }>) {
+  // Root ist EN
   const lang = params?.locale || "en";
 
+  // ✅ Server-seitig die Übersetzungsfunktion für EN setzen
+  const t = makeT(loadMessages("en"));
+  setT(t);
+
   return (
-    <html>
+    <html lang={lang}>
       <head>
-        {/* Setze <html lang> früh basierend auf Pfad (/de, /fr) */}
+        {/* Fallback-Script, falls jemand direkt /de oder /fr unter diesem Layout öffnet */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
