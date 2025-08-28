@@ -10,19 +10,19 @@ import GlobalLoading from "./GlobalLoading";
 // ✅ i18n (Server-Runtime)
 import { loadMessages, makeT } from "@/lib/i18n-static";
 import { setT } from "@/lib/i18n-runtime";
-
+import { getT } from "@/lib/i18n-runtime";
+const t = getT();
 const inter = Inter({
   weight: ["500", "600", "700"],
   subsets: ["latin"],
   display: "block",
-  variable: "--font-inter",
+  variable: "--font-inter"
 });
-
 const karla = Karla({
   weight: ["400", "700"],
   subsets: ["latin"],
   display: "block",
-  variable: "--font-karla",
+  variable: "--font-karla"
 });
 
 // Dynamische Metadaten (mit hreflang-Alternates)
@@ -30,35 +30,34 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: {
       default: "mentalhealthGPT",
-      template: "%s | mentalhealthGPT",
+      template: "%s | mentalhealthGPT"
     },
-    description:
-      "Expert AI for mental health – secure, private, and scientifically validated",
+    description: t("Expert AI for mental health – secure, private, and scientifically validated"),
     alternates: {
       languages: {
         de: "/de",
         fr: "/fr",
-        en: "/",
-      },
+        en: "/"
+      }
     },
     openGraph: {
-      title: "mentalhealthGPT",
-      description:
-        "Expert AI for mental health – secure, private, and scientifically validated",
+      title: t("mentalhealthGPT"),
+      description: t("Expert AI for mental health – secure, private, and scientifically validated"),
       url: "https://www.mentalhealth-gpt.ch",
       type: "website",
-      images: ["/images/logo.webp"],
+      images: ["/images/logo.webp"]
     },
-    metadataBase: new URL("https://www.mentalhealth-gpt.ch"),
+    metadataBase: new URL("https://www.mentalhealth-gpt.ch")
   };
 }
-
 export default function RootLayout({
   children,
-  params,
+  params
 }: Readonly<{
   children: React.ReactNode;
-  params?: { locale?: string };
+  params?: {
+    locale?: string;
+  };
 }>) {
   // Root ist EN
   const lang = params?.locale || "en";
@@ -66,14 +65,11 @@ export default function RootLayout({
   // ✅ Server-seitig die Übersetzungsfunktion für EN setzen
   const t = makeT(loadMessages("en"));
   setT(t);
-
-  return (
-    <html lang={lang}>
+  return <html lang={lang}>
       <head>
         {/* Fallback-Script, falls jemand direkt /de oder /fr unter diesem Layout öffnet */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+        <script dangerouslySetInnerHTML={{
+        __html: `
               (function(){
                 try {
                   var seg = (location.pathname.split('/')[1]||'').toLowerCase();
@@ -81,36 +77,26 @@ export default function RootLayout({
                   document.documentElement.setAttribute('lang', l);
                 } catch(e){}
               })();
-            `,
-          }}
-        />
+            `
+      }} />
 
         {/* SEO + OG Metadata (bewusst unverändert gelassen) */}
-        <meta
-          name="description"
-          content="Expert AI for mental health – secure, private, and scientifically validated"
-        />
-        <meta property="og:title" content="mentalhealthGPT" />
-        <meta
-          property="og:description"
-          content="Expert AI for mental health – secure, private, and scientifically validated"
-        />
-        <meta property="og:image" content="/images/logo.webp" />
+        <meta name={t("description")} content={t("Expert AI for mental health – secure, private, and scientifically validated")} />
+        <meta property="og:title" content={t("mentalhealthGPT")} />
+        <meta property="og:description" content={t("Expert AI for mental health – secure, private, and scientifically validated")} />
+        <meta property="og:image" content={t("/images/logo.webp")} />
         <meta property="og:url" content="https://www.mentalhealth-gpt.ch" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:type" content={t("website")} />
+        <meta name={t("twitter:card")} content={t("summary_large_image")} />
+        <meta name={t("theme-color")} content={t("#ffffff")} />
+        <meta name={t("viewport")} content={t("width=device-width, initial-scale=1")} />
       </head>
-      <body
-        className={`${karla.variable} ${inter.variable} bg-white text-black dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}
-      >
+      <body className={`${karla.variable} ${inter.variable} bg-white text-black dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}>
         <Suspense fallback={<GlobalLoading />}>
           <TxClientProvider locale={lang}>
             <Providers>{children}</Providers>
           </TxClientProvider>
         </Suspense>
       </body>
-    </html>
-  );
+    </html>;
 }
