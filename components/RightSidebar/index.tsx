@@ -32,7 +32,8 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
     <>
       <div
         className={twMerge(
-          `absolute top-0 right-0 bottom-0 flex flex-col w-[22.5rem] pt-[8rem] pb-24 bg-n-1 rounded-l-2xl border-l border-n-3 dark:bg-n-7`,
+          // ❌ border-l border-n-3 entfernt (hat den unerwünschten Rand erzeugt)
+          `absolute top-0 right-0 bottom-0 flex flex-col w-[22.5rem] pt-[8rem] pb-24 bg-n-1 rounded-l-2xl dark:bg-n-7`,
           className
         )}
         aria-hidden={!visible}
@@ -57,9 +58,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
               onClick={() =>
                 toast((toastObj) => (
                   <Notify className="md:flex-col md:items-center md:px-10" iconDelete>
-                    <div className="ml-3 mr-6 h6 md:mx-0 md:my-2">
-                      {t("Clear all chat history?")}
-                    </div>
+                    <div className="ml-3 mr-6 h6 md:mx-0 md:my-2">{t("Clear all chat history?")}</div>
                     <div className="flex justify-center">
                       <button
                         className="btn-stroke-light btn-medium md:min-w-[6rem]"
@@ -78,9 +77,10 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                 ))
               }
             >
+              {/* ❌ Icon-Namen nicht übersetzen */}
               <Icon
                 className="w-5 h-5 fill-n-4 transition-colors group-hover:fill-accent-1"
-                name={t("trash")}
+                name="trash"
               />
               <div className="absolute min-w-[8rem] top-1/2 -translate-y-1/2 right-full mr-2 px-2 py-1 rounded bg-n-1 caption2 text-n-4 shadow-popover pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
                 {t("Delete")}
@@ -95,7 +95,8 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
 
         <div className="absolute left-0 right-0 bottom-0 p-6">
           <Link className="btn-blue w-full" href="/">
-            <Icon name={t("plus")} />
+            {/* ❌ Icon-Namen nicht übersetzen */}
+            <Icon name="plus" />
             <span>{t("New chat")}</span>
           </Link>
         </div>
