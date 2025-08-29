@@ -1,3 +1,4 @@
+// components/RightSidebar/ChatItem/index.tsx
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import Link from "next/link";
@@ -19,12 +20,12 @@ const ChatItem = ({ item }: ChatItemProps) => {
 
   const handleClick = () => {
     setActive(true);
-    toast(() => (
+    toast((toastInst) => (
       <Notify iconCheck>
         <div className="mr-6 ml-3 h6">{t("1 chat archived")}</div>
         <button
           className="btn-blue btn-medium ml-3"
-          onClick={() => toast.dismiss()}
+          onClick={() => toast.dismiss(toastInst.id)}
         >
           {t("Undo")}
         </button>
@@ -35,37 +36,29 @@ const ChatItem = ({ item }: ChatItemProps) => {
   return (
     <div className="relative mt-2">
       <button
-        className={twMerge(
-          "absolute z-1 top-3 left-3 flex justify-center items-center border-2 border-n-4/50 w-5.5 h-5.5 rounded-md",
-          active ? "bg-primary-1 border-primary-1" : "bg-transparent"
-        )}
+        className={`absolute z-1 top-3 left-3 flex justify-center items-center border-2 border-n-4/50 w-5.5 h-5.5 rounded-md ${
+          active ? "bg-primary-1 border-primary-1" : ""
+        }`}
         onClick={handleClick}
-        aria-label={t("Archive chat")}
         type="button"
       >
         <Icon
-          className={twMerge(
-            "w-4 h-4 fill-n-1 opacity-0 transition-opacity",
+          className={`w-4 h-4 fill-n-1 opacity-0 transition-opacity ${
             active && "opacity-100"
-          )}
+          }`}
           name="check"
         />
       </button>
 
       <Link className="block" href={item.url}>
         <div
-          className={twMerge(
-            "group py-3 pl-12 pr-3 rounded-xl transition-colors hover:bg-n-3/75 dark:hover:bg-n-5",
+          className={`group py-3 pl-12 pr-3 rounded-xl transition-colors hover:bg-n-3/75 dark:hover:bg-n-5 ${
             active && "bg-n-3/75 dark:bg-n-5"
-          )}
+          }`}
         >
-          <div className="base1 font-semibold dark:text-n-1">
-            {item.title}
-          </div>
+          <div className="base1 font-semibold dark:text-n-1">{item.title}</div>
 
-          <div className="mt-1 truncate caption1 text-n-4">
-            {item.content}
-          </div>
+          <div className="mt-1 truncate caption1 text-n-4">{item.content}</div>
 
           {item.image && (
             <div className="relative mt-4 mb-4 aspect-[1.5]">
@@ -83,7 +76,7 @@ const ChatItem = ({ item }: ChatItemProps) => {
             <Users
               items={item.users}
               borderColor={twMerge(
-                "border-n-1 transition-colors group-hover:border-n-3"
+                `border-n-1 transition-colors group-hover:border-n-3`
               )}
             />
             <div className="caption2 text-n-4/75">{item.time}</div>
