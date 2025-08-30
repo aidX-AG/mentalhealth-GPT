@@ -1,15 +1,21 @@
 // lib/i18n-runtime.ts
-// Einfache globale Runtime für serverseitige Übersetzungen.
-// getT() liefert eine Identitätsfunktion, falls setT(t) noch nicht aufgerufen wurde.
-// ⚠️ In Next-SSR wird dieses Modul gecached. Wir setzen t pro Layout/Locale neu.
+// Globale Runtime für Übersetzungen (Server + Client)
 
-let currentT: ((s: string) => string) | null = null;
+type TFn = (s: string) => string;
 
-export function setT(fn: (s: string) => string) {
+let currentT: TFn = (s) => s; // Default: Identität
+
+export function setT(fn: TFn) {
   currentT = fn;
 }
 
-// Fallback: Identität -> UI bleibt sichtbar, auch wenn setT() noch nicht gesetzt ist
-export function getT(): (s: string) => string {
-  return currentT ?? ((s: string) => s);
+export function getT(): TFn {
+  if (typeof window === "undefined") {
+    // Serverseitig → benutze currentT
+    return (s: string) => currentT(s);
+  }
+
+  // Clientseitig → hole das t, das TxClientProvider auf window.__t gelegt hat
+  const wt = (window as any).__t as TFn | undefined;
+  return (s: string) => (wt ? wt(s) : s);
 }

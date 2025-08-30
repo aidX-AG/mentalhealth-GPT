@@ -1,11 +1,21 @@
-// app/TxClientProvider.tsx
 'use client';
 
 import { PropsWithChildren, useEffect, useRef } from 'react';
-import { TXProvider } from '@transifex/react';
+import { TXProvider, useTranslate } from '@transifex/react';
 import { tx, LOCALES, DEFAULT_LOCALE } from '../lib/transifex';
 
 type Props = PropsWithChildren<{ locale?: string }>;
+
+function TBridge() {
+  // t aus dem Transifex-React-Kontext holen
+  const t = useTranslate();
+  // global für getT() im Browser verfügbar machen
+  useEffect(() => {
+    (window as any).__t = t;
+  }, [t]);
+
+  return null;
+}
 
 export default function TxClientProvider({ children, locale }: Props) {
   const last = useRef<string>();
@@ -24,12 +34,18 @@ export default function TxClientProvider({ children, locale }: Props) {
       }
     });
 
-    // 2) <html lang/dir> synchron halten (SEO, a11y)
+    // 2) <html lang/dir> synchron halten
     if (typeof document !== 'undefined') {
       document.documentElement.lang = target;
       document.documentElement.dir = target === 'ar' ? 'rtl' : 'ltr';
     }
   }, [locale]);
 
-  return <TXProvider instance={tx}>{children}</TXProvider>;
+  return (
+    <TXProvider instance={tx}>
+      {/* stellt window.__t bereit, damit getT() im Client funktioniert */}
+      <TBridge />
+      {children}
+    </TXProvider>
+  );
 }
