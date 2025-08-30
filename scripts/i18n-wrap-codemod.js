@@ -205,16 +205,31 @@ function processFile(file) {
       path.node.value = t.callExpression(t.identifier("t"), [t.stringLiteral(phrase)]);
       changed = true;
     },
+
+    // 4) NEU: vorhandene t("…")-Aufrufe IMMER einsammeln, auch wenn nichts geändert wird
+    CallExpression(path) {
+      const callee = path.node.callee;
+      if (t.isIdentifier(callee, { name: "t" })) {
+        const arg = path.node.arguments?.[0];
+        if (t.isStringLiteral(arg)) {
+          recordPhrase(arg.value);
+        } else if (t.isTemplateLiteral(arg) && arg.expressions.length === 0) {
+          recordPhrase(arg.quasis.map(q => q.value.cooked ?? q.value.raw).join(""));
+        }
+      }
+    },
   });
 
-  if (!changed) return { changed: false };
+  // Nur Source-Datei überschreiben, wenn wir wirklich etwas geändert haben
+  if (changed) {
+    ensureImportGetT(ast);
+    const { code } = generate(ast, { jsescOption: { minimal: true } });
+    fs.writeFileSync(file, code, "utf8");
+  }
 
-  ensureImportGetT(ast);
-
-  const { code } = generate(ast, { jsescOption: { minimal: true } });
-
-  // Datei überschreiben
-  fs.writeFileSync(file, code, "utf8");
+  // NEU/ÄNDERUNG: Keys-Datei auch dann schreiben, wenn nichts geändert wurde,
+  // aber Phrasen gefunden wurden (z.B. manuell bereits vorhandene t("…")).
+  if (phrases.size === 0 && !changed) return { changed: false };
 
   // Keys-Datei schreiben: i18n/<relativer_pfad_ohne_ext>.keys.ts
   const rel = path.relative(process.cwd(), file); // z.B. "constants/settings.tsx"
@@ -236,7 +251,7 @@ function processFile(file) {
   fs.mkdirSync(path.dirname(keysFile), { recursive: true });
   fs.writeFileSync(keysFile, out, "utf8");
 
-  return { changed: true, keysFile };
+  return { changed, keysFile };
 }
 
 // --- main ---
