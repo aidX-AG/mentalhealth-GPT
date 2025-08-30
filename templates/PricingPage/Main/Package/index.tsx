@@ -34,7 +34,7 @@ const Package = ({
       </div>
       <div className="mb-6 base1 font-semibold">{item.description}</div>
       <div className="mb-2">
-        <span className="mr-2 h2">{t("$")}{plan ? item.priceYear : item.priceMonth}</span>
+        <span className="mr-2 h2">{t("CHF ")}{plan ? item.priceYear : item.priceMonth}</span>
         <span className={twMerge(`h4 text-n-4/50 ${item.popular && "text-n-4"}`)}>{t("/")}{plan ? perYearLabel : perMonthLabel}
         </span>
       </div>
