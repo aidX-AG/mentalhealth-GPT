@@ -6,7 +6,7 @@ const t = (s: string): string => s;
 
 // /
 t("/");
-// $
-t("$");
 // check-circle
 t("check-circle");
+// CHF
+t("CHF");
