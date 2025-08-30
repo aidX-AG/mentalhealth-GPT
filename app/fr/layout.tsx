@@ -13,14 +13,31 @@ export default function FrenchLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Französisch setzen
-  const t = makeT(loadMessages("fr"));
+  // 1) Wörterbuch laden & T für SSR setzen (Server)
+  const dict = loadMessages("fr");
+  const t = makeT(dict);
   setT(t);
+
+  // 2) Wörterbuch für den Client einbetten (damit getT() im Browser FR liefert)
+  const inlineI18N = `
+    (function () {
+      try {
+        window.__I18N__ = { locale: "fr", dict: ${JSON.stringify(dict)} };
+        document.documentElement.setAttribute("lang", "fr");
+        document.documentElement.setAttribute("dir", "ltr");
+      } catch (e) {}
+    })();
+  `;
 
   return (
     <html lang="fr">
+      <head>
+        {/* Übergibt das Wörterbuch an den Client */}
+        <script dangerouslySetInnerHTML={{ __html: inlineI18N }} />
+      </head>
       <body>
         <Suspense fallback={<GlobalLoading />}>
+          {/* Hält TX/Locale im Client in Sync */}
           <TxClientProvider locale="fr">
             <Providers>{children}</Providers>
           </TxClientProvider>
