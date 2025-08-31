@@ -6,12 +6,7 @@ import Icon from "@/components/Icon";
 import Image from "@/components/Image";
 import AddFile from "./AddFile";
 import Files from "./Files";
-// ❌ entfernt: getT() (serverseitige Mini-Runtime)
-// import { getT } from "@/lib/i18n-runtime";
-// const t = getT();
-
-// ✅ statt dessen: Runtime-Übersetzer aus dem Transifex-React-Context
-import { useT } from "@transifex/react";
+import { useT } from "@transifex/react"; // ✅ Runtime-Übersetzer
 
 type MessageProps = {
   value: any;
@@ -32,16 +27,19 @@ const Message = ({
   const stylesButton = "group absolute right-3 bottom-2 w-10 h-10";
 
   return (
-    <div className="relative z-5 px-10 pb-6 before:absolute before:-top-6 before:left-0 before:right-6 before:h-6 before:bg-gradient-to-b before:from-n-1 before:to-transparent dark:before:from-n-7">
+    <div className="relative z-5 px-10 pb-6 before:absolute before:-top-6 before:left-0 before:right-6 before:h-6">
       <div className="relative z-2 border-2 border-n-3 rounded-xl overflow-hidden dark:border-n-5">
         {(image || document) && <Files image={image} document={document} />}
 
         <div className="relative flex items-center min-h-[3.5rem] px-16 text-0">
-          <AddFile />
+          {/* NEU: Wrapper verhindert Überdecken durch das Textarea */}
+          <div className="shrink-0 z-10">
+            <AddFile />
+          </div>
 
-          {/* einzig relevante Änderung: placeholder jetzt über t(...) */}
+          {/* einzig relevante Änderung: placeholder jetzt über t(...), plus z-0 */}
           <TextareaAutosize
-            className="w-full py-3 bg-transparent body2 text-n-7 outline-none resize-none placeholder:text-n-4/75 dark:text-n-1 dark:placeholder:text-n-4"
+            className="z-0 w-full py-3 bg-transparent body2 text-n-7 outline-none resize-none placeholder:text-n-4/75 dark:text-n-1 dark:placeholder:text-n-4"
             maxRows={5}
             autoFocus
             value={value}
@@ -65,7 +63,7 @@ const Message = ({
         </div>
       </div>
 
-      {/* 
+      {/*
       <div className="relative mt-2 px-5 py-1 bg-n-3 rounded-xl text-0 dark:bg-n-7">
         <Image src="/images/audio-1.svg" width={614} height={39} alt="Audio" />
       </div>
