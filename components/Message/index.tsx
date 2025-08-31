@@ -27,12 +27,12 @@ const Message = ({
       <div className="relative z-2 border-2 border-n-3 rounded-xl overflow-hidden dark:border-n-5">
         {(image || document) && <Files image={image} document={document} />}
         <div className="relative flex items-center min-h-[3.5rem] px-16 text-0">
-          {/* ⬇️ Icon bekommt fixen Platz und höheren z-index */}
+          {/* ⬇️ Fix: AddFile-Button mit fixem Platz und hohem z-index */}
           <div className="shrink-0 mr-3 relative z-10">
             <AddFile />
           </div>
 
-          {/* ⬇️ Textarea nimmt den verbleibenden Platz, überlappt nicht */}
+          {/* Textarea füllt restlichen Platz, überlappt AddFile nicht */}
           <TextareaAutosize
             className="flex-1 min-w-0 z-0 w-full py-3 bg-transparent body2 text-n-7 outline-none resize-none placeholder:text-n-4/75 dark:text-n-1 dark:placeholder:text-n-4"
             maxRows={5}
@@ -58,7 +58,18 @@ const Message = ({
           )}
         </div>
       </div>
-      {/* optionaler Audio-/Fehler-Block bleibt auskommentiert */}
+
+      {/* 
+      <div className="relative mt-2 px-5 py-1 bg-n-3 rounded-xl text-0 dark:bg-n-7">
+        <Image src="/images/audio-1.svg" width={614} height={39} alt="Audio" />
+      </div>
+      */}
+
+      {/*
+      <div className="relative mt-2 px-4.5 py-2.5 rounded-xl border-2 border-accent-1 text-accent-1 md:py-1">
+        Sorry, voice recognition failed. Please try again or contact support.
+      </div>
+      */}
     </div>
   );
 };
