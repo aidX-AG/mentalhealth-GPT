@@ -24,22 +24,27 @@ const Message = ({
   document,
 }: MessageProps) => {
   const t = useT(); // ⬅️ holt die aktuelle Sprache aus TxClientProvider
+
+  // Sende-Button rechts (Position bleibt)
   const stylesButton = "group absolute right-3 bottom-2 w-10 h-10";
 
   return (
-    <div className="relative z-5 px-10 pb-6 before:absolute before:-top-6 before:left-0 before:right-6 before:h-6">
+    <div className="relative z-5 px-10 pb-6 before:absolute before:-top-6 before:left-0 before:right-6 before:h-6 before:bg-gradient-to-b before:from-transparent before:to-transparent">
       <div className="relative z-2 border-2 border-n-3 rounded-xl overflow-hidden dark:border-n-5">
         {(image || document) && <Files image={image} document={document} />}
 
-        <div className="relative flex items-center min-h-[3.5rem] px-16 text-0">
-          {/* NEU: Wrapper verhindert Überdecken durch das Textarea */}
-          <div className="shrink-0 z-10">
+        {/* Eingabezeile */}
+        {/* Wichtig: relative + horizontaler Innenabstand reserviert Platz für + links (pl-12) und Senden rechts (pr-16) */}
+        <div className="relative flex items-center min-h-[3.5rem] pl-12 pr-16 text-0">
+          {/* + AddFile fest verankert, liegt NICHT mehr unter dem Textarea */}
+          <div className="pointer-events-auto absolute left-3 bottom-2 z-20">
             <AddFile />
           </div>
 
-          {/* einzig relevante Änderung: placeholder jetzt über t(...), plus z-0 */}
+          {/* Textarea bekommt keine eigene linke/rechte Padding mehr – das macht der Container.
+              So kollidiert es nicht mit dem + (links) und dem Sendebutton (rechts). */}
           <TextareaAutosize
-            className="z-0 w-full py-3 bg-transparent body2 text-n-7 outline-none resize-none placeholder:text-n-4/75 dark:text-n-1 dark:placeholder:text-n-4"
+            className="w-full py-3 bg-transparent body2 text-n-7 outline-none resize-none placeholder:text-n-4/75 dark:text-n-1 dark:placeholder:text-n-4"
             maxRows={5}
             autoFocus
             value={value}
@@ -47,9 +52,9 @@ const Message = ({
             placeholder={placeholder ?? t("Ask mentalhealthGPT anything")}
           />
 
+          {/* Buttons rechts: Mikrofon wenn leer, sonst Senden */}
           {value === "" ? (
             <button className={stylesButton}>
-              {/* Icon-Namen sind Bezeichner → NICHT übersetzen */}
               <Icon
                 className="fill-n-4 transition-colors group-hover:fill-primary-1"
                 name="recording"
