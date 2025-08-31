@@ -1,12 +1,17 @@
+'use client'; // Client-Komponente: läuft im Browser, nutzt TX-Context (useT)
+
 import { ChangeEventHandler } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import Icon from "@/components/Icon";
 import Image from "@/components/Image";
 import AddFile from "./AddFile";
 import Files from "./Files";
-import { getT } from "@/lib/i18n-runtime";
+// ❌ entfernt: getT() (serverseitige Mini-Runtime)
+// import { getT } from "@/lib/i18n-runtime";
+// const t = getT();
 
-const t = getT();
+// ✅ statt dessen: Runtime-Übersetzer aus dem Transifex-React-Context
+import { useT } from "@transifex/react";
 
 type MessageProps = {
   value: any;
@@ -23,6 +28,7 @@ const Message = ({
   image,
   document,
 }: MessageProps) => {
+  const t = useT(); // ⬅️ holt die aktuelle Sprache aus TxClientProvider
   const stylesButton = "group absolute right-3 bottom-2 w-10 h-10";
 
   return (
@@ -33,28 +39,27 @@ const Message = ({
         <div className="relative flex items-center min-h-[3.5rem] px-16 text-0">
           <AddFile />
 
-          {/* EINZIGE Änderung: placeholder jetzt übersetzbar per t(...) */}
+          {/* einzig relevante Änderung: placeholder jetzt über t(...) */}
           <TextareaAutosize
             className="w-full py-3 bg-transparent body2 text-n-7 outline-none resize-none placeholder:text-n-4/75 dark:text-n-1 dark:placeholder:text-n-4"
             maxRows={5}
             autoFocus
             value={value}
             onChange={onChange}
-            placeholder={placeholder || t("Ask mentalhealthGPT anything")}
+            placeholder={placeholder ?? t("Ask mentalhealthGPT anything")}
           />
 
           {value === "" ? (
-            <button className={`${stylesButton}`}>
+            <button className={stylesButton}>
+              {/* Icon-Namen sind Bezeichner → NICHT übersetzen */}
               <Icon
                 className="fill-n-4 transition-colors group-hover:fill-primary-1"
-                name={t("recording")}
+                name="recording"
               />
             </button>
           ) : (
-            <button
-              className={`${stylesButton} bg-primary-1 rounded-xl transition-colors hover:brightness-110`}
-            >
-              <Icon className="fill-n-1" name={t("arrow-up")} />
+            <button className={`${stylesButton} bg-primary-1 rounded-xl transition-colors hover:brightness-110`}>
+              <Icon className="fill-n-1" name="arrow-up" />
             </button>
           )}
         </div>
