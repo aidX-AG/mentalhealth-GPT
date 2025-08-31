@@ -1,12 +1,14 @@
+'use client'; // ⬅️ NEU: macht diese Komponente clientseitig
+
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
-import { useT } from "@transifex/react"; // ✅ Client-Translator hier benutzen
+import { useT } from "@transifex/react";
 
 type NavigationType = {
-  title: string;     // bleibt bestehen, wird aber als Fallback genutzt
-  icon: string;      // wir mappen über icon → stabile IDs
+  title: string;
+  icon: string;
   color: string;
   url?: string;
   onClick?: () => void;
@@ -21,7 +23,7 @@ export default function Navigation({ visible, items }: NavigationProps) {
   const pathname = usePathname();
   const t = useT();
 
-  // 🔸 Kleiner Mapper: icon → Übersetzungs-Key
+  // Stabile Zuordnung über 'icon' → immer die richtigen TX-Keys
   const labelFor = (item: NavigationType) => {
     switch (item.icon) {
       case "chat":     return t("Chats");
@@ -29,7 +31,7 @@ export default function Navigation({ visible, items }: NavigationProps) {
       case "card":     return t("Manage subscription");
       case "barcode":  return t("Updates & FAQ");
       case "settings": return t("Settings");
-      default:         return item.title; // Fallback: was vom Parent kam
+      default:         return item.title; // Fallback
     }
   };
 
@@ -54,18 +56,14 @@ export default function Navigation({ visible, items }: NavigationProps) {
           <button
             key={index}
             onClick={item.onClick}
-            className={`flex items-center w-full h-12 base2 font-semibold text-n-3/75 rounded-lg transition-colors hover:text-n-1 ${
-              visible ? "px-3" : "px-5"
-            }`}
+            className={`flex items-center w-full h-12 base2 font-semibold text-n-3/75 rounded-lg transition-colors hover:text-n-1 ${visible ? "px-3" : "px-5"}`}
           >
             <Icon className={item.color} name={item.icon} />
             {!visible && <div className="ml-5">{labelFor(item)}</div>}
 
-            {/* Shortcut-Hinweis NUR für Search, ohne Übersetzung */}
+            {/* Shortcut-Hinweis NUR für Search, nicht lokalisieren */}
             {item.icon === "search" && !visible && (
-              <div className="ml-auto px-2 rounded-md bg-n-4/50 caption1 font-semibold text-n-3">
-                ⌘ F
-              </div>
+              <div className="ml-auto px-2 rounded-md bg-n-4/50 caption1 font-semibold text-n-3">⌘ F</div>
             )}
           </button>
         )
