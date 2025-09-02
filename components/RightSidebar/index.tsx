@@ -1,3 +1,15 @@
+// components/RightSidebar/index.tsx
+// --------------------------------------------------------------------------
+// [i18n-path-prefixing] v1.0.1 — 2025-09-02
+// CHANGELOG:
+// - v1.0.1: NUR den "New chat"-Button auf LocaleLink umgestellt,
+//           href bleibt "/" (LocaleLink präfixt automatisch /de|/fr|/en).
+//           Sonst NICHTS geändert (Imports/Struktur/API bleiben).
+// WICHTIG (Images):
+// - Bitte Bildpfade absolut referenzieren: src="/images/..."
+//   (kein "./images" oder "images/..."), damit EN nicht ausfällt.
+// --------------------------------------------------------------------------
+
 import { useState } from "react";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
@@ -15,6 +27,9 @@ import { chatHistory } from "@/mocks/chatHistory";
 
 import { getT } from "@/lib/i18n-runtime";
 const t = getT();
+
+// [NEU] LocaleLink ergänzen (nur für den "New chat"-Button unten)
+import LocaleLink from "@/components/LocaleLink"; // ⬅️ neu
 
 type RightSidebarProps = {
     className?: string;
@@ -106,10 +121,12 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                     )}
                 </div>
                 <div className="absolute left-0 right-0 bottom-0 p-6">
-                    <Link className="btn-blue w-full" href="/">
+                    {/* [GEÄNDERT] Nur hier: Link -> LocaleLink, href bleibt "/" 
+                        Ergebnis: automatische Weiterleitung auf "/{locale}/" */}
+                    <LocaleLink className="btn-blue w-full" href="/">
                         <Icon name="plus" />
                         <span>{t("New chat")}</span>
-                    </Link>
+                    </LocaleLink>
                 </div>
             </div>
             <ModalShareChat

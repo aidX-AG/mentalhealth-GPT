@@ -19,6 +19,13 @@ import { twMerge } from "tailwind-merge";
 // ✅ Laufzeit-i18n: Texte aus Transifex-Context holen
 import { useT } from "@transifex/react";
 
+/** Aktives Locale aus <html lang> ermitteln (Fallback 'en') */
+const getActiveLocale = (): "de" | "fr" | "en" => {
+  if (typeof document === "undefined") return "en";
+  const lang = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
+  return (["de", "fr", "en"] as const).includes(lang as any) ? (lang as any) : "en";
+};
+
 type LeftSidebarProps = {
   value: boolean;
   setValue?: (v: boolean) => void;
@@ -33,6 +40,7 @@ const LeftSidebar = ({
   visibleRightSidebar
 }: LeftSidebarProps) => {
   const t = useT();
+  const locale = getActiveLocale();
 
   const [visibleSearch, setVisibleSearch] = useState<boolean>(false);
   const [visibleSettings, setVisibleSettings] = useState<boolean>(false);
@@ -58,7 +66,7 @@ const LeftSidebar = ({
       title: t("Chats"),
       icon: "chat",
       color: "fill-accent-2",
-      url: "/",
+      url: `/${locale}`,
     },
     {
       title: t("Search"),
@@ -70,13 +78,13 @@ const LeftSidebar = ({
       title: t("Manage subscription"),
       icon: "card",
       color: "fill-accent-4",
-      url: "/pricing",
+      url: `/${locale}/pricing`,
     },
     {
       title: t("Updates & FAQ"),
       icon: "barcode",
       color: "fill-accent-1",
-      url: "/updates-and-faq",
+      url: `/${locale}/updates-and-faq`,
     },
     {
       title: t("Settings"),
