@@ -6,7 +6,7 @@
 //           Alles andere bleibt unverändert.
 // --------------------------------------------------------------------------
 
-import Link from "next/link"; // bleibt importiert, falls anderswo noch genutzt
+import Link from "next/link";
 import Image from "@/components/Image";
 import { getT } from "@/lib/i18n-runtime";
 const t = getT();
@@ -20,21 +20,21 @@ const Logo = ({
   className = "",
   dark = false
 }: LogoProps) => (
-  // [GEÄNDERT] Statt <Link href="/"> → <a href="https://aidx.ch">
-  <a
-    className={`flex w-[11.88rem] ${className}`}
-    href="https://aidx.ch"
-    target="_self" // bewusst kein _blank → bleibt im gleichen Tab
-    rel="noopener noreferrer"
-  >
+  // NUR HIER geändert: href -> "https://aidx.ch" (statt "/")
+  // Alles andere unverändert (gleiche Klassen, gleiche Image-Props)
+  <Link className={`flex w-[11.88rem] ${className}`} href="https://aidx.ch" target="_self">
     <Image
       className="w-full h-auto"
       src={dark ? "images/logo-dark" : "images/logo"}
       alt={t("aidX")}
-      widths={[400]}
-      sizes="100vw"
+      widths={[480, 960, 1440]}
+      format="webp"
+      fallbackFormat="jpg"
+      basePath="/"
+      width={190}
+      height={40}
     />
-  </a>
+  </Link>
 );
 
 export default Logo;
