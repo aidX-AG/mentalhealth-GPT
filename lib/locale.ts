@@ -1,14 +1,17 @@
 // lib/locale.ts
-// v1.1 — 2025-09-02
-// - EN nie prefixen (EN = Root, kein /en/)
-// - Externe/Hash/Mailto/Tel/Javascript-Links unverändert durchlassen
-// - Idempotent: bereits /de|/fr bleibt wie es ist
+// --------------------------------------------------------------------------
+// [locale-utils] v1.2.0 — 2025-09-02
+// CHANGELOG:
+// - v1.2.0: EN bekommt KEIN Prefix (/en) mehr. EN bleibt Root "/".
+//           Fix für statisches Hosting, damit Links wie /pricing in EN
+//           nicht auf /en/pricing zeigen.
+// --------------------------------------------------------------------------
 
 export const SUPPORTED_LOCALES = ["de", "fr", "en"] as const;
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "en";
 
-/** Client-only: nimmt <html lang> als Quelle (setzen wir in TxClientProvider / layout.tsx) */
+/** Client-only: nimmt <html lang> als Quelle (setzen wir in TxClientProvider) */
 export function getClientLocale(): Locale {
   if (typeof document !== "undefined") {
     const lang = (document.documentElement.getAttribute("lang") || "").toLowerCase();
@@ -17,37 +20,22 @@ export function getClientLocale(): Locale {
   return DEFAULT_LOCALE;
 }
 
-function isExternalish(path: string): boolean {
-  return (
-    /^(https?:)?\/\//i.test(path) ||
-    path.startsWith("#") ||
-    path.startsWith("mailto:") ||
-    path.startsWith("tel:") ||
-    path.startsWith("javascript:")
-  );
-}
-
-/** Fügt dem Pfad den aktuellen Locale-Prefix hinzu (idempotent, EN = kein Prefix). */
+/** Fügt dem Pfad den aktuellen Locale-Prefix hinzu (idempotent). */
 export function withLocalePath(path: string, locale: Locale): string {
-  if (!path) return locale === "en" ? "/" : `/${locale}`;
+  // Normalize eingehenden Pfad
+  const raw = path || "/";
+  const normalized = raw.startsWith("/") ? raw : `/${raw}`;
 
-  // normalisieren (führenden Slash sicherstellen)
-  const clean = path.startsWith("/") ? path : `/${path}`;
+  // Wenn schon ein Locale-Präfix vorhanden ist, unverändert lassen
+  const firstSeg = normalized.replace(/^\/+/, "").split("/")[0];
+  if (SUPPORTED_LOCALES.includes(firstSeg as Locale)) return normalized;
 
-  // externe/sonder-Links nicht anfassen
-  if (isExternalish(clean)) return path;
+  // ⚠️ EN ist Root, daher KEIN Präfix für EN
+  if (locale === "en") return normalized === "/"
+    ? "/"          // root bleibt root
+    : normalized;  // z.B. "/pricing" bleibt "/pricing"
 
-  // bereits mit Locale?
-  const seg = clean.replace(/^\//, "").split("/")[0];
-  if (SUPPORTED_LOCALES.includes(seg as Locale)) return clean;
-
-  // EN nie prefixen (EN = Root)
-  if (locale === "en") {
-    return clean; // z.B. "/pricing" bleibt "/pricing"
-  }
-
-  // Root speziell
-  if (clean === "/") return `/${locale}/`;
-
-  return `/${locale}${clean}`;
+  // Für DE/FR präfixen
+  if (normalized === "/") return `/${locale}/`;
+  return `/${locale}${normalized}`;
 }
