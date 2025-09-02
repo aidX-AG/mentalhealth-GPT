@@ -1,11 +1,11 @@
 // components/RightSidebar/index.tsx
 // --------------------------------------------------------------------------
-// [i18n-path-prefixing] v1.0.2 — 2025-09-02
+// [i18n-path-prefixing] v1.0.3 — 2025-09-02
 // CHANGELOG:
 // - v1.0.1: "New chat" auf LocaleLink umgestellt.
-// - v1.0.2: [NEU] <LangSwitcher /> in Topbar eingebaut.
-//           [NEU] ChatHistory-Items bekommen locale-präfixte URLs,
-//                 ohne ChatItem selbst zu ändern.
+// - v1.0.2: <LangSwitcher /> in Topbar eingebaut.
+// - v1.0.3: LangSwitcher wieder entfernt (Topbar bleibt ohne Sprachumschalter).
+//           Alle anderen Änderungen bleiben (LocaleLink, locale-prefixed URLs).
 // --------------------------------------------------------------------------
 
 import { useState } from "react";
@@ -27,11 +27,10 @@ import { getT } from "@/lib/i18n-runtime";
 const t = getT();
 
 // [NEU] LocaleLink für Buttons/Links
-import LocaleLink from "@/components/LocaleLink"; // ⬅️ neu
-// [NEU] Switcher
-import LangSwitcher from "@/components/LangSwitcher"; // ⬅️ neu
+import LocaleLink from "@/components/LocaleLink"; // bleibt
+// LangSwitcher wurde entfernt
 // [NEU] Prefix-Helper für ChatHistory-Links
-import { getClientLocale, withLocalePath } from "@/lib/locale"; // ⬅️ neu
+import { getClientLocale, withLocalePath } from "@/lib/locale"; // bleibt
 
 type RightSidebarProps = {
     className?: string;
@@ -47,7 +46,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
         toast.dismiss(to.id);
     };
 
-    // [NEU] aktuelle Locale aus <html lang>
+    // aktuelle Locale aus <html lang>
     const locale = getClientLocale(); // "de" | "fr" | "en"
 
     return (
@@ -62,8 +61,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                 <div className="absolute top-0 left-0 right-0 flex justify-end items-center h-18 px-9 border-b border-n-3 lg:pr-18 md:pr-16 dark:border-n-5">
                     <Notifications items={notifications} />
                     <Profile />
-                    {/* [NEU] Sprachumschalter sichtbar in der Topbar */}
-                    <LangSwitcher /> {/* ⬅️ neu */}
+                    {/* LangSwitcher wurde entfernt */}
                     <button
                         className="btn-dark btn-medium"
                         onClick={() => setVisibleModal(true)}
@@ -124,8 +122,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                     {clean ? (
                         <ChatEmpty />
                     ) : (
-                        // [GEÄNDERT] URL pro Item locale-stabil überschreiben,
-                        // ohne ChatItem selbst zu ändern
+                        // URL pro Item locale-stabil überschreiben
                         chatHistory.map((x) => (
                             <ChatItem
                                 item={{
@@ -138,7 +135,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                     )}
                 </div>
                 <div className="absolute left-0 right-0 bottom-0 p-6">
-                    {/* bleibt: New chat → LocaleLink, href "/" (LocaleLink präfixt selbst) */}
+                    {/* New chat → LocaleLink, href "/" (LocaleLink präfixt selbst) */}
                     <LocaleLink className="btn-blue w-full" href="/">
                         <Icon name="plus" />
                         <span>{t("New chat")}</span>

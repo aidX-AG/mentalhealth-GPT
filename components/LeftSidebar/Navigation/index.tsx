@@ -1,7 +1,9 @@
 // components/LeftSidebar/Navigation/index.tsx
 // ----------------------------------------------------------------------------
-// [i18n-path-prefixing] v1.0.1 — 2025-09-02
+// [i18n-path-prefixing] v1.0.2 — 2025-09-02
 // CHANGELOG:
+// - v1.0.2: href via withLocalePath(...) normalisiert (DE/FR bleiben im Prefix,
+//           EN bleibt Root). Sonst NICHTS geändert.
 // - v1.0.1: Locale-bewusste Navigation via LocaleLink (nur Ergänzungen)
 //           + Active-State-Vergleich gegen mit Locale gepräfixten Pfad
 //           + Keine sonstigen Strukturänderungen
@@ -58,7 +60,7 @@ const Navigation = ({ visible, items }: NavigationProps) => {
       {items.map((item, index) =>
         item.url ? (
           // [GEÄNDERT: nur Komponente] Link -> LocaleLink
-          //   href bleibt unverändert ("/", "/pricing", ...); Prefixing übernimmt LocaleLink automatisch.
+          //   href jetzt VORAB normalisiert ("/de/...", "/fr/..." bzw. EN = Root)
           <LocaleLink
             className={twMerge(
               `flex items-center h-12 base2 font-semibold text-n-3/75 rounded-lg transition-colors hover:text-n-1 ${
@@ -69,7 +71,7 @@ const Navigation = ({ visible, items }: NavigationProps) => {
                 "text-n-1 bg-gradient-to-l from-[#323337] to-[rgba(70,79,111,0.3)] shadow-[inset_0px_0.0625rem_0_rgba(255,255,255,0.05),0_0.25rem_0.5rem_0_rgba(0,0,0,0.1)]"
               } ${visible ? "px-3" : "px-5"}`
             )}
-            href={item.url}
+            href={withLocalePath(item.url, locale)} // ⬅️ EINZIGE FUNKTIONALE ÄNDERUNG
             key={index}
           >
             <Icon className={item.color} name={item.icon} />
