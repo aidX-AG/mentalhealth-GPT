@@ -1,9 +1,10 @@
 // components/LeftSidebar/Profile/index.tsx
 // --------------------------------------------------------------------------
-// [profile-lang-switcher] v1.0.3 — 2025-09-02
+// [profile-lang-switcher] v1.0.4 — 2025-09-04
 // CHANGELOG:
-// - v1.0.3: Nur <LangSwitcher /> anzeigen und zentrieren.
-//           Avatar/Email/Badge komplett entfernt. Sonst nichts geändert.
+// - v1.0.4: LangSwitcher erhält prop `stack` abhängig von `visible`,
+//           damit die Buttons im kollabierten Zustand vertikal gestapelt sind.
+//           Sonst NICHTS geändert.
 // --------------------------------------------------------------------------
 
 import LangSwitcher from "@/components/LangSwitcher";
@@ -17,7 +18,8 @@ const Profile = ({ visible }: ProfileProps) => (
     <div className={`${!visible && "p-2.5 bg-n-6 rounded-xl"}`}>
       {/* Switcher exakt wie bisher, nur zentriert */}
       <div className={`w-full ${!visible ? "mt-2" : ""} flex justify-center`}>
-        <LangSwitcher />
+        {/* EINZIGE Änderung: stack abhängig vom Sidebar-Status */}
+        <LangSwitcher stack={!!visible} />
       </div>
     </div>
   </div>
