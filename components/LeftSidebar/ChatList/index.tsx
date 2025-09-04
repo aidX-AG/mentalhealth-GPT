@@ -1,10 +1,10 @@
 // components/LeftSidebar/ChatList/index.tsx
 // --------------------------------------------------------------------------
-// [chatlist-inert] v1.0.0 — 2025-09-02
+// [chatlist-inert] v1.0.1 — 2025-09-04
 // CHANGELOG:
+// - v1.0.1: Aktiver Feld-Hintergrund auskommentiert (nur Text darf highlighten).
 // - v1.0.0: Chatlisten-Einträge sind Platzhalter (kein Link/Navigation).
-//           Alles andere (Styling, Active-State, Counter, Modal) unverändert.
-//           Link-Import bleibt bestehen für minimales Diff.
+//           Alles andere unverändert. Link-Import bleibt für minimales Diff.
 // --------------------------------------------------------------------------
 
 import { useState } from "react";
@@ -61,7 +61,7 @@ const ChatList = ({ visible, items }: ChatListProps) => {
           >
             <Disclosure.Panel className={`${visible && "px-2"}`}>
               {items.map((item) => (
-                // [GEÄNDERT] Statt <Link ... href={item.url}> jetzt nur Platzhalter-<div>
+                // Platzhalter-Row (kein Link)
                 <div
                   key={item.id}
                   role="presentation"
@@ -69,11 +69,12 @@ const ChatList = ({ visible, items }: ChatListProps) => {
                   className={twMerge(
                     `flex items-center w-full h-12 rounded-lg text-n-3/75 base2 font-semibold transition-colors hover:text-n-1 ${
                       visible ? "px-3" : "px-5"
-                    } ${
-                      // Active-State bleibt (falls pathname==item.url), rein visuell
-                      pathname === item.url &&
-                      "text-n-1 bg-gradient-to-l from-[#323337] to-[rgba(80,62,110,0.29)]"
-                    }`
+                    }`,
+                    // ✅ Nur Text highlighten, NICHT den Hintergrund
+                    pathname === item.url && "text-n-1"
+                    // ⬇️ früherer Feld-Highlight-Hintergrund (für später aufgehoben)
+                    // pathname === item.url &&
+                    // "text-n-1 bg-gradient-to-l from-[#323337] to-[rgba(80,62,110,0.29)]"
                   )}
                 >
                   <div className="flex justify-center items-center w-6 h-6">
