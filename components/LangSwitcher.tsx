@@ -1,6 +1,5 @@
 // components/LangSwitcher.tsx
-// v1.1 — Schriftfarbe fixiert: immer weiß, unabhängig vom Theme
-
+// v1.2 — Schriftfarbe fixiert (immer weiß) + optional Stack im Collapsed-Sidebar-Modus
 "use client";
 
 type Lang = "de" | "fr" | "en";
@@ -16,9 +15,9 @@ function go(lang: Lang) {
   }
 }
 
-export default function LangSwitcher() {
+export default function LangSwitcher({ stack = false }: { stack?: boolean }) {
   return (
-    <div className="flex gap-2">
+    <div className={stack ? "flex flex-col gap-2" : "flex gap-2"}>
       <button
         className="btn-stroke-light btn-small text-white"
         onClick={() => go("de")}
