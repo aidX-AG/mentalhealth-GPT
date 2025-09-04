@@ -1,10 +1,11 @@
 // components/LeftSidebar/ChatList/index.tsx
 // --------------------------------------------------------------------------
-// [chatlist-inert] v1.0.1 — 2025-09-04
+// [chatlist-inert] v1.0.2 — 2025-09-04
 // CHANGELOG:
-// - v1.0.1: Aktiver Feld-Hintergrund auskommentiert (nur Text darf highlighten).
+// - v1.0.2: Aktiven TEXT-Highlight entfernt (nur Hover). Feld-Hintergrund bleibt
+//           weiterhin auskommentiert wie in v1.0.1.
+// - v1.0.1: Aktiver Feld-Hintergrund auskommentiert (nur Text durfte highlighten).
 // - v1.0.0: Chatlisten-Einträge sind Platzhalter (kein Link/Navigation).
-//           Alles andere unverändert. Link-Import bleibt für minimales Diff.
 // --------------------------------------------------------------------------
 
 import { useState } from "react";
@@ -69,10 +70,10 @@ const ChatList = ({ visible, items }: ChatListProps) => {
                   className={twMerge(
                     `flex items-center w-full h-12 rounded-lg text-n-3/75 base2 font-semibold transition-colors hover:text-n-1 ${
                       visible ? "px-3" : "px-5"
-                    }`,
-                    // ✅ Nur Text highlighten, NICHT den Hintergrund
-                    pathname === item.url && "text-n-1"
-                    // ⬇️ früherer Feld-Highlight-Hintergrund (für später aufgehoben)
+                    }`
+                    // ⬇️ v1.0.1: aktiver Text-Highlight (entfernt)
+                    // pathname === item.url && "text-n-1"
+                    // ⬇️ früherer Feld-Highlight-Hintergrund (bleibt aus)
                     // pathname === item.url &&
                     // "text-n-1 bg-gradient-to-l from-[#323337] to-[rgba(80,62,110,0.29)]"
                   )}
