@@ -1,12 +1,14 @@
 // components/Menu/index.tsx
 // --------------------------------------------------------------------------
-// [menu-locale] v1.0.0 — 2025-09-02
+// [menu-locale] v1.0.1 — 2025-09-04
 // CHANGELOG:
-// - Verwende LocaleLink statt Link, damit Kacheln die aktuelle Sprache im Pfad halten.
-// - Sonst keine Logikänderung (nur Formatierung/Lesbarkeit).
+// - Behalte LocaleLink (locale-stabile Links).
+// - Stelle die ursprüngliche Typografie wieder her: große Schrift via `h6`,
+//   keine feste Textfarbe (damit Light/Dark korrekt wechselt).
+// - Sonst KEINE weiteren Änderungen.
 // --------------------------------------------------------------------------
 
-import LocaleLink from "@/components/LocaleLink"; // ⬅️ NEU: locale-stabiler Link
+import LocaleLink from "@/components/LocaleLink";
 import Icon from "@/components/Icon";
 
 export type MenuItem = {
@@ -28,21 +30,21 @@ const Menu = ({ className, items }: MenuProps) => {
         <LocaleLink
           key={index}
           href={item.url} // LocaleLink präfixt /de|/fr automatisch; EN bleibt Root
-          className="group flex items-center mb-5 p-3.5 border border-n-3 rounded-2xl transition-colors hover:border-n-4 dark:border-n-5"
+          className="group flex items-center mb-5 p-3.5 border border-n-3 rounded-xl h6 transition-all hover:border-transparent hover:shadow-[0_0_1rem_0.25rem_rgba(0,0,0,0.04),0px_2rem_1.5rem_-1rem_rgba(0,0,0,0.12)] last:mb-0 2xl:p-2.5 lg:p-3.5 dark:border-n-5 dark:hover:border-n-7 dark:hover:bg-n-7"
         >
           <div className="relative flex justify-center items-center w-15 h-15 mr-6">
             <div
               className="absolute inset-0 opacity-20 rounded-xl"
               style={{ backgroundColor: item.color }}
             />
-            <Icon className="relative z-10" fill={item.color} name={item.icon} />
+            <Icon className="relative z-1" fill={item.color} name={item.icon} />
           </div>
 
-          <span className="base2 font-semibold text-n-1">{item.title}</span>
+          {item.title}
 
           <Icon
-            className="ml-auto fill-n-4 transition-colors group-hover:fill-n-7 dark:group-hover:fill-n-1"
-            name="arrow-right"
+            className="ml-auto fill-n-4 transition-colors group-hover:fill-n-7 dark:group-hover:fill-n-4"
+            name="arrow-next"
           />
         </LocaleLink>
       ))}
