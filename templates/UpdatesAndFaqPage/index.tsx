@@ -1,3 +1,13 @@
+// templates/UpdatesAndFaqPage/index.tsx
+// -----------------------------------------------------------------------------
+// [updates-faq] v1.1.0 — 2025-09-06
+// CHANGELOG:
+// - v1.1.0: Scroll-Fix: eigener Wrapper <div className="min-h-screen overflow-y-auto">
+//           damit die Seite unabhängig vom Layout-Viewport immer scrollbar bleibt.
+//           (Keine weiteren UI-/Logik-Änderungen.)
+// - v1.0.0: Initiale Portierung in das i18n-Layout, Tabs: Updates / FAQ.
+// -----------------------------------------------------------------------------
+
 "use client";
 
 import { Tab } from "@headlessui/react";
@@ -51,44 +61,55 @@ const UpdatesAndFaqPage = ({
 
   return (
     <Layout hideRightSidebar>
-      <div className="p-20 2xl:px-10 md:pt-6 md:px-6 md:pb-10">
-        <button
-          className="hidden absolute top-6 right-6 w-10 h-10 border-2 border-n-4/25 rounded-full text-0 transition-colors hover:border-transparent hover:bg-n-4/25 md:block"
-          onClick={() => router.back()}
-        >
-          <Icon className="fill-n-4" name="close" />
-        </button>
+      {/* 
+        Scroll-Container
+        ----------------
+        min-h-screen    → streckt die inhaltliche Höhe auf volle Viewport-Höhe
+        overflow-y-auto → aktiviert vertikales Scrollen für den Seiteninhalt
+        Wichtig: Nur dieser Wrapper ist neu; alles darunter unverändert.
+      */}
+      <div className="min-h-screen overflow-y-auto">
+        <div className="p-20 2xl:px-10 md:pt-6 md:px-6 md:pb-10">
+          {/* Close-Button (nur mobil sichtbar, unverändert) */}
+          <button
+            className="hidden absolute top-6 right-6 w-10 h-10 border-2 border-n-4/25 rounded-full text-0 transition-colors hover:border-transparent hover:bg-n-4/25 md:block"
+            onClick={() => router.back()}
+          >
+            <Icon className="fill-n-4" name="close" />
+          </button>
 
-        <div className="max-w-[58.5rem] mx-auto">
-          <div className="mb-4 h2 md:pr-16 md:h3">{title}</div>
-          <div className="mb-12 body1 text-n-4 md:mb-6">{subtitle}</div>
+          <div className="max-w-[58.5rem] mx-auto">
+            <div className="mb-4 h2 md:pr-16 md:h3">{title}</div>
+            <div className="mb-12 body1 text-n-4 md:mb-6">{subtitle}</div>
 
-          <Tab.Group defaultIndex={0}>
-            <Tab.List className="mb-12 md:mb-6 space-x-3">
-              {tabs.map((label, i) => (
-                <Tab
-                  key={i}
-                  className="h-10 px-6 rounded-full base1 text-n-4 transition-colors outline-none tap-highlight-color hover:text-n-7 ui-selected:bg-primary-1 ui-selected:!text-n-1 dark:hover:text-n-1"
-                >
-                  {label}
-                </Tab>
-              ))}
-            </Tab.List>
+            {/* Tabs: Updates / FAQ (unverändert) */}
+            <Tab.Group defaultIndex={0}>
+              <Tab.List className="mb-12 md:mb-6 space-x-3">
+                {tabs.map((label, i) => (
+                  <Tab
+                    key={i}
+                    className="h-10 px-6 rounded-full base1 text-n-4 transition-colors outline-none tap-highlight-color hover:text-n-7 ui-selected:bg-primary-1 ui-selected:!text-n-1 dark:hover:text-n-1"
+                  >
+                    {label}
+                  </Tab>
+                ))}
+              </Tab.List>
 
-            <Tab.Panels>
-              <Tab.Panel>
-                <Updates items={updatesItems} loadMoreLabel={loadMoreLabel} />
-              </Tab.Panel>
-              <Tab.Panel>
-                <Faq
-                  items={faqItems}
-                  ctaTitle={ctaTitle}
-                  ctaSubtitle={ctaSubtitle}
-                  ctaButtonLabel={ctaButtonLabel}
-                />
-              </Tab.Panel>
-            </Tab.Panels>
-          </Tab.Group>
+              <Tab.Panels>
+                <Tab.Panel>
+                  <Updates items={updatesItems} loadMoreLabel={loadMoreLabel} />
+                </Tab.Panel>
+                <Tab.Panel>
+                  <Faq
+                    items={faqItems}
+                    ctaTitle={ctaTitle}
+                    ctaSubtitle={ctaSubtitle}
+                    ctaButtonLabel={ctaButtonLabel}
+                  />
+                </Tab.Panel>
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
         </div>
       </div>
     </Layout>
