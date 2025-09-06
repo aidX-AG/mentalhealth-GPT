@@ -12,7 +12,8 @@
     "i18n:codemod:write": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write",
     "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include",
     "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts",
-    "tx:pull": "scripts/tx-pull.sh"
+    "tx:pull": "scripts/tx-pull.sh",
+    "tx:push:file": "scripts/tx-push-file.sh"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
