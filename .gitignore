@@ -15,3 +15,4 @@ tsconfig.tsbuildinfo
 # Transifex pulled files
 locales/*.json
 locales/*.json
+.env.local
