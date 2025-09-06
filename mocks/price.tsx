@@ -12,7 +12,7 @@ export const price = [{
   priceDetails: t("Per month, per user"),
   details: [
     t("90 days history"),
-    t("Up to 1000 messages/mo"),
+    t("Up to 100 messages/mo"),
     t("Security and data protection")]
 }, {
   id: "1",
