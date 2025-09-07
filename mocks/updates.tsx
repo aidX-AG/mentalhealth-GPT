@@ -14,10 +14,17 @@ const t = getT();
 export const updates = [{
   id: "u3",
   title: t("Expanding to Three Languages"),
+<<<<<<< HEAD
   date: t("7 September, 2025"),
   imageLight: "/images/Language_Love-960w.webp",
   imageDark: "/images/Language_Love-960w.webp",
   icon: "globe-lock",
+=======
+  date: t("6 September, 2025"),
+  imageLight: "/images/Language_Love.jpg",
+  imageDark: "/images/Language_Love.jpg",
+  icon: "globe",
+>>>>>>> dev
   content: t("We are excited to announce that mentalhealthGPT is now available in German, French, and English! This expansion dramatically increases our reach. With this step, we enable psychologists, psychiatrists, and therapists from e.g Switzerland, France, Germany, and the global English-speaking community to benefit from our secure, specialized AI. Multilingual access is a key step in making professional mental health support scalable, collaborative, and more effective.")
 }, {
   id: "0",
