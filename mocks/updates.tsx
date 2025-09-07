@@ -3,19 +3,21 @@ const t = getT();
 
 // frontend/mocks/updates.tsx
 // -----------------------------------------------------------------------------
-// [updates] v1.1.0 — 2025-09-06
+// [updates] v1.1.1 — 2025-09-07
 // CHANGELOG:
-// - v1.1.0: Added "Expanding to Three Languages" (id: "u3") as first entry.
-// - v1.0.0: Initial updates list.
+// - v1.1.1: "Expanding to Three Languages" Bildformat korrigiert (.webp statt .jpg),
+//           Icon auf "globe-lock" gesetzt (Sprachen + Sicherheit).
+// - v1.1.0: Neues Update "Expanding to Three Languages" (id: "u3") hinzugefügt.
+// - v1.0.0: Initiale Updates-Liste.
 // -----------------------------------------------------------------------------
 
 export const updates = [{
   id: "u3",
   title: t("Expanding to Three Languages"),
-  date: t("6 September, 2025"),
-  imageLight: "/images/Language_Love-960w.jpg",
-  imageDark: "/images/Language_Love-960w.jpg",
-  icon: "globe",
+  date: t("7 September, 2025"),
+  imageLight: "/images/Language_Love-960w.webp",
+  imageDark: "/images/Language_Love-960w.webp",
+  icon: "globe-lock",
   content: t("We are excited to announce that mentalhealthGPT is now available in German, French, and English! This expansion dramatically increases our reach. With this step, we enable psychologists, psychiatrists, and therapists from e.g Switzerland, France, Germany, and the global English-speaking community to benefit from our secure, specialized AI. Multilingual access is a key step in making professional mental health support scalable, collaborative, and more effective.")
 }, {
   id: "0",
