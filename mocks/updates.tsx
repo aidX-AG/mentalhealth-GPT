@@ -3,8 +3,9 @@ const t = getT();
 
 // frontend/mocks/updates.tsx
 // -----------------------------------------------------------------------------
-// [updates] v1.1.0 — 2025-09-06
+// [updates] v1.2.0 — 2025-09-06
 // CHANGELOG:
+// - v1.2. : images immer nur auf .jpg
 // - v1.1.0: Added "Expanding to Three Languages" (id: "u3") as first entry.
 // - v1.0.0: Initial updates list.
 // -----------------------------------------------------------------------------
