@@ -1,7 +1,4 @@
 {
-  "home": {
-    "sections": {
-      "tagline": "Expertise you trust. Privacy you control. Science that empowers."
-    }
-  }
+  "home.sections.brand": "mentalhealthGPT",
+  "home.sections.tagline": "Expertise you trust. Privacy you control. Science that empowers."
 }

@@ -1,7 +1,5 @@
 {
-  "therapy-support": {
-    "chat": {
-      "title": "Therapy Support AI"
-    }
-  }
+  "therapy-support.sections.greeting": "🧠 Hello! I'm your Therapy Support AI.",
+  "therapy-support.sections.instructions": "Feel free to describe your case, the specific symptoms, or ask for therapeutic strategies.",
+  "therapy-support.chat.title": "Therapy Support AI"
 }
