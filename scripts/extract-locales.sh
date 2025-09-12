@@ -23,7 +23,7 @@ EXTRACT="node scripts/extract-locales-core.js"
 
 # Vorbedingungen prüfen
 command -v node >/dev/null 2>&1 || { echo "❌ Node.js nicht gefunden"; exit 1; }
-[[ -f scripts/extract-locales.js ]] || { echo "❌ scripts/extract-locales.js fehlt"; exit 1; }
+[[ -f scripts/extract-locales-core.js ]] || { echo "❌ scripts/extract-locales-core.js fehlt"; exit 1; }
 
 mkdir -p public/locales/en
 mkdir -p locales
