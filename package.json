@@ -7,21 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-
     "optimize-images": "bash ./scripts/optimize-images.sh",
-
-    // (optional) eure bestehenden i18n-Codemod-Helfer bleiben unangetastet
     "i18n:codemod:dry": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts",
     "i18n:codemod:write": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write",
     "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include",
     "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts",
 
-    // 🔽 NEU: EN-Strings aus Code extrahieren (ersetzt TX-Push)
-    // Nutzung: npm run i18n:extract -- app/updates-and-faq/page.tsx
-    "i18n:extract": "node scripts/extract-locales.js",
+    "i18n:extract:all": "node scripts/extract-locales.js app/applications/**/*.tsx --ns applications --out public/locales/en/applications.json && node scripts/extract-locales.js app/audio-transcription/**/*.tsx --ns audio-transcription --out public/locales/en/audio-transcription.json && node scripts/extract-locales.js app/checkout/**/*.tsx --ns checkout --out public/locales/en/checkout.json && node scripts/extract-locales.js app/diagnosis-support/**/*.tsx --ns diagnosis-support --out public/locales/en/diagnosis-support.json && node scripts/extract-locales.js app/documentation-reports/**/*.tsx --ns documentation-reports --out public/locales/en/documentation-reports.json && node scripts/extract-locales.js app/generation-socials-post/**/*.tsx --ns generation-socials-post --out public/locales/en/generation-socials-post.json && node scripts/extract-locales.js 'app/(home|page).tsx' app/home/**/*.tsx --ns home --out public/locales/en/home.json && node scripts/extract-locales.js app/pricing/**/*.tsx --ns pricing --out public/locales/en/pricing.json && node scripts/extract-locales.js app/sign-in/**/*.tsx --ns sign-in --out public/locales/en/sign-in.json && node scripts/extract-locales.js app/supervision-training/**/*.tsx --ns supervision-training --out public/locales/en/supervision-training.json && node scripts/extract-locales.js app/thanks/**/*.tsx --ns thanks --out public/locales/en/thanks.json && node scripts/extract-locales.js app/therapy-support/**/*.tsx --ns therapy-support --out public/locales/en/therapy-support.json && node scripts/extract-locales.js app/updates-and-faq/**/*.tsx --ns updates-and-faq --out public/locales/en/updates-and-faq.json && node scripts/extract-locales.js app/video-analysis/**/*.tsx --ns video-analysis --out public/locales/en/video-analysis.json && node scripts/extract-locales.js app/pagelist/**/*.tsx --ns pagelist --out public/locales/en/pagelist.json && node scripts/extract-locales.js 'app/**/{page,layout}.tsx' --out locales/en.json --exclude-ns applications,audio-transcription,checkout,diagnosis-support,documentation-reports,generation-socials-post,home,pricing,sign-in,supervision-training,thanks,therapy-support,updates-and-faq,video-analysis,pagelist",
+    "i18n:extract:namespaces": "npm run i18n:extract:all",
+    "i18n:extract:common": "node scripts/extract-locales.js 'app/**/{page,layout}.tsx' --out locales/en.json --exclude-ns applications,audio-transcription,checkout,diagnosis-support,documentation-reports,generation-socials-post,home,pricing,sign-in,supervision-training,thanks,therapy-support,updates-and-faq,video-analysis,pagelist",
 
-    // 🔽 OPTIONAL: legacy-Split, nur falls ihr noch große de.json/fr.json → Module zerlegen wollt
-    // Nutzung: npm run i18n:split
     "i18n:split": "bash scripts/split_locales.sh"
   },
   "dependencies": {
