@@ -1,7 +1,8 @@
 {
-  "diagnosis-support.sections.banner-prefix": "🚧 The AI functionality for",
-  "diagnosis-support.sections.title": "Diagnosis Support",
-  "diagnosis-support.sections.under-development": "is currently under development.",
-  "diagnosis-support.sections.coming-soon": "It will gradually become available as we integrate specialized models to support mental health diagnostics.",
-  "diagnosis-support.chat.title": "Diagnosis Support"
+  " is currently under development. It will gradually become available as we integrate specialized models to support mental health diagnostics.": "",
+  "Diagnosis Support": "",
+  "Just now": "",
+  "Please review this clinical case and suggest possible diagnoses. Highlight any important symptoms or behavioral patterns.": "",
+  "diagnosis-case.pdf": "",
+  "🚧 The AI functionality for ": ""
 }

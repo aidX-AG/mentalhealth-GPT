@@ -66,12 +66,19 @@ done
 # -----------------------------------------------------------------------------
 # Sammelbecken
 # -----------------------------------------------------------------------------
-EXCLUDE_NS=$(IFS=, ; echo "${!NSMAP[*]}")
-echo "➡️  Extract: Sammelbecken → locales/en.json (ohne Spezial-Namespaces)"
 
+EXCLUDE_NS=$(IFS=, ; echo "${!NSMAP[*]}")
+echo "➡️  Extract: Sammelbecken → locales/en.json (ohne Spezial-Namespaces & common)"
 $EXTRACT app/**/{page,layout}.tsx \
   --out locales/en.json \
-  --exclude-ns "$EXCLUDE_NS"
+  --exclude-ns "$EXCLUDE_NS" \
+  --exclude-prefix common
+
+# Common (alle common.* Keys aus allen .tsx)
+echo "➡️  Extract: common → public/locales/en/common.json"
+$EXTRACT app/**/*.tsx \
+  --out public/locales/en/common.json \
+  --only-prefix common
 
 echo "✅ Fertig: 15 Spezial-JSONs + locales/en.json aktualisiert."
 # =============================================================================

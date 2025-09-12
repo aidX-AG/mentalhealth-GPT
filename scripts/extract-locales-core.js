@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 /**
- * i18n extractor v2.0.0
+ * i18n extractor v2.1.0
  * Usage:
- *   node scripts/extract-locales.js <globs...> --ns <name> --out <file>
- *   node scripts/extract-locales.js <globs...> --out <file> --exclude-ns ns1,ns2
+ *   node scripts/extract-locales-core.js <globs...> --ns <name> --out <file>
+ *   node scripts/extract-locales-core.js <globs...> --out <file> --exclude-ns ns1,ns2
+ *   node scripts/extract-locales-core.js <globs...> --out <file> --only-prefix common
+ *   node scripts/extract-locales-core.js <globs...> --out <file> --exclude-prefix p1,p2
  */
 import fs from "fs";
 import path from "path";
@@ -17,13 +19,17 @@ if (args.length === 0) {
 let outFile = null;
 let ns = null;
 let excludeNs = [];
+let onlyPrefix = null;
+let excludePrefix = [];
 const files = [];
 
 for (let i = 0; i < args.length; i++) {
   const a = args[i];
   if (a === "--out") outFile = args[++i];
   else if (a === "--ns") ns = args[++i];
-  else if (a === "--exclude-ns") excludeNs = args[++i].split(",");
+  else if (a === "--exclude-ns") excludeNs = args[++i].split(",").map(s => s.trim()).filter(Boolean);
+  else if (a === "--only-prefix") onlyPrefix = args[++i];
+  else if (a === "--exclude-prefix") excludePrefix = args[++i].split(",").map(s => s.trim()).filter(Boolean);
   else files.push(a);
 }
 
@@ -32,7 +38,7 @@ if (!outFile) {
   process.exit(1);
 }
 
-// --- Dateien sammeln (Globs wurden vom bash-Wrapper expandiert) ---
+// --- Dateien sammeln (Globs expandiert der Bash-Wrapper) ---
 const existing = files.filter(f => fs.existsSync(f));
 
 // --- Keys extrahieren: t("...") | t('...') | t(`...`) ---
@@ -47,12 +53,29 @@ for (const f of existing) {
   }
 }
 
-let final = Array.from(keys).sort();
+let final = Array.from(keys);
 
-// Exclude Namespaces für Sammelbecken (wenn kein --ns gesetzt ist)
-if (!ns && excludeNs.length > 0) {
-  final = final.filter(k => !excludeNs.includes(k.split(":")[0]));
+// Optional: Namespace-Härtung – wenn --ns übergeben wurde, nimm nur Keys mit "ns."
+if (ns) {
+  final = final.filter(k => k.startsWith(ns + "."));
 }
+
+// Exclude Namespaces (für Sammelbecken)
+if (!ns && excludeNs.length > 0) {
+  final = final.filter(k => !excludeNs.includes(k.split(":")[0]) && !excludeNs.includes(k.split(".")[0]));
+}
+
+// Only-Prefix (z. B. common.*)
+if (onlyPrefix) {
+  final = final.filter(k => k.startsWith(onlyPrefix + "."));
+}
+
+// Exclude-Prefix (z. B. common aus Sammelbecken raus)
+if (excludePrefix.length > 0) {
+  final = final.filter(k => !excludePrefix.some(p => k.startsWith(p + ".")));
+}
+
+final = Array.from(new Set(final)).sort();
 
 // --- JSON schreiben ---
 const outDir = path.dirname(outFile);
