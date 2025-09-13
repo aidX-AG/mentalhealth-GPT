@@ -1,3 +1,4 @@
+import { t } from '@transifex/native';
 import PageView from "@/templates/UpdatesAndFaqPage";
 import { loadMessages, makeT } from "@/lib/i18n-static";
 import { updates } from "@/mocks/updates";
@@ -22,15 +23,21 @@ export default function Page() {
 
   return (
     <PageView
-      title={t("Updates & FAQ")}
-      subtitle={t("Features, fixes & improvements.")}
-      tabs={[t("Updates"), t("FAQ")]}
+      title={t('fr.body.text.updates_faq_87ef', 'Updates & FAQ')}
+      subtitle={t(
+        'fr.body.text.features_fixes_improvements_bdfa',
+        'Features, fixes & improvements.'
+      )}
+      tabs={[t('fr.body.text.updates_29db', 'Updates'), t('fr.body.text.faq_2489', 'FAQ')]}
       faqItems={faqItems}
       updatesItems={updatesItems}
-      ctaTitle={t("Can’t find any answer?")}
-      ctaSubtitle={t("Let’s ask the smartest AI Chat")}
-      ctaButtonLabel={t("Ask mentalhealthGPT")}
-      loadMoreLabel={t("Load more")}
+      ctaTitle={t('fr.body.text.can_t_find_any_answer_e96e', 'Can’t find any answer?')}
+      ctaSubtitle={t(
+        'fr.body.text.let_s_ask_smartest_ai_chat_c899',
+        'Let’s ask the smartest AI Chat'
+      )}
+      ctaButtonLabel={t('fr.body.text.ask_mentalhealthgpt_fb4f', 'Ask mentalhealthGPT')}
+      loadMoreLabel={t('fr.body.text.load_more_1668', 'Load more')}
     />
   );
 }

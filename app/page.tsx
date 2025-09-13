@@ -1,5 +1,8 @@
+import { t } from '@transifex/native';
+
 // app/page.tsx  (EN)
 import PageView from "@/templates/HomePage";
+
 import { loadMessages, makeT } from "@/lib/i18n-static";
 import { makeNavigation, NAV_KEYS } from "@/constants/navigation";
 
@@ -12,8 +15,11 @@ export default function Page() {
 
   return (
     <PageView
-      heroTitle={t("mentalhealthGPT")}
-      heroSubtitle={t("Expertise you trust. Privacy you control. Science that empowers.")}
+      heroTitle={t('page_tsx.body.text.mentalhealthgpt_c5c0', 'mentalhealthGPT')}
+      heroSubtitle={t(
+        'page_tsx.body.text.expertise_you_trust_privacy_you_control_science_empowers_2a28',
+        'Expertise you trust. Privacy you control. Science that empowers.'
+      )}
       navigationItems={makeNavigation(t)}
     />
   );
