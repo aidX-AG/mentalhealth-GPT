@@ -7,9 +7,9 @@ import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Users from "@/components/Users";
 import Notify from "@/components/Notify";
-import { getT } from "@/lib/i18n-runtime";
+import { _ } from "@/lib/i18n/_";
 
-const t = getT();
+const t = _;
 
 type ChatItemProps = {
   item: any;

@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# — Beispieltexte wie im Code —
+msgid "Therapy Support AI"
+msgstr "Therapy Support AI"
+
+msgid "Start your specialized AI experience"
+msgstr "Start your specialized AI experience"
+
+msgid "Per month per user"
+msgstr "Per month per user"
+
+# Beispiel mit Kontext (nur zur Demo; optional)
+msgctxt "button"
+msgid "Save"
+msgstr "Save"

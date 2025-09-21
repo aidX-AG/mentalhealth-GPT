@@ -1,8 +1,8 @@
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Post from "./Post";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type ImageType = {
   id: string;
   src: string;

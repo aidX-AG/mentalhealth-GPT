@@ -2,8 +2,8 @@ import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Loading from "./Loading";
 import Actions from "./Actions";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type AnswerProps = {
   children?: React.ReactNode;
   loading?: boolean;

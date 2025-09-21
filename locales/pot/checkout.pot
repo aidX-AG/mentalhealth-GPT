@@ -1,0 +1,107 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. AI chat made affordable
+msgid "checkout.sections.hero-title"
+msgstr ""
+
+#. Pricing Plans for every budget - Unlock the power of AI
+msgid "checkout.body.hero-subtitle"
+msgstr ""
+
+#. Enterprise
+msgid "checkout.sections.enterprise"
+msgstr ""
+
+#. Popular
+msgid "checkout.sections.popular"
+msgstr ""
+
+#. $399
+msgid "checkout.fragments.price-399"
+msgstr ""
+
+#. Monthly Plan
+msgid "checkout.sections.monthly-plan"
+msgstr ""
+
+#. Plan
+msgid "checkout.sections.plan"
+msgstr ""
+
+#. Change currency
+msgid "checkout.sections.change-currency"
+msgstr ""
+
+#. USD
+msgid "checkout.sections.usd"
+msgstr ""
+
+#. Billing email
+msgid "checkout.sections.billing-email"
+msgstr ""
+
+#. Card details
+msgid "checkout.sections.card-details"
+msgstr ""
+
+#. Email address
+msgid "checkout.form.email"
+msgstr ""
+
+#. Card number
+msgid "checkout.form.card-number"
+msgstr ""
+
+#. MM / YY
+msgid "checkout.form.mm-yy"
+msgstr ""
+
+#. CVC
+msgid "checkout.form.cvc"
+msgstr ""
+
+#. Secured form with UI8 Banking
+msgid "checkout.body.security-note"
+msgstr ""
+
+#. Billed now: $399
+msgid "checkout.sections.billed-now"
+msgstr ""
+
+#. Apply promo code
+msgid "checkout.sections.apply-promo-code"
+msgstr ""
+
+#. By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be charged $399 every month, unless you cancel.
+msgid "checkout.body.billing-consent"
+msgstr ""
+
+#. Start Brainwave Enterprise plan
+msgid "checkout.sections.cta-start-plan"
+msgstr ""
+
+#. Pay
+msgid "checkout.sections.pay"
+msgstr ""
+
+#. $
+msgid "checkout.sections.currency-symbol"
+msgstr ""
+
+#. /month
+msgid "checkout.sections.per-month"
+msgstr ""
+
+#. Save
+msgid "checkout.badges.save"
+msgstr ""
+
+#. %
+msgid "checkout.badges.percent"
+msgstr ""

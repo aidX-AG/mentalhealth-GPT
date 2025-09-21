@@ -2,8 +2,8 @@ import { useState } from "react";
 import Select from "@/components/Select";
 import Icon from "@/components/Icon";
 import View from "./View";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 const languages = [{
   id: "0",
   title: t("English (United States)")

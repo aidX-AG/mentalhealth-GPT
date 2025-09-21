@@ -1,7 +1,7 @@
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type ViewProps = {};
 const View = ({}: ViewProps) => <div className="relative max-w-[32.5rem] aspect-[1.6] xl:max-w-full">
         <Image className="rounded-xl object-cover" src="/images/video-pic-1.jpg" fill sizes="(max-width: 768px) 100vw, (max-width: 1499px) 50vw, 33.33vw" alt="" />

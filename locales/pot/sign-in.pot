@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Forgot password?
+msgid "sign-in.misc.forgot-password"
+msgstr ""
+
+#. Sign in with Brainwave
+msgid "sign-in.misc.sign-in-with-brainwave"
+msgstr ""
+
+#. Username or email
+msgid "sign-in.placeholders.username-or-email"
+msgstr ""
+
+#. Password
+msgid "sign-in.placeholders.password"
+msgstr ""
+
+#. Unlock the power of AI
+msgid "sign-in.sections.hero-title"
+msgstr ""
+
+#. Chat with the smartest AI - Experience the power of AI with us
+msgid "sign-in.sections.hero-subtitle"
+msgstr ""
+
+#. Continue with Google
+msgid "sign-in.buttons.continue-google"
+msgstr ""
+
+#. Continue with Apple
+msgid "sign-in.buttons.continue-apple"
+msgstr ""
+
+#. OR
+msgid "sign-in.sections.or"
+msgstr ""
+
+#. Create Account
+msgid "sign-in.buttons.create-account"
+msgstr ""
+
+#. By creating an account, you agree to our
+msgid "sign-in.text.by-creating-account"
+msgstr ""
+
+#. Terms of Service
+msgid "sign-in.sections.terms-of-service"
+msgstr ""
+
+#. and
+msgid "sign-in.text.and"
+msgstr ""
+
+#. Privacy & Cookie Statement
+msgid "sign-in.sections.privacy-cookie"
+msgstr ""
+
+#. .
+msgid "sign-in.text.period"
+msgstr ""
+
+#. Email
+msgid "sign-in.placeholders.email"
+msgstr ""
+
+#. Reset your password
+msgid "sign-in.fragments.reset-password"
+msgstr ""
+
+#. Reset password
+msgid "sign-in.buttons.reset-password"
+msgstr ""

@@ -16,8 +16,8 @@ import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
 import Modal from "@/components/Modal";
 import AddChatList from "@/components/AddChatList";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 
 type ChatListType = {
   id: string;
