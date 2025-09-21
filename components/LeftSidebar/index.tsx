@@ -17,7 +17,7 @@ import { settings } from "@/constants/settings";
 import { twMerge } from "tailwind-merge";
 
 // ✅ Laufzeit-i18n: Texte aus Transifex-Context holen
-import { useT } from "@transifex/react";
+import { _ } from "@/lib/i18n/_";
 
 /** Aktives Locale aus <html lang> ermitteln (Fallback 'en') */
 const getActiveLocale = (): "de" | "fr" | "en" => {
@@ -39,7 +39,7 @@ const LeftSidebar = ({
   smallSidebar,
   visibleRightSidebar
 }: LeftSidebarProps) => {
-  const t = useT();
+  const t = _;
   const locale = getActiveLocale();
 
   const [visibleSearch, setVisibleSearch] = useState<boolean>(false);

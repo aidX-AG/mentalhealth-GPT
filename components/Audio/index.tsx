@@ -4,8 +4,8 @@ import Actions from "@/components/Actions";
 import Export from "@/components/Export";
 import Select from "@/components/Select";
 import Icon from "@/components/Icon";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 const languages = [{
   id: "0",
   title: t("English (US)")

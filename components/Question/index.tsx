@@ -1,7 +1,7 @@
 import Image from "@/components/Image";
 import Document from "./Document";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type QuestionProps = {
   content: any;
   image?: string;

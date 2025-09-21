@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Icon from "@/components/Icon";
 import ModalShareChat from "@/components/ModalShareChat";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type ActionsProps = {};
 const Actions = ({}: ActionsProps) => {
   const [favorite, setFavorite] = useState<boolean>(false);

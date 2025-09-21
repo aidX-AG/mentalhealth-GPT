@@ -8,8 +8,8 @@
 
 import Link from "next/link";
 import Image from "@/components/Image";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 
 type LogoProps = {
   className?: string;

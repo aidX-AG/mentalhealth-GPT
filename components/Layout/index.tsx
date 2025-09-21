@@ -11,9 +11,9 @@ import RightSidebar from "@/components/RightSidebar";
 import Icon from "@/components/Icon";
 import Burger from "./Burger";
 
-// ✅ i18n: Title weiterhin per getT(), aber KEINE Übersetzung von Icon-Namen
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+// ✅ i18n: Title weiterhin per _, aber KEINE Übersetzung von Icon-Namen
+import { _ } from "@/lib/i18n/_";
+const t = _;
 
 type LayoutProps = {
   smallSidebar?: boolean;

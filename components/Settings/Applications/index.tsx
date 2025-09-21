@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Application from "./Application";
 import { applications } from "@/mocks/applications";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type ApplicationsProps = {};
 const Applications = ({}: ApplicationsProps) => <>
         <div className="flex items-center mb-8">

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
 import Image from "@/components/Image";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type AudioPlayerProps = {
   edit?: boolean;
   onSave?: () => void;

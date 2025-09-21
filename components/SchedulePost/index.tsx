@@ -2,8 +2,8 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import Icon from "@/components/Icon";
 import "react-datepicker/dist/react-datepicker.css";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type SchedulePostProps = {};
 const SchedulePost = ({}: SchedulePostProps) => {
   const [startDate, setStartDate] = useState<any>(new Date());

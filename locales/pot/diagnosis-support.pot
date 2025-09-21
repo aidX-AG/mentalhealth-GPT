@@ -1,0 +1,27 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. 🚧 The AI functionality for
+msgid "diagnosis-support.sections.banner-prefix"
+msgstr ""
+
+#. Diagnosis Support
+msgid "diagnosis-support.sections.title"
+msgstr ""
+
+#. is currently under development.
+msgid "diagnosis-support.sections.under-development"
+msgstr ""
+
+#. It will gradually become available as we integrate specialized models to support mental health diagnostics.
+msgid "diagnosis-support.sections.coming-soon"
+msgstr ""
+
+#. Diagnosis Support
+msgid "diagnosis-support.chat.title"
+msgstr ""

@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. 🧠 Hello! I'm your Therapy Support AI.
+msgid "therapy-support.sections.greeting"
+msgstr ""
+
+#. Feel free to describe your case, the specific symptoms, or ask for therapeutic strategies.
+msgid "therapy-support.sections.instructions"
+msgstr ""
+
+#. Therapy Support AI
+msgid "therapy-support.chat.title"
+msgstr ""

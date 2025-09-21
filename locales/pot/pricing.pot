@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. AI chat made affordable
+msgid "pricing.sections.hero-title"
+msgstr ""
+
+#. Pricing Plans for every budget
+msgid "pricing.sections.hero-subtitle"
+msgstr ""
+
+#. Choose plan
+msgid "pricing.sections.choose-plan"
+msgstr ""
+
+#. Frequently asked questions
+msgid "pricing.sections.faq"
+msgstr ""
+
+#. Core features
+msgid "pricing.sections.core-features"
+msgstr ""
+
+#. Free
+msgid "pricing.sections.free"
+msgstr ""
+
+#. Pro
+msgid "pricing.sections.pro"
+msgstr ""
+
+#. Enterprise
+msgid "pricing.sections.enterprise"
+msgstr ""
+
+#. Via email
+msgid "pricing.badges.via-email"
+msgstr ""
+
+#. Chat 24/7
+msgid "pricing.badges.chat-247"
+msgstr ""
+
+#. Popular
+msgid "pricing.badges.popular"
+msgstr ""
+
+#. $
+msgid "pricing.sections.currency-symbol"
+msgstr ""
+
+#. /
+msgid "pricing.sections.slash"
+msgstr ""

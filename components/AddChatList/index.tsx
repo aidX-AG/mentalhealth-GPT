@@ -4,8 +4,8 @@ import Select from "@/components/Select";
 import MultiSelect from "@/components/MultiSelect";
 import User from "./User";
 import { people } from "@/mocks/people";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 const colors = [{
   id: "0",
   title: t("Chinese Violet"),

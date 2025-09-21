@@ -1,0 +1,671 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Add chat list
+msgid "common.headings.add-chat-list"
+msgstr ""
+
+#. Invite team member
+msgid "common.sections.invite-member"
+msgstr ""
+
+#. Only people invited in this list can access
+msgid "common.body.access-note"
+msgstr ""
+
+#. Cancel
+msgid "common.buttons.cancel"
+msgstr ""
+
+#. Add list
+msgid "common.buttons.add-list"
+msgstr ""
+
+#. Name
+msgid "common.labels.name"
+msgstr ""
+
+#. Name
+msgid "common.placeholders.name"
+msgstr ""
+
+#. Color
+msgid "common.labels.color"
+msgstr ""
+
+#. Auto
+msgid "common.misc.auto"
+msgstr ""
+
+#. Reset
+msgid "common.misc.reset"
+msgstr ""
+
+#. Exposure
+msgid "common.controls.exposure"
+msgstr ""
+
+#. Contrast
+msgid "common.controls.contrast"
+msgstr ""
+
+#. Highlights
+msgid "common.controls.highlights"
+msgstr ""
+
+#. Shadows
+msgid "common.controls.shadows"
+msgstr ""
+
+#. White
+msgid "common.controls.white"
+msgstr ""
+
+#. Blacks
+msgid "common.controls.blacks"
+msgstr ""
+
+#. Pause generating
+msgid "common.badges.pause-generating"
+msgstr ""
+
+#. Avatar
+msgid "common.alt.avatar"
+msgstr ""
+
+#. Your audio has been successfully generated. You may further customize it or simply download it for use.
+msgid "common.body.audio-success"
+msgstr ""
+
+#. Export
+msgid "common.fragments.export"
+msgstr ""
+
+#. Edit
+msgid "common.buttons.edit"
+msgstr ""
+
+#. Speed
+msgid "common.labels.speed"
+msgstr ""
+
+#. Voice
+msgid "common.labels.voice"
+msgstr ""
+
+#. Exporting 1 audio
+msgid "common.actions.exporting-audio"
+msgstr ""
+
+#. Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any
+msgid "common.body.introducing-brainwave"
+msgstr ""
+
+#. 609 characters
+msgid "common.misc.characters-609"
+msgstr ""
+
+#. Save
+msgid "common.misc.save"
+msgstr ""
+
+#. 0:21
+msgid "common.misc.time-021"
+msgstr ""
+
+#. 1:02
+msgid "common.misc.time-102"
+msgstr ""
+
+#. Audio
+msgid "common.alt.audio"
+msgstr ""
+
+#. Copied!
+msgid "common.badges.copied"
+msgstr ""
+
+#. Copy code
+msgid "common.actions.copy-code"
+msgstr ""
+
+#. Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side.
+msgid "common.body.form-example-note"
+msgstr ""
+
+#. I have created a project in your Codepen account
+msgid "common.body.created-project"
+msgstr ""
+
+#. View
+msgid "common.buttons.view"
+msgstr ""
+
+#. More
+msgid "common.buttons.more"
+msgstr ""
+
+#. Suggestion to improve your test
+msgid "common.sections.suggestion"
+msgstr ""
+
+#. Read regularly:
+msgid "common.sections.read-regularly"
+msgstr ""
+
+#. Reading is an excellent way to improve your vocabulary, grammar, and comprehension skills. Try to read a variety of materials, including books, newspapers, magazines, and online articles.
+msgid "common.body.reading-benefits"
+msgstr ""
+
+#. Practice writing:
+msgid "common.sections.practice-writing"
+msgstr ""
+
+#. Writing can help you improve your grammar, spelling, and sentence structure. Try to write regularly, even if it&apos;s just a short paragraph or a journal entry.
+msgid "common.body.writing-benefits"
+msgstr ""
+
+#. Listen to English:
+msgid "common.sections.listen-to-english"
+msgstr ""
+
+#. Listening to English podcasts, audiobooks, and videos can help you improve your listening and comprehension skills. It can also help you get used to different accents and intonations.
+msgid "common.body.listening-benefits"
+msgstr ""
+
+#. Speak with native speakers:
+msgid "common.sections.speak-with-natives"
+msgstr ""
+
+#. Speaking with native speakers can help you improve your pronunciation, fluency, and confidence. You can find language exchange partners or join conversation groups online or in person.
+msgid "common.body.speaking-benefits"
+msgstr ""
+
+#. Learn grammar rules:
+msgid "common.sections.learn-grammar-rules"
+msgstr ""
+
+#. Learning the basic grammar rules can help you write and speak more accurately. Try to focus on one rule at a time and practice using it in your writing and speaking. There are many online resources, such as grammar books and videos, that can help you learn grammar rules.
+msgid "common.body.grammar-benefits"
+msgstr ""
+
+#. Brainwave
+msgid "common.sections.brand"
+msgstr ""
+
+#. aidX
+msgid "common.alt.aidx"
+msgstr ""
+
+#. Link copied
+msgid "common.notify.link-copied"
+msgstr ""
+
+#. Share this chat
+msgid "common.form.share-chat"
+msgstr ""
+
+#. Copy link
+msgid "common.form.copy-link"
+msgstr ""
+
+#. Copy
+msgid "common.actions.copy"
+msgstr ""
+
+#. Or share to members
+msgid "common.form.share-to-members"
+msgstr ""
+
+#. Share
+msgid "common.misc.share"
+msgstr ""
+
+#. Link
+msgid "common.placeholders.link"
+msgstr ""
+
+#. Name member
+msgid "common.placeholders.member-name"
+msgstr ""
+
+#. Create
+msgid "common.misc.create"
+msgstr ""
+
+#. variation
+msgid "common.buttons.variation"
+msgstr ""
+
+#. Adjust
+msgid "common.fragments.adjust"
+msgstr ""
+
+#. Enhance
+msgid "common.buttons.enhance"
+msgstr ""
+
+#. Exporting 1 photo
+msgid "common.actions.exporting-photo"
+msgstr ""
+
+#. Adjust
+msgid "common.actions.adjust"
+msgstr ""
+
+#. WIP
+msgid "common.alt.wip"
+msgstr ""
+
+#. Chat history
+msgid "common.sections.chat-history"
+msgstr ""
+
+#. Clear all chat history?
+msgid "common.notify.clear-chat-history"
+msgstr ""
+
+#. Yes
+msgid "common.misc.yes"
+msgstr ""
+
+#. Clear chat history
+msgid "common.buttons.clear-chat-history"
+msgstr ""
+
+#. New chat
+msgid "common.links.new-chat"
+msgstr ""
+
+#. Schedule your post with Buffer
+msgid "common.sections.schedule-with-buffer"
+msgstr ""
+
+#. Choose date
+msgid "common.form.choose-date"
+msgstr ""
+
+#. Time
+msgid "common.form.time"
+msgstr ""
+
+#. Scheduled in your current timezone
+msgid "common.form.timezone-note"
+msgstr ""
+
+#. Schedule
+msgid "common.buttons.schedule"
+msgstr ""
+
+#. You are done!
+msgid "common.misc.done"
+msgstr ""
+
+#. Your post has been scheduled for February 14th, 2023 at 11:30 and will be shared through
+msgid "common.misc.post-scheduled"
+msgstr ""
+
+#. Buffer
+msgid "common.misc.buffer"
+msgstr ""
+
+#. .
+msgid "common.misc.period"
+msgstr ""
+
+#. View on Buffer
+msgid "common.links.view-on-buffer"
+msgstr ""
+
+#. Search
+msgid "common.placeholders.search"
+msgstr ""
+
+#. Search ...
+msgid "common.placeholders.search-ellipsis"
+msgstr ""
+
+#. Created by
+msgid "common.placeholders.created-by"
+msgstr ""
+
+#. Date
+msgid "common.placeholders.date"
+msgstr ""
+
+#. Here&apos;s an example of promotional content optimized for Twitter and Facebook:
+msgid "common.sections.promo-example"
+msgstr ""
+
+#. Share with
+msgid "common.sections.share-with"
+msgstr ""
+
+#. Add to Queue
+msgid "common.buttons.add-to-queue"
+msgstr ""
+
+#. Share now
+msgid "common.buttons.share-now"
+msgstr ""
+
+#. Schedule post
+msgid "common.buttons.schedule-post"
+msgstr ""
+
+#. Based on the gender identified in the uploaded image, the video has been automatically generated with a male voice. However, you have the option to customize your video by selecting from the available options below.
+msgid "common.body.gender-note"
+msgstr ""
+
+#. Download
+msgid "common.buttons.download"
+msgstr ""
+
+#. Content copied
+msgid "common.notify.content-copied"
+msgstr ""
+
+#. 1 chat archived
+msgid "common.notify.chat-archived"
+msgstr ""
+
+#. Undo
+msgid "common.notify.undo"
+msgstr ""
+
+#. Regenerate response
+msgid "common.fragments.regenerate-response"
+msgstr ""
+
+#. Share
+msgid "common.badges.share"
+msgstr ""
+
+#. Archive chat
+msgid "common.badges.archive-chat"
+msgstr ""
+
+#. Smile heart eyes
+msgid "common.alt.smile-heart-eyes"
+msgstr ""
+
+#. Smile unamused
+msgid "common.alt.smile-unamused"
+msgstr ""
+
+#. #
+msgid "common.misc.hash"
+msgstr ""
+
+#. Incorrect answer (5)
+msgid "common.misc.incorrect-answer-5"
+msgstr ""
+
+#. Correct answer
+msgid "common.misc.correct-answer"
+msgstr ""
+
+#. How
+msgid "common.misc.how"
+msgstr ""
+
+#. Very good!
+msgid "common.misc.very-good"
+msgstr ""
+
+#. 4.85
+msgid "common.misc.score-485"
+msgstr ""
+
+#. Chat list
+msgid "common.badges.chat-list"
+msgstr ""
+
+#. New list
+msgid "common.badges.new-list"
+msgstr ""
+
+#. ⌘ F
+msgid "common.badges.cmd-f"
+msgstr ""
+
+#. Tran Mau Tri Tam
+msgid "common.misc.author-name"
+msgstr ""
+
+#. tam@ui8.net
+msgid "common.misc.author-email"
+msgstr ""
+
+#. Free
+msgid "common.fragments.free"
+msgstr ""
+
+#. Upgraded to Pro
+msgid "common.badges.upgraded-to-pro"
+msgstr ""
+
+#. Upload to mentalhealthGPT
+msgid "common.sections.upload-to-mh-gpt"
+msgstr ""
+
+#. You can add prompts after uploading.
+msgid "common.sections.add-prompts-note"
+msgstr ""
+
+#. Notifications
+msgid "common.sections.notifications"
+msgstr ""
+
+#. Lead visual designer at UI8
+msgid "common.misc.role-label"
+msgstr ""
+
+#. Jump
+msgid "common.links.jump"
+msgstr ""
+
+#. Last edited by
+msgid "common.links.last-edited-by"
+msgstr ""
+
+#. Appearance
+msgid "common.fragments.appearance"
+msgstr ""
+
+#. Primary language
+msgid "common.sections.primary-language"
+msgstr ""
+
+#. Applications
+msgid "common.sections.applications"
+msgstr ""
+
+#. Add apps
+msgid "common.sections.add-apps"
+msgstr ""
+
+#. Authorized apps
+msgid "common.fragments.authorized-apps"
+msgstr ""
+
+#. Chat export
+msgid "common.form.chat-export"
+msgstr ""
+
+#. Select chat list to export
+msgid "common.form.select-chat-list"
+msgstr ""
+
+#. Download conversation
+msgid "common.form.download-conversation"
+msgstr ""
+
+#. We’re sorry to see you go
+msgid "common.form.delete-account-title"
+msgstr ""
+
+#. Warning: Deleting your account will permanently remove all of your data and cannot be undone. This includes your profile, chats, comments, and any other information associated with your account. Are you sure you want to proceed with deleting your account?
+msgid "common.form.delete-account-warning"
+msgstr ""
+
+#. Delete account
+msgid "common.form.delete-account"
+msgstr ""
+
+#. Your password
+msgid "common.labels.your-password"
+msgstr ""
+
+#. Password
+msgid "common.placeholders.password"
+msgstr ""
+
+#. Edit profile
+msgid "common.form.edit-profile"
+msgstr ""
+
+#. Avatar
+msgid "common.form.avatar"
+msgstr ""
+
+#. Upload new image
+msgid "common.form.upload-new-image"
+msgstr ""
+
+#. At least 800x800 px recommended.
+msgid "common.form.size-recommendation"
+msgstr ""
+
+#. JPG or PNG and GIF is allowed
+msgid "common.form.allowed-formats"
+msgstr ""
+
+#. Save changes
+msgid "common.form.save-changes"
+msgstr ""
+
+#. Username
+msgid "common.placeholders.username"
+msgstr ""
+
+#. Location
+msgid "common.labels.location"
+msgstr ""
+
+#. Location
+msgid "common.placeholders.location"
+msgstr ""
+
+#. Bio
+msgid "common.labels.bio"
+msgstr ""
+
+#. Short bio
+msgid "common.placeholders.short-bio"
+msgstr ""
+
+#. Password
+msgid "common.form.password"
+msgstr ""
+
+#. Change password
+msgid "common.form.change-password"
+msgstr ""
+
+#. Password
+msgid "common.labels.password"
+msgstr ""
+
+#. New password
+msgid "common.labels.new-password"
+msgstr ""
+
+#. New password
+msgid "common.placeholders.new-password"
+msgstr ""
+
+#. Confirm new password
+msgid "common.labels.confirm-new-password"
+msgstr ""
+
+#. Confirm new password
+msgid "common.placeholders.confirm-new-password"
+msgstr ""
+
+#. Your sessions
+msgid "common.fragments.your-sessions"
+msgstr ""
+
+#. This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.
+msgid "common.fragments.device-list-note"
+msgstr ""
+
+#. Devices
+msgid "common.fragments.devices"
+msgstr ""
+
+#. Sign out all devices
+msgid "common.fragments.sign-out-all"
+msgstr ""
+
+#. Members
+msgid "common.sections.members"
+msgstr ""
+
+#. Invite
+msgid "common.sections.invite"
+msgstr ""
+
+#. 42 members
+msgid "common.fragments.members-count"
+msgstr ""
+
+#. Suggested media
+msgid "common.sections.suggested-media"
+msgstr ""
+
+#. Make sure you have the rights to use the suggested media.
+msgid "common.sections.media-rights-note"
+msgstr ""
+
+#. Upload media
+msgid "common.sections.upload-media"
+msgstr ""
+
+#. #
+msgid "common.badges.at"
+msgstr ""
+
+#. New variation
+msgid "common.buttons.new-variation"
+msgstr ""
+
+#. Copy
+msgid "common.buttons.copy"
+msgstr ""
+
+#. YouTube video player
+msgid "common.misc.youtube-player"
+msgstr ""
+
+#. Deauthorize
+msgid "common.sections.deauthorize"
+msgstr ""
+
+#. Revoke
+msgid "common.sections.revoke"
+msgstr ""
+
+#. Admin
+msgid "common.badges.admin"
+msgstr ""
+
+#. @
+msgid "common.misc.at"
+msgstr ""

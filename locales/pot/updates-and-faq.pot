@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Updates & FAQ
+msgid "updates-and-faq.sections.title"
+msgstr ""
+
+#. Features, fixes & improvements.
+msgid "updates-and-faq.sections.subtitle"
+msgstr ""
+
+#. Can’t find any answer?
+msgid "updates-and-faq.sections.question"
+msgstr ""
+
+#. Let’s ask the smartest AI Chat
+msgid "updates-and-faq.sections.lets-ask-ai"
+msgstr ""
+
+#. Ask mentalhealthGPT
+msgid "updates-and-faq.buttons.ask-mh-gpt"
+msgstr ""
+
+#. Load more
+msgid "updates-and-faq.buttons.load-more"
+msgstr ""

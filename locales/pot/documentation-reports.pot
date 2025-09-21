@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Hello! How can I assist you with documentation and reporting today?
+msgid "documentation-reports.chat.greeting"
+msgstr ""
+
+#. Soon you’ll be able to generate
+msgid "documentation-reports.text.coming-capability"
+msgstr ""
+
+#. professional documentation and reports
+msgid "documentation-reports.text.professional-docs"
+msgstr ""
+
+#. — whether for clinical use, insurance submissions, or personal records of therapy and supervision sessions.
+msgid "documentation-reports.text.use-cases"
+msgstr ""
+
+#. Our AI will help you transform transcripts into
+msgid "documentation-reports.text.ai-helps-transform"
+msgstr ""
+
+#. clear, structured, and confidential
+msgid "documentation-reports.text.clear-structured-confidential"
+msgstr ""
+
+#. reports — automatically.
+msgid "documentation-reports.text.reports-automatically"
+msgstr ""
+
+#. All data is processed with
+msgid "documentation-reports.text.data-processed-with"
+msgstr ""
+
+#. end-to-end encryption
+msgid "documentation-reports.text.end-to-end-encryption"
+msgstr ""
+
+#. to protect patient confidentiality and ensure secure handling at every stage.
+msgid "documentation-reports.text.privacy-protection"
+msgstr ""
+
+#. 🚧
+msgid "documentation-reports.sections.icon"
+msgstr ""
+
+#. Documentation & Reporting
+msgid "documentation-reports.sections.title"
+msgstr ""
+
+#. is an exciting new feature that’s currently in development.
+msgid "documentation-reports.sections.in-development"
+msgstr ""
+
+#. We’re building it to save you time, reduce admin load, and enhance the quality of your documentation —
+msgid "documentation-reports.text.value-prop"
+msgstr ""
+
+#. stay tuned!
+msgid "documentation-reports.text.stay-tuned"
+msgstr ""
+
+#. Documentation & Reporting
+msgid "documentation-reports.chat.title"
+msgstr ""

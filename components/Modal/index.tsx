@@ -2,8 +2,8 @@ import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type ModalProps = {
   className?: string;
   classWrap?: string;

@@ -1,5 +1,5 @@
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 export const settings = [{
   id: "edit-profile",
   title: t("Edit profile"),

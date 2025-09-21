@@ -1,7 +1,7 @@
 import Icon from "@/components/Icon";
 import Preview from "../Preview";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type DetailsProps = {
   images: any;
 };

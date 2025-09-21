@@ -1,7 +1,7 @@
 import Details from "./Details";
 import Assessment from "./Assessment";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type FeedbackProps = {};
 const Feedback = ({}: FeedbackProps) => <div className="">
         <div className="max-w-[38rem] mb-5 bg-n-1 rounded-2xl xl:max-w-full dark:bg-n-6">

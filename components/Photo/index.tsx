@@ -3,8 +3,8 @@ import Actions from "@/components/Actions";
 import Icon from "@/components/Icon";
 import Export from "@/components/Export";
 import Adjust from "@/components/Adjust";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type PhotoProps = {
   content: string;
   image: string;

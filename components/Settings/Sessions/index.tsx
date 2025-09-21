@@ -1,6 +1,6 @@
 import Device from "./Device";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 const devices = [{
   id: "0",
   title: t("Chrome on iPhone"),

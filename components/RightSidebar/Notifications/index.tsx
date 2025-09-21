@@ -5,8 +5,8 @@ import Modal from "@/components/Modal";
 import Settings from "@/components/Settings";
 import Notification from "./Notification";
 import { settings } from "@/constants/settings";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type NotificationsType = {
   id: string;
   avatar: string;

@@ -1,6 +1,6 @@
 // mocks/updates.tsx
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 
 // -----------------------------------------------------------------------------
 // [updates] v1.1.1 — 2025-09-07
