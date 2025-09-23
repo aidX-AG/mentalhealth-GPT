@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-23 13:33+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2025-09-23 13:58+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -1033,7 +1033,7 @@ msgstr "courriel"
 #: app/sign-in/page.tsx:23
 #: app/sign-in/page.tsx:26
 msgid "Email"
-msgstr "Courriel"
+msgstr "courriel"
 
 #: app/checkout/page.tsx:33
 #: app/de/checkout/page.tsx:33
@@ -2138,7 +2138,7 @@ msgstr "Se connecter"
 #: app/fr/sign-in/page.tsx:18
 #: app/sign-in/page.tsx:20
 msgid "Sign in with Brainwave"
-msgstr "Connectez-vous avec Brainwave"
+msgstr "Connectez-vous avec aidX"
 
 #: components/Settings/Sessions/index.tsx:31
 msgid "Sign out all devices"
