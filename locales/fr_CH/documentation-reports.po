@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fr_CH\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+msgid "Hello! How can I assist you with documentation and reporting today?"
+msgstr ""
+
+msgid "Soon you’ll be able to generate"
+msgstr ""
+
+msgid "professional documentation and reports"
+msgstr ""
+
+msgid ""
+"— whether for clinical use, insurance submissions, or personal records of "
+"therapy and supervision sessions."
+msgstr ""
+
+msgid "Our AI will help you transform transcripts into"
+msgstr ""
+
+msgid "clear, structured, and confidential"
+msgstr ""
+
+msgid "reports — automatically."
+msgstr ""
+
+msgid "All data is processed with"
+msgstr ""
+
+msgid "end-to-end encryption"
+msgstr ""
+
+msgid ""
+"to protect patient confidentiality and ensure secure handling at every "
+"stage."
+msgstr ""
+
+msgid "🚧"
+msgstr ""
+
+msgid "Documentation & Reporting"
+msgstr ""
+
+msgid "is an exciting new feature that’s currently in development."
+msgstr ""
+
+msgid ""
+"We’re building it to save you time, reduce admin load, and enhance the "
+"quality of your documentation —"
+msgstr ""
+
+msgid "stay tuned!"
+msgstr ""
