@@ -1,0 +1,508 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de_CH\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "Add chat list"
+msgstr ""
+
+msgid "Invite team member"
+msgstr ""
+
+msgid "Only people invited in this list can access"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Add list"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Color"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Reset"
+msgstr ""
+
+msgid "Exposure"
+msgstr ""
+
+msgid "Contrast"
+msgstr ""
+
+msgid "Highlights"
+msgstr ""
+
+msgid "Shadows"
+msgstr ""
+
+msgid "White"
+msgstr ""
+
+msgid "Blacks"
+msgstr ""
+
+msgid "Pause generating"
+msgstr ""
+
+msgid "Avatar"
+msgstr ""
+
+msgid ""
+"Your audio has been successfully generated. You may further customize it or "
+"simply download it for use."
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Speed"
+msgstr ""
+
+msgid "Voice"
+msgstr ""
+
+msgid "Exporting 1 audio"
+msgstr ""
+
+msgid "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any"
+msgstr ""
+
+msgid "609 characters"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "0:21"
+msgstr ""
+
+msgid "1:02"
+msgstr ""
+
+msgid "Audio"
+msgstr ""
+
+msgid "Copied!"
+msgstr ""
+
+msgid "Copy code"
+msgstr ""
+
+msgid ""
+"Note: This is just an example of a simple HTML form. In a real-world "
+"scenario, you would also want to include proper validation and handling of "
+"the form data on the server side."
+msgstr ""
+
+msgid "I have created a project in your Codepen account"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "More"
+msgstr ""
+
+msgid "Suggestion to improve your test"
+msgstr ""
+
+msgid "Read regularly:"
+msgstr ""
+
+msgid ""
+"Reading is an excellent way to improve your vocabulary, grammar, and "
+"comprehension skills. Try to read a variety of materials, including books, "
+"newspapers, magazines, and online articles."
+msgstr ""
+
+msgid "Practice writing:"
+msgstr ""
+
+msgid ""
+"Writing can help you improve your grammar, spelling, and sentence "
+"structure. Try to write regularly, even if it&apos;s just a short paragraph "
+"or a journal entry."
+msgstr ""
+
+msgid "Listen to English:"
+msgstr ""
+
+msgid ""
+"Listening to English podcasts, audiobooks, and videos can help you improve "
+"your listening and comprehension skills. It can also help you get used to "
+"different accents and intonations."
+msgstr ""
+
+msgid "Speak with native speakers:"
+msgstr ""
+
+msgid ""
+"Speaking with native speakers can help you improve your pronunciation, "
+"fluency, and confidence. You can find language exchange partners or join "
+"conversation groups online or in person."
+msgstr ""
+
+msgid "Learn grammar rules:"
+msgstr ""
+
+msgid ""
+"Learning the basic grammar rules can help you write and speak more "
+"accurately. Try to focus on one rule at a time and practice using it in "
+"your writing and speaking. There are many online resources, such as grammar "
+"books and videos, that can help you learn grammar rules."
+msgstr ""
+
+msgid "Brainwave"
+msgstr ""
+
+msgid "aidX"
+msgstr ""
+
+msgid "Link copied"
+msgstr ""
+
+msgid "Share this chat"
+msgstr ""
+
+msgid "Copy link"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Or share to members"
+msgstr ""
+
+msgid "Share"
+msgstr ""
+
+msgid "Link"
+msgstr ""
+
+msgid "Name member"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "variation"
+msgstr ""
+
+msgid "Adjust"
+msgstr ""
+
+msgid "Enhance"
+msgstr ""
+
+msgid "Exporting 1 photo"
+msgstr ""
+
+msgid "WIP"
+msgstr ""
+
+msgid "Chat history"
+msgstr ""
+
+msgid "Clear all chat history?"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "Clear chat history"
+msgstr ""
+
+msgid "New chat"
+msgstr ""
+
+msgid "Schedule your post with Buffer"
+msgstr ""
+
+msgid "Choose date"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "Scheduled in your current timezone"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+
+msgid "You are done!"
+msgstr ""
+
+msgid ""
+"Your post has been scheduled for February 14th, 2023 at 11:30 and will be "
+"shared through"
+msgstr ""
+
+msgid "Buffer"
+msgstr ""
+
+msgid "."
+msgstr ""
+
+msgid "View on Buffer"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Search ..."
+msgstr ""
+
+msgid "Created by"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid ""
+"Here&apos;s an example of promotional content optimized for Twitter and "
+"Facebook:"
+msgstr ""
+
+msgid "Share with"
+msgstr ""
+
+msgid "Add to Queue"
+msgstr ""
+
+msgid "Share now"
+msgstr ""
+
+msgid "Schedule post"
+msgstr ""
+
+msgid ""
+"Based on the gender identified in the uploaded image, the video has been "
+"automatically generated with a male voice. However, you have the option to "
+"customize your video by selecting from the available options below."
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "Content copied"
+msgstr ""
+
+msgid "1 chat archived"
+msgstr ""
+
+msgid "Undo"
+msgstr ""
+
+msgid "Regenerate response"
+msgstr ""
+
+msgid "Archive chat"
+msgstr ""
+
+msgid "Smile heart eyes"
+msgstr ""
+
+msgid "Smile unamused"
+msgstr ""
+
+msgid "#"
+msgstr ""
+
+msgid "Incorrect answer (5)"
+msgstr ""
+
+msgid "Correct answer"
+msgstr ""
+
+msgid "How"
+msgstr ""
+
+msgid "Very good!"
+msgstr ""
+
+msgid "4.85"
+msgstr ""
+
+msgid "Chat list"
+msgstr ""
+
+msgid "New list"
+msgstr ""
+
+msgid "⌘ F"
+msgstr ""
+
+msgid "Tran Mau Tri Tam"
+msgstr ""
+
+msgid "tam@ui8.net"
+msgstr ""
+
+msgid "Free"
+msgstr ""
+
+msgid "Upgraded to Pro"
+msgstr ""
+
+msgid "Upload to mentalhealthGPT"
+msgstr ""
+
+msgid "You can add prompts after uploading."
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
+
+msgid "Lead visual designer at UI8"
+msgstr ""
+
+msgid "Jump"
+msgstr ""
+
+msgid "Last edited by"
+msgstr ""
+
+msgid "Appearance"
+msgstr ""
+
+msgid "Primary language"
+msgstr ""
+
+msgid "Applications"
+msgstr ""
+
+msgid "Add apps"
+msgstr ""
+
+msgid "Authorized apps"
+msgstr ""
+
+msgid "Chat export"
+msgstr ""
+
+msgid "Select chat list to export"
+msgstr ""
+
+msgid "Download conversation"
+msgstr ""
+
+msgid "We’re sorry to see you go"
+msgstr ""
+
+msgid ""
+"Warning: Deleting your account will permanently remove all of your data and "
+"cannot be undone. This includes your profile, chats, comments, and any "
+"other information associated with your account. Are you sure you want to "
+"proceed with deleting your account?"
+msgstr ""
+
+msgid "Delete account"
+msgstr ""
+
+msgid "Your password"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Edit profile"
+msgstr ""
+
+msgid "Upload new image"
+msgstr ""
+
+msgid "At least 800x800 px recommended."
+msgstr ""
+
+msgid "JPG or PNG and GIF is allowed"
+msgstr ""
+
+msgid "Save changes"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Bio"
+msgstr ""
+
+msgid "Short bio"
+msgstr ""
+
+msgid "Change password"
+msgstr ""
+
+msgid "New password"
+msgstr ""
+
+msgid "Confirm new password"
+msgstr ""
+
+msgid "Your sessions"
+msgstr ""
+
+msgid ""
+"This is a list of devices that have logged into your account. Revoke any "
+"sessions that you do not recognize."
+msgstr ""
+
+msgid "Devices"
+msgstr ""
+
+msgid "Sign out all devices"
+msgstr ""
+
+msgid "Members"
+msgstr ""
+
+msgid "Invite"
+msgstr ""
+
+msgid "42 members"
+msgstr ""
+
+msgid "Suggested media"
+msgstr ""
+
+msgid "Make sure you have the rights to use the suggested media."
+msgstr ""
+
+msgid "Upload media"
+msgstr ""
+
+msgid "New variation"
+msgstr ""
+
+msgid "YouTube video player"
+msgstr ""
+
+msgid "Deauthorize"
+msgstr ""
+
+msgid "Revoke"
+msgstr ""
+
+msgid "Admin"
+msgstr ""
+
+msgid "@"
+msgstr ""
