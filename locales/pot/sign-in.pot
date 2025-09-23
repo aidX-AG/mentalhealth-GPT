@@ -6,74 +6,56 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. key: sign-in.misc.forgot-password
 msgid "Forgot password?"
 msgstr ""
 
-#. key: sign-in.misc.sign-in-with-brainwave
 msgid "Sign in with Brainwave"
 msgstr ""
 
-#. key: sign-in.placeholders.username-or-email
 msgid "Username or email"
 msgstr ""
 
-#. key: sign-in.placeholders.password
 msgid "Password"
 msgstr ""
 
-#. key: sign-in.sections.hero-title
 msgid "Unlock the power of AI"
 msgstr ""
 
-#. key: sign-in.sections.hero-subtitle
 msgid "Chat with the smartest AI - Experience the power of AI with us"
 msgstr ""
 
-#. key: sign-in.buttons.continue-google
 msgid "Continue with Google"
 msgstr ""
 
-#. key: sign-in.buttons.continue-apple
 msgid "Continue with Apple"
 msgstr ""
 
-#. key: sign-in.sections.or
 msgid "OR"
 msgstr ""
 
-#. key: sign-in.buttons.create-account
 msgid "Create Account"
 msgstr ""
 
-#. key: sign-in.text.by-creating-account
 msgid "By creating an account, you agree to our"
 msgstr ""
 
-#. key: sign-in.sections.terms-of-service
 msgid "Terms of Service"
 msgstr ""
 
-#. key: sign-in.text.and
 msgid "and"
 msgstr ""
 
-#. key: sign-in.sections.privacy-cookie
 msgid "Privacy & Cookie Statement"
 msgstr ""
 
-#. key: sign-in.text.period
 msgid "."
 msgstr ""
 
-#. key: sign-in.placeholders.email
 msgid "Email"
 msgstr ""
 
-#. key: sign-in.fragments.reset-password
 msgid "Reset your password"
 msgstr ""
 
-#. key: sign-in.buttons.reset-password
 msgid "Reset password"
 msgstr ""
