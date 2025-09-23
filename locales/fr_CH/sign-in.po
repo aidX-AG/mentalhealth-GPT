@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fr_CH\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+msgid "Forgot password?"
+msgstr ""
+
+msgid "Sign in with Brainwave"
+msgstr ""
+
+msgid "Username or email"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Unlock the power of AI"
+msgstr ""
+
+msgid "Chat with the smartest AI - Experience the power of AI with us"
+msgstr ""
+
+msgid "Continue with Google"
+msgstr ""
+
+msgid "Continue with Apple"
+msgstr ""
+
+msgid "OR"
+msgstr ""
+
+msgid "Create Account"
+msgstr ""
+
+msgid "By creating an account, you agree to our"
+msgstr ""
+
+msgid "Terms of Service"
+msgstr ""
+
+msgid "and"
+msgstr ""
+
+msgid "Privacy & Cookie Statement"
+msgstr ""
+
+msgid "."
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Reset your password"
+msgstr ""
+
+msgid "Reset password"
+msgstr ""
