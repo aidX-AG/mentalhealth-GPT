@@ -6,18 +6,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "applications.sections.title"
+#. key: applications.sections.title
 msgid "Applications"
 msgstr ""
 
-msgctxt "applications.body.browse-install-apps"
+#. key: applications.body.browse-install-apps
 msgid "Browse and install apps to simplify your life with mentalhealthGPT"
 msgstr ""
 
-msgctxt "applications.sections.suggested-apps"
+#. key: applications.sections.suggested-apps
 msgid "Suggested apps"
 msgstr ""
 
-msgctxt "applications.form.search-placeholder"
+#. key: applications.form.search-placeholder
 msgid "Search by app name or category"
 msgstr ""

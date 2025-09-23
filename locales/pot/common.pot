@@ -6,208 +6,204 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "common.headings.add-chat-list"
+#. key: common.headings.add-chat-list
 msgid "Add chat list"
 msgstr ""
 
-msgctxt "common.sections.invite-member"
+#. key: common.sections.invite-member
 msgid "Invite team member"
 msgstr ""
 
-msgctxt "common.body.access-note"
+#. key: common.body.access-note
 msgid "Only people invited in this list can access"
 msgstr ""
 
-msgctxt "common.buttons.cancel"
+#. key: common.buttons.cancel
 msgid "Cancel"
 msgstr ""
 
-msgctxt "common.buttons.add-list"
+#. key: common.buttons.add-list
 msgid "Add list"
 msgstr ""
 
-msgctxt "common.labels.name"
+#. key: common.placeholders.name
 msgid "Name"
 msgstr ""
 
-msgctxt "common.placeholders.name"
-msgid "Name"
-msgstr ""
-
-msgctxt "common.labels.color"
+#. key: common.labels.color
 msgid "Color"
 msgstr ""
 
-msgctxt "common.misc.auto"
+#. key: common.misc.auto
 msgid "Auto"
 msgstr ""
 
-msgctxt "common.misc.reset"
+#. key: common.misc.reset
 msgid "Reset"
 msgstr ""
 
-msgctxt "common.controls.exposure"
+#. key: common.controls.exposure
 msgid "Exposure"
 msgstr ""
 
-msgctxt "common.controls.contrast"
+#. key: common.controls.contrast
 msgid "Contrast"
 msgstr ""
 
-msgctxt "common.controls.highlights"
+#. key: common.controls.highlights
 msgid "Highlights"
 msgstr ""
 
-msgctxt "common.controls.shadows"
+#. key: common.controls.shadows
 msgid "Shadows"
 msgstr ""
 
-msgctxt "common.controls.white"
+#. key: common.controls.white
 msgid "White"
 msgstr ""
 
-msgctxt "common.controls.blacks"
+#. key: common.controls.blacks
 msgid "Blacks"
 msgstr ""
 
-msgctxt "common.badges.pause-generating"
+#. key: common.badges.pause-generating
 msgid "Pause generating"
 msgstr ""
 
-msgctxt "common.alt.avatar"
+#. key: common.form.avatar
 msgid "Avatar"
 msgstr ""
 
-msgctxt "common.body.audio-success"
+#. key: common.body.audio-success
 msgid ""
 "Your audio has been successfully generated. You may further customize it or "
 "simply download it for use."
 msgstr ""
 
-msgctxt "common.fragments.export"
+#. key: common.fragments.export
 msgid "Export"
 msgstr ""
 
-msgctxt "common.buttons.edit"
+#. key: common.buttons.edit
 msgid "Edit"
 msgstr ""
 
-msgctxt "common.labels.speed"
+#. key: common.labels.speed
 msgid "Speed"
 msgstr ""
 
-msgctxt "common.labels.voice"
+#. key: common.labels.voice
 msgid "Voice"
 msgstr ""
 
-msgctxt "common.actions.exporting-audio"
+#. key: common.actions.exporting-audio
 msgid "Exporting 1 audio"
 msgstr ""
 
-msgctxt "common.body.introducing-brainwave"
+#. key: common.body.introducing-brainwave
 msgid "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any"
 msgstr ""
 
-msgctxt "common.misc.characters-609"
+#. key: common.misc.characters-609
 msgid "609 characters"
 msgstr ""
 
-msgctxt "common.misc.save"
+#. key: common.misc.save
 msgid "Save"
 msgstr ""
 
-msgctxt "common.misc.time-021"
+#. key: common.misc.time-021
 msgid "0:21"
 msgstr ""
 
-msgctxt "common.misc.time-102"
+#. key: common.misc.time-102
 msgid "1:02"
 msgstr ""
 
-msgctxt "common.alt.audio"
+#. key: common.alt.audio
 msgid "Audio"
 msgstr ""
 
-msgctxt "common.badges.copied"
+#. key: common.badges.copied
 msgid "Copied!"
 msgstr ""
 
-msgctxt "common.actions.copy-code"
+#. key: common.actions.copy-code
 msgid "Copy code"
 msgstr ""
 
-msgctxt "common.body.form-example-note"
+#. key: common.body.form-example-note
 msgid ""
 "Note: This is just an example of a simple HTML form. In a real-world "
 "scenario, you would also want to include proper validation and handling of "
 "the form data on the server side."
 msgstr ""
 
-msgctxt "common.body.created-project"
+#. key: common.body.created-project
 msgid "I have created a project in your Codepen account"
 msgstr ""
 
-msgctxt "common.buttons.view"
+#. key: common.buttons.view
 msgid "View"
 msgstr ""
 
-msgctxt "common.buttons.more"
+#. key: common.buttons.more
 msgid "More"
 msgstr ""
 
-msgctxt "common.sections.suggestion"
+#. key: common.sections.suggestion
 msgid "Suggestion to improve your test"
 msgstr ""
 
-msgctxt "common.sections.read-regularly"
+#. key: common.sections.read-regularly
 msgid "Read regularly:"
 msgstr ""
 
-msgctxt "common.body.reading-benefits"
+#. key: common.body.reading-benefits
 msgid ""
 "Reading is an excellent way to improve your vocabulary, grammar, and "
 "comprehension skills. Try to read a variety of materials, including books, "
 "newspapers, magazines, and online articles."
 msgstr ""
 
-msgctxt "common.sections.practice-writing"
+#. key: common.sections.practice-writing
 msgid "Practice writing:"
 msgstr ""
 
-msgctxt "common.body.writing-benefits"
+#. key: common.body.writing-benefits
 msgid ""
 "Writing can help you improve your grammar, spelling, and sentence "
 "structure. Try to write regularly, even if it&apos;s just a short paragraph "
 "or a journal entry."
 msgstr ""
 
-msgctxt "common.sections.listen-to-english"
+#. key: common.sections.listen-to-english
 msgid "Listen to English:"
 msgstr ""
 
-msgctxt "common.body.listening-benefits"
+#. key: common.body.listening-benefits
 msgid ""
 "Listening to English podcasts, audiobooks, and videos can help you improve "
 "your listening and comprehension skills. It can also help you get used to "
 "different accents and intonations."
 msgstr ""
 
-msgctxt "common.sections.speak-with-natives"
+#. key: common.sections.speak-with-natives
 msgid "Speak with native speakers:"
 msgstr ""
 
-msgctxt "common.body.speaking-benefits"
+#. key: common.body.speaking-benefits
 msgid ""
 "Speaking with native speakers can help you improve your pronunciation, "
 "fluency, and confidence. You can find language exchange partners or join "
 "conversation groups online or in person."
 msgstr ""
 
-msgctxt "common.sections.learn-grammar-rules"
+#. key: common.sections.learn-grammar-rules
 msgid "Learn grammar rules:"
 msgstr ""
 
-msgctxt "common.body.grammar-benefits"
+#. key: common.body.grammar-benefits
 msgid ""
 "Learning the basic grammar rules can help you write and speak more "
 "accurately. Try to focus on one rule at a time and practice using it in "
@@ -215,330 +211,322 @@ msgid ""
 "books and videos, that can help you learn grammar rules."
 msgstr ""
 
-msgctxt "common.sections.brand"
+#. key: common.sections.brand
 msgid "Brainwave"
 msgstr ""
 
-msgctxt "common.alt.aidx"
+#. key: common.alt.aidx
 msgid "aidX"
 msgstr ""
 
-msgctxt "common.notify.link-copied"
+#. key: common.notify.link-copied
 msgid "Link copied"
 msgstr ""
 
-msgctxt "common.form.share-chat"
+#. key: common.form.share-chat
 msgid "Share this chat"
 msgstr ""
 
-msgctxt "common.form.copy-link"
+#. key: common.form.copy-link
 msgid "Copy link"
 msgstr ""
 
-msgctxt "common.actions.copy"
+#. key: common.buttons.copy
 msgid "Copy"
 msgstr ""
 
-msgctxt "common.form.share-to-members"
+#. key: common.form.share-to-members
 msgid "Or share to members"
 msgstr ""
 
-msgctxt "common.misc.share"
+#. key: common.badges.share
 msgid "Share"
 msgstr ""
 
-msgctxt "common.placeholders.link"
+#. key: common.placeholders.link
 msgid "Link"
 msgstr ""
 
-msgctxt "common.placeholders.member-name"
+#. key: common.placeholders.member-name
 msgid "Name member"
 msgstr ""
 
-msgctxt "common.misc.create"
+#. key: common.misc.create
 msgid "Create"
 msgstr ""
 
-msgctxt "common.buttons.variation"
+#. key: common.buttons.variation
 msgid "variation"
 msgstr ""
 
-msgctxt "common.fragments.adjust"
+#. key: common.actions.adjust
 msgid "Adjust"
 msgstr ""
 
-msgctxt "common.buttons.enhance"
+#. key: common.buttons.enhance
 msgid "Enhance"
 msgstr ""
 
-msgctxt "common.actions.exporting-photo"
+#. key: common.actions.exporting-photo
 msgid "Exporting 1 photo"
 msgstr ""
 
-msgctxt "common.actions.adjust"
-msgid "Adjust"
-msgstr ""
-
-msgctxt "common.alt.wip"
+#. key: common.alt.wip
 msgid "WIP"
 msgstr ""
 
-msgctxt "common.sections.chat-history"
+#. key: common.sections.chat-history
 msgid "Chat history"
 msgstr ""
 
-msgctxt "common.notify.clear-chat-history"
+#. key: common.notify.clear-chat-history
 msgid "Clear all chat history?"
 msgstr ""
 
-msgctxt "common.misc.yes"
+#. key: common.misc.yes
 msgid "Yes"
 msgstr ""
 
-msgctxt "common.buttons.clear-chat-history"
+#. key: common.buttons.clear-chat-history
 msgid "Clear chat history"
 msgstr ""
 
-msgctxt "common.links.new-chat"
+#. key: common.links.new-chat
 msgid "New chat"
 msgstr ""
 
-msgctxt "common.sections.schedule-with-buffer"
+#. key: common.sections.schedule-with-buffer
 msgid "Schedule your post with Buffer"
 msgstr ""
 
-msgctxt "common.form.choose-date"
+#. key: common.form.choose-date
 msgid "Choose date"
 msgstr ""
 
-msgctxt "common.form.time"
+#. key: common.form.time
 msgid "Time"
 msgstr ""
 
-msgctxt "common.form.timezone-note"
+#. key: common.form.timezone-note
 msgid "Scheduled in your current timezone"
 msgstr ""
 
-msgctxt "common.buttons.schedule"
+#. key: common.buttons.schedule
 msgid "Schedule"
 msgstr ""
 
-msgctxt "common.misc.done"
+#. key: common.misc.done
 msgid "You are done!"
 msgstr ""
 
-msgctxt "common.misc.post-scheduled"
+#. key: common.misc.post-scheduled
 msgid ""
 "Your post has been scheduled for February 14th, 2023 at 11:30 and will be "
 "shared through"
 msgstr ""
 
-msgctxt "common.misc.buffer"
+#. key: common.misc.buffer
 msgid "Buffer"
 msgstr ""
 
-msgctxt "common.misc.period"
+#. key: common.misc.period
 msgid "."
 msgstr ""
 
-msgctxt "common.links.view-on-buffer"
+#. key: common.links.view-on-buffer
 msgid "View on Buffer"
 msgstr ""
 
-msgctxt "common.placeholders.search"
+#. key: common.placeholders.search
 msgid "Search"
 msgstr ""
 
-msgctxt "common.placeholders.search-ellipsis"
+#. key: common.placeholders.search-ellipsis
 msgid "Search ..."
 msgstr ""
 
-msgctxt "common.placeholders.created-by"
+#. key: common.placeholders.created-by
 msgid "Created by"
 msgstr ""
 
-msgctxt "common.placeholders.date"
+#. key: common.placeholders.date
 msgid "Date"
 msgstr ""
 
-msgctxt "common.sections.promo-example"
+#. key: common.sections.promo-example
 msgid ""
 "Here&apos;s an example of promotional content optimized for Twitter and "
 "Facebook:"
 msgstr ""
 
-msgctxt "common.sections.share-with"
+#. key: common.sections.share-with
 msgid "Share with"
 msgstr ""
 
-msgctxt "common.buttons.add-to-queue"
+#. key: common.buttons.add-to-queue
 msgid "Add to Queue"
 msgstr ""
 
-msgctxt "common.buttons.share-now"
+#. key: common.buttons.share-now
 msgid "Share now"
 msgstr ""
 
-msgctxt "common.buttons.schedule-post"
+#. key: common.buttons.schedule-post
 msgid "Schedule post"
 msgstr ""
 
-msgctxt "common.body.gender-note"
+#. key: common.body.gender-note
 msgid ""
 "Based on the gender identified in the uploaded image, the video has been "
 "automatically generated with a male voice. However, you have the option to "
 "customize your video by selecting from the available options below."
 msgstr ""
 
-msgctxt "common.buttons.download"
+#. key: common.buttons.download
 msgid "Download"
 msgstr ""
 
-msgctxt "common.notify.content-copied"
+#. key: common.notify.content-copied
 msgid "Content copied"
 msgstr ""
 
-msgctxt "common.notify.chat-archived"
+#. key: common.notify.chat-archived
 msgid "1 chat archived"
 msgstr ""
 
-msgctxt "common.notify.undo"
+#. key: common.notify.undo
 msgid "Undo"
 msgstr ""
 
-msgctxt "common.fragments.regenerate-response"
+#. key: common.fragments.regenerate-response
 msgid "Regenerate response"
 msgstr ""
 
-msgctxt "common.badges.share"
-msgid "Share"
-msgstr ""
-
-msgctxt "common.badges.archive-chat"
+#. key: common.badges.archive-chat
 msgid "Archive chat"
 msgstr ""
 
-msgctxt "common.alt.smile-heart-eyes"
+#. key: common.alt.smile-heart-eyes
 msgid "Smile heart eyes"
 msgstr ""
 
-msgctxt "common.alt.smile-unamused"
+#. key: common.alt.smile-unamused
 msgid "Smile unamused"
 msgstr ""
 
-msgctxt "common.misc.hash"
+#. key: common.badges.at
 msgid "#"
 msgstr ""
 
-msgctxt "common.misc.incorrect-answer-5"
+#. key: common.misc.incorrect-answer-5
 msgid "Incorrect answer (5)"
 msgstr ""
 
-msgctxt "common.misc.correct-answer"
+#. key: common.misc.correct-answer
 msgid "Correct answer"
 msgstr ""
 
-msgctxt "common.misc.how"
+#. key: common.misc.how
 msgid "How"
 msgstr ""
 
-msgctxt "common.misc.very-good"
+#. key: common.misc.very-good
 msgid "Very good!"
 msgstr ""
 
-msgctxt "common.misc.score-485"
+#. key: common.misc.score-485
 msgid "4.85"
 msgstr ""
 
-msgctxt "common.badges.chat-list"
+#. key: common.badges.chat-list
 msgid "Chat list"
 msgstr ""
 
-msgctxt "common.badges.new-list"
+#. key: common.badges.new-list
 msgid "New list"
 msgstr ""
 
-msgctxt "common.badges.cmd-f"
+#. key: common.badges.cmd-f
 msgid "⌘ F"
 msgstr ""
 
-msgctxt "common.misc.author-name"
+#. key: common.misc.author-name
 msgid "Tran Mau Tri Tam"
 msgstr ""
 
-msgctxt "common.misc.author-email"
+#. key: common.misc.author-email
 msgid "tam@ui8.net"
 msgstr ""
 
-msgctxt "common.fragments.free"
+#. key: common.fragments.free
 msgid "Free"
 msgstr ""
 
-msgctxt "common.badges.upgraded-to-pro"
+#. key: common.badges.upgraded-to-pro
 msgid "Upgraded to Pro"
 msgstr ""
 
-msgctxt "common.sections.upload-to-mh-gpt"
+#. key: common.sections.upload-to-mh-gpt
 msgid "Upload to mentalhealthGPT"
 msgstr ""
 
-msgctxt "common.sections.add-prompts-note"
+#. key: common.sections.add-prompts-note
 msgid "You can add prompts after uploading."
 msgstr ""
 
-msgctxt "common.sections.notifications"
+#. key: common.sections.notifications
 msgid "Notifications"
 msgstr ""
 
-msgctxt "common.misc.role-label"
+#. key: common.misc.role-label
 msgid "Lead visual designer at UI8"
 msgstr ""
 
-msgctxt "common.links.jump"
+#. key: common.links.jump
 msgid "Jump"
 msgstr ""
 
-msgctxt "common.links.last-edited-by"
+#. key: common.links.last-edited-by
 msgid "Last edited by"
 msgstr ""
 
-msgctxt "common.fragments.appearance"
+#. key: common.fragments.appearance
 msgid "Appearance"
 msgstr ""
 
-msgctxt "common.sections.primary-language"
+#. key: common.sections.primary-language
 msgid "Primary language"
 msgstr ""
 
-msgctxt "common.sections.applications"
+#. key: common.sections.applications
 msgid "Applications"
 msgstr ""
 
-msgctxt "common.sections.add-apps"
+#. key: common.sections.add-apps
 msgid "Add apps"
 msgstr ""
 
-msgctxt "common.fragments.authorized-apps"
+#. key: common.fragments.authorized-apps
 msgid "Authorized apps"
 msgstr ""
 
-msgctxt "common.form.chat-export"
+#. key: common.form.chat-export
 msgid "Chat export"
 msgstr ""
 
-msgctxt "common.form.select-chat-list"
+#. key: common.form.select-chat-list
 msgid "Select chat list to export"
 msgstr ""
 
-msgctxt "common.form.download-conversation"
+#. key: common.form.download-conversation
 msgid "Download conversation"
 msgstr ""
 
-msgctxt "common.form.delete-account-title"
+#. key: common.form.delete-account-title
 msgid "We’re sorry to see you go"
 msgstr ""
 
-msgctxt "common.form.delete-account-warning"
+#. key: common.form.delete-account-warning
 msgid ""
 "Warning: Deleting your account will permanently remove all of your data and "
 "cannot be undone. This includes your profile, chats, comments, and any "
@@ -546,160 +534,128 @@ msgid ""
 "proceed with deleting your account?"
 msgstr ""
 
-msgctxt "common.form.delete-account"
+#. key: common.form.delete-account
 msgid "Delete account"
 msgstr ""
 
-msgctxt "common.labels.your-password"
+#. key: common.labels.your-password
 msgid "Your password"
 msgstr ""
 
-msgctxt "common.placeholders.password"
+#. key: common.labels.password
 msgid "Password"
 msgstr ""
 
-msgctxt "common.form.edit-profile"
+#. key: common.form.edit-profile
 msgid "Edit profile"
 msgstr ""
 
-msgctxt "common.form.avatar"
-msgid "Avatar"
-msgstr ""
-
-msgctxt "common.form.upload-new-image"
+#. key: common.form.upload-new-image
 msgid "Upload new image"
 msgstr ""
 
-msgctxt "common.form.size-recommendation"
+#. key: common.form.size-recommendation
 msgid "At least 800x800 px recommended."
 msgstr ""
 
-msgctxt "common.form.allowed-formats"
+#. key: common.form.allowed-formats
 msgid "JPG or PNG and GIF is allowed"
 msgstr ""
 
-msgctxt "common.form.save-changes"
+#. key: common.form.save-changes
 msgid "Save changes"
 msgstr ""
 
-msgctxt "common.placeholders.username"
+#. key: common.placeholders.username
 msgid "Username"
 msgstr ""
 
-msgctxt "common.labels.location"
+#. key: common.placeholders.location
 msgid "Location"
 msgstr ""
 
-msgctxt "common.placeholders.location"
-msgid "Location"
-msgstr ""
-
-msgctxt "common.labels.bio"
+#. key: common.labels.bio
 msgid "Bio"
 msgstr ""
 
-msgctxt "common.placeholders.short-bio"
+#. key: common.placeholders.short-bio
 msgid "Short bio"
 msgstr ""
 
-msgctxt "common.form.password"
-msgid "Password"
-msgstr ""
-
-msgctxt "common.form.change-password"
+#. key: common.form.change-password
 msgid "Change password"
 msgstr ""
 
-msgctxt "common.labels.password"
-msgid "Password"
-msgstr ""
-
-msgctxt "common.labels.new-password"
+#. key: common.placeholders.new-password
 msgid "New password"
 msgstr ""
 
-msgctxt "common.placeholders.new-password"
-msgid "New password"
-msgstr ""
-
-msgctxt "common.labels.confirm-new-password"
+#. key: common.placeholders.confirm-new-password
 msgid "Confirm new password"
 msgstr ""
 
-msgctxt "common.placeholders.confirm-new-password"
-msgid "Confirm new password"
-msgstr ""
-
-msgctxt "common.fragments.your-sessions"
+#. key: common.fragments.your-sessions
 msgid "Your sessions"
 msgstr ""
 
-msgctxt "common.fragments.device-list-note"
+#. key: common.fragments.device-list-note
 msgid ""
 "This is a list of devices that have logged into your account. Revoke any "
 "sessions that you do not recognize."
 msgstr ""
 
-msgctxt "common.fragments.devices"
+#. key: common.fragments.devices
 msgid "Devices"
 msgstr ""
 
-msgctxt "common.fragments.sign-out-all"
+#. key: common.fragments.sign-out-all
 msgid "Sign out all devices"
 msgstr ""
 
-msgctxt "common.sections.members"
+#. key: common.sections.members
 msgid "Members"
 msgstr ""
 
-msgctxt "common.sections.invite"
+#. key: common.sections.invite
 msgid "Invite"
 msgstr ""
 
-msgctxt "common.fragments.members-count"
+#. key: common.fragments.members-count
 msgid "42 members"
 msgstr ""
 
-msgctxt "common.sections.suggested-media"
+#. key: common.sections.suggested-media
 msgid "Suggested media"
 msgstr ""
 
-msgctxt "common.sections.media-rights-note"
+#. key: common.sections.media-rights-note
 msgid "Make sure you have the rights to use the suggested media."
 msgstr ""
 
-msgctxt "common.sections.upload-media"
+#. key: common.sections.upload-media
 msgid "Upload media"
 msgstr ""
 
-msgctxt "common.badges.at"
-msgid "#"
-msgstr ""
-
-msgctxt "common.buttons.new-variation"
+#. key: common.buttons.new-variation
 msgid "New variation"
 msgstr ""
 
-msgctxt "common.buttons.copy"
-msgid "Copy"
-msgstr ""
-
-msgctxt "common.misc.youtube-player"
+#. key: common.misc.youtube-player
 msgid "YouTube video player"
 msgstr ""
 
-msgctxt "common.sections.deauthorize"
+#. key: common.sections.deauthorize
 msgid "Deauthorize"
 msgstr ""
 
-msgctxt "common.sections.revoke"
+#. key: common.sections.revoke
 msgid "Revoke"
 msgstr ""
 
-msgctxt "common.badges.admin"
+#. key: common.badges.admin
 msgid "Admin"
 msgstr ""
 
-msgctxt "common.misc.at"
+#. key: common.misc.at
 msgid "@"
 msgstr ""

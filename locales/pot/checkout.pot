@@ -6,104 +6,104 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "checkout.sections.hero-title"
+#. key: checkout.sections.hero-title
 msgid "AI chat made affordable"
 msgstr ""
 
-msgctxt "checkout.body.hero-subtitle"
+#. key: checkout.body.hero-subtitle
 msgid "Pricing Plans for every budget - Unlock the power of AI"
 msgstr ""
 
-msgctxt "checkout.sections.enterprise"
+#. key: checkout.sections.enterprise
 msgid "Enterprise"
 msgstr ""
 
-msgctxt "checkout.sections.popular"
+#. key: checkout.sections.popular
 msgid "Popular"
 msgstr ""
 
-msgctxt "checkout.fragments.price-399"
+#. key: checkout.fragments.price-399
 msgid "$399"
 msgstr ""
 
-msgctxt "checkout.sections.monthly-plan"
+#. key: checkout.sections.monthly-plan
 msgid "Monthly Plan"
 msgstr ""
 
-msgctxt "checkout.sections.plan"
+#. key: checkout.sections.plan
 msgid "Plan"
 msgstr ""
 
-msgctxt "checkout.sections.change-currency"
+#. key: checkout.sections.change-currency
 msgid "Change currency"
 msgstr ""
 
-msgctxt "checkout.sections.usd"
+#. key: checkout.sections.usd
 msgid "USD"
 msgstr ""
 
-msgctxt "checkout.sections.billing-email"
+#. key: checkout.sections.billing-email
 msgid "Billing email"
 msgstr ""
 
-msgctxt "checkout.sections.card-details"
+#. key: checkout.sections.card-details
 msgid "Card details"
 msgstr ""
 
-msgctxt "checkout.form.email"
+#. key: checkout.form.email
 msgid "Email address"
 msgstr ""
 
-msgctxt "checkout.form.card-number"
+#. key: checkout.form.card-number
 msgid "Card number"
 msgstr ""
 
-msgctxt "checkout.form.mm-yy"
+#. key: checkout.form.mm-yy
 msgid "MM / YY"
 msgstr ""
 
-msgctxt "checkout.form.cvc"
+#. key: checkout.form.cvc
 msgid "CVC"
 msgstr ""
 
-msgctxt "checkout.body.security-note"
+#. key: checkout.body.security-note
 msgid "Secured form with UI8 Banking"
 msgstr ""
 
-msgctxt "checkout.sections.billed-now"
+#. key: checkout.sections.billed-now
 msgid "Billed now: $399"
 msgstr ""
 
-msgctxt "checkout.sections.apply-promo-code"
+#. key: checkout.sections.apply-promo-code
 msgid "Apply promo code"
 msgstr ""
 
-msgctxt "checkout.body.billing-consent"
+#. key: checkout.body.billing-consent
 msgid ""
 "By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
 "charged $399 every month, unless you cancel."
 msgstr ""
 
-msgctxt "checkout.sections.cta-start-plan"
+#. key: checkout.sections.cta-start-plan
 msgid "Start Brainwave Enterprise plan"
 msgstr ""
 
-msgctxt "checkout.sections.pay"
+#. key: checkout.sections.pay
 msgid "Pay"
 msgstr ""
 
-msgctxt "checkout.sections.currency-symbol"
+#. key: checkout.sections.currency-symbol
 msgid "$"
 msgstr ""
 
-msgctxt "checkout.sections.per-month"
+#. key: checkout.sections.per-month
 msgid "/month"
 msgstr ""
 
-msgctxt "checkout.badges.save"
+#. key: checkout.badges.save
 msgid "Save"
 msgstr ""
 
-msgctxt "checkout.badges.percent"
+#. key: checkout.badges.percent
 msgid "%"
 msgstr ""

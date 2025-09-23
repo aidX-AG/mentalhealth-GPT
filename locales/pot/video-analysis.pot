@@ -6,58 +6,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "video-analysis.chat.greeting"
+#. key: video-analysis.chat.greeting
 msgid "Hello! How can I assist you with video analysis today?"
 msgstr ""
 
-msgctxt "video-analysis.text.coming-soon"
+#. key: video-analysis.text.coming-soon
 msgid "Our AI-powered video analysis is coming soon."
 msgstr ""
 
-msgctxt "video-analysis.text.value-prop-part1"
+#. key: video-analysis.text.value-prop-part1
 msgid "It will help analyze therapy session recordings"
 msgstr ""
 
-msgctxt "video-analysis.text.value-prop-part2"
+#. key: video-analysis.text.value-prop-part2
 msgid ""
 ", detect key themes, nonverbal cues, and therapeutic dynamics — all with "
 "full end-to-end security."
 msgstr ""
 
-msgctxt "video-analysis.text.security"
+#. key: video-analysis.text.security
 msgid ""
 "Your video data is protected at every step: in your browser, during upload, "
 "and throughout the AI-based processing."
 msgstr ""
 
-msgctxt "video-analysis.text.in-development"
+#. key: video-analysis.text.in-development
 msgid "This feature is currently in development —"
 msgstr ""
 
-msgctxt "video-analysis.text.stay-tuned"
+#. key: video-analysis.text.stay-tuned
 msgid "stay tuned!"
 msgstr ""
 
-msgctxt "video-analysis.sections.icon"
+#. key: video-analysis.sections.icon
 msgid "🚧"
 msgstr ""
 
-msgctxt "video-analysis.sections.title"
+#. key: video-analysis.chat.title
 msgid "Video Analysis"
 msgstr ""
 
-msgctxt "video-analysis.text.feature-benefit"
+#. key: video-analysis.text.feature-benefit
 msgid ""
 "is a powerful feature that will provide secure, AI-generated insights into "
 "therapeutic sessions."
 msgstr ""
 
-msgctxt "video-analysis.text.launch-excitement"
+#. key: video-analysis.text.launch-excitement
 msgid ""
 "We’re excited to launch this soon — enabling deeper reflection, "
 "supervision, and professional growth."
-msgstr ""
-
-msgctxt "video-analysis.chat.title"
-msgid "Video Analysis"
 msgstr ""

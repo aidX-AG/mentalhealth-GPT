@@ -6,16 +6,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "therapy-support.sections.greeting"
+#. key: therapy-support.sections.greeting
 msgid "🧠 Hello! I'm your Therapy Support AI."
 msgstr ""
 
-msgctxt "therapy-support.sections.instructions"
+#. key: therapy-support.sections.instructions
 msgid ""
 "Feel free to describe your case, the specific symptoms, or ask for "
 "therapeutic strategies."
 msgstr ""
 
-msgctxt "therapy-support.chat.title"
+#. key: therapy-support.chat.title
 msgid "Therapy Support AI"
 msgstr ""

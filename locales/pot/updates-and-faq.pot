@@ -6,26 +6,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "updates-and-faq.sections.title"
+#. key: updates-and-faq.sections.title
 msgid "Updates & FAQ"
 msgstr ""
 
-msgctxt "updates-and-faq.sections.subtitle"
+#. key: updates-and-faq.sections.subtitle
 msgid "Features, fixes & improvements."
 msgstr ""
 
-msgctxt "updates-and-faq.sections.question"
+#. key: updates-and-faq.sections.question
 msgid "Can’t find any answer?"
 msgstr ""
 
-msgctxt "updates-and-faq.sections.lets-ask-ai"
+#. key: updates-and-faq.sections.lets-ask-ai
 msgid "Let’s ask the smartest AI Chat"
 msgstr ""
 
-msgctxt "updates-and-faq.buttons.ask-mh-gpt"
+#. key: updates-and-faq.buttons.ask-mh-gpt
 msgid "Ask mentalhealthGPT"
 msgstr ""
 
-msgctxt "updates-and-faq.buttons.load-more"
+#. key: updates-and-faq.buttons.load-more
 msgid "Load more"
 msgstr ""

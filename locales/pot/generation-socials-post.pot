@@ -6,6 +6,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "generation-socials-post.chat.title"
+#. key: generation-socials-post.chat.title
 msgid "Promotional content"
 msgstr ""

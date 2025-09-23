@@ -6,24 +6,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "diagnosis-support.sections.banner-prefix"
+#. key: diagnosis-support.sections.banner-prefix
 msgid "🚧 The AI functionality for"
 msgstr ""
 
-msgctxt "diagnosis-support.sections.title"
+#. key: diagnosis-support.chat.title
 msgid "Diagnosis Support"
 msgstr ""
 
-msgctxt "diagnosis-support.sections.under-development"
+#. key: diagnosis-support.sections.under-development
 msgid "is currently under development."
 msgstr ""
 
-msgctxt "diagnosis-support.sections.coming-soon"
+#. key: diagnosis-support.sections.coming-soon
 msgid ""
 "It will gradually become available as we integrate specialized models to "
 "support mental health diagnostics."
-msgstr ""
-
-msgctxt "diagnosis-support.chat.title"
-msgid "Diagnosis Support"
 msgstr ""

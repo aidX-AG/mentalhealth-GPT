@@ -6,54 +6,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "pricing.sections.hero-title"
+#. key: pricing.sections.hero-title
 msgid "AI chat made affordable"
 msgstr ""
 
-msgctxt "pricing.sections.hero-subtitle"
+#. key: pricing.sections.hero-subtitle
 msgid "Pricing Plans for every budget"
 msgstr ""
 
-msgctxt "pricing.sections.choose-plan"
+#. key: pricing.sections.choose-plan
 msgid "Choose plan"
 msgstr ""
 
-msgctxt "pricing.sections.faq"
+#. key: pricing.sections.faq
 msgid "Frequently asked questions"
 msgstr ""
 
-msgctxt "pricing.sections.core-features"
+#. key: pricing.sections.core-features
 msgid "Core features"
 msgstr ""
 
-msgctxt "pricing.sections.free"
+#. key: pricing.sections.free
 msgid "Free"
 msgstr ""
 
-msgctxt "pricing.sections.pro"
+#. key: pricing.sections.pro
 msgid "Pro"
 msgstr ""
 
-msgctxt "pricing.sections.enterprise"
+#. key: pricing.sections.enterprise
 msgid "Enterprise"
 msgstr ""
 
-msgctxt "pricing.badges.via-email"
+#. key: pricing.badges.via-email
 msgid "Via email"
 msgstr ""
 
-msgctxt "pricing.badges.chat-247"
+#. key: pricing.badges.chat-247
 msgid "Chat 24/7"
 msgstr ""
 
-msgctxt "pricing.badges.popular"
+#. key: pricing.badges.popular
 msgid "Popular"
 msgstr ""
 
-msgctxt "pricing.sections.currency-symbol"
+#. key: pricing.sections.currency-symbol
 msgid "$"
 msgstr ""
 
-msgctxt "pricing.sections.slash"
+#. key: pricing.sections.slash
 msgid "/"
 msgstr ""

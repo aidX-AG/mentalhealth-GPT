@@ -6,18 +6,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-msgctxt "audio-transcription.chat.greeting"
+#. key: audio-transcription.chat.greeting
 msgid "Hello! How can I assist you with audio transcription today?"
 msgstr ""
 
-msgctxt "audio-transcription.text.capability"
+#. key: audio-transcription.text.capability
 msgid ""
 "Our AI can securely transcribe audio recordings from therapy sessions, "
 "structure the content, and generate clear, professional summaries — all "
 "with end-to-end encryption."
 msgstr ""
 
-msgctxt "audio-transcription.text.upload-instructions"
+#. key: audio-transcription.text.upload-instructions
 msgid ""
 "Simply upload a recorded session. All patient information remains strictly "
 "confidential and is protected by strong encryption directly in your "
@@ -25,24 +25,20 @@ msgid ""
 "step."
 msgstr ""
 
-msgctxt "audio-transcription.sections.banner-prefix"
+#. key: audio-transcription.sections.banner-prefix
 msgid "🚧 The AI model for"
 msgstr ""
 
-msgctxt "audio-transcription.sections.title"
+#. key: audio-transcription.chat.title
 msgid "Audio Transcription & Notes"
 msgstr ""
 
-msgctxt "audio-transcription.sections.under-development"
+#. key: audio-transcription.sections.under-development
 msgid "is currently under development."
 msgstr ""
 
-msgctxt "audio-transcription.sections.coming-soon"
+#. key: audio-transcription.sections.coming-soon
 msgid ""
 "It will soon provide accurate transcription and note-taking support for "
 "clinical documentation."
-msgstr ""
-
-msgctxt "audio-transcription.chat.title"
-msgid "Audio Transcription & Notes"
 msgstr ""
