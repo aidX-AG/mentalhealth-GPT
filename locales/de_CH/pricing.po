@@ -1,12 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-09-23 19:55+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/pricing/de_CH/>\n"
 "Language: de_CH\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 #. key: pricing.sections.hero-title
 msgid "AI chat made affordable"
@@ -14,7 +17,7 @@ msgstr ""
 
 #. key: pricing.sections.hero-subtitle
 msgid "Pricing Plans for every budget"
-msgstr ""
+msgstr "Preise für jedes Budget"
 
 #. key: pricing.sections.choose-plan
 msgid "Choose plan"
@@ -42,7 +45,7 @@ msgstr ""
 
 #. key: pricing.badges.via-email
 msgid "Via email"
-msgstr ""
+msgstr "Per E-Mail"
 
 #. key: pricing.badges.chat-247
 msgid "Chat 24/7"
@@ -58,4 +61,4 @@ msgstr ""
 
 #. key: pricing.sections.slash
 msgid "/"
-msgstr ""
+msgstr "/"
