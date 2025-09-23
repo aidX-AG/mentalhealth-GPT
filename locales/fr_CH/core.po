@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2025-09-23 13:33+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -125,7 +125,7 @@ msgstr "🚧 La fonctionnalité IA pour "
 #: app/de/audio-transcription/page.tsx:15
 #: app/fr/audio-transcription/page.tsx:15
 msgid "🚧 The AI model for "
-msgstr ""
+msgstr "🚧 Le modèle d'IA pour "
 
 #: app/de/supervision-training/page.tsx:14
 #: app/fr/supervision-training/page.tsx:14
@@ -313,7 +313,7 @@ msgstr "Formation à l'IA sur des données spécifiques à l'établissement"
 
 #: components/Logo/index.tsx:29
 msgid "aidX"
-msgstr ""
+msgstr "aidX"
 
 #: mocks/chatHistory.tsx:5
 msgid "aidX AI UI"
@@ -512,7 +512,7 @@ msgstr ""
 
 #: components/ScheduleResult/index.tsx:7
 msgid "Buffer"
-msgstr ""
+msgstr "Buffer"
 
 #: app/checkout/page.tsx:43
 #: app/de/checkout/page.tsx:43
@@ -1590,7 +1590,7 @@ msgstr "Membres"
 #: app/fr/page.tsx:14
 #: app/page.tsx:15
 msgid "mentalhealthGPT"
-msgstr ""
+msgstr "mentalhealthGPT"
 
 #: mocks/faq.tsx:18
 msgid "mentalhealthGPT is not just a general-purpose AI repurposed for mental health – it is specifically designed from the ground up to serve the needs of mental health professionals, clinics, and patients. While platforms like ChatGPT or DeepSeek offer powerful language capabilities, they are not tailored for clinical accuracy, therapeutic tone, or privacy-critical environments. mentalhealthGPT uses specialized AI models that have been fine-tuned on mental health contexts – including psychotherapy, diagnostics, patient communication, research workflows, and administrative tasks. This leads to more context-aware, ethically aligned, and medically relevant outputs. Moreover, we enforce strict encryption, with decryption keys held exclusively in Switzerland. This zero-trust architecture means only the authorized user can read the data – not even we as developers. The result: a trusted digital assistant designed for the realities of clinical practice, enabling safe, accurate, and efficient support across the mental healthcare spectrum."
