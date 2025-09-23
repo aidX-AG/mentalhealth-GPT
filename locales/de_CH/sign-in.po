@@ -1,63 +1,68 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-09-23 13:54+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/sign-in/de_CH/>\n"
 "Language: de_CH\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 msgid "Forgot password?"
-msgstr ""
+msgstr "Passwort vergessen?"
 
 msgid "Sign in with Brainwave"
-msgstr ""
+msgstr "Mit Brainwave anmelden"
 
 msgid "Username or email"
-msgstr ""
+msgstr "Benutzername oder E-Mail-Adresse"
 
 msgid "Password"
-msgstr ""
+msgstr "Passwort"
 
 msgid "Unlock the power of AI"
-msgstr ""
+msgstr "Entfesseln Sie die Kraft der KI"
 
 msgid "Chat with the smartest AI - Experience the power of AI with us"
 msgstr ""
+"Chatten Sie mit der intelligentesten KI – Erleben Sie mit uns die "
+"Leistungsfähigkeit der KI"
 
 msgid "Continue with Google"
-msgstr ""
+msgstr "Weiter mit Google"
 
 msgid "Continue with Apple"
-msgstr ""
+msgstr "Weiter mit Apple"
 
 msgid "OR"
-msgstr ""
+msgstr "ODER"
 
 msgid "Create Account"
-msgstr ""
+msgstr "Konto erstellen"
 
 msgid "By creating an account, you agree to our"
 msgstr ""
 
 msgid "Terms of Service"
-msgstr ""
+msgstr "Nutzungsbedingungen"
 
 msgid "and"
-msgstr ""
+msgstr "und"
 
 msgid "Privacy & Cookie Statement"
-msgstr ""
+msgstr "Datenschutz- und Cookie-Erklärung"
 
 msgid "."
-msgstr ""
+msgstr "."
 
 msgid "Email"
-msgstr ""
+msgstr "E-Mail"
 
 msgid "Reset your password"
-msgstr ""
+msgstr "Passwort zurücksetzen"
 
 msgid "Reset password"
-msgstr ""
+msgstr "Passwort zurücksetzen"
