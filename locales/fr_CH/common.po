@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 13:36+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2025-09-23 14:37+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/common/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -86,7 +86,7 @@ msgstr "Exportation d'un fichier audio"
 
 msgid "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any"
 msgstr ""
-"Présentation de « Brainwave », un produit alimenté par l'IA capable de "
+"Présentation de « aidX », un produit alimenté par l'IA capable de "
 "transformer n'importe quel"
 
 msgid "609 characters"
@@ -120,7 +120,7 @@ msgstr ""
 "traitement appropriés des données du formulaire côté serveur."
 
 msgid "I have created a project in your Codepen account"
-msgstr "J'ai créé un projet dans votre compte Codepen."
+msgstr "J'ai créé un projet dans votre compte Codepen"
 
 msgid "View"
 msgstr "Afficher"
@@ -440,7 +440,7 @@ msgid "Download conversation"
 msgstr "Télécharger la conversation"
 
 msgid "We’re sorry to see you go"
-msgstr "Nous sommes désolés de vous voir partir."
+msgstr "Nous sommes désolés de vous voir partir"
 
 msgid ""
 "Warning: Deleting your account will permanently remove all of your data and "
@@ -472,7 +472,7 @@ msgid "At least 800x800 px recommended."
 msgstr "Au moins 800 x 800 pixels recommandés."
 
 msgid "JPG or PNG and GIF is allowed"
-msgstr "Les formats JPG, PNG et GIF sont autorisés."
+msgstr "Les formats JPG, PNG et GIF sont autorisés"
 
 msgid "Save changes"
 msgstr "Enregistrer les modifications"
