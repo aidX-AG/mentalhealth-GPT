@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-23 13:24+0000\n"
+"PO-Revision-Date: 2025-09-23 13:33+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/de_CH/>\n"
@@ -508,7 +508,7 @@ msgstr ""
 msgid "Browse and install apps to simplify your life with mentalhealthGPT"
 msgstr ""
 "Durchsuchen und installieren Sie Apps, um Ihr Leben mit mentalhealthGPT zu "
-"vereinfachen."
+"vereinfachen"
 
 #: components/ScheduleResult/index.tsx:7
 msgid "Buffer"
@@ -1268,7 +1268,7 @@ msgstr "HTML"
 
 #: components/Code/index.tsx:55
 msgid "I have created a project in your Codepen account"
-msgstr "Ich habe ein Projekt in Ihrem Codepen-Konto erstellt."
+msgstr "Ich habe ein Projekt in Ihrem Codepen-Konto erstellt"
 
 #: components/SocialsPost/Details/index.tsx:24
 msgid "image-up"
@@ -1400,7 +1400,7 @@ msgstr "JPG Groß"
 
 #: components/Settings/EditProfile/index.tsx:35
 msgid "JPG or PNG and GIF is allowed"
-msgstr "JPG oder PNG und GIF sind zulässig."
+msgstr "JPG oder PNG und GIF sind zulässig"
 
 #: constants/export.tsx:6
 msgid "JPG Small"
@@ -1715,7 +1715,7 @@ msgstr "Benachrichtigungen"
 
 #: components/AddChatList/index.tsx:72
 msgid "Only people invited in this list can access"
-msgstr "Nur Personen, die in dieser Liste eingeladen sind, haben Zugriff."
+msgstr "Nur Personen, die in dieser Liste eingeladen sind, haben Zugriff"
 
 #: mocks/faq.tsx:13
 msgid "Only the user has access to the encrypted data. No one else – not even our technical team – can decrypt or view the data. This ensures full compliance with the highest data protection standards (GDPR, Swiss DSG, and clinical-grade confidentiality). The mentalhealthGPT platform is designed from the ground up as zero-access and privacy-first."
@@ -2123,7 +2123,7 @@ msgstr "Kurzbiografie"
 #: app/de/audio-transcription/page.tsx:11
 #: app/fr/audio-transcription/page.tsx:11
 msgid "Show me what you can do"
-msgstr "Zeig mir, was du kannst."
+msgstr "Zeig mir, was du kannst"
 
 #: app/de/sign-in/page.tsx:11
 #: app/fr/sign-in/page.tsx:11
@@ -2178,7 +2178,7 @@ msgstr "Unamüsiert lächeln"
 #: components/Settings/Notifications/index.tsx:18
 #: components/Settings/Notifications/index.tsx:34
 msgid "Someone invite you to new chat"
-msgstr "Jemand hat dich zu einem neuen Chat eingeladen."
+msgstr "Jemand hat dich zu einem neuen Chat eingeladen"
 
 #: app/de/documentation-reports/page.tsx:12
 #: app/documentation-reports/page.tsx:12
@@ -2570,7 +2570,7 @@ msgstr ""
 
 #: components/Settings/DeleteAccount/index.tsx:9
 msgid "We’re sorry to see you go"
-msgstr "Wir bedauern Ihr Ausscheiden sehr."
+msgstr "Wir bedauern Ihr Ausscheiden sehr"
 
 #: mocks/updates.tsx:44
 msgid "We’ve deployed the first secure user interface for mentalhealthGPT, enabling intuitive and privacy-first interaction with our AI services. This marks a big milestone toward bringing our platform directly into clinical hands."
@@ -2673,7 +2673,7 @@ msgstr "Wowa"
 
 #: mocks/resultSearch.tsx:28
 msgid "Write a Welcome Page in HTML and CSS"
-msgstr "Erstellen Sie eine Willkommensseite in HTML und CSS."
+msgstr "Erstellen Sie eine Willkommensseite in HTML und CSS"
 
 #: mocks/chatHistory.tsx:13
 #: mocks/chatHistory.tsx:21
@@ -2687,7 +2687,7 @@ msgid "Write code (HTML, CSS and JS) for a simple form with 3 input fields and a
 msgstr ""
 "Schreiben Sie Code (HTML, CSS und JS) für ein einfaches Formular mit 3 "
 "Eingabefeldern und einem Dropdown-Menü mit 2 Schaltflächen: „Abbrechen“ und "
-"„Senden“."
+"„Senden“"
 
 #: components/Feedback/index.tsx:16
 msgid "Writing can help you improve your grammar, spelling, and sentence structure. Try to write regularly, even if it's just a short paragraph or a journal entry."
