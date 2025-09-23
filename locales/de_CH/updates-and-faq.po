@@ -1,27 +1,30 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-09-23 14:05+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/updates-and-faq/de_CH/>\n"
 "Language: de_CH\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 msgid "Updates & FAQ"
-msgstr ""
+msgstr "Aktualisierungen &amp; FAQ"
 
 msgid "Features, fixes & improvements."
-msgstr ""
+msgstr "Funktionen, Fehlerbehebungen und Verbesserungen."
 
 msgid "Can’t find any answer?"
-msgstr ""
+msgstr "Sie finden keine Antwort?"
 
 msgid "Let’s ask the smartest AI Chat"
-msgstr ""
+msgstr "Fragen wir den intelligentesten KI-Chat"
 
 msgid "Ask mentalhealthGPT"
-msgstr ""
+msgstr "Fragen Sie mentalhealthGPT"
 
 msgid "Load more"
-msgstr ""
+msgstr "Mehr laden"
