@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-23 13:23+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-09-23 13:24+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/de_CH/>\n"
 "Language: de_CH\n"
@@ -436,7 +436,7 @@ msgstr "Audio"
 #: app/fr/audio-transcription/page.tsx:16
 #: app/fr/audio-transcription/page.tsx:8
 msgid "Audio Transcription & Notes"
-msgstr "Audio-Transkription &amp; Notizen"
+msgstr "Audio-Transkription & Notizen"
 
 #: components/Settings/Applications/index.tsx:12
 msgid "Authorized apps"
