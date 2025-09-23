@@ -1,86 +1,91 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-09-23 13:41+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/checkout/fr_CH/>\n"
 "Language: fr_CH\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 msgid "AI chat made affordable"
-msgstr ""
+msgstr "Le chat IA à prix abordable"
 
 msgid "Pricing Plans for every budget - Unlock the power of AI"
-msgstr ""
+msgstr "Forfaits adaptés à tous les budgets - Libérez la puissance de l'IA"
 
 msgid "Enterprise"
-msgstr ""
+msgstr "Entreprise"
 
 msgid "Popular"
-msgstr ""
+msgstr "Populaire"
 
 msgid "$399"
-msgstr ""
+msgstr "399 $"
 
 msgid "Monthly Plan"
-msgstr ""
+msgstr "Forfait mensuel"
 
 msgid "Plan"
-msgstr ""
+msgstr "Plan"
 
 msgid "Change currency"
-msgstr ""
+msgstr "Changer la devise"
 
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 msgid "Billing email"
-msgstr ""
+msgstr "E-mail de facturation"
 
 msgid "Card details"
-msgstr ""
+msgstr "Détails de la carte"
 
 msgid "Email address"
-msgstr ""
+msgstr "Adresse électronique"
 
 msgid "Card number"
-msgstr ""
+msgstr "Numéro de carte"
 
 msgid "MM / YY"
-msgstr ""
+msgstr "MM / AA"
 
 msgid "CVC"
-msgstr ""
+msgstr "CVC"
 
 msgid "Secured form with UI8 Banking"
-msgstr ""
+msgstr "Formulaire sécurisé avec UI8 Banking"
 
 msgid "Billed now: $399"
-msgstr ""
+msgstr "Facturé maintenant : 399 $"
 
 msgid "Apply promo code"
-msgstr ""
+msgstr "Appliquer le code promotionnel"
 
 msgid ""
 "By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
 "charged $399 every month, unless you cancel."
 msgstr ""
+"En cliquant sur « Démarrer le plan Brainwave Enterprise », vous acceptez "
+"d'être facturé 399 $ chaque mois, sauf si vous annulez."
 
 msgid "Start Brainwave Enterprise plan"
-msgstr ""
+msgstr "Commencer le plan Entreprise Brainwave"
 
 msgid "Pay"
-msgstr ""
+msgstr "Payer"
 
 msgid "$"
-msgstr ""
+msgstr "$"
 
 msgid "/month"
-msgstr ""
+msgstr "/mois"
 
 msgid "Save"
-msgstr ""
+msgstr "Enregistrer"
 
 msgid "%"
-msgstr ""
+msgstr "%"
