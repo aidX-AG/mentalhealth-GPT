@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-23 13:58+0000\n"
+"PO-Revision-Date: 2025-09-23 14:37+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/fr_CH/>\n"
@@ -508,7 +508,7 @@ msgstr "Tout rassembler : mentalhealthGPT entre dans sa phase d'intégration"
 msgid "Browse and install apps to simplify your life with mentalhealthGPT"
 msgstr ""
 "Parcourez et installez des applications pour vous simplifier la vie avec "
-"mentalhealthGPT."
+"mentalhealthGPT"
 
 #: components/ScheduleResult/index.tsx:7
 msgid "Buffer"
@@ -1269,7 +1269,7 @@ msgstr "HTML"
 
 #: components/Code/index.tsx:55
 msgid "I have created a project in your Codepen account"
-msgstr "J'ai créé un projet dans votre compte Codepen."
+msgstr "J'ai créé un projet dans votre compte Codepen"
 
 #: components/SocialsPost/Details/index.tsx:24
 msgid "image-up"
@@ -1403,7 +1403,7 @@ msgstr "JPG grand format"
 
 #: components/Settings/EditProfile/index.tsx:35
 msgid "JPG or PNG and GIF is allowed"
-msgstr "Les formats JPG, PNG et GIF sont autorisés."
+msgstr "Les formats JPG, PNG et GIF sont autorisés"
 
 #: constants/export.tsx:6
 msgid "JPG Small"
@@ -2544,7 +2544,7 @@ msgstr "Voix"
 msgid "Want to support mentalhealthGPT or learn more? Email"
 msgstr ""
 "Vous souhaitez soutenir mentalhealthGPT ou en savoir plus ? Envoyez-nous un "
-"e-mail."
+"e-mail"
 
 #: components/Settings/DeleteAccount/index.tsx:10
 msgid "Warning: Deleting your account will permanently remove all of your data and cannot be undone. This includes your profile, chats, comments, and any other information associated with your account. Are you sure you want to proceed with deleting your account?"
@@ -2577,7 +2577,7 @@ msgstr ""
 
 #: components/Settings/DeleteAccount/index.tsx:9
 msgid "We’re sorry to see you go"
-msgstr "Nous sommes désolés de vous voir partir."
+msgstr "Nous sommes désolés de vous voir partir"
 
 #: mocks/updates.tsx:44
 msgid "We’ve deployed the first secure user interface for mentalhealthGPT, enabling intuitive and privacy-first interaction with our AI services. This marks a big milestone toward bringing our platform directly into clinical hands."
