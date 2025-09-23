@@ -1,0 +1,86 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de_CH\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+msgid "AI chat made affordable"
+msgstr ""
+
+msgid "Pricing Plans for every budget - Unlock the power of AI"
+msgstr ""
+
+msgid "Enterprise"
+msgstr ""
+
+msgid "Popular"
+msgstr ""
+
+msgid "$399"
+msgstr ""
+
+msgid "Monthly Plan"
+msgstr ""
+
+msgid "Plan"
+msgstr ""
+
+msgid "Change currency"
+msgstr ""
+
+msgid "USD"
+msgstr ""
+
+msgid "Billing email"
+msgstr ""
+
+msgid "Card details"
+msgstr ""
+
+msgid "Email address"
+msgstr ""
+
+msgid "Card number"
+msgstr ""
+
+msgid "MM / YY"
+msgstr ""
+
+msgid "CVC"
+msgstr ""
+
+msgid "Secured form with UI8 Banking"
+msgstr ""
+
+msgid "Billed now: $399"
+msgstr ""
+
+msgid "Apply promo code"
+msgstr ""
+
+msgid ""
+"By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
+"charged $399 every month, unless you cancel."
+msgstr ""
+
+msgid "Start Brainwave Enterprise plan"
+msgstr ""
+
+msgid "Pay"
+msgstr ""
+
+msgid "$"
+msgstr ""
+
+msgid "/month"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "%"
+msgstr ""
