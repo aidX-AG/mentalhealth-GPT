@@ -6,66 +6,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Hello! How can I assist you with documentation and reporting today?
-msgid "documentation-reports.chat.greeting"
+msgctxt "documentation-reports.chat.greeting"
+msgid "Hello! How can I assist you with documentation and reporting today?"
 msgstr ""
 
-#. Soon you’ll be able to generate
-msgid "documentation-reports.text.coming-capability"
+msgctxt "documentation-reports.text.coming-capability"
+msgid "Soon you’ll be able to generate"
 msgstr ""
 
-#. professional documentation and reports
-msgid "documentation-reports.text.professional-docs"
+msgctxt "documentation-reports.text.professional-docs"
+msgid "professional documentation and reports"
 msgstr ""
 
-#. — whether for clinical use, insurance submissions, or personal records of therapy and supervision sessions.
-msgid "documentation-reports.text.use-cases"
+msgctxt "documentation-reports.text.use-cases"
+msgid ""
+"— whether for clinical use, insurance submissions, or personal records of "
+"therapy and supervision sessions."
 msgstr ""
 
-#. Our AI will help you transform transcripts into
-msgid "documentation-reports.text.ai-helps-transform"
+msgctxt "documentation-reports.text.ai-helps-transform"
+msgid "Our AI will help you transform transcripts into"
 msgstr ""
 
-#. clear, structured, and confidential
-msgid "documentation-reports.text.clear-structured-confidential"
+msgctxt "documentation-reports.text.clear-structured-confidential"
+msgid "clear, structured, and confidential"
 msgstr ""
 
-#. reports — automatically.
-msgid "documentation-reports.text.reports-automatically"
+msgctxt "documentation-reports.text.reports-automatically"
+msgid "reports — automatically."
 msgstr ""
 
-#. All data is processed with
-msgid "documentation-reports.text.data-processed-with"
+msgctxt "documentation-reports.text.data-processed-with"
+msgid "All data is processed with"
 msgstr ""
 
-#. end-to-end encryption
-msgid "documentation-reports.text.end-to-end-encryption"
+msgctxt "documentation-reports.text.end-to-end-encryption"
+msgid "end-to-end encryption"
 msgstr ""
 
-#. to protect patient confidentiality and ensure secure handling at every stage.
-msgid "documentation-reports.text.privacy-protection"
+msgctxt "documentation-reports.text.privacy-protection"
+msgid ""
+"to protect patient confidentiality and ensure secure handling at every "
+"stage."
 msgstr ""
 
-#. 🚧
-msgid "documentation-reports.sections.icon"
+msgctxt "documentation-reports.sections.icon"
+msgid "🚧"
 msgstr ""
 
-#. Documentation & Reporting
-msgid "documentation-reports.sections.title"
+msgctxt "documentation-reports.sections.title"
+msgid "Documentation & Reporting"
 msgstr ""
 
-#. is an exciting new feature that’s currently in development.
-msgid "documentation-reports.sections.in-development"
+msgctxt "documentation-reports.sections.in-development"
+msgid "is an exciting new feature that’s currently in development."
 msgstr ""
 
-#. We’re building it to save you time, reduce admin load, and enhance the quality of your documentation —
-msgid "documentation-reports.text.value-prop"
+msgctxt "documentation-reports.text.value-prop"
+msgid ""
+"We’re building it to save you time, reduce admin load, and enhance the "
+"quality of your documentation —"
 msgstr ""
 
-#. stay tuned!
-msgid "documentation-reports.text.stay-tuned"
+msgctxt "documentation-reports.text.stay-tuned"
+msgid "stay tuned!"
 msgstr ""
 
-#. Documentation & Reporting
-msgid "documentation-reports.chat.title"
+msgctxt "documentation-reports.chat.title"
+msgid "Documentation & Reporting"
 msgstr ""

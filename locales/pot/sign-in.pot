@@ -6,74 +6,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Forgot password?
-msgid "sign-in.misc.forgot-password"
+msgctxt "sign-in.misc.forgot-password"
+msgid "Forgot password?"
 msgstr ""
 
-#. Sign in with Brainwave
-msgid "sign-in.misc.sign-in-with-brainwave"
+msgctxt "sign-in.misc.sign-in-with-brainwave"
+msgid "Sign in with Brainwave"
 msgstr ""
 
-#. Username or email
-msgid "sign-in.placeholders.username-or-email"
+msgctxt "sign-in.placeholders.username-or-email"
+msgid "Username or email"
 msgstr ""
 
-#. Password
-msgid "sign-in.placeholders.password"
+msgctxt "sign-in.placeholders.password"
+msgid "Password"
 msgstr ""
 
-#. Unlock the power of AI
-msgid "sign-in.sections.hero-title"
+msgctxt "sign-in.sections.hero-title"
+msgid "Unlock the power of AI"
 msgstr ""
 
-#. Chat with the smartest AI - Experience the power of AI with us
-msgid "sign-in.sections.hero-subtitle"
+msgctxt "sign-in.sections.hero-subtitle"
+msgid "Chat with the smartest AI - Experience the power of AI with us"
 msgstr ""
 
-#. Continue with Google
-msgid "sign-in.buttons.continue-google"
+msgctxt "sign-in.buttons.continue-google"
+msgid "Continue with Google"
 msgstr ""
 
-#. Continue with Apple
-msgid "sign-in.buttons.continue-apple"
+msgctxt "sign-in.buttons.continue-apple"
+msgid "Continue with Apple"
 msgstr ""
 
-#. OR
-msgid "sign-in.sections.or"
+msgctxt "sign-in.sections.or"
+msgid "OR"
 msgstr ""
 
-#. Create Account
-msgid "sign-in.buttons.create-account"
+msgctxt "sign-in.buttons.create-account"
+msgid "Create Account"
 msgstr ""
 
-#. By creating an account, you agree to our
-msgid "sign-in.text.by-creating-account"
+msgctxt "sign-in.text.by-creating-account"
+msgid "By creating an account, you agree to our"
 msgstr ""
 
-#. Terms of Service
-msgid "sign-in.sections.terms-of-service"
+msgctxt "sign-in.sections.terms-of-service"
+msgid "Terms of Service"
 msgstr ""
 
-#. and
-msgid "sign-in.text.and"
+msgctxt "sign-in.text.and"
+msgid "and"
 msgstr ""
 
-#. Privacy & Cookie Statement
-msgid "sign-in.sections.privacy-cookie"
+msgctxt "sign-in.sections.privacy-cookie"
+msgid "Privacy & Cookie Statement"
 msgstr ""
 
-#. .
-msgid "sign-in.text.period"
+msgctxt "sign-in.text.period"
+msgid "."
 msgstr ""
 
-#. Email
-msgid "sign-in.placeholders.email"
+msgctxt "sign-in.placeholders.email"
+msgid "Email"
 msgstr ""
 
-#. Reset your password
-msgid "sign-in.fragments.reset-password"
+msgctxt "sign-in.fragments.reset-password"
+msgid "Reset your password"
 msgstr ""
 
-#. Reset password
-msgid "sign-in.buttons.reset-password"
+msgctxt "sign-in.buttons.reset-password"
+msgid "Reset password"
 msgstr ""

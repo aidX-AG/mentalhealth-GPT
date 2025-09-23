@@ -57,13 +57,20 @@ function buildPotFromJson(jsonPath) {
 
   let count = 0;
   for (const [key, value] of Object.entries(flat)) {
-    if (!key) continue;
-    // Entwickler-Hinweis (#.) = englischer Quelltext aus JSON
-    po.translations[''][key] = {
-      msgid: key,
+    if (!key || typeof value !== 'string' || !value.trim()) continue;
+
+    const ctx = key;       // JSON-Key als Kontext
+    const id  = value;     // EN-Text als msgid
+
+    if (!po.translations[ctx]) po.translations[ctx] = {};
+    po.translations[ctx][id] = {
+      msgid: id,
       msgstr: [''],
-      comments: value ? { extracted: String(value) } : undefined
+      msgctxt: ctx
+      // optional: Hinweis zusätzlich
+      // comments: { extracted: `key: ${ctx}` }
     };
+
     count++;
   }
 

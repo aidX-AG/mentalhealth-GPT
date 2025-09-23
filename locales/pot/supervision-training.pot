@@ -6,22 +6,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. 🚧 The AI model for
-msgid "supervision-training.sections.banner-prefix"
+msgctxt "supervision-training.sections.banner-prefix"
+msgid "🚧 The AI model for"
 msgstr ""
 
-#. Supervision & Training
-msgid "supervision-training.sections.title"
+msgctxt "supervision-training.sections.title"
+msgid "Supervision & Training"
 msgstr ""
 
-#. is currently being developed with specialized training data.
-msgid "supervision-training.sections.under-development"
+msgctxt "supervision-training.sections.under-development"
+msgid "is currently being developed with specialized training data."
 msgstr ""
 
-#. It will be available soon to support expert feedback and mentoring workflows.
-msgid "supervision-training.sections.coming-soon"
+msgctxt "supervision-training.sections.coming-soon"
+msgid ""
+"It will be available soon to support expert feedback and mentoring "
+"workflows."
 msgstr ""
 
-#. Supervision & Training
-msgid "supervision-training.chat.title"
+msgctxt "supervision-training.chat.title"
+msgid "Supervision & Training"
 msgstr ""

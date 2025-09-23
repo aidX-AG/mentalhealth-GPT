@@ -6,50 +6,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Hello! How can I assist you with video analysis today?
-msgid "video-analysis.chat.greeting"
+msgctxt "video-analysis.chat.greeting"
+msgid "Hello! How can I assist you with video analysis today?"
 msgstr ""
 
-#. Our AI-powered video analysis is coming soon.
-msgid "video-analysis.text.coming-soon"
+msgctxt "video-analysis.text.coming-soon"
+msgid "Our AI-powered video analysis is coming soon."
 msgstr ""
 
-#. It will help analyze therapy session recordings
-msgid "video-analysis.text.value-prop-part1"
+msgctxt "video-analysis.text.value-prop-part1"
+msgid "It will help analyze therapy session recordings"
 msgstr ""
 
-#. , detect key themes, nonverbal cues, and therapeutic dynamics — all with full end-to-end security.
-msgid "video-analysis.text.value-prop-part2"
+msgctxt "video-analysis.text.value-prop-part2"
+msgid ""
+", detect key themes, nonverbal cues, and therapeutic dynamics — all with "
+"full end-to-end security."
 msgstr ""
 
-#. Your video data is protected at every step: in your browser, during upload, and throughout the AI-based processing.
-msgid "video-analysis.text.security"
+msgctxt "video-analysis.text.security"
+msgid ""
+"Your video data is protected at every step: in your browser, during upload, "
+"and throughout the AI-based processing."
 msgstr ""
 
-#. This feature is currently in development —
-msgid "video-analysis.text.in-development"
+msgctxt "video-analysis.text.in-development"
+msgid "This feature is currently in development —"
 msgstr ""
 
-#. stay tuned!
-msgid "video-analysis.text.stay-tuned"
+msgctxt "video-analysis.text.stay-tuned"
+msgid "stay tuned!"
 msgstr ""
 
-#. 🚧
-msgid "video-analysis.sections.icon"
+msgctxt "video-analysis.sections.icon"
+msgid "🚧"
 msgstr ""
 
-#. Video Analysis
-msgid "video-analysis.sections.title"
+msgctxt "video-analysis.sections.title"
+msgid "Video Analysis"
 msgstr ""
 
-#. is a powerful feature that will provide secure, AI-generated insights into therapeutic sessions.
-msgid "video-analysis.text.feature-benefit"
+msgctxt "video-analysis.text.feature-benefit"
+msgid ""
+"is a powerful feature that will provide secure, AI-generated insights into "
+"therapeutic sessions."
 msgstr ""
 
-#. We’re excited to launch this soon — enabling deeper reflection, supervision, and professional growth.
-msgid "video-analysis.text.launch-excitement"
+msgctxt "video-analysis.text.launch-excitement"
+msgid ""
+"We’re excited to launch this soon — enabling deeper reflection, "
+"supervision, and professional growth."
 msgstr ""
 
-#. Video Analysis
-msgid "video-analysis.chat.title"
+msgctxt "video-analysis.chat.title"
+msgid "Video Analysis"
 msgstr ""

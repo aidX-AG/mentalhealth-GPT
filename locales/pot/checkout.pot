@@ -6,102 +6,104 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. AI chat made affordable
-msgid "checkout.sections.hero-title"
+msgctxt "checkout.sections.hero-title"
+msgid "AI chat made affordable"
 msgstr ""
 
-#. Pricing Plans for every budget - Unlock the power of AI
-msgid "checkout.body.hero-subtitle"
+msgctxt "checkout.body.hero-subtitle"
+msgid "Pricing Plans for every budget - Unlock the power of AI"
 msgstr ""
 
-#. Enterprise
-msgid "checkout.sections.enterprise"
+msgctxt "checkout.sections.enterprise"
+msgid "Enterprise"
 msgstr ""
 
-#. Popular
-msgid "checkout.sections.popular"
+msgctxt "checkout.sections.popular"
+msgid "Popular"
 msgstr ""
 
-#. $399
-msgid "checkout.fragments.price-399"
+msgctxt "checkout.fragments.price-399"
+msgid "$399"
 msgstr ""
 
-#. Monthly Plan
-msgid "checkout.sections.monthly-plan"
+msgctxt "checkout.sections.monthly-plan"
+msgid "Monthly Plan"
 msgstr ""
 
-#. Plan
-msgid "checkout.sections.plan"
+msgctxt "checkout.sections.plan"
+msgid "Plan"
 msgstr ""
 
-#. Change currency
-msgid "checkout.sections.change-currency"
+msgctxt "checkout.sections.change-currency"
+msgid "Change currency"
 msgstr ""
 
-#. USD
-msgid "checkout.sections.usd"
+msgctxt "checkout.sections.usd"
+msgid "USD"
 msgstr ""
 
-#. Billing email
-msgid "checkout.sections.billing-email"
+msgctxt "checkout.sections.billing-email"
+msgid "Billing email"
 msgstr ""
 
-#. Card details
-msgid "checkout.sections.card-details"
+msgctxt "checkout.sections.card-details"
+msgid "Card details"
 msgstr ""
 
-#. Email address
-msgid "checkout.form.email"
+msgctxt "checkout.form.email"
+msgid "Email address"
 msgstr ""
 
-#. Card number
-msgid "checkout.form.card-number"
+msgctxt "checkout.form.card-number"
+msgid "Card number"
 msgstr ""
 
-#. MM / YY
-msgid "checkout.form.mm-yy"
+msgctxt "checkout.form.mm-yy"
+msgid "MM / YY"
 msgstr ""
 
-#. CVC
-msgid "checkout.form.cvc"
+msgctxt "checkout.form.cvc"
+msgid "CVC"
 msgstr ""
 
-#. Secured form with UI8 Banking
-msgid "checkout.body.security-note"
+msgctxt "checkout.body.security-note"
+msgid "Secured form with UI8 Banking"
 msgstr ""
 
-#. Billed now: $399
-msgid "checkout.sections.billed-now"
+msgctxt "checkout.sections.billed-now"
+msgid "Billed now: $399"
 msgstr ""
 
-#. Apply promo code
-msgid "checkout.sections.apply-promo-code"
+msgctxt "checkout.sections.apply-promo-code"
+msgid "Apply promo code"
 msgstr ""
 
-#. By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be charged $399 every month, unless you cancel.
-msgid "checkout.body.billing-consent"
+msgctxt "checkout.body.billing-consent"
+msgid ""
+"By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
+"charged $399 every month, unless you cancel."
 msgstr ""
 
-#. Start Brainwave Enterprise plan
-msgid "checkout.sections.cta-start-plan"
+msgctxt "checkout.sections.cta-start-plan"
+msgid "Start Brainwave Enterprise plan"
 msgstr ""
 
-#. Pay
-msgid "checkout.sections.pay"
+msgctxt "checkout.sections.pay"
+msgid "Pay"
 msgstr ""
 
-#. $
-msgid "checkout.sections.currency-symbol"
+msgctxt "checkout.sections.currency-symbol"
+msgid "$"
 msgstr ""
 
-#. /month
-msgid "checkout.sections.per-month"
+msgctxt "checkout.sections.per-month"
+msgid "/month"
 msgstr ""
 
-#. Save
-msgid "checkout.badges.save"
+msgctxt "checkout.badges.save"
+msgid "Save"
 msgstr ""
 
-#. %
-msgid "checkout.badges.percent"
+msgctxt "checkout.badges.percent"
+msgid "%"
 msgstr ""

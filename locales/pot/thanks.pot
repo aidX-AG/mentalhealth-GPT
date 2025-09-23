@@ -6,18 +6,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Thank you for your purchase!
-msgid "thanks.sections.title"
+msgctxt "thanks.sections.title"
+msgid "Thank you for your purchase!"
 msgstr ""
 
-#. Your order has been received and is currently being processed. You will receive an email confirmation with your order details shortly.
-msgid "thanks.sections.order-received"
+msgctxt "thanks.sections.order-received"
+msgid ""
+"Your order has been received and is currently being processed. You will "
+"receive an email confirmation with your order details shortly."
 msgstr ""
 
-#. Manage subscription
-msgid "thanks.buttons.manage-subscription"
+msgctxt "thanks.buttons.manage-subscription"
+msgid "Manage subscription"
 msgstr ""
 
-#. Start new chat
-msgid "thanks.buttons.start-new-chat"
+msgctxt "thanks.buttons.start-new-chat"
+msgid "Start new chat"
 msgstr ""

@@ -6,54 +6,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. AI chat made affordable
-msgid "pricing.sections.hero-title"
+msgctxt "pricing.sections.hero-title"
+msgid "AI chat made affordable"
 msgstr ""
 
-#. Pricing Plans for every budget
-msgid "pricing.sections.hero-subtitle"
+msgctxt "pricing.sections.hero-subtitle"
+msgid "Pricing Plans for every budget"
 msgstr ""
 
-#. Choose plan
-msgid "pricing.sections.choose-plan"
+msgctxt "pricing.sections.choose-plan"
+msgid "Choose plan"
 msgstr ""
 
-#. Frequently asked questions
-msgid "pricing.sections.faq"
+msgctxt "pricing.sections.faq"
+msgid "Frequently asked questions"
 msgstr ""
 
-#. Core features
-msgid "pricing.sections.core-features"
+msgctxt "pricing.sections.core-features"
+msgid "Core features"
 msgstr ""
 
-#. Free
-msgid "pricing.sections.free"
+msgctxt "pricing.sections.free"
+msgid "Free"
 msgstr ""
 
-#. Pro
-msgid "pricing.sections.pro"
+msgctxt "pricing.sections.pro"
+msgid "Pro"
 msgstr ""
 
-#. Enterprise
-msgid "pricing.sections.enterprise"
+msgctxt "pricing.sections.enterprise"
+msgid "Enterprise"
 msgstr ""
 
-#. Via email
-msgid "pricing.badges.via-email"
+msgctxt "pricing.badges.via-email"
+msgid "Via email"
 msgstr ""
 
-#. Chat 24/7
-msgid "pricing.badges.chat-247"
+msgctxt "pricing.badges.chat-247"
+msgid "Chat 24/7"
 msgstr ""
 
-#. Popular
-msgid "pricing.badges.popular"
+msgctxt "pricing.badges.popular"
+msgid "Popular"
 msgstr ""
 
-#. $
-msgid "pricing.sections.currency-symbol"
+msgctxt "pricing.sections.currency-symbol"
+msgid "$"
 msgstr ""
 
-#. /
-msgid "pricing.sections.slash"
+msgctxt "pricing.sections.slash"
+msgid "/"
 msgstr ""

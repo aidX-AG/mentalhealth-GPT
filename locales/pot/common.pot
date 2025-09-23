@@ -6,666 +6,700 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Add chat list
-msgid "common.headings.add-chat-list"
+msgctxt "common.headings.add-chat-list"
+msgid "Add chat list"
 msgstr ""
 
-#. Invite team member
-msgid "common.sections.invite-member"
+msgctxt "common.sections.invite-member"
+msgid "Invite team member"
 msgstr ""
 
-#. Only people invited in this list can access
-msgid "common.body.access-note"
+msgctxt "common.body.access-note"
+msgid "Only people invited in this list can access"
 msgstr ""
 
-#. Cancel
-msgid "common.buttons.cancel"
+msgctxt "common.buttons.cancel"
+msgid "Cancel"
 msgstr ""
 
-#. Add list
-msgid "common.buttons.add-list"
+msgctxt "common.buttons.add-list"
+msgid "Add list"
 msgstr ""
 
-#. Name
-msgid "common.labels.name"
+msgctxt "common.labels.name"
+msgid "Name"
 msgstr ""
 
-#. Name
-msgid "common.placeholders.name"
+msgctxt "common.placeholders.name"
+msgid "Name"
 msgstr ""
 
-#. Color
-msgid "common.labels.color"
+msgctxt "common.labels.color"
+msgid "Color"
 msgstr ""
 
-#. Auto
-msgid "common.misc.auto"
+msgctxt "common.misc.auto"
+msgid "Auto"
 msgstr ""
 
-#. Reset
-msgid "common.misc.reset"
+msgctxt "common.misc.reset"
+msgid "Reset"
 msgstr ""
 
-#. Exposure
-msgid "common.controls.exposure"
+msgctxt "common.controls.exposure"
+msgid "Exposure"
 msgstr ""
 
-#. Contrast
-msgid "common.controls.contrast"
+msgctxt "common.controls.contrast"
+msgid "Contrast"
 msgstr ""
 
-#. Highlights
-msgid "common.controls.highlights"
+msgctxt "common.controls.highlights"
+msgid "Highlights"
 msgstr ""
 
-#. Shadows
-msgid "common.controls.shadows"
+msgctxt "common.controls.shadows"
+msgid "Shadows"
 msgstr ""
 
-#. White
-msgid "common.controls.white"
+msgctxt "common.controls.white"
+msgid "White"
 msgstr ""
 
-#. Blacks
-msgid "common.controls.blacks"
+msgctxt "common.controls.blacks"
+msgid "Blacks"
 msgstr ""
 
-#. Pause generating
-msgid "common.badges.pause-generating"
+msgctxt "common.badges.pause-generating"
+msgid "Pause generating"
 msgstr ""
 
-#. Avatar
-msgid "common.alt.avatar"
+msgctxt "common.alt.avatar"
+msgid "Avatar"
 msgstr ""
 
-#. Your audio has been successfully generated. You may further customize it or simply download it for use.
-msgid "common.body.audio-success"
+msgctxt "common.body.audio-success"
+msgid ""
+"Your audio has been successfully generated. You may further customize it or "
+"simply download it for use."
 msgstr ""
 
-#. Export
-msgid "common.fragments.export"
+msgctxt "common.fragments.export"
+msgid "Export"
 msgstr ""
 
-#. Edit
-msgid "common.buttons.edit"
+msgctxt "common.buttons.edit"
+msgid "Edit"
 msgstr ""
 
-#. Speed
-msgid "common.labels.speed"
+msgctxt "common.labels.speed"
+msgid "Speed"
 msgstr ""
 
-#. Voice
-msgid "common.labels.voice"
+msgctxt "common.labels.voice"
+msgid "Voice"
 msgstr ""
 
-#. Exporting 1 audio
-msgid "common.actions.exporting-audio"
+msgctxt "common.actions.exporting-audio"
+msgid "Exporting 1 audio"
 msgstr ""
 
-#. Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any
-msgid "common.body.introducing-brainwave"
+msgctxt "common.body.introducing-brainwave"
+msgid "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any"
 msgstr ""
 
-#. 609 characters
-msgid "common.misc.characters-609"
+msgctxt "common.misc.characters-609"
+msgid "609 characters"
 msgstr ""
 
-#. Save
-msgid "common.misc.save"
+msgctxt "common.misc.save"
+msgid "Save"
 msgstr ""
 
-#. 0:21
-msgid "common.misc.time-021"
+msgctxt "common.misc.time-021"
+msgid "0:21"
 msgstr ""
 
-#. 1:02
-msgid "common.misc.time-102"
+msgctxt "common.misc.time-102"
+msgid "1:02"
 msgstr ""
 
-#. Audio
-msgid "common.alt.audio"
+msgctxt "common.alt.audio"
+msgid "Audio"
 msgstr ""
 
-#. Copied!
-msgid "common.badges.copied"
+msgctxt "common.badges.copied"
+msgid "Copied!"
 msgstr ""
 
-#. Copy code
-msgid "common.actions.copy-code"
+msgctxt "common.actions.copy-code"
+msgid "Copy code"
 msgstr ""
 
-#. Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side.
-msgid "common.body.form-example-note"
+msgctxt "common.body.form-example-note"
+msgid ""
+"Note: This is just an example of a simple HTML form. In a real-world "
+"scenario, you would also want to include proper validation and handling of "
+"the form data on the server side."
 msgstr ""
 
-#. I have created a project in your Codepen account
-msgid "common.body.created-project"
+msgctxt "common.body.created-project"
+msgid "I have created a project in your Codepen account"
 msgstr ""
 
-#. View
-msgid "common.buttons.view"
+msgctxt "common.buttons.view"
+msgid "View"
 msgstr ""
 
-#. More
-msgid "common.buttons.more"
+msgctxt "common.buttons.more"
+msgid "More"
 msgstr ""
 
-#. Suggestion to improve your test
-msgid "common.sections.suggestion"
+msgctxt "common.sections.suggestion"
+msgid "Suggestion to improve your test"
 msgstr ""
 
-#. Read regularly:
-msgid "common.sections.read-regularly"
+msgctxt "common.sections.read-regularly"
+msgid "Read regularly:"
 msgstr ""
 
-#. Reading is an excellent way to improve your vocabulary, grammar, and comprehension skills. Try to read a variety of materials, including books, newspapers, magazines, and online articles.
-msgid "common.body.reading-benefits"
+msgctxt "common.body.reading-benefits"
+msgid ""
+"Reading is an excellent way to improve your vocabulary, grammar, and "
+"comprehension skills. Try to read a variety of materials, including books, "
+"newspapers, magazines, and online articles."
 msgstr ""
 
-#. Practice writing:
-msgid "common.sections.practice-writing"
+msgctxt "common.sections.practice-writing"
+msgid "Practice writing:"
 msgstr ""
 
-#. Writing can help you improve your grammar, spelling, and sentence structure. Try to write regularly, even if it&apos;s just a short paragraph or a journal entry.
-msgid "common.body.writing-benefits"
+msgctxt "common.body.writing-benefits"
+msgid ""
+"Writing can help you improve your grammar, spelling, and sentence "
+"structure. Try to write regularly, even if it&apos;s just a short paragraph "
+"or a journal entry."
 msgstr ""
 
-#. Listen to English:
-msgid "common.sections.listen-to-english"
+msgctxt "common.sections.listen-to-english"
+msgid "Listen to English:"
 msgstr ""
 
-#. Listening to English podcasts, audiobooks, and videos can help you improve your listening and comprehension skills. It can also help you get used to different accents and intonations.
-msgid "common.body.listening-benefits"
+msgctxt "common.body.listening-benefits"
+msgid ""
+"Listening to English podcasts, audiobooks, and videos can help you improve "
+"your listening and comprehension skills. It can also help you get used to "
+"different accents and intonations."
 msgstr ""
 
-#. Speak with native speakers:
-msgid "common.sections.speak-with-natives"
+msgctxt "common.sections.speak-with-natives"
+msgid "Speak with native speakers:"
 msgstr ""
 
-#. Speaking with native speakers can help you improve your pronunciation, fluency, and confidence. You can find language exchange partners or join conversation groups online or in person.
-msgid "common.body.speaking-benefits"
+msgctxt "common.body.speaking-benefits"
+msgid ""
+"Speaking with native speakers can help you improve your pronunciation, "
+"fluency, and confidence. You can find language exchange partners or join "
+"conversation groups online or in person."
 msgstr ""
 
-#. Learn grammar rules:
-msgid "common.sections.learn-grammar-rules"
+msgctxt "common.sections.learn-grammar-rules"
+msgid "Learn grammar rules:"
 msgstr ""
 
-#. Learning the basic grammar rules can help you write and speak more accurately. Try to focus on one rule at a time and practice using it in your writing and speaking. There are many online resources, such as grammar books and videos, that can help you learn grammar rules.
-msgid "common.body.grammar-benefits"
+msgctxt "common.body.grammar-benefits"
+msgid ""
+"Learning the basic grammar rules can help you write and speak more "
+"accurately. Try to focus on one rule at a time and practice using it in "
+"your writing and speaking. There are many online resources, such as grammar "
+"books and videos, that can help you learn grammar rules."
 msgstr ""
 
-#. Brainwave
-msgid "common.sections.brand"
+msgctxt "common.sections.brand"
+msgid "Brainwave"
 msgstr ""
 
-#. aidX
-msgid "common.alt.aidx"
+msgctxt "common.alt.aidx"
+msgid "aidX"
 msgstr ""
 
-#. Link copied
-msgid "common.notify.link-copied"
+msgctxt "common.notify.link-copied"
+msgid "Link copied"
 msgstr ""
 
-#. Share this chat
-msgid "common.form.share-chat"
+msgctxt "common.form.share-chat"
+msgid "Share this chat"
 msgstr ""
 
-#. Copy link
-msgid "common.form.copy-link"
+msgctxt "common.form.copy-link"
+msgid "Copy link"
 msgstr ""
 
-#. Copy
-msgid "common.actions.copy"
+msgctxt "common.actions.copy"
+msgid "Copy"
 msgstr ""
 
-#. Or share to members
-msgid "common.form.share-to-members"
+msgctxt "common.form.share-to-members"
+msgid "Or share to members"
 msgstr ""
 
-#. Share
-msgid "common.misc.share"
+msgctxt "common.misc.share"
+msgid "Share"
 msgstr ""
 
-#. Link
-msgid "common.placeholders.link"
+msgctxt "common.placeholders.link"
+msgid "Link"
 msgstr ""
 
-#. Name member
-msgid "common.placeholders.member-name"
+msgctxt "common.placeholders.member-name"
+msgid "Name member"
 msgstr ""
 
-#. Create
-msgid "common.misc.create"
+msgctxt "common.misc.create"
+msgid "Create"
 msgstr ""
 
-#. variation
-msgid "common.buttons.variation"
+msgctxt "common.buttons.variation"
+msgid "variation"
 msgstr ""
 
-#. Adjust
-msgid "common.fragments.adjust"
+msgctxt "common.fragments.adjust"
+msgid "Adjust"
 msgstr ""
 
-#. Enhance
-msgid "common.buttons.enhance"
+msgctxt "common.buttons.enhance"
+msgid "Enhance"
 msgstr ""
 
-#. Exporting 1 photo
-msgid "common.actions.exporting-photo"
+msgctxt "common.actions.exporting-photo"
+msgid "Exporting 1 photo"
 msgstr ""
 
-#. Adjust
-msgid "common.actions.adjust"
+msgctxt "common.actions.adjust"
+msgid "Adjust"
 msgstr ""
 
-#. WIP
-msgid "common.alt.wip"
+msgctxt "common.alt.wip"
+msgid "WIP"
 msgstr ""
 
-#. Chat history
-msgid "common.sections.chat-history"
+msgctxt "common.sections.chat-history"
+msgid "Chat history"
 msgstr ""
 
-#. Clear all chat history?
-msgid "common.notify.clear-chat-history"
+msgctxt "common.notify.clear-chat-history"
+msgid "Clear all chat history?"
 msgstr ""
 
-#. Yes
-msgid "common.misc.yes"
+msgctxt "common.misc.yes"
+msgid "Yes"
 msgstr ""
 
-#. Clear chat history
-msgid "common.buttons.clear-chat-history"
+msgctxt "common.buttons.clear-chat-history"
+msgid "Clear chat history"
 msgstr ""
 
-#. New chat
-msgid "common.links.new-chat"
+msgctxt "common.links.new-chat"
+msgid "New chat"
 msgstr ""
 
-#. Schedule your post with Buffer
-msgid "common.sections.schedule-with-buffer"
+msgctxt "common.sections.schedule-with-buffer"
+msgid "Schedule your post with Buffer"
 msgstr ""
 
-#. Choose date
-msgid "common.form.choose-date"
+msgctxt "common.form.choose-date"
+msgid "Choose date"
 msgstr ""
 
-#. Time
-msgid "common.form.time"
+msgctxt "common.form.time"
+msgid "Time"
 msgstr ""
 
-#. Scheduled in your current timezone
-msgid "common.form.timezone-note"
+msgctxt "common.form.timezone-note"
+msgid "Scheduled in your current timezone"
 msgstr ""
 
-#. Schedule
-msgid "common.buttons.schedule"
+msgctxt "common.buttons.schedule"
+msgid "Schedule"
 msgstr ""
 
-#. You are done!
-msgid "common.misc.done"
+msgctxt "common.misc.done"
+msgid "You are done!"
 msgstr ""
 
-#. Your post has been scheduled for February 14th, 2023 at 11:30 and will be shared through
-msgid "common.misc.post-scheduled"
+msgctxt "common.misc.post-scheduled"
+msgid ""
+"Your post has been scheduled for February 14th, 2023 at 11:30 and will be "
+"shared through"
 msgstr ""
 
-#. Buffer
-msgid "common.misc.buffer"
+msgctxt "common.misc.buffer"
+msgid "Buffer"
 msgstr ""
 
-#. .
-msgid "common.misc.period"
+msgctxt "common.misc.period"
+msgid "."
 msgstr ""
 
-#. View on Buffer
-msgid "common.links.view-on-buffer"
+msgctxt "common.links.view-on-buffer"
+msgid "View on Buffer"
 msgstr ""
 
-#. Search
-msgid "common.placeholders.search"
+msgctxt "common.placeholders.search"
+msgid "Search"
 msgstr ""
 
-#. Search ...
-msgid "common.placeholders.search-ellipsis"
+msgctxt "common.placeholders.search-ellipsis"
+msgid "Search ..."
 msgstr ""
 
-#. Created by
-msgid "common.placeholders.created-by"
+msgctxt "common.placeholders.created-by"
+msgid "Created by"
 msgstr ""
 
-#. Date
-msgid "common.placeholders.date"
+msgctxt "common.placeholders.date"
+msgid "Date"
 msgstr ""
 
-#. Here&apos;s an example of promotional content optimized for Twitter and Facebook:
-msgid "common.sections.promo-example"
+msgctxt "common.sections.promo-example"
+msgid ""
+"Here&apos;s an example of promotional content optimized for Twitter and "
+"Facebook:"
 msgstr ""
 
-#. Share with
-msgid "common.sections.share-with"
+msgctxt "common.sections.share-with"
+msgid "Share with"
 msgstr ""
 
-#. Add to Queue
-msgid "common.buttons.add-to-queue"
+msgctxt "common.buttons.add-to-queue"
+msgid "Add to Queue"
 msgstr ""
 
-#. Share now
-msgid "common.buttons.share-now"
+msgctxt "common.buttons.share-now"
+msgid "Share now"
 msgstr ""
 
-#. Schedule post
-msgid "common.buttons.schedule-post"
+msgctxt "common.buttons.schedule-post"
+msgid "Schedule post"
 msgstr ""
 
-#. Based on the gender identified in the uploaded image, the video has been automatically generated with a male voice. However, you have the option to customize your video by selecting from the available options below.
-msgid "common.body.gender-note"
+msgctxt "common.body.gender-note"
+msgid ""
+"Based on the gender identified in the uploaded image, the video has been "
+"automatically generated with a male voice. However, you have the option to "
+"customize your video by selecting from the available options below."
 msgstr ""
 
-#. Download
-msgid "common.buttons.download"
+msgctxt "common.buttons.download"
+msgid "Download"
 msgstr ""
 
-#. Content copied
-msgid "common.notify.content-copied"
+msgctxt "common.notify.content-copied"
+msgid "Content copied"
 msgstr ""
 
-#. 1 chat archived
-msgid "common.notify.chat-archived"
+msgctxt "common.notify.chat-archived"
+msgid "1 chat archived"
 msgstr ""
 
-#. Undo
-msgid "common.notify.undo"
+msgctxt "common.notify.undo"
+msgid "Undo"
 msgstr ""
 
-#. Regenerate response
-msgid "common.fragments.regenerate-response"
+msgctxt "common.fragments.regenerate-response"
+msgid "Regenerate response"
 msgstr ""
 
-#. Share
-msgid "common.badges.share"
+msgctxt "common.badges.share"
+msgid "Share"
 msgstr ""
 
-#. Archive chat
-msgid "common.badges.archive-chat"
+msgctxt "common.badges.archive-chat"
+msgid "Archive chat"
 msgstr ""
 
-#. Smile heart eyes
-msgid "common.alt.smile-heart-eyes"
+msgctxt "common.alt.smile-heart-eyes"
+msgid "Smile heart eyes"
 msgstr ""
 
-#. Smile unamused
-msgid "common.alt.smile-unamused"
+msgctxt "common.alt.smile-unamused"
+msgid "Smile unamused"
 msgstr ""
 
-#. #
-msgid "common.misc.hash"
+msgctxt "common.misc.hash"
+msgid "#"
 msgstr ""
 
-#. Incorrect answer (5)
-msgid "common.misc.incorrect-answer-5"
+msgctxt "common.misc.incorrect-answer-5"
+msgid "Incorrect answer (5)"
 msgstr ""
 
-#. Correct answer
-msgid "common.misc.correct-answer"
+msgctxt "common.misc.correct-answer"
+msgid "Correct answer"
 msgstr ""
 
-#. How
-msgid "common.misc.how"
+msgctxt "common.misc.how"
+msgid "How"
 msgstr ""
 
-#. Very good!
-msgid "common.misc.very-good"
+msgctxt "common.misc.very-good"
+msgid "Very good!"
 msgstr ""
 
-#. 4.85
-msgid "common.misc.score-485"
+msgctxt "common.misc.score-485"
+msgid "4.85"
 msgstr ""
 
-#. Chat list
-msgid "common.badges.chat-list"
+msgctxt "common.badges.chat-list"
+msgid "Chat list"
 msgstr ""
 
-#. New list
-msgid "common.badges.new-list"
+msgctxt "common.badges.new-list"
+msgid "New list"
 msgstr ""
 
-#. ⌘ F
-msgid "common.badges.cmd-f"
+msgctxt "common.badges.cmd-f"
+msgid "⌘ F"
 msgstr ""
 
-#. Tran Mau Tri Tam
-msgid "common.misc.author-name"
+msgctxt "common.misc.author-name"
+msgid "Tran Mau Tri Tam"
 msgstr ""
 
-#. tam@ui8.net
-msgid "common.misc.author-email"
+msgctxt "common.misc.author-email"
+msgid "tam@ui8.net"
 msgstr ""
 
-#. Free
-msgid "common.fragments.free"
+msgctxt "common.fragments.free"
+msgid "Free"
 msgstr ""
 
-#. Upgraded to Pro
-msgid "common.badges.upgraded-to-pro"
+msgctxt "common.badges.upgraded-to-pro"
+msgid "Upgraded to Pro"
 msgstr ""
 
-#. Upload to mentalhealthGPT
-msgid "common.sections.upload-to-mh-gpt"
+msgctxt "common.sections.upload-to-mh-gpt"
+msgid "Upload to mentalhealthGPT"
 msgstr ""
 
-#. You can add prompts after uploading.
-msgid "common.sections.add-prompts-note"
+msgctxt "common.sections.add-prompts-note"
+msgid "You can add prompts after uploading."
 msgstr ""
 
-#. Notifications
-msgid "common.sections.notifications"
+msgctxt "common.sections.notifications"
+msgid "Notifications"
 msgstr ""
 
-#. Lead visual designer at UI8
-msgid "common.misc.role-label"
+msgctxt "common.misc.role-label"
+msgid "Lead visual designer at UI8"
 msgstr ""
 
-#. Jump
-msgid "common.links.jump"
+msgctxt "common.links.jump"
+msgid "Jump"
 msgstr ""
 
-#. Last edited by
-msgid "common.links.last-edited-by"
+msgctxt "common.links.last-edited-by"
+msgid "Last edited by"
 msgstr ""
 
-#. Appearance
-msgid "common.fragments.appearance"
+msgctxt "common.fragments.appearance"
+msgid "Appearance"
 msgstr ""
 
-#. Primary language
-msgid "common.sections.primary-language"
+msgctxt "common.sections.primary-language"
+msgid "Primary language"
 msgstr ""
 
-#. Applications
-msgid "common.sections.applications"
+msgctxt "common.sections.applications"
+msgid "Applications"
 msgstr ""
 
-#. Add apps
-msgid "common.sections.add-apps"
+msgctxt "common.sections.add-apps"
+msgid "Add apps"
 msgstr ""
 
-#. Authorized apps
-msgid "common.fragments.authorized-apps"
+msgctxt "common.fragments.authorized-apps"
+msgid "Authorized apps"
 msgstr ""
 
-#. Chat export
-msgid "common.form.chat-export"
+msgctxt "common.form.chat-export"
+msgid "Chat export"
 msgstr ""
 
-#. Select chat list to export
-msgid "common.form.select-chat-list"
+msgctxt "common.form.select-chat-list"
+msgid "Select chat list to export"
 msgstr ""
 
-#. Download conversation
-msgid "common.form.download-conversation"
+msgctxt "common.form.download-conversation"
+msgid "Download conversation"
 msgstr ""
 
-#. We’re sorry to see you go
-msgid "common.form.delete-account-title"
+msgctxt "common.form.delete-account-title"
+msgid "We’re sorry to see you go"
 msgstr ""
 
-#. Warning: Deleting your account will permanently remove all of your data and cannot be undone. This includes your profile, chats, comments, and any other information associated with your account. Are you sure you want to proceed with deleting your account?
-msgid "common.form.delete-account-warning"
+msgctxt "common.form.delete-account-warning"
+msgid ""
+"Warning: Deleting your account will permanently remove all of your data and "
+"cannot be undone. This includes your profile, chats, comments, and any "
+"other information associated with your account. Are you sure you want to "
+"proceed with deleting your account?"
 msgstr ""
 
-#. Delete account
-msgid "common.form.delete-account"
+msgctxt "common.form.delete-account"
+msgid "Delete account"
 msgstr ""
 
-#. Your password
-msgid "common.labels.your-password"
+msgctxt "common.labels.your-password"
+msgid "Your password"
 msgstr ""
 
-#. Password
-msgid "common.placeholders.password"
+msgctxt "common.placeholders.password"
+msgid "Password"
 msgstr ""
 
-#. Edit profile
-msgid "common.form.edit-profile"
+msgctxt "common.form.edit-profile"
+msgid "Edit profile"
 msgstr ""
 
-#. Avatar
-msgid "common.form.avatar"
+msgctxt "common.form.avatar"
+msgid "Avatar"
 msgstr ""
 
-#. Upload new image
-msgid "common.form.upload-new-image"
+msgctxt "common.form.upload-new-image"
+msgid "Upload new image"
 msgstr ""
 
-#. At least 800x800 px recommended.
-msgid "common.form.size-recommendation"
+msgctxt "common.form.size-recommendation"
+msgid "At least 800x800 px recommended."
 msgstr ""
 
-#. JPG or PNG and GIF is allowed
-msgid "common.form.allowed-formats"
+msgctxt "common.form.allowed-formats"
+msgid "JPG or PNG and GIF is allowed"
 msgstr ""
 
-#. Save changes
-msgid "common.form.save-changes"
+msgctxt "common.form.save-changes"
+msgid "Save changes"
 msgstr ""
 
-#. Username
-msgid "common.placeholders.username"
+msgctxt "common.placeholders.username"
+msgid "Username"
 msgstr ""
 
-#. Location
-msgid "common.labels.location"
+msgctxt "common.labels.location"
+msgid "Location"
 msgstr ""
 
-#. Location
-msgid "common.placeholders.location"
+msgctxt "common.placeholders.location"
+msgid "Location"
 msgstr ""
 
-#. Bio
-msgid "common.labels.bio"
+msgctxt "common.labels.bio"
+msgid "Bio"
 msgstr ""
 
-#. Short bio
-msgid "common.placeholders.short-bio"
+msgctxt "common.placeholders.short-bio"
+msgid "Short bio"
 msgstr ""
 
-#. Password
-msgid "common.form.password"
+msgctxt "common.form.password"
+msgid "Password"
 msgstr ""
 
-#. Change password
-msgid "common.form.change-password"
+msgctxt "common.form.change-password"
+msgid "Change password"
 msgstr ""
 
-#. Password
-msgid "common.labels.password"
+msgctxt "common.labels.password"
+msgid "Password"
 msgstr ""
 
-#. New password
-msgid "common.labels.new-password"
+msgctxt "common.labels.new-password"
+msgid "New password"
 msgstr ""
 
-#. New password
-msgid "common.placeholders.new-password"
+msgctxt "common.placeholders.new-password"
+msgid "New password"
 msgstr ""
 
-#. Confirm new password
-msgid "common.labels.confirm-new-password"
+msgctxt "common.labels.confirm-new-password"
+msgid "Confirm new password"
 msgstr ""
 
-#. Confirm new password
-msgid "common.placeholders.confirm-new-password"
+msgctxt "common.placeholders.confirm-new-password"
+msgid "Confirm new password"
 msgstr ""
 
-#. Your sessions
-msgid "common.fragments.your-sessions"
+msgctxt "common.fragments.your-sessions"
+msgid "Your sessions"
 msgstr ""
 
-#. This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.
-msgid "common.fragments.device-list-note"
+msgctxt "common.fragments.device-list-note"
+msgid ""
+"This is a list of devices that have logged into your account. Revoke any "
+"sessions that you do not recognize."
 msgstr ""
 
-#. Devices
-msgid "common.fragments.devices"
+msgctxt "common.fragments.devices"
+msgid "Devices"
 msgstr ""
 
-#. Sign out all devices
-msgid "common.fragments.sign-out-all"
+msgctxt "common.fragments.sign-out-all"
+msgid "Sign out all devices"
 msgstr ""
 
-#. Members
-msgid "common.sections.members"
+msgctxt "common.sections.members"
+msgid "Members"
 msgstr ""
 
-#. Invite
-msgid "common.sections.invite"
+msgctxt "common.sections.invite"
+msgid "Invite"
 msgstr ""
 
-#. 42 members
-msgid "common.fragments.members-count"
+msgctxt "common.fragments.members-count"
+msgid "42 members"
 msgstr ""
 
-#. Suggested media
-msgid "common.sections.suggested-media"
+msgctxt "common.sections.suggested-media"
+msgid "Suggested media"
 msgstr ""
 
-#. Make sure you have the rights to use the suggested media.
-msgid "common.sections.media-rights-note"
+msgctxt "common.sections.media-rights-note"
+msgid "Make sure you have the rights to use the suggested media."
 msgstr ""
 
-#. Upload media
-msgid "common.sections.upload-media"
+msgctxt "common.sections.upload-media"
+msgid "Upload media"
 msgstr ""
 
-#. #
-msgid "common.badges.at"
+msgctxt "common.badges.at"
+msgid "#"
 msgstr ""
 
-#. New variation
-msgid "common.buttons.new-variation"
+msgctxt "common.buttons.new-variation"
+msgid "New variation"
 msgstr ""
 
-#. Copy
-msgid "common.buttons.copy"
+msgctxt "common.buttons.copy"
+msgid "Copy"
 msgstr ""
 
-#. YouTube video player
-msgid "common.misc.youtube-player"
+msgctxt "common.misc.youtube-player"
+msgid "YouTube video player"
 msgstr ""
 
-#. Deauthorize
-msgid "common.sections.deauthorize"
+msgctxt "common.sections.deauthorize"
+msgid "Deauthorize"
 msgstr ""
 
-#. Revoke
-msgid "common.sections.revoke"
+msgctxt "common.sections.revoke"
+msgid "Revoke"
 msgstr ""
 
-#. Admin
-msgid "common.badges.admin"
+msgctxt "common.badges.admin"
+msgid "Admin"
 msgstr ""
 
-#. @
-msgid "common.misc.at"
+msgctxt "common.misc.at"
+msgid "@"
 msgstr ""

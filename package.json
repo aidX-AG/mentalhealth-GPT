@@ -12,7 +12,7 @@
     "optimize-images": "bash ./scripts/optimize-images.sh",
 
     "i18n:po:code": "ts-node --compiler-options '{\"module\":\"commonjs\"}' scripts/extract-po-from-code.ts",
-    "i18n:po:json": "node scripts/json-to-pot.js",
+    "i18n:po:json": "node scripts/json-to-pot.cjs",
     "i18n:po:all": "npm run i18n:po:code && npm run i18n:po:json",
 
     "i18n:convert:en": "node scripts/po-to-json.js en",
