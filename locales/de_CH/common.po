@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 13:33+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-09-23 14:37+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/common/de_CH/>\n"
 "Language: de_CH\n"
@@ -18,7 +18,7 @@ msgid "Invite team member"
 msgstr "Teammitglied einladen"
 
 msgid "Only people invited in this list can access"
-msgstr "Nur Personen, die in dieser Liste eingeladen sind, haben Zugriff."
+msgstr "Nur Personen, die in dieser Liste eingeladen sind, haben Zugriff"
 
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -118,7 +118,7 @@ msgstr ""
 "Verarbeitung der Formulardaten auf der Serverseite einbauen wollen."
 
 msgid "I have created a project in your Codepen account"
-msgstr "Ich habe ein Projekt in Ihrem Codepen-Konto erstellt."
+msgstr "Ich habe ein Projekt in Ihrem Codepen-Konto erstellt"
 
 msgid "View"
 msgstr "Ansicht"
@@ -210,7 +210,7 @@ msgid "Copy link"
 msgstr "Link kopieren"
 
 msgid "Copy"
-msgstr "Kopie"
+msgstr "kopieren"
 
 msgid "Or share to members"
 msgstr "Oder an Mitglieder weitergeben"
@@ -437,7 +437,7 @@ msgid "Download conversation"
 msgstr "Gespräch herunterladen"
 
 msgid "We’re sorry to see you go"
-msgstr "Wir bedauern Ihr Ausscheiden sehr."
+msgstr "Wir bedauern Ihr Ausscheiden sehr"
 
 msgid ""
 "Warning: Deleting your account will permanently remove all of your data and "
@@ -469,7 +469,7 @@ msgid "At least 800x800 px recommended."
 msgstr "Mindestens 800 x 800 Pixel empfohlen."
 
 msgid "JPG or PNG and GIF is allowed"
-msgstr "JPG oder PNG und GIF sind zulässig."
+msgstr "JPG oder PNG und GIF sind zulässig"
 
 msgid "Save changes"
 msgstr "Änderungen speichern"
