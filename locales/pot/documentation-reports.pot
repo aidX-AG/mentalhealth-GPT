@@ -6,53 +6,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. key: documentation-reports.chat.greeting
 msgid "Hello! How can I assist you with documentation and reporting today?"
 msgstr ""
 
+#. key: documentation-reports.text.coming-capability
 msgid "Soon you’ll be able to generate"
 msgstr ""
 
+#. key: documentation-reports.text.professional-docs
 msgid "professional documentation and reports"
 msgstr ""
 
+#. key: documentation-reports.text.use-cases
 msgid ""
 "— whether for clinical use, insurance submissions, or personal records of "
 "therapy and supervision sessions."
 msgstr ""
 
+#. key: documentation-reports.text.ai-helps-transform
 msgid "Our AI will help you transform transcripts into"
 msgstr ""
 
+#. key: documentation-reports.text.clear-structured-confidential
 msgid "clear, structured, and confidential"
 msgstr ""
 
+#. key: documentation-reports.text.reports-automatically
 msgid "reports — automatically."
 msgstr ""
 
+#. key: documentation-reports.text.data-processed-with
 msgid "All data is processed with"
 msgstr ""
 
+#. key: documentation-reports.text.end-to-end-encryption
 msgid "end-to-end encryption"
 msgstr ""
 
+#. key: documentation-reports.text.privacy-protection
 msgid ""
 "to protect patient confidentiality and ensure secure handling at every "
 "stage."
 msgstr ""
 
+#. key: documentation-reports.sections.icon
 msgid "🚧"
 msgstr ""
 
+#. key: documentation-reports.chat.title
 msgid "Documentation & Reporting"
 msgstr ""
 
+#. key: documentation-reports.sections.in-development
 msgid "is an exciting new feature that’s currently in development."
 msgstr ""
 
+#. key: documentation-reports.text.value-prop
 msgid ""
 "We’re building it to save you time, reduce admin load, and enhance the "
 "quality of your documentation —"
 msgstr ""
 
+#. key: documentation-reports.text.stay-tuned
 msgid "stay tuned!"
 msgstr ""
