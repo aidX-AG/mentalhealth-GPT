@@ -6,62 +6,80 @@ msgstr ""
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/common/fr_CH/>\n"
 "Language: fr_CH\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
+#. key: common.headings.add-chat-list
 msgid "Add chat list"
 msgstr "Ajouter une liste de chat"
 
+#. key: common.sections.invite-member
 msgid "Invite team member"
 msgstr "Inviter un membre de l'équipe"
 
+#. key: common.body.access-note
 msgid "Only people invited in this list can access"
 msgstr "Seules les personnes invitées dans cette liste peuvent accéder"
 
+#. key: common.buttons.cancel
 msgid "Cancel"
 msgstr "Annuler"
 
+#. key: common.buttons.add-list
 msgid "Add list"
 msgstr "Ajouter une liste"
 
+#. key: common.placeholders.name
 msgid "Name"
 msgstr "Nom"
 
+#. key: common.labels.color
 msgid "Color"
 msgstr "Couleur"
 
+#. key: common.misc.auto
 msgid "Auto"
 msgstr "Auto"
 
+#. key: common.misc.reset
 msgid "Reset"
 msgstr "Réinitialiser"
 
+#. key: common.controls.exposure
 msgid "Exposure"
 msgstr "Exposition"
 
+#. key: common.controls.contrast
 msgid "Contrast"
 msgstr "Contraste"
 
+#. key: common.controls.highlights
 msgid "Highlights"
 msgstr "Faits marquants"
 
+#. key: common.controls.shadows
 msgid "Shadows"
 msgstr "Ombres"
 
+#. key: common.controls.white
 msgid "White"
 msgstr "Blanc"
 
+#. key: common.controls.blacks
 msgid "Blacks"
 msgstr "Noirs"
 
+#. key: common.badges.pause-generating
 msgid "Pause generating"
 msgstr "Génération de pause"
 
+#. key: common.form.avatar
 msgid "Avatar"
 msgstr "Avatar"
 
+#. key: common.body.audio-success
 msgid ""
 "Your audio has been successfully generated. You may further customize it or "
 "simply download it for use."
@@ -69,47 +87,62 @@ msgstr ""
 "Votre fichier audio a été généré avec succès. Vous pouvez le personnaliser "
 "davantage ou simplement le télécharger pour l'utiliser."
 
+#. key: common.fragments.export
 msgid "Export"
 msgstr "Exportation"
 
+#. key: common.buttons.edit
 msgid "Edit"
 msgstr "Modifier"
 
+#. key: common.labels.speed
 msgid "Speed"
 msgstr "Vitesse"
 
+#. key: common.labels.voice
 msgid "Voice"
 msgstr "Voix"
 
+#. key: common.actions.exporting-audio
 msgid "Exporting 1 audio"
 msgstr "Exportation d'un fichier audio"
 
-msgid "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any"
+#. key: common.body.introducing-brainwave
+msgid ""
+"Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any"
 msgstr ""
 "Présentation de « aidX », un produit alimenté par l'IA capable de "
 "transformer n'importe quel"
 
+#. key: common.misc.characters-609
 msgid "609 characters"
 msgstr "609 caractères"
 
+#. key: common.misc.save
 msgid "Save"
 msgstr "Enregistrer"
 
+#. key: common.misc.time-021
 msgid "0:21"
 msgstr "0:21"
 
+#. key: common.misc.time-102
 msgid "1:02"
 msgstr "1 h 02"
 
+#. key: common.alt.audio
 msgid "Audio"
 msgstr "Audio"
 
+#. key: common.badges.copied
 msgid "Copied!"
 msgstr "Copié !"
 
+#. key: common.actions.copy-code
 msgid "Copy code"
 msgstr "Copier le code"
 
+#. key: common.body.form-example-note
 msgid ""
 "Note: This is just an example of a simple HTML form. In a real-world "
 "scenario, you would also want to include proper validation and handling of "
@@ -119,21 +152,27 @@ msgstr ""
 "un scénario réel, vous devrez également inclure une validation et un "
 "traitement appropriés des données du formulaire côté serveur."
 
+#. key: common.body.created-project
 msgid "I have created a project in your Codepen account"
 msgstr "J'ai créé un projet dans votre compte Codepen"
 
+#. key: common.buttons.view
 msgid "View"
 msgstr "Afficher"
 
+#. key: common.buttons.more
 msgid "More"
 msgstr "Plus"
 
+#. key: common.sections.suggestion
 msgid "Suggestion to improve your test"
 msgstr "Suggestion pour améliorer votre test"
 
+#. key: common.sections.read-regularly
 msgid "Read regularly:"
 msgstr "Lisez régulièrement :"
 
+#. key: common.body.reading-benefits
 msgid ""
 "Reading is an excellent way to improve your vocabulary, grammar, and "
 "comprehension skills. Try to read a variety of materials, including books, "
@@ -144,21 +183,25 @@ msgstr ""
 "variés, notamment des livres, des journaux, des magazines et des articles en "
 "ligne."
 
+#. key: common.sections.practice-writing
 msgid "Practice writing:"
 msgstr "Exercices d'écriture :"
 
+#. key: common.body.writing-benefits
 msgid ""
-"Writing can help you improve your grammar, spelling, and sentence "
-"structure. Try to write regularly, even if it&apos;s just a short paragraph "
-"or a journal entry."
+"Writing can help you improve your grammar, spelling, and sentence structure. "
+"Try to write regularly, even if it&apos;s just a short paragraph or a "
+"journal entry."
 msgstr ""
 "L'écriture peut vous aider à améliorer votre grammaire, votre orthographe et "
 "la structure de vos phrases. Essayez d'écrire régulièrement, même s'il ne "
 "s'agit que d'un court paragraphe ou d'une entrée dans votre journal."
 
+#. key: common.sections.listen-to-english
 msgid "Listen to English:"
 msgstr "Écouter l'anglais :"
 
+#. key: common.body.listening-benefits
 msgid ""
 "Listening to English podcasts, audiobooks, and videos can help you improve "
 "your listening and comprehension skills. It can also help you get used to "
@@ -168,9 +211,11 @@ msgstr ""
 "aider à améliorer vos compétences en compréhension orale. Cela peut "
 "également vous aider à vous habituer à différents accents et intonations."
 
+#. key: common.sections.speak-with-natives
 msgid "Speak with native speakers:"
 msgstr "Parlez avec des locuteurs natifs :"
 
+#. key: common.body.speaking-benefits
 msgid ""
 "Speaking with native speakers can help you improve your pronunciation, "
 "fluency, and confidence. You can find language exchange partners or join "
@@ -181,14 +226,16 @@ msgstr ""
 "des partenaires d'échange linguistique ou rejoindre des groupes de "
 "conversation en ligne ou en personne."
 
+#. key: common.sections.learn-grammar-rules
 msgid "Learn grammar rules:"
 msgstr "Apprenez les règles de grammaire :"
 
+#. key: common.body.grammar-benefits
 msgid ""
 "Learning the basic grammar rules can help you write and speak more "
-"accurately. Try to focus on one rule at a time and practice using it in "
-"your writing and speaking. There are many online resources, such as grammar "
-"books and videos, that can help you learn grammar rules."
+"accurately. Try to focus on one rule at a time and practice using it in your "
+"writing and speaking. There are many online resources, such as grammar books "
+"and videos, that can help you learn grammar rules."
 msgstr ""
 "Apprendre les règles grammaticales de base peut vous aider à écrire et à "
 "parler avec plus de précision. Essayez de vous concentrer sur une règle à la "
@@ -197,87 +244,115 @@ msgstr ""
 "vidéos sur la grammaire, qui peuvent vous aider à apprendre les règles "
 "grammaticales."
 
+#. key: common.sections.brand
 msgid "Brainwave"
 msgstr "onde cérébrale"
 
+#. key: common.alt.aidx
 msgid "aidX"
 msgstr "aidX"
 
+#. key: common.notify.link-copied
 msgid "Link copied"
 msgstr "Lien copié"
 
+#. key: common.form.share-chat
 msgid "Share this chat"
 msgstr "Partager ce chat"
 
+#. key: common.form.copy-link
 msgid "Copy link"
 msgstr "Copier le lien"
 
+#. key: common.buttons.copy
 msgid "Copy"
 msgstr "Copier"
 
+#. key: common.form.share-to-members
 msgid "Or share to members"
 msgstr "Ou partager avec les membres"
 
+#. key: common.badges.share
 msgid "Share"
 msgstr "Partager"
 
+#. key: common.placeholders.link
 msgid "Link"
 msgstr "Lien"
 
+#. key: common.placeholders.member-name
 msgid "Name member"
 msgstr "Nom du membre"
 
+#. key: common.misc.create
 msgid "Create"
 msgstr "Créer"
 
+#. key: common.buttons.variation
 msgid "variation"
 msgstr "variation"
 
+#. key: common.actions.adjust
 msgid "Adjust"
 msgstr "Ajuster"
 
+#. key: common.buttons.enhance
 msgid "Enhance"
 msgstr "Améliorer"
 
+#. key: common.actions.exporting-photo
 msgid "Exporting 1 photo"
 msgstr "Exportation d'une photo"
 
+#. key: common.alt.wip
 msgid "WIP"
 msgstr "en cours"
 
+#. key: common.sections.chat-history
 msgid "Chat history"
 msgstr "Historique du chat"
 
+#. key: common.notify.clear-chat-history
 msgid "Clear all chat history?"
 msgstr "Effacer tout l'historique du chat ?"
 
+#. key: common.misc.yes
 msgid "Yes"
 msgstr "Oui"
 
+#. key: common.buttons.clear-chat-history
 msgid "Clear chat history"
 msgstr "Effacer l'historique du chat"
 
+#. key: common.links.new-chat
 msgid "New chat"
 msgstr "Nouveau chat"
 
+#. key: common.sections.schedule-with-buffer
 msgid "Schedule your post with Buffer"
 msgstr "Planifiez votre publication avec Buffer"
 
+#. key: common.form.choose-date
 msgid "Choose date"
 msgstr "Choisissez une date"
 
+#. key: common.form.time
 msgid "Time"
 msgstr "Temps"
 
+#. key: common.form.timezone-note
 msgid "Scheduled in your current timezone"
 msgstr "Prévu dans votre fuseau horaire actuel"
 
+#. key: common.buttons.schedule
 msgid "Schedule"
 msgstr "Calendrier"
 
+#. key: common.misc.done
 msgid "You are done!"
 msgstr "C'est terminé !"
 
+#. key: common.misc.post-scheduled
 msgid ""
 "Your post has been scheduled for February 14th, 2023 at 11:30 and will be "
 "shared through"
@@ -285,45 +360,58 @@ msgstr ""
 "Votre publication est prévue pour le 14 février 2023 à 11h30 et sera "
 "partagée via"
 
+#. key: common.misc.buffer
 msgid "Buffer"
 msgstr "Buffer"
 
+#. key: common.misc.period
 msgid "."
 msgstr "."
 
+#. key: common.links.view-on-buffer
 msgid "View on Buffer"
 msgstr "Afficher sur Buffer"
 
+#. key: common.placeholders.search
 msgid "Search"
 msgstr "Rechercher"
 
+#. key: common.placeholders.search-ellipsis
 msgid "Search ..."
 msgstr "Rechercher..."
 
+#. key: common.placeholders.created-by
 msgid "Created by"
 msgstr "Créé par"
 
+#. key: common.placeholders.date
 msgid "Date"
 msgstr "Date"
 
+#. key: common.sections.promo-example
 msgid ""
 "Here&apos;s an example of promotional content optimized for Twitter and "
 "Facebook:"
 msgstr ""
 "Voici un exemple de contenu promotionnel optimisé pour Twitter et Facebook :"
 
+#. key: common.sections.share-with
 msgid "Share with"
 msgstr "Partager avec"
 
+#. key: common.buttons.add-to-queue
 msgid "Add to Queue"
 msgstr "Ajouter à la file d'attente"
 
+#. key: common.buttons.share-now
 msgid "Share now"
 msgstr "Partager maintenant"
 
+#. key: common.buttons.schedule-post
 msgid "Schedule post"
 msgstr "Programmer une publication"
 
+#. key: common.body.gender-note
 msgid ""
 "Based on the gender identified in the uploaded image, the video has been "
 "automatically generated with a male voice. However, you have the option to "
@@ -334,173 +422,227 @@ msgstr ""
 "possibilité de personnaliser votre vidéo en sélectionnant l'une des options "
 "disponibles ci-dessous."
 
+#. key: common.buttons.download
 msgid "Download"
 msgstr "Télécharger"
 
+#. key: common.notify.content-copied
 msgid "Content copied"
 msgstr "Contenu copié"
 
+#. key: common.notify.chat-archived
 msgid "1 chat archived"
 msgstr "1 chat archivée"
 
+#. key: common.notify.undo
 msgid "Undo"
 msgstr "Annuler"
 
+#. key: common.fragments.regenerate-response
 msgid "Regenerate response"
 msgstr "Régénérer la réponse"
 
+#. key: common.badges.archive-chat
 msgid "Archive chat"
 msgstr "Archiver le chat"
 
+#. key: common.alt.smile-heart-eyes
 msgid "Smile heart eyes"
 msgstr "Sourire yeux en cœur"
 
+#. key: common.alt.smile-unamused
 msgid "Smile unamused"
 msgstr "Sourire sans amusement"
 
+#. key: common.badges.at
 msgid "#"
 msgstr "#"
 
+#. key: common.misc.incorrect-answer-5
 msgid "Incorrect answer (5)"
 msgstr "Réponse incorrecte (5)"
 
+#. key: common.misc.correct-answer
 msgid "Correct answer"
 msgstr "Réponse correcte"
 
+#. key: common.misc.how
 msgid "How"
 msgstr "Comment"
 
+#. key: common.misc.very-good
 msgid "Very good!"
 msgstr "Très bien !"
 
+#. key: common.misc.score-485
 msgid "4.85"
 msgstr "4,85"
 
+#. key: common.badges.chat-list
 msgid "Chat list"
 msgstr "Liste de chat"
 
+#. key: common.badges.new-list
 msgid "New list"
 msgstr "Nouvelle liste"
 
+#. key: common.badges.cmd-f
 msgid "⌘ F"
 msgstr "⌘ F"
 
+#. key: common.misc.author-name
 msgid "Tran Mau Tri Tam"
 msgstr "Tran Mau Tri Tam"
 
+#. key: common.misc.author-email
 msgid "tam@ui8.net"
 msgstr "tam@UI8.net"
 
+#. key: common.fragments.free
 msgid "Free"
 msgstr "Gratuit"
 
+#. key: common.badges.upgraded-to-pro
 msgid "Upgraded to Pro"
 msgstr "Passage à la version Pro"
 
+#. key: common.sections.upload-to-mh-gpt
 msgid "Upload to mentalhealthGPT"
 msgstr "Télécharger vers mentalhealthGPT"
 
+#. key: common.sections.add-prompts-note
 msgid "You can add prompts after uploading."
 msgstr "Vous pouvez ajouter des invites après le téléchargement."
 
+#. key: common.sections.notifications
 msgid "Notifications"
 msgstr "Notifications"
 
+#. key: common.misc.role-label
 msgid "Lead visual designer at UI8"
 msgstr "Concepteur visuel principal chez UI8"
 
+#. key: common.links.jump
 msgid "Jump"
 msgstr "Sauter"
 
+#. key: common.links.last-edited-by
 msgid "Last edited by"
 msgstr "Dernière modification par"
 
+#. key: common.fragments.appearance
 msgid "Appearance"
 msgstr "Apparence"
 
+#. key: common.sections.primary-language
 msgid "Primary language"
 msgstr "Langue principale"
 
+#. key: common.sections.applications
 msgid "Applications"
 msgstr "Applications"
 
+#. key: common.sections.add-apps
 msgid "Add apps"
 msgstr "Ajouter des applications"
 
+#. key: common.fragments.authorized-apps
 msgid "Authorized apps"
 msgstr "Applications autorisées"
 
+#. key: common.form.chat-export
 msgid "Chat export"
 msgstr "Exportation du chat"
 
+#. key: common.form.select-chat-list
 msgid "Select chat list to export"
 msgstr "Sélectionnez la liste de chat à exporter"
 
+#. key: common.form.download-conversation
 msgid "Download conversation"
 msgstr "Télécharger la conversation"
 
+#. key: common.form.delete-account-title
 msgid "We’re sorry to see you go"
 msgstr "Nous sommes désolés de vous voir partir"
 
+#. key: common.form.delete-account-warning
 msgid ""
 "Warning: Deleting your account will permanently remove all of your data and "
-"cannot be undone. This includes your profile, chats, comments, and any "
-"other information associated with your account. Are you sure you want to "
-"proceed with deleting your account?"
+"cannot be undone. This includes your profile, chats, comments, and any other "
+"information associated with your account. Are you sure you want to proceed "
+"with deleting your account?"
 msgstr ""
 "Avertissement : la suppression de votre compte entraînera la suppression "
 "définitive de toutes vos données et ne pourra être annulée. Cela inclut "
 "votre profil, vos chats, vos commentaires et toute autre information "
 "associée à votre compte. Êtes-vous sûr de vouloir supprimer votre compte ?"
 
+#. key: common.form.delete-account
 msgid "Delete account"
 msgstr "Supprimer le compte"
 
+#. key: common.labels.your-password
 msgid "Your password"
 msgstr "Votre mot de passe"
 
+#. key: common.labels.password
 msgid "Password"
 msgstr "Mot de passe"
 
+#. key: common.form.edit-profile
 msgid "Edit profile"
 msgstr "Modifier le profil"
 
+#. key: common.form.upload-new-image
 msgid "Upload new image"
 msgstr "Télécharger une nouvelle image"
 
+#. key: common.form.size-recommendation
 msgid "At least 800x800 px recommended."
 msgstr "Au moins 800 x 800 pixels recommandés."
 
+#. key: common.form.allowed-formats
 msgid "JPG or PNG and GIF is allowed"
 msgstr "Les formats JPG, PNG et GIF sont autorisés"
 
+#. key: common.form.save-changes
 msgid "Save changes"
 msgstr "Enregistrer les modifications"
 
+#. key: common.placeholders.username
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
+#. key: common.placeholders.location
 msgid "Location"
 msgstr "Emplacement"
 
+#. key: common.labels.bio
 msgid "Bio"
 msgstr "Biographie"
 
+#. key: common.placeholders.short-bio
 msgid "Short bio"
 msgstr "Brève biographie"
 
+#. key: common.form.change-password
 msgid "Change password"
 msgstr "Modifier le mot de passe"
 
+#. key: common.placeholders.new-password
 msgid "New password"
 msgstr "Nouveau mot de passe"
 
+#. key: common.placeholders.confirm-new-password
 msgid "Confirm new password"
 msgstr "Confirmer le nouveau mot de passe"
 
+#. key: common.fragments.your-sessions
 msgid "Your sessions"
 msgstr "Vos séances"
 
+#. key: common.fragments.device-list-note
 msgid ""
 "This is a list of devices that have logged into your account. Revoke any "
 "sessions that you do not recognize."
@@ -508,46 +650,60 @@ msgstr ""
 "Voici la liste des appareils qui se sont connectés à votre compte. Révoquez "
 "toutes les sessions que vous ne reconnaissez pas."
 
+#. key: common.fragments.devices
 msgid "Devices"
 msgstr "Appareils"
 
+#. key: common.fragments.sign-out-all
 msgid "Sign out all devices"
 msgstr "Déconnecter tous les appareils"
 
+#. key: common.sections.members
 msgid "Members"
 msgstr "Membres"
 
+#. key: common.sections.invite
 msgid "Invite"
 msgstr "Inviter"
 
+#. key: common.fragments.members-count
 msgid "42 members"
 msgstr "42 membres"
 
+#. key: common.sections.suggested-media
 msgid "Suggested media"
 msgstr "Médias suggérés"
 
+#. key: common.sections.media-rights-note
 msgid "Make sure you have the rights to use the suggested media."
 msgstr ""
 "Assurez-vous que vous disposez des droits nécessaires pour utiliser les "
 "médias suggérés."
 
+#. key: common.sections.upload-media
 msgid "Upload media"
 msgstr "Télécharger un fichier multimédia"
 
+#. key: common.buttons.new-variation
 msgid "New variation"
 msgstr "Nouvelle variante"
 
+#. key: common.misc.youtube-player
 msgid "YouTube video player"
 msgstr "Lecteur vidéo YouTube"
 
+#. key: common.sections.deauthorize
 msgid "Deauthorize"
 msgstr "Désautoriser"
 
+#. key: common.sections.revoke
 msgid "Revoke"
 msgstr "Révoquer"
 
+#. key: common.badges.admin
 msgid "Admin"
 msgstr "Admin"
 
+#. key: common.misc.at
 msgid "@"
 msgstr "@"

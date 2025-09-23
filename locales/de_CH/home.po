@@ -6,14 +6,16 @@ msgstr ""
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/home/de_CH/>\n"
 "Language: de_CH\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
+#. key: home.sections.brand
 msgid "mentalhealthGPT"
 msgstr "mentalhealthGPT"
 
+#. key: home.sections.tagline
 msgid "Expertise you trust. Privacy you control. Science that empowers."
 msgstr ""
 "Kompetenz, der Sie vertrauen. Datenschutz, den Sie kontrollieren. "

@@ -59,14 +59,16 @@ function buildPotFromJson(jsonPath) {
   for (const [key, value] of Object.entries(flat)) {
     if (typeof value !== 'string' || !value.trim()) continue;
 
-    const id = String(value);  // englischer Text als msgid
-
+    const id = String(value);                 // << msgid = EN-Text
+    // Standard-Kontext (leer): alle Einträge unter '' ablegen
     if (!po.translations['']) po.translations[''] = {};
 
-    // KEIN Kommentar, KEIN msgctxt
+    // Eintrag ohne msgctxt erzeugen
     po.translations[''][id] = {
       msgid: id,
-      msgstr: ['']
+      msgstr: [''],
+      // optionaler Hinweis für Reviewer:
+      comments: { extracted: `key: ${key}` }
     };
 
     count++;

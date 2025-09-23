@@ -6,25 +6,21 @@ msgstr ""
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/applications/fr_CH/>\n"
 "Language: fr_CH\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
-#. key: applications.sections.title
 msgid "Applications"
 msgstr "Applications"
 
-#. key: applications.body.browse-install-apps
 msgid "Browse and install apps to simplify your life with mentalhealthGPT"
 msgstr ""
 "Parcourez et installez des applications pour vous simplifier la vie avec "
 "mentalhealthGPT"
 
-#. key: applications.sections.suggested-apps
 msgid "Suggested apps"
 msgstr "Applications suggérées"
 
-#. key: applications.form.search-placeholder
 msgid "Search by app name or category"
 msgstr "Rechercher par nom d'application ou catégorie"

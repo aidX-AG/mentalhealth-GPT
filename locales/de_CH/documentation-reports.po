@@ -6,22 +6,26 @@ msgstr ""
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/documentation-reports/de_CH/>\n"
 "Language: de_CH\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
+#. key: documentation-reports.chat.greeting
 msgid "Hello! How can I assist you with documentation and reporting today?"
 msgstr ""
 "Hallo! Wie kann ich Ihnen heute bei der Dokumentation und Berichterstattung "
 "helfen?"
 
+#. key: documentation-reports.text.coming-capability
 msgid "Soon you’ll be able to generate"
 msgstr "Bald können Sie generieren"
 
+#. key: documentation-reports.text.professional-docs
 msgid "professional documentation and reports"
 msgstr "professionelle Dokumentation und Berichte"
 
+#. key: documentation-reports.text.use-cases
 msgid ""
 "— whether for clinical use, insurance submissions, or personal records of "
 "therapy and supervision sessions."
@@ -29,37 +33,46 @@ msgstr ""
 "– sei es für den klinischen Gebrauch, für Versicherungsanträge oder für "
 "persönliche Aufzeichnungen von Therapie- und Supervisionssitzungen."
 
+#. key: documentation-reports.text.ai-helps-transform
 msgid "Our AI will help you transform transcripts into"
 msgstr "Unsere KI hilft Ihnen dabei, Transkripte in"
 
+#. key: documentation-reports.text.clear-structured-confidential
 msgid "clear, structured, and confidential"
 msgstr "klar, strukturiert und vertraulich"
 
+#. key: documentation-reports.text.reports-automatically
 msgid "reports — automatically."
 msgstr "Berichte – automatisch."
 
+#. key: documentation-reports.text.data-processed-with
 msgid "All data is processed with"
 msgstr "Alle Daten werden verarbeitet mit"
 
+#. key: documentation-reports.text.end-to-end-encryption
 msgid "end-to-end encryption"
 msgstr "End-to-End-Verschlüsselung"
 
+#. key: documentation-reports.text.privacy-protection
 msgid ""
-"to protect patient confidentiality and ensure secure handling at every "
-"stage."
+"to protect patient confidentiality and ensure secure handling at every stage."
 msgstr ""
 "um die Vertraulichkeit der Patientendaten zu schützen und einen sicheren "
 "Umgang in jeder Phase zu gewährleisten."
 
+#. key: documentation-reports.sections.icon
 msgid "🚧"
 msgstr "🚧"
 
+#. key: documentation-reports.chat.title
 msgid "Documentation & Reporting"
 msgstr "Dokumentation und Berichterstattung"
 
+#. key: documentation-reports.sections.in-development
 msgid "is an exciting new feature that’s currently in development."
 msgstr "ist eine spannende neue Funktion, die derzeit entwickelt wird."
 
+#. key: documentation-reports.text.value-prop
 msgid ""
 "We’re building it to save you time, reduce admin load, and enhance the "
 "quality of your documentation —"
@@ -67,5 +80,6 @@ msgstr ""
 "Wir entwickeln es, um Ihnen Zeit zu sparen, den Verwaltungsaufwand zu "
 "reduzieren und die Qualität Ihrer Dokumentation zu verbessern —"
 
+#. key: documentation-reports.text.stay-tuned
 msgid "stay tuned!"
 msgstr "Bleiben Sie dran!"

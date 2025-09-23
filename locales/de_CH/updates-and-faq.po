@@ -6,25 +6,31 @@ msgstr ""
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/updates-and-faq/de_CH/>\n"
 "Language: de_CH\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
+#. key: updates-and-faq.sections.title
 msgid "Updates & FAQ"
 msgstr "Updates & FAQ"
 
+#. key: updates-and-faq.sections.subtitle
 msgid "Features, fixes & improvements."
 msgstr "Funktionen, Fehlerbehebungen und Verbesserungen."
 
+#. key: updates-and-faq.sections.question
 msgid "Can’t find any answer?"
 msgstr "Sie finden keine Antwort?"
 
+#. key: updates-and-faq.sections.lets-ask-ai
 msgid "Let’s ask the smartest AI Chat"
 msgstr "Fragen wir den intelligentesten KI-Chat"
 
+#. key: updates-and-faq.buttons.ask-mh-gpt
 msgid "Ask mentalhealthGPT"
 msgstr "Fragen Sie mentalhealthGPT"
 
+#. key: updates-and-faq.buttons.load-more
 msgid "Load more"
 msgstr "Mehr laden"

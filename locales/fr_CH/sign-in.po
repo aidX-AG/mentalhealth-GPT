@@ -6,63 +6,81 @@ msgstr ""
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
 "Language: fr_CH\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
+#. key: sign-in.misc.forgot-password
 msgid "Forgot password?"
 msgstr "Mot de passe oublié ?"
 
+#. key: sign-in.misc.sign-in-with-brainwave
 msgid "Sign in with Brainwave"
 msgstr "Connectez-vous avec aidX"
 
+#. key: sign-in.placeholders.username-or-email
 msgid "Username or email"
 msgstr "Nom d'utilisateur ou adresse e-mail"
 
+#. key: sign-in.placeholders.password
 msgid "Password"
 msgstr "Mot de passe"
 
+#. key: sign-in.sections.hero-title
 msgid "Unlock the power of AI"
 msgstr "Libérez la puissance de l'IA"
 
+#. key: sign-in.sections.hero-subtitle
 msgid "Chat with the smartest AI - Experience the power of AI with us"
 msgstr ""
 "Faites chat avec l'IA la plus intelligente - Découvrez la puissance de l'IA "
 "avec nous"
 
+#. key: sign-in.buttons.continue-google
 msgid "Continue with Google"
 msgstr "Continuer avec Google"
 
+#. key: sign-in.buttons.continue-apple
 msgid "Continue with Apple"
 msgstr "Continuer avec Apple"
 
+#. key: sign-in.sections.or
 msgid "OR"
 msgstr "OU"
 
+#. key: sign-in.buttons.create-account
 msgid "Create Account"
 msgstr "Créer un compte"
 
+#. key: sign-in.text.by-creating-account
 msgid "By creating an account, you agree to our"
 msgstr "En créant un compte, vous acceptez nos"
 
+#. key: sign-in.sections.terms-of-service
 msgid "Terms of Service"
 msgstr "Conditions d'utilisation"
 
+#. key: sign-in.text.and
 msgid "and"
 msgstr "et"
 
+#. key: sign-in.sections.privacy-cookie
 msgid "Privacy & Cookie Statement"
 msgstr "Déclaration relative à la confidentialité et aux cookies"
 
+#. key: sign-in.text.period
 msgid "."
 msgstr "."
 
+#. key: sign-in.placeholders.email
 msgid "Email"
 msgstr "courriel"
 
+#. key: sign-in.fragments.reset-password
 msgid "Reset your password"
 msgstr "Réinitialisez votre mot de passe"
 
+#. key: sign-in.buttons.reset-password
 msgid "Reset password"
 msgstr "Réinitialiser le mot de passe"

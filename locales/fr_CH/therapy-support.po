@@ -6,14 +6,16 @@ msgstr ""
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/therapy-support/fr_CH/>\n"
 "Language: fr_CH\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
+#. key: therapy-support.sections.greeting
 msgid "🧠 Hello! I'm your Therapy Support AI."
 msgstr "🧠 Bonjour ! Je suis votre IA d'aide à la thérapie."
 
+#. key: therapy-support.sections.instructions
 msgid ""
 "Feel free to describe your case, the specific symptoms, or ask for "
 "therapeutic strategies."
@@ -21,5 +23,6 @@ msgstr ""
 "N'hésitez pas à décrire votre cas, les symptômes spécifiques, ou à demander "
 "des stratégies thérapeutiques."
 
+#. key: therapy-support.chat.title
 msgid "Therapy Support AI"
 msgstr "Assistance thérapeutique IA"

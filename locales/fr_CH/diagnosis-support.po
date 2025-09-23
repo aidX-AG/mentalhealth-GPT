@@ -6,20 +6,24 @@ msgstr ""
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/diagnosis-support/fr_CH/>\n"
 "Language: fr_CH\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
+#. key: diagnosis-support.sections.banner-prefix
 msgid "🚧 The AI functionality for"
 msgstr "🚧 La fonctionnalité IA pour"
 
+#. key: diagnosis-support.chat.title
 msgid "Diagnosis Support"
 msgstr "Aide au diagnostic"
 
+#. key: diagnosis-support.sections.under-development
 msgid "is currently under development."
 msgstr "est actuellement en cours de développement."
 
+#. key: diagnosis-support.sections.coming-soon
 msgid ""
 "It will gradually become available as we integrate specialized models to "
 "support mental health diagnostics."
