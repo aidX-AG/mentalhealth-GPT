@@ -1,0 +1,13 @@
+{
+  "video-analysis.chat.greeting": "Bonjour ! Comment puis-je vous aider aujourd'hui en matière d'analyse vidéo ?",
+  "video-analysis.text.coming-soon": "Notre analyse vidéo basée sur l'IA sera bientôt disponible.",
+  "video-analysis.text.value-prop-part1": "Cela aidera à analyser les enregistrements des séances de thérapie",
+  "video-analysis.text.value-prop-part2": ", détecter les thèmes clés, les indices non verbaux et les dynamiques thérapeutiques, le tout avec une sécurité totale de bout en bout.",
+  "video-analysis.text.security": "Vos données vidéo sont protégées à chaque étape : dans votre navigateur, pendant le téléchargement et tout au long du traitement basé sur l'IA.",
+  "video-analysis.text.in-development": "Cette fonctionnalité est actuellement en cours de développement —",
+  "video-analysis.text.stay-tuned": "restez à l'écoute !",
+  "video-analysis.sections.icon": "🚧",
+  "video-analysis.chat.title": "Analyse vidéo",
+  "video-analysis.text.feature-benefit": "est une fonctionnalité puissante qui fournira des informations sécurisées, générées par l'IA, sur les séances thérapeutiques.",
+  "video-analysis.text.launch-excitement": "Nous sommes ravis de lancer prochainement cette initiative, qui favorisera une réflexion plus approfondie, la supervision et le développement professionnel."
+}

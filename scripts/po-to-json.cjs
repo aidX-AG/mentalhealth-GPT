@@ -1,69 +1,179 @@
-// scripts/po-to-json.js
-// "Best-of-breed minimal": PO -> flaches JSON-Dict { msgid: msgstr || msgid }
-// - Unterstützt beliebige Kontexte (msgctxt), ohne Komplexität zu erhöhen.
-// - Fällt immer auf Text-as-Key zurück, wenn msgstr leer ist.
-// - Mehrsprachig nutzbar: `node scripts/po-to-json.js de`
-// - Output: locales/<lang>.json
+#!/usr/bin/env node
+/**
+ * scripts/po-to-json.cjs
+ *
+ * Build JSON translations from POT/PO:
+ *
+ * CORE (Text→Text):
+ *   - en.json from POT/core.pot (msgid → msgid)
+ *   - de.json / fr.json from de_CH/core.po / fr_CH/core.po (msgid → msgstr || msgid)
+ *
+ * NAMESPACES (Key→Text; keys are in comments "#. key: ..."):
+ *   - locales/en/<ns>.json from POT/<ns>.pot  (key → msgid)
+ *   - locales/de/<ns>.json from de_CH/<ns>.po (key → msgstr || msgid)
+ *   - locales/fr/<ns>.json from fr_CH/<ns>.po (key → msgstr || msgid)
+ *
+ * Usage:
+ *   node scripts/po-to-json.cjs en
+ *   node scripts/po-to-json.cjs de_CH
+ *   node scripts/po-to-json.cjs fr_CH
+ */
 
 const fs = require('fs');
 const path = require('path');
 const gettextParser = require('gettext-parser');
 
-// Sprache aus CLI-Arg, Default 'en'
-const lang = process.argv[2] || 'en';
+const ROOT = process.cwd();
+const LOCALES_DIR = path.join(ROOT, 'locales');
+const POT_DIR = path.join(LOCALES_DIR, 'pot');
 
-const PO_DIR = path.join(process.cwd(), 'locales');
-const poFile = path.join(PO_DIR, `${lang}.po`);
-const outputFile = path.join(PO_DIR, `${lang}.json`);
-
-if (!fs.existsSync(PO_DIR)) {
-  fs.mkdirSync(PO_DIR, { recursive: true });
+const srcArg = process.argv[2]; // 'en' | 'de_CH' | 'fr_CH'
+if (!srcArg) {
+  console.error('❌ Bitte Quellsprache angeben: en | de_CH | fr_CH');
+  process.exit(1);
 }
 
-if (!fs.existsSync(poFile)) {
-  console.warn(`⚠️  Keine PO-Datei gefunden: ${poFile}`);
-  console.warn(`   -> Schreibe leeres JSON-Dict nach ${outputFile}`);
-  fs.writeFileSync(outputFile, '{}\n', 'utf8');
-  process.exit(0);
+const isEN = srcArg === 'en';
+const targetLang =
+  isEN ? 'en' :
+  (srcArg.startsWith('de') ? 'de' :
+   srcArg.startsWith('fr') ? 'fr' :
+   (srcArg.split('_')[0] || srcArg));
+
+/** Utility */
+function ensureDir(p) {
+  if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
 }
 
-const poBuffer = fs.readFileSync(poFile);
-const parsed = gettextParser.po.parse(poBuffer);
+function parsePoLike(buffer) {
+  // works for both .po and .pot
+  return gettextParser.po.parse(buffer);
+}
 
-// Flaches Dict aufbauen
-const dict = {};
+/** Read keys from "#. key: <jsonKey>" developer comments */
+function getKeysFromComments(item) {
+  const c = item && item.comments ? item.comments.extracted : '';
+  if (!c) return [];
+  const s = Array.isArray(c) ? c.join('\n') : String(c);
+  return s
+    .split(/\r?\n/)
+    .map(l => l.trim())
+    .filter(Boolean)
+    .map(l => {
+      const m = l.match(/^key:\s*(.+)$/i);
+      return m ? m[1].trim() : l; // tolerate lines without "key:" prefix
+    })
+    .filter(Boolean)
+    .filter((v, i, arr) => arr.indexOf(v) === i); // unique
+}
 
-// Über alle Kontexte iterieren ('' = default, weitere ctxs möglich)
-for (const [ctxName, ctxEntries] of Object.entries(parsed.translations || {})) {
-  for (const [msgid, entry] of Object.entries(ctxEntries || {})) {
-    // Header-Eintrag überspringen (msgid === '')
-    if (!msgid) continue;
+/** Build CORE */
+function buildCore() {
+  const outFile = path.join(LOCALES_DIR, `${targetLang}.json`);
+  const dict = Object.create(null);
 
-    const singular = entry?.msgstr?.[0] || '';
-    const fallback = msgid; // Text-as-Key Fallback
+  if (isEN) {
+    // EN from POT/core.pot (msgid → msgid)
+    const potPath = path.join(POT_DIR, 'core.pot');
+    if (!fs.existsSync(potPath)) {
+      console.error(`❌ POT fehlt: ${potPath}`);
+      process.exit(1);
+    }
+    const po = parsePoLike(fs.readFileSync(potPath));
+    for (const ctx of Object.keys(po.translations || {})) {
+      const entries = po.translations[ctx] || {};
+      for (const id of Object.keys(entries)) {
+        if (!id) continue; // header
+        const item = entries[id];
+        const en = item.msgid || '';
+        if (!en.trim()) continue;
+        dict[en] = en;
+      }
+    }
+  } else {
+    // de_CH / fr_CH from core.po (msgid → msgstr || msgid)
+    const srcCore = path.join(LOCALES_DIR, srcArg, 'core.po');
+    if (!fs.existsSync(srcCore)) {
+      console.error(`❌ CORE-PO fehlt: ${srcCore}`);
+      process.exit(1);
+    }
+    const po = parsePoLike(fs.readFileSync(srcCore));
+    for (const ctx of Object.keys(po.translations || {})) {
+      const entries = po.translations[ctx] || {};
+      for (const id of Object.keys(entries)) {
+        if (!id) continue;
+        const item = entries[id];
+        const en = item.msgid || '';
+        if (!en.trim()) continue;
+        const tr = (item.msgstr && item.msgstr[0]) ? item.msgstr[0].trim() : '';
+        dict[en] = tr || en;
+      }
+    }
+  }
 
-    // Wenn ein Kontext existiert, den Key stabil zusammensetzen.
-    // Wir benutzen \u0004 (Gettext-Standard-Trenner) – kollidiert nicht mit normalem Text.
-    const hasContext = entry && entry.msgctxt && String(entry.msgctxt).length > 0;
-    const baseKey = hasContext ? `${entry.msgctxt}\u0004${msgid}` : msgid;
+  fs.writeFileSync(outFile, JSON.stringify(dict, null, 2), 'utf8');
+  console.log(`✅ CORE geschrieben: ${path.relative(ROOT, outFile)} (${Object.keys(dict).length} Einträge)`);
+}
 
-    // Wert bestimmen (leere msgstr -> Fallback auf Key)
-    const value = singular && singular.trim().length > 0 ? singular : fallback;
+/** Build Namespaces */
+function buildNamespaces() {
+  if (!fs.existsSync(POT_DIR)) {
+    console.warn(`⚠️  Verzeichnis fehlt: ${POT_DIR} – überspringe Namespaces.`);
+    return;
+  }
+  // detect list of namespaces from POT folder (authoritative)
+  const allPot = fs.readdirSync(POT_DIR)
+    .filter(f => f.endsWith('.pot') && f !== 'core.pot');
 
-    dict[baseKey] = value;
+  for (const potName of allPot) {
+    const ns = path.basename(potName, '.pot');
+    const outDir = path.join(LOCALES_DIR, targetLang);
+    ensureDir(outDir);
+    const outFile = path.join(outDir, `${ns}.json`);
+    const dict = Object.create(null);
 
-    // (Optional) Wenn es Pluralformen gibt, könntest du sie hier ebenfalls
-    // ablegen – für unsere minimalistische „Text as Key“-Strategie lassen
-    // wir das absichtlich weg. Bei Bedarf:
-    //
-    // if (entry.msgid_plural) {
-    //   const plural = entry.msgstr?.[1] || entry.msgid_plural;
-    //   dict[`${baseKey}__plural`] = plural;
-    // }
+    if (isEN) {
+      // EN from POT: key(s) in comments → English text in msgid
+      const potPath = path.join(POT_DIR, potName);
+      const po = parsePoLike(fs.readFileSync(potPath));
+      for (const ctx of Object.keys(po.translations || {})) {
+        const entries = po.translations[ctx] || {};
+        for (const id of Object.keys(entries)) {
+          if (!id) continue; // header
+          const item = entries[id];
+          const enText = item.msgid || '';
+          if (!enText.trim()) continue;
+          const keys = getKeysFromComments(item);
+          for (const k of keys) dict[k] = enText;
+        }
+      }
+    } else {
+      // DE/FR from PO: key(s) in comments → msgstr || msgid
+      const poPath = path.join(LOCALES_DIR, srcArg, `${ns}.po`);
+      if (!fs.existsSync(poPath)) {
+        console.warn(`⚠️  Überspringe fehlendes Namespace-PO: ${poPath}`);
+        continue;
+      }
+      const po = parsePoLike(fs.readFileSync(poPath));
+      for (const ctx of Object.keys(po.translations || {})) {
+        const entries = po.translations[ctx] || {};
+        for (const id of Object.keys(entries)) {
+          if (!id) continue; // header
+          const item = entries[id];
+          const tr = (item.msgstr && item.msgstr[0]) ? item.msgstr[0].trim() : '';
+          const enText = item.msgid || '';
+          if (!enText.trim()) continue;
+          const keys = getKeysFromComments(item);
+          for (const k of keys) dict[k] = tr || enText;
+        }
+      }
+    }
+
+    fs.writeFileSync(outFile, JSON.stringify(dict, null, 2), 'utf8');
+    console.log(`✅ NS geschrieben: ${path.relative(ROOT, outFile)} (${Object.keys(dict).length} Einträge)`);
   }
 }
 
-// Schön formatiert schreiben
-fs.writeFileSync(outputFile, JSON.stringify(dict, null, 2) + '\n', 'utf8');
-
-console.log(`✅ PO → JSON fertig: ${path.relative(process.cwd(), outputFile)}`);
+/** Run */
+buildCore();
+buildNamespaces();

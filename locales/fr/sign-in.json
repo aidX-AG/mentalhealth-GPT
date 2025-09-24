@@ -1,0 +1,20 @@
+{
+  "sign-in.misc.forgot-password": "Mot de passe oublié ?",
+  "sign-in.misc.sign-in-with-brainwave": "Connectez-vous avec aidX",
+  "sign-in.placeholders.username-or-email": "Nom d'utilisateur ou adresse e-mail",
+  "sign-in.placeholders.password": "Mot de passe",
+  "sign-in.sections.hero-title": "Libérez la puissance de l'IA",
+  "sign-in.sections.hero-subtitle": "Faites chat avec l'IA la plus intelligente - Découvrez la puissance de l'IA avec nous",
+  "sign-in.buttons.continue-google": "Continuer avec Google",
+  "sign-in.buttons.continue-apple": "Continuer avec Apple",
+  "sign-in.sections.or": "OU",
+  "sign-in.buttons.create-account": "Créer un compte",
+  "sign-in.text.by-creating-account": "En créant un compte, vous acceptez nos",
+  "sign-in.sections.terms-of-service": "Conditions d'utilisation",
+  "sign-in.text.and": "et",
+  "sign-in.sections.privacy-cookie": "Déclaration relative à la confidentialité et aux cookies",
+  "sign-in.text.period": ".",
+  "sign-in.placeholders.email": "courriel",
+  "sign-in.fragments.reset-password": "Réinitialisez votre mot de passe",
+  "sign-in.buttons.reset-password": "Réinitialiser le mot de passe"
+}

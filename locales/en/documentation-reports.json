@@ -10,9 +10,8 @@
   "documentation-reports.text.end-to-end-encryption": "end-to-end encryption",
   "documentation-reports.text.privacy-protection": "to protect patient confidentiality and ensure secure handling at every stage.",
   "documentation-reports.sections.icon": "🚧",
-  "documentation-reports.sections.title": "Documentation & Reporting",
+  "documentation-reports.chat.title": "Documentation & Reporting",
   "documentation-reports.sections.in-development": "is an exciting new feature that’s currently in development.",
   "documentation-reports.text.value-prop": "We’re building it to save you time, reduce admin load, and enhance the quality of your documentation —",
-  "documentation-reports.text.stay-tuned": "stay tuned!",
-  "documentation-reports.chat.title": "Documentation & Reporting"
+  "documentation-reports.text.stay-tuned": "stay tuned!"
 }
