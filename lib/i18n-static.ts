@@ -1,38 +1,35 @@
-import fs from "node:fs";
-import path from "node:path";
+/* eslint-disable @typescript-eslint/no-var-requires */
 
-export type Messages = Record<string, string>;
+type Messages = Record<string, string>;
+export type Locale = "en" | "de" | "fr";
 
-// Transifex liefert Werte als plain string ODER als { string: "…" }
-type RawValue = string | { string?: string } | undefined;
-type RawMessages = Record<string, RawValue>;
+const NAMESPACES = [
+  "applications", "audio-transcription", "checkout", "common",
+  "diagnosis-support", "documentation-reports", "generation-socials-post",
+  "home", "pricing", "sign-in", "supervision-training", "thanks",
+  "therapy-support", "updates-and-faq", "video-analysis",
+] as const;
 
-function normalize(raw: RawMessages): Messages {
-  const out: Messages = {};
-  for (const [k, v] of Object.entries(raw || {})) {
-    if (typeof v === "string") {
-      out[k] = v;
-    } else if (v && typeof v === "object" && typeof v.string === "string") {
-      out[k] = v.string;
-    } else {
-      out[k] = k; // Fallback: Key selbst zurückgeben
+// super-simpler, synchroner Loader
+export function loadMessages(locale: string): Messages {
+  const lang: Locale = locale.startsWith("de") ? "de" : locale.startsWith("fr") ? "fr" : "en";
+
+  // Core
+  const core = require(`../locales/${lang}.json`);
+  let messages: Messages = { ...core };
+
+  // Namespaces
+  for (const ns of NAMESPACES) {
+    try {
+      const nsData = require(`../locales/${lang}/${ns}.json`);
+      messages = { ...messages, ...nsData };
+    } catch {
+      // namespace-Datei fehlt → okay
     }
   }
-  return out;
+  return messages;
 }
 
-/** Lädt /locales/<locale>.json und normalisiert das TX-Format */
-export function loadMessages(locale: string): Messages {
-  try {
-    const file = path.join(process.cwd(), "locales", `${locale}.json`);
-    const raw = JSON.parse(fs.readFileSync(file, "utf8")) as RawMessages;
-    return normalize(raw);
-  } catch {
-    return {};
-  }
-}
-
-/** Einfaches t() auf Basis des geladenen Dictionaries */
-export function makeT(messages: Messages) {
-  return (key: string): string => messages[key] ?? key;
+export function makeT(dict: Messages) {
+  return (input: string) => dict[input] ?? input;
 }
