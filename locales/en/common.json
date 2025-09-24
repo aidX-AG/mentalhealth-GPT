@@ -74,7 +74,6 @@
   "common.misc.done": "You are done!",
   "common.misc.post-scheduled": "Your post has been scheduled for February 14th, 2023 at 11:30 and will be shared through",
   "common.misc.buffer": "Buffer",
-  "common.misc.period": ".",
   "common.links.view-on-buffer": "View on Buffer",
   "common.placeholders.search": "Search",
   "common.placeholders.search-ellipsis": "Search ...",
@@ -94,7 +93,6 @@
   "common.badges.archive-chat": "Archive chat",
   "common.alt.smile-heart-eyes": "Smile heart eyes",
   "common.alt.smile-unamused": "Smile unamused",
-  "common.badges.at": "#",
   "common.misc.incorrect-answer-5": "Incorrect answer (5)",
   "common.misc.correct-answer": "Correct answer",
   "common.misc.how": "How",
@@ -152,6 +150,5 @@
   "common.misc.youtube-player": "YouTube video player",
   "common.sections.deauthorize": "Deauthorize",
   "common.sections.revoke": "Revoke",
-  "common.badges.admin": "Admin",
-  "common.misc.at": "@"
+  "common.badges.admin": "Admin"
 }

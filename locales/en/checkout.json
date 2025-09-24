@@ -20,8 +20,6 @@
   "checkout.body.billing-consent": "By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be charged $399 every month, unless you cancel.",
   "checkout.sections.cta-start-plan": "Start Brainwave Enterprise plan",
   "checkout.sections.pay": "Pay",
-  "checkout.sections.currency-symbol": "$",
   "checkout.sections.per-month": "/month",
-  "checkout.badges.save": "Save",
-  "checkout.badges.percent": "%"
+  "checkout.badges.save": "Save"
 }

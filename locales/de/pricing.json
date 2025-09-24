@@ -9,7 +9,5 @@
   "pricing.sections.enterprise": "Unternehmen",
   "pricing.badges.via-email": "Per E-Mail",
   "pricing.badges.chat-247": "Chat rund um die Uhr",
-  "pricing.badges.popular": "Beliebt",
-  "pricing.sections.currency-symbol": "$",
-  "pricing.sections.slash": "/"
+  "pricing.badges.popular": "Beliebt"
 }

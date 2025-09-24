@@ -74,7 +74,6 @@
   "common.misc.done": "Sie sind fertig!",
   "common.misc.post-scheduled": "Ihr Beitrag wurde für den 14. Februar 2023 um 11:30 Uhr geplant und wird über",
   "common.misc.buffer": "Buffer",
-  "common.misc.period": ".",
   "common.links.view-on-buffer": "Auf Buffer anzeigen",
   "common.placeholders.search": "Suche",
   "common.placeholders.search-ellipsis": "Suchen ...",
@@ -94,7 +93,6 @@
   "common.badges.archive-chat": "Chat archivieren",
   "common.alt.smile-heart-eyes": "Lächeln mit Herzchenaugen",
   "common.alt.smile-unamused": "Unamüsiert lächeln",
-  "common.badges.at": "#",
   "common.misc.incorrect-answer-5": "Falsche Antwort (5)",
   "common.misc.correct-answer": "Richtige Antwort",
   "common.misc.how": "Wie",
@@ -152,6 +150,5 @@
   "common.misc.youtube-player": "YouTube-Videoplayer",
   "common.sections.deauthorize": "Deaktivieren",
   "common.sections.revoke": "Widerrufen",
-  "common.badges.admin": "Admin",
-  "common.misc.at": "@"
+  "common.badges.admin": "Admin"
 }

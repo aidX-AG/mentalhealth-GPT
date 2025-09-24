@@ -20,8 +20,6 @@
   "checkout.body.billing-consent": "En cliquant sur « Démarrer le plan Brainwave Enterprise », vous acceptez d'être facturé 399 $ chaque mois, sauf si vous annulez.",
   "checkout.sections.cta-start-plan": "Commencer le plan Entreprise Brainwave",
   "checkout.sections.pay": "Payer",
-  "checkout.sections.currency-symbol": "$",
   "checkout.sections.per-month": "/mois",
-  "checkout.badges.save": "Enregistrer",
-  "checkout.badges.percent": "%"
+  "checkout.badges.save": "Enregistrer"
 }

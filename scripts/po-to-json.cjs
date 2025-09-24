@@ -50,6 +50,28 @@ function parsePoLike(buffer) {
   return gettextParser.po.parse(buffer);
 }
 
+/** Filter: leere oder reine Satzzeichen-/Symbol-Zeichenketten überspringen */
+function shouldSkipTranslation(text) {
+  if (text === undefined || text === null) return true;
+  const s = String(text).trim();
+  if (!s) return true;
+  // nur Interpunktion/Symbole/Whitespace?
+  if (/^[\p{P}\p{S}\s]+$/u.test(s)) return true;
+  // sehr kurze Symbolketten (zusätzlicher Schutz)
+  if (s.length <= 3 && /^[\\/|+×*•·–—]+$/u.test(s)) return true;
+  return false;
+}
+
+/** Validiere Keys - keine führenden/abschließenden Leerzeichen */
+function validateKey(key) {
+  if (!key) return '';
+  const trimmed = key.trim();
+  if (key !== trimmed) {
+    console.warn(`⚠️  Key mit Leerzeichen korrigiert: "${key}" → "${trimmed}"`);
+  }
+  return trimmed;
+}
+
 /** Read keys from "#. key: <jsonKey>" developer comments */
 function getKeysFromComments(item) {
   const c = item && item.comments ? item.comments.extracted : '';
@@ -85,8 +107,8 @@ function buildCore() {
       for (const id of Object.keys(entries)) {
         if (!id) continue; // header
         const item = entries[id];
-        const en = item.msgid || '';
-        if (!en.trim()) continue;
+        const en = validateKey(item.msgid || '');
+        if (shouldSkipTranslation(en)) continue;
         dict[en] = en;
       }
     }
@@ -103,9 +125,13 @@ function buildCore() {
       for (const id of Object.keys(entries)) {
         if (!id) continue;
         const item = entries[id];
-        const en = item.msgid || '';
-        if (!en.trim()) continue;
+        const en = validateKey(item.msgid || '');
+        if (shouldSkipTranslation(en)) continue;
+
         const tr = (item.msgstr && item.msgstr[0]) ? item.msgstr[0].trim() : '';
+        // Übersetzung ebenfalls filtern (wenn vorhanden)
+        if (tr && shouldSkipTranslation(tr)) continue;
+
         dict[en] = tr || en;
       }
     }
@@ -141,10 +167,13 @@ function buildNamespaces() {
         for (const id of Object.keys(entries)) {
           if (!id) continue; // header
           const item = entries[id];
-          const enText = item.msgid || '';
-          if (!enText.trim()) continue;
+          const enText = validateKey(item.msgid || '');
+          if (shouldSkipTranslation(enText)) continue;
           const keys = getKeysFromComments(item);
-          for (const k of keys) dict[k] = enText;
+          for (const k of keys) {
+            const cleanKey = validateKey(k);
+            dict[cleanKey] = enText;
+          }
         }
       }
     } else {
@@ -160,11 +189,18 @@ function buildNamespaces() {
         for (const id of Object.keys(entries)) {
           if (!id) continue; // header
           const item = entries[id];
+          const enText = validateKey(item.msgid || '');
+          if (shouldSkipTranslation(enText)) continue;
+
           const tr = (item.msgstr && item.msgstr[0]) ? item.msgstr[0].trim() : '';
-          const enText = item.msgid || '';
-          if (!enText.trim()) continue;
+          // Übersetzung ebenfalls filtern (wenn vorhanden)
+          if (tr && shouldSkipTranslation(tr)) continue;
+
           const keys = getKeysFromComments(item);
-          for (const k of keys) dict[k] = tr || enText;
+          for (const k of keys) {
+            const cleanKey = validateKey(k);
+            dict[cleanKey] = tr || enText;
+          }
         }
       }
     }

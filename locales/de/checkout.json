@@ -20,8 +20,6 @@
   "checkout.body.billing-consent": "Durch Klicken auf „Brainwave Enterprise-Plan starten“ erklären Sie sich damit einverstanden, dass Ihnen monatlich 399 $ in Rechnung gestellt werden, sofern Sie nicht kündigen.",
   "checkout.sections.cta-start-plan": "Starten Sie den Brainwave Enterprise-Plan",
   "checkout.sections.pay": "Bezahlen",
-  "checkout.sections.currency-symbol": "$",
   "checkout.sections.per-month": "/Monat",
-  "checkout.badges.save": "Speichern",
-  "checkout.badges.percent": "%"
+  "checkout.badges.save": "Speichern"
 }
