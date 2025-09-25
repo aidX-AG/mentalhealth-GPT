@@ -46,8 +46,7 @@ function ensureDir(p) {
 }
 
 function parsePoLike(buffer) {
-  // works for both .po and .pot
-  return gettextParser.po.parse(buffer);
+  return gettextParser.po.parse(buffer); // works for .po and .pot
 }
 
 /** Filter: leere oder reine Satzzeichen-/Symbol-Zeichenketten überspringen */
@@ -55,14 +54,12 @@ function shouldSkipTranslation(text) {
   if (text === undefined || text === null) return true;
   const s = String(text).trim();
   if (!s) return true;
-  // nur Interpunktion/Symbole/Whitespace?
-  if (/^[\p{P}\p{S}\s]+$/u.test(s)) return true;
-  // sehr kurze Symbolketten (zusätzlicher Schutz)
-  if (s.length <= 3 && /^[\\/|+×*•·–—]+$/u.test(s)) return true;
+  if (/^[\p{P}\p{S}\s]+$/u.test(s)) return true;                  // nur Interpunktion/Symbole/Whitespace
+  if (s.length <= 3 && /^[\\/|+×*•·–—]+$/u.test(s)) return true;  // sehr kurze Symbolketten
   return false;
 }
 
-/** Validiere Keys - keine führenden/abschließenden Leerzeichen */
+/** Validiere Keys aus "#. key: ..." – keine führenden/abschließenden Leerzeichen */
 function validateKey(key) {
   if (!key) return '';
   const trimmed = key.trim();
@@ -72,7 +69,7 @@ function validateKey(key) {
   return trimmed;
 }
 
-/** Read keys from "#. key: <jsonKey>" developer comments */
+/** Keys aus Developer-Kommentaren lesen */
 function getKeysFromComments(item) {
   const c = item && item.comments ? item.comments.extracted : '';
   if (!c) return [];
@@ -83,7 +80,7 @@ function getKeysFromComments(item) {
     .filter(Boolean)
     .map(l => {
       const m = l.match(/^key:\s*(.+)$/i);
-      return m ? m[1].trim() : l; // tolerate lines without "key:" prefix
+      return m ? m[1].trim() : l; // toleriert Zeilen ohne "key:"-Prefix
     })
     .filter(Boolean)
     .filter((v, i, arr) => arr.indexOf(v) === i); // unique
@@ -107,8 +104,11 @@ function buildCore() {
       for (const id of Object.keys(entries)) {
         if (!id) continue; // header
         const item = entries[id];
-        const en = validateKey(item.msgid || '');
+
+        // ✅ KEIN trim/validate: führende Leerzeichen im Text bleiben erhalten!
+        const en = item.msgid || '';
         if (shouldSkipTranslation(en)) continue;
+
         dict[en] = en;
       }
     }
@@ -125,11 +125,12 @@ function buildCore() {
       for (const id of Object.keys(entries)) {
         if (!id) continue;
         const item = entries[id];
-        const en = validateKey(item.msgid || '');
+
+        // ✅ KEIN trim/validate am EN-Text (msgid): genau übernehmen
+        const en = item.msgid || '';
         if (shouldSkipTranslation(en)) continue;
 
-        const tr = (item.msgstr && item.msgstr[0]) ? item.msgstr[0].trim() : '';
-        // Übersetzung ebenfalls filtern (wenn vorhanden)
+        const tr = (item.msgstr && item.msgstr[0]) ? item.msgstr[0] : '';
         if (tr && shouldSkipTranslation(tr)) continue;
 
         dict[en] = tr || en;
@@ -147,7 +148,6 @@ function buildNamespaces() {
     console.warn(`⚠️  Verzeichnis fehlt: ${POT_DIR} – überspringe Namespaces.`);
     return;
   }
-  // detect list of namespaces from POT folder (authoritative)
   const allPot = fs.readdirSync(POT_DIR)
     .filter(f => f.endsWith('.pot') && f !== 'core.pot');
 
@@ -167,11 +167,14 @@ function buildNamespaces() {
         for (const id of Object.keys(entries)) {
           if (!id) continue; // header
           const item = entries[id];
-          const enText = validateKey(item.msgid || '');
+
+          // msgid ROH benutzen; nur fürs Skip prüfen
+          const enText = item.msgid || '';
           if (shouldSkipTranslation(enText)) continue;
+
           const keys = getKeysFromComments(item);
           for (const k of keys) {
-            const cleanKey = validateKey(k);
+            const cleanKey = validateKey(k); // nur keys säubern
             dict[cleanKey] = enText;
           }
         }
@@ -189,16 +192,17 @@ function buildNamespaces() {
         for (const id of Object.keys(entries)) {
           if (!id) continue; // header
           const item = entries[id];
-          const enText = validateKey(item.msgid || '');
+
+          // msgid ROH benutzen; nur fürs Skip prüfen
+          const enText = item.msgid || '';
           if (shouldSkipTranslation(enText)) continue;
 
-          const tr = (item.msgstr && item.msgstr[0]) ? item.msgstr[0].trim() : '';
-          // Übersetzung ebenfalls filtern (wenn vorhanden)
+          const tr = (item.msgstr && item.msgstr[0]) ? item.msgstr[0] : '';
           if (tr && shouldSkipTranslation(tr)) continue;
 
           const keys = getKeysFromComments(item);
           for (const k of keys) {
-            const cleanKey = validateKey(k);
+            const cleanKey = validateKey(k); // nur keys säubern
             dict[cleanKey] = tr || enText;
           }
         }

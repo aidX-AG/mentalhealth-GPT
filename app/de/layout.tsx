@@ -3,22 +3,14 @@ import { Suspense } from "react";
 import { Providers } from "../providers";
 import TxClientProvider from "../TxClientProvider";
 import GlobalLoading from "../GlobalLoading";
-
-// ✅ i18n (Server-Runtime)
 import { loadMessages, makeT } from "@/lib/i18n-static";
-import { setT } from "@/lib/i18n-runtime";
 
-export default function GermanLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  // 1) Wörterbuch laden & T für SSR setzen (Server)
+export default function GermanLayout({ children }: { children: React.ReactNode }) {
+  // Wörterbuch laden (Server)
   const dict = loadMessages("de");
-  const t = makeT(dict);
-  setT(t);
+  const t = makeT(dict); // optional für <meta> etc. (falls nötig)
 
-  // 2) Wörterbuch für den Client einbetten (damit getT() im Browser DE liefert)
+  // Wörterbuch an den Client injizieren
   const inlineI18N = `
     (function () {
       try {
@@ -32,12 +24,13 @@ export default function GermanLayout({
   return (
     <html lang="de">
       <head>
-        {/* Übergibt das Wörterbuch an den Client */}
         <script dangerouslySetInnerHTML={{ __html: inlineI18N }} />
+        {/* Beispiel: Wenn du t() für Meta brauchst:
+        <meta name="description" content={t("Expert AI for mental health – secure, private, and scientifically validated")} />
+        */}
       </head>
       <body>
         <Suspense fallback={<GlobalLoading />}>
-          {/* Hält TX/Locale im Client in Sync, kann so bleiben */}
           <TxClientProvider locale="de">
             <Providers>{children}</Providers>
           </TxClientProvider>

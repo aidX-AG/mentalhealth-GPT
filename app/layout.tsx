@@ -5,6 +5,7 @@ import { Inter, Karla } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import GlobalLoading from "./GlobalLoading";
+import type { Locale } from "@/lib/i18n-static";
 
 // ✅ Serverseitige i18n (nutzt eure aus PO generierten JSONs)
 import { loadMessages, makeT } from "@/lib/i18n-static";
@@ -22,13 +23,21 @@ const karla = Karla({
   variable: "--font-karla",
 });
 
+// ✅ Helper: Locale sicher bestimmen
+function getSafeLocale(params?: { locale?: string }): Locale {
+  const raw = params?.locale || "en";
+  if (raw.startsWith("de")) return "de";
+  if (raw.startsWith("fr")) return "fr";
+  return "en";
+}
+
 // ✅ generateMetadata bekommt params (für Locale)
 export async function generateMetadata({
   params,
 }: {
   params?: { locale?: string };
 }): Promise<Metadata> {
-  const lang = params?.locale || "en";
+  const lang = getSafeLocale(params);
   const t = makeT(loadMessages(lang)); // serverseitige Übersetzung
 
   return {
@@ -40,11 +49,7 @@ export async function generateMetadata({
       "Expert AI for mental health – secure, private, and scientifically validated"
     ),
     alternates: {
-      languages: {
-        de: "/de",
-        fr: "/fr",
-        en: "/",
-      },
+      languages: { de: "/de", fr: "/fr", en: "/" },
     },
     openGraph: {
       title: "mentalhealthGPT",
@@ -66,20 +71,24 @@ export default function RootLayout({
   children: React.ReactNode;
   params?: { locale?: string };
 }>) {
-  const lang = params?.locale || "en";
-  const t = makeT(loadMessages(lang)); // serverseitiges t() für <head>
+  // ⬇️ Strikt als Locale — vermeidet TS-Fehler
+  const lang = getSafeLocale(params);
+
+  // Server-seitiges Dict + t()
+  const dict = loadMessages(lang);
+  const t = makeT(dict);
 
   return (
     <html lang={lang}>
       <head>
-        {/* Fallback-Script, falls jemand direkt /de oder /fr unter diesem Layout öffnet */}
+        {/* 1) HTML lang-Fallback, falls jemand direkt /de oder /fr öffnet */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(){
                 try {
                   var seg = (location.pathname.split('/')[1]||'').toLowerCase();
-                  var l = (seg === 'de' || seg === 'fr') ? seg : 'en';
+                  var l = (seg === 'de' || seg === 'fr') ? seg : '${lang}';
                   document.documentElement.setAttribute('lang', l);
                 } catch(e){}
               })();
@@ -87,7 +96,19 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ Attribut-Namen bleiben literale Strings; nur Inhalte übersetzen */}
+        {/* 2) ✅ WICHTIG: Wörterbuch für Client-`_()` injizieren */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.__I18N__ = {
+                locale: "${lang}",
+                dict: ${JSON.stringify(dict)}
+              };
+            `,
+          }}
+        />
+
+        {/* Meta: nur Inhalte übersetzen, Attribut-Namen bleiben statisch */}
         <meta
           name="description"
           content={t(
@@ -112,7 +133,6 @@ export default function RootLayout({
         className={`${karla.variable} ${inter.variable} bg-white text-black dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}
       >
         <Suspense fallback={<GlobalLoading />}>
-          {/* ⛔️ TxClientProvider entfernt – bei gettext nicht nötig */}
           <Providers>{children}</Providers>
         </Suspense>
       </body>
