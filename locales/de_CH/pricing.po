@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 19:55+0000\n"
+"PO-Revision-Date: 2025-09-26 12:20+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/pricing/de_CH/>\n"
@@ -13,15 +13,19 @@ msgstr ""
 
 #. key: pricing.sections.hero-title-mental
 msgid "AI chat built for mental health"
-msgstr ""
+msgstr "KI-Chat für psychische Gesundheit"
 
 #. key: pricing.faq.refund-q
 msgid "Can I get a refund if I cancel my yearly plan early?"
 msgstr ""
+"Erhalte ich eine Rückerstattung, wenn ich meinen Jahresplan vorzeitig "
+"kündige?"
 
 #. key: pricing.faq.try-plan-q
 msgid "Can I try mentalhealthGPT before committing to a paid plan?"
 msgstr ""
+"Kann ich mentalhealthGPT ausprobieren, bevor ich mich für einen "
+"kostenpflichtigen Tarif entscheide?"
 
 #. key: pricing.badges.chat-247
 msgid "Chat 24/7"
@@ -36,9 +40,8 @@ msgid "Core features"
 msgstr "Kernfunktionen"
 
 #. key: pricing.sections.current-plan
-#, fuzzy
 msgid "Current plan"
-msgstr "Plan auswählen"
+msgstr "Aktueller Plan"
 
 #. key: pricing.sections.faq
 msgid "Frequently asked questions"
@@ -46,20 +49,19 @@ msgstr "Häufig gestellte Fragen"
 
 #. key: pricing.tiers.institution
 msgid "Institution"
-msgstr ""
+msgstr "Institution"
 
 #. key: pricing.sections.mo
 msgid "mo"
-msgstr ""
+msgstr "mo"
 
 #. key: pricing.sections.monthly
 msgid "Monthly billing"
-msgstr ""
+msgstr "Monatliche Abrechnung"
 
 #. key: pricing.badges.popular-lc
-#, fuzzy
 msgid "popular"
-msgstr "Beliebt"
+msgstr "beliebt"
 
 #. key: pricing.sections.pro
 msgid "Pro"
@@ -67,7 +69,7 @@ msgstr "Pro"
 
 #. key: pricing.tiers.starter
 msgid "Starter"
-msgstr ""
+msgstr "Starter"
 
 #. key: pricing.faq.cost-a
 msgid ""
@@ -78,38 +80,45 @@ msgid ""
 "and professional use makes the subscription more expensive than mass-market "
 "AI tools."
 msgstr ""
+"Im Gegensatz zu generischen KI-Chatbots wurde mentalhealthGPT speziell für "
+"Fachleute und Einrichtungen im Bereich der psychischen Gesundheit "
+"entwickelt. Wir investieren in Datenschutz, sicheres Hosting in der Schweiz/"
+"EU und spezialisierte Modelle für Therapie, Supervision, Diagnostik und "
+"Dokumentation. Dieser Fokus auf Qualität, Vertrauen und professionelle "
+"Nutzung macht das Abonnement teurer als KI-Tools für den Massenmarkt."
 
 #. key: pricing.actions.upgrade
 msgid "Upgrade"
-msgstr ""
+msgstr "Upgrade"
 
 #. key: pricing.sections.hero-subtitle-users
-#, fuzzy
 msgid "User Plans for every needs"
-msgstr "Preise für jedes Budget"
+msgstr "Benutzerpläne für jeden Bedarf"
 
 #. key: pricing.badges.via-email-lc
-#, fuzzy
 msgid "via email"
-msgstr "Per E-Mail"
+msgstr "per E-Mail"
 
 #. key: pricing.faq.refund-a
 msgid ""
 "We don’t issue refunds for early cancellations. However, you will keep full "
 "access to all features until the end of your current subscription period."
 msgstr ""
+"Wir gewähren keine Rückerstattungen für vorzeitige Kündigungen. Sie behalten "
+"jedoch bis zum Ende Ihres aktuellen Abonnementzeitraums uneingeschränkten "
+"Zugriff auf alle Funktionen."
 
 #. key: pricing.faq.cost-q
 msgid "Why does mentalhealthGPT cost more than other chat AIs?"
-msgstr ""
+msgstr "Warum kostet mentalhealthGPT mehr als andere Chat-KIs?"
 
 #. key: pricing.sections.year-lc
 msgid "year"
-msgstr ""
+msgstr "Jahr"
 
 #. key: pricing.sections.yearly
 msgid "Yearly billing"
-msgstr ""
+msgstr "Jährliche Abrechnung"
 
 #. key: pricing.faq.try-plan-a
 msgid ""
@@ -118,6 +127,11 @@ msgid ""
 "and billing starts only after day 7. You can switch plans or cancel anytime "
 "from Settings."
 msgstr ""
+"Ja – die Tarife „Starter“ und „Pro“ beinhalten eine kostenlose 7-tägige "
+"Testphase. Wenn Sie während der Testphase kündigen, fallen keine Kosten an. "
+"Der Zugriff entspricht dem ausgewählten Tarif, und die Abrechnung beginnt "
+"erst nach Ablauf von 7 Tagen. Sie können jederzeit in den Einstellungen den "
+"Tarif wechseln oder kündigen."
 
 #~ msgid "AI chat made affordable"
 #~ msgstr "KI-Chat zu erschwinglichen Preisen"

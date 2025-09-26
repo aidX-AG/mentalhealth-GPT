@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 13:41+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-09-26 12:19+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -29,7 +29,7 @@ msgstr "Populaire"
 
 #. key: checkout.fragments.price-399
 msgid "$399"
-msgstr "399 $"
+msgstr "399 CHF"
 
 #. key: checkout.sections.monthly-plan
 msgid "Monthly Plan"
@@ -73,11 +73,11 @@ msgstr "CVC"
 
 #. key: checkout.body.security-note
 msgid "Secured form with UI8 Banking"
-msgstr "Formulaire sécurisé avec UI8 Banking"
+msgstr "Formulaire sécurisé avec aidX Banking"
 
 #. key: checkout.sections.billed-now
 msgid "Billed now: $399"
-msgstr "Facturé maintenant : 399 $"
+msgstr "Facturé maintenant : 399 CHF"
 
 #. key: checkout.sections.apply-promo-code
 msgid "Apply promo code"
@@ -89,11 +89,11 @@ msgid ""
 "charged $399 every month, unless you cancel."
 msgstr ""
 "En cliquant sur « Démarrer le plan Brainwave Enterprise », vous acceptez "
-"d'être facturé 399 $ chaque mois, sauf si vous annulez."
+"d'être facturé 399 CHF chaque mois, sauf si vous annulez."
 
 #. key: checkout.sections.cta-start-plan
 msgid "Start Brainwave Enterprise plan"
-msgstr "Commencer le plan Entreprise Brainwave"
+msgstr "Commencer le plan Institution"
 
 #. key: checkout.sections.pay
 msgid "Pay"
@@ -101,7 +101,7 @@ msgstr "Payer"
 
 #. key: checkout.sections.currency-symbol
 msgid "$"
-msgstr "$"
+msgstr "CHF"
 
 #. key: checkout.sections.per-month
 msgid "/month"
