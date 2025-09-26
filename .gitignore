@@ -16,3 +16,4 @@ tsconfig.tsbuildinfo
 locales/*.json
 locales/*.json
 .env.local
+*~
