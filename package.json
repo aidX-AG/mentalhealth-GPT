@@ -14,7 +14,7 @@
     "i18n:po:code": "ts-node --compiler-options '{\"module\":\"commonjs\"}' scripts/extract-po-from-code.ts",
     "i18n:po:json": "node scripts/json-to-pot.cjs",
     "i18n:po:all": "npm run i18n:po:code && npm run i18n:po:json",
-    "i18n:po:namespaces": "node scripts/extract-po-namespaces.cjs"
+    "i18n:po:namespaces": "node scripts/extract-po-namespaces.cjs",
 
     "i18n:merge:core": "msgmerge --update --backup=off locales/de_CH/core.po locales/pot/core.pot && msgmerge --update --backup=off locales/fr_CH/core.po locales/pot/core.pot",
     "i18n:merge:namespaces": "bash scripts/merge-pot-to-po.sh",

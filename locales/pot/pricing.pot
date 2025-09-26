@@ -42,8 +42,8 @@ msgstr ""
 msgid "Institution"
 msgstr ""
 
-#. key: pricing.sections.mo
-msgid "mo"
+#. key: pricing.misc.month-lc
+msgid "month"
 msgstr ""
 
 #. key: pricing.sections.monthly

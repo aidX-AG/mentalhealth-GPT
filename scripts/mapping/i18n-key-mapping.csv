@@ -13,27 +13,36 @@ audio-transcription;audio-transcription.sections.under-development;is currently 
 audio-transcription;audio-transcription.sections.coming-soon;It will soon provide accurate transcription and note-taking support for clinical documentation.
 audio-transcription;audio-transcription.chat.title;Audio Transcription & Notes
 
-checkout;checkout.sections.hero-title;AI chat made affordable
+checkout;checkout.sections.hero-title;Mental Health AI chat made affordable
 checkout;checkout.body.hero-subtitle;Pricing Plans for every budget - Unlock the power of AI
-checkout;checkout.sections.enterprise;Enterprise
+checkout;checkout.sections.enterprise;Institution
 checkout;checkout.sections.popular;Popular
-checkout;checkout.fragments.price-399;CHF 399
 checkout;checkout.sections.monthly-plan;Monthly Plan
+checkout;checkout.features.customizable-models;Customizable AI models
+checkout;checkout.features.advanced-team;Advanced team management
+checkout;checkout.features.institution-support;Institution-level support
+checkout;checkout.features.customizable-institution-models;Customizable institutional AI models
+checkout;checkout.features.dedicated-account-manager;Dedicated account manager
 checkout;checkout.sections.plan;Plan
 checkout;checkout.sections.change-currency;Change currency
-checkout;checkout.sections.usd;USD
+checkout;checkout.misc.monthly-lc;monthly
+checkout;checkout.misc.yearly-lc;yearly
+checkout;checkout.badges.save;Save
+checkout;checkout.sections.pay;Pay
+checkout;checkout.sections.per-month;/month
 checkout;checkout.sections.billing-email;Billing email
-checkout;checkout.sections.card-details;Card details
 checkout;checkout.form.email;Email address
+checkout;checkout.sections.card-details;Card details
 checkout;checkout.form.card-number;Card number
 checkout;checkout.form.mm-yy;MM / YY
 checkout;checkout.form.cvc;CVC
-checkout;checkout.form.expiration;Expiration date
-checkout;checkout.form.start-plan;Start Institution plan
 checkout;checkout.notes.secured;Secured form with CH Banking
-checkout;checkout.notes.billed-now;Billed now
+checkout;checkout.notes.billed-now;Billed now:
 checkout;checkout.actions.apply-promo;Apply promo code
-checkout;checkout.terms.accept;By clicking "Start Institution plan", you agree to be charged CHF399 every month, unless you cancel.
+checkout;checkout.terms.accept;"By clicking ""Start Institution plan"", you agree to be charged CHF 399 every month, unless you cancel."
+checkout;checkout.form.start-plan;Start Institution Plan
+
+pricing;pricing.misc.month-lc;month
 
 documentation-reports;documentation-reports.chat.title;Documentation & Reporting
 

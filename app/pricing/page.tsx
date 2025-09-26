@@ -30,7 +30,7 @@ export default function Page() {
       // Package:
       popularLabel={t("popular")}
       perYearLabel={t("year")}
-      perMonthLabel={t("mo")}
+      perMonthLabel={t("month")}
       currentPlanLabel={t("Current plan")}
       upgradeLabel={t("Upgrade")}
       // Features:

@@ -3,12 +3,13 @@
  * scripts/extract-po-namespaces.cjs
  *
  * Extrahiert i18n-Strings aus Code und schreibt POT-Dateien pro Namespace.
- * - Namespace wird aus dem Pfad erkannt: app/<ns>/page.tsx → <ns>.pot
- * - CSV (Semikolon): scripts/mapping/i18n-key-mapping.csv
+ * - Namespace aus Pfad: app/<ns>/page.tsx → <ns>.pot (nur die definierten 16 Namespaces)
+ * - CSV (Semikolon) unter scripts/mapping/i18n-key-mapping.csv
  *     Header: namespace;newKeySuggestion;text
- *     Wir matchen NUR per `text` → `newKeySuggestion` (oldkey ignoriert).
- * - Fallback, wenn CSV nicht trifft: reverse lookup aus locales/en/<ns>.json
- * - Letzter Fallback: stabiler Auto-Key (<ns>.auto.<sha1>)
+ *     Matching NUR über 'text' → 'newKeySuggestion'.
+ *     Semikolon bleibt, Anführungszeichen mit "" werden korrekt geparst.
+ * - Reverse-Lookup: locales/en/<ns>.json (val = Englischtext) → key
+ * - Fallback: stabiler Auto-Key (<ns>.auto.<sha1>)
  */
 
 const fs = require("fs");
@@ -21,7 +22,7 @@ const POT_DIR = path.join(LOCALES_DIR, "pot");
 const EN_DIR = path.join(LOCALES_DIR, "en");
 const CSV_PATH = path.join(ROOT, "scripts", "mapping", "i18n-key-mapping.csv");
 
-// Die 16 Namespaces
+// Die 16 Namespaces (nur für page.tsx dieser Ordner!)
 const NAMESPACES = new Set([
   "applications",
   "audio-transcription",
@@ -66,16 +67,16 @@ function detectNamespaceByPath(filePath) {
   return NAMESPACES.has(ns) ? ns : "core";
 }
 
-// Robustes Normalisieren für CSV/Code-Matching (keine Änderung am msgid!)
+// Normalisierung NUR fürs Matching (msgid selbst bleibt original!)
 function normalizeText(s) {
   if (!s) return "";
   return String(s)
-    .replace(/\r\n/g, "\n")               // CRLF → LF
-    .replace(/\u00A0/g, " ")              // NBSP → Space
-    .replace(/[ \t]+/g, " ")              // mehrfach-Whitespace → 1 Space
-    .replace(/[\u2018\u2019]/g, "'")      // ’‘ → '
-    .replace(/[\u201C\u201D]/g, '"')      // “ ” → "
-    .replace(/\u2013|\u2014/g, "-")       // – — → -
+    .replace(/\r\n/g, "\n")          // CRLF → LF
+    .replace(/\u00A0/g, " ")         // NBSP → Space
+    .replace(/[ \t]+/g, " ")         // Mehrfach-WS → 1 Space
+    .replace(/[\u2018\u2019]/g, "'") // ’‘ → '
+    .replace(/[\u201C\u201D]/g, '"') // “ ” → "
+    .replace(/\u2013|\u2014/g, "-")  // – — → -
     .trim();
 }
 
@@ -92,7 +93,7 @@ function extractTextsFromCode(src) {
     let m;
     while ((m = re.exec(src))) {
       const raw = m[1] ?? "";
-      // nur minimale Unescapes; msgid bleibt ORIGINAL (ohne Normalisierung!)
+      // msgid bleibt ORIGINAL (nur minimal un-escapen)
       const text = raw.replace(/\\"/g, '"').replace(/\\'/g, "'").trim();
       if (text) results.push(text);
     }
@@ -101,7 +102,7 @@ function extractTextsFromCode(src) {
 }
 
 function loadReverseMapForNamespace(ns) {
-  // locales/en/<ns>.json → { key: "English" } ⇒ reverse: normalized("English") -> key
+  // locales/en/<ns>.json → { key: "English" } ⇒ reverse: normalized("English")->key
   const map = new Map();
   const p = path.join(EN_DIR, `${ns}.json`);
   const json = readJson(p);
@@ -114,14 +115,20 @@ function loadReverseMapForNamespace(ns) {
   return map;
 }
 
+// Semikolon-CSV mit Quotes; "" innerhalb von "" → "
 function splitCsvLineSemicolon(line) {
-  // simpler Semikolon-Parser mit Quotes-Unterstützung
   const out = [];
   let cur = "";
   let inQ = false;
   for (let i = 0; i < line.length; i++) {
     const ch = line[i];
-    if (ch === '"' && line[i - 1] !== "\\") {
+    if (ch === '"') {
+      // Doppeltes "" -> als ein " in den aktuellen Token
+      if (inQ && line[i + 1] === '"') {
+        cur += '"';
+        i++;
+        continue;
+      }
       inQ = !inQ;
       continue;
     }
@@ -133,15 +140,15 @@ function splitCsvLineSemicolon(line) {
     cur += ch;
   }
   out.push(cur);
-  return out.map((s) => s.replace(/^"(.*)"$/, "$1"));
+  return out;
 }
 
 function loadCsvOverrides() {
   // Map<namespace, Map<normalizedText, newKeySuggestion>>
   const perNs = new Map();
   if (!fs.existsSync(CSV_PATH)) return perNs;
-  const raw = fs.readFileSync(CSV_PATH, "utf8").replace(/^\uFEFF/, ""); // BOM weg
 
+  const raw = fs.readFileSync(CSV_PATH, "utf8").replace(/^\uFEFF/, ""); // BOM weg
   const lines = raw.split(/\r?\n/).filter((l) => l.trim().length > 0);
   if (lines.length < 2) return perNs;
 
@@ -211,6 +218,8 @@ function escapePo(s) {
 
     const src = fs.readFileSync(file, "utf8");
     const texts = extractTextsFromCode(src);
+    if (!texts.length) continue;
+
     if (!perNs.has(ns)) perNs.set(ns, new Map());
     const bucket = perNs.get(ns);
 
@@ -229,7 +238,7 @@ function escapePo(s) {
         continue;
       }
 
-      // 2) Reverse-Map?
+      // 2) Reverse-Map (en/<ns>.json)?
       key = reverse.get(norm);
       if (key) {
         bucket.set(msgid, key);

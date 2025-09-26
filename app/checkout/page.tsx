@@ -11,7 +11,7 @@ export default function Page() {
 
       tierName={t("Institution")}
       popularLabel={t("Popular")}
-      priceAmount="CHF399"
+      priceAmount="CHF 399"
       pricePeriod={t("Monthly Plan")}
       features={[
         t("Customizable AI models"),
@@ -38,9 +38,9 @@ export default function Page() {
 
       secureNote={t("Secured form with CH Banking")}
       billedNowLabel={t("Billed now: ")}
-      billedNowAmount="CHF399"
+      billedNowAmount="CHF 399"
       applyPromoLabel={t("Apply promo code")}
-      termsText={t('By clicking "Start Institution plan", you agree to be charged CHF399 every month, unless you cancel.')}
+      termsText={t('By clicking "Start Institution plan", you agree to be charged CHF 399 every month, unless you cancel.')}
       startPlanLabel={t("Start Institution Plan")}
     />
   );
