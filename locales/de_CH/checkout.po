@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 13:36+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-09-26 15:48+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/de_CH/>\n"
 "Language: de_CH\n"
@@ -21,7 +21,7 @@ msgstr "Preise für jedes Budget – Nutzen Sie die Leistungsfähigkeit der KI"
 
 #. key: checkout.sections.enterprise
 msgid "Enterprise"
-msgstr "Unternehmen"
+msgstr "Institution"
 
 #. key: checkout.sections.popular
 msgid "Popular"
@@ -29,7 +29,7 @@ msgstr "Beliebt"
 
 #. key: checkout.fragments.price-399
 msgid "$399"
-msgstr "399 Dollar"
+msgstr "399 CHF"
 
 #. key: checkout.sections.monthly-plan
 msgid "Monthly Plan"
@@ -73,11 +73,11 @@ msgstr "CVC"
 
 #. key: checkout.body.security-note
 msgid "Secured form with UI8 Banking"
-msgstr "Gesichertes Formular mit UI8 Banking"
+msgstr "Gesichertes Formular mit CH Banking"
 
 #. key: checkout.sections.billed-now
 msgid "Billed now: $399"
-msgstr "Jetzt in Rechnung gestellt: 399 $"
+msgstr "Jetzt in Rechnung gestellt: 399 CHF"
 
 #. key: checkout.sections.apply-promo-code
 msgid "Apply promo code"
@@ -88,13 +88,13 @@ msgid ""
 "By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
 "charged $399 every month, unless you cancel."
 msgstr ""
-"Durch Klicken auf „Brainwave Enterprise-Plan starten“ erklären Sie sich "
-"damit einverstanden, dass Ihnen monatlich 399 $ in Rechnung gestellt werden, "
+"Durch Klicken auf „Institutions-Plan starten“ erklären Sie sich damit "
+"einverstanden, dass Ihnen monatlich 399 CHF in Rechnung gestellt werden, "
 "sofern Sie nicht kündigen."
 
 #. key: checkout.sections.cta-start-plan
 msgid "Start Brainwave Enterprise plan"
-msgstr "Starten Sie den Brainwave Enterprise-Plan"
+msgstr "Starten Sie den aidX Enterprise-Plan"
 
 #. key: checkout.sections.pay
 msgid "Pay"
@@ -102,7 +102,7 @@ msgstr "Bezahlen"
 
 #. key: checkout.sections.currency-symbol
 msgid "$"
-msgstr "$"
+msgstr "CHF"
 
 #. key: checkout.sections.per-month
 msgid "/month"
