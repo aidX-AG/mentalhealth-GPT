@@ -28,7 +28,7 @@ export default function Page() {
       yearlyLabel={t("yearly")}
       saveLabel={t("Save")}
       payPrefix={t("Pay")}
-      perMonthSuffix={t("/month")}
+      perMonthSuffix={t(" / month")}
       billingEmailLabel={t("Billing email")}
       emailPlaceholder={t("Email address")}
       cardDetailsLabel={t("Card details")}
@@ -37,7 +37,7 @@ export default function Page() {
       cvcPlaceholder={t("CVC")}
 
       secureNote={t("Secured form with CH Banking")}
-      billedNowLabel={t("Billed now: ")}
+      billedNowLabel={t("Billed now ")}
       billedNowAmount="CHF 399"
       applyPromoLabel={t("Apply promo code")}
       termsText={t('By clicking "Start Institution plan", you agree to be charged CHF 399 every month, unless you cancel.')}
