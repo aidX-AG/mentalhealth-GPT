@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-26 15:48+0000\n"
+"PO-Revision-Date: 2025-09-27 12:49+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/de_CH/>\n"
@@ -1993,7 +1993,7 @@ msgstr "Sapiens"
 #: app/fr/checkout/page.tsx:29
 #: components/AudioPlayer/index.tsx:31
 msgid "Save"
-msgstr "Speichern"
+msgstr "sparen"
 
 #: components/Settings/EditProfile/index.tsx:42
 msgid "Save changes"
