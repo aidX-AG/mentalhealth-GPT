@@ -7,7 +7,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. key: checkout.sections.per-month
-msgid "/month"
+msgid "/ month"
 msgstr ""
 
 #. key: checkout.features.advanced-team
@@ -19,7 +19,7 @@ msgid "Apply promo code"
 msgstr ""
 
 #. key: checkout.notes.billed-now
-msgid "Billed now:"
+msgid "Billed now"
 msgstr ""
 
 #. key: checkout.sections.billing-email

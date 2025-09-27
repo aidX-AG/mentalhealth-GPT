@@ -29,7 +29,7 @@ checkout;checkout.misc.monthly-lc;monthly
 checkout;checkout.misc.yearly-lc;yearly
 checkout;checkout.badges.save;Save
 checkout;checkout.sections.pay;Pay
-checkout;checkout.sections.per-month;/month
+checkout;checkout.sections.per-month; / month
 checkout;checkout.sections.billing-email;Billing email
 checkout;checkout.form.email;Email address
 checkout;checkout.sections.card-details;Card details
@@ -37,7 +37,7 @@ checkout;checkout.form.card-number;Card number
 checkout;checkout.form.mm-yy;MM / YY
 checkout;checkout.form.cvc;CVC
 checkout;checkout.notes.secured;Secured form with CH Banking
-checkout;checkout.notes.billed-now;Billed now:
+checkout;checkout.notes.billed-now;Billed now
 checkout;checkout.actions.apply-promo;Apply promo code
 checkout;checkout.terms.accept;"By clicking ""Start Institution plan"", you agree to be charged CHF 399 every month, unless you cancel."
 checkout;checkout.form.start-plan;Start Institution Plan

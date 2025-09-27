@@ -80,6 +80,16 @@ function normalizeText(s) {
     .trim();
 }
 
+// Zusätzliche, TOLERANTE Varianten fürs Matching (z.B. "/ month" vs "/month" und "Billed now" vs "Billed now:")
+function matchingVariants(norm) {
+  const v = new Set([norm]);
+  // Slash-Spacing tolerant
+  v.add(norm.replace(/\s*\/\s*/g, "/"));
+  // Optionalen Doppelpunkt am Ende entfernen
+  v.add(norm.replace(/:\s*$/, ""));
+  return Array.from(v);
+}
+
 function extractTextsFromCode(src) {
   // findet t("…") / t('…') und _("…") / _('…')
   const results = [];
@@ -231,15 +241,22 @@ function escapePo(s) {
     for (const msgid of texts) {
       const norm = normalizeText(msgid);
 
-      // 1) CSV-Match?
-      let key = csvMap.get(norm);
+      // 1) CSV-Match (mit toleranten Varianten)
+      let key = null;
+      for (const v of matchingVariants(norm)) {
+        key = csvMap.get(v);
+        if (key) break;
+      }
       if (key) {
         bucket.set(msgid, key);
         continue;
       }
 
-      // 2) Reverse-Map (en/<ns>.json)?
-      key = reverse.get(norm);
+      // 2) Reverse-Map (en/<ns>.json) mit Varianten
+      for (const v of matchingVariants(norm)) {
+        key = reverse.get(v);
+        if (key) break;
+      }
       if (key) {
         bucket.set(msgid, key);
         continue;
