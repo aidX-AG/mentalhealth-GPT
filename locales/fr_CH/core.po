@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-26 12:19+0000\n"
+"PO-Revision-Date: 2025-09-27 12:49+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/fr_CH/>\n"
@@ -1996,7 +1996,7 @@ msgstr "Sapiens"
 #: app/fr/checkout/page.tsx:29
 #: components/AudioPlayer/index.tsx:31
 msgid "Save"
-msgstr "Enregistrer"
+msgstr "économiser"
 
 #: components/Settings/EditProfile/index.tsx:42
 msgid "Save changes"
@@ -2246,7 +2246,7 @@ msgstr "Commencez votre expérience spécialisée en IA"
 #: app/pricing/page.tsx:38
 #: mocks/price.tsx:6
 msgid "Starter"
-msgstr "Démarreur"
+msgstr "Starter"
 
 #: app/applications/page.tsx:11
 #: app/de/applications/page.tsx:11
