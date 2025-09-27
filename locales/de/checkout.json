@@ -20,6 +20,6 @@
   "checkout.body.billing-consent": "Durch Klicken auf „Institutions-Plan starten“ erklären Sie sich damit einverstanden, dass Ihnen monatlich 399 CHF in Rechnung gestellt werden, sofern Sie nicht kündigen.",
   "checkout.sections.cta-start-plan": "Starten Sie den aidX Enterprise-Plan",
   "checkout.sections.pay": "Bezahlen",
-  "checkout.sections.per-month": "/Monat",
-  "checkout.badges.save": "Speichern"
+  "checkout.sections.per-month": "/ Monat",
+  "checkout.badges.save": "sparen"
 }

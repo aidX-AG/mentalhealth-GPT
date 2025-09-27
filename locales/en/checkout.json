@@ -1,8 +1,8 @@
 {
-  "checkout.sections.per-month": "/month",
+  "checkout.sections.per-month": "/ month",
   "checkout.features.advanced-team": "Advanced team management",
   "checkout.actions.apply-promo": "Apply promo code",
-  "checkout.notes.billed-now": "Billed now:",
+  "checkout.notes.billed-now": "Billed now",
   "checkout.sections.billing-email": "Billing email",
   "checkout.terms.accept": "By clicking \"Start Institution plan\", you agree to be charged CHF 399 every month, unless you cancel.",
   "checkout.sections.card-details": "Card details",

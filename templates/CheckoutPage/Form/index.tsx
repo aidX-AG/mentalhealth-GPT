@@ -95,7 +95,7 @@ const Form = ({
 
       <div className="mb-3 border border-n-3 rounded-xl dark:border-n-5">
         <div className="p-5">
-          <div className="mb-3 base2 text-n-5">{billingEmailLabel}</div>
+          <div className="mb-3 base2 text-n-4">{billingEmailLabel}</div>
           <div className="relative">
             <Icon className="absolute top-0 left-0 pointer-events-none fill-n-4/50" name={t("email")} />
             <input className={`${styleInput} pl-11`} type="email" name={t("email")} placeholder={emailPlaceholder} value={email} onChange={(e: any) => setEmail(e.target.value)} required />
@@ -103,7 +103,7 @@ const Form = ({
         </div>
 
         <div className="p-5 border-t border-n-3 dark:border-n-5">
-          <div className="mb-3 base2 text-n-5">{cardDetailsLabel}</div>
+          <div className="mb-3 base2 text-n-4">{cardDetailsLabel}</div>
           <div className="flex md:flex-wrap">
             <div className="relative grow md:w-full md:mb-4">
               <Icon className="absolute top-0 left-0 pointer-events-none fill-n-4/50" name={t("credit-card")} />
