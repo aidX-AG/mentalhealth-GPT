@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-27 12:49+0000\n"
+"PO-Revision-Date: 2025-09-27 13:28+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/de_CH/>\n"
@@ -106,7 +106,7 @@ msgstr "CHF"
 
 #. key: checkout.sections.per-month
 msgid "/month"
-msgstr "/Monat"
+msgstr "/ Monat"
 
 #. key: checkout.badges.save
 msgid "Save"
