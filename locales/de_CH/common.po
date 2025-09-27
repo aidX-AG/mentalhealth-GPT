@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 14:37+0000\n"
+"PO-Revision-Date: 2025-09-27 12:49+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/common/de_CH/>\n"
@@ -118,7 +118,7 @@ msgstr "609 Zeichen"
 
 #. key: common.misc.save
 msgid "Save"
-msgstr "Speichern"
+msgstr "sparen"
 
 #. key: common.misc.time-021
 msgid "0:21"
