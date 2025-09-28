@@ -48,8 +48,9 @@ documentation-reports;documentation-reports.chat.title;Documentation & Reporting
 
 generation-socials-post;generation-socials-post.chat.title;Promotional content
 
-home;home.sections.brand;mentalhealthGPT
-home;home.sections.tagline;Expertise you trust. Privacy you control. Science that empowers.
+homepage;homepage.sections.brand;mentalhealthGPT
+homepage;homepage.sections.tagline;Expertise you trust. Privacy you control. Science that empowers.
+homepage;homepage.input.placeholder;Ask mentalhealthGPT anything
 
 pricing;pricing.sections.hero-title;AI chat made affordable
 pricing;pricing.sections.hero-subtitle;Pricing Plans for every budget

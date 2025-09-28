@@ -1,0 +1,19 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. key: homepage.input.placeholder
+msgid "Ask mentalhealthGPT anything"
+msgstr ""
+
+#. key: homepage.sections.tagline
+msgid "Expertise you trust. Privacy you control. Science that empowers."
+msgstr ""
+
+#. key: homepage.sections.brand
+msgid "mentalhealthGPT"
+msgstr ""
