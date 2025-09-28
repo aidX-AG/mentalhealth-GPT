@@ -13,16 +13,23 @@ type NavItem = {
 type Props = {
   heroTitle: string;
   heroSubtitle: string;
-  navigationItems: NavItem[]; // <- schon übersetzt vom Server
+  navigationItems: NavItem[];
+  inputPlaceholder?: string; // ⬅️ NUR DIESE ZEILE HINZUFÜGEN
 };
 
-const HomePage = ({ heroTitle, heroSubtitle, navigationItems }: Props) => {
+const HomePage = ({ 
+  heroTitle, 
+  heroSubtitle, 
+  navigationItems, 
+  inputPlaceholder // ⬅️ NUR DIESE ZEILE HINZUFÜGEN
+}: Props) => {
   return (
     <Layout>
       <Main
         heroTitle={heroTitle}
         heroSubtitle={heroSubtitle}
         items={navigationItems}
+        inputPlaceholder={inputPlaceholder} // ⬅️ NUR DIESE ZEILE HINZUFÜGEN
       />
     </Layout>
   );
