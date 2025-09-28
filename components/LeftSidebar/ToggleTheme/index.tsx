@@ -1,8 +1,8 @@
 import { useColorMode } from "@chakra-ui/color-mode";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type ToggleThemeProps = {
   visible?: boolean;
 };

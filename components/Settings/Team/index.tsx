@@ -1,7 +1,7 @@
 import Member from "./Member";
 import { members } from "@/mocks/members";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type TeamProps = {};
 const Team = ({}: TeamProps) => <>
         <div className="flex items-center mb-8 md:mb-6">

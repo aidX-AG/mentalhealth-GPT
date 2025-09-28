@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Field from "@/components/Field";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type PasswordProps = {};
 const Password = ({}: PasswordProps) => {
   const [oldPassword, setOldPassword] = useState<string>("");

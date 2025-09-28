@@ -6,9 +6,9 @@ import Field from "@/components/Field";
 import MultiSelect from "@/components/MultiSelect";
 import Notify from "@/components/Notify";
 import { people } from "@/mocks/people";
-import { getT } from "@/lib/i18n-runtime";
+import { _ } from "@/lib/i18n/_";
 
-const t = getT();
+const t = _;
 
 type ModalShareChatProps = {
   visible: boolean;

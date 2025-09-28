@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-09-23 14:01+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/supervision-training/de_CH/>\n"
+"Language: de_CH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: supervision-training.sections.banner-prefix
+msgid "🚧 The AI model for"
+msgstr "🚧 Das KI-Modell für"
+
+#. key: supervision-training.chat.title
+msgid "Supervision & Training"
+msgstr "Aufsicht & Training"
+
+#. key: supervision-training.sections.under-development
+msgid "is currently being developed with specialized training data."
+msgstr "wird derzeit mit speziellen Trainingsdaten entwickelt."
+
+#. key: supervision-training.sections.coming-soon
+msgid ""
+"It will be available soon to support expert feedback and mentoring workflows."
+msgstr ""
+"Es wird in Kürze verfügbar sein, um Expertenfeedback und Mentoring-Workflows "
+"zu unterstützen."

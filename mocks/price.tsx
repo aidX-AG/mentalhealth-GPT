@@ -1,5 +1,5 @@
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 
 export const price = [{
   id: "0",
@@ -9,7 +9,7 @@ export const price = [{
   description: t("Start your spezialized AI experience"),
   priceMonth: 29,
   priceYear: 290,
-  priceDetails: t("Per month, per user"),
+  priceDetails: t("Per user"),
   details: [
     t("90 days history"),
     t("Up to 100 messages/mo"),
@@ -23,7 +23,7 @@ export const price = [{
   description: t("Advanced mental health AI models"),
   priceMonth: 89,
   priceYear: 990,
-  priceDetails: t("Per month, per user"),
+  priceDetails: t("Per user"),
   details: [t("Email support"), t("Unlimited messages"), t("Access all AI capabilities")]
 }, {
   id: "2",
@@ -34,7 +34,7 @@ export const price = [{
   description: t("For teams and clinics"),
   priceMonth: 390,
   priceYear: 3990,
-  priceDetails: t("Per month, per team members"),
+  priceDetails: t("Per team members"),
   details: [t("Customizable AI models"), t("Advanced team management"), t("Institution-level support")]
 }];
 

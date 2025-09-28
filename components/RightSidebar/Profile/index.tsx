@@ -5,8 +5,8 @@ import Icon from "@/components/Icon";
 import Modal from "@/components/Modal";
 import Settings from "@/components/Settings";
 import { settings } from "@/constants/settings";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type ProfileProps = {};
 const Profile = ({}: ProfileProps) => {
   const [visibleSettings, setVisibleSettings] = useState<boolean>(false);

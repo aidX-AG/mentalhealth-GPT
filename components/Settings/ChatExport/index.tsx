@@ -2,8 +2,8 @@ import { useState } from "react";
 import Switch from "@/components/Switch";
 import Icon from "@/components/Icon";
 import Select from "@/components/Select";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 const typesFile = [{
   id: "0",
   title: t("PDF")

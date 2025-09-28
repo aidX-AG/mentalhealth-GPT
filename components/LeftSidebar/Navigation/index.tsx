@@ -14,7 +14,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link"; // [ALT] bleibt importiert (kein breaking change)
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
-import { useT } from "@transifex/react";
+import { _ } from "@/lib/i18n/_";
 
 // [i18n helper]
 import LocaleLink from "@/components/LocaleLink";
@@ -35,7 +35,7 @@ type NavigationProps = {
 
 const Navigation = ({ visible, items }: NavigationProps) => {
   const pathname = usePathname();
-  const t = useT();
+  const t = _;
 
   // aktuelle Locale aus <html lang>
   const locale = getClientLocale(); // "de" | "fr" | "en"

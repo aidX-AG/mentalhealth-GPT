@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-09-23 14:03+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/therapy-support/de_CH/>\n"
+"Language: de_CH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: therapy-support.sections.greeting
+msgid "🧠 Hello! I'm your Therapy Support AI."
+msgstr "🧠 Hallo! Ich bin Ihre Therapie-Unterstützungs-KI."
+
+#. key: therapy-support.sections.instructions
+msgid ""
+"Feel free to describe your case, the specific symptoms, or ask for "
+"therapeutic strategies."
+msgstr ""
+"Beschreiben Sie gerne Ihren Fall, die spezifischen Symptome oder fragen Sie "
+"nach therapeutischen Strategien."
+
+#. key: therapy-support.chat.title
+msgid "Therapy Support AI"
+msgstr "Therapieunterstützende KI"

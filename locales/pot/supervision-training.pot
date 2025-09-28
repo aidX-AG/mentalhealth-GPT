@@ -1,0 +1,25 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. key: supervision-training.sections.banner-prefix
+msgid "🚧 The AI model for"
+msgstr ""
+
+#. key: supervision-training.chat.title
+msgid "Supervision & Training"
+msgstr ""
+
+#. key: supervision-training.sections.under-development
+msgid "is currently being developed with specialized training data."
+msgstr ""
+
+#. key: supervision-training.sections.coming-soon
+msgid ""
+"It will be available soon to support expert feedback and mentoring "
+"workflows."
+msgstr ""

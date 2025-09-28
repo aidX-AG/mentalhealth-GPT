@@ -1,6 +1,6 @@
 import Item from "./Item";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 const items = [{
   id: "0",
   number: 28,

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Switch from "@/components/Switch";
 import Checkbox from "@/components/Checkbox";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type NotificationsProps = {};
 const Notifications = ({}: NotificationsProps) => {
   const [notifications, setNotifications] = useState<boolean>(true);

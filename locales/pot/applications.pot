@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. key: applications.sections.title
+msgid "Applications"
+msgstr ""
+
+#. key: applications.body.browse-install-apps
+msgid "Browse and install apps to simplify your life with mentalhealthGPT"
+msgstr ""
+
+#. key: applications.sections.suggested-apps
+msgid "Suggested apps"
+msgstr ""
+
+#. key: applications.form.search-placeholder
+msgid "Search by app name or category"
+msgstr ""

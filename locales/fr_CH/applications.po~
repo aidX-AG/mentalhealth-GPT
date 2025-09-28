@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-09-23 14:37+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/applications/fr_CH/>\n"
+"Language: fr_CH\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+msgid "Applications"
+msgstr "Applications"
+
+msgid "Browse and install apps to simplify your life with mentalhealthGPT"
+msgstr ""
+"Parcourez et installez des applications pour vous simplifier la vie avec "
+"mentalhealthGPT"
+
+msgid "Suggested apps"
+msgstr "Applications suggérées"
+
+msgid "Search by app name or category"
+msgstr "Rechercher par nom d'application ou catégorie"

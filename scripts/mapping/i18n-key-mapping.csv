@@ -1,0 +1,110 @@
+namespace;newKeySuggestion;text
+applications;applications.sections.title;Applications
+applications;applications.body.browse-install-apps;Browse and install apps to simplify your life with mentalhealthGPT
+applications;applications.sections.suggested-apps;Suggested apps
+applications;applications.form.search-placeholder;Search by app name or category
+
+audio-transcription;audio-transcription.chat.greeting;Hello! How can I assist you with audio transcription today?
+audio-transcription;audio-transcription.text.capability;Our AI can securely transcribe audio recordings from therapy sessions
+audio-transcription;audio-transcription.text.upload-instructions;Simply upload a recorded session. All patient information remains encrypted and private
+audio-transcription;audio-transcription.sections.banner-prefix;🚧 The AI model for
+audio-transcription;audio-transcription.sections.title;Audio Transcription & Notes
+audio-transcription;audio-transcription.sections.under-development;is currently under development.
+audio-transcription;audio-transcription.sections.coming-soon;It will soon provide accurate transcription and note-taking support for clinical documentation.
+audio-transcription;audio-transcription.chat.title;Audio Transcription & Notes
+
+checkout;checkout.sections.hero-title;Mental Health AI chat made affordable
+checkout;checkout.body.hero-subtitle;Pricing Plans for every budget - Unlock the power of AI
+checkout;checkout.sections.enterprise;Institution
+checkout;checkout.sections.popular;Popular
+checkout;checkout.sections.monthly-plan;Monthly Plan
+checkout;checkout.features.customizable-models;Customizable AI models
+checkout;checkout.features.advanced-team;Advanced team management
+checkout;checkout.features.institution-support;Institution-level support
+checkout;checkout.features.customizable-institution-models;Customizable institutional AI models
+checkout;checkout.features.dedicated-account-manager;Dedicated account manager
+checkout;checkout.sections.plan;Plan
+checkout;checkout.sections.change-currency;Change currency
+checkout;checkout.misc.monthly-lc;monthly
+checkout;checkout.misc.yearly-lc;yearly
+checkout;checkout.badges.save;Save
+checkout;checkout.sections.pay;Pay
+checkout;checkout.sections.per-month; / month
+checkout;checkout.sections.billing-email;Billing email
+checkout;checkout.form.email;Email address
+checkout;checkout.sections.card-details;Card details
+checkout;checkout.form.card-number;Card number
+checkout;checkout.form.mm-yy;MM / YY
+checkout;checkout.form.cvc;CVC
+checkout;checkout.notes.secured;Secured form with CH Banking
+checkout;checkout.notes.billed-now;Billed now
+checkout;checkout.actions.apply-promo;Apply promo code
+checkout;checkout.terms.accept;"By clicking ""Start Institution plan"", you agree to be charged CHF 399 every month, unless you cancel."
+checkout;checkout.form.start-plan;Start Institution Plan
+
+pricing;pricing.misc.month-lc;month
+
+documentation-reports;documentation-reports.chat.title;Documentation & Reporting
+
+generation-socials-post;generation-socials-post.chat.title;Promotional content
+
+home;home.sections.brand;mentalhealthGPT
+home;home.sections.tagline;Expertise you trust. Privacy you control. Science that empowers.
+
+pricing;pricing.sections.hero-title;AI chat made affordable
+pricing;pricing.sections.hero-subtitle;Pricing Plans for every budget
+pricing;pricing.sections.choose-plan;Choose plan
+pricing;pricing.sections.faq;Frequently asked questions
+pricing;pricing.sections.core-features;Core features
+pricing;pricing.sections.free;Free
+pricing;pricing.sections.pro;Pro
+pricing;pricing.sections.enterprise;Enterprise
+pricing;pricing.badges.via-email;Via email
+pricing;pricing.badges.chat-247;Chat 24/7
+pricing;pricing.badges.popular;Popular
+pricing;pricing.sections.currency-symbol;$
+pricing;pricing.sections.slash;/
+pricing;pricing.faq.try-plan-q;Can I try mentalhealthGPT before committing to a paid plan?
+pricing;pricing.faq.try-plan-a;Yes — the Starter and Pro plans include a 7-day free trial. You won’t be charged if you cancel during the trial. Access matches the selected plan, and billing starts only after day 7. You can switch plans or cancel anytime from Settings.
+pricing;pricing.faq.refund-q;Can I get a refund if I cancel my yearly plan early?
+pricing;pricing.faq.refund-a;We don’t issue refunds for early cancellations. However, you will keep full access to all features until the end of your current subscription period.
+pricing;pricing.faq.cost-q;Why does mentalhealthGPT cost more than other chat AIs?
+pricing;pricing.faq.cost-a;Unlike generic AI chatbots, mentalhealthGPT is designed specifically for mental health professionals and institutions. We invest in data protection, secure hosting in Switzerland/EU, and specialized models for therapy, supervision, diagnostics, and documentation. This focus on quality, trust, and professional use makes the subscription more expensive than mass-market AI tools.
+pricing;pricing.sections.hero-title-mental;AI chat built for mental health
+pricing;pricing.sections.hero-subtitle-users;User Plans for every needs
+pricing;pricing.sections.yearly;Yearly billing
+pricing;pricing.sections.monthly;Monthly billing
+pricing;pricing.badges.popular-lc;popular
+pricing;pricing.sections.year-lc;year
+pricing;pricing.sections.mo;mo
+pricing;pricing.sections.current-plan;Current plan
+pricing;pricing.actions.upgrade;Upgrade
+pricing;pricing.tiers.starter;Starter
+pricing;pricing.tiers.institution;Institution
+pricing;pricing.badges.via-email-lc;via email
+
+sign-in;sign-in.misc.forgot-password;Forgot password?
+sign-in;sign-in.misc.sign-in-with-brainwave;Sign in with Brainwave
+sign-in;sign-in.place.email;Email address
+sign-in;sign-in.place.password;Password
+sign-in;sign-in.actions.sign-in;Sign in
+sign-in;sign-in.actions.sign-up;Sign up
+
+supervision-training;supervision-training.sections.title;Supervision & Training
+supervision-training;supervision-training.sections.description;Train AI models with supervision from senior clinicians.
+
+thanks;thanks.sections.title;Thank you
+thanks;thanks.sections.subtitle;Your submission has been received.
+
+therapy-support;therapy-support.sections.title;Therapy Support
+therapy-support;therapy-support.sections.subtitle;AI tools to support therapy planning and reflection.
+
+updates-and-faq;updates-and-faq.sections.title;Updates & FAQ
+updates-and-faq;updates-and-faq.sections.subtitle;Features, fixes & improvements.
+updates-and-faq;updates-and-faq.sections.updates;Updates
+updates-and-faq;updates-and-faq.sections.faq;FAQ
+updates-and-faq;updates-and-faq.actions.ask-ai;Ask mentalhealthGPT
+updates-and-faq;updates-and-faq.actions.load-more;Load more
+
+video-analysis;video-analysis.sections.title;Video Analysis
+video-analysis;video-analysis.sections.subtitle;AI-powered analysis of recorded sessions.

@@ -2,8 +2,8 @@ import { useState } from "react";
 import Icon from "@/components/Icon";
 import ModalShareChat from "@/components/ModalShareChat";
 import Actions from "./Actions";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type ChatProps = {
   title: string;
   children: React.ReactNode;

@@ -23,8 +23,8 @@ import ChatEmpty from "./ChatEmpty";
 import { notifications } from "@/mocks/notifications";
 import { chatHistory } from "@/mocks/chatHistory";
 
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 
 // [NEU] LocaleLink für Buttons/Links
 import LocaleLink from "@/components/LocaleLink"; // bleibt

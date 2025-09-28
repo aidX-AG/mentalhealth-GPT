@@ -4,8 +4,8 @@ import { srcery } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type CodeType = {
   id: string;
   title: string;

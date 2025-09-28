@@ -6,18 +6,18 @@ export default function Page() {
 
   return (
     <PageView
-      heroTitle={t("AI chat made affordable")}
+      heroTitle={t("Mental Health AI chat made affordable")}
       heroSubtitle={t("Pricing Plans for every budget - Unlock the power of AI")}
 
       tierName={t("Institution")}
       popularLabel={t("Popular")}
-      priceAmount="CHF399"
+      priceAmount="CHF 399"
       pricePeriod={t("Monthly Plan")}
       features={[
         t("Customizable AI models"),
         t("Advanced team management"),
         t("Institution-level support"),
-        t("Integration with CRMs"),
+        t("Customizable institutional AI models"),
         t("Dedicated account manager"),
       ]}
 
@@ -28,7 +28,7 @@ export default function Page() {
       yearlyLabel={t("yearly")}
       saveLabel={t("Save")}
       payPrefix={t("Pay")}
-      perMonthSuffix={t("/month")}
+      perMonthSuffix={t(" / month")}
       billingEmailLabel={t("Billing email")}
       emailPlaceholder={t("Email address")}
       cardDetailsLabel={t("Card details")}
@@ -37,11 +37,11 @@ export default function Page() {
       cvcPlaceholder={t("CVC")}
 
       secureNote={t("Secured form with CH Banking")}
-      billedNowLabel={t("Billed now")}
-      billedNowAmount="CHF399"
+      billedNowLabel={t("Billed now ")}
+      billedNowAmount="CHF 399"
       applyPromoLabel={t("Apply promo code")}
-      termsText={t('By clicking "Start Institution plan", you agree to be charged CHF399 every month, unless you cancel.')}
-      startPlanLabel={t("Start Institution plan")}
+      termsText={t('By clicking "Start Institution plan", you agree to be charged CHF 399 every month, unless you cancel.')}
+      startPlanLabel={t("Start Institution Plan")}
     />
   );
 }

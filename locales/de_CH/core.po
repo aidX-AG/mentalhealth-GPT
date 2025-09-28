@@ -1,0 +1,2822 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-09-27 12:49+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/core/de_CH/>\n"
+"Language: de_CH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#: app/de/diagnosis-support/page.tsx:14
+#: app/diagnosis-support/page.tsx:14
+#: app/fr/diagnosis-support/page.tsx:14
+msgid " is currently under development. It will gradually become available as we integrate specialized models to support mental health diagnostics."
+msgstr ""
+" befindet sich derzeit in der Entwicklung. Es wird nach und nach verfügbar "
+"sein, sobald wir spezielle Modelle zur Unterstützung der psychischen "
+"Gesundheitsdiagnostik integrieren."
+
+#: app/fr/therapy-support/page.tsx:15
+#: app/therapy-support/page.tsx:14
+msgid " is currently under development. It will soon be available with specialized models for therapy planning, reflection, and evidence‑based suggestions."
+msgstr ""
+" befindet sich derzeit in der Entwicklung. Es wird bald mit speziellen "
+"Modellen für die Therapieplanung, Reflexion und evidenzbasierte Vorschläge "
+"verfügbar sein."
+
+#: app/de/therapy-support/page.tsx:14
+msgid " is currently under development. It will soon become available as we integrate specialized models to support therapy planning, reflection, and evidence-based suggestions."
+msgstr ""
+" befindet sich derzeit in der Entwicklung. Es wird bald verfügbar sein, "
+"sobald wir spezielle Modelle zur Unterstützung der Therapieplanung, "
+"Reflexion und evidenzbasierten Vorschläge integriert haben."
+
+#: app/audio-transcription/page.tsx:17
+#: app/de/audio-transcription/page.tsx:17
+#: app/fr/audio-transcription/page.tsx:17
+msgid " is currently under development. It will soon provide accurate transcription and note-taking support for clinical documentation."
+msgstr ""
+" befindet sich derzeit in der Entwicklung. Es wird in Kürze eine genaue "
+"Transkription und Unterstützung beim Erstellen von Notizen für die klinische "
+"Dokumentation bieten."
+
+#: templates/CheckoutPage/Form/Foot/index.tsx:29
+msgid ":"
+msgstr ":"
+
+#: components/ScheduleResult/index.tsx:7
+#: templates/SignInPage/Form/CreateAccount/index.tsx:44
+msgid "."
+msgstr "."
+
+#: constants/export.tsx:36
+msgid ".MP3"
+msgstr ".MP3"
+
+#: constants/export.tsx:40
+msgid ".WAV"
+msgstr ".WAV"
+
+#: components/Settings/Team/Member/index.tsx:23
+msgid "@"
+msgstr "@"
+
+#: app/checkout/page.tsx:31
+#: app/de/checkout/page.tsx:31
+#: app/fr/checkout/page.tsx:31
+msgid "/month"
+msgstr "/Monat"
+
+#: components/Feedback/Assessment/index.tsx:34
+#: components/SocialsPost/Post/index.tsx:22
+msgid "#"
+msgstr "#"
+
+#: templates/CheckoutPage/Form/RadioGroup/index.tsx:39
+msgid "%"
+msgstr "%"
+
+#: app/fr/therapy-support/page.tsx:12
+#: app/therapy-support/page.tsx:11
+msgid "🧠 Hello! I'm your Therapy Support AI. Feel free to describe your case, specific symptoms, or ask for therapeutic strategies."
+msgstr ""
+"🧠 Hallo! Ich bin Ihre Therapie-Unterstützungs-KI. Beschreiben Sie mir gerne "
+"Ihren Fall, Ihre spezifischen Symptome oder fragen Sie nach therapeutischen "
+"Strategien."
+
+#: app/de/therapy-support/page.tsx:11
+msgid "🧠 Hello! I'm your Therapy Support AI. Feel free to describe your case, the specific symptoms, or ask for therapeutic strategies."
+msgstr ""
+"🧠 Hallo! Ich bin Ihre Therapie-Unterstützungs-KI. Beschreiben Sie mir gerne "
+"Ihren Fall, die spezifischen Symptome oder fragen Sie nach therapeutischen "
+"Strategien."
+
+#: components/Audio/index.tsx:48
+msgid "😀 Friendly"
+msgstr "😀 Freundlich"
+
+#: components/Audio/index.tsx:51
+msgid "😐 Neutral"
+msgstr "😐 Neutral"
+
+#: components/Audio/index.tsx:54
+msgid "😚 Kissing"
+msgstr "😚 Küssen"
+
+#: app/de/documentation-reports/page.tsx:15
+#: app/documentation-reports/page.tsx:15
+#: app/fr/documentation-reports/page.tsx:15
+msgid "🚧 Documentation & Reporting"
+msgstr "🚧 Dokumentation und Berichterstattung"
+
+#: app/de/diagnosis-support/page.tsx:12
+#: app/de/therapy-support/page.tsx:12
+#: app/diagnosis-support/page.tsx:12
+#: app/fr/diagnosis-support/page.tsx:12
+#: app/fr/therapy-support/page.tsx:13
+#: app/therapy-support/page.tsx:12
+msgid "🚧 The AI functionality for "
+msgstr "🚧 Die KI-Funktionalität für "
+
+#: app/audio-transcription/page.tsx:15
+#: app/de/audio-transcription/page.tsx:15
+#: app/fr/audio-transcription/page.tsx:15
+msgid "🚧 The AI model for "
+msgstr "🚧 Das KI-Modell für "
+
+#: app/de/supervision-training/page.tsx:14
+#: app/fr/supervision-training/page.tsx:14
+#: app/supervision-training/page.tsx:14
+msgid "🚧 The AI model for Supervision & Training is currently being developed with specialized training data. It will be available soon to support expert feedback and mentoring workflows."
+msgstr ""
+"🚧 Das KI-Modell für Supervision und Training wird derzeit mit speziellen "
+"Trainingsdaten entwickelt. Es wird in Kürze verfügbar sein, um "
+"Expertenfeedback und Mentoring-Workflows zu unterstützen."
+
+#: app/de/video-analysis/page.tsx:17
+#: app/fr/video-analysis/page.tsx:17
+#: app/video-analysis/page.tsx:17
+msgid "🚧 Video Analysis"
+msgstr "🚧 Videoanalyse"
+
+#: templates/CheckoutPage/Form/RadioGroup/index.tsx:36
+msgid "$"
+msgstr "CHF"
+
+#: components/AudioPlayer/index.tsx:36
+msgid "0:21"
+msgstr "0:21"
+
+#: components/Answer/Actions/index.tsx:31
+#: components/RightSidebar/ChatItem/index.tsx:25
+msgid "1 chat archived"
+msgstr "1 Chat archiviert"
+
+#: mocks/updates.tsx:51
+msgid "1 July, 2025"
+msgstr "1. Juli 2025"
+
+#: components/AudioPlayer/index.tsx:37
+msgid "1:02"
+msgstr "1:02"
+
+#: components/Audio/index.tsx:24
+msgid "1.25x"
+msgstr "1,25-fach"
+
+#: components/Audio/index.tsx:27
+msgid "1.5x"
+msgstr "1,5-fach"
+
+#: mocks/updates.tsx:40
+msgid "12 July, 2025"
+msgstr "12. Juli 2025"
+
+#: mocks/updates.tsx:29
+msgid "13 July, 2025"
+msgstr "13. Juli 2025"
+
+#: components/Feedback/Details/index.tsx:20
+msgid "4.85"
+msgstr "4,85"
+
+#: components/Settings/Team/index.tsx:11
+msgid "42 members"
+msgstr "42 Mitglieder"
+
+#: components/AudioPlayer/index.tsx:30
+msgid "609 characters"
+msgstr "609 Zeichen"
+
+#: mocks/updates.tsx:18
+msgid "7 September, 2025"
+msgstr "7. September 2025"
+
+#: mocks/updates.tsx:62
+msgid "8 June, 2025"
+msgstr "8. Juni 2025"
+
+#: mocks/price.tsx:14
+msgid "90 days history"
+msgstr "90-Tage-Verlauf"
+
+#: mocks/faq.tsx:38
+msgid "Absolutely. mentalhealthGPT is built to support both independent professionals and larger institutions. As an individual therapist, psychologist, or psychiatrist, you can immediately benefit from a secure and private setup tailored to your personal clinical work. You'll have access to dedicated tools, encrypted data handling, and models that understand the language of your profession. For clinics, hospitals, and practices, we offer extended features such as team-based access, shared context models, integration with internal systems, and the ability to train organization-specific expert models. This ensures that your institution’s knowledge, terminology, and care philosophy are reflected in the AI’s responses. Whether you work alone or in a multidisciplinary team – mentalhealthGPT adapts to your context, helping you deliver consistent, efficient, and privacy-compliant care."
+msgstr ""
+"Auf jeden Fall. mentalhealthGPT wurde entwickelt, um sowohl unabhängige "
+"Fachleute als auch größere Einrichtungen zu unterstützen. Als einzelner "
+"Therapeut, Psychologe oder Psychiater können Sie sofort von einer sicheren "
+"und privaten Einrichtung profitieren, die auf Ihre persönliche klinische "
+"Arbeit zugeschnitten ist. Sie haben Zugriff auf spezielle Tools, "
+"verschlüsselte Datenverarbeitung und Modelle, die die Sprache Ihres "
+"Berufsstandes verstehen. Für Kliniken, Krankenhäuser und Praxen bieten wir "
+"erweiterte Funktionen wie teambasierten Zugriff, gemeinsame Kontextmodelle, "
+"Integration in interne Systeme und die Möglichkeit, organisationsspezifische "
+"Expertenmodelle zu trainieren. So wird sichergestellt, dass das Wissen, die "
+"Terminologie und die Pflegephilosophie Ihrer Einrichtung in den Antworten "
+"der KI widergespiegelt werden. Ganz gleich, ob Sie allein oder in einem "
+"multidisziplinären Team arbeiten – mentalhealthGPT passt sich Ihrem Kontext "
+"an und hilft Ihnen dabei, eine konsistente, effiziente und "
+"datenschutzkonforme Versorgung zu gewährleisten."
+
+#: mocks/price.tsx:27
+msgid "Access all AI capabilities"
+msgstr "Zugriff auf alle KI-Funktionen"
+
+#: mocks/price.tsx:49
+msgid "Access to  knowledge base"
+msgstr "Zugang zur Wissensdatenbank"
+
+#: app/applications/page.tsx:12
+#: app/de/applications/page.tsx:12
+#: app/fr/applications/page.tsx:12
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: components/Settings/Applications/index.tsx:10
+msgid "Add apps"
+msgstr "Apps hinzufügen"
+
+#: components/AddChatList/index.tsx:61
+msgid "Add chat list"
+msgstr "Chat-Liste hinzufügen"
+
+#: components/AddChatList/index.tsx:77
+msgid "Add list"
+msgstr "Liste hinzufügen"
+
+#: components/Chat/Actions/index.tsx:13
+msgid "Add to favorite list"
+msgstr "Zur Favoritenliste hinzufügen"
+
+#: components/SocialsPost/index.tsx:46
+msgid "Add to Queue"
+msgstr "Zur Warteschlange hinzufügen"
+
+#: app/applications/page.tsx:13
+#: app/de/applications/page.tsx:13
+#: app/fr/applications/page.tsx:13
+msgid "Added"
+msgstr "Hinzugefügt"
+
+#: components/Photo/index.tsx:39
+#: components/Photo/index.tsx:40
+msgid "Adjust"
+msgstr "Anpassen"
+
+#: components/Settings/Team/Member/index.tsx:21
+msgid "Admin"
+msgstr "Admin"
+
+#: mocks/price.tsx:85
+msgid "Advanced documentation & reporting tools"
+msgstr "Erweiterte Dokumentations- und Berichterstellungstools"
+
+#: mocks/price.tsx:23
+msgid "Advanced mental health AI models"
+msgstr "Fortgeschrittene KI-Modelle für die psychische Gesundheit"
+
+#: app/checkout/page.tsx:18
+#: app/de/checkout/page.tsx:18
+#: app/fr/checkout/page.tsx:18
+#: mocks/price.tsx:38
+msgid "Advanced team management"
+msgstr "Fortgeschrittenes Teammanagement"
+
+#: app/de/pricing/page.tsx:25
+#: app/fr/pricing/page.tsx:25
+#: app/pricing/page.tsx:25
+msgid "AI chat built for mental health"
+msgstr "KI-Chat für psychische Gesundheit"
+
+#: app/checkout/page.tsx:9
+#: app/de/checkout/page.tsx:9
+#: app/fr/checkout/page.tsx:9
+msgid "AI chat made affordable"
+msgstr "KI-Chat zu erschwinglichen Preisen"
+
+#: mocks/applications.tsx:20
+msgid "AI development organization"
+msgstr "Organisation für KI-Entwicklung"
+
+#: mocks/updates.tsx:50
+msgid "AI Systems Ready in European Data Center"
+msgstr "KI-Systeme in europäischem Rechenzentrum einsatzbereit"
+
+#: mocks/price.tsx:79
+msgid "AI Training on institution-specific data"
+msgstr "KI-Training mit institutionsspezifischen Daten"
+
+#: components/Logo/index.tsx:29
+msgid "aidX"
+msgstr "aidX"
+
+#: mocks/chatHistory.tsx:5
+msgid "aidX AI UI"
+msgstr "aidX KI-Benutzeroberfläche"
+
+#: mocks/updates.tsx:33
+msgid "All core components of mentalhealthGPT are now in place – from the secure frontend interface to the protected AI backend. We’re now entering the integration phase: connecting the frontend, backend, and AI models through a reliable Node.js architecture. This orchestration enables a seamless and secure experience for users – whether you’re a clinician, psychotherapist, mental health advisor, researcher, or individual seeking support. Every step is designed to meet the privacy and reliability needs of mental health professionals."
+msgstr ""
+"Alle Kernkomponenten von mentalhealthGPT sind nun vorhanden – von der "
+"sicheren Frontend-Schnittstelle bis zum geschützten KI-Backend. Wir treten "
+"nun in die Integrationsphase ein: die Verbindung von Frontend, Backend und "
+"KI-Modellen über eine zuverlässige Node.js-Architektur. Diese Orchestrierung "
+"ermöglicht eine nahtlose und sichere Erfahrung für die Nutzer – egal, ob Sie "
+"Kliniker, Psychotherapeut, Berater für psychische Gesundheit, Forscher oder "
+"eine Person sind, die Unterstützung sucht. Jeder Schritt ist darauf "
+"ausgelegt, die Anforderungen von Fachleuten im Bereich der psychischen "
+"Gesundheit an Datenschutz und Zuverlässigkeit zu erfüllen."
+
+#: app/de/documentation-reports/page.tsx:14
+#: app/documentation-reports/page.tsx:14
+#: app/fr/documentation-reports/page.tsx:14
+msgid "All data is processed with end-to-end encryption to protect patient confidentiality and ensure secure handling at every stage."
+msgstr ""
+"Alle Daten werden mit einer End-to-End-Verschlüsselung verarbeitet, um die "
+"Vertraulichkeit der Patientendaten zu schützen und einen sicheren Umgang in "
+"jeder Phase zu gewährleisten."
+
+#: mocks/updates.tsx:66
+msgid "All patient data is now processed in our zero-trust environment hosted in Switzerland — fully encrypted and compliant with Swiss and European data regulations. Your data remains protected end-to-end."
+msgstr ""
+"Alle Patientendaten werden nun in unserer Zero-Trust-Umgebung in der Schweiz "
+"verarbeitet – vollständig verschlüsselt und in Übereinstimmung mit den "
+"Schweizer und europäischen Datenschutzbestimmungen. Ihre Daten bleiben "
+"durchgehend geschützt."
+
+#: mocks/members.tsx:23
+msgid "Alvah"
+msgstr "Alvah"
+
+#: app/de/sign-in/page.tsx:27
+#: app/fr/sign-in/page.tsx:27
+#: app/sign-in/page.tsx:31
+msgid "and"
+msgstr "und"
+
+#: mocks/people.tsx:5
+msgid "Anthony"
+msgstr "Anthony"
+
+#: mocks/people.tsx:25
+msgid "Antonio"
+msgstr "Antonio"
+
+#: mocks/applications.tsx:27
+#: mocks/applications.tsx:55
+#: mocks/applications.tsx:62
+msgid "App description here"
+msgstr "App-Beschreibung hier"
+
+#: mocks/applications.tsx:61
+msgid "App name"
+msgstr "App-Name"
+
+#: components/Settings/Appearance/index.tsx:37
+#: components/Settings/Appearance/index.tsx:38
+#: constants/settings.tsx:33
+msgid "Appearance"
+msgstr "Aussehen"
+
+#: app/applications/page.tsx:8
+#: app/de/applications/page.tsx:8
+#: app/fr/applications/page.tsx:8
+#: components/Settings/Applications/index.tsx:9
+#: constants/settings.tsx:25
+msgid "Applications"
+msgstr "Anwendungen"
+
+#: app/checkout/page.tsx:42
+#: app/de/checkout/page.tsx:42
+#: app/fr/checkout/page.tsx:42
+msgid "Apply promo code"
+msgstr "Promo-Code anwenden"
+
+#: components/Answer/Actions/index.tsx:100
+msgid "Archive chat"
+msgstr "Chat archivieren"
+
+#: components/Settings/ChatExport/index.tsx:33
+#: mocks/chatList.tsx:23
+msgid "Archived"
+msgstr "Archiviert"
+
+#: components/LeftSidebar/ChatList/index.tsx:50
+#: components/Select/index.tsx:57
+msgid "arrow-down"
+msgstr "Pfeil nach unten"
+
+#: templates/SignInPage/Form/ForgotPassword/index.tsx:21
+msgid "arrow-prev"
+msgstr "Pfeil-Zurück"
+
+#: app/de/updates-and-faq/page.tsx:32
+#: app/fr/updates-and-faq/page.tsx:32
+#: app/updates-and-faq/page.tsx:32
+msgid "Ask mentalhealthGPT"
+msgstr "Fragen Sie mentalhealthGPT"
+
+#: components/Settings/EditProfile/index.tsx:34
+msgid "At least 800x800 px recommended."
+msgstr "Mindestens 800 x 800 Pixel empfohlen."
+
+#: components/AudioPlayer/index.tsx:23
+#: components/Search/index.tsx:12
+msgid "Audio"
+msgstr "Audio"
+
+#: app/audio-transcription/page.tsx:16
+#: app/audio-transcription/page.tsx:8
+#: app/de/audio-transcription/page.tsx:16
+#: app/de/audio-transcription/page.tsx:8
+#: app/fr/audio-transcription/page.tsx:16
+#: app/fr/audio-transcription/page.tsx:8
+msgid "Audio Transcription & Notes"
+msgstr "Audio-Transkription & Notizen"
+
+#: components/Settings/Applications/index.tsx:12
+msgid "Authorized apps"
+msgstr "Autorisierte Apps"
+
+#: components/Adjust/index.tsx:23
+msgid "Auto"
+msgstr "Auto"
+
+#: mocks/chatHistory.tsx:27
+msgid "Auto generate title"
+msgstr "Titel automatisch generieren"
+
+#: components/AddChatList/User/index.tsx:26
+#: components/Answer/index.tsx:23
+#: components/Message/Files/index.tsx:14
+#: components/Question/index.tsx:21
+#: components/RightSidebar/Notifications/Notification/index.tsx:12
+#: components/RightSidebar/Profile/index.tsx:30
+#: components/RightSidebar/Profile/index.tsx:37
+#: components/Search/Item/index.tsx:18
+#: components/Search/Item/index.tsx:35
+#: components/Settings/EditProfile/index.tsx:23
+#: components/Settings/EditProfile/index.tsx:26
+#: components/Users/index.tsx:13
+msgid "Avatar"
+msgstr "Avatar"
+
+#: components/Video/index.tsx:33
+msgid "Based on the gender identified in the uploaded image, the video has been automatically generated with a male voice. However, you have the option to customize your video by selecting from the available options below."
+msgstr ""
+"Basierend auf dem in dem hochgeladenen Bild identifizierten Geschlecht wurde "
+"das Video automatisch mit einer männlichen Stimme generiert. Sie haben "
+"jedoch die Möglichkeit, Ihr Video anzupassen, indem Sie aus den unten "
+"verfügbaren Optionen auswählen."
+
+#: app/checkout/page.tsx:40
+#: app/de/checkout/page.tsx:40
+#: app/fr/checkout/page.tsx:40
+msgid "Billed now"
+msgstr "Jetzt in Rechnung gestellt"
+
+#: app/checkout/page.tsx:32
+#: app/de/checkout/page.tsx:32
+#: app/fr/checkout/page.tsx:32
+msgid "Billing email"
+msgstr "Rechnungs-E-Mail"
+
+#: components/Settings/EditProfile/index.tsx:41
+msgid "Bio"
+msgstr "Biografie"
+
+#: components/Adjust/index.tsx:20
+msgid "Blacks"
+msgstr "Schwarze"
+
+#: components/Layout/index.tsx:70
+msgid "Brainwave"
+msgstr "Gehirnwelle"
+
+#: mocks/updates.tsx:28
+msgid "Bringing It All Together: mentalhealthGPT Enters Integration Phase"
+msgstr ""
+"Alles zusammenführen: mentalhealthGPT tritt in die Integrationsphase ein"
+
+#: app/applications/page.tsx:9
+#: app/de/applications/page.tsx:9
+#: app/fr/applications/page.tsx:9
+msgid "Browse and install apps to simplify your life with mentalhealthGPT"
+msgstr ""
+"Durchsuchen und installieren Sie Apps, um Ihr Leben mit mentalhealthGPT zu "
+"vereinfachen"
+
+#: components/ScheduleResult/index.tsx:7
+msgid "Buffer"
+msgstr "Buffer"
+
+#: app/checkout/page.tsx:43
+#: app/de/checkout/page.tsx:43
+#: app/fr/checkout/page.tsx:43
+msgid "By clicking \"Start Institution plan\", you agree to be charged CHF399 every month, unless you cancel."
+msgstr ""
+"Durch Klicken auf „Institution-Plan starten“ erklären Sie sich damit "
+"einverstanden, dass Ihnen monatlich 399 CHF in Rechnung gestellt werden, "
+"sofern Sie nicht kündigen."
+
+#: app/de/sign-in/page.tsx:25
+#: app/fr/sign-in/page.tsx:25
+#: app/sign-in/page.tsx:29
+msgid "By creating an account, you agree to our "
+msgstr "Durch die Erstellung eines Kontos erklären Sie sich mit unseren "
+
+#: components/SchedulePost/index.tsx:26
+msgid "calendar"
+msgstr "Kalender"
+
+#: components/SocialsPost/index.tsx:55
+msgid "calendar-check"
+msgstr "Kalender-Prüfung"
+
+#: app/de/pricing/page.tsx:14
+#: app/fr/pricing/page.tsx:14
+#: app/pricing/page.tsx:14
+msgid "Can I get a refund if I cancel my yearly plan early?"
+msgstr ""
+"Erhalte ich eine Rückerstattung, wenn ich meinen Jahresplan vorzeitig "
+"kündige?"
+
+#: app/de/pricing/page.tsx:9
+#: app/fr/pricing/page.tsx:9
+#: app/pricing/page.tsx:9
+msgid "Can I try mentalhealthGPT before committing to a paid plan?"
+msgstr ""
+"Kann ich mentalhealthGPT ausprobieren, bevor ich mich für einen "
+"kostenpflichtigen Tarif entscheide?"
+
+#: mocks/faq.tsx:37
+msgid "Can I use mentalhealthGPT as an individual professional and as part of an institution?"
+msgstr ""
+"Kann ich mentalhealthGPT als einzelner Fachmann und als Teil einer "
+"Einrichtung nutzen?"
+
+#: components/AddChatList/index.tsx:48
+#: components/AddChatList/User/index.tsx:18
+msgid "Can start chat"
+msgstr "Chat starten"
+
+#: components/AddChatList/index.tsx:45
+#: components/AddChatList/User/index.tsx:15
+msgid "Can view"
+msgstr "Kann anzeigen"
+
+#: mocks/faq.tsx:42
+msgid "Can we have our own dedicated mental health AI specialist?"
+msgstr ""
+"Können wir unseren eigenen KI-Spezialisten für psychische Gesundheit haben?"
+
+#: app/de/updates-and-faq/page.tsx:30
+#: app/fr/updates-and-faq/page.tsx:30
+#: app/updates-and-faq/page.tsx:30
+msgid "Can’t find any answer?"
+msgstr "Sie finden keine Antwort?"
+
+#: components/AddChatList/index.tsx:76
+#: components/ModalShareChat/index.tsx:76
+#: components/RightSidebar/index.tsx:96
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: app/checkout/page.tsx:34
+#: app/de/checkout/page.tsx:34
+#: app/fr/checkout/page.tsx:34
+msgid "Card details"
+msgstr "Kartendetails"
+
+#: app/checkout/page.tsx:35
+#: app/de/checkout/page.tsx:35
+#: app/fr/checkout/page.tsx:35
+msgid "Card number"
+msgstr "Kartennummer"
+
+#: mocks/members.tsx:29
+msgid "Chaim"
+msgstr "Chaim"
+
+#: app/checkout/page.tsx:25
+#: app/de/checkout/page.tsx:25
+#: app/fr/checkout/page.tsx:25
+msgid "Change currency"
+msgstr "Währung ändern"
+
+#: components/Settings/Password/index.tsx:15
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: app/de/pricing/page.tsx:42
+#: app/fr/pricing/page.tsx:42
+#: app/pricing/page.tsx:42
+msgid "Chat 24/7"
+msgstr "Chat rund um die Uhr"
+
+#: mocks/applications.tsx:34
+msgid "Chat and community platform"
+msgstr "Chat- und Community-Plattform"
+
+#: components/Settings/ChatExport/index.tsx:57
+#: constants/settings.tsx:17
+msgid "Chat export"
+msgstr "Chat-Export"
+
+#: components/RightSidebar/index.tsx:73
+msgid "Chat history"
+msgstr "Chat-Verlauf"
+
+#: components/LeftSidebar/ChatList/index.tsx:52
+msgid "Chat list"
+msgstr "Chat-Liste"
+
+#: app/de/sign-in/page.tsx:10
+#: app/fr/sign-in/page.tsx:10
+#: app/sign-in/page.tsx:10
+msgid "Chat with the smartest AI - Experience the power of AI with us"
+msgstr ""
+"Chatten Sie mit der intelligentesten KI – Erleben Sie mit uns die "
+"Leistungsfähigkeit der KI"
+
+#: components/LeftSidebar/index.tsx:66
+#: components/LeftSidebar/Navigation/index.tsx:54
+msgid "Chats"
+msgstr "Chats"
+
+#: components/Checkbox/index.tsx:20
+msgid "check"
+msgstr "überprüfen"
+
+#: components/Feedback/Assessment/Item/index.tsx:23
+#: templates/CheckoutPage/Details/index.tsx:30
+msgid "check-circle"
+msgstr "Häkchen"
+
+#: components/AddChatList/User/index.tsx:33
+#: components/Code/index.tsx:38
+#: components/Notify/index.tsx:17
+#: components/Select/index.tsx:67
+#: components/Settings/ChatExport/index.tsx:71
+#: templates/CheckoutPage/Form/RadioGroup/index.tsx:33
+msgid "check-thin"
+msgstr "dünn prüfen"
+
+#: components/AddChatList/index.tsx:11
+msgid "Chinese Violet"
+msgstr "Chinesisches Veilchen"
+
+#: components/SchedulePost/index.tsx:23
+msgid "Choose date"
+msgstr "Datum auswählen"
+
+#: app/de/pricing/page.tsx:27
+#: app/fr/pricing/page.tsx:27
+#: app/pricing/page.tsx:27
+msgid "Choose plan"
+msgstr "Plan auswählen"
+
+#: components/Settings/Sessions/index.tsx:6
+msgid "Chrome on iPhone"
+msgstr "Chrome auf dem iPhone"
+
+#: components/Settings/Sessions/index.tsx:12
+msgid "Chrome on Macbook Pro"
+msgstr "Chrome auf Macbook Pro"
+
+#: components/RightSidebar/index.tsx:87
+msgid "Clear all chat history?"
+msgstr "Den gesamten Chat-Verlauf löschen?"
+
+#: components/RightSidebar/index.tsx:116
+msgid "Clear chat history"
+msgstr "Chat-Verlauf löschen"
+
+#: mocks/notifications.tsx:29
+msgid "Clementina"
+msgstr "Clementina"
+
+#: components/Actions/index.tsx:37
+#: components/Modal/index.tsx:38
+#: components/MultiSelect/index.tsx:24
+#: components/SocialsPost/Details/index.tsx:17
+msgid "close"
+msgstr "schließen"
+
+#: components/SocialsPost/Preview/index.tsx:12
+#: components/SocialsPost/Preview/index.tsx:13
+msgid "close-fat"
+msgstr "Fettgehalt"
+
+#: components/Search/index.tsx:15
+msgid "Code"
+msgstr "Code"
+
+#: components/Feedback/Details/index.tsx:8
+msgid "codepen"
+msgstr "Codepen"
+
+#: components/AddChatList/index.tsx:64
+msgid "Color"
+msgstr "Farbe"
+
+#: components/Settings/Password/index.tsx:14
+msgid "Confirm new password"
+msgstr "Neues Passwort bestätigen"
+
+#: components/Answer/Actions/index.tsx:47
+msgid "Content"
+msgstr "Inhalt"
+
+#: components/Answer/Actions/index.tsx:23
+msgid "Content copied"
+msgstr "Inhalt kopiert"
+
+#: app/de/sign-in/page.tsx:13
+#: app/fr/sign-in/page.tsx:13
+#: app/sign-in/page.tsx:14
+msgid "Continue with Apple"
+msgstr "Weiter mit Apple"
+
+#: app/de/sign-in/page.tsx:12
+#: app/fr/sign-in/page.tsx:12
+#: app/sign-in/page.tsx:13
+msgid "Continue with Google"
+msgstr "Weiter mit Google"
+
+#: components/Adjust/index.tsx:16
+msgid "Contrast"
+msgstr "Kontrast"
+
+#: components/Code/index.tsx:38
+msgid "Copied!"
+msgstr "Kopiert!"
+
+#: components/SocialsPost/Post/index.tsx:41
+msgid "copy"
+msgstr "Kopie"
+
+#: components/Answer/Actions/index.tsx:48
+#: components/ModalShareChat/index.tsx:59
+#: components/SocialsPost/Post/index.tsx:40
+msgid "Copy"
+msgstr "kopieren"
+
+#: components/Code/index.tsx:39
+msgid "Copy code"
+msgstr "Code kopieren"
+
+#: components/ModalShareChat/index.tsx:44
+msgid "Copy link"
+msgstr "Link kopieren"
+
+#: mocks/price.tsx:43
+msgid "Core access to mental health AI"
+msgstr "Kernzugang zu KI für psychische Gesundheit"
+
+#: app/de/pricing/page.tsx:37
+#: app/fr/pricing/page.tsx:37
+#: app/pricing/page.tsx:37
+msgid "Core features"
+msgstr "Kernfunktionen"
+
+#: components/Feedback/Assessment/index.tsx:36
+msgid "Correct answer"
+msgstr "Richtige Antwort"
+
+#: components/Photo/index.tsx:36
+msgid "Create"
+msgstr "Erstellen"
+
+#: app/de/sign-in/page.tsx:11
+#: app/fr/sign-in/page.tsx:11
+#: app/sign-in/page.tsx:12
+msgid "Create account"
+msgstr "Konto erstellen"
+
+#: app/de/sign-in/page.tsx:24
+#: app/fr/sign-in/page.tsx:24
+#: app/sign-in/page.tsx:28
+msgid "Create Account"
+msgstr "Konto erstellen"
+
+#: components/Search/index.tsx:68
+msgid "Created by"
+msgstr "Erstellt von"
+
+#: templates/CheckoutPage/Form/index.tsx:109
+msgid "credit-card"
+msgstr "Kreditkarte"
+
+#: mocks/writeCodeChat.tsx:85
+msgid "CSS"
+msgstr "CSS"
+
+#: app/de/pricing/page.tsx:34
+#: app/fr/pricing/page.tsx:34
+#: app/pricing/page.tsx:34
+msgid "Current plan"
+msgstr "Aktueller Plan"
+
+#: app/checkout/page.tsx:17
+#: app/de/checkout/page.tsx:17
+#: app/fr/checkout/page.tsx:17
+#: mocks/price.tsx:38
+msgid "Customizable AI models"
+msgstr "Anpassbare KI-Modelle"
+
+#: mocks/price.tsx:73
+msgid "Customizable institutional AI models"
+msgstr "Anpassbare institutionelle KI-Modelle"
+
+#: app/checkout/page.tsx:37
+#: app/de/checkout/page.tsx:37
+#: app/fr/checkout/page.tsx:37
+msgid "CVC"
+msgstr "CVC"
+
+#: components/LeftSidebar/ToggleTheme/index.tsx:22
+msgid "Dark"
+msgstr "Dunkel"
+
+#: components/Settings/Appearance/index.tsx:31
+msgid "Dark mode"
+msgstr "Dunkler Modus"
+
+#: mocks/updates.tsx:61
+msgid "Data Privacy Infrastructure Live in Switzerland"
+msgstr "Datenschutzinfrastruktur Live in der Schweiz"
+
+#: mocks/faq.tsx:8
+msgid "Data protection is our highest priority. All interactions are end-to-end encrypted directly in the browser, ensuring that even we as operators cannot access the content. The decryption keys are stored exclusively in Switzerland, completely separated from the processing infrastructure. Data never leaves the closed System unencrypted – and full control remains with the user or institution at all times."
+msgstr ""
+"Datenschutz hat für uns höchste Priorität. Alle Interaktionen werden direkt "
+"im Browser durchgängig verschlüsselt, sodass selbst wir als Betreiber keinen "
+"Zugriff auf die Inhalte haben. Die Entschlüsselungscodes werden "
+"ausschließlich in der Schweiz gespeichert, vollständig getrennt von der "
+"Verarbeitungsinfrastruktur. Die Daten verlassen das geschlossene System "
+"niemals unverschlüsselt – und die vollständige Kontrolle verbleibt jederzeit "
+"beim Nutzer oder der Institution."
+
+#: components/Search/index.tsx:69
+msgid "Date"
+msgstr "Datum"
+
+#: components/Settings/Applications/Application/index.tsx:17
+msgid "Deauthorize"
+msgstr "Deaktivieren"
+
+#: app/checkout/page.tsx:21
+#: app/de/checkout/page.tsx:21
+#: app/fr/checkout/page.tsx:21
+msgid "Dedicated account manager"
+msgstr "Engagierter Kundenbetreuer"
+
+#: components/Settings/DeleteAccount/index.tsx:12
+#: constants/settings.tsx:37
+msgid "Delete account"
+msgstr "Konto löschen"
+
+#: components/Chat/Actions/index.tsx:28
+msgid "Delete chat"
+msgstr "Chat löschen"
+
+#: components/Settings/Team/Actions/index.tsx:20
+msgid "Delete member"
+msgstr "Mitglied löschen"
+
+#: components/Settings/ChatExport/index.tsx:38
+msgid "Deleted"
+msgstr "Gelöscht"
+
+#: mocks/applications.tsx:6
+msgid "Design resources marketplace"
+msgstr "Marktplatz für Design-Ressourcen"
+
+#: components/Settings/Sessions/index.tsx:27
+msgid "Devices"
+msgstr "Geräte"
+
+#: mocks/notifications.tsx:51
+msgid "Dexter"
+msgstr "Dexter"
+
+#: app/de/diagnosis-support/page.tsx:13
+#: app/de/diagnosis-support/page.tsx:8
+#: app/diagnosis-support/page.tsx:13
+#: app/diagnosis-support/page.tsx:8
+#: app/fr/diagnosis-support/page.tsx:13
+#: app/fr/diagnosis-support/page.tsx:8
+msgid "Diagnosis Support"
+msgstr "Diagnoseunterstützung"
+
+#: app/de/diagnosis-support/page.tsx:9
+#: app/diagnosis-support/page.tsx:9
+#: app/fr/diagnosis-support/page.tsx:9
+msgid "diagnosis-case.pdf"
+msgstr "Diagnose-Fall.pdf"
+
+#: mocks/applications.tsx:33
+msgid "Discord"
+msgstr "Zwietracht"
+
+#: components/Settings/ChatExport/index.tsx:12
+msgid "DOC"
+msgstr "DOC"
+
+#: app/de/documentation-reports/page.tsx:8
+#: app/documentation-reports/page.tsx:8
+#: app/fr/documentation-reports/page.tsx:8
+msgid "Documentation & Reporting"
+msgstr "Dokumentation und Berichterstattung"
+
+#: components/AddChatList/index.tsx:15
+msgid "Dodger blue"
+msgstr "Dodger-Blau"
+
+#: components/Chat/Actions/index.tsx:36
+#: components/Export/index.tsx:35
+#: components/Settings/Team/Actions/index.tsx:31
+msgid "dots"
+msgstr "Punkte"
+
+#: components/AddChatList/index.tsx:37
+msgid "Doug"
+msgstr "Doug"
+
+#: components/Video/index.tsx:37
+msgid "download"
+msgstr "herunterladen"
+
+#: components/Feedback/Details/index.tsx:25
+#: components/Video/index.tsx:36
+msgid "Download"
+msgstr "Herunterladen"
+
+#: components/Settings/ChatExport/index.tsx:75
+msgid "Download conversation"
+msgstr "Gespräch herunterladen"
+
+#: components/Feedback/Details/index.tsx:26
+msgid "download-fill"
+msgstr "Herunterladen und Ausfüllen"
+
+#: mocks/applications.tsx:47
+msgid "Duolingo"
+msgstr "Duolingo"
+
+#: components/Chat/Actions/index.tsx:23
+msgid "Duplicate chat"
+msgstr "Chat duplizieren"
+
+#: mocks/faq.tsx:23
+msgid "Each AI area within mentalhealthGPT reflects a distinct clinical use case – supported by purpose-built language models, specifically trained for their tasks: • **Therapy Support AI** assists in structuring sessions, reflecting on interaction styles, or preparing interventions with clinical empathy and relevance. • **Supervision & Training** offers role-based dialogue analysis, self-reflection aids, and interactive simulations for continued development. • **Diagnosis Support** helps structure symptom profiles, compare clinical hypotheses, and draft ICD/DSM-aligned summaries. • **Audio Transcription & Notes** transforms recorded therapy sessions into accurate, structured notes – including summaries, key moments, and documentation-ready output. • **Video Analysis** supports movement-, mood-, and interaction-pattern recognition, enabling new insights in multimodal assessments (e.g., child therapy). • **Documentation & Reporting** streamlines clinical reporting with pre-structured, editable drafts based on real content, aligned with institutional standards. By offering separate, specialized assistants, we ensure each AI response is tailored, safe, and clinically valuable – right from the first use."
+msgstr ""
+"Jeder KI-Bereich innerhalb von mentalhealthGPT spiegelt einen bestimmten "
+"klinischen Anwendungsfall wider – unterstützt durch speziell für ihre "
+"Aufgaben entwickelte Sprachmodelle: • **Therapieunterstützende KI** hilft "
+"bei der Strukturierung von Sitzungen, der Reflexion von Interaktionsstilen "
+"oder der Vorbereitung von Interventionen mit klinischer Empathie und "
+"Relevanz. • **Supervision &amp; Training** bietet rollenbasierte "
+"Dialoganalyse, Hilfsmittel zur Selbstreflexion und interaktive Simulationen "
+"für die kontinuierliche Weiterentwicklung. • **Diagnoseunterstützung** hilft "
+"bei der Strukturierung von Symptomprofilen, dem Vergleich klinischer "
+"Hypothesen und der Erstellung von ICD/DSM-konformen Zusammenfassungen. • "
+"**Audio-Transkription &amp; Notizen** wandelt aufgezeichnete "
+"Therapiesitzungen in genaue, strukturierte Notizen um – einschließlich "
+"Zusammenfassungen, Schlüsselmomenten und dokumentationsfähigen Ausgaben. • "
+"**Videoanalyse** unterstützt die Erkennung von Bewegungs-, Stimmungs- und "
+"Interaktionsmustern und ermöglicht neue Erkenntnisse in multimodalen "
+"Bewertungen (z. B. Kindertherapie). • **Dokumentation und Berichterstellung**"
+" optimiert die klinische Berichterstellung mit vorstrukturierten, "
+"bearbeitbaren Entwürfen, die auf realen Inhalten basieren und den "
+"institutionellen Standards entsprechen. Durch das Angebot separater, "
+"spezialisierter Assistenten stellen wir sicher, dass jede KI-Antwort "
+"maßgeschneidert, sicher und klinisch wertvoll ist – schon ab der ersten "
+"Verwendung."
+
+#: components/Audio/index.tsx:76
+#: components/SocialsPost/Post/index.tsx:33
+msgid "edit"
+msgstr "bearbeiten"
+
+#: components/Audio/index.tsx:75
+#: components/SocialsPost/Post/index.tsx:32
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: components/Settings/EditProfile/index.tsx:22
+#: constants/settings.tsx:5
+msgid "Edit profile"
+msgstr "Profil bearbeiten"
+
+#: mocks/members.tsx:17
+msgid "Ellis"
+msgstr "Ellis"
+
+#: mocks/notifications.tsx:40
+msgid "Elmira"
+msgstr "Elmira"
+
+#: components/MultiSelect/index.tsx:60
+#: templates/CheckoutPage/Form/index.tsx:100
+#: templates/CheckoutPage/Form/index.tsx:101
+msgid "email"
+msgstr "E-Mail"
+
+#: app/de/sign-in/page.tsx:20
+#: app/de/sign-in/page.tsx:22
+#: app/fr/sign-in/page.tsx:20
+#: app/fr/sign-in/page.tsx:22
+#: app/sign-in/page.tsx:23
+#: app/sign-in/page.tsx:26
+msgid "Email"
+msgstr "E-Mail"
+
+#: app/checkout/page.tsx:33
+#: app/de/checkout/page.tsx:33
+#: app/fr/checkout/page.tsx:33
+msgid "Email address"
+msgstr "E-Mail-Adresse"
+
+#: mocks/price.tsx:27
+msgid "Email support"
+msgstr "E-Mail-Support"
+
+#: components/Settings/Appearance/index.tsx:10
+#: components/Video/index.tsx:9
+msgid "English (United States)"
+msgstr "Englisch (Vereinigte Staaten)"
+
+#: components/Audio/index.tsx:11
+msgid "English (US)"
+msgstr "Englisch (US)"
+
+#: components/Photo/index.tsx:46
+msgid "Enhance"
+msgstr "Verbessern"
+
+#: mocks/people.tsx:30
+msgid "Enthony"
+msgstr "Enthony"
+
+#: mocks/updates.tsx:17
+msgid "Expanding to Three Languages"
+msgstr "Erweiterung auf drei Sprachen"
+
+#: app/layout.tsx:100
+#: app/layout.tsx:39
+#: app/layout.tsx:51
+#: app/layout.tsx:93
+msgid "Expert AI for mental health – secure, private, and scientifically validated"
+msgstr ""
+"Experten-KI für psychische Gesundheit – sicher, privat und wissenschaftlich "
+"validiert"
+
+#: app/de/page.tsx:15
+#: app/fr/page.tsx:15
+#: app/page.tsx:16
+msgid "Expertise you trust. Privacy you control. Science that empowers."
+msgstr ""
+"Kompetenz, der Sie vertrauen. Datenschutz, den Sie kontrollieren. "
+"Wissenschaft, die Sie stärkt."
+
+#: components/Audio/index.tsx:69
+#: components/Photo/index.tsx:29
+#: constants/export.tsx:34
+#: constants/export.tsx:4
+msgid "Export"
+msgstr "Export"
+
+#: components/Audio/index.tsx:68
+msgid "Exporting 1 audio"
+msgstr "1 Audio exportieren"
+
+#: components/Photo/index.tsx:28
+msgid "Exporting 1 photo"
+msgstr "1 Foto exportieren"
+
+#: components/Adjust/index.tsx:15
+msgid "Exposure"
+msgstr "Exposition"
+
+#: components/Code/index.tsx:57
+#: components/SocialsPost/Post/index.tsx:29
+msgid "external-link"
+msgstr "externer Link"
+
+#: constants/export.tsx:26
+msgid "Facebook"
+msgstr "Facebook"
+
+#: app/de/updates-and-faq/page.tsx:27
+#: app/fr/updates-and-faq/page.tsx:27
+#: app/updates-and-faq/page.tsx:27
+msgid "FAQ"
+msgstr "Häufig gestellte Fragen"
+
+#: mocks/chatList.tsx:17
+msgid "Favorites"
+msgstr "Favoriten"
+
+#: components/Settings/ChatExport/index.tsx:28
+msgid "Favourite"
+msgstr "Favorit"
+
+#: app/de/updates-and-faq/page.tsx:26
+#: app/fr/updates-and-faq/page.tsx:26
+#: app/updates-and-faq/page.tsx:26
+msgid "Features, fixes & improvements."
+msgstr "Funktionen, Fehlerbehebungen und Verbesserungen."
+
+#: components/Audio/index.tsx:31
+msgid "Female"
+msgstr "Weiblich"
+
+#: mocks/socialsPost.tsx:16
+#: mocks/socialsPost.tsx:6
+msgid "Find top talent in a snap with our new Hiring Platform Mobile App! Streamline your recruitment process now."
+msgstr ""
+"Finden Sie mit unserer neuen mobilen App für die Personalbeschaffung im "
+"Handumdrehen die besten Talente! Optimieren Sie jetzt Ihren "
+"Rekrutierungsprozess."
+
+#: mocks/price.tsx:34
+msgid "For teams and clinics"
+msgstr "Für Teams und Kliniken"
+
+#: constants/export.tsx:7
+msgid "For web"
+msgstr "Für das Web"
+
+#: app/de/sign-in/page.tsx:17
+#: app/fr/sign-in/page.tsx:17
+#: app/sign-in/page.tsx:19
+msgid "Forgot password?"
+msgstr "Passwort vergessen?"
+
+#: components/Audio/index.tsx:14
+#: components/Settings/Appearance/index.tsx:13
+#: components/Video/index.tsx:12
+msgid "French"
+msgstr "Französisch"
+
+#: app/de/pricing/page.tsx:44
+#: app/fr/pricing/page.tsx:44
+#: app/pricing/page.tsx:44
+msgid "Frequently asked questions"
+msgstr "Häufig gestellte Fragen"
+
+#: components/Settings/Notifications/index.tsx:43
+msgid "From Brainwave app"
+msgstr "Aus der Brainwave-App"
+
+#: components/Settings/Notifications/index.tsx:27
+msgid "From team"
+msgstr "Vom Team"
+
+#: components/AddChatList/index.tsx:42
+#: components/AddChatList/User/index.tsx:12
+msgid "Full access"
+msgstr "Voller Zugriff"
+
+#: constants/export.tsx:17
+#: constants/export.tsx:47
+msgid "Get a link"
+msgstr "Link erhalten"
+
+#: components/AddChatList/index.tsx:19
+msgid "Golden Gate Bridge"
+msgstr "Golden Gate Bridge"
+
+#: app/audio-transcription/page.tsx:9
+#: app/de/audio-transcription/page.tsx:9
+#: app/fr/audio-transcription/page.tsx:9
+msgid "Hello 🙂"
+msgstr "Hallo 🙂"
+
+#: app/de/documentation-reports/page.tsx:11
+#: app/documentation-reports/page.tsx:11
+#: app/fr/documentation-reports/page.tsx:11
+msgid "Hello! How can I assist you with documentation and reporting today?"
+msgstr ""
+"Hallo! Wie kann ich Ihnen heute bei der Dokumentation und Berichterstattung "
+"helfen?"
+
+#: app/de/video-analysis/page.tsx:13
+#: app/fr/video-analysis/page.tsx:13
+#: app/video-analysis/page.tsx:13
+msgid "Hello! How can I assist you with video analysis today?"
+msgstr "Hallo! Wie kann ich Ihnen heute bei der Videoanalyse helfen?"
+
+#: components/SocialsPost/index.tsx:24
+msgid "Here's an example of promotional content optimized for Twitter and Facebook:"
+msgstr ""
+"Hier ist ein Beispiel für Werbeinhalte, die für Twitter und Facebook "
+"optimiert sind:"
+
+#: app/de/documentation-reports/page.tsx:9
+#: app/de/video-analysis/page.tsx:11
+#: app/documentation-reports/page.tsx:9
+#: app/fr/documentation-reports/page.tsx:9
+#: app/fr/video-analysis/page.tsx:11
+#: app/video-analysis/page.tsx:11
+msgid "Hi there 👋"
+msgstr "Hallo 👋"
+
+#: components/Adjust/index.tsx:17
+msgid "Highlights"
+msgstr "Höhepunkte"
+
+#: components/Feedback/Assessment/index.tsx:37
+msgid "How"
+msgstr "Wie"
+
+#: mocks/resultSearch.tsx:10
+msgid "How can I be more productive?"
+msgstr "Wie kann ich produktiver sein?"
+
+#: mocks/resultSearch.tsx:19
+msgid "How can I learn a new language quickly?"
+msgstr "Wie kann ich schnell eine neue Sprache lernen?"
+
+#: mocks/resultSearch.tsx:46
+msgid "How can I make my website more secure against cyber attacks?"
+msgstr "Wie kann ich meine Website besser vor Cyberangriffen schützen?"
+
+#: mocks/resultSearch.tsx:37
+msgid "How can I optimize my code for search engine optimization (SEO)"
+msgstr ""
+"Wie kann ich meinen Code für die Suchmaschinenoptimierung (SEO) optimieren?"
+
+#: mocks/faq.tsx:27
+msgid "How do I know the responses are safe and clinically appropriate?"
+msgstr "Woher weiß ich, dass die Antworten sicher und klinisch angemessen sind?"
+
+#: mocks/faq.tsx:7
+msgid "How is patient data protected when using mentalhealthGPT?"
+msgstr ""
+"Wie werden Patientendaten bei der Nutzung von mentalhealthGPT geschützt?"
+
+#: mocks/writeCodeChat.tsx:80
+msgid "HTML"
+msgstr "HTML"
+
+#: components/Code/index.tsx:55
+msgid "I have created a project in your Codepen account"
+msgstr "Ich habe ein Projekt in Ihrem Codepen-Konto erstellt"
+
+#: components/SocialsPost/Details/index.tsx:24
+msgid "image-up"
+msgstr "Image-Up"
+
+#: components/Feedback/Assessment/index.tsx:35
+msgid "Incorrect answer (5)"
+msgstr "Falsche Antwort (5)"
+
+#: components/SchedulePost/index.tsx:38
+msgid "info-circle"
+msgstr "Info-Kreis"
+
+#: app/checkout/page.tsx:12
+#: app/de/checkout/page.tsx:12
+#: app/de/pricing/page.tsx:40
+#: app/fr/checkout/page.tsx:12
+#: app/fr/pricing/page.tsx:40
+#: app/pricing/page.tsx:40
+#: mocks/price.tsx:30
+msgid "Institution"
+msgstr "Institution"
+
+#: app/checkout/page.tsx:19
+#: app/de/checkout/page.tsx:19
+#: app/fr/checkout/page.tsx:19
+#: mocks/price.tsx:38
+msgid "Institution-level support"
+msgstr "Unterstützung auf institutioneller Ebene"
+
+#: app/checkout/page.tsx:20
+#: app/de/checkout/page.tsx:20
+#: app/fr/checkout/page.tsx:20
+msgid "Integration with CRMs"
+msgstr "Integration mit CRMs"
+
+#: components/AudioPlayer/index.tsx:28
+msgid "Introducing \"Brainwave\", an AI-powered product that can turn any"
+msgstr "Wir stellen „Brainwave“ vor, ein KI-gestütztes Produkt, das jedes"
+
+#: components/Settings/Team/index.tsx:9
+msgid "Invite"
+msgstr "Einladen"
+
+#: components/AddChatList/index.tsx:66
+msgid "Invite team member"
+msgstr "Teammitglied einladen"
+
+#: constants/export.tsx:20
+#: constants/export.tsx:50
+msgid "Invite teammates"
+msgstr "Teamkollegen einladen"
+
+#: mocks/notifications.tsx:18
+#: mocks/notifications.tsx:29
+#: mocks/notifications.tsx:51
+#: mocks/notifications.tsx:62
+#: mocks/notifications.tsx:7
+#: mocks/notifications.tsx:73
+msgid "invited you to"
+msgstr "hat dich eingeladen zu"
+
+#: app/de/video-analysis/page.tsx:18
+#: app/fr/video-analysis/page.tsx:18
+#: app/video-analysis/page.tsx:18
+msgid "is a powerful feature that will provide secure, AI-generated insights into therapeutic sessions. We’re excited to launch this soon — enabling deeper reflection, supervision, and professional growth."
+msgstr ""
+"ist eine leistungsstarke Funktion, die sichere, KI-generierte Einblicke in "
+"Therapiesitzungen bietet. Wir freuen uns darauf, diese Funktion bald "
+"einzuführen – sie ermöglicht eine tiefere Reflexion, Supervision und "
+"berufliche Weiterentwicklung."
+
+#: app/de/documentation-reports/page.tsx:16
+#: app/documentation-reports/page.tsx:16
+#: app/fr/documentation-reports/page.tsx:16
+msgid "is an exciting new feature currently in development. We’re building it to save you time, reduce admin load, and enhance the quality of your documentation — stay tuned!"
+msgstr ""
+"ist eine spannende neue Funktion, die derzeit entwickelt wird. Wir "
+"entwickeln sie, um Ihnen Zeit zu sparen, den Verwaltungsaufwand zu "
+"reduzieren und die Qualität Ihrer Dokumentation zu verbessern – bleiben Sie "
+"dran!"
+
+#: mocks/faq.tsx:32
+msgid "Is mentalhealthGPT available in multiple languages?"
+msgstr "Ist mentalhealthGPT in mehreren Sprachen verfügbar?"
+
+#: mocks/faq.tsx:12
+msgid "Is mentalhealthGPT compliant with medical privacy laws?"
+msgstr "Entspricht mentalhealthGPT den medizinischen Datenschutzgesetzen?"
+
+#: components/Audio/index.tsx:44
+#: components/Video/index.tsx:25
+#: mocks/people.tsx:20
+msgid "Jack"
+msgstr "Jack"
+
+#: components/AddChatList/index.tsx:32
+msgid "Janiya (you)"
+msgstr "Janiya (du)"
+
+#: components/Audio/index.tsx:38
+#: components/Video/index.tsx:19
+msgid "Jenny"
+msgstr "Jenny"
+
+#: mocks/resultSearch.tsx:69
+msgid "Job interviews are an important step in securing a job, and people often ask for advice on how to present themselves and answer questions confidently during an interview."
+msgstr ""
+"Vorstellungsgespräche sind ein wichtiger Schritt auf dem Weg zu einer "
+"Anstellung, und oft werden Ratschläge dazu gefragt, wie man sich "
+"präsentieren und Fragen während eines Vorstellungsgesprächs selbstbewusst "
+"beantworten kann."
+
+#: mocks/people.tsx:35
+msgid "Jony"
+msgstr "Jony"
+
+#: mocks/members.tsx:11
+msgid "Josianne"
+msgstr "Josianne"
+
+#: components/Settings/ChatExport/index.tsx:15
+msgid "JPG"
+msgstr "JPG"
+
+#: constants/export.tsx:10
+msgid "JPG Large"
+msgstr "JPG Groß"
+
+#: components/Settings/EditProfile/index.tsx:35
+msgid "JPG or PNG and GIF is allowed"
+msgstr "JPG oder PNG und GIF sind zulässig"
+
+#: constants/export.tsx:6
+msgid "JPG Small"
+msgstr "JPG Klein"
+
+#: mocks/writeCodeChat.tsx:90
+msgid "JS"
+msgstr "JS"
+
+#: components/Search/Item/index.tsx:32
+msgid "Jump"
+msgstr "Sprung"
+
+#: app/audio-transcription/page.tsx:10
+#: app/audio-transcription/page.tsx:12
+#: app/de/audio-transcription/page.tsx:10
+#: app/de/audio-transcription/page.tsx:12
+#: app/de/diagnosis-support/page.tsx:11
+#: app/de/documentation-reports/page.tsx:10
+#: app/de/generation-socials-post/page.tsx:14
+#: app/de/video-analysis/page.tsx:12
+#: app/diagnosis-support/page.tsx:11
+#: app/documentation-reports/page.tsx:10
+#: app/fr/audio-transcription/page.tsx:10
+#: app/fr/audio-transcription/page.tsx:12
+#: app/fr/diagnosis-support/page.tsx:11
+#: app/fr/documentation-reports/page.tsx:10
+#: app/fr/generation-socials-post/page.tsx:14
+#: app/fr/video-analysis/page.tsx:12
+#: app/generation-socials-post/page.tsx:14
+#: app/video-analysis/page.tsx:12
+msgid "Just now"
+msgstr "Gerade eben"
+
+#: mocks/members.tsx:35
+msgid "Kellen"
+msgstr "Kellen"
+
+#: mocks/people.tsx:50
+msgid "Kent"
+msgstr "Kent"
+
+#: mocks/applications.tsx:48
+msgid "Language learning app"
+msgstr "Sprachlern-App"
+
+#: mocks/resultSearch.tsx:20
+msgid "Language learning is a popular activity, and people often ask for advice on how to accelerate their learning process and improve their fluency in a new language."
+msgstr ""
+"Das Erlernen von Sprachen ist eine beliebte Aktivität, und oft werden "
+"Ratschläge gefragt, wie man den Lernprozess beschleunigen und die "
+"Sprachkenntnisse verbessern kann."
+
+#: constants/export.tsx:41
+msgid "Large - 44.1 kHz"
+msgstr "Groß – 44,1 kHz"
+
+#: components/Search/index.tsx:25
+#: mocks/resultSearch.tsx:55
+msgid "Last 30 days"
+msgstr "Letzte 30 Tage"
+
+#: components/Search/Item/index.tsx:33
+msgid "Last edited by"
+msgstr "Zuletzt bearbeitet von"
+
+#: components/Search/index.tsx:22
+msgid "Last week"
+msgstr "Letzte Woche"
+
+#: components/RightSidebar/Profile/index.tsx:42
+msgid "Lead visual designer at UI8"
+msgstr "Leitender Grafikdesigner bei UI8"
+
+#: components/Feedback/index.tsx:22
+msgid "Learn grammar rules:"
+msgstr "Grammatikregeln lernen:"
+
+#: components/Feedback/index.tsx:22
+msgid "Learning the basic grammar rules can help you write and speak more accurately. Try to focus on one rule at a time and practice using it in your writing and speaking. There are many online resources, such as grammar books and videos, that can help you learn grammar rules."
+msgstr ""
+"Das Erlernen der grundlegenden Grammatikregeln kann Ihnen helfen, präziser "
+"zu schreiben und zu sprechen. Konzentrieren Sie sich jeweils auf eine Regel "
+"und üben Sie deren Anwendung beim Schreiben und Sprechen. Es gibt viele "
+"Online-Ressourcen wie Grammatikbücher und Videos, die Ihnen beim Erlernen "
+"der Grammatikregeln helfen können."
+
+#: app/de/updates-and-faq/page.tsx:31
+#: app/fr/updates-and-faq/page.tsx:31
+#: app/updates-and-faq/page.tsx:31
+msgid "Let’s ask the smartest AI Chat"
+msgstr "Fragen wir den intelligentesten KI-Chat"
+
+#: components/LeftSidebar/ToggleTheme/index.tsx:17
+msgid "Light"
+msgstr "Licht"
+
+#: components/Settings/Appearance/index.tsx:26
+msgid "Light mode"
+msgstr "Hellmodus"
+
+#: components/ModalShareChat/index.tsx:48
+msgid "Link"
+msgstr "Link"
+
+#: components/ModalShareChat/index.tsx:27
+msgid "Link copied"
+msgstr "Link kopiert"
+
+#: components/Feedback/index.tsx:18
+msgid "Listen to English:"
+msgstr "Englisch hören:"
+
+#: components/Feedback/index.tsx:18
+msgid "Listening to English podcasts, audiobooks, and videos can help you improve your listening and comprehension skills. It can also help you get used to different accents and intonations."
+msgstr ""
+"Das Anhören von englischen Podcasts, Hörbüchern und Videos kann Ihnen dabei "
+"helfen, Ihre Hör- und Verständnisfähigkeiten zu verbessern. Außerdem können "
+"Sie sich so an verschiedene Akzente und Intonationen gewöhnen."
+
+#: app/de/updates-and-faq/page.tsx:33
+#: app/fr/updates-and-faq/page.tsx:33
+#: app/updates-and-faq/page.tsx:33
+msgid "Load more"
+msgstr "Mehr laden"
+
+#: components/Settings/EditProfile/index.tsx:40
+msgid "Location"
+msgstr "Standort"
+
+#: templates/CheckoutPage/Form/Foot/index.tsx:24
+msgid "lock"
+msgstr "Schloss"
+
+#: components/RightSidebar/Profile/index.tsx:22
+msgid "Log out"
+msgstr "Abmelden"
+
+#: components/Settings/Team/Actions/index.tsx:15
+msgid "Make admin"
+msgstr "Als Administrator festlegen"
+
+#: components/SocialsPost/Details/index.tsx:14
+msgid "Make sure you have the rights to use the suggested media."
+msgstr ""
+"Stellen Sie sicher, dass Sie die Rechte zur Nutzung der vorgeschlagenen "
+"Medien besitzen."
+
+#: components/Audio/index.tsx:34
+msgid "Man"
+msgstr "Mann"
+
+#: app/de/thanks/page.tsx:12
+#: app/fr/thanks/page.tsx:14
+#: app/thanks/page.tsx:14
+#: components/LeftSidebar/index.tsx:78
+#: components/LeftSidebar/Navigation/index.tsx:56
+msgid "Manage subscription"
+msgstr "Abonnement verwalten"
+
+#: mocks/applications.tsx:15
+#: mocks/applications.tsx:22
+#: mocks/applications.tsx:29
+#: mocks/applications.tsx:36
+#: mocks/applications.tsx:43
+#: mocks/applications.tsx:50
+#: mocks/applications.tsx:57
+#: mocks/applications.tsx:64
+#: mocks/applications.tsx:8
+msgid "Mar 2023"
+msgstr "März 2023"
+
+#: components/Audio/index.tsx:41
+#: components/Video/index.tsx:22
+msgid "Mark"
+msgstr "Mark"
+
+#: components/Settings/Team/index.tsx:8
+msgid "Members"
+msgstr "Mitglieder"
+
+#: app/de/page.tsx:14
+#: app/fr/page.tsx:14
+#: app/page.tsx:15
+msgid "mentalhealthGPT"
+msgstr "mentalhealthGPT"
+
+#: mocks/faq.tsx:18
+msgid "mentalhealthGPT is not just a general-purpose AI repurposed for mental health – it is specifically designed from the ground up to serve the needs of mental health professionals, clinics, and patients. While platforms like ChatGPT or DeepSeek offer powerful language capabilities, they are not tailored for clinical accuracy, therapeutic tone, or privacy-critical environments. mentalhealthGPT uses specialized AI models that have been fine-tuned on mental health contexts – including psychotherapy, diagnostics, patient communication, research workflows, and administrative tasks. This leads to more context-aware, ethically aligned, and medically relevant outputs. Moreover, we enforce strict encryption, with decryption keys held exclusively in Switzerland. This zero-trust architecture means only the authorized user can read the data – not even we as developers. The result: a trusted digital assistant designed for the realities of clinical practice, enabling safe, accurate, and efficient support across the mental healthcare spectrum."
+msgstr ""
+"mentalhealthGPT ist nicht nur eine allgemeine KI, die für die psychische "
+"Gesundheit umfunktioniert wurde – sie wurde von Grund auf speziell für die "
+"Bedürfnisse von Fachleuten für psychische Gesundheit, Kliniken und Patienten "
+"entwickelt. Plattformen wie ChatGPT oder DeepSeek bieten zwar "
+"leistungsstarke Sprachfunktionen, sind jedoch nicht auf klinische "
+"Genauigkeit, therapeutischen Tonfall oder datenschutzkritische Umgebungen "
+"zugeschnitten. mentalhealthGPT verwendet spezielle KI-Modelle, die auf den "
+"Kontext der psychischen Gesundheit abgestimmt sind – darunter "
+"Psychotherapie, Diagnostik, Patientenkommunikation, Forschungsabläufe und "
+"Verwaltungsaufgaben. Dies führt zu kontextbezogeneren, ethisch korrekten und "
+"medizinisch relevanten Ergebnissen. Darüber hinaus setzen wir eine strenge "
+"Verschlüsselung durch, wobei die Entschlüsselungscodes ausschließlich in der "
+"Schweiz aufbewahrt werden. Diese Zero-Trust-Architektur bedeutet, dass nur "
+"autorisierte Benutzer die Daten lesen können – nicht einmal wir als "
+"Entwickler. Das Ergebnis: ein vertrauenswürdiger digitaler Assistent, der "
+"für die Realitäten der klinischen Praxis entwickelt wurde und eine sichere, "
+"genaue und effiziente Unterstützung im gesamten Spektrum der psychischen "
+"Gesundheitsversorgung ermöglicht."
+
+#: mocks/notifications.tsx:40
+msgid "mention you in"
+msgstr "Sie erwähnen in"
+
+#: components/Settings/Notifications/index.tsx:22
+#: components/Settings/Notifications/index.tsx:38
+#: components/Settings/Notifications/index.tsx:46
+msgid "Mentioned"
+msgstr "Erwähnt"
+
+#: mocks/applications.tsx:12
+msgid "Midjourney"
+msgstr "Halbzeit"
+
+#: app/checkout/page.tsx:36
+#: app/de/checkout/page.tsx:36
+#: app/fr/checkout/page.tsx:36
+msgid "MM / YY"
+msgstr "MM / JJ"
+
+#: app/de/pricing/page.tsx:33
+#: app/fr/pricing/page.tsx:33
+#: app/pricing/page.tsx:33
+msgid "mo"
+msgstr "mo"
+
+#: app/checkout/page.tsx:27
+#: app/de/checkout/page.tsx:27
+#: app/fr/checkout/page.tsx:27
+msgid "monthly"
+msgstr "monatlich"
+
+#: app/de/pricing/page.tsx:29
+#: app/fr/pricing/page.tsx:29
+#: app/pricing/page.tsx:29
+msgid "Monthly billing"
+msgstr "Monatliche Abrechnung"
+
+#: app/checkout/page.tsx:15
+#: app/de/checkout/page.tsx:15
+#: app/fr/checkout/page.tsx:15
+msgid "Monthly Plan"
+msgstr "Monatsplan"
+
+#: components/Export/index.tsx:37
+msgid "More"
+msgstr "Mehr"
+
+#: components/AddChatList/index.tsx:63
+#: components/Settings/EditProfile/index.tsx:39
+msgid "Name"
+msgstr "Name"
+
+#: components/MultiSelect/index.tsx:56
+msgid "Name member"
+msgstr "Mitglied benennen"
+
+#: components/RightSidebar/index.tsx:141
+msgid "New chat"
+msgstr "Neuer Chat"
+
+#: components/LeftSidebar/ChatList/index.tsx:112
+msgid "New list"
+msgstr "Neue Liste"
+
+#: components/Settings/Notifications/index.tsx:14
+#: components/Settings/Notifications/index.tsx:30
+msgid "New notifications"
+msgstr "Neue Benachrichtigungen"
+
+#: components/Settings/Password/index.tsx:13
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: components/SocialsPost/Post/index.tsx:36
+msgid "New variation"
+msgstr "Neue Variante"
+
+#: components/RightSidebar/Profile/index.tsx:14
+msgid "New version available"
+msgstr "Neue Version verfügbar"
+
+#: components/Audio/index.tsx:21
+msgid "Normal"
+msgstr "Normal"
+
+#: components/Code/index.tsx:54
+msgid "Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side."
+msgstr ""
+"Hinweis: Dies ist nur ein Beispiel für ein einfaches HTML-Formular. In einer "
+"realen Situation würden Sie auch eine ordnungsgemäße Validierung und "
+"Verarbeitung der Formulardaten auf der Serverseite einbauen wollen."
+
+#: components/RightSidebar/Notifications/index.tsx:38
+msgid "notification"
+msgstr "Benachrichtigung"
+
+#: components/RightSidebar/Notifications/index.tsx:44
+#: components/Settings/Notifications/index.tsx:69
+#: constants/settings.tsx:13
+msgid "Notifications"
+msgstr "Benachrichtigungen"
+
+#: components/AddChatList/index.tsx:72
+msgid "Only people invited in this list can access"
+msgstr "Nur Personen, die in dieser Liste eingeladen sind, haben Zugriff"
+
+#: mocks/faq.tsx:13
+msgid "Only the user has access to the encrypted data. No one else – not even our technical team – can decrypt or view the data. This ensures full compliance with the highest data protection standards (GDPR, Swiss DSG, and clinical-grade confidentiality). The mentalhealthGPT platform is designed from the ground up as zero-access and privacy-first."
+msgstr ""
+"Nur der Nutzer hat Zugriff auf die verschlüsselten Daten. Niemand sonst – "
+"nicht einmal unser technisches Team – kann die Daten entschlüsseln oder "
+"einsehen. Dadurch wird die vollständige Einhaltung der höchsten "
+"Datenschutzstandards (DSGVO, Schweizer DSG und klinische Vertraulichkeit) "
+"gewährleistet. Die mentalhealthGPT-Plattform wurde von Grund auf als Zero-"
+"Access- und Privacy-First-Plattform konzipiert."
+
+#: mocks/applications.tsx:19
+msgid "Open AI"
+msgstr "Open AI"
+
+#: app/de/sign-in/page.tsx:14
+#: app/fr/sign-in/page.tsx:14
+#: app/sign-in/page.tsx:15
+msgid "OR"
+msgstr "ODER"
+
+#: components/ModalShareChat/index.tsx:65
+msgid "Or share to members"
+msgstr "Oder an Mitglieder weitergeben"
+
+#: app/de/generation-socials-post/page.tsx:10
+#: app/fr/generation-socials-post/page.tsx:10
+#: app/generation-socials-post/page.tsx:10
+msgid "Organize chats (coming soon)"
+msgstr "Chats organisieren (in Kürze verfügbar)"
+
+#: constants/export.tsx:11
+msgid "Original + Settings"
+msgstr "Original + Einstellungen"
+
+#: app/audio-transcription/page.tsx:13
+#: app/de/audio-transcription/page.tsx:13
+#: app/fr/audio-transcription/page.tsx:13
+msgid "Our AI can securely transcribe audio recordings from therapy sessions, structure the content, and generate clear, professional summaries — all with end-to-end encryption."
+msgstr ""
+"Unsere KI kann Audioaufzeichnungen von Therapiesitzungen sicher "
+"transkribieren, den Inhalt strukturieren und klare, professionelle "
+"Zusammenfassungen erstellen – alles mit End-to-End-Verschlüsselung."
+
+#: app/de/documentation-reports/page.tsx:13
+#: app/documentation-reports/page.tsx:13
+#: app/fr/documentation-reports/page.tsx:13
+msgid "Our AI will help you transform transcripts into clear, structured, and confidential reports — automatically."
+msgstr ""
+"Unsere KI hilft Ihnen dabei, Transkripte automatisch in klare, strukturierte "
+"und vertrauliche Berichte umzuwandeln."
+
+#: app/de/video-analysis/page.tsx:14
+#: app/fr/video-analysis/page.tsx:14
+#: app/video-analysis/page.tsx:14
+msgid "Our AI-powered video analysis is coming soon. It will help analyze therapy session recordings, detect key themes, nonverbal cues, and therapeutic dynamics — all with full end-to-end security."
+msgstr ""
+"Unsere KI-gestützte Videoanalyse ist in Kürze verfügbar. Sie hilft dabei, "
+"Aufzeichnungen von Therapiesitzungen zu analysieren, wichtige Themen, "
+"nonverbale Signale und therapeutische Dynamiken zu erkennen – und das alles "
+"mit umfassender End-to-End-Sicherheit."
+
+#: mocks/updates.tsx:55
+msgid "Our custom mentalhealthGPT models are now fully secured, hosted, and scalable within the EU region — ready to support fast and confidential AI services for mental health workflows. All data is end-to-end encrypted and only accessible with decryption keys securely stored in Switzerland."
+msgstr ""
+"Unsere maßgeschneiderten mentalhealthGPT-Modelle sind nun vollständig "
+"gesichert, gehostet und innerhalb der EU skalierbar – bereit, schnelle und "
+"vertrauliche KI-Dienste für Arbeitsabläufe im Bereich der psychischen "
+"Gesundheit zu unterstützen. Alle Daten sind durchgehend verschlüsselt und "
+"nur mit Entschlüsselungscodes zugänglich, die sicher in der Schweiz "
+"gespeichert sind."
+
+#: app/de/sign-in/page.tsx:16
+#: app/de/sign-in/page.tsx:23
+#: app/fr/sign-in/page.tsx:16
+#: app/fr/sign-in/page.tsx:23
+#: app/sign-in/page.tsx:18
+#: app/sign-in/page.tsx:27
+#: components/Settings/DeleteAccount/index.tsx:11
+#: components/Settings/Password/index.tsx:11
+#: components/Settings/Password/index.tsx:12
+#: constants/settings.tsx:9
+msgid "Password"
+msgstr "Passwort"
+
+#: components/Answer/index.tsx:26
+msgid "Pause generating"
+msgstr "Pause generieren"
+
+#: components/Answer/index.tsx:26
+msgid "pause-circle"
+msgstr "Pause-Kreis"
+
+#: app/checkout/page.tsx:30
+#: app/de/checkout/page.tsx:30
+#: app/fr/checkout/page.tsx:30
+msgid "Pay"
+msgstr "Bezahlen"
+
+#: components/Settings/ChatExport/index.tsx:9
+msgid "PDF"
+msgstr "PDF"
+
+#: mocks/applications.tsx:26
+msgid "Peeps"
+msgstr "Peeps"
+
+#: mocks/price.tsx:37
+msgid "Per team members"
+msgstr "Pro Teammitglied"
+
+#: mocks/price.tsx:12
+#: mocks/price.tsx:26
+msgid "Per user"
+msgstr "Pro Benutzer"
+
+#: mocks/applications.tsx:13
+msgid "Photo generation by AI"
+msgstr "Fotogenerierung durch KI"
+
+#: mocks/chatHistory.tsx:20
+#: mocks/notifications.tsx:29
+#: mocks/notifications.tsx:51
+#: mocks/notifications.tsx:62
+#: mocks/notifications.tsx:7
+msgid "Photo retouch"
+msgstr "Fotoretusche"
+
+#: mocks/notifications.tsx:18
+#: mocks/notifications.tsx:73
+msgid "Pinkie"
+msgstr "Pinkie"
+
+#: templates/CheckoutPage/Form/RadioGroup/index.tsx:27
+msgid "plan"
+msgstr "Plan"
+
+#: app/checkout/page.tsx:24
+#: app/de/checkout/page.tsx:24
+#: app/fr/checkout/page.tsx:24
+msgid "Plan"
+msgstr "Plan"
+
+#: components/Video/View/index.tsx:9
+msgid "play"
+msgstr "spielen"
+
+#: components/Feedback/Assessment/Item/index.tsx:31
+msgid "play-circle"
+msgstr "Spielkreis"
+
+#: app/de/diagnosis-support/page.tsx:10
+#: app/diagnosis-support/page.tsx:10
+#: app/fr/diagnosis-support/page.tsx:10
+msgid "Please review this clinical case and suggest possible diagnoses. Highlight any important symptoms or behavioral patterns."
+msgstr ""
+"Bitte überprüfen Sie diesen klinischen Fall und schlagen Sie mögliche "
+"Diagnosen vor. Heben Sie alle wichtigen Symptome oder Verhaltensmuster "
+"hervor."
+
+#: app/de/supervision-training/page.tsx:11
+#: app/fr/supervision-training/page.tsx:11
+#: app/supervision-training/page.tsx:11
+msgid "Please review this supervision case and provide constructive feedback for the trainee. Focus on communication, assessment quality, and risk handling."
+msgstr ""
+"Bitte überprüfen Sie diesen Supervisionsfall und geben Sie dem "
+"Auszubildenden konstruktives Feedback. Konzentrieren Sie sich dabei auf die "
+"Kommunikation, die Qualität der Beurteilung und den Umgang mit Risiken."
+
+#: components/SocialsPost/Post/index.tsx:37
+msgid "plus"
+msgstr "plus"
+
+#: components/LeftSidebar/ChatList/index.tsx:110
+msgid "plus-circle"
+msgstr "Plus-Kreis"
+
+#: components/Photo/index.tsx:37
+msgid "plus-circle-stroke"
+msgstr "Plus-Kreis-Strich"
+
+#: app/de/pricing/page.tsx:31
+#: app/fr/pricing/page.tsx:31
+#: app/pricing/page.tsx:31
+msgid "popular"
+msgstr "beliebt"
+
+#: app/checkout/page.tsx:13
+#: app/de/checkout/page.tsx:13
+#: app/fr/checkout/page.tsx:13
+msgid "Popular"
+msgstr "Beliebt"
+
+#: components/Feedback/index.tsx:16
+msgid "Practice writing:"
+msgstr "Schreibübungen:"
+
+#: app/checkout/page.tsx:10
+#: app/de/checkout/page.tsx:10
+#: app/fr/checkout/page.tsx:10
+msgid "Pricing Plans for every budget - Unlock the power of AI"
+msgstr "Preise für jedes Budget – Nutzen Sie die Leistungsfähigkeit der KI"
+
+#: components/Settings/Appearance/index.tsx:48
+msgid "Primary language"
+msgstr "Primäre Sprache"
+
+#: mocks/price.tsx:67
+msgid "Priority support"
+msgstr "Vorrangige Unterstützung"
+
+#: app/de/sign-in/page.tsx:28
+#: app/fr/sign-in/page.tsx:28
+#: app/sign-in/page.tsx:32
+msgid "Privacy & Cookie Statement"
+msgstr "Datenschutz- und Cookie-Erklärung"
+
+#: app/de/pricing/page.tsx:39
+#: app/fr/pricing/page.tsx:39
+#: app/pricing/page.tsx:39
+#: mocks/price.tsx:19
+msgid "Pro"
+msgstr "Pro"
+
+#: components/Settings/EditProfile/index.tsx:26
+msgid "profile"
+msgstr "Profil"
+
+#: components/Feedback/index.tsx:14
+msgid "Read regularly:"
+msgstr "Regelmäßig lesen:"
+
+#: components/Feedback/index.tsx:14
+msgid "Reading is an excellent way to improve your vocabulary, grammar, and comprehension skills. Try to read a variety of materials, including books, newspapers, magazines, and online articles."
+msgstr ""
+"Lesen ist eine hervorragende Möglichkeit, Ihren Wortschatz, Ihre "
+"Grammatikkenntnisse und Ihr Leseverständnis zu verbessern. Versuchen Sie, "
+"verschiedene Materialien zu lesen, darunter Bücher, Zeitungen, Zeitschriften "
+"und Online-Artikel."
+
+#: components/Answer/Actions/index.tsx:51
+msgid "Regenerate response"
+msgstr "Antwort regenerieren"
+
+#: components/Adjust/index.tsx:24
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: app/de/sign-in/page.tsx:21
+#: app/fr/sign-in/page.tsx:21
+#: app/sign-in/page.tsx:24
+msgid "Reset password"
+msgstr "Passwort zurücksetzen"
+
+#: app/de/sign-in/page.tsx:19
+#: app/fr/sign-in/page.tsx:19
+#: app/sign-in/page.tsx:22
+msgid "Reset your password"
+msgstr "Passwort zurücksetzen"
+
+#: components/Settings/Sessions/Device/index.tsx:22
+msgid "Revoke"
+msgstr "Widerrufen"
+
+#: components/Settings/Sessions/index.tsx:18
+msgid "Safari on Macbook Pro"
+msgstr "Safari auf Macbook Pro"
+
+#: mocks/applications.tsx:54
+msgid "Sapiens"
+msgstr "Sapiens"
+
+#: app/checkout/page.tsx:29
+#: app/de/checkout/page.tsx:29
+#: app/fr/checkout/page.tsx:29
+#: components/AudioPlayer/index.tsx:31
+msgid "Save"
+msgstr "sparen"
+
+#: components/Settings/EditProfile/index.tsx:42
+msgid "Save changes"
+msgstr "Änderungen speichern"
+
+#: components/Photo/index.tsx:47
+msgid "scale"
+msgstr "Maßstab"
+
+#: components/SchedulePost/index.tsx:40
+msgid "Schedule"
+msgstr "Zeitplan"
+
+#: components/SocialsPost/index.tsx:54
+msgid "Schedule post"
+msgstr "Beitrag planen"
+
+#: components/SchedulePost/index.tsx:19
+msgid "Schedule your post with Buffer"
+msgstr "Planen Sie Ihren Beitrag mit Buffer"
+
+#: components/SchedulePost/index.tsx:38
+msgid "Scheduled in your current timezone"
+msgstr "Geplant in Ihrer aktuellen Zeitzone"
+
+#: components/Search/index.tsx:58
+#: components/Search/index.tsx:66
+msgid "search"
+msgstr "Suche"
+
+#: components/LeftSidebar/index.tsx:72
+#: components/LeftSidebar/Navigation/index.tsx:55
+#: components/Search/index.tsx:58
+msgid "Search"
+msgstr "Suche"
+
+#: components/Search/index.tsx:66
+msgid "Search ..."
+msgstr "Suchen ..."
+
+#: app/applications/page.tsx:10
+#: app/de/applications/page.tsx:10
+#: app/fr/applications/page.tsx:10
+msgid "Search by app name or category"
+msgstr "Suche nach App-Name oder Kategorie"
+
+#: components/Search/index.tsx:56
+#: components/Search/index.tsx:64
+msgid "search-1"
+msgstr "Suche-1"
+
+#: mocks/updates.tsx:39
+msgid "Secure Frontend Interface Launched"
+msgstr "Sichere Frontend-Schnittstelle eingeführt"
+
+#: app/checkout/page.tsx:39
+#: app/de/checkout/page.tsx:39
+#: app/fr/checkout/page.tsx:39
+msgid "Secured form with CH Banking"
+msgstr "Gesichertes Formular mit CH Banking"
+
+#: mocks/price.tsx:16
+msgid "Security and data protection"
+msgstr "Sicherheit und Datenschutz"
+
+#: components/Settings/ChatExport/index.tsx:59
+msgid "Select chat list to export"
+msgstr "Chat-Liste zum Exportieren auswählen"
+
+#: constants/settings.tsx:21
+msgid "Sessions"
+msgstr "Sitzungen"
+
+#: components/RightSidebar/Notifications/index.tsx:46
+msgid "settings"
+msgstr "Einstellungen"
+
+#: components/LeftSidebar/index.tsx:90
+#: components/LeftSidebar/Navigation/index.tsx:58
+#: components/RightSidebar/Profile/index.tsx:18
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: components/Adjust/index.tsx:18
+msgid "Shadows"
+msgstr "Schatten"
+
+#: components/Audio/index.tsx:70
+#: components/Chat/index.tsx:25
+#: components/Photo/index.tsx:30
+#: components/Photo/index.tsx:41
+#: components/SocialsPost/index.tsx:47
+msgid "share"
+msgstr "teilen"
+
+#: components/Answer/Actions/index.tsx:85
+#: components/Chat/Actions/index.tsx:18
+#: components/ModalShareChat/index.tsx:79
+#: components/RightSidebar/index.tsx:69
+#: constants/export.tsx:15
+#: constants/export.tsx:45
+msgid "Share"
+msgstr "Teilen"
+
+#: components/SocialsPost/index.tsx:50
+#: components/SocialsPost/Post/index.tsx:28
+msgid "Share now"
+msgstr "Jetzt teilen"
+
+#: components/ModalShareChat/index.tsx:42
+msgid "Share this chat"
+msgstr "Diesen Chat teilen"
+
+#: components/SocialsPost/index.tsx:30
+msgid "Share with"
+msgstr "Teilen mit"
+
+#: components/SocialsPost/index.tsx:51
+msgid "share-1"
+msgstr "Anteil-1"
+
+#: components/Settings/EditProfile/index.tsx:41
+msgid "Short bio"
+msgstr "Kurzbiografie"
+
+#: app/audio-transcription/page.tsx:11
+#: app/de/audio-transcription/page.tsx:11
+#: app/fr/audio-transcription/page.tsx:11
+msgid "Show me what you can do"
+msgstr "Zeig mir, was du kannst"
+
+#: app/de/sign-in/page.tsx:11
+#: app/fr/sign-in/page.tsx:11
+#: app/sign-in/page.tsx:12
+msgid "Sign in"
+msgstr "Anmelden"
+
+#: app/de/sign-in/page.tsx:18
+#: app/fr/sign-in/page.tsx:18
+#: app/sign-in/page.tsx:20
+msgid "Sign in with Brainwave"
+msgstr "Mit aidX anmelden"
+
+#: components/Settings/Sessions/index.tsx:31
+msgid "Sign out all devices"
+msgstr "Alle Geräte abmelden"
+
+#: components/Settings/Sessions/index.tsx:15
+#: components/Settings/Sessions/index.tsx:21
+#: components/Settings/Sessions/index.tsx:9
+msgid "Signed in Nov 17, 2023"
+msgstr "Unterzeichnet am 17. November 2023"
+
+#: app/audio-transcription/page.tsx:14
+#: app/de/audio-transcription/page.tsx:14
+#: app/fr/audio-transcription/page.tsx:14
+msgid "Simply upload a recorded session. All patient information remains strictly confidential and is protected by strong encryption directly in your browser, during transfer, and back again — ensuring full privacy at every step."
+msgstr ""
+"Laden Sie einfach eine aufgezeichnete Sitzung hoch. Alle Patientendaten "
+"werden streng vertraulich behandelt und durch eine starke Verschlüsselung "
+"direkt in Ihrem Browser, während der Übertragung und beim Zurücksenden "
+"geschützt – so ist bei jedem Schritt vollständige Privatsphäre gewährleistet."
+
+#: mocks/applications.tsx:40
+msgid "Slack"
+msgstr "Schlaffheit"
+
+#: constants/export.tsx:37
+msgid "Small - 320kbps"
+msgstr "Klein – 320 kbps"
+
+#: components/Answer/Actions/index.tsx:60
+#: components/Answer/Actions/index.tsx:83
+msgid "Smile heart eyes"
+msgstr "Lächeln mit Herzchenaugen"
+
+#: components/Answer/Actions/index.tsx:68
+#: components/Answer/Actions/index.tsx:98
+msgid "Smile unamused"
+msgstr "Unamüsiert lächeln"
+
+#: components/Settings/Notifications/index.tsx:18
+#: components/Settings/Notifications/index.tsx:34
+msgid "Someone invite you to new chat"
+msgstr "Jemand hat dich zu einem neuen Chat eingeladen"
+
+#: app/de/documentation-reports/page.tsx:12
+#: app/documentation-reports/page.tsx:12
+#: app/fr/documentation-reports/page.tsx:12
+msgid "Soon you’ll be able to generate professional documentation and reports — whether for clinical use, insurance submissions, or personal records of therapy and supervision sessions."
+msgstr ""
+"Bald können Sie professionelle Dokumentationen und Berichte erstellen – sei "
+"es für den klinischen Gebrauch, für Versicherungsanträge oder für "
+"persönliche Aufzeichnungen von Therapie- und Supervisionssitzungen."
+
+#: components/Feedback/index.tsx:20
+msgid "Speak with native speakers:"
+msgstr "Mit Muttersprachlern sprechen:"
+
+#: components/Feedback/index.tsx:20
+msgid "Speaking with native speakers can help you improve your pronunciation, fluency, and confidence. You can find language exchange partners or join conversation groups online or in person."
+msgstr ""
+"Das Sprechen mit Muttersprachlern kann Ihnen helfen, Ihre Aussprache, "
+"Sprachgewandtheit und Ihr Selbstvertrauen zu verbessern. Sie können "
+"Sprachaustauschpartner finden oder sich online oder persönlich "
+"Konversationsgruppen anschließen."
+
+#: mocks/price.tsx:61
+msgid "Specialized AI tuned for diagnostics"
+msgstr "Spezialisierte KI für die Diagnostik"
+
+#: components/Audio/index.tsx:79
+msgid "Speed"
+msgstr "Geschwindigkeit"
+
+#: constants/export.tsx:56
+msgid "Spotify"
+msgstr "Spotify"
+
+#: components/Feedback/Details/index.tsx:14
+#: components/Feedback/Details/index.tsx:15
+#: components/Feedback/Details/index.tsx:16
+#: components/Feedback/Details/index.tsx:17
+#: components/Feedback/Details/index.tsx:18
+msgid "star-rating"
+msgstr "Sternbewertung"
+
+#: app/checkout/page.tsx:44
+#: app/de/checkout/page.tsx:44
+#: app/fr/checkout/page.tsx:44
+msgid "Start Institution plan"
+msgstr "Start Institution Plan"
+
+#: app/de/thanks/page.tsx:13
+#: app/fr/thanks/page.tsx:15
+#: app/thanks/page.tsx:15
+msgid "Start new chat"
+msgstr "Neuen Chat starten"
+
+#: mocks/price.tsx:9
+msgid "Start your spezialized AI experience"
+msgstr "Starten Sie Ihre spezialisierte KI-Erfahrung"
+
+#: app/de/pricing/page.tsx:38
+#: app/fr/pricing/page.tsx:38
+#: app/pricing/page.tsx:38
+#: mocks/price.tsx:6
+msgid "Starter"
+msgstr "Starter"
+
+#: app/applications/page.tsx:11
+#: app/de/applications/page.tsx:11
+#: app/fr/applications/page.tsx:11
+msgid "Suggested apps"
+msgstr "Empfohlene Apps"
+
+#: components/SocialsPost/Details/index.tsx:13
+msgid "Suggested media"
+msgstr "Empfohlene Medien"
+
+#: components/Feedback/index.tsx:11
+msgid "Suggestion to improve your test"
+msgstr "Vorschlag zur Verbesserung Ihres Tests"
+
+#: components/AddChatList/index.tsx:27
+msgid "Sugus green"
+msgstr "Sugus grün"
+
+#: app/de/supervision-training/page.tsx:10
+#: app/fr/supervision-training/page.tsx:10
+#: app/supervision-training/page.tsx:10
+msgid "Supervision & Training"
+msgstr "Aufsicht & Training"
+
+#: constants/settings.tsx:29
+msgid "Team"
+msgstr "Team"
+
+#: mocks/applications.tsx:41
+msgid "Team communication platform"
+msgstr "Team-Kommunikationsplattform"
+
+#: app/de/sign-in/page.tsx:26
+#: app/fr/sign-in/page.tsx:26
+#: app/sign-in/page.tsx:30
+msgid "Terms of Service"
+msgstr "Nutzungsbedingungen"
+
+#: app/de/thanks/page.tsx:10
+#: app/fr/thanks/page.tsx:10
+#: app/thanks/page.tsx:10
+msgid "Thank you for your purchase!"
+msgstr "Vielen Dank für Ihren Einkauf!"
+
+#: mocks/chatList.tsx:11
+msgid "Therapies"
+msgstr "Therapien"
+
+#: app/de/therapy-support/page.tsx:13
+#: app/fr/therapy-support/page.tsx:14
+#: app/therapy-support/page.tsx:13
+msgid "Therapy Support"
+msgstr "Therapieunterstützung"
+
+#: app/de/therapy-support/page.tsx:10
+#: app/fr/therapy-support/page.tsx:11
+#: app/therapy-support/page.tsx:10
+msgid "Therapy Support AI"
+msgstr "Therapieunterstützende KI"
+
+#: app/de/video-analysis/page.tsx:16
+#: app/fr/video-analysis/page.tsx:16
+#: app/video-analysis/page.tsx:16
+msgid "This feature is currently in development — stay tuned!"
+msgstr ""
+"Diese Funktion befindet sich derzeit in der Entwicklung – bleiben Sie dran!"
+
+#: components/Settings/Sessions/index.tsx:26
+msgid "This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize."
+msgstr ""
+"Dies ist eine Liste der Geräte, die sich bei Ihrem Konto angemeldet haben. "
+"Widerrufen Sie alle Sitzungen, die Sie nicht erkennen."
+
+#: mocks/resultSearch.tsx:6
+msgid "Thu 16 Feb"
+msgstr "Donnerstag, 16. Februar"
+
+#: components/SchedulePost/index.tsx:33
+msgid "time"
+msgstr "Zeit"
+
+#: components/SchedulePost/index.tsx:30
+msgid "Time"
+msgstr "Zeit"
+
+#: components/Search/index.tsx:19
+#: mocks/resultSearch.tsx:5
+msgid "Today"
+msgstr "Heute"
+
+#: mocks/people.tsx:15
+msgid "Tom"
+msgstr "Tom"
+
+#: mocks/people.tsx:40
+msgid "Tomy"
+msgstr "Tomy"
+
+#: components/RightSidebar/Profile/index.tsx:41
+msgid "Tran Mau Tri Tam"
+msgstr "Tran Mau Tri Tam"
+
+#: mocks/price.tsx:55
+msgid "transcription & documentation"
+msgstr "Transkription und Dokumentation"
+
+#: mocks/chatList.tsx:5
+msgid "Transcripts"
+msgstr "Transkripte"
+
+#: components/Message/Files/index.tsx:16
+#: components/Message/Files/index.tsx:28
+#: components/Notify/index.tsx:20
+msgid "trash"
+msgstr "Müll"
+
+#: constants/export.tsx:29
+msgid "Twitter"
+msgstr "Twitter"
+
+#: mocks/members.tsx:5
+msgid "Tyrique"
+msgstr "Tyrique"
+
+#: mocks/applications.tsx:5
+msgid "UI8"
+msgstr "UI8"
+
+#: components/Settings/Notifications/index.tsx:11
+msgid "UI8 Platform"
+msgstr "UI8-Plattform"
+
+#: components/Settings/ChatExport/index.tsx:23
+msgid "UI8 Production"
+msgstr "UI8-Produktion"
+
+#: components/Audio/index.tsx:17
+#: components/Settings/Appearance/index.tsx:16
+#: components/Video/index.tsx:15
+msgid "Ukrainian"
+msgstr "Ukrainisch"
+
+#: components/Answer/Actions/index.tsx:36
+#: components/RightSidebar/ChatItem/index.tsx:30
+msgid "Undo"
+msgstr "Rückgängig"
+
+#: mocks/faq.tsx:28
+msgid "Unlike general-purpose chatbots, mentalhealthGPT is based on domain-specific language models that are pre-trained on mental health literature, therapeutic frameworks, and real-world clinical cases (anonymized). These models are not only deeply aligned with the language and logic of mental health care, but are also continuously refined by our team of experts – including psychiatrists, psychologists, and clinical ethicists. We combine this technical foundation with rigorous human-in-the-loop validation and ethical review processes. Every model is monitored and benchmarked against clinical standards to ensure relevance, reliability, and safety. Our goal is to offer professionals a trustworthy AI assistant that speaks their language and understands the nuanced context of mental health work."
+msgstr ""
+"Im Gegensatz zu allgemeinen Chatbots basiert mentalhealthGPT auf "
+"domänenspezifischen Sprachmodellen, die anhand von Literatur zum Thema "
+"psychische Gesundheit, therapeutischen Rahmenwerken und realen klinischen "
+"Fällen (anonymisiert) vortrainiert wurden. Diese Modelle sind nicht nur eng "
+"auf die Sprache und Logik der psychischen Gesundheitsversorgung abgestimmt, "
+"sondern werden auch kontinuierlich von unserem Expertenteam – darunter "
+"Psychiater, Psychologen und klinische Ethiker – weiterentwickelt. Wir "
+"kombinieren diese technische Grundlage mit strengen Validierungs- und "
+"Ethikprüfungsprozessen, bei denen Menschen involviert sind. Jedes Modell "
+"wird überwacht und anhand klinischer Standards bewertet, um Relevanz, "
+"Zuverlässigkeit und Sicherheit zu gewährleisten. Unser Ziel ist es, "
+"Fachleuten einen vertrauenswürdigen KI-Assistenten zur Verfügung zu stellen, "
+"der ihre Sprache spricht und die Nuancen der Arbeit im Bereich der "
+"psychischen Gesundheit versteht."
+
+#: app/de/pricing/page.tsx:19
+#: app/fr/pricing/page.tsx:19
+#: app/pricing/page.tsx:19
+msgid "Unlike generic AI chatbots, mentalhealthGPT is designed specifically for mental health professionals and institutions. We invest in data protection, secure hosting in Switzerland/EU, and specialized models for therapy, supervision, diagnostics, and documentation. This focus on quality, trust, and professional use makes the subscription more expensive than mass-market AI tools."
+msgstr ""
+"Im Gegensatz zu generischen KI-Chatbots wurde mentalhealthGPT speziell für "
+"Fachleute und Einrichtungen im Bereich der psychischen Gesundheit "
+"entwickelt. Wir investieren in Datenschutz, sicheres Hosting in der Schweiz/"
+"EU und spezialisierte Modelle für Therapie, Supervision, Diagnostik und "
+"Dokumentation. Dieser Fokus auf Qualität, Vertrauen und professionelle "
+"Nutzung macht das Abonnement teurer als KI-Tools für den Massenmarkt."
+
+#: mocks/price.tsx:27
+msgid "Unlimited messages"
+msgstr "Unbegrenzte Nachrichten"
+
+#: app/de/sign-in/page.tsx:9
+#: app/fr/sign-in/page.tsx:9
+#: app/sign-in/page.tsx:9
+msgid "Unlock the power of AI"
+msgstr "Entfesseln Sie die Power der KI"
+
+#: mocks/price.tsx:15
+msgid "Up to 100 messages/mo"
+msgstr "Bis zu 100 Nachrichten/Monat"
+
+#: app/de/updates-and-faq/page.tsx:27
+#: app/fr/updates-and-faq/page.tsx:27
+#: app/updates-and-faq/page.tsx:27
+msgid "Updates"
+msgstr "Aktualisierungen"
+
+#: app/de/updates-and-faq/page.tsx:25
+#: app/fr/updates-and-faq/page.tsx:25
+#: app/updates-and-faq/page.tsx:25
+#: components/LeftSidebar/index.tsx:84
+#: components/LeftSidebar/Navigation/index.tsx:57
+msgid "Updates & FAQ"
+msgstr "Updates & FAQ"
+
+#: app/de/pricing/page.tsx:35
+#: app/fr/pricing/page.tsx:35
+#: app/pricing/page.tsx:35
+msgid "Upgrade"
+msgstr "Upgrade"
+
+#: constants/export.tsx:24
+#: constants/export.tsx:54
+msgid "Upload"
+msgstr "Hochladen"
+
+#: components/SocialsPost/Details/index.tsx:25
+msgid "Upload media"
+msgstr "Medien hochladen"
+
+#: components/Settings/EditProfile/index.tsx:31
+msgid "Upload new image"
+msgstr "Neues Bild hochladen"
+
+#: components/Message/AddFile/index.tsx:37
+msgid "Upload to mentalhealthGPT"
+msgstr "Auf mentalhealthGPT hochladen"
+
+#: app/de/pricing/page.tsx:26
+#: app/fr/pricing/page.tsx:26
+#: app/pricing/page.tsx:26
+msgid "User Plans for every needs"
+msgstr "Benutzerpläne für jeden Bedarf"
+
+#: components/Settings/EditProfile/index.tsx:39
+msgid "Username"
+msgstr "Benutzername"
+
+#: app/de/sign-in/page.tsx:15
+#: app/fr/sign-in/page.tsx:15
+#: app/sign-in/page.tsx:17
+msgid "Username or email"
+msgstr "Benutzername oder E-Mail-Adresse"
+
+#: components/Photo/index.tsx:36
+msgid "variation"
+msgstr "Variation"
+
+#: components/AddChatList/index.tsx:23
+msgid "Veronica"
+msgstr "Veronika"
+
+#: components/Feedback/Details/index.tsx:11
+msgid "Very good!"
+msgstr "Sehr gut!"
+
+#: app/de/pricing/page.tsx:41
+#: app/fr/pricing/page.tsx:41
+#: app/pricing/page.tsx:41
+msgid "via email"
+msgstr "per E-Mail"
+
+#: components/Search/index.tsx:9
+msgid "Video"
+msgstr "Video"
+
+#: app/de/video-analysis/page.tsx:10
+#: app/fr/video-analysis/page.tsx:10
+#: app/video-analysis/page.tsx:10
+msgid "Video Analysis"
+msgstr "Videoanalyse"
+
+#: components/Code/index.tsx:56
+msgid "View"
+msgstr "Ansicht"
+
+#: components/ScheduleResult/index.tsx:8
+msgid "View on Buffer"
+msgstr "Auf Buffer anzeigen"
+
+#: mocks/people.tsx:45
+msgid "Vlad"
+msgstr "Vlad"
+
+#: components/Audio/index.tsx:81
+#: components/Video/index.tsx:40
+msgid "Voice"
+msgstr "Stimme"
+
+#: app/de/therapy-support/page.tsx:15
+#: app/fr/therapy-support/page.tsx:16
+#: app/therapy-support/page.tsx:15
+msgid "Want to support mentalhealthGPT or learn more? Email"
+msgstr "Möchten Sie mentalhealthGPT unterstützen oder mehr erfahren? E-Mail"
+
+#: components/Settings/DeleteAccount/index.tsx:10
+msgid "Warning: Deleting your account will permanently remove all of your data and cannot be undone. This includes your profile, chats, comments, and any other information associated with your account. Are you sure you want to proceed with deleting your account?"
+msgstr ""
+"Warnung: Durch das Löschen Ihres Kontos werden alle Ihre Daten dauerhaft "
+"entfernt und können nicht wiederhergestellt werden. Dazu gehören Ihr Profil, "
+"Chats, Kommentare und alle anderen mit Ihrem Konto verbundenen "
+"Informationen. Möchten Sie wirklich mit dem Löschen Ihres Kontos fortfahren?"
+
+#: mocks/updates.tsx:22
+msgid "We are excited to announce that mentalhealthGPT is now available in German, French, and English! This expansion dramatically increases our reach. With this step, we enable psychologists, psychiatrists, and therapists from e.g Switzerland, France, Germany, and the global English-speaking community to benefit from our secure, specialized AI. Multilingual access is a key step in making professional mental health support scalable, collaborative, and more effective."
+msgstr ""
+"Wir freuen uns, Ihnen mitteilen zu können, dass mentalhealthGPT nun auf "
+"Deutsch, Französisch und Englisch verfügbar ist! Diese Erweiterung "
+"vergrößert unsere Reichweite erheblich. Mit diesem Schritt ermöglichen wir "
+"Psychologen, Psychiatern und Therapeuten aus beispielsweise der Schweiz, "
+"Frankreich, Deutschland und der globalen englischsprachigen Gemeinschaft, "
+"von unserer sicheren, spezialisierten KI zu profitieren. Der mehrsprachige "
+"Zugang ist ein wichtiger Schritt, um professionelle psychologische "
+"Unterstützung skalierbar, kollaborativ und effektiver zu gestalten."
+
+#: app/de/pricing/page.tsx:15
+#: app/fr/pricing/page.tsx:15
+#: app/pricing/page.tsx:15
+msgid "We don’t issue refunds for early cancellations. However, you will keep full access to all features until the end of your current subscription period."
+msgstr ""
+"Wir gewähren keine Rückerstattungen für vorzeitige Kündigungen. Sie behalten "
+"jedoch bis zum Ende Ihres aktuellen Abonnementzeitraums uneingeschränkten "
+"Zugriff auf alle Funktionen."
+
+#: components/Settings/DeleteAccount/index.tsx:9
+msgid "We’re sorry to see you go"
+msgstr "Wir bedauern Ihr Ausscheiden sehr"
+
+#: mocks/updates.tsx:44
+msgid "We’ve deployed the first secure user interface for mentalhealthGPT, enabling intuitive and privacy-first interaction with our AI services. This marks a big milestone toward bringing our platform directly into clinical hands."
+msgstr ""
+"Wir haben die erste sichere Benutzeroberfläche für mentalhealthGPT "
+"eingeführt, die eine intuitive und datenschutzorientierte Interaktion mit "
+"unseren KI-Diensten ermöglicht. Dies ist ein wichtiger Meilenstein auf dem "
+"Weg, unsere Plattform direkt in die klinische Praxis zu bringen."
+
+#: mocks/notifications.tsx:18
+#: mocks/notifications.tsx:73
+msgid "Welcome form"
+msgstr "Willkommensformular"
+
+#: mocks/notifications.tsx:40
+msgid "Welcome page"
+msgstr "Willkommensseite"
+
+#: mocks/chatHistory.tsx:12
+msgid "Welcome page with input"
+msgstr "Willkommensseite mit Eingabefeld"
+
+#: app/de/generation-socials-post/page.tsx:11
+#: app/fr/generation-socials-post/page.tsx:11
+#: app/generation-socials-post/page.tsx:11
+msgid ""
+"Welcome! This area will let you organize your chats.\n"
+"\n"
+"In V1 you'll get:\n"
+"• System lists: Transcripts, Therapies, Favorites, Archived\n"
+"• Your own lists: create, rename, delete\n"
+"• Add a chat to multiple lists (like tags)\n"
+"• Favorite and Archive toggles\n"
+"• Search and filter\n"
+"\n"
+"All metadata stays private; content remains end-to-end encrypted. Later we’ll add Smart Lists (saved filters), shared lists for teams, and bulk actions."
+msgstr ""
+"Willkommen! In diesem Bereich können Sie Ihre Chats organisieren.\n"
+"\n"
+"In V1 erhalten Sie:\n"
+"• Systemlisten: Transkripte, Therapien, Favoriten, Archivierte\n"
+"• Ihre eigenen Listen: erstellen, umbenennen, löschen\n"
+"• Einen Chat zu mehreren Listen hinzufügen (wie Tags)\n"
+"• Favoriten- und Archiv-Schaltflächen\n"
+"• Suche und Filter\n"
+"\n"
+"Alle Metadaten bleiben privat, Inhalte werden durchgehend verschlüsselt. "
+"Später werden wir intelligente Listen (gespeicherte Filter), gemeinsame "
+"Listen für Teams und Massenaktionen hinzufügen."
+
+#: mocks/faq.tsx:22
+msgid "What do the different AI chat areas mean (therapy, supervision, documentation etc.)?"
+msgstr ""
+"Was bedeuten die verschiedenen KI-Chat-Bereiche (Therapie, Supervision, "
+"Dokumentation usw.)?"
+
+#: mocks/resultSearch.tsx:68
+msgid "What is the best way to prepare for a job interview?"
+msgstr "Wie bereitet man sich am besten auf ein Vorstellungsgespräch vor?"
+
+#: mocks/faq.tsx:17
+msgid "What makes mentalhealthGPT different from other chatbots like ChatGPT or DeepSeek?"
+msgstr ""
+"Was unterscheidet mentalhealthGPT von anderen Chatbots wie ChatGPT oder "
+"DeepSeek?"
+
+#: mocks/resultSearch.tsx:59
+msgid "What's the best way to implement a database in my web application?"
+msgstr "Wie implementiere ich eine Datenbank am besten in meine Webanwendung?"
+
+#: components/Adjust/index.tsx:19
+msgid "White"
+msgstr "Weiß"
+
+#: app/de/pricing/page.tsx:18
+#: app/fr/pricing/page.tsx:18
+#: app/pricing/page.tsx:18
+msgid "Why does mentalhealthGPT cost more than other chat AIs?"
+msgstr "Warum kostet mentalhealthGPT mehr als andere Chat-KIs?"
+
+#: mocks/notifications.tsx:62
+#: mocks/notifications.tsx:7
+msgid "Wilfred"
+msgstr "Wilfred"
+
+#: components/Question/index.tsx:32
+msgid "WIP"
+msgstr "in Arbeit"
+
+#: mocks/resultSearch.tsx:11
+msgid "With increasing demands in personal and professional life, people often look for ways to boost their productivity and time management skills."
+msgstr ""
+"Angesichts steigender Anforderungen im Privat- und Berufsleben suchen "
+"Menschen oft nach Möglichkeiten, ihre Produktivität und ihr Zeitmanagement "
+"zu verbessern."
+
+#: mocks/people.tsx:10
+msgid "Wowa"
+msgstr "Wowa"
+
+#: mocks/resultSearch.tsx:28
+msgid "Write a Welcome Page in HTML and CSS"
+msgstr "Erstellen Sie eine Willkommensseite in HTML und CSS"
+
+#: mocks/chatHistory.tsx:13
+#: mocks/chatHistory.tsx:21
+#: mocks/chatHistory.tsx:28
+#: mocks/chatHistory.tsx:6
+#: mocks/resultSearch.tsx:29
+#: mocks/resultSearch.tsx:38
+#: mocks/resultSearch.tsx:47
+#: mocks/resultSearch.tsx:60
+msgid "Write code (HTML, CSS and JS) for a simple form with 3 input fields and a dropdown with 2 buttons, cancel and send"
+msgstr ""
+"Schreiben Sie Code (HTML, CSS und JS) für ein einfaches Formular mit 3 "
+"Eingabefeldern und einem Dropdown-Menü mit 2 Schaltflächen: „Abbrechen“ und "
+"„Senden“"
+
+#: components/Feedback/index.tsx:16
+msgid "Writing can help you improve your grammar, spelling, and sentence structure. Try to write regularly, even if it's just a short paragraph or a journal entry."
+msgstr ""
+"Schreiben kann Ihnen helfen, Ihre Grammatik, Rechtschreibung und "
+"Satzstruktur zu verbessern. Versuchen Sie, regelmäßig zu schreiben, auch "
+"wenn es nur ein kurzer Absatz oder ein Tagebucheintrag ist."
+
+#: components/AudioPlayer/index.tsx:28
+msgid "written script into high-quality audio. Using advanced natural language processing and text-to-speech technology, Speechify can generate realistic and natural-sounding voices in multiple languages, allowing you to create audiobooks, podcasts, and other audio content with ease. Additionally, Speechify offers a wide range of customization options, including different voices, speaking styles, and even emotions, so you can create audio that perfectly matches your brand or project. With Speechify, creating audio content has never been easier."
+msgstr ""
+"geschriebenes Skript in hochwertige Audioaufnahmen umwandeln. Mithilfe "
+"fortschrittlicher Technologien zur Verarbeitung natürlicher Sprache und Text-"
+"to-Speech kann Speechify realistische und natürlich klingende Stimmen in "
+"mehreren Sprachen generieren, sodass Sie ganz einfach Hörbücher, Podcasts "
+"und andere Audioinhalte erstellen können. Darüber hinaus bietet Speechify "
+"eine Vielzahl von Anpassungsoptionen, darunter verschiedene Stimmen, "
+"Sprechstile und sogar Emotionen, sodass Sie Audioinhalte erstellen können, "
+"die perfekt zu Ihrer Marke oder Ihrem Projekt passen. Mit Speechify war die "
+"Erstellung von Audioinhalten noch nie so einfach."
+
+#: app/de/pricing/page.tsx:32
+#: app/fr/pricing/page.tsx:32
+#: app/pricing/page.tsx:32
+msgid "year"
+msgstr "Jahr"
+
+#: app/checkout/page.tsx:28
+#: app/de/checkout/page.tsx:28
+#: app/fr/checkout/page.tsx:28
+msgid "yearly"
+msgstr "jährlich"
+
+#: app/de/pricing/page.tsx:28
+#: app/fr/pricing/page.tsx:28
+#: app/pricing/page.tsx:28
+msgid "Yearly billing"
+msgstr "Jährliche Abrechnung"
+
+#: components/RightSidebar/index.tsx:104
+msgid "Yes"
+msgstr "Ja"
+
+#: mocks/faq.tsx:43
+msgid "Yes – and that’s one of the most powerful things we offer. We help your clinic, institution, or group practice create its own private mental health AI specialist. This expert is trained using your documentation, therapeutic language, and organizational culture. The specialization happens on three levels: institution-wide, for individual departments (such as child & adolescent therapy or bipolar care), and even for complex cases with significant therapy history. This creates an AI that truly understands your professional context – from how you speak to how you work. Unlike generic chatbots, your AI is aligned with your values, expertise, and standards. It supports your team, enhances consistency, and is constantly improving. For clinics, research labs, and even larger private practices, this means safer, smarter, and more effective digital support — one that becomes a real part of your therapeutic system."
+msgstr ""
+"Ja – und das ist eines der leistungsstärksten Angebote, die wir haben. Wir "
+"helfen Ihrer Klinik, Einrichtung oder Gemeinschaftspraxis dabei, einen "
+"eigenen privaten KI-Spezialisten für psychische Gesundheit zu entwickeln. "
+"Dieser Experte wird anhand Ihrer Dokumentation, Ihrer therapeutischen "
+"Sprache und Ihrer Organisationskultur geschult. Die Spezialisierung erfolgt "
+"auf drei Ebenen: institutionsweit, für einzelne Abteilungen (wie Kinder- und "
+"Jugendtherapie oder bipolare Versorgung) und sogar für komplexe Fälle mit "
+"umfangreicher Therapiegeschichte. So entsteht eine KI, die Ihren beruflichen "
+"Kontext wirklich versteht – von Ihrer Sprache bis zu Ihrer Arbeitsweise. Im "
+"Gegensatz zu generischen Chatbots ist Ihre KI auf Ihre Werte, Ihr Fachwissen "
+"und Ihre Standards abgestimmt. Sie unterstützt Ihr Team, sorgt für mehr "
+"Konsistenz und verbessert sich ständig. Für Kliniken, Forschungslabore und "
+"sogar größere Privatpraxen bedeutet dies eine sicherere, intelligentere und "
+"effektivere digitale Unterstützung, die zu einem echten Teil Ihres "
+"therapeutischen Systems wird."
+
+#: app/de/pricing/page.tsx:10
+#: app/fr/pricing/page.tsx:10
+#: app/pricing/page.tsx:10
+msgid "Yes — the Starter and Pro plans include a 7-day free trial. You won’t be charged if you cancel during the trial. Access matches the selected plan, and billing starts only after day 7. You can switch plans or cancel anytime from Settings."
+msgstr ""
+"Ja – die Tarife „Starter“ und „Pro“ beinhalten eine kostenlose 7-tägige "
+"Testphase. Wenn Sie während der Testphase kündigen, fallen keine Kosten an. "
+"Der Zugriff entspricht dem ausgewählten Tarif, und die Abrechnung beginnt "
+"erst nach Ablauf von 7 Tagen. Sie können jederzeit in den Einstellungen den "
+"Tarif wechseln oder kündigen."
+
+#: mocks/faq.tsx:33
+msgid "Yes, currently we support English, German, and French. Additional languages can be activated upon request. For institutional partners, we also offer model fine-tuning in native terminology and style – ensuring professional use even in local dialects or therapeutic schools."
+msgstr ""
+"Ja, derzeit unterstützen wir Englisch, Deutsch und Französisch. Weitere "
+"Sprachen können auf Anfrage aktiviert werden. Für institutionelle Partner "
+"bieten wir auch eine Feinabstimmung der Modelle in Bezug auf Terminologie "
+"und Stil an, um eine professionelle Nutzung auch in lokalen Dialekten oder "
+"therapeutischen Schulen zu gewährleisten."
+
+#: components/ScheduleResult/index.tsx:5
+msgid "You are done!"
+msgstr "Sie sind fertig!"
+
+#: components/Message/AddFile/index.tsx:39
+msgid "You can add prompts after uploading."
+msgstr "Sie können nach dem Hochladen Eingabeaufforderungen hinzufügen."
+
+#: components/Audio/index.tsx:65
+msgid "Your audio has been successfully generated. You may further customize it or simply download it for use."
+msgstr ""
+"Ihre Audiodatei wurde erfolgreich erstellt. Sie können sie weiter anpassen "
+"oder einfach herunterladen und verwenden."
+
+#: app/de/thanks/page.tsx:11
+#: app/fr/thanks/page.tsx:11
+#: app/thanks/page.tsx:11
+msgid "Your order has been received and is currently being processed. You will receive an email confirmation with your order details shortly."
+msgstr ""
+"Ihre Bestellung wurde erhalten und wird derzeit bearbeitet. Sie erhalten in "
+"Kürze eine E-Mail-Bestätigung mit Ihren Bestelldaten."
+
+#: components/Settings/DeleteAccount/index.tsx:11
+msgid "Your password"
+msgstr "Ihr Passwort"
+
+#: components/ScheduleResult/index.tsx:6
+msgid "Your post has been scheduled for February 14th, 2023 at 11:30 and will be shared through"
+msgstr ""
+"Ihr Beitrag wurde für den 14. Februar 2023 um 11:30 Uhr geplant und wird über"
+
+#: components/Settings/Sessions/index.tsx:25
+msgid "Your sessions"
+msgstr "Ihre Sitzungen"
+
+#: app/de/video-analysis/page.tsx:15
+#: app/fr/video-analysis/page.tsx:15
+#: app/video-analysis/page.tsx:15
+msgid "Your video data is protected at every step: in your browser, during upload, and throughout the AI-based processing."
+msgstr ""
+"Ihre Videodaten sind bei jedem Schritt geschützt: in Ihrem Browser, während "
+"des Uploads und während der gesamten KI-basierten Verarbeitung."
+
+#: components/Feedback/Assessment/Item/index.tsx:39
+msgid "YouTube video player"
+msgstr "YouTube-Videoplayer"
+
+#: components/Question/Document/index.tsx:12
+msgid "zoom-in"
+msgstr "vergrößern"

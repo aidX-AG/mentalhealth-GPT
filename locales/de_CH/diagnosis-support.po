@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-09-23 13:42+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/diagnosis-support/de_CH/>\n"
+"Language: de_CH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: diagnosis-support.sections.banner-prefix
+msgid "🚧 The AI functionality for"
+msgstr "🚧 Die KI-Funktionalität für"
+
+#. key: diagnosis-support.chat.title
+msgid "Diagnosis Support"
+msgstr "Diagnoseunterstützung"
+
+#. key: diagnosis-support.sections.under-development
+msgid "is currently under development."
+msgstr "befindet sich derzeit in der Entwicklung."
+
+#. key: diagnosis-support.sections.coming-soon
+msgid ""
+"It will gradually become available as we integrate specialized models to "
+"support mental health diagnostics."
+msgstr ""
+"Es wird nach und nach verfügbar sein, wenn wir spezialisierte Modelle zur "
+"Unterstützung der psychischen Gesundheitsdiagnostik integrieren."

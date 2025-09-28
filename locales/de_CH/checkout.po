@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-09-27 13:28+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/checkout/de_CH/>\n"
+"Language: de_CH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: checkout.sections.hero-title
+msgid "AI chat made affordable"
+msgstr "KI-Chat zu erschwinglichen Preisen"
+
+#. key: checkout.body.hero-subtitle
+msgid "Pricing Plans for every budget - Unlock the power of AI"
+msgstr "Preise für jedes Budget – Nutzen Sie die Leistungsfähigkeit der KI"
+
+#. key: checkout.sections.enterprise
+msgid "Enterprise"
+msgstr "Institution"
+
+#. key: checkout.sections.popular
+msgid "Popular"
+msgstr "Beliebt"
+
+#. key: checkout.fragments.price-399
+msgid "$399"
+msgstr "399 CHF"
+
+#. key: checkout.sections.monthly-plan
+msgid "Monthly Plan"
+msgstr "Monatsplan"
+
+#. key: checkout.sections.plan
+msgid "Plan"
+msgstr "Plan"
+
+#. key: checkout.sections.change-currency
+msgid "Change currency"
+msgstr "Währung ändern"
+
+#. key: checkout.sections.usd
+msgid "USD"
+msgstr "USD"
+
+#. key: checkout.sections.billing-email
+msgid "Billing email"
+msgstr "Rechnungs-E-Mail"
+
+#. key: checkout.sections.card-details
+msgid "Card details"
+msgstr "Kartendetails"
+
+#. key: checkout.form.email
+msgid "Email address"
+msgstr "E-Mail-Adresse"
+
+#. key: checkout.form.card-number
+msgid "Card number"
+msgstr "Kartennummer"
+
+#. key: checkout.form.mm-yy
+msgid "MM / YY"
+msgstr "MM / JJ"
+
+#. key: checkout.form.cvc
+msgid "CVC"
+msgstr "CVC"
+
+#. key: checkout.body.security-note
+msgid "Secured form with UI8 Banking"
+msgstr "Gesichertes Formular mit CH Banking"
+
+#. key: checkout.sections.billed-now
+msgid "Billed now: $399"
+msgstr "Jetzt in Rechnung gestellt: 399 CHF"
+
+#. key: checkout.sections.apply-promo-code
+msgid "Apply promo code"
+msgstr "Promo-Code anwenden"
+
+#. key: checkout.body.billing-consent
+msgid ""
+"By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
+"charged $399 every month, unless you cancel."
+msgstr ""
+"Durch Klicken auf „Institutions-Plan starten“ erklären Sie sich damit "
+"einverstanden, dass Ihnen monatlich 399 CHF in Rechnung gestellt werden, "
+"sofern Sie nicht kündigen."
+
+#. key: checkout.sections.cta-start-plan
+msgid "Start Brainwave Enterprise plan"
+msgstr "Starten Sie den aidX Enterprise-Plan"
+
+#. key: checkout.sections.pay
+msgid "Pay"
+msgstr "Bezahlen"
+
+#. key: checkout.sections.currency-symbol
+msgid "$"
+msgstr "CHF"
+
+#. key: checkout.sections.per-month
+msgid "/month"
+msgstr "/ Monat"
+
+#. key: checkout.badges.save
+msgid "Save"
+msgstr "sparen"
+
+#. key: checkout.badges.percent
+msgid "%"
+msgstr "%"

@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-09-23 13:27+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/home/fr_CH/>\n"
+"Language: fr_CH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: home.sections.brand
+msgid "mentalhealthGPT"
+msgstr "mentalhealthGPT"
+
+#. key: home.sections.tagline
+msgid "Expertise you trust. Privacy you control. Science that empowers."
+msgstr ""
+"Une expertise en laquelle vous avez confiance. Une confidentialité que vous "
+"contrôlez. Une science qui vous donne les moyens d'agir."

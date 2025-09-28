@@ -2,8 +2,8 @@ import { useState } from "react";
 import Icon from "@/components/Icon";
 import Select from "@/components/Select";
 import Item from "./Item";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 const createdOptions = [{
   id: "0",
   title: t("Video")

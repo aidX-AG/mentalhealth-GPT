@@ -1,28 +1,34 @@
 {
   "name": "aidX",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
+    "build": "next build",
+    "prebuild": "npm run i18n:convert:all",
     "lint": "next lint",
-
     "optimize-images": "bash ./scripts/optimize-images.sh",
 
-    // (optional) eure bestehenden i18n-Codemod-Helfer bleiben unangetastet
+    "i18n:po:code": "ts-node --compiler-options '{\"module\":\"commonjs\"}' scripts/extract-po-from-code.ts",
+    "i18n:po:json": "node scripts/json-to-pot.cjs",
+    "i18n:po:all": "npm run i18n:po:code && npm run i18n:po:json",
+    "i18n:po:namespaces": "node scripts/extract-po-namespaces.cjs",
+
+    "i18n:merge:core": "msgmerge --update --backup=off locales/de_CH/core.po locales/pot/core.pot && msgmerge --update --backup=off locales/fr_CH/core.po locales/pot/core.pot",
+    "i18n:merge:namespaces": "bash scripts/merge-pot-to-po.sh",
+    "i18n:merge:all": "npm run i18n:merge:core && npm run i18n:merge:namespaces",
+
+    "i18n:convert:en": "node scripts/po-to-json.cjs en",
+    "i18n:convert:de": "node scripts/po-to-json.cjs de_CH",
+    "i18n:convert:fr": "node scripts/po-to-json.cjs fr_CH",
+    "i18n:convert:all": "npm run i18n:convert:en && npm run i18n:convert:de && npm run i18n:convert:fr",
+
     "i18n:codemod:dry": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts",
     "i18n:codemod:write": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write",
     "i18n:codemod:one": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-codemod.ts --write --include",
-    "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts",
-
-    // 🔽 NEU: EN-Strings aus Code extrahieren (ersetzt TX-Push)
-    // Nutzung: npm run i18n:extract -- app/updates-and-faq/page.tsx
-    "i18n:extract": "node scripts/extract-locales.js",
-
-    // 🔽 OPTIONAL: legacy-Split, nur falls ihr noch große de.json/fr.json → Module zerlegen wollt
-    // Nutzung: npm run i18n:split
-    "i18n:split": "bash scripts/split_locales.sh"
+    "i18n:mapping:build": "TS_NODE_PROJECT=tsconfig.scripts.json ts-node scripts/i18n-build-mapping.ts"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
@@ -42,6 +48,7 @@
     "core-js": "^3.45.0",
     "encoding": "^0.1.13",
     "framer-motion": "^11.1.7",
+    "gettext": "^0.0.1",
     "i18next": "^25.3.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
@@ -84,11 +91,14 @@
     "eslint-config-next": "^14.2.31",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.1",
+    "gettext-extractor": "^4.0.1",
+    "gettext-parser": "^8.0.0",
     "postcss": "^8",
     "postcss-import": "^15.1.0",
     "tailwindcss": "^3.4.1",
     "ts-morph": "^26.0.0",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "yargs": "^18.0.0"
   }

@@ -4,99 +4,138 @@ import { Providers } from "./providers";
 import { Inter, Karla } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
-import TxClientProvider from "./TxClientProvider";
 import GlobalLoading from "./GlobalLoading";
+import type { Locale } from "@/lib/i18n-static";
 
-// ✅ i18n (Server-Runtime)
+// ✅ Serverseitige i18n (nutzt eure aus PO generierten JSONs)
 import { loadMessages, makeT } from "@/lib/i18n-static";
-import { setT } from "@/lib/i18n-runtime";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+
 const inter = Inter({
   weight: ["500", "600", "700"],
   subsets: ["latin"],
   display: "block",
-  variable: "--font-inter"
+  variable: "--font-inter",
 });
 const karla = Karla({
   weight: ["400", "700"],
   subsets: ["latin"],
   display: "block",
-  variable: "--font-karla"
+  variable: "--font-karla",
 });
 
-// Dynamische Metadaten (mit hreflang-Alternates)
-export async function generateMetadata(): Promise<Metadata> {
+// ✅ Helper: Locale sicher bestimmen
+function getSafeLocale(params?: { locale?: string }): Locale {
+  const raw = params?.locale || "en";
+  if (raw.startsWith("de")) return "de";
+  if (raw.startsWith("fr")) return "fr";
+  return "en";
+}
+
+// ✅ generateMetadata bekommt params (für Locale)
+export async function generateMetadata({
+  params,
+}: {
+  params?: { locale?: string };
+}): Promise<Metadata> {
+  const lang = getSafeLocale(params);
+  const t = makeT(loadMessages(lang)); // serverseitige Übersetzung
+
   return {
     title: {
       default: "mentalhealthGPT",
-      template: "%s | mentalhealthGPT"
+      template: "%s | mentalhealthGPT",
     },
-    description: t("Expert AI for mental health – secure, private, and scientifically validated"),
+    description: t(
+      "Expert AI for mental health – secure, private, and scientifically validated"
+    ),
     alternates: {
-      languages: {
-        de: "/de",
-        fr: "/fr",
-        en: "/"
-      }
+      languages: { de: "/de", fr: "/fr", en: "/" },
     },
     openGraph: {
-      title: t("mentalhealthGPT"),
-      description: t("Expert AI for mental health – secure, private, and scientifically validated"),
+      title: "mentalhealthGPT",
+      description: t(
+        "Expert AI for mental health – secure, private, and scientifically validated"
+      ),
       url: "https://www.mentalhealth-gpt.ch",
       type: "website",
-      images: ["/images/logo.webp"]
+      images: ["/images/logo.webp"],
     },
-    metadataBase: new URL("https://www.mentalhealth-gpt.ch")
+    metadataBase: new URL("https://www.mentalhealth-gpt.ch"),
   };
 }
+
 export default function RootLayout({
   children,
-  params
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params?: {
-    locale?: string;
-  };
+  params?: { locale?: string };
 }>) {
-  // Root ist EN
-  const lang = params?.locale || "en";
+  // ⬇️ Strikt als Locale — vermeidet TS-Fehler
+  const lang = getSafeLocale(params);
 
-  // ✅ Server-seitig die Übersetzungsfunktion für EN setzen
-  const t = makeT(loadMessages("en"));
-  setT(t);
-  return <html lang={lang}>
+  // Server-seitiges Dict + t()
+  const dict = loadMessages(lang);
+  const t = makeT(dict);
+
+  return (
+    <html lang={lang}>
       <head>
-        {/* Fallback-Script, falls jemand direkt /de oder /fr unter diesem Layout öffnet */}
-        <script dangerouslySetInnerHTML={{
-        __html: `
+        {/* 1) HTML lang-Fallback, falls jemand direkt /de oder /fr öffnet */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
               (function(){
                 try {
                   var seg = (location.pathname.split('/')[1]||'').toLowerCase();
-                  var l = (seg === 'de' || seg === 'fr') ? seg : 'en';
+                  var l = (seg === 'de' || seg === 'fr') ? seg : '${lang}';
                   document.documentElement.setAttribute('lang', l);
                 } catch(e){}
               })();
-            `
-      }} />
+            `,
+          }}
+        />
 
-        {/* SEO + OG Metadata (bewusst unverändert gelassen) */}
-        <meta name={t("description")} content={t("Expert AI for mental health – secure, private, and scientifically validated")} />
-        <meta property="og:title" content={t("mentalhealthGPT")} />
-        <meta property="og:description" content={t("Expert AI for mental health – secure, private, and scientifically validated")} />
-        <meta property="og:image" content={t("/images/logo.webp")} />
+        {/* 2) ✅ WICHTIG: Wörterbuch für Client-`_()` injizieren */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.__I18N__ = {
+                locale: "${lang}",
+                dict: ${JSON.stringify(dict)}
+              };
+            `,
+          }}
+        />
+
+        {/* Meta: nur Inhalte übersetzen, Attribut-Namen bleiben statisch */}
+        <meta
+          name="description"
+          content={t(
+            "Expert AI for mental health – secure, private, and scientifically validated"
+          )}
+        />
+        <meta property="og:title" content="mentalhealthGPT" />
+        <meta
+          property="og:description"
+          content={t(
+            "Expert AI for mental health – secure, private, and scientifically validated"
+          )}
+        />
+        <meta property="og:image" content="/images/logo.webp" />
         <meta property="og:url" content="https://www.mentalhealth-gpt.ch" />
-        <meta property="og:type" content={t("website")} />
-        <meta name={t("twitter:card")} content={t("summary_large_image")} />
-        <meta name={t("theme-color")} content={t("#ffffff")} />
-        <meta name={t("viewport")} content={t("width=device-width, initial-scale=1")} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${karla.variable} ${inter.variable} bg-white text-black dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}>
+      <body
+        className={`${karla.variable} ${inter.variable} bg-white text-black dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}
+      >
         <Suspense fallback={<GlobalLoading />}>
-          <TxClientProvider locale={lang}>
-            <Providers>{children}</Providers>
-          </TxClientProvider>
+          <Providers>{children}</Providers>
         </Suspense>
       </body>
-    </html>;
+    </html>
+  );
 }

@@ -1,0 +1,57 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-09-23 13:24+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/audio-transcription/de_CH/>\n"
+"Language: de_CH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: audio-transcription.chat.greeting
+msgid "Hello! How can I assist you with audio transcription today?"
+msgstr "Hallo! Wie kann ich Ihnen heute bei der Audio-Transkription helfen?"
+
+#. key: audio-transcription.text.capability
+msgid ""
+"Our AI can securely transcribe audio recordings from therapy sessions, "
+"structure the content, and generate clear, professional summaries — all with "
+"end-to-end encryption."
+msgstr ""
+"Unsere KI kann Audioaufzeichnungen von Therapiesitzungen sicher "
+"transkribieren, den Inhalt strukturieren und klare, professionelle "
+"Zusammenfassungen erstellen – alles mit End-to-End-Verschlüsselung."
+
+#. key: audio-transcription.text.upload-instructions
+msgid ""
+"Simply upload a recorded session. All patient information remains strictly "
+"confidential and is protected by strong encryption directly in your browser, "
+"during transfer, and back again — ensuring full privacy at every step."
+msgstr ""
+"Laden Sie einfach eine aufgezeichnete Sitzung hoch. Alle Patientendaten "
+"werden streng vertraulich behandelt und durch eine starke Verschlüsselung "
+"direkt in Ihrem Browser, während der Übertragung und beim Zurücksenden "
+"geschützt – so ist bei jedem Schritt vollständige Privatsphäre gewährleistet."
+
+#. key: audio-transcription.sections.banner-prefix
+msgid "🚧 The AI model for"
+msgstr "🚧 Das KI-Modell für"
+
+#. key: audio-transcription.chat.title
+msgid "Audio Transcription & Notes"
+msgstr "Audio-Transkription & Notizen"
+
+#. key: audio-transcription.sections.under-development
+msgid "is currently under development."
+msgstr "befindet sich derzeit in der Entwicklung."
+
+#. key: audio-transcription.sections.coming-soon
+msgid ""
+"It will soon provide accurate transcription and note-taking support for "
+"clinical documentation."
+msgstr ""
+"Es wird bald genaue Transkriptionen und Unterstützung beim Notieren für die "
+"klinische Dokumentation bieten."

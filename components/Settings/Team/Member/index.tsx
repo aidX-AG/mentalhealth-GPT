@@ -1,8 +1,8 @@
 import { CSSProperties } from "react";
 import Image from "@/components/Image";
 import Actions from "../Actions";
-import { getT } from "@/lib/i18n-runtime";
-const t = getT();
+import { _ } from "@/lib/i18n/_";
+const t = _;
 type MemberProps = {
   item: any;
   style: CSSProperties | undefined;

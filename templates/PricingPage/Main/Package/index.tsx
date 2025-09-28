@@ -1,10 +1,9 @@
 // templates/PricingPage/Main/Package/index.tsx
 // --------------------------------------------------------------------------
-// [pricing-ssr-i18n] v1.0.2 — 2025-09-03
+// [pricing-ssr-i18n] v1.0.3 — 2025-09-27
 // CHANGELOG:
-// - getT() entfernt (keine Runtime-Übersetzung mehr in der Kachel)
-// - Icon-Name NICHT mehr durch t() jagen (fix für falsche Keys)
-// - Neues Prop: currencyPrefix (z. B. "CHF ") – alles andere unverändert
+// - Checkout-Link locale-sicher gemacht (relative Navigation zu ../checkout)
+// - Sonst 100% unverändert
 // --------------------------------------------------------------------------
 
 import { twMerge } from "tailwind-merge";
@@ -89,7 +88,7 @@ const Package = ({
         className={`${item.currentPlan && "opacity-50 pointer-events-none"} ${
           item.popular ? "btn-blue" : "btn-stroke-light"
         } w-full mt-8`}
-        href="/checkout"
+        href="../checkout" // locale-sicher: /de/pricing -> /de/checkout, /fr/pricing -> /fr/checkout, /pricing -> /checkout
       >
         {item.currentPlan ? currentPlanLabel : upgradeLabel}
       </Link>

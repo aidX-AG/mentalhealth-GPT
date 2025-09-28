@@ -4,9 +4,9 @@ import { toast } from "react-hot-toast";
 import Image from "@/components/Image";
 import Notify from "@/components/Notify";
 import ModalShareChat from "@/components/ModalShareChat";
-import { getT } from "@/lib/i18n-runtime";
+import { _ } from "@/lib/i18n/_";
 
-const t = getT();
+const t = _;
 
 type ActionsProps = {};
 
