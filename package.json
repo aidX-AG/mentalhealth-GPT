@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "npm run i18n:convert:all",
+    "export": "next export",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

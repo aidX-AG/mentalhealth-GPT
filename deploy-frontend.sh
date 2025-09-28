@@ -20,19 +20,15 @@ npm ci
 echo "⚙️  npm run build …"
 npm run build
 
-# … und statischer Export nach ./out (wichtig für Nginx als Static Server)
-# Falls kein export-Script vorhanden ist, lege in package.json `"export": "next export"` an.
-echo "📤  npm run export …"
-npm run export
+# ./out ist nach next build vorhanden (output: 'export'), kein 'npm run export' nötig
 
 # Sicherheitscheck: gibt es ./out?
 if [[ ! -d "out" ]]; then
-  echo "❌ ./out wurde nicht erzeugt (next export fehlt?). Abbruch."
+  echo "❌ ./out wurde nicht erzeugt (prüfe next.config.mjs: output: 'export'). Abbruch."
   exit 1
 fi
 
 echo "🧹  Zielordner vorbereiten (alte Dateien entfernen, aber Bilder behalten) …"
-# Bestehende Medien (z. B. persistente Uploads/Bilder) im Ziel bewahren
 mkdir -p "$DEST"
 rsync -av --delete \
   --exclude='images/**' \
@@ -41,7 +37,6 @@ rsync -av --delete \
   out/ "$DEST/"
 
 # Optional: statische Medien aus dem Repo ins Ziel mergen (nur neue/aktualisierte Dateien)
-# Achtung: KEIN --delete hier, damit persistente Dateien bleiben.
 if [[ -d "public" ]]; then
   echo "🖼   public/ → $DEST/ mergen (ohne Löschen) …"
   rsync -av public/ "$DEST/"
@@ -53,12 +48,7 @@ if command -v git >/dev/null 2>&1; then
   date +"%Y-%m-%dT%H:%M:%S%z  $GITHASH" > "$DEST/.deployment-hash"
 fi
 
-# Dateirechte (optional, je nach Umgebung)
-# chown -R www-data:www-data "$DEST"
-# find "$DEST" -type d -exec chmod 755 {} +
-# find "$DEST" -type f -exec chmod 644 {} +
-
-# Nginx neu laden (nur wenn auf diesem Host via systemd betrieben)
+# Nginx neu laden (falls via systemd)
 if command -v systemctl >/dev/null 2>&1; then
   echo "🔁  Nginx reload …"
   sudo systemctl reload nginx || true
