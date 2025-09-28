@@ -1,57 +1,67 @@
 #!/bin/bash
 set -euo pipefail
 
+# Pfade anpassen falls nötig
 REPO="$HOME/git/frontend-git"
 DEST="/opt/docker/nginx/html"
 
-echo "➡️  Gehe ins Repo …"
+echo "➡️  Wechsle ins Repo …"
 cd "$REPO"
 
-# ⬅️ NEU: TRANSIFEX_* aus .env.local ins Environment laden
-export $(grep -E '^(TRANSIFEX_TOKEN|TRANSIFEX_SECRET)=' .env.local | xargs)
-
-echo "⬇️  Pull main …"
+echo "⬇️  Pull von origin/main (Fast-Forward only) …"
+git fetch origin
+git checkout main
 git pull --ff-only origin main
 
-echo "📦 npm ci …"
+echo "📦  npm ci …"
 npm ci
 
-echo "⚙️  Build (inkl. tx:pull) …"
-npm run build   # package.json ruft intern `tx:pull` auf
+# PO -> JSON passiert in prebuild; danach regulärer Build …
+echo "⚙️  npm run build …"
+npm run build
 
-# Build-Output prüfen
-if [ ! -d "$REPO/out" ]; then
-  echo "❌ Build-Ausgabe fehlt: $REPO/out existiert nicht."
+# … und statischer Export nach ./out (wichtig für Nginx als Static Server)
+# Falls kein export-Script vorhanden ist, lege in package.json `"export": "next export"` an.
+echo "📤  npm run export …"
+npm run export
+
+# Sicherheitscheck: gibt es ./out?
+if [[ ! -d "out" ]]; then
+  echo "❌ ./out wurde nicht erzeugt (next export fehlt?). Abbruch."
   exit 1
 fi
 
-echo "📁 Stelle Zielstruktur sicher …"
-sudo mkdir -p \
-  "$DEST" \
-  "$DEST/locales" \
-  "$DEST/images"
+echo "🧹  Zielordner vorbereiten (alte Dateien entfernen, aber Bilder behalten) …"
+# Bestehende Medien (z. B. persistente Uploads/Bilder) im Ziel bewahren
+mkdir -p "$DEST"
+rsync -av --delete \
+  --exclude='images/**' \
+  --exclude='uploads/**' \
+  --exclude='.well-known/**' \
+  out/ "$DEST/"
 
-echo "🚀 Sync Build (out/ → html/) mit --delete …"
-sudo rsync -av --delete --checksum --human-readable "$REPO/out/" "$DEST/"
-
-echo "🗣️  Sync Locales (inkrementell) …"
-if [ -d "$REPO/locales" ]; then
-  sudo rsync -av --checksum --human-readable \
-    --include="*.json" --exclude="*" \
-    "$REPO/locales/" "$DEST/locales/"
-
-  # optionale Aliase (falls nur fr_CH/de_CH geliefert werden)
-  [ -f "$DEST/locales/de_CH.json" ] && sudo cp -f "$DEST/locales/de_CH.json" "$DEST/locales/de.json" || true
-  [ -f "$DEST/locales/fr_CH.json" ] && sudo cp -f "$DEST/locales/fr_CH.json" "$DEST/locales/fr.json" || true
-else
-  echo "ℹ️  Keine locales/ gefunden – Überspringe."
+# Optional: statische Medien aus dem Repo ins Ziel mergen (nur neue/aktualisierte Dateien)
+# Achtung: KEIN --delete hier, damit persistente Dateien bleiben.
+if [[ -d "public" ]]; then
+  echo "🖼   public/ → $DEST/ mergen (ohne Löschen) …"
+  rsync -av public/ "$DEST/"
 fi
 
-echo "🖼️  Sync Images (inkrementell) …"
-if [ -d "$REPO/public/images" ]; then
-  sudo rsync -av --checksum --human-readable "$REPO/public/images/" "$DEST/images/"
-else
-  echo "ℹ️  Keine public/images gefunden – Überspringe."
+# Cachebusting-Marker schreiben (hilfreich für Diagnosen)
+if command -v git >/dev/null 2>&1; then
+  GITHASH="$(git rev-parse --short HEAD)"
+  date +"%Y-%m-%dT%H:%M:%S%z  $GITHASH" > "$DEST/.deployment-hash"
 fi
 
-echo "✅ Deployment fertig."
+# Dateirechte (optional, je nach Umgebung)
+# chown -R www-data:www-data "$DEST"
+# find "$DEST" -type d -exec chmod 755 {} +
+# find "$DEST" -type f -exec chmod 644 {} +
+
+# Nginx neu laden (nur wenn auf diesem Host via systemd betrieben)
+if command -v systemctl >/dev/null 2>&1; then
+  echo "🔁  Nginx reload …"
+  sudo systemctl reload nginx || true
+fi
+
+echo "✅  Deployment fertig: $DEST (Build + Export von $(basename "$REPO"))"
