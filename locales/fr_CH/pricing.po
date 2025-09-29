@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 19:57+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2025-09-29 11:47+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/pricing/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -57,7 +57,7 @@ msgstr "Populaire"
 
 #. key: pricing.sections.currency-symbol
 msgid "$"
-msgstr "$"
+msgstr "CHF"
 
 #. key: pricing.sections.slash
 msgid "/"
