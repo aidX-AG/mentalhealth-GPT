@@ -14,10 +14,16 @@ type NavItem = {
 type MainProps = {
   heroTitle: string;
   heroSubtitle: string;
-  items: NavItem[]; // ← schon übersetzt vom Server
+  items: NavItem[];
+  inputPlaceholder?: string; // ⬅️ NEU: Prop hinzufügen
 };
 
-const Main = ({ heroTitle, heroSubtitle, items }: MainProps) => {
+const Main = ({ 
+  heroTitle, 
+  heroSubtitle, 
+  items, 
+  inputPlaceholder = "Ask mentalhealthGPT anything" // ⬅️ Default-Wert
+}: MainProps) => {
   const [message, setMessage] = useState<string>("");
 
   return (
@@ -30,7 +36,12 @@ const Main = ({ heroTitle, heroSubtitle, items }: MainProps) => {
         <Menu className="max-w-[30.75rem] mx-auto" items={items} />
       </div>
 
-      <Message value={message} onChange={(e: any) => setMessage(e.target.value)} />
+      {/* ⬇️ inputPlaceholder als Prop durchreichen */}
+      <Message 
+        value={message} 
+        onChange={(e: any) => setMessage(e.target.value)}
+        placeholder={inputPlaceholder} // ⬅️ HIER verwenden
+      />
     </>
   );
 };

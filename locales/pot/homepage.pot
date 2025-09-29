@@ -6,10 +6,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. key: home.sections.brand
-msgid "mentalhealthGPT"
+#. key: homepage.input.placeholder
+msgid "Ask mentalhealthGPT anything"
 msgstr ""
 
-#. key: home.sections.tagline
+#. key: homepage.sections.tagline
 msgid "Expertise you trust. Privacy you control. Science that empowers."
+msgstr ""
+
+#. key: homepage.sections.brand
+msgid "mentalhealthGPT"
 msgstr ""

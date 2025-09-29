@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 
-#: templates/CheckoutPage/Form/Foot/index.tsx:29
+#: templates/CheckoutPage/Form/Foot/index.tsx:49
 msgid ":"
 msgstr ""
 
@@ -174,10 +174,6 @@ msgstr ""
 msgid "aidX"
 msgstr ""
 
-#: mocks/chatHistory.tsx:5
-msgid "aidX AI UI"
-msgstr ""
-
 #: mocks/updates.tsx:33
 msgid "All core components of mentalhealthGPT are now in place – from the secure frontend interface to the protected AI backend. We’re now entering the integration phase: connecting the frontend, backend, and AI models through a reliable Node.js architecture. This orchestration enables a seamless and secure experience for users – whether you’re a clinician, psychotherapist, mental health advisor, researcher, or individual seeking support. Every step is designed to meet the privacy and reliability needs of mental health professionals."
 msgstr ""
@@ -188,6 +184,10 @@ msgstr ""
 
 #: mocks/members.tsx:23
 msgid "Alvah"
+msgstr ""
+
+#: mocks/chatHistory.tsx:8
+msgid "Analyze the latest therapy session transcript for key emotional patterns and therapeutic interventions"
 msgstr ""
 
 #: mocks/people.tsx:5
@@ -237,6 +237,11 @@ msgstr ""
 msgid "arrow-prev"
 msgstr ""
 
+#: app/homepage/page.tsx:17
+#: app/page.tsx:17
+msgid "Ask mentalhealthGPT anything"
+msgstr ""
+
 #: components/Settings/EditProfile/index.tsx:34
 msgid "At least 800x800 px recommended."
 msgstr ""
@@ -252,10 +257,6 @@ msgstr ""
 
 #: components/Adjust/index.tsx:23
 msgid "Auto"
-msgstr ""
-
-#: mocks/chatHistory.tsx:27
-msgid "Auto generate title"
 msgstr ""
 
 #: components/AddChatList/User/index.tsx:26
@@ -405,6 +406,10 @@ msgstr ""
 msgid "Clementina"
 msgstr ""
 
+#: mocks/chatHistory.tsx:32
+msgid "Clinical Documentation"
+msgstr ""
+
 #: components/Actions/index.tsx:37
 #: components/Modal/index.tsx:38
 #: components/MultiSelect/index.tsx:24
@@ -552,6 +557,10 @@ msgstr ""
 msgid "Dexter"
 msgstr ""
 
+#: mocks/chatHistory.tsx:15
+msgid "Diagnosis Support"
+msgstr ""
+
 #: mocks/applications.tsx:33
 msgid "Discord"
 msgstr ""
@@ -653,6 +662,10 @@ msgstr ""
 msgid "Enthony"
 msgstr ""
 
+#: mocks/chatHistory.tsx:25
+msgid "Evaluate current treatment progress and suggest evidence-based adjustments to therapeutic approach"
+msgstr ""
+
 #: mocks/updates.tsx:17
 msgid "Expanding to Three Languages"
 msgstr ""
@@ -664,7 +677,8 @@ msgstr ""
 msgid "Expert AI for mental health – secure, private, and scientifically validated"
 msgstr ""
 
-#: app/page.tsx:16
+#: app/homepage/page.tsx:15
+#: app/page.tsx:15
 msgid "Expertise you trust. Privacy you control. Science that empowers."
 msgstr ""
 
@@ -738,6 +752,10 @@ msgstr ""
 #: components/AddChatList/index.tsx:42
 #: components/AddChatList/User/index.tsx:12
 msgid "Full access"
+msgstr ""
+
+#: mocks/chatHistory.tsx:33
+msgid "Generate structured clinical notes from session transcripts following healthcare documentation standards"
 msgstr ""
 
 #: constants/export.tsx:17
@@ -971,7 +989,7 @@ msgstr ""
 msgid "Location"
 msgstr ""
 
-#: templates/CheckoutPage/Form/Foot/index.tsx:24
+#: templates/CheckoutPage/Form/Foot/index.tsx:43
 msgid "lock"
 msgstr ""
 
@@ -1017,7 +1035,8 @@ msgstr ""
 msgid "Members"
 msgstr ""
 
-#: app/page.tsx:15
+#: app/homepage/page.tsx:14
+#: app/page.tsx:14
 msgid "mentalhealthGPT"
 msgstr ""
 
@@ -1155,7 +1174,6 @@ msgstr ""
 msgid "Photo generation by AI"
 msgstr ""
 
-#: mocks/chatHistory.tsx:20
 #: mocks/notifications.tsx:29
 #: mocks/notifications.tsx:51
 #: mocks/notifications.tsx:62
@@ -1226,6 +1244,10 @@ msgstr ""
 
 #: components/Adjust/index.tsx:24
 msgid "Reset"
+msgstr ""
+
+#: mocks/chatHistory.tsx:16
+msgid "Review patient symptoms and provide differential diagnosis suggestions based on clinical guidelines"
 msgstr ""
 
 #: components/Settings/Sessions/Device/index.tsx:22
@@ -1449,6 +1471,10 @@ msgstr ""
 msgid "Therapies"
 msgstr ""
 
+#: mocks/chatHistory.tsx:7
+msgid "Therapy Session Analysis"
+msgstr ""
+
 #: components/Settings/Sessions/index.tsx:26
 msgid "This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize."
 msgstr ""
@@ -1494,6 +1520,10 @@ msgstr ""
 #: components/Message/Files/index.tsx:28
 #: components/Notify/index.tsx:20
 msgid "trash"
+msgstr ""
+
+#: mocks/chatHistory.tsx:24
+msgid "Treatment Plan Review"
 msgstr ""
 
 #: constants/export.tsx:29
@@ -1623,10 +1653,6 @@ msgstr ""
 msgid "Welcome page"
 msgstr ""
 
-#: mocks/chatHistory.tsx:12
-msgid "Welcome page with input"
-msgstr ""
-
 #: mocks/faq.tsx:22
 msgid "What do the different AI chat areas mean (therapy, supervision, documentation etc.)?"
 msgstr ""
@@ -1668,10 +1694,6 @@ msgstr ""
 msgid "Write a Welcome Page in HTML and CSS"
 msgstr ""
 
-#: mocks/chatHistory.tsx:13
-#: mocks/chatHistory.tsx:21
-#: mocks/chatHistory.tsx:28
-#: mocks/chatHistory.tsx:6
 #: mocks/resultSearch.tsx:29
 #: mocks/resultSearch.tsx:38
 #: mocks/resultSearch.tsx:47

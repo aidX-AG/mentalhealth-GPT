@@ -1,4 +1,3 @@
-// app/de/page.tsx (DE)
 import PageView from "@/templates/HomePage";
 import { loadMessages, makeT } from "@/lib/i18n-static";
 import { makeNavigation, NAV_KEYS } from "@/constants/navigation";

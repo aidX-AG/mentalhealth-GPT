@@ -31,7 +31,7 @@ const NAMESPACES = new Set([
   "diagnosis-support",
   "documentation-reports",
   "generation-socials-post",
-  "home",
+  "homepage",
   "pricing",
   "sign-in",
   "supervision-training",

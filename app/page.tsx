@@ -1,4 +1,4 @@
-// app/page.tsx  (EN)
+// app/page.tsx (EN)
 import PageView from "@/templates/HomePage";
 import { loadMessages, makeT } from "@/lib/i18n-static";
 import { makeNavigation, NAV_KEYS } from "@/constants/navigation";
@@ -7,7 +7,6 @@ export default function Page() {
   const messages = loadMessages("en");
   const t = makeT(messages);
 
-  // >>> Wichtig für TX: alle Keys einmal "berühren", damit der Extractor sie sieht
   NAV_KEYS.forEach((k) => t(k));
 
   return (
@@ -15,6 +14,7 @@ export default function Page() {
       heroTitle={t("mentalhealthGPT")}
       heroSubtitle={t("Expertise you trust. Privacy you control. Science that empowers.")}
       navigationItems={makeNavigation(t)}
+      inputPlaceholder={t("Ask mentalhealthGPT anything")}
     />
   );
 }

@@ -1,4 +1,4 @@
-// app/fr/page.tsx
+// app/fr/page.tsx (FR)
 import PageView from "@/templates/HomePage";
 import { loadMessages, makeT } from "@/lib/i18n-static";
 import { makeNavigation, NAV_KEYS } from "@/constants/navigation";
@@ -14,6 +14,7 @@ export default function Page() {
       heroTitle={t("mentalhealthGPT")}
       heroSubtitle={t("Expertise you trust. Privacy you control. Science that empowers.")}
       navigationItems={makeNavigation(t)}
+      inputPlaceholder={t("Ask mentalhealthGPT anything")}
     />
   );
 }
