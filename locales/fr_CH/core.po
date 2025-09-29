@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-27 12:49+0000\n"
+"PO-Revision-Date: 2025-09-29 11:47+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/fr_CH/>\n"
@@ -68,7 +68,7 @@ msgstr "@"
 #: app/de/checkout/page.tsx:31
 #: app/fr/checkout/page.tsx:31
 msgid "/month"
-msgstr "/mois"
+msgstr "/ mois"
 
 #: components/Feedback/Assessment/index.tsx:34
 #: components/SocialsPost/Post/index.tsx:22
@@ -1033,7 +1033,7 @@ msgstr "courriel"
 #: app/sign-in/page.tsx:23
 #: app/sign-in/page.tsx:26
 msgid "Email"
-msgstr "courriel"
+msgstr "Courriel"
 
 #: app/checkout/page.tsx:33
 #: app/de/checkout/page.tsx:33
