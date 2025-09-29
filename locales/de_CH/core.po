@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-27 12:49+0000\n"
+"PO-Revision-Date: 2025-09-29 11:41+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/de_CH/>\n"
@@ -68,7 +68,7 @@ msgstr "@"
 #: app/de/checkout/page.tsx:31
 #: app/fr/checkout/page.tsx:31
 msgid "/month"
-msgstr "/Monat"
+msgstr "/ Monat"
 
 #: components/Feedback/Assessment/index.tsx:34
 #: components/SocialsPost/Post/index.tsx:22
@@ -1117,7 +1117,7 @@ msgstr "Facebook"
 #: app/fr/updates-and-faq/page.tsx:27
 #: app/updates-and-faq/page.tsx:27
 msgid "FAQ"
-msgstr "Häufig gestellte Fragen"
+msgstr "FAQ"
 
 #: mocks/chatList.tsx:17
 msgid "Favorites"
