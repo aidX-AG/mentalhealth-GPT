@@ -1,7 +1,6 @@
 // app/de/layout.tsx
 import { Suspense } from "react";
 import { Providers } from "../providers";
-import TxClientProvider from "../TxClientProvider";
 import GlobalLoading from "../GlobalLoading";
 import { loadMessages, makeT } from "@/lib/i18n-static";
 
@@ -31,9 +30,7 @@ export default function GermanLayout({ children }: { children: React.ReactNode }
       </head>
       <body>
         <Suspense fallback={<GlobalLoading />}>
-          <TxClientProvider locale="de">
-            <Providers>{children}</Providers>
-          </TxClientProvider>
+          <Providers>{children}</Providers>
         </Suspense>
       </body>
     </html>
