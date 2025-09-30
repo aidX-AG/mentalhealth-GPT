@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-29 11:41+0000\n"
-"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"PO-Revision-Date: 2025-09-30 18:21+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/de_CH/>\n"
 "Language: de_CH\n"
@@ -194,10 +194,8 @@ msgstr ""
 "Schweizer und europäischen Datenschutzbestimmungen. Ihre Daten bleiben "
 "durchgehend geschützt."
 
-#, fuzzy
-#| msgid "Create account"
 msgid "Already have an account?"
-msgstr "Konto erstellen"
+msgstr "Haben Sie bereits ein Konto?"
 
 msgid "Alvah"
 msgstr "Alvah"
@@ -206,6 +204,8 @@ msgid ""
 "Analyze the latest therapy session transcript for key emotional patterns and "
 "therapeutic interventions"
 msgstr ""
+"Analysieren Sie das Protokoll der letzten Therapiesitzung auf wichtige "
+"emotionale Muster und therapeutische Interventionen."
 
 msgid "Anthony"
 msgstr "Anthony"
@@ -361,7 +361,7 @@ msgid "Clementina"
 msgstr "Clementina"
 
 msgid "Clinical Documentation"
-msgstr ""
+msgstr "Klinische Dokumentation"
 
 msgid "close"
 msgstr "schließen"
@@ -600,6 +600,8 @@ msgid ""
 "Evaluate current treatment progress and suggest evidence-based adjustments "
 "to therapeutic approach"
 msgstr ""
+"Den aktuellen Behandlungsfortschritt bewerten und evidenzbasierte "
+"Anpassungen des therapeutischen Ansatzes vorschlagen"
 
 msgid "Expanding to Three Languages"
 msgstr "Erweiterung auf drei Sprachen"
@@ -672,6 +674,8 @@ msgid ""
 "Generate structured clinical notes from session transcripts following "
 "healthcare documentation standards"
 msgstr ""
+"Erstellen Sie strukturierte klinische Notizen aus Sitzungsprotokollen gemäß "
+"den Standards für die Dokumentation im Gesundheitswesen."
 
 msgid "Get a link"
 msgstr "Link erhalten"
@@ -873,10 +877,8 @@ msgid "lock"
 msgstr "Schloss"
 
 #. ✅ Text geändert
-#, fuzzy
-#| msgid "Log out"
 msgid "Log in"
-msgstr "Abmelden"
+msgstr "Anmelden"
 
 msgid "Make admin"
 msgstr "Als Administrator festlegen"
@@ -1116,6 +1118,8 @@ msgid ""
 "Review patient symptoms and provide differential diagnosis suggestions based "
 "on clinical guidelines"
 msgstr ""
+"Überprüfen Sie die Symptome des Patienten und geben Sie Vorschläge für "
+"Differentialdiagnosen auf der Grundlage klinischer Leitlinien."
 
 msgid "Revoke"
 msgstr "Widerrufen"
@@ -1272,7 +1276,7 @@ msgid "Therapies"
 msgstr "Therapien"
 
 msgid "Therapy Session Analysis"
-msgstr ""
+msgstr "Analyse der Therapiesitzung"
 
 msgid ""
 "This is a list of devices that have logged into your account. Revoke any "
@@ -1309,7 +1313,7 @@ msgid "trash"
 msgstr "Müll"
 
 msgid "Treatment Plan Review"
-msgstr ""
+msgstr "Überprüfung des Behandlungsplans"
 
 msgid "Twitter"
 msgstr "Twitter"
@@ -1450,10 +1454,8 @@ msgstr ""
 "unseren KI-Diensten ermöglicht. Dies ist ein wichtiger Meilenstein auf dem "
 "Weg, unsere Plattform direkt in die klinische Praxis zu bringen."
 
-#, fuzzy
-#| msgid "Welcome form"
 msgid "Welcome"
-msgstr "Willkommensformular"
+msgstr "Willkommen"
 
 msgid "Welcome form"
 msgstr "Willkommensformular"
