@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-10-02 14:41+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/de_CH/>\n"
 "Language: de_CH\n"
@@ -36,8 +36,6 @@ msgid "Continue with Google"
 msgstr "Weiter mit Google"
 
 #. key: sign-in.tabs.create_account
-#, fuzzy
-#| msgid "Create Account"
 msgid "Create account"
 msgstr "Konto erstellen"
 
