@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-29 11:47+0000\n"
-"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"PO-Revision-Date: 2025-10-02 14:41+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -20,14 +20,12 @@ msgid "By creating an account, you agree to our"
 msgstr "En créant un compte, vous acceptez nos"
 
 #. key: sign-in.hero.subtitle
-#, fuzzy
-#| msgid "Chat with the smartest AI - Experience the power of AI with us"
 msgid ""
 "Chat with specialized expertise - Experience AI with complete data "
 "protection with us"
 msgstr ""
-"Faites chat avec l'IA la plus intelligente - Découvrez la puissance de l'IA "
-"avec nous"
+"Faites du chat avec des experts spécialisés - Découvrez l'IA avec une "
+"protection complète des données chez nous"
 
 #. key: sign-in.social.apple
 msgid "Continue with Apple"
@@ -77,23 +75,19 @@ msgstr "Réinitialisez votre mot de passe"
 
 #. key: sign-in.tabs.sign_in
 msgid "Sign in"
-msgstr ""
+msgstr "Se connecter"
 
 #. key: sign-in.button.sign_in_with_app
-#, fuzzy
-#| msgid "Sign in with Brainwave"
 msgid "Sign in with mentalhealthGPT"
-msgstr "Connectez-vous avec aidX"
+msgstr "Connectez-vous avec mentalhealthGPT"
 
 #. key: sign-in.legal.tos
 msgid "Terms of Service"
 msgstr "Conditions d'utilisation"
 
 #. key: sign-in.hero.title
-#, fuzzy
-#| msgid "Unlock the power of AI"
 msgid "Unlock the power of your private mental health AI"
-msgstr "Libérez la puissance de l'IA"
+msgstr "Libérez le pouvoir de votre IA privée dédiée à la santé mentale"
 
 #. key: sign-in.place.username
 msgid "Username or email"
