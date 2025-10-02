@@ -19,7 +19,7 @@ const Profile = ({}: ProfileProps) => {
     {
       title: t("Create account"),   // ✅ Text geändert  
       icon: "arrow-down-circle", 
-      onClick: () => window.location.href = "/sign-in"
+      onClick: () => window.location.href = "/sign-in?tab=create-account"
     }
   ];
 

@@ -6,74 +6,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. key: sign-in.legal.and
+msgid "and"
+msgstr ""
+
+#. key: sign-in.legal.tos_prefix
+msgid "By creating an account, you agree to our"
+msgstr ""
+
+#. key: sign-in.hero.subtitle
+msgid "Chat with specialized expertise - Experience AI with complete data protection with us"
+msgstr ""
+
+#. key: sign-in.social.apple
+msgid "Continue with Apple"
+msgstr ""
+
+#. key: sign-in.social.google
+msgid "Continue with Google"
+msgstr ""
+
+#. key: sign-in.tabs.create_account
+msgid "Create account"
+msgstr ""
+
+#. key: sign-in.button.create_account
+msgid "Create Account"
+msgstr ""
+
+#. key: sign-in.place.create_email
+msgid "Email"
+msgstr ""
+
 #. key: sign-in.misc.forgot-password
 msgid "Forgot password?"
 msgstr ""
 
-#. key: sign-in.misc.sign-in-with-brainwave
-msgid "Sign in with Brainwave"
-msgstr ""
-
-#. key: sign-in.placeholders.username-or-email
-msgid "Username or email"
-msgstr ""
-
-#. key: sign-in.placeholders.password
-msgid "Password"
-msgstr ""
-
-#. key: sign-in.sections.hero-title
-msgid "Unlock the power of AI"
-msgstr ""
-
-#. key: sign-in.sections.hero-subtitle
-msgid "Chat with the smartest AI - Experience the power of AI with us"
-msgstr ""
-
-#. key: sign-in.buttons.continue-google
-msgid "Continue with Google"
-msgstr ""
-
-#. key: sign-in.buttons.continue-apple
-msgid "Continue with Apple"
-msgstr ""
-
-#. key: sign-in.sections.or
+#. key: sign-in.misc.or
 msgid "OR"
 msgstr ""
 
-#. key: sign-in.buttons.create-account
-msgid "Create Account"
+#. key: sign-in.place.create_password
+msgid "Password"
 msgstr ""
 
-#. key: sign-in.text.by-creating-account
-msgid "By creating an account, you agree to our"
-msgstr ""
-
-#. key: sign-in.sections.terms-of-service
-msgid "Terms of Service"
-msgstr ""
-
-#. key: sign-in.text.and
-msgid "and"
-msgstr ""
-
-#. key: sign-in.sections.privacy-cookie
+#. key: sign-in.legal.privacy
 msgid "Privacy & Cookie Statement"
 msgstr ""
 
-#. key: sign-in.text.period
-msgid "."
+#. key: sign-in.button.reset_password
+msgid "Reset password"
 msgstr ""
 
-#. key: sign-in.placeholders.email
-msgid "Email"
-msgstr ""
-
-#. key: sign-in.fragments.reset-password
+#. key: sign-in.password.reset.title
 msgid "Reset your password"
 msgstr ""
 
-#. key: sign-in.buttons.reset-password
-msgid "Reset password"
+#. key: sign-in.tabs.sign_in
+msgid "Sign in"
+msgstr ""
+
+#. key: sign-in.button.sign_in_with_app
+msgid "Sign in with mentalhealthGPT"
+msgstr ""
+
+#. key: sign-in.legal.tos
+msgid "Terms of Service"
+msgstr ""
+
+#. key: sign-in.hero.title
+msgid "Unlock the power of your private mental health AI"
+msgstr ""
+
+#. key: sign-in.place.username
+msgid "Username or email"
 msgstr ""

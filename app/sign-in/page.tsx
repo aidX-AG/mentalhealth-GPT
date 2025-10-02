@@ -6,18 +6,15 @@ export default function Page() {
 
   return (
     <PageView
-      heroTitle={t("Unlock the power of AI")}
-      heroSubtitle={t("Chat with the smartest AI - Experience the power of AI with us")}
+      heroTitle={t("Unlock the power of your private mental health AI")}
+      heroSubtitle={t("Chat with specialized expertise - Experience AI with complete data protection with us")}
       // Tabs & Buttons
       tabs={[t("Sign in"), t("Create account")]}
-      continueGoogle={t("Continue with Google")}
-      continueApple={t("Continue with Apple")}
-      orLabel={t("OR")}
       // SignIn
       usernamePlaceholder={t("Username or email")}
       passwordPlaceholder={t("Password")}
       forgotPasswordLabel={t("Forgot password?")}
-      signInSubmitLabel={t("Sign in with Brainwave")}
+      signInSubmitLabel={t("Sign in with mentalhealthGPT")}
       // Forgot
       resetBackLabel={t("Reset your password")}
       resetEmailPlaceholder={t("Email")}
@@ -26,6 +23,11 @@ export default function Page() {
       createEmailPlaceholder={t("Email")}
       createPasswordPlaceholder={t("Password")}
       createSubmitLabel={t("Create Account")}
+      // Social Logins (jetzt nach unseren eigenen Logins)
+      continueGoogle={t("Continue with Google")}
+      continueApple={t("Continue with Apple")}
+      orLabel={t("OR")}
+      // Terms (bleiben unten)
       tosPrefix={t("By creating an account, you agree to our ")}
       tosLabel={t("Terms of Service")}
       andLabel={t("and")}
