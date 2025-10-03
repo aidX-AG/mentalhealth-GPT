@@ -150,5 +150,6 @@
   "common.misc.youtube-player": "YouTube video player",
   "common.sections.deauthorize": "Deauthorize",
   "common.sections.revoke": "Revoke",
-  "common.badges.admin": "Admin"
+  "common.badges.admin": "Admin",
+  "common.misc.just-now": "Just now"
 }

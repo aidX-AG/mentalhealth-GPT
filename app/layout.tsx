@@ -79,31 +79,24 @@ export default function RootLayout({
   const t = makeT(dict);
 
   return (
-    <html lang={lang}>
+    <html lang={lang} suppressHydrationWarning>
       <head>
-        {/* 1) HTML lang-Fallback, falls jemand direkt /de oder /fr öffnet */}
+        {/* ✅ Einziger i18n-Script-Block: pfadsensitiv, ändert KEINE DOM-Attribute */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function(){
+              (function () {
                 try {
-                  var seg = (location.pathname.split('/')[1]||'').toLowerCase();
-                  var l = (seg === 'de' || seg === 'fr') ? seg : '${lang}';
-                  document.documentElement.setAttribute('lang', l);
-                } catch(e){}
+                  var seg = (location.pathname.split('/')[1] || '').toLowerCase();
+                  var current = (seg === 'de' || seg === 'fr') ? seg : '${lang}';
+                  var dicts = {
+                    en: ${JSON.stringify(loadMessages("en"))},
+                    de: ${JSON.stringify(loadMessages("de"))},
+                    fr: ${JSON.stringify(loadMessages("fr"))}
+                  };
+                  window.__I18N__ = { locale: current, dict: dicts[current] || dicts['en'] };
+                } catch (e) {}
               })();
-            `,
-          }}
-        />
-
-        {/* 2) ✅ WICHTIG: Wörterbuch für Client-`_()` injizieren */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.__I18N__ = {
-                locale: "${lang}",
-                dict: ${JSON.stringify(dict)}
-              };
             `,
           }}
         />
@@ -130,6 +123,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body
+        suppressHydrationWarning
         className={`${karla.variable} ${inter.variable} bg-white text-black dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}
       >
         <Suspense fallback={<GlobalLoading />}>

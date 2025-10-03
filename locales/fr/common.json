@@ -150,5 +150,6 @@
   "common.misc.youtube-player": "Lecteur vidéo YouTube",
   "common.sections.deauthorize": "Désautoriser",
   "common.sections.revoke": "Révoquer",
-  "common.badges.admin": "Admin"
+  "common.badges.admin": "Admin",
+  "common.misc.just-now": "Tout à l'heure"
 }

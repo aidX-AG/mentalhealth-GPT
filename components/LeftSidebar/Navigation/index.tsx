@@ -1,4 +1,6 @@
 // components/LeftSidebar/Navigation/index.tsx
+"use client";
+
 // [i18n-path-prefixing] v1.0.4 — 2025-09-04
 // CHANGELOG:
 // - v1.0.4: Eingehende URLs mit "/en/..." werden neutralisiert (→ "/") und
@@ -65,7 +67,6 @@ const Navigation = ({ visible, items }: NavigationProps) => {
       {items.map((item, index) =>
         item.url ? (
           (() => {
-            // ✅ Einzige funktionale Änderung ggü. deiner Vorlage:
             // 1) "/en/..." lokal zu "/..." machen
             // 2) dann mit aktuellem Locale prefixen (EN bleibt Root)
             const neutral = neutralizeEnPrefix(item.url) || "";
