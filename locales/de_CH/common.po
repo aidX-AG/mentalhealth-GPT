@@ -704,3 +704,7 @@ msgstr "Admin"
 #. key: common.misc.at
 msgid "@"
 msgstr "@"
+
+#. key: common.misc.just-now
+msgid "Just now"
+msgstr ""
