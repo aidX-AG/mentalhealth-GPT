@@ -30,3 +30,13 @@ msgid ""
 msgstr ""
 "Il sera progressivement disponible à mesure que nous intégrerons des modèles "
 "spécialisés pour soutenir les diagnostics en santé mentale."
+
+#. key: diagnosis-support.question.document
+msgid "diagnosis-case.pdf"
+msgstr ""
+
+#. key: diagnosis-support.question.content
+msgid ""
+"Please review this clinical case and suggest possible diagnoses. Highlight "
+"any important symptoms or behavioral patterns."
+msgstr ""
