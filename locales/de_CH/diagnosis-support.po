@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 13:42+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2025-10-03 13:07+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/diagnosis-support/de_CH/>\n"
 "Language: de_CH\n"
@@ -33,10 +33,13 @@ msgstr ""
 
 #. key: diagnosis-support.question.document
 msgid "diagnosis-case.pdf"
-msgstr ""
+msgstr "Diagnose-Fall.pdf"
 
 #. key: diagnosis-support.question.content
 msgid ""
 "Please review this clinical case and suggest possible diagnoses. Highlight "
 "any important symptoms or behavioral patterns."
 msgstr ""
+"Bitte überprüfen Sie diesen klinischen Fall und schlagen Sie mögliche "
+"Diagnosen vor. Heben Sie alle wichtigen Symptome oder Verhaltensmuster "
+"hervor."
