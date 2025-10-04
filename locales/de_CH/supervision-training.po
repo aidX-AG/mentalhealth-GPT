@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 14:01+0000\n"
-"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"PO-Revision-Date: 2025-10-04 17:38+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/supervision-training/de_CH/>\n"
 "Language: de_CH\n"
@@ -17,7 +17,7 @@ msgstr "🚧 Das KI-Modell für"
 
 #. key: supervision-training.chat.title
 msgid "Supervision & Training"
-msgstr "Aufsicht & Training"
+msgstr "Supervision & Training"
 
 #. key: supervision-training.sections.under-development
 msgid "is currently being developed with specialized training data."
@@ -29,3 +29,12 @@ msgid ""
 msgstr ""
 "Es wird in Kürze verfügbar sein, um Expertenfeedback und Mentoring-Workflows "
 "zu unterstützen."
+
+#. key: supervision-training.sections.question
+msgid ""
+"Please review this supervision case and provide constructive feedback for "
+"the trainee. Focus on communication, assessment quality, and risk handling."
+msgstr ""
+"Bitte überprüfen Sie diesen Supervisionsfall und geben Sie dem "
+"Auszubildenden konstruktives Feedback. Konzentrieren Sie sich dabei auf die "
+"Kommunikation, die Qualität der Beurteilung und den Umgang mit Risiken."

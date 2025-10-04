@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import Chat from "@/components/Chat";
 import Message from "@/components/Message";
 import Answer from "@/components/Answer";
+import { useI18n } from "@/lib/i18n-client"; // ⬅️ neu
 
 type Props = {
   title: string;
@@ -32,12 +33,16 @@ const TherapySupportPage = ({
   contactEmail,
 }: Props) => {
   const [message, setMessage] = useState<string>("");
+  const { t } = useI18n(); // ⬅️ nur t behalten
+
+  // optionaler Guard gegen Hydration-Mismatch, falls dir das lieber ist:
+  // if (!ready) return null;
 
   return (
     <Layout>
       <Chat title={title}>
         {/* Intro-Antwort */}
-        <Answer time="Just now">
+        <Answer time={t("common.misc.just-now")}>
           <div className="mt-6 p-4 bg-n-1 border border-n-3 rounded-xl dark:bg-n-7 dark:border-n-5">
             <p className="text-base leading-relaxed text-n-6 dark:text-n-3">
               {introText}

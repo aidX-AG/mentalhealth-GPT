@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-27 13:28+0000\n"
+"PO-Revision-Date: 2025-10-04 12:43+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/de_CH/>\n"
@@ -11,107 +11,160 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
-#. key: checkout.sections.hero-title
-msgid "AI chat made affordable"
-msgstr "KI-Chat zu erschwinglichen Preisen"
+#. key: checkout.sections.per-month
+msgid "/ month"
+msgstr "/ Monat"
 
-#. key: checkout.body.hero-subtitle
-msgid "Pricing Plans for every budget - Unlock the power of AI"
-msgstr "Preise für jedes Budget – Nutzen Sie die Leistungsfähigkeit der KI"
+#. key: checkout.features.advanced-team
+msgid "Advanced team management"
+msgstr "Fortgeschrittenes Teammanagement"
 
-#. key: checkout.sections.enterprise
-msgid "Enterprise"
-msgstr "Institution"
+#. key: checkout.actions.apply-promo
+msgid "Apply promo code"
+msgstr "Promo-Code anwenden"
 
-#. key: checkout.sections.popular
-msgid "Popular"
-msgstr "Beliebt"
-
-#. key: checkout.fragments.price-399
-msgid "$399"
-msgstr "399 CHF"
-
-#. key: checkout.sections.monthly-plan
-msgid "Monthly Plan"
-msgstr "Monatsplan"
-
-#. key: checkout.sections.plan
-msgid "Plan"
-msgstr "Plan"
-
-#. key: checkout.sections.change-currency
-msgid "Change currency"
-msgstr "Währung ändern"
-
-#. key: checkout.sections.usd
-msgid "USD"
-msgstr "USD"
+#. key: checkout.notes.billed-now
+msgid "Billed now"
+msgstr "Jetzt in Rechnung gestellt"
 
 #. key: checkout.sections.billing-email
 msgid "Billing email"
 msgstr "Rechnungs-E-Mail"
 
+#. key: checkout.terms.accept
+msgid ""
+"By clicking \"Start Institution plan\", you agree to be charged CHF 399 "
+"every month, unless you cancel."
+msgstr ""
+"Durch Klicken auf „Institution-Plan starten“ erklären Sie sich damit "
+"einverstanden, dass Ihnen monatlich 399 CHF in Rechnung gestellt werden, "
+"sofern Sie nicht kündigen."
+
 #. key: checkout.sections.card-details
 msgid "Card details"
 msgstr "Kartendetails"
-
-#. key: checkout.form.email
-msgid "Email address"
-msgstr "E-Mail-Adresse"
 
 #. key: checkout.form.card-number
 msgid "Card number"
 msgstr "Kartennummer"
 
-#. key: checkout.form.mm-yy
-msgid "MM / YY"
-msgstr "MM / JJ"
+#. key: checkout.sections.change-currency
+msgid "Change currency"
+msgstr "Währung ändern"
+
+#. key: checkout.features.customizable-models
+msgid "Customizable AI models"
+msgstr "Anpassbare KI-Modelle"
+
+#. key: checkout.features.customizable-institution-models
+msgid "Customizable institutional AI models"
+msgstr "Anpassbare institutionelle KI-Modelle"
 
 #. key: checkout.form.cvc
 msgid "CVC"
 msgstr "CVC"
 
-#. key: checkout.body.security-note
-msgid "Secured form with UI8 Banking"
-msgstr "Gesichertes Formular mit CH Banking"
+#. key: checkout.features.dedicated-account-manager
+msgid "Dedicated account manager"
+msgstr "persönlicher Kundenbetreuer"
 
-#. key: checkout.sections.billed-now
-msgid "Billed now: $399"
-msgstr "Jetzt in Rechnung gestellt: 399 CHF"
+#. key: checkout.form.email
+msgid "Email address"
+msgstr "E-Mail-Adresse"
 
-#. key: checkout.sections.apply-promo-code
-msgid "Apply promo code"
-msgstr "Promo-Code anwenden"
+#. key: checkout.sections.enterprise
+msgid "Institution"
+msgstr "Institution"
 
-#. key: checkout.body.billing-consent
-msgid ""
-"By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
-"charged $399 every month, unless you cancel."
-msgstr ""
-"Durch Klicken auf „Institutions-Plan starten“ erklären Sie sich damit "
-"einverstanden, dass Ihnen monatlich 399 CHF in Rechnung gestellt werden, "
-"sofern Sie nicht kündigen."
+#. key: checkout.features.institution-support
+msgid "Institution-level support"
+msgstr "Unterstützung auf institutioneller Ebene"
 
-#. key: checkout.sections.cta-start-plan
-msgid "Start Brainwave Enterprise plan"
-msgstr "Starten Sie den aidX Enterprise-Plan"
+#. key: checkout.sections.hero-title
+msgid "Mental Health AI chat made to measure"
+msgstr "maßgeschneiderte KI für psychische Gesundheit"
+
+#. key: checkout.form.mm-yy
+msgid "MM / YY"
+msgstr "MM / JJ"
+
+#. key: checkout.misc.monthly-lc
+msgid "monthly"
+msgstr "monatlich"
+
+#. key: checkout.sections.monthly-plan
+msgid "Monthly Plan"
+msgstr "Monatsplan"
 
 #. key: checkout.sections.pay
 msgid "Pay"
-msgstr "Bezahlen"
+msgstr "bezahle"
 
-#. key: checkout.sections.currency-symbol
-msgid "$"
-msgstr "CHF"
+#. key: checkout.sections.plan
+msgid "Plan"
+msgstr "Plan"
 
-#. key: checkout.sections.per-month
-msgid "/month"
-msgstr "/ Monat"
+#. key: checkout.sections.popular
+msgid "Popular"
+msgstr "Beliebt"
+
+#. key: checkout.body.hero-subtitle
+msgid "Pricing Plans for every need - Unlock the power of AI"
+msgstr "Preispläne für jeden Bedarf – erschliessen Sie die Stärken der KI"
 
 #. key: checkout.badges.save
 msgid "Save"
 msgstr "sparen"
 
-#. key: checkout.badges.percent
-msgid "%"
-msgstr "%"
+#. key: checkout.notes.secured
+msgid "Secured form with CH Banking"
+msgstr "Gesichertes Formular mit CH Banking"
+
+#. key: checkout.form.start-plan
+msgid "Start Institution Plan"
+msgstr "Start Institutions-Plan"
+
+#. key: checkout.misc.yearly-lc
+msgid "yearly"
+msgstr "jährlich"
+
+#~ msgid "AI chat made affordable"
+#~ msgstr "KI-Chat zu erschwinglichen Preisen"
+
+#~ msgid "Pricing Plans for every budget - Unlock the power of AI"
+#~ msgstr "Preise für jedes Budget – Nutzen Sie die Leistungsfähigkeit der KI"
+
+#~ msgid "Enterprise"
+#~ msgstr "Unternehmen"
+
+#~ msgid "$399"
+#~ msgstr "399 CHF"
+
+#~ msgid "USD"
+#~ msgstr "USD"
+
+#~ msgid "Secured form with UI8 Banking"
+#~ msgstr "Gesichertes Formular mit CH Banking"
+
+#~ msgid "Billed now: $399"
+#~ msgstr "Jetzt in Rechnung gestellt: 399 CHF"
+
+#~ msgid ""
+#~ "By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
+#~ "charged $399 every month, unless you cancel."
+#~ msgstr ""
+#~ "Durch Klicken auf „Institutions-Plan starten“ erklären Sie sich damit "
+#~ "einverstanden, dass Ihnen monatlich 399 CHF in Rechnung gestellt werden, "
+#~ "sofern Sie nicht kündigen."
+
+#~ msgid "Start Brainwave Enterprise plan"
+#~ msgstr "Starten Sie den aidX Enterprise-Plan"
+
+#~ msgid "$"
+#~ msgstr "CHF"
+
+#~ msgid "/month"
+#~ msgstr "/ Monat"
+
+#~ msgid "%"
+#~ msgstr "%"

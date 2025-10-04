@@ -150,5 +150,6 @@
   "common.misc.youtube-player": "YouTube-Videoplayer",
   "common.sections.deauthorize": "Deaktivieren",
   "common.sections.revoke": "Widerrufen",
-  "common.badges.admin": "Admin"
+  "common.badges.admin": "Admin",
+  "common.misc.just-now": "Gerade eben"
 }

@@ -8,31 +8,41 @@ import Answer from "@/components/Answer";
 import Message from "@/components/Message";
 
 type Props = {
-  chatTitle: string;
+  title: string;
+  questionDocument: string;
   questionContent: string;
-  answerContent: string;
+  questionTime: string;
+  noticeTextPrefix: string; // "🚧 The AI model for "
+  featureName: string;      // "Supervision & Training"
+  noticeTextSuffix: string; // " is currently being developed ..."
 };
 
 const SupervisionTrainingPage = ({
-  chatTitle,
+  title,
+  questionDocument,
   questionContent,
-  answerContent,
+  questionTime,
+  noticeTextPrefix,
+  featureName,
+  noticeTextSuffix,
 }: Props) => {
   const [message, setMessage] = useState<string>("");
 
   return (
     <Layout>
-      <Chat title={chatTitle}>
+      <Chat title={title}>
         <Question
-          document="session-case.pdf"
+          document={questionDocument}
           content={questionContent}
-          time="Just now"
+          time={questionTime}
         />
 
         <Answer>
           <div className="mt-6 p-6 bg-yellow-100 border-l-4 border-yellow-400 text-yellow-800 rounded-lg shadow-md">
             <p className="text-lg leading-relaxed font-medium">
-              {answerContent}
+              {noticeTextPrefix}
+              <strong>{featureName}</strong>
+              {noticeTextSuffix}
             </p>
           </div>
         </Answer>

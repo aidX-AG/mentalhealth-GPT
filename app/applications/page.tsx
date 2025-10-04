@@ -5,10 +5,10 @@ export default function Page() {
   const t = makeT(loadMessages("en"));
   return (
     <PageView
-      title={t("Applications")}
-      subtitle={t("Browse and install apps to simplify your life with mentalhealthGPT")}
-      searchPlaceholder={t("Search by app name or category")}
-      suggestedLabel={t("Suggested apps")}
+      title={t("applications.sections.title")}
+      subtitle={t("applications.body.browse-install-apps")}
+      searchPlaceholder={t("applications.form.search-placeholder")}
+      suggestedLabel={t("applications.sections.suggested-apps")}
       addLabel={t("Add")}
       addedLabel={t("Added")}
     />

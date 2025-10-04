@@ -19,3 +19,19 @@ msgstr ""
 #. key: therapy-support.chat.title
 msgid "Therapy Support AI"
 msgstr ""
+
+#. key: therapy-support.notice.prefix
+msgid "🚧 The AI functionality for "
+msgstr ""
+
+#. key: therapy-support.notice.feature-name
+msgid "Therapy Support"
+msgstr ""
+
+#. key: therapy-support.notice.suffix
+msgid " is currently under development. It will soon be available with specialized models for therapy planning, reflection, and evidence-based suggestions."
+msgstr ""
+
+#. key: therapy-support.cta.support
+msgid "Want to support mentalhealthGPT or learn more? Email"
+msgstr ""

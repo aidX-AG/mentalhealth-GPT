@@ -6,42 +6,42 @@ export default function Page() {
 
   return (
     <PageView
-      heroTitle={t("Mental Health AI chat made affordable")}
-      heroSubtitle={t("Pricing Plans for every budget - Unlock the power of AI")}
+      heroTitle={t("checkout.sections.hero-title")}
+      heroSubtitle={t("checkout.body.hero-subtitle")}
 
-      tierName={t("Institution")}
-      popularLabel={t("Popular")}
+      tierName={t("checkout.sections.enterprise")}
+      popularLabel={t("checkout.sections.popular")}
       priceAmount="CHF 399"
-      pricePeriod={t("Monthly Plan")}
+      pricePeriod={t("checkout.sections.monthly-plan")}
       features={[
-        t("Customizable AI models"),
-        t("Advanced team management"),
-        t("Institution-level support"),
-        t("Customizable institutional AI models"),
-        t("Dedicated account manager"),
+        t("checkout.features.customizable-models"),
+        t("checkout.features.advanced-team"),
+        t("checkout.features.institution-support"),
+        t("checkout.features.customizable-institution-models"),
+        t("checkout.features.dedicated-account-manager"),
       ]}
 
-      planLabel={t("Plan")}
-      changeCurrencyLabel={t("Change currency")}
+      planLabel={t("checkout.sections.plan")}
+      changeCurrencyLabel={t("checkout.sections.change-currency")}
       currencyCode="CHF"
-      monthlyLabel={t("monthly")}
-      yearlyLabel={t("yearly")}
-      saveLabel={t("Save")}
-      payPrefix={t("Pay")}
-      perMonthSuffix={t(" / month")}
-      billingEmailLabel={t("Billing email")}
-      emailPlaceholder={t("Email address")}
-      cardDetailsLabel={t("Card details")}
-      cardNumberPlaceholder={t("Card number")}
-      expPlaceholder={t("MM / YY")}
-      cvcPlaceholder={t("CVC")}
+      monthlyLabel={t("checkout.misc.monthly-lc")}
+      yearlyLabel={t("checkout.misc.yearly-lc")}
+      saveLabel={t("checkout.badges.save")}
+      payPrefix={t("checkout.sections.pay")}
+      perMonthSuffix={t("checkout.sections.per-month")}
+      billingEmailLabel={t("checkout.sections.billing-email")}
+      emailPlaceholder={t("checkout.form.email")}
+      cardDetailsLabel={t("checkout.sections.card-details")}
+      cardNumberPlaceholder={t("checkout.form.card-number")}
+      expPlaceholder={t("checkout.form.mm-yy")}
+      cvcPlaceholder={t("checkout.form.cvc")}
 
-      secureNote={t("Secured form with CH Banking")}
-      billedNowLabel={t("Billed now ")}
+      secureNote={t("checkout.notes.secured")}
+      billedNowLabel={t("checkout.notes.billed-now")}
       billedNowAmount="CHF 399"
-      applyPromoLabel={t("Apply promo code")}
-      termsText={t('By clicking "Start Institution plan", you agree to be charged CHF 399 every month, unless you cancel.')}
-      startPlanLabel={t("Start Institution Plan")}
+      applyPromoLabel={t("checkout.actions.apply-promo")}
+      termsText={t("checkout.terms.accept")}
+      startPlanLabel={t("checkout.form.start-plan")}
     />
   );
 }

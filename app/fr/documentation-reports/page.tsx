@@ -3,17 +3,37 @@ import { loadMessages, makeT } from "@/lib/i18n-static";
 
 export default function Page() {
   const t = makeT(loadMessages("fr"));
+
   return (
     <PageView
-      title={t("Documentation & Reporting")}
-      greetQuestion={t("Hi there 👋")}
-      greetTime={t("Just now")}
-      greetAnswer={t("Hello! How can I assist you with documentation and reporting today?")}
-      bodyIntro={t("Soon you’ll be able to generate professional documentation and reports — whether for clinical use, insurance submissions, or personal records of therapy and supervision sessions.")}
-      bodyTransform={t("Our AI will help you transform transcripts into clear, structured, and confidential reports — automatically.")}
-      bodySecurity={t("All data is processed with end-to-end encryption to protect patient confidentiality and ensure secure handling at every stage.")}
-      noticeTitle={t("🚧 Documentation & Reporting")}
-      noticeBody={t("is an exciting new feature currently in development. We’re building it to save you time, reduce admin load, and enhance the quality of your documentation — stay tuned!")}
+      title={t("documentation-reports.chat.title")}
+      greetQuestion={t("documentation-reports.chat.hello-short")}
+      greetTime={t("common.misc.just-now")}
+      greetAnswer={t("documentation-reports.chat.greeting")}
+      bodyIntro={[
+        t("documentation-reports.text.coming-capability"),
+        t("documentation-reports.text.professional-docs"),
+        t("documentation-reports.text.use-cases"),
+      ].join(" ")}
+      bodyTransform={[
+        t("documentation-reports.text.ai-helps-transform"),
+        t("documentation-reports.text.clear-structured-confidential"),
+        t("documentation-reports.text.reports-automatically"),
+      ].join(" ")}
+      bodySecurity={[
+        t("documentation-reports.text.data-processed-with"),
+        t("documentation-reports.text.end-to-end-encryption"),
+        t("documentation-reports.text.privacy-protection"),
+      ].join(" ")}
+      noticeTitle={[
+        t("documentation-reports.sections.icon"),
+        t("documentation-reports.chat.title"),
+      ].join(" ")}
+      noticeBody={[
+        t("documentation-reports.sections.in-development"),
+        t("documentation-reports.text.value-prop"),
+        t("documentation-reports.text.stay-tuned"),
+      ].join(" ")}
     />
   );
 }

@@ -1,5 +1,9 @@
 {
   "therapy-support.sections.greeting": "🧠 Hello! I'm your Therapy Support AI.",
   "therapy-support.sections.instructions": "Feel free to describe your case, the specific symptoms, or ask for therapeutic strategies.",
-  "therapy-support.chat.title": "Therapy Support AI"
+  "therapy-support.chat.title": "Therapy Support AI",
+  "therapy-support.notice.prefix": "🚧 The AI functionality for ",
+  "therapy-support.notice.feature-name": "Therapy Support",
+  "therapy-support.notice.suffix": " is currently under development. It will soon be available with specialized models for therapy planning, reflection, and evidence-based suggestions.",
+  "therapy-support.cta.support": "Want to support mentalhealthGPT or learn more? Email"
 }

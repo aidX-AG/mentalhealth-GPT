@@ -22,6 +22,9 @@ import {
   AlertCircle,
   Cloud,
   MessageSquareText,
+  LogIn,
+  FileSignature,  // 🆕 file-signature
+  FilePen,        // 🆕 file-pen (Backup)
 } from "lucide-react";
 
 export const lucideIcons: { [key: string]: React.ElementType } = {
@@ -46,7 +49,9 @@ export const lucideIcons: { [key: string]: React.ElementType } = {
   "alert-circle": AlertCircle,
   cloud: Cloud,
   "message-square-text": MessageSquareText,
+  "log-in": LogIn,
+  "file-signature": FileSignature,  // 🆕
+  "file-pen": FilePen,              // 🆕 Backup
 };
 
-// Alias für klarere Lesbarkeit in Updates etc.
 export const LucideIconMap = lucideIcons;

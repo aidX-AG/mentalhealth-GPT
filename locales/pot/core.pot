@@ -182,6 +182,10 @@ msgstr ""
 msgid "All patient data is now processed in our zero-trust environment hosted in Switzerland — fully encrypted and compliant with Swiss and European data regulations. Your data remains protected end-to-end."
 msgstr ""
 
+#: components/RightSidebar/Profile/index.tsx:72
+msgid "Already have an account?"
+msgstr ""
+
 #: mocks/members.tsx:23
 msgid "Alvah"
 msgstr ""
@@ -264,8 +268,6 @@ msgstr ""
 #: components/Message/Files/index.tsx:14
 #: components/Question/index.tsx:21
 #: components/RightSidebar/Notifications/Notification/index.tsx:12
-#: components/RightSidebar/Profile/index.tsx:30
-#: components/RightSidebar/Profile/index.tsx:37
 #: components/Search/Item/index.tsx:18
 #: components/Search/Item/index.tsx:35
 #: components/Settings/EditProfile/index.tsx:23
@@ -482,6 +484,11 @@ msgstr ""
 
 #: components/Photo/index.tsx:36
 msgid "Create"
+msgstr ""
+
+#. ✅ Text geändert
+#: components/RightSidebar/Profile/index.tsx:20
+msgid "Create account"
 msgstr ""
 
 #: components/Search/index.tsx:68
@@ -949,10 +956,6 @@ msgstr ""
 msgid "Last week"
 msgstr ""
 
-#: components/RightSidebar/Profile/index.tsx:42
-msgid "Lead visual designer at UI8"
-msgstr ""
-
 #: components/Feedback/index.tsx:22
 msgid "Learn grammar rules:"
 msgstr ""
@@ -993,8 +996,13 @@ msgstr ""
 msgid "lock"
 msgstr ""
 
-#: components/RightSidebar/Profile/index.tsx:22
-msgid "Log out"
+#. ✅ Text geändert
+#: components/RightSidebar/Profile/index.tsx:15
+#: components/RightSidebar/Profile/index.tsx:34
+#: components/RightSidebar/Profile/index.tsx:40
+#: components/RightSidebar/Profile/index.tsx:60
+#: components/RightSidebar/Profile/index.tsx:66
+msgid "Log in"
 msgstr ""
 
 #: components/Settings/Team/Actions/index.tsx:15
@@ -1090,10 +1098,6 @@ msgstr ""
 
 #: components/SocialsPost/Post/index.tsx:36
 msgid "New variation"
-msgstr ""
-
-#: components/RightSidebar/Profile/index.tsx:14
-msgid "New version available"
 msgstr ""
 
 #: components/Audio/index.tsx:21
@@ -1332,7 +1336,6 @@ msgstr ""
 
 #: components/LeftSidebar/index.tsx:90
 #: components/LeftSidebar/Navigation/index.tsx:58
-#: components/RightSidebar/Profile/index.tsx:18
 msgid "Settings"
 msgstr ""
 
@@ -1504,10 +1507,6 @@ msgstr ""
 msgid "Tomy"
 msgstr ""
 
-#: components/RightSidebar/Profile/index.tsx:41
-msgid "Tran Mau Tri Tam"
-msgstr ""
-
 #: mocks/price.tsx:55
 msgid "transcription & documentation"
 msgstr ""
@@ -1642,6 +1641,10 @@ msgstr ""
 
 #: mocks/updates.tsx:44
 msgid "We’ve deployed the first secure user interface for mentalhealthGPT, enabling intuitive and privacy-first interaction with our AI services. This marks a big milestone toward bringing our platform directly into clinical hands."
+msgstr ""
+
+#: components/RightSidebar/Profile/index.tsx:70
+msgid "Welcome"
 msgstr ""
 
 #: mocks/notifications.tsx:18

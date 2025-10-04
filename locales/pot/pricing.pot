@@ -47,7 +47,7 @@ msgid "month"
 msgstr ""
 
 #. key: pricing.sections.monthly
-msgid "Monthly billing"
+msgid "monthly billing"
 msgstr ""
 
 #. key: pricing.badges.popular-lc

@@ -6,42 +6,42 @@ export default function Page() {
 
   const faqItems = [
     { id: "0",
-      title: t("Can I try mentalhealthGPT before committing to a paid plan?"),
-      content: t("Yes — the Starter and Pro plans include a 7-day free trial. You won’t be charged if you cancel during the trial. Access matches the selected plan, and billing starts only after day 7. You can switch plans or cancel anytime from Settings."),
+      title: t("pricing.faq.try-plan-q"),
+      content: t("pricing.faq.try-plan-a"),
       defaultOpen: true,
     },
     { id: "3",
-      title: t("Can I get a refund if I cancel my yearly plan early?"),
-      content: t("We don’t issue refunds for early cancellations. However, you will keep full access to all features until the end of your current subscription period."),
+      title: t("pricing.faq.refund-q"),
+      content: t("pricing.faq.refund-a"),
     },
     { id: "2",
-      title: t("Why does mentalhealthGPT cost more than other chat AIs?"),
-      content: t("Unlike generic AI chatbots, mentalhealthGPT is designed specifically for mental health professionals and institutions. We invest in data protection, secure hosting in Switzerland/EU, and specialized models for therapy, supervision, diagnostics, and documentation. This focus on quality, trust, and professional use makes the subscription more expensive than mass-market AI tools."),
+      title: t("pricing.faq.cost-q"),
+      content: t("pricing.faq.cost-a"),
     },
   ];
 
   return (
     <PageView
-      title={t("AI chat built for mental health")}
-      subtitle={t("User Plans for every needs")}
-      choosePlanLabel={t("Choose plan")}
-      yearlyLabel={t("Yearly billing")}
-      monthlyLabel={t("Monthly billing")}
+      title={t("pricing.sections.hero-title-mental")}
+      subtitle={t("pricing.sections.hero-subtitle-users")}
+      choosePlanLabel={t("pricing.sections.choose-plan")}
+      yearlyLabel={t("pricing.sections.yearly")}
+      monthlyLabel={t("pricing.sections.monthly")}
       // Package:
-      popularLabel={t("popular")}
-      perYearLabel={t("year")}
-      perMonthLabel={t("mo")}
-      currentPlanLabel={t("Current plan")}
-      upgradeLabel={t("Upgrade")}
+      popularLabel={t("pricing.badges.popular-lc")}
+      perYearLabel={t("pricing.sections.year-lc")}
+      perMonthLabel={t("pricing.misc.month-lc")}
+      currentPlanLabel={t("pricing.sections.current-plan")}
+      upgradeLabel={t("pricing.actions.upgrade")}
       // Features:
-      coreFeaturesLabel={t("Core features")}
-      freeLabel={t("Starter")}
-      proLabel={t("Pro")}
-      enterpriseLabel={t("Institution")}
-      viaEmailLabel={t("via email")}
-      chat247Label={t("Chat 24/7")}
+      coreFeaturesLabel={t("pricing.sections.core-features")}
+      freeLabel={t("pricing.tiers.starter")}
+      proLabel={t("pricing.sections.pro")}
+      enterpriseLabel={t("pricing.tiers.institution")}
+      viaEmailLabel={t("pricing.badges.via-email-lc")}
+      chat247Label={t("pricing.badges.chat-247")}
       // FAQ:
-      faqTitle={t("Frequently asked questions")}
+      faqTitle={t("pricing.sections.faq")}
       faqItems={faqItems}
     />
   );

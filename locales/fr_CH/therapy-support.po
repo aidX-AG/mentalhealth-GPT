@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 14:05+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-10-04 17:38+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/therapy-support/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -26,3 +26,26 @@ msgstr ""
 #. key: therapy-support.chat.title
 msgid "Therapy Support AI"
 msgstr "Assistance thérapeutique IA"
+
+#. key: therapy-support.notice.prefix
+msgid "🚧 The AI functionality for "
+msgstr "🚧 La fonctionnalité IA pour "
+
+#. key: therapy-support.notice.feature-name
+msgid "Therapy Support"
+msgstr "Soutien thérapeutique"
+
+#. key: therapy-support.notice.suffix
+msgid ""
+" is currently under development. It will soon be available with specialized "
+"models for therapy planning, reflection, and evidence-based suggestions."
+msgstr ""
+" est actuellement en cours de développement. Il sera bientôt disponible avec "
+"des modèles spécialisés pour la planification thérapeutique, la réflexion et "
+"les suggestions fondées sur des preuves."
+
+#. key: therapy-support.cta.support
+msgid "Want to support mentalhealthGPT or learn more? Email"
+msgstr ""
+"Vous souhaitez soutenir mentalhealthGPT ou en savoir plus ? Envoyez-nous un "
+"e-mail"

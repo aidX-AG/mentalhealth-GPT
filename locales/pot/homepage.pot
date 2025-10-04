@@ -15,5 +15,5 @@ msgid "Expertise you trust. Privacy you control. Science that empowers."
 msgstr ""
 
 #. key: homepage.sections.brand
-msgid "mentalhealthGPT"
+msgid "my private mentalhealthGPT"
 msgstr ""

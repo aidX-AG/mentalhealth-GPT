@@ -17,3 +17,4 @@ locales/*.json
 locales/*.json
 .env.local
 *~
+.next

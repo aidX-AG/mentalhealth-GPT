@@ -8,12 +8,12 @@ export type NavItemBase = {
 };
 
 export const navigationBase: NavItemBase[] = [
-  { key: "Therapy Support AI",          icon: "image-check", color: "#8E55EA", url: "/therapy-support" },
-  { key: "Supervision & Training",      icon: "lightbulb",   color: "#FACC15", url: "/supervision-training" },
-  { key: "Diagnosis Support",           icon: "codepen",     color: "#52BA69", url: "/diagnosis-support" },
-  { key: "Audio Transcription & Notes", icon: "music-note",  color: "#E68A1D", url: "/audio-transcription" },
-  { key: "Video Analysis",              icon: "play-circle", color: "#D84C10", url: "/video-analysis" },
-  { key: "Documentation & Reporting",   icon: "trophy",      color: "#0084FF", url: "/documentation-reports" },
+  { key: "therapy-support.chat.title",       icon: "image-check", color: "#8E55EA", url: "/therapy-support" },
+  { key: "supervision-training.chat.title",  icon: "lightbulb",   color: "#FACC15", url: "/supervision-training" },
+  { key: "diagnosis-support.chat.title",     icon: "codepen",     color: "#52BA69", url: "/diagnosis-support" },
+  { key: "audio-transcription.chat.title",   icon: "music-note",  color: "#E68A1D", url: "/audio-transcription" },
+  { key: "video-analysis.chat.title",        icon: "play-circle", color: "#D84C10", url: "/video-analysis" },
+  { key: "documentation-reports.chat.title", icon: "trophy",      color: "#0084FF", url: "/documentation-reports" },
 ];
 
 // Für Seiten, die die Keys extrahieren/pushen möchten (TX):

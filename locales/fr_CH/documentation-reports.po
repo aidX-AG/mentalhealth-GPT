@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 13:42+0000\n"
+"PO-Revision-Date: 2025-10-04 19:30+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/documentation-reports/fr_CH/>\n"
@@ -36,15 +36,15 @@ msgstr ""
 
 #. key: documentation-reports.text.ai-helps-transform
 msgid "Our AI will help you transform transcripts into"
-msgstr "Notre IA vous aidera à transformer vos transcriptions en"
+msgstr "Notre IA transforme automatiquement vos transcriptions"
 
 #. key: documentation-reports.text.clear-structured-confidential
 msgid "clear, structured, and confidential"
-msgstr "clair, structuré et confidentiel"
+msgstr "en rapports clairs, structurés et confidentiels"
 
 #. key: documentation-reports.text.reports-automatically
 msgid "reports — automatically."
-msgstr "rapports — automatiquement."
+msgstr "— automatiquement."
 
 #. key: documentation-reports.text.data-processed-with
 msgid "All data is processed with"
@@ -86,3 +86,7 @@ msgstr ""
 #. key: documentation-reports.text.stay-tuned
 msgid "stay tuned!"
 msgstr "restez à l'écoute !"
+
+#. key: documentation-reports.chat.hello-short
+msgid "Hi there 👋"
+msgstr "Bonjour 👋"

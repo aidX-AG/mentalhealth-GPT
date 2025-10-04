@@ -5,5 +5,7 @@
   "audio-transcription.sections.banner-prefix": "🚧 Das KI-Modell für",
   "audio-transcription.chat.title": "Audio-Transkription & Notizen",
   "audio-transcription.sections.under-development": "befindet sich derzeit in der Entwicklung.",
-  "audio-transcription.sections.coming-soon": "Es wird bald genaue Transkriptionen und Unterstützung beim Notieren für die klinische Dokumentation bieten."
+  "audio-transcription.sections.coming-soon": "Es wird bald genaue Transkriptionen und Unterstützung beim Notieren für die klinische Dokumentation bieten.",
+  "audio-transcription.chat.hello-short": "Hallo 🙂",
+  "audio-transcription.chat.demo-request": "Zeig mir, was du kannst"
 }

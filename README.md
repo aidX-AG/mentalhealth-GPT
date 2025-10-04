@@ -1,3 +1,124 @@
+Uerbsetzungen der namespaces 03OKT25:
+
+Was wir jetzt „eingefroren“ behalten
+	1.	Source of truth: locales/pot/*.pot → (übersetzt in .po) → Build erzeugt locales/{en,de,fr}/*.json.
+	2.	Server-seitig (SSR) pro Seite: app/<locale>/<namespace>/page.tsx lädt das Dict via
+const t = makeT(loadMessages("<locale>", "<namespace>")) und verwendet Keys (z. B. diagnosis-support.chat.title, common.misc.just-now).
+	3.	Client-Hydration: pro Locale-Layout injizieren wir
+window.__I18N__ = { locale: "<lc>", dict: <merged core+namespace json> }
+(z. B. in app/fr/layout.tsx). Damit funktionieren optionale Client-Hooks wie useI18n() konsistent.
+	4.	Build-Pipeline: npm run i18n:convert:all (po→json) läuft vor next build.
+
+⸻
+
+Mini-Doku (README-Block zum Reinkopieren)
+
+Ordner & Dateien
+	•	POT: locales/pot/*.pot (Master-Keys & englische Msgid)
+	•	PO: locales/po/<lang>/*.po (Übersetzungen, gepflegt via Weblate)
+	•	Runtime JSON (build output):
+	•	Core: locales/<lang>.json
+	•	Namespaces: locales/<lang>/<namespace>.json
+
+Build
+
+npm run i18n:convert:all  # po -> json
+npm run build             # Next build
+
+Server-Seite (Beispiel)
+
+// app/fr/diagnosis-support/page.tsx
+import PageView from "@/templates/DiagnosisSupportPage";
+import { loadMessages, makeT } from "@/lib/i18n-static";
+
+export default function Page() {
+  const t = makeT(loadMessages("fr", "diagnosis-support"));
+  return (
+    <PageView
+      title={t("diagnosis-support.chat.title")}
+      questionDocument={t("diagnosis-support.question.document")}
+      questionContent={t("diagnosis-support.question.content")}
+      questionTime={t("common.misc.just-now")}
+      noticeTextPrefix={t("diagnosis-support.sections.banner-prefix") + " "}
+      featureName={t("diagnosis-support.chat.title")}
+      noticeTextSuffix={" " + t("diagnosis-support.sections.under-development")}
+    />
+  );
+}
+
+Locale-Layout (Client-Dict bereitstellen)
+
+// app/fr/layout.tsx
+import { Suspense } from "react";
+import { Providers } from "../providers";
+import GlobalLoading from "../GlobalLoading";
+import { loadMessages } from "@/lib/i18n-static";
+import Script from "next/script";
+
+export default function FrenchLayout({ children }: { children: React.ReactNode }) {
+  const dict = loadMessages("fr"); // merged core (+ optional: prefetch common)
+
+  return (
+    <>
+      <Script
+        id="i18n-fr"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `window.__I18N__={locale:"fr",dict:${JSON.stringify(dict)}};`,
+        }}
+      />
+      <Suspense fallback={<GlobalLoading />}>
+        <Providers>{children}</Providers>
+      </Suspense>
+    </>
+  );
+}
+
+(Für DE/EN analog mit passendem locale und Dict.)
+
+⸻
+
+Rollout auf alle Namespaces
+	1.	POT/PO prüfen: Für jeden Namespace <ns> gibt es locales/pot/<ns>.pot und locales/po/<lang>/<ns>.po.
+	2.	Refactor Script laufen lassen (nur in den 16 Namespaces – Core/Icons bleiben wie sie sind):
+
+node scripts/refactor-i18n-literals-to-keys.cjs \
+  --namespace <namespace> \
+  --pot locales/pot/<namespace>.pot \
+  --paths "templates components"
+
+Beispiel gebündelt:
+
+for ns in applications audio-transcription checkout common diagnosis-support documentation-reports generation-socials-post homepage pricing sign-in supervision-training thanks therapy-support updates-and-faq video-analysis; do
+  node scripts/refactor-i18n-literals-to-keys.cjs \
+    --namespace "$ns" \
+    --pot "locales/pot/$ns.pot" \
+    --paths "templates components"
+done
+
+
+	3.	Pages pro Locale anpassen (wie oben gezeigt) – wichtig: immer die Key-Variante verwenden (t("namespace.key")).
+	4.	Build:
+
+npm run i18n:convert:all
+npm run build
+
+
+
+⸻
+
+„Definition of Done“ – Schnellchecks
+	•	/fr/… Seiten zeigen Französisch, /de/… Deutsch, / Englisch.
+	•	Im Browser:
+	•	document.documentElement.lang entspricht Locale.
+	•	window.__I18N__.locale stimmt (fr/de/en).
+	•	Keine sichtbaren Keys im UI (z. B. statt common.misc.just-now steht der übersetzte Text).
+	•	Keine React-Hydration-Warnungen.
+
+******************
+
+
+
 alles klar — hier ist eine kleine, knackige README-Ergänzung inkl. genauer nano-Befehle, die erklärt, wie du bei Namespace-Textänderungen die CSV-Mapping-Datei pflegst und den End-to-End-Flow durchziehst.
 
 ⸻

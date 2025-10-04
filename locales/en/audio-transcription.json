@@ -5,5 +5,7 @@
   "audio-transcription.sections.banner-prefix": "🚧 The AI model for",
   "audio-transcription.chat.title": "Audio Transcription & Notes",
   "audio-transcription.sections.under-development": "is currently under development.",
-  "audio-transcription.sections.coming-soon": "It will soon provide accurate transcription and note-taking support for clinical documentation."
+  "audio-transcription.sections.coming-soon": "It will soon provide accurate transcription and note-taking support for clinical documentation.",
+  "audio-transcription.chat.hello-short": "Hello 🙂",
+  "audio-transcription.chat.demo-request": "Show me what you can do"
 }

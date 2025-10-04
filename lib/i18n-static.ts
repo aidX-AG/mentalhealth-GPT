@@ -6,7 +6,7 @@ export type Locale = "en" | "de" | "fr";
 const NAMESPACES = [
   "applications", "audio-transcription", "checkout", "common",
   "diagnosis-support", "documentation-reports", "generation-socials-post",
-  "home", "pricing", "sign-in", "supervision-training", "thanks",
+  "homepage", "pricing", "sign-in", "supervision-training", "thanks",
   "therapy-support", "updates-and-faq", "video-analysis",
 ] as const;
 
