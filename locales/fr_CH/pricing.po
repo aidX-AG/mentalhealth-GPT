@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-29 11:47+0000\n"
-"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"PO-Revision-Date: 2025-10-04 08:54+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/pricing/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -13,15 +13,19 @@ msgstr ""
 
 #. key: pricing.sections.hero-title-mental
 msgid "AI chat built for mental health"
-msgstr ""
+msgstr "Chat IA dédié à la santé mentale"
 
 #. key: pricing.faq.refund-q
 msgid "Can I get a refund if I cancel my yearly plan early?"
 msgstr ""
+"Puis-je obtenir un remboursement si j'annule mon abonnement annuel avant "
+"terme ?"
 
 #. key: pricing.faq.try-plan-q
 msgid "Can I try mentalhealthGPT before committing to a paid plan?"
 msgstr ""
+"Puis-je essayer mentalhealthGPT avant de m'engager dans un abonnement payant "
+"?"
 
 #. key: pricing.badges.chat-247
 msgid "Chat 24/7"
@@ -36,10 +40,8 @@ msgid "Core features"
 msgstr "Fonctionnalités principales"
 
 #. key: pricing.sections.current-plan
-#, fuzzy
-#| msgid "Choose plan"
 msgid "Current plan"
-msgstr "Choisissez un forfait"
+msgstr "Plan actuel"
 
 #. key: pricing.sections.faq
 msgid "Frequently asked questions"
@@ -51,17 +53,15 @@ msgstr ""
 
 #. key: pricing.misc.month-lc
 msgid "month"
-msgstr ""
+msgstr "mois"
 
 #. key: pricing.sections.monthly
 msgid "monthly billing"
-msgstr ""
+msgstr "facturation mensuelle"
 
 #. key: pricing.badges.popular-lc
-#, fuzzy
-#| msgid "Popular"
 msgid "popular"
-msgstr "Populaire"
+msgstr "populaire"
 
 #. key: pricing.sections.pro
 msgid "Pro"
@@ -80,40 +80,47 @@ msgid ""
 "and professional use makes the subscription more expensive than mass-market "
 "AI tools."
 msgstr ""
+"Contrairement aux chatbots IA génériques, mentalhealthGPT est spécialement "
+"conçu pour les professionnels et les institutions de santé mentale. Nous "
+"investissons dans la protection des données, l'hébergement sécurisé en "
+"Suisse/dans l'UE et des modèles spécialisés pour la thérapie, la "
+"supervision, le diagnostic et la documentation. Cette priorité accordée à la "
+"qualité, à la confiance et à l'utilisation professionnelle rend l'abonnement "
+"plus coûteux que les outils IA grand public."
 
 #. key: pricing.actions.upgrade
 msgid "Upgrade"
-msgstr ""
+msgstr "Mise à niveau"
 
 #. key: pricing.sections.hero-subtitle-users
-#, fuzzy
-#| msgid "Pricing Plans for every budget"
 msgid "User Plans for every needs"
-msgstr "Forfaits adaptés à tous les budgets"
+msgstr "Forfaits adaptés à tous les besoins"
 
 #. key: pricing.badges.via-email-lc
-#, fuzzy
-#| msgid "Via email"
 msgid "via email"
-msgstr "Par courrier électronique"
+msgstr "par courrier électronique"
 
 #. key: pricing.faq.refund-a
 msgid ""
 "We don’t issue refunds for early cancellations. However, you will keep full "
 "access to all features until the end of your current subscription period."
 msgstr ""
+"Nous n'effectuons aucun remboursement en cas d'annulation anticipée. "
+"Cependant, vous conserverez un accès complet à toutes les fonctionnalités "
+"jusqu'à la fin de votre période d'abonnement en cours."
 
 #. key: pricing.faq.cost-q
 msgid "Why does mentalhealthGPT cost more than other chat AIs?"
 msgstr ""
+"Pourquoi mentalhealthGPT coûte-t-il plus cher que les autres IA de chat ?"
 
 #. key: pricing.sections.year-lc
 msgid "year"
-msgstr ""
+msgstr "année"
 
 #. key: pricing.sections.yearly
 msgid "Yearly billing"
-msgstr ""
+msgstr "Facturation annuelle"
 
 #. key: pricing.faq.try-plan-a
 msgid ""
@@ -122,6 +129,11 @@ msgid ""
 "and billing starts only after day 7. You can switch plans or cancel anytime "
 "from Settings."
 msgstr ""
+"Oui, les forfaits Starter et Pro comprennent un essai gratuit de 7 jours. "
+"Vous ne serez pas facturé si vous annulez pendant la période d'essai. "
+"L'accès correspond au forfait sélectionné et la facturation ne commence "
+"qu'après le 7e jour. Vous pouvez changer de forfait ou annuler à tout moment "
+"depuis les paramètres."
 
 #~ msgid "AI chat made affordable"
 #~ msgstr "Le chat IA à prix abordable"
