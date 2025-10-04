@@ -29,3 +29,9 @@ msgid ""
 msgstr ""
 "Es wird in Kürze verfügbar sein, um Expertenfeedback und Mentoring-Workflows "
 "zu unterstützen."
+
+#. key: supervision-training.sections.question
+msgid ""
+"Please review this supervision case and provide constructive feedback for "
+"the trainee. Focus on communication, assessment quality, and risk handling."
+msgstr ""
