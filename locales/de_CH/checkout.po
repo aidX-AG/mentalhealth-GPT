@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-10-04 12:14+0000\n"
+"PO-Revision-Date: 2025-10-04 12:43+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/de_CH/>\n"
@@ -66,7 +66,7 @@ msgstr "CVC"
 
 #. key: checkout.features.dedicated-account-manager
 msgid "Dedicated account manager"
-msgstr "Engagierter Kundenbetreuer"
+msgstr "persönlicher Kundenbetreuer"
 
 #. key: checkout.form.email
 msgid "Email address"
@@ -82,7 +82,7 @@ msgstr "Unterstützung auf institutioneller Ebene"
 
 #. key: checkout.sections.hero-title
 msgid "Mental Health AI chat made to measure"
-msgstr "Maßgeschneiderter KI-Chat für psychische Gesundheit"
+msgstr "maßgeschneiderte KI für psychische Gesundheit"
 
 #. key: checkout.form.mm-yy
 msgid "MM / YY"
@@ -98,7 +98,7 @@ msgstr "Monatsplan"
 
 #. key: checkout.sections.pay
 msgid "Pay"
-msgstr "Bezahlen"
+msgstr "bezahle"
 
 #. key: checkout.sections.plan
 msgid "Plan"
@@ -110,7 +110,7 @@ msgstr "Beliebt"
 
 #. key: checkout.body.hero-subtitle
 msgid "Pricing Plans for every need - Unlock the power of AI"
-msgstr "Preispläne für jeden Bedarf – Entfesseln Sie die Kraft der KI"
+msgstr "Preispläne für jeden Bedarf – erschliessen Sie die Stärken der KI"
 
 #. key: checkout.badges.save
 msgid "Save"
