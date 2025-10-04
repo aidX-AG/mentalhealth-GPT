@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-10-04 12:43+0000\n"
+"PO-Revision-Date: 2025-10-04 12:59+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/fr_CH/>\n"
@@ -81,7 +81,7 @@ msgstr "Soutien au niveau institutionnel"
 
 #. key: checkout.sections.hero-title
 msgid "Mental Health AI chat made to measure"
-msgstr "Chat IA sur la santé mentale sur mesure"
+msgstr "Chat IA santé mentale sur mesure"
 
 #. key: checkout.form.mm-yy
 msgid "MM / YY"
