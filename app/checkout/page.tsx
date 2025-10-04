@@ -9,7 +9,7 @@ export default function Page() {
       heroTitle={t("checkout.sections.hero-title")}
       heroSubtitle={t("checkout.body.hero-subtitle")}
 
-      tierName={t("pricing.tiers.institution")}
+      tierName={t("checkout.sections.enterprise")}
       popularLabel={t("checkout.sections.popular")}
       priceAmount="CHF 399"
       pricePeriod={t("checkout.sections.monthly-plan")}
@@ -28,7 +28,7 @@ export default function Page() {
       yearlyLabel={t("checkout.misc.yearly-lc")}
       saveLabel={t("checkout.badges.save")}
       payPrefix={t("checkout.sections.pay")}
-      perMonthSuffix={t(" / month")}
+      perMonthSuffix={t("checkout.sections.per-month")}
       billingEmailLabel={t("checkout.sections.billing-email")}
       emailPlaceholder={t("checkout.form.email")}
       cardDetailsLabel={t("checkout.sections.card-details")}
@@ -37,7 +37,7 @@ export default function Page() {
       cvcPlaceholder={t("checkout.form.cvc")}
 
       secureNote={t("checkout.notes.secured")}
-      billedNowLabel={t("Billed now ")}
+      billedNowLabel={t("checkout.notes.billed-now")}
       billedNowAmount="CHF 399"
       applyPromoLabel={t("checkout.actions.apply-promo")}
       termsText={t("checkout.terms.accept")}

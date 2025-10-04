@@ -6,18 +6,18 @@ export default function Page() {
 
   return (
     <PageView
-      heroTitle={t("AI chat made affordable")}
+      heroTitle={t("checkout.sections.hero-title")}
       heroSubtitle={t("checkout.body.hero-subtitle")}
 
-      tierName={t("pricing.tiers.institution")}
+      tierName={t("checkout.sections.enterprise")}
       popularLabel={t("checkout.sections.popular")}
-      priceAmount="CHF399"
+      priceAmount="CHF 399"
       pricePeriod={t("checkout.sections.monthly-plan")}
       features={[
         t("checkout.features.customizable-models"),
         t("checkout.features.advanced-team"),
         t("checkout.features.institution-support"),
-        t("Integration with CRMs"),
+        t("checkout.features.customizable-institution-models"),
         t("checkout.features.dedicated-account-manager"),
       ]}
 
@@ -28,7 +28,7 @@ export default function Page() {
       yearlyLabel={t("checkout.misc.yearly-lc")}
       saveLabel={t("checkout.badges.save")}
       payPrefix={t("checkout.sections.pay")}
-      perMonthSuffix={t("/month")}
+      perMonthSuffix={t("checkout.sections.per-month")}
       billingEmailLabel={t("checkout.sections.billing-email")}
       emailPlaceholder={t("checkout.form.email")}
       cardDetailsLabel={t("checkout.sections.card-details")}
@@ -38,10 +38,10 @@ export default function Page() {
 
       secureNote={t("checkout.notes.secured")}
       billedNowLabel={t("checkout.notes.billed-now")}
-      billedNowAmount="CHF399"
+      billedNowAmount="CHF 399"
       applyPromoLabel={t("checkout.actions.apply-promo")}
-      termsText={t('By clicking "Start Institution plan", you agree to be charged CHF399 every month, unless you cancel.')}
-      startPlanLabel={t("Start Institution plan")}
+      termsText={t("checkout.terms.accept")}
+      startPlanLabel={t("checkout.form.start-plan")}
     />
   );
 }
