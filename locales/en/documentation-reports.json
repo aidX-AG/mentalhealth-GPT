@@ -12,5 +12,6 @@
   "documentation-reports.chat.title": "Documentation & Reporting",
   "documentation-reports.sections.in-development": "is an exciting new feature that’s currently in development.",
   "documentation-reports.text.value-prop": "We’re building it to save you time, reduce admin load, and enhance the quality of your documentation —",
-  "documentation-reports.text.stay-tuned": "stay tuned!"
+  "documentation-reports.text.stay-tuned": "stay tuned!",
+  "documentation-reports.chat.hello-short": "Hi there 👋"
 }

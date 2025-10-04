@@ -1,5 +1,9 @@
 {
   "therapy-support.sections.greeting": "🧠 Hallo! Ich bin Ihre Therapie-Unterstützungs-KI.",
   "therapy-support.sections.instructions": "Beschreiben Sie gerne Ihren Fall, die spezifischen Symptome oder fragen Sie nach therapeutischen Strategien.",
-  "therapy-support.chat.title": "Therapieunterstützende KI"
+  "therapy-support.chat.title": "KI-Therapieunterstützung",
+  "therapy-support.notice.prefix": "🚧 Die KI-Funktionalität für ",
+  "therapy-support.notice.feature-name": "Therapieunterstützung",
+  "therapy-support.notice.suffix": " befindet sich derzeit in der Entwicklung. Es wird bald mit speziellen Modellen für die Therapieplanung, Reflexion und evidenzbasierte Vorschläge verfügbar sein.",
+  "therapy-support.cta.support": "Möchten Sie mentalhealthGPT unterstützen oder mehr erfahren? E-Mail"
 }

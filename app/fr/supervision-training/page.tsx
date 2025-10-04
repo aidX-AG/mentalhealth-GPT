@@ -7,13 +7,16 @@ export default function Page() {
 
   return (
     <PageView
-      chatTitle={t("Supervision & Training")}
-      questionContent={t(
-        "Please review this supervision case and provide constructive feedback for the trainee. Focus on communication, assessment quality, and risk handling."
-      )}
-      answerContent={t(
-        "🚧 The AI model for Supervision & Training is currently being developed with specialized training data. It will be available soon to support expert feedback and mentoring workflows."
-      )}
+      title={t("supervision-training.chat.title")}
+      questionDocument="session-case.pdf"
+      questionContent={t("supervision-training.sections.question")}
+      questionTime={t("common.misc.just-now")}
+      noticeTextPrefix={t("supervision-training.sections.banner-prefix")}
+      featureName={t("supervision-training.chat.title")}
+      noticeTextSuffix={[
+        t("supervision-training.sections.under-development"),
+        t("supervision-training.sections.coming-soon"),
+      ].join(" ")}
     />
   );
 }

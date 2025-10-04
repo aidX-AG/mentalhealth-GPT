@@ -42,7 +42,7 @@ const TherapySupportPage = ({
     <Layout>
       <Chat title={title}>
         {/* Intro-Antwort */}
-        <Answer time={t("Just now") /* ⬅️ neu: clientseitig übersetzt */}>
+        <Answer time={t("common.misc.just-now")}>
           <div className="mt-6 p-4 bg-n-1 border border-n-3 rounded-xl dark:bg-n-7 dark:border-n-5">
             <p className="text-base leading-relaxed text-n-6 dark:text-n-3">
               {introText}
