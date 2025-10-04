@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 14:01+0000\n"
+"PO-Revision-Date: 2025-10-04 14:29+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/supervision-training/de_CH/>\n"
@@ -17,7 +17,7 @@ msgstr "🚧 Das KI-Modell für"
 
 #. key: supervision-training.chat.title
 msgid "Supervision & Training"
-msgstr "Aufsicht & Training"
+msgstr "Supervision & Training"
 
 #. key: supervision-training.sections.under-development
 msgid "is currently being developed with specialized training data."
