@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-10-04 12:14+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/de_CH/>\n"
 "Language: de_CH\n"
@@ -122,7 +122,7 @@ msgstr "Gesichertes Formular mit CH Banking"
 
 #. key: checkout.form.start-plan
 msgid "Start Institution Plan"
-msgstr "Start Institution Plan"
+msgstr "Start Institutions-Plan"
 
 #. key: checkout.misc.yearly-lc
 msgid "yearly"
