@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 13:41+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-10-04 14:29+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/documentation-reports/de_CH/>\n"
 "Language: de_CH\n"
@@ -14,16 +14,16 @@ msgstr ""
 #. key: documentation-reports.chat.greeting
 msgid "Hello! How can I assist you with documentation and reporting today?"
 msgstr ""
-"Hallo! Wie kann ich Ihnen heute bei der Dokumentation und Berichterstattung "
+"Hallo! Wie kann ich Ihnen heute bei der Dokumentation und Berichterstellung "
 "helfen?"
 
 #. key: documentation-reports.text.coming-capability
 msgid "Soon you’ll be able to generate"
-msgstr "Bald können Sie generieren"
+msgstr "Bald können Sie"
 
 #. key: documentation-reports.text.professional-docs
 msgid "professional documentation and reports"
-msgstr "professionelle Dokumentation und Berichte"
+msgstr "professionelle Dokumentation und Berichte generieren"
 
 #. key: documentation-reports.text.use-cases
 msgid ""
@@ -39,11 +39,11 @@ msgstr "Unsere KI hilft Ihnen dabei, Transkripte in"
 
 #. key: documentation-reports.text.clear-structured-confidential
 msgid "clear, structured, and confidential"
-msgstr "klar, strukturiert und vertraulich"
+msgstr "klare, strukturierte und vertrauliche"
 
 #. key: documentation-reports.text.reports-automatically
 msgid "reports — automatically."
-msgstr "Berichte – automatisch."
+msgstr "Berichte zu transformieren – automatisch."
 
 #. key: documentation-reports.text.data-processed-with
 msgid "All data is processed with"
@@ -66,7 +66,7 @@ msgstr "🚧"
 
 #. key: documentation-reports.chat.title
 msgid "Documentation & Reporting"
-msgstr "Dokumentation und Berichterstattung"
+msgstr "Dokumentation und Berichte"
 
 #. key: documentation-reports.sections.in-development
 msgid "is an exciting new feature that’s currently in development."
@@ -77,7 +77,7 @@ msgid ""
 "We’re building it to save you time, reduce admin load, and enhance the "
 "quality of your documentation —"
 msgstr ""
-"Wir entwickeln es, um Ihnen Zeit zu sparen, den Verwaltungsaufwand zu "
+"Wir entwickeln dies, um Ihnen Zeit zu sparen, Ihren Verwaltungsaufwand zu "
 "reduzieren und die Qualität Ihrer Dokumentation zu verbessern —"
 
 #. key: documentation-reports.text.stay-tuned
