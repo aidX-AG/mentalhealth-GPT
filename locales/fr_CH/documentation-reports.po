@@ -86,3 +86,7 @@ msgstr ""
 #. key: documentation-reports.text.stay-tuned
 msgid "stay tuned!"
 msgstr "restez à l'écoute !"
+
+#. key: documentation-reports.chat.hello-short
+msgid "Hi there 👋"
+msgstr ""
