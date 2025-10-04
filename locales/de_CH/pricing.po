@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-26 12:20+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2025-10-04 08:54+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/pricing/de_CH/>\n"
 "Language: de_CH\n"
@@ -53,13 +53,11 @@ msgstr "Institution"
 
 #. key: pricing.misc.month-lc
 msgid "month"
-msgstr ""
+msgstr "Monat"
 
 #. key: pricing.sections.monthly
-#, fuzzy
-#| msgid "Monthly billing"
 msgid "monthly billing"
-msgstr "Monatliche Abrechnung"
+msgstr "monatliche Abrechnung"
 
 #. key: pricing.badges.popular-lc
 msgid "popular"
