@@ -11,106 +11,156 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.13.2\n"
 
-#. key: checkout.sections.hero-title
-msgid "AI chat made affordable"
-msgstr "Le chat IA à prix abordable"
+#. key: checkout.sections.per-month
+msgid "/ month"
+msgstr ""
 
-#. key: checkout.body.hero-subtitle
-msgid "Pricing Plans for every budget - Unlock the power of AI"
-msgstr "Forfaits adaptés à tous les budgets - Libérez la puissance de l'IA"
+#. key: checkout.features.advanced-team
+msgid "Advanced team management"
+msgstr ""
 
-#. key: checkout.sections.enterprise
-msgid "Enterprise"
-msgstr "Entreprise"
+#. key: checkout.actions.apply-promo
+msgid "Apply promo code"
+msgstr "Appliquer le code promotionnel"
 
-#. key: checkout.sections.popular
-msgid "Popular"
-msgstr "Populaire"
-
-#. key: checkout.fragments.price-399
-msgid "$399"
-msgstr "399 CHF"
-
-#. key: checkout.sections.monthly-plan
-msgid "Monthly Plan"
-msgstr "Forfait mensuel"
-
-#. key: checkout.sections.plan
-msgid "Plan"
-msgstr "Plan"
-
-#. key: checkout.sections.change-currency
-msgid "Change currency"
-msgstr "Changer la devise"
-
-#. key: checkout.sections.usd
-msgid "USD"
-msgstr "USD"
+#. key: checkout.notes.billed-now
+msgid "Billed now"
+msgstr ""
 
 #. key: checkout.sections.billing-email
 msgid "Billing email"
 msgstr "E-mail de facturation"
 
+#. key: checkout.terms.accept
+msgid ""
+"By clicking \"Start Institution plan\", you agree to be charged CHF 399 "
+"every month, unless you cancel."
+msgstr ""
+
 #. key: checkout.sections.card-details
 msgid "Card details"
 msgstr "Détails de la carte"
-
-#. key: checkout.form.email
-msgid "Email address"
-msgstr "Adresse électronique"
 
 #. key: checkout.form.card-number
 msgid "Card number"
 msgstr "Numéro de carte"
 
-#. key: checkout.form.mm-yy
-msgid "MM / YY"
-msgstr "MM / AA"
+#. key: checkout.sections.change-currency
+msgid "Change currency"
+msgstr "Changer la devise"
+
+#. key: checkout.features.customizable-models
+msgid "Customizable AI models"
+msgstr ""
+
+#. key: checkout.features.customizable-institution-models
+msgid "Customizable institutional AI models"
+msgstr ""
 
 #. key: checkout.form.cvc
 msgid "CVC"
 msgstr "CVC"
 
-#. key: checkout.body.security-note
-msgid "Secured form with UI8 Banking"
-msgstr "Formulaire sécurisé avec aidX Banking"
-
-#. key: checkout.sections.billed-now
-msgid "Billed now: $399"
-msgstr "Facturé maintenant : 399 CHF"
-
-#. key: checkout.sections.apply-promo-code
-msgid "Apply promo code"
-msgstr "Appliquer le code promotionnel"
-
-#. key: checkout.body.billing-consent
-msgid ""
-"By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
-"charged $399 every month, unless you cancel."
+#. key: checkout.features.dedicated-account-manager
+msgid "Dedicated account manager"
 msgstr ""
-"En cliquant sur « Démarrer le plan Brainwave Enterprise », vous acceptez "
-"d'être facturé 399 CHF chaque mois, sauf si vous annulez."
 
-#. key: checkout.sections.cta-start-plan
-msgid "Start Brainwave Enterprise plan"
-msgstr "Commencer le plan Institution"
+#. key: checkout.form.email
+msgid "Email address"
+msgstr "Adresse électronique"
+
+#. key: checkout.sections.enterprise
+msgid "Institution"
+msgstr ""
+
+#. key: checkout.features.institution-support
+msgid "Institution-level support"
+msgstr ""
+
+#. key: checkout.sections.hero-title
+msgid "Mental Health AI chat made to measure"
+msgstr ""
+
+#. key: checkout.form.mm-yy
+msgid "MM / YY"
+msgstr "MM / AA"
+
+#. key: checkout.misc.monthly-lc
+msgid "monthly"
+msgstr ""
+
+#. key: checkout.sections.monthly-plan
+msgid "Monthly Plan"
+msgstr "Forfait mensuel"
 
 #. key: checkout.sections.pay
 msgid "Pay"
 msgstr "Payer"
 
-#. key: checkout.sections.currency-symbol
-msgid "$"
-msgstr "CHF"
+#. key: checkout.sections.plan
+msgid "Plan"
+msgstr "Plan"
 
-#. key: checkout.sections.per-month
-msgid "/month"
-msgstr "/ mois"
+#. key: checkout.sections.popular
+msgid "Popular"
+msgstr "Populaire"
+
+#. key: checkout.body.hero-subtitle
+msgid "Pricing Plans for every need - Unlock the power of AI"
+msgstr ""
 
 #. key: checkout.badges.save
 msgid "Save"
 msgstr "économiser"
 
-#. key: checkout.badges.percent
-msgid "%"
-msgstr "%"
+#. key: checkout.notes.secured
+msgid "Secured form with CH Banking"
+msgstr ""
+
+#. key: checkout.form.start-plan
+msgid "Start Institution Plan"
+msgstr ""
+
+#. key: checkout.misc.yearly-lc
+msgid "yearly"
+msgstr ""
+
+#~ msgid "AI chat made affordable"
+#~ msgstr "Le chat IA à prix abordable"
+
+#~ msgid "Pricing Plans for every budget - Unlock the power of AI"
+#~ msgstr "Forfaits adaptés à tous les budgets - Libérez la puissance de l'IA"
+
+#~ msgid "Enterprise"
+#~ msgstr "Entreprise"
+
+#~ msgid "$399"
+#~ msgstr "399 CHF"
+
+#~ msgid "USD"
+#~ msgstr "USD"
+
+#~ msgid "Secured form with UI8 Banking"
+#~ msgstr "Formulaire sécurisé avec aidX Banking"
+
+#~ msgid "Billed now: $399"
+#~ msgstr "Facturé maintenant : 399 CHF"
+
+#~ msgid ""
+#~ "By clicking &quot;Start Brainwave Enterprise plan&quot;, you agree to be "
+#~ "charged $399 every month, unless you cancel."
+#~ msgstr ""
+#~ "En cliquant sur « Démarrer le plan Brainwave Enterprise », vous acceptez "
+#~ "d'être facturé 399 CHF chaque mois, sauf si vous annulez."
+
+#~ msgid "Start Brainwave Enterprise plan"
+#~ msgstr "Commencer le plan Institution"
+
+#~ msgid "$"
+#~ msgstr "CHF"
+
+#~ msgid "/month"
+#~ msgstr "/ mois"
+
+#~ msgid "%"
+#~ msgstr "%"
