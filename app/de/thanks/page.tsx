@@ -7,10 +7,10 @@ export default function Page() {
 
   return (
     <PageView
-      title={t("Thank you for your purchase!")}
-      subtitle={t("Your order has been received and is currently being processed. You will receive an email confirmation with your order details shortly.")}
-      manageSubscriptionLabel={t("Manage subscription")}
-      startNewChatLabel={t("Start new chat")}
+      title={t("thanks.sections.title")}
+      subtitle={t("thanks.sections.order-received")}
+      manageSubscriptionLabel={t("thanks.buttons.manage-subscription")}
+      startNewChatLabel={t("thanks.buttons.start-new-chat")}
       navigationItems={makeNavigation(t)}
     />
   );

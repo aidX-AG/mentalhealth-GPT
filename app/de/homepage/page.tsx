@@ -10,10 +10,10 @@ export default function Page() {
 
   return (
     <PageView
-      heroTitle={t("mentalhealthGPT")}
-      heroSubtitle={t("Expertise you trust. Privacy you control. Science that empowers.")}
+      heroTitle={t("homepage.sections.brand")}
+      heroSubtitle={t("homepage.sections.tagline")}
       navigationItems={makeNavigation(t)}
-      inputPlaceholder={t("Ask mentalhealthGPT anything")}
+      inputPlaceholder={t("homepage.input.placeholder")}
     />
   );
 }

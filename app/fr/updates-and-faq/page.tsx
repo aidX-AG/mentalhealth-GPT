@@ -22,15 +22,15 @@ export default function Page() {
 
   return (
     <PageView
-      title={t("Updates & FAQ")}
-      subtitle={t("Features, fixes & improvements.")}
+      title={t("updates-and-faq.sections.title")}
+      subtitle={t("updates-and-faq.sections.subtitle")}
       tabs={[t("Updates"), t("FAQ")]}
       faqItems={faqItems}
       updatesItems={updatesItems}
-      ctaTitle={t("Can’t find any answer?")}
-      ctaSubtitle={t("Let’s ask the smartest AI Chat")}
-      ctaButtonLabel={t("Ask mentalhealthGPT")}
-      loadMoreLabel={t("Load more")}
+      ctaTitle={t("updates-and-faq.sections.question")}
+      ctaSubtitle={t("updates-and-faq.sections.lets-ask-ai")}
+      ctaButtonLabel={t("updates-and-faq.buttons.ask-mh-gpt")}
+      loadMoreLabel={t("updates-and-faq.buttons.load-more")}
     />
   );
 }

@@ -42,20 +42,16 @@ export async function generateMetadata({
 
   return {
     title: {
-      default: "mentalhealthGPT",
-      template: "%s | mentalhealthGPT",
+      default: t("homepage.sections.brand"), // ✅ Korrigiert
+      template: `%s | ${t("homepage.sections.brand")}`, // ✅ Korrigiert
     },
-    description: t(
-      "Expert AI for mental health – secure, private, and scientifically validated"
-    ),
+    description: t("home.sections.tagline"),
     alternates: {
       languages: { de: "/de", fr: "/fr", en: "/" },
     },
     openGraph: {
-      title: "mentalhealthGPT",
-      description: t(
-        "Expert AI for mental health – secure, private, and scientifically validated"
-      ),
+      title: t("homepage.sections.brand"), // ✅ Korrigiert
+      description: t("homepage.sections.tagline"),
       url: "https://www.mentalhealth-gpt.ch",
       type: "website",
       images: ["/images/logo.webp"],
@@ -104,16 +100,12 @@ export default function RootLayout({
         {/* Meta: nur Inhalte übersetzen, Attribut-Namen bleiben statisch */}
         <meta
           name="description"
-          content={t(
-            "Expert AI for mental health – secure, private, and scientifically validated"
-          )}
+          content={t("home.sections.tagline")}
         />
-        <meta property="og:title" content="mentalhealthGPT" />
+        <meta property="og:title" content={t("home.sections.brand")} /> {/* ✅ Korrigiert */}
         <meta
           property="og:description"
-          content={t(
-            "Expert AI for mental health – secure, private, and scientifically validated"
-          )}
+          content={t("home.sections.tagline")}
         />
         <meta property="og:image" content="/images/logo.webp" />
         <meta property="og:url" content="https://www.mentalhealth-gpt.ch" />
