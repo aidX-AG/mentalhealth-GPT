@@ -72,3 +72,7 @@ msgstr ""
 "Nous sommes ravis de lancer prochainement cette initiative, qui favorisera "
 "une réflexion plus approfondie, la supervision et le développement "
 "professionnel."
+
+#. key: video-analysis.chat.hello-short
+msgid "Hi there 👋"
+msgstr ""

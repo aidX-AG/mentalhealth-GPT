@@ -71,3 +71,7 @@ msgid ""
 msgstr ""
 "Wir freuen uns darauf, dies bald einzuführen – für tiefere Reflexion, "
 "Supervision und berufliches Wachstum."
+
+#. key: video-analysis.chat.hello-short
+msgid "Hi there 👋"
+msgstr ""
