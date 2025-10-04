@@ -71,7 +71,7 @@ msgid "Institution-level support"
 msgstr ""
 
 #. key: checkout.sections.hero-title
-msgid "Mental Health AI chat made affordable"
+msgid "Mental Health AI chat made to measure"
 msgstr ""
 
 #. key: checkout.form.mm-yy
@@ -99,7 +99,7 @@ msgid "Popular"
 msgstr ""
 
 #. key: checkout.body.hero-subtitle
-msgid "Pricing Plans for every budget - Unlock the power of AI"
+msgid "Pricing Plans for every need - Unlock the power of AI"
 msgstr ""
 
 #. key: checkout.badges.save
