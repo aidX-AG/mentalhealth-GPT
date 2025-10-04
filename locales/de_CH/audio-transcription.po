@@ -55,3 +55,11 @@ msgid ""
 msgstr ""
 "Es wird bald genaue Transkriptionen und Unterstützung beim Notieren für die "
 "klinische Dokumentation bieten."
+
+#. key: audio-transcription.chat.hello-short
+msgid "Hello 🙂"
+msgstr ""
+
+#. key: audio-transcription.chat.demo-request
+msgid "Show me what you can do"
+msgstr ""
