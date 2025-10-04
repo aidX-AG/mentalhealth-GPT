@@ -51,12 +51,14 @@ msgstr "Häufig gestellte Fragen"
 msgid "Institution"
 msgstr "Institution"
 
-#. key: pricing.sections.mo
-msgid "mo"
-msgstr "mo"
+#. key: pricing.misc.month-lc
+msgid "month"
+msgstr ""
 
 #. key: pricing.sections.monthly
-msgid "Monthly billing"
+#, fuzzy
+#| msgid "Monthly billing"
+msgid "monthly billing"
 msgstr "Monatliche Abrechnung"
 
 #. key: pricing.badges.popular-lc
@@ -132,6 +134,9 @@ msgstr ""
 "Der Zugriff entspricht dem ausgewählten Tarif, und die Abrechnung beginnt "
 "erst nach Ablauf von 7 Tagen. Sie können jederzeit in den Einstellungen den "
 "Tarif wechseln oder kündigen."
+
+#~ msgid "mo"
+#~ msgstr "mo"
 
 #~ msgid "AI chat made affordable"
 #~ msgstr "KI-Chat zu erschwinglichen Preisen"
