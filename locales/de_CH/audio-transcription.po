@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-23 13:24+0000\n"
-"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"PO-Revision-Date: 2025-10-04 18:58+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/audio-transcription/de_CH/>\n"
 "Language: de_CH\n"
@@ -58,8 +58,8 @@ msgstr ""
 
 #. key: audio-transcription.chat.hello-short
 msgid "Hello 🙂"
-msgstr ""
+msgstr "Hallo 🙂"
 
 #. key: audio-transcription.chat.demo-request
 msgid "Show me what you can do"
-msgstr ""
+msgstr "Zeig mir, was du kannst."
