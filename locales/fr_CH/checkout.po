@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-09-27 13:28+0000\n"
-"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"PO-Revision-Date: 2025-10-04 12:14+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #. key: checkout.sections.per-month
 msgid "/ month"
-msgstr ""
+msgstr "/ mois"
 
 #. key: checkout.features.advanced-team
 msgid "Advanced team management"
@@ -25,7 +25,7 @@ msgstr "Appliquer le code promotionnel"
 
 #. key: checkout.notes.billed-now
 msgid "Billed now"
-msgstr ""
+msgstr "Facturé maintenant"
 
 #. key: checkout.sections.billing-email
 msgid "Billing email"
@@ -36,6 +36,8 @@ msgid ""
 "By clicking \"Start Institution plan\", you agree to be charged CHF 399 "
 "every month, unless you cancel."
 msgstr ""
+"En cliquant sur « Démarrer le plan Institution », vous acceptez d'être "
+"facturé 399 CHF chaque mois, sauf si vous résiliez votre abonnement."
 
 #. key: checkout.sections.card-details
 msgid "Card details"
@@ -63,7 +65,7 @@ msgstr "CVC"
 
 #. key: checkout.features.dedicated-account-manager
 msgid "Dedicated account manager"
-msgstr ""
+msgstr "Gestionnaire de compte dédié"
 
 #. key: checkout.form.email
 msgid "Email address"
@@ -79,7 +81,7 @@ msgstr ""
 
 #. key: checkout.sections.hero-title
 msgid "Mental Health AI chat made to measure"
-msgstr ""
+msgstr "Chat IA sur la santé mentale sur mesure"
 
 #. key: checkout.form.mm-yy
 msgid "MM / YY"
@@ -87,7 +89,7 @@ msgstr "MM / AA"
 
 #. key: checkout.misc.monthly-lc
 msgid "monthly"
-msgstr ""
+msgstr "mensuel"
 
 #. key: checkout.sections.monthly-plan
 msgid "Monthly Plan"
@@ -107,7 +109,7 @@ msgstr "Populaire"
 
 #. key: checkout.body.hero-subtitle
 msgid "Pricing Plans for every need - Unlock the power of AI"
-msgstr ""
+msgstr "Forfaits adaptés à tous les besoins - Libérez la puissance de l'IA"
 
 #. key: checkout.badges.save
 msgid "Save"
@@ -115,15 +117,15 @@ msgstr "économiser"
 
 #. key: checkout.notes.secured
 msgid "Secured form with CH Banking"
-msgstr ""
+msgstr "Formulaire sécurisé avec CH Banking"
 
 #. key: checkout.form.start-plan
 msgid "Start Institution Plan"
-msgstr ""
+msgstr "Plan de démarrage de l'établissement"
 
 #. key: checkout.misc.yearly-lc
 msgid "yearly"
-msgstr ""
+msgstr "annuel"
 
 #~ msgid "AI chat made affordable"
 #~ msgstr "Le chat IA à prix abordable"
