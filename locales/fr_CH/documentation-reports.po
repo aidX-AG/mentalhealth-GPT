@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-10-04 14:29+0000\n"
-"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"PO-Revision-Date: 2025-10-04 19:30+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/documentation-reports/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -89,4 +89,4 @@ msgstr "restez à l'écoute !"
 
 #. key: documentation-reports.chat.hello-short
 msgid "Hi there 👋"
-msgstr ""
+msgstr "Bonjour 👋"
