@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-10-04 12:14+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/de_CH/>\n"
 "Language: de_CH\n"
@@ -17,7 +17,7 @@ msgstr "/ Monat"
 
 #. key: checkout.features.advanced-team
 msgid "Advanced team management"
-msgstr ""
+msgstr "Fortgeschrittenes Teammanagement"
 
 #. key: checkout.actions.apply-promo
 msgid "Apply promo code"
@@ -54,11 +54,11 @@ msgstr "Währung ändern"
 
 #. key: checkout.features.customizable-models
 msgid "Customizable AI models"
-msgstr ""
+msgstr "Anpassbare KI-Modelle"
 
 #. key: checkout.features.customizable-institution-models
 msgid "Customizable institutional AI models"
-msgstr ""
+msgstr "Anpassbare institutionelle KI-Modelle"
 
 #. key: checkout.form.cvc
 msgid "CVC"
@@ -74,11 +74,11 @@ msgstr "E-Mail-Adresse"
 
 #. key: checkout.sections.enterprise
 msgid "Institution"
-msgstr ""
+msgstr "Institution"
 
 #. key: checkout.features.institution-support
 msgid "Institution-level support"
-msgstr ""
+msgstr "Unterstützung auf institutioneller Ebene"
 
 #. key: checkout.sections.hero-title
 msgid "Mental Health AI chat made to measure"
