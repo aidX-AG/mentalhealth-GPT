@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-10-04 12:14+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2025-10-04 12:43+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/checkout/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -109,7 +109,7 @@ msgstr "Populaire"
 
 #. key: checkout.body.hero-subtitle
 msgid "Pricing Plans for every need - Unlock the power of AI"
-msgstr "Forfaits adaptés à tous les besoins - Libérez la puissance de l'IA"
+msgstr "Formules adaptés à tous les besoins - profitez de la puissance de l'IA"
 
 #. key: checkout.badges.save
 msgid "Save"
@@ -121,7 +121,7 @@ msgstr "Formulaire sécurisé avec CH Banking"
 
 #. key: checkout.form.start-plan
 msgid "Start Institution Plan"
-msgstr "Plan de démarrage de l'établissement"
+msgstr "Démarrer le plan Institution"
 
 #. key: checkout.misc.yearly-lc
 msgid "yearly"
