@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-10-18 13:45+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "sign-in/es/>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr "Al crear una cuenta, aceptas nuestras"
 msgid "Chat with specialized expertise - Experience AI with complete data protection with us"
 msgstr ""
 "Chatee con expertos especializados: experimente la IA con una protección "
-"completa de los datos con nosotros."
+"completa de los datos con nosotros"
 
 #. key: sign-in.social.apple
 msgid "Continue with Apple"
@@ -83,7 +83,7 @@ msgstr "Condiciones del servicio"
 
 #. key: sign-in.hero.title
 msgid "Unlock the power of your private mental health AI"
-msgstr "Descubre todo el potencial de tu IA privada para la salud mental."
+msgstr "Descubre todo el potencial de tu IA privada para la salud mental"
 
 #. key: sign-in.place.username
 msgid "Username or email"
