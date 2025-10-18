@@ -1,25 +1,29 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-18 13:34+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"applications/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 #. key: applications.sections.title
 msgid "Applications"
-msgstr ""
+msgstr "Aplicaciones"
 
 #. key: applications.body.browse-install-apps
 msgid "Browse and install apps to simplify your life with mentalhealthGPT"
 msgstr ""
+"Explora e instala aplicaciones para simplificar tu vida con mentalhealthGPT."
 
 #. key: applications.sections.suggested-apps
 msgid "Suggested apps"
-msgstr ""
+msgstr "Aplicaciones recomendadas"
 
 #. key: applications.form.search-placeholder
 msgid "Search by app name or category"
-msgstr ""
+msgstr "Buscar por nombre de aplicación o categoría"
