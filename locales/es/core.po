@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"PO-Revision-Date: 2025-10-18 14:53+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/core/"
 "es/>\n"
@@ -1728,7 +1728,7 @@ msgstr "Hasta 100 mensajes al mes"
 #: components/LeftSidebar/index.tsx:84
 #: components/LeftSidebar/Navigation/index.tsx:57
 msgid "Updates & FAQ"
-msgstr "Actualizaciones y preguntas frecuentes"
+msgstr "Actualizaciones y FAQ"
 
 #: constants/export.tsx:24
 #: constants/export.tsx:54
