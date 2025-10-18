@@ -40,7 +40,7 @@ const Navigation = ({ visible, items }: NavigationProps) => {
   const t = _;
 
   // aktuelle Locale aus <html lang>
-  const locale = getClientLocale(); // "de" | "fr" | "en"
+  const locale = getClientLocale(); // "de" | "fr" | "en" | "es"
 
   // ⬇️ Mini-Helper (nur lokal hier):
   // "/en/..." → "/..." neutralisieren, damit withLocalePath korrekt prefixed

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 type Messages = Record<string, string>;
-export type Locale = "en" | "de" | "fr";
+export type Locale = "en" | "de" | "fr" | "es";
 
 const NAMESPACES = [
   "applications", "audio-transcription", "checkout", "common",
@@ -12,7 +12,11 @@ const NAMESPACES = [
 
 // super-simpler, synchroner Loader
 export function loadMessages(locale: string): Messages {
-  const lang: Locale = locale.startsWith("de") ? "de" : locale.startsWith("fr") ? "fr" : "en";
+  const lang: Locale =
+    locale.startsWith("de") ? "de" :
+    locale.startsWith("fr") ? "fr" :
+    locale.startsWith("es") ? "es" :
+    "en";
 
   // Core
   const core = require(`../locales/${lang}.json`);

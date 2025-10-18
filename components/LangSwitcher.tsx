@@ -1,8 +1,7 @@
 // components/LangSwitcher.tsx
-// v1.2 — Schriftfarbe fixiert (immer weiß) + optional Stack im Collapsed-Sidebar-Modus
 "use client";
 
-type Lang = "de" | "fr" | "en";
+type Lang = "de" | "fr" | "en" | "es";
 
 function go(lang: Lang) {
   try {
@@ -17,25 +16,18 @@ function go(lang: Lang) {
 
 export default function LangSwitcher({ stack = false }: { stack?: boolean }) {
   return (
-    <div className={stack ? "flex flex-col gap-2" : "flex gap-2"}>
-      <button
-        className="btn-stroke-light btn-small text-white"
-        onClick={() => go("de")}
-      >
-        DE
-      </button>
-      <button
-        className="btn-stroke-light btn-small text-white"
-        onClick={() => go("fr")}
-      >
-        FR
-      </button>
-      <button
-        className="btn-stroke-light btn-small text-white"
-        onClick={() => go("en")}
-      >
-        EN
-      </button>
+    <div className={stack ? "flex flex-col gap-1" : "flex gap-1"}>
+      {["de","fr","en","es"].map((lc) => (
+        <button
+          key={lc}
+          className="btn-stroke-light btn-small text-white !px-2 !py-1 text-[10px] leading-none"
+          onClick={() => go(lc as Lang)}
+          aria-label={lc.toUpperCase()}
+          title={lc.toUpperCase()}
+        >
+          {lc.toUpperCase()}
+        </button>
+      ))}
     </div>
   );
 }

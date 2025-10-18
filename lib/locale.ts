@@ -1,13 +1,14 @@
 // lib/locale.ts
 // --------------------------------------------------------------------------
-// [locale-utils] v1.2.0 — 2025-09-02
+// [locale-utils] v1.3.0 — 2025-10-18
 // CHANGELOG:
 // - v1.2.0: EN bekommt KEIN Prefix (/en) mehr. EN bleibt Root "/".
 //           Fix für statisches Hosting, damit Links wie /pricing in EN
 //           nicht auf /en/pricing zeigen.
+// - v1.3.0: ES hinzugefügt
 // --------------------------------------------------------------------------
 
-export const SUPPORTED_LOCALES = ["de", "fr", "en"] as const;
+export const SUPPORTED_LOCALES = ["de", "fr", "en", "es"] as const;
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "en";
 
@@ -35,7 +36,7 @@ export function withLocalePath(path: string, locale: Locale): string {
     ? "/"          // root bleibt root
     : normalized;  // z.B. "/pricing" bleibt "/pricing"
 
-  // Für DE/FR präfixen
+  // Für DE/FR/ES präfixen
   if (normalized === "/") return `/${locale}/`;
   return `/${locale}${normalized}`;
 }
