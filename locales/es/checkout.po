@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-10-18 13:34+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "checkout/es/>\n"
 "Language: es\n"
@@ -108,7 +108,7 @@ msgstr "Popular"
 #. key: checkout.body.hero-subtitle
 msgid "Pricing Plans for every need - Unlock the power of AI"
 msgstr ""
-"Planes de precios para cada necesidad: aprovecha todo el potencial de la IA."
+"Planes de precios para cada necesidad: aprovecha todo el potencial de la IA"
 
 #. key: checkout.badges.save
 msgid "Save"
