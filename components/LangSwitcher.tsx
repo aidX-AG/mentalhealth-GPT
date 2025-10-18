@@ -37,7 +37,7 @@ function useCurrentLocale(): Lang {
   return "en";
 }
 
-export default function LangSwitcher() {
+export default function LangSwitcher({ stack = false }: { stack?: boolean }) {
   const currentLc = useCurrentLocale();
 
   return (
