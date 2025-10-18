@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-10-18 13:45+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "common/es/>\n"
 "Language: es\n"
@@ -21,7 +21,7 @@ msgstr "Invitar a un miembro del equipo"
 
 #. key: common.body.access-note
 msgid "Only people invited in this list can access"
-msgstr "Solo las personas invitadas en esta lista pueden acceder."
+msgstr "Solo las personas invitadas en esta lista pueden acceder"
 
 #. key: common.buttons.cancel
 msgid "Cancel"
@@ -110,8 +110,8 @@ msgstr "Exportar 1 audio"
 #. key: common.body.introducing-brainwave
 msgid "Introducing &quot;Brainwave&quot;, an AI-powered product that can turn any"
 msgstr ""
-"Presentamos «Brainwave», un producto basado en inteligencia artificial que "
-"puede convertir cualquier"
+"Presentamos «aidX», un producto basado en inteligencia artificial que puede "
+"convertir cualquier"
 
 #. key: common.misc.characters-609
 msgid "609 characters"
@@ -153,7 +153,7 @@ msgstr ""
 
 #. key: common.body.created-project
 msgid "I have created a project in your Codepen account"
-msgstr "He creado un proyecto en tu cuenta de Codepen."
+msgstr "He creado un proyecto en tu cuenta de Codepen"
 
 #. key: common.buttons.view
 msgid "View"
@@ -325,7 +325,7 @@ msgstr "Nuevo chat"
 
 #. key: common.sections.schedule-with-buffer
 msgid "Schedule your post with Buffer"
-msgstr "Programa tu publicación con Buffer."
+msgstr "Programa tu publicación con Buffer"
 
 #. key: common.form.choose-date
 msgid "Choose date"
@@ -552,7 +552,7 @@ msgstr "Exportación de chat"
 
 #. key: common.form.select-chat-list
 msgid "Select chat list to export"
-msgstr "Selecciona la lista de chats que deseas exportar."
+msgstr "Selecciona la lista de chats que deseas exportar"
 
 #. key: common.form.download-conversation
 msgid "Download conversation"
@@ -560,7 +560,7 @@ msgstr "Descargar conversación"
 
 #. key: common.form.delete-account-title
 msgid "We’re sorry to see you go"
-msgstr "Lamentamos que se vaya."
+msgstr "Lamentamos que se vaya"
 
 #. key: common.form.delete-account-warning
 msgid ""
@@ -600,7 +600,7 @@ msgstr "Se recomienda un tamaño mínimo de 800 x 800 píxeles."
 
 #. key: common.form.allowed-formats
 msgid "JPG or PNG and GIF is allowed"
-msgstr "Se permiten los formatos JPG, PNG y GIF."
+msgstr "Se permiten los formatos JPG, PNG y GIF"
 
 #. key: common.form.save-changes
 msgid "Save changes"
