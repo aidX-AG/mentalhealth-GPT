@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-10-18 13:34+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "applications/es/>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr "Aplicaciones"
 #. key: applications.body.browse-install-apps
 msgid "Browse and install apps to simplify your life with mentalhealthGPT"
 msgstr ""
-"Explora e instala aplicaciones para simplificar tu vida con mentalhealthGPT."
+"Explora e instala aplicaciones para simplificar tu vida con mentalhealthGPT"
 
 #. key: applications.sections.suggested-apps
 msgid "Suggested apps"
