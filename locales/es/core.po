@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2025-10-18 13:45+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/core/"
 "es/>\n"
 "Language: es\n"
@@ -133,7 +133,7 @@ msgstr ""
 
 #: mocks/price.tsx:27
 msgid "Access all AI capabilities"
-msgstr "Accede a todas las capacidades de IA."
+msgstr "Accede a todas las capacidades de IA"
 
 #: mocks/price.tsx:49
 msgid "Access to  knowledge base"
@@ -228,7 +228,7 @@ msgstr "Alvah"
 msgid "Analyze the latest therapy session transcript for key emotional patterns and therapeutic interventions"
 msgstr ""
 "Analizar la transcripción de la última sesión terapéutica para identificar "
-"patrones emocionales clave e intervenciones terapéuticas."
+"patrones emocionales clave e intervenciones terapéuticas"
 
 #: mocks/people.tsx:5
 msgid "Anthony"
@@ -280,7 +280,7 @@ msgstr "flecha-anterior"
 #: app/homepage/page.tsx:17
 #: app/page.tsx:17
 msgid "Ask mentalhealthGPT anything"
-msgstr "Pregunta cualquier cosa a mentalhealthGPT."
+msgstr "Pregunta cualquier cosa a mentalhealthGPT"
 
 #: components/Settings/EditProfile/index.tsx:34
 msgid "At least 800x800 px recommended."
@@ -357,7 +357,7 @@ msgstr ""
 #: components/AddChatList/index.tsx:48
 #: components/AddChatList/User/index.tsx:18
 msgid "Can start chat"
-msgstr "Se puede iniciar el chat."
+msgstr "Se puede iniciar el chat"
 
 #: components/AddChatList/index.tsx:45
 #: components/AddChatList/User/index.tsx:15
@@ -743,7 +743,7 @@ msgstr "Enthony"
 msgid "Evaluate current treatment progress and suggest evidence-based adjustments to therapeutic approach"
 msgstr ""
 "Evaluar el progreso actual del tratamiento y sugerir ajustes basados en la "
-"evidencia para el enfoque terapéutico."
+"evidencia para el enfoque terapéutico"
 
 #: mocks/updates.tsx:17
 msgid "Expanding to Three Languages"
@@ -754,7 +754,7 @@ msgstr "Ampliación a tres idiomas"
 #: app/layout.tsx:48
 #: app/layout.tsx:56
 msgid "Expert AI for mental health – secure, private, and scientifically validated"
-msgstr "IA experta en salud mental: segura, privada y validada científicamente."
+msgstr "IA experta en salud mental: segura, privada y validada científicamente"
 
 #: app/homepage/page.tsx:15
 #: app/page.tsx:15
@@ -842,7 +842,7 @@ msgstr "Acceso completo"
 msgid "Generate structured clinical notes from session transcripts following healthcare documentation standards"
 msgstr ""
 "Genere notas clínicas estructuradas a partir de transcripciones de sesiones "
-"siguiendo los estándares de documentación sanitaria."
+"siguiendo los estándares de documentación sanitaria"
 
 #: constants/export.tsx:17
 #: constants/export.tsx:47
@@ -902,7 +902,7 @@ msgstr "HTML"
 
 #: components/Code/index.tsx:55
 msgid "I have created a project in your Codepen account"
-msgstr "He creado un proyecto en tu cuenta de Codepen."
+msgstr "He creado un proyecto en tu cuenta de Codepen"
 
 #: components/SocialsPost/Details/index.tsx:24
 msgid "image-up"
@@ -927,8 +927,8 @@ msgstr "Apoyo a nivel institucional"
 #: components/AudioPlayer/index.tsx:28
 msgid "Introducing \"Brainwave\", an AI-powered product that can turn any"
 msgstr ""
-"Presentamos «Brainwave», un producto basado en inteligencia artificial que "
-"puede convertir cualquier"
+"Presentamos «aidX», un producto basado en inteligencia artificial que puede "
+"convertir cualquier"
 
 #: components/Settings/Team/index.tsx:9
 msgid "Invite"
@@ -1000,7 +1000,7 @@ msgstr "JPG grande"
 
 #: components/Settings/EditProfile/index.tsx:35
 msgid "JPG or PNG and GIF is allowed"
-msgstr "Se permiten los formatos JPG, PNG y GIF."
+msgstr "Se permiten los formatos JPG, PNG y GIF"
 
 #: constants/export.tsx:6
 msgid "JPG Small"
@@ -1242,7 +1242,7 @@ msgstr "Notificaciones"
 
 #: components/AddChatList/index.tsx:72
 msgid "Only people invited in this list can access"
-msgstr "Solo las personas invitadas en esta lista pueden acceder."
+msgstr "Solo las personas invitadas en esta lista pueden acceder"
 
 #: mocks/faq.tsx:13
 msgid "Only the user has access to the encrypted data. No one else – not even our technical team – can decrypt or view the data. This ensures full compliance with the highest data protection standards (GDPR, Swiss DSG, and clinical-grade confidentiality). The mentalhealthGPT platform is designed from the ground up as zero-access and privacy-first."
@@ -1391,7 +1391,7 @@ msgstr "Restablecer"
 msgid "Review patient symptoms and provide differential diagnosis suggestions based on clinical guidelines"
 msgstr ""
 "Revisar los síntomas del paciente y proporcionar sugerencias de diagnóstico "
-"diferencial basadas en las directrices clínicas."
+"diferencial basadas en las directrices clínicas"
 
 #: components/Settings/Sessions/Device/index.tsx:22
 msgid "Revoke"
@@ -1427,7 +1427,7 @@ msgstr "Programar publicación"
 
 #: components/SchedulePost/index.tsx:19
 msgid "Schedule your post with Buffer"
-msgstr "Programa tu publicación con Buffer."
+msgstr "Programa tu publicación con Buffer"
 
 #: components/SchedulePost/index.tsx:38
 msgid "Scheduled in your current timezone"
@@ -1463,7 +1463,7 @@ msgstr "Seguridad y protección de datos"
 
 #: components/Settings/ChatExport/index.tsx:59
 msgid "Select chat list to export"
-msgstr "Selecciona la lista de chats que deseas exportar."
+msgstr "Selecciona la lista de chats que deseas exportar"
 
 #: constants/settings.tsx:21
 msgid "Sessions"
@@ -1528,7 +1528,7 @@ msgstr "Cerrar sesión en todos los dispositivos"
 #: components/Settings/Sessions/index.tsx:21
 #: components/Settings/Sessions/index.tsx:9
 msgid "Signed in Nov 17, 2023"
-msgstr "Firmado el 17 de noviembre de 2023."
+msgstr "Firmado el 17 de noviembre de 2023"
 
 #: mocks/applications.tsx:40
 msgid "Slack"
@@ -1551,7 +1551,7 @@ msgstr "Sonrisa sin gracia"
 #: components/Settings/Notifications/index.tsx:18
 #: components/Settings/Notifications/index.tsx:34
 msgid "Someone invite you to new chat"
-msgstr "Alguien te ha invitado a un nuevo chat."
+msgstr "Alguien te ha invitado a un nuevo chat"
 
 #: components/Feedback/index.tsx:20
 msgid "Speak with native speakers:"
@@ -1805,7 +1805,7 @@ msgstr ""
 
 #: components/Settings/DeleteAccount/index.tsx:9
 msgid "We’re sorry to see you go"
-msgstr "Lamentamos que se vaya."
+msgstr "Lamentamos que se vaya"
 
 #: mocks/updates.tsx:44
 msgid "We’ve deployed the first secure user interface for mentalhealthGPT, enabling intuitive and privacy-first interaction with our AI services. This marks a big milestone toward bringing our platform directly into clinical hands."
@@ -1875,7 +1875,7 @@ msgstr "Wowa"
 
 #: mocks/resultSearch.tsx:28
 msgid "Write a Welcome Page in HTML and CSS"
-msgstr "Escribe una página de bienvenida en HTML y CSS."
+msgstr "Escribe una página de bienvenida en HTML y CSS"
 
 #: mocks/resultSearch.tsx:29
 #: mocks/resultSearch.tsx:38
@@ -1884,7 +1884,7 @@ msgstr "Escribe una página de bienvenida en HTML y CSS."
 msgid "Write code (HTML, CSS and JS) for a simple form with 3 input fields and a dropdown with 2 buttons, cancel and send"
 msgstr ""
 "Escribe código (HTML, CSS y JS) para un formulario sencillo con tres campos "
-"de entrada y un menú desplegable con dos botones: «Cancelar» y «Enviar»."
+"de entrada y un menú desplegable con dos botones: «Cancelar» y «Enviar»"
 
 #: components/Feedback/index.tsx:16
 msgid "Writing can help you improve your grammar, spelling, and sentence structure. Try to write regularly, even if it's just a short paragraph or a journal entry."
