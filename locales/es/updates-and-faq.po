@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"PO-Revision-Date: 2025-10-18 14:53+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "updates-and-faq/es/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #. key: updates-and-faq.sections.title
 msgid "Updates & FAQ"
-msgstr "Actualizaciones y preguntas frecuentes"
+msgstr "Actualizaciones y FAQ"
 
 #. key: updates-and-faq.sections.subtitle
 msgid "Features, fixes & improvements."
