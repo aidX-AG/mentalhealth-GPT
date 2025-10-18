@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-10-18 14:53+0000\n"
+"PO-Revision-Date: 2025-10-18 18:05+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "homepage/es/>\n"
@@ -23,4 +23,4 @@ msgstr ""
 
 #. key: homepage.sections.brand
 msgid "my private mentalhealthGPT"
-msgstr "mi salud mentalhealthGPT"
+msgstr "mi mentalhealthGPT privado"
