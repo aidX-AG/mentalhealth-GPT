@@ -1,0 +1,21 @@
+{
+  "sign-in.legal.and": "y",
+  "sign-in.legal.tos_prefix": "Al crear una cuenta, aceptas nuestras",
+  "sign-in.hero.subtitle": "Chatee con expertos especializados: experimente la IA con una protección completa de los datos con nosotros",
+  "sign-in.social.apple": "Continuar con Apple",
+  "sign-in.social.google": "Continuar con Google",
+  "sign-in.tabs.create_account": "Crear cuenta",
+  "sign-in.button.create_account": "Crear cuenta",
+  "sign-in.place.create_email": "Correo electrónico",
+  "sign-in.misc.forgot-password": "¿Olvidó su contraseña?",
+  "sign-in.misc.or": "O",
+  "sign-in.place.create_password": "Contraseña",
+  "sign-in.legal.privacy": "Declaración de privacidad y cookies",
+  "sign-in.button.reset_password": "Restablecer contraseña",
+  "sign-in.password.reset.title": "Restablecer su contraseña",
+  "sign-in.tabs.sign_in": "Iniciar sesión",
+  "sign-in.button.sign_in_with_app": "Iniciar sesión con mentalhealthGPT",
+  "sign-in.legal.tos": "Condiciones del servicio",
+  "sign-in.hero.title": "Descubre todo el potencial de tu IA privada para la salud mental",
+  "sign-in.place.username": "Nombre de usuario o correo electrónico"
+}

@@ -1,0 +1,8 @@
+{
+  "diagnosis-support.sections.banner-prefix": "🚧 La funcionalidad de IA para",
+  "diagnosis-support.chat.title": "Apoyo al diagnóstico",
+  "diagnosis-support.sections.under-development": "se encuentra actualmente en desarrollo.",
+  "diagnosis-support.sections.coming-soon": "Estará disponible gradualmente a medida que integremos modelos especializados para respaldar los diagnósticos de salud mental.",
+  "diagnosis-support.question.document": "diagnóstico-caso.pdf",
+  "diagnosis-support.question.content": "Revise este caso clínico y sugiera posibles diagnósticos. Destaque cualquier síntoma o patrón de comportamiento importante."
+}

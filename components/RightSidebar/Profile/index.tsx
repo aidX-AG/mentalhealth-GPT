@@ -5,7 +5,8 @@ import { Menu, Transition } from "@headlessui/react";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import { _ } from "@/lib/i18n/_";
-import { usePathname } from "next/navigation"; // ✅ NEU: aktuelles Locale aus der URL lesen
+import { usePathname } from "next/navigation"; // ✅ Locale aus der URL lesen
+
 const t = _;
 
 type ProfileProps = {};
@@ -13,9 +14,9 @@ type ProfileProps = {};
 const Profile = ({}: ProfileProps) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
 
-  // ✅ Locale-Prefix aus aktueller URL extrahieren: "", "/de" oder "/fr"
+  // ✅ Locale-Prefix aus aktueller URL extrahieren: "", "/de", "/fr" oder "/es"
   const pathname = usePathname() || "/";
-  const m = pathname.match(/^\/(de|fr)(?:\/|$)/);
+  const m = pathname.match(/^\/(de|fr|es)(?:\/|$)/);
   const base = m ? `/${m[1]}` : ""; // "" ⇒ en (ohne Prefix)
 
   const menu = [
@@ -88,7 +89,10 @@ const Profile = ({}: ProfileProps) => {
                     className="group flex items-center w-full h-12 base2 font-semibold transition-colors hover:text-primary-1"
                     onClick={item.onClick}
                   >
-                    <Icon className="mr-4 fill-n-4 transition-colors group-hover:fill-primary-1" name={item.icon} />
+                    <Icon
+                      className="mr-4 fill-n-4 transition-colors group-hover:fill-primary-1"
+                      name={item.icon}
+                    />
                     {item.title}
                   </button>
                 </Menu.Item>
