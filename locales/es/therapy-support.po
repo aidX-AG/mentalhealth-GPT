@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-10-18 13:45+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "therapy-support/es/>\n"
 "Language: es\n"
@@ -29,7 +29,7 @@ msgstr "Asistencia terapéutica con IA"
 
 #. key: therapy-support.notice.prefix
 msgid "🚧 The AI functionality for "
-msgstr ""
+msgstr "🚧 La funcionalidad de IA para "
 
 #. key: therapy-support.notice.feature-name
 msgid "Therapy Support"
