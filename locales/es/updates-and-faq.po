@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. key: updates-and-faq.sections.title
+msgid "Updates & FAQ"
+msgstr ""
+
+#. key: updates-and-faq.sections.subtitle
+msgid "Features, fixes & improvements."
+msgstr ""
+
+#. key: updates-and-faq.sections.question
+msgid "Can’t find any answer?"
+msgstr ""
+
+#. key: updates-and-faq.sections.lets-ask-ai
+msgid "Let’s ask the smartest AI Chat"
+msgstr ""
+
+#. key: updates-and-faq.buttons.ask-mh-gpt
+msgid "Ask mentalhealthGPT"
+msgstr ""
+
+#. key: updates-and-faq.buttons.load-more
+msgid "Load more"
+msgstr ""
