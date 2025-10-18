@@ -1,35 +1,42 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"diagnosis-support/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 #. key: diagnosis-support.sections.banner-prefix
 msgid "🚧 The AI functionality for"
-msgstr ""
+msgstr "🚧 La funcionalidad de IA para"
 
 #. key: diagnosis-support.chat.title
 msgid "Diagnosis Support"
-msgstr ""
+msgstr "Apoyo al diagnóstico"
 
 #. key: diagnosis-support.sections.under-development
 msgid "is currently under development."
-msgstr ""
+msgstr "se encuentra actualmente en desarrollo."
 
 #. key: diagnosis-support.sections.coming-soon
 msgid ""
 "It will gradually become available as we integrate specialized models to "
 "support mental health diagnostics."
 msgstr ""
+"Estará disponible gradualmente a medida que integremos modelos "
+"especializados para respaldar los diagnósticos de salud mental."
 
 #. key: diagnosis-support.question.document
 msgid "diagnosis-case.pdf"
-msgstr ""
+msgstr "diagnóstico-caso.pdf"
 
 #. key: diagnosis-support.question.content
 msgid "Please review this clinical case and suggest possible diagnoses. Highlight any important symptoms or behavioral patterns."
 msgstr ""
+"Revise este caso clínico y sugiera posibles diagnósticos. Destaque cualquier "
+"síntoma o patrón de comportamiento importante."
