@@ -1,85 +1,90 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"sign-in/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 #. key: sign-in.legal.and
 msgid "and"
-msgstr ""
+msgstr "y"
 
 #. key: sign-in.legal.tos_prefix
 msgid "By creating an account, you agree to our"
-msgstr ""
+msgstr "Al crear una cuenta, aceptas nuestras"
 
 #. key: sign-in.hero.subtitle
 msgid "Chat with specialized expertise - Experience AI with complete data protection with us"
 msgstr ""
+"Chatee con expertos especializados: experimente la IA con una protección "
+"completa de los datos con nosotros."
 
 #. key: sign-in.social.apple
 msgid "Continue with Apple"
-msgstr ""
+msgstr "Continuar con Apple"
 
 #. key: sign-in.social.google
 msgid "Continue with Google"
-msgstr ""
+msgstr "Continuar con Google"
 
 #. key: sign-in.tabs.create_account
 msgid "Create account"
-msgstr ""
+msgstr "Crear cuenta"
 
 #. key: sign-in.button.create_account
 msgid "Create Account"
-msgstr ""
+msgstr "Crear cuenta"
 
 #. key: sign-in.place.create_email
 msgid "Email"
-msgstr ""
+msgstr "Correo electrónico"
 
 #. key: sign-in.misc.forgot-password
 msgid "Forgot password?"
-msgstr ""
+msgstr "¿Olvidó su contraseña?"
 
 #. key: sign-in.misc.or
 msgid "OR"
-msgstr ""
+msgstr "O"
 
 #. key: sign-in.place.create_password
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #. key: sign-in.legal.privacy
 msgid "Privacy & Cookie Statement"
-msgstr ""
+msgstr "Declaración de privacidad y cookies"
 
 #. key: sign-in.button.reset_password
 msgid "Reset password"
-msgstr ""
+msgstr "Restablecer contraseña"
 
 #. key: sign-in.password.reset.title
 msgid "Reset your password"
-msgstr ""
+msgstr "Restablecer su contraseña"
 
 #. key: sign-in.tabs.sign_in
 msgid "Sign in"
-msgstr ""
+msgstr "Iniciar sesión"
 
 #. key: sign-in.button.sign_in_with_app
 msgid "Sign in with mentalhealthGPT"
-msgstr ""
+msgstr "Iniciar sesión con mentalhealthGPT"
 
 #. key: sign-in.legal.tos
 msgid "Terms of Service"
-msgstr ""
+msgstr "Condiciones del servicio"
 
 #. key: sign-in.hero.title
 msgid "Unlock the power of your private mental health AI"
-msgstr ""
+msgstr "Descubre todo el potencial de tu IA privada para la salud mental."
 
 #. key: sign-in.place.username
 msgid "Username or email"
-msgstr ""
+msgstr "Nombre de usuario o correo electrónico"
