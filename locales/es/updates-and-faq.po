@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-10-18 13:45+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "updates-and-faq/es/>\n"
 "Language: es\n"
@@ -25,7 +25,7 @@ msgstr "¿No encuentras ninguna respuesta?"
 
 #. key: updates-and-faq.sections.lets-ask-ai
 msgid "Let’s ask the smartest AI Chat"
-msgstr "Preguntemos al chatbot de IA más inteligente."
+msgstr "Preguntemos al chatbot de IA más inteligente"
 
 #. key: updates-and-faq.buttons.ask-mh-gpt
 msgid "Ask mentalhealthGPT"
