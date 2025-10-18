@@ -1,121 +1,127 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-18 13:34+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"checkout/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 #. key: checkout.sections.per-month
 msgid "/ month"
-msgstr ""
+msgstr "/ mes"
 
 #. key: checkout.features.advanced-team
 msgid "Advanced team management"
-msgstr ""
+msgstr "Gestión avanzada de equipos"
 
 #. key: checkout.actions.apply-promo
 msgid "Apply promo code"
-msgstr ""
+msgstr "Aplicar código promocional"
 
 #. key: checkout.notes.billed-now
 msgid "Billed now"
-msgstr ""
+msgstr "Facturado ahora"
 
 #. key: checkout.sections.billing-email
 msgid "Billing email"
-msgstr ""
+msgstr "Correo electrónico de facturación"
 
 #. key: checkout.terms.accept
 msgid "By clicking \"Start Institution plan\", you agree to be charged CHF 399 every month, unless you cancel."
 msgstr ""
+"Al hacer clic en «Iniciar plan para instituciones», aceptas que se te cobre "
+"399 CHF cada mes, a menos que canceles."
 
 #. key: checkout.sections.card-details
 msgid "Card details"
-msgstr ""
+msgstr "Detalles de la tarjeta"
 
 #. key: checkout.form.card-number
 msgid "Card number"
-msgstr ""
+msgstr "Número de tarjeta"
 
 #. key: checkout.sections.change-currency
 msgid "Change currency"
-msgstr ""
+msgstr "Cambiar moneda"
 
 #. key: checkout.features.customizable-models
 msgid "Customizable AI models"
-msgstr ""
+msgstr "Modelos de IA personalizables"
 
 #. key: checkout.features.customizable-institution-models
 msgid "Customizable institutional AI models"
-msgstr ""
+msgstr "Modelos institucionales de IA personalizables"
 
 #. key: checkout.form.cvc
 msgid "CVC"
-msgstr ""
+msgstr "CVC"
 
 #. key: checkout.features.dedicated-account-manager
 msgid "Dedicated account manager"
-msgstr ""
+msgstr "Gestor de cuentas dedicado"
 
 #. key: checkout.form.email
 msgid "Email address"
-msgstr ""
+msgstr "Dirección de correo electrónico"
 
 #. key: checkout.sections.enterprise
 msgid "Institution"
-msgstr ""
+msgstr "Institución"
 
 #. key: checkout.features.institution-support
 msgid "Institution-level support"
-msgstr ""
+msgstr "Apoyo a nivel institucional"
 
 #. key: checkout.sections.hero-title
 msgid "Mental Health AI chat made to measure"
-msgstr ""
+msgstr "Chat de IA sobre salud mental hecho a medida"
 
 #. key: checkout.form.mm-yy
 msgid "MM / YY"
-msgstr ""
+msgstr "MM / AA"
 
 #. key: checkout.misc.monthly-lc
 msgid "monthly"
-msgstr ""
+msgstr "mensual"
 
 #. key: checkout.sections.monthly-plan
 msgid "Monthly Plan"
-msgstr ""
+msgstr "Plan mensual"
 
 #. key: checkout.sections.pay
 msgid "Pay"
-msgstr ""
+msgstr "Pagar"
 
 #. key: checkout.sections.plan
 msgid "Plan"
-msgstr ""
+msgstr "Plan"
 
 #. key: checkout.sections.popular
 msgid "Popular"
-msgstr ""
+msgstr "Popular"
 
 #. key: checkout.body.hero-subtitle
 msgid "Pricing Plans for every need - Unlock the power of AI"
 msgstr ""
+"Planes de precios para cada necesidad: aprovecha todo el potencial de la IA."
 
 #. key: checkout.badges.save
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #. key: checkout.notes.secured
 msgid "Secured form with CH Banking"
-msgstr ""
+msgstr "Formulario seguro con CH Banking"
 
 #. key: checkout.form.start-plan
 msgid "Start Institution Plan"
-msgstr ""
+msgstr "Iniciar plan institucional"
 
 #. key: checkout.misc.yearly-lc
 msgid "yearly"
-msgstr ""
+msgstr "anual"
