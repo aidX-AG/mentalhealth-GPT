@@ -1,33 +1,36 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"updates-and-faq/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 #. key: updates-and-faq.sections.title
 msgid "Updates & FAQ"
-msgstr ""
+msgstr "Actualizaciones y preguntas frecuentes"
 
 #. key: updates-and-faq.sections.subtitle
 msgid "Features, fixes & improvements."
-msgstr ""
+msgstr "Características, correcciones y mejoras."
 
 #. key: updates-and-faq.sections.question
 msgid "Can’t find any answer?"
-msgstr ""
+msgstr "¿No encuentras ninguna respuesta?"
 
 #. key: updates-and-faq.sections.lets-ask-ai
 msgid "Let’s ask the smartest AI Chat"
-msgstr ""
+msgstr "Preguntemos al chatbot de IA más inteligente."
 
 #. key: updates-and-faq.buttons.ask-mh-gpt
 msgid "Ask mentalhealthGPT"
-msgstr ""
+msgstr "Pregunte a mentalhealthGPT"
 
 #. key: updates-and-faq.buttons.load-more
 msgid "Load more"
-msgstr ""
+msgstr "Cargar más"
