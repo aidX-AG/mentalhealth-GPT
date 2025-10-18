@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. key: therapy-support.sections.greeting
+msgid "🧠 Hello! I'm your Therapy Support AI."
+msgstr ""
+
+#. key: therapy-support.sections.instructions
+msgid ""
+"Feel free to describe your case, the specific symptoms, or ask for "
+"therapeutic strategies."
+msgstr ""
+
+#. key: therapy-support.chat.title
+msgid "Therapy Support AI"
+msgstr ""
+
+#. key: therapy-support.notice.prefix
+msgid "🚧 The AI functionality for "
+msgstr ""
+
+#. key: therapy-support.notice.feature-name
+msgid "Therapy Support"
+msgstr ""
+
+#. key: therapy-support.notice.suffix
+msgid " is currently under development. It will soon be available with specialized models for therapy planning, reflection, and evidence-based suggestions."
+msgstr ""
+
+#. key: therapy-support.cta.support
+msgid "Want to support mentalhealthGPT or learn more? Email"
+msgstr ""
