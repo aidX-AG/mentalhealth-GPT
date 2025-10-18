@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. key: checkout.sections.per-month
+msgid "/ month"
+msgstr ""
+
+#. key: checkout.features.advanced-team
+msgid "Advanced team management"
+msgstr ""
+
+#. key: checkout.actions.apply-promo
+msgid "Apply promo code"
+msgstr ""
+
+#. key: checkout.notes.billed-now
+msgid "Billed now"
+msgstr ""
+
+#. key: checkout.sections.billing-email
+msgid "Billing email"
+msgstr ""
+
+#. key: checkout.terms.accept
+msgid "By clicking \"Start Institution plan\", you agree to be charged CHF 399 every month, unless you cancel."
+msgstr ""
+
+#. key: checkout.sections.card-details
+msgid "Card details"
+msgstr ""
+
+#. key: checkout.form.card-number
+msgid "Card number"
+msgstr ""
+
+#. key: checkout.sections.change-currency
+msgid "Change currency"
+msgstr ""
+
+#. key: checkout.features.customizable-models
+msgid "Customizable AI models"
+msgstr ""
+
+#. key: checkout.features.customizable-institution-models
+msgid "Customizable institutional AI models"
+msgstr ""
+
+#. key: checkout.form.cvc
+msgid "CVC"
+msgstr ""
+
+#. key: checkout.features.dedicated-account-manager
+msgid "Dedicated account manager"
+msgstr ""
+
+#. key: checkout.form.email
+msgid "Email address"
+msgstr ""
+
+#. key: checkout.sections.enterprise
+msgid "Institution"
+msgstr ""
+
+#. key: checkout.features.institution-support
+msgid "Institution-level support"
+msgstr ""
+
+#. key: checkout.sections.hero-title
+msgid "Mental Health AI chat made to measure"
+msgstr ""
+
+#. key: checkout.form.mm-yy
+msgid "MM / YY"
+msgstr ""
+
+#. key: checkout.misc.monthly-lc
+msgid "monthly"
+msgstr ""
+
+#. key: checkout.sections.monthly-plan
+msgid "Monthly Plan"
+msgstr ""
+
+#. key: checkout.sections.pay
+msgid "Pay"
+msgstr ""
+
+#. key: checkout.sections.plan
+msgid "Plan"
+msgstr ""
+
+#. key: checkout.sections.popular
+msgid "Popular"
+msgstr ""
+
+#. key: checkout.body.hero-subtitle
+msgid "Pricing Plans for every need - Unlock the power of AI"
+msgstr ""
+
+#. key: checkout.badges.save
+msgid "Save"
+msgstr ""
+
+#. key: checkout.notes.secured
+msgid "Secured form with CH Banking"
+msgstr ""
+
+#. key: checkout.form.start-plan
+msgid "Start Institution Plan"
+msgstr ""
+
+#. key: checkout.misc.yearly-lc
+msgid "yearly"
+msgstr ""
