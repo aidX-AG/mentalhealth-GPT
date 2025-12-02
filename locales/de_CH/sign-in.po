@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-02 15:24+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/de_CH/>\n"
 "Language: de_CH\n"
@@ -100,89 +100,101 @@ msgstr ""
 
 #. key: sign-in.create.error.invalid_email
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Bitte geben Sie eine gültige E-Mail-Adresse ein."
 
 #. key: sign-in.create.error.technical
 msgid "A technical error occurred while creating the account."
-msgstr ""
+msgstr "Bei der Erstellung des Kontos ist ein technischer Fehler aufgetreten."
 
 #. key: sign-in.create.error.email_already_registered
 msgid ""
 "This email address is already registered. Please sign in or use a different "
 "address."
 msgstr ""
+"Diese E-Mail-Adresse ist bereits registriert. Bitte melden Sie sich an oder "
+"verwenden Sie eine andere Adresse."
 
 #. key: sign-in.create.error.password_too_weak
 msgid "Password is too weak. Please use a stronger password."
 msgstr ""
+"Das Passwort ist zu schwach. Bitte verwenden Sie ein stärkeres Passwort."
 
 #. key: sign-in.create.error.generic
 msgid "Account could not be created."
-msgstr ""
+msgstr "Das Konto konnte nicht erstellt werden."
 
 #. key: sign-in.create.error.technical
 msgid "Technical error while creating the account."
-msgstr ""
+msgstr "Technischer Fehler beim Erstellen des Kontos."
 
 #. key: sign-in.create.success.title
 msgid "Account successfully created."
-msgstr ""
+msgstr "Konto erfolgreich erstellt."
 
 #. key: sign-in.create.success.body
 msgid ""
 "You can now set up your personal passkey - the most secure login method "
 "available."
 msgstr ""
+"Sie können jetzt Ihren persönlichen Passkey einrichten – die sicherste "
+"Anmeldemethode, die es gibt."
 
 #. key: sign-in.create.success.cta_webauthn
 msgid "Set up passkey now"
-msgstr ""
+msgstr "Passwort jetzt einrichten"
 
 #. key: passkey.hero.title
-#, fuzzy
-#| msgid "Reset your password"
 msgid "Set up your passkey"
-msgstr "Passwort zurücksetzen"
+msgstr "Richten Sie Ihren Passkey ein"
 
 #. key: passkey.hero.subtitle
 msgid ""
 "Sign in with the most secure authentication method available – your personal "
 "passkey."
 msgstr ""
+"Melden Sie sich mit der sichersten Authentifizierungsmethode an, die es gibt "
+"– Ihrem persönlichen Passkey."
 
 #. key: passkey.setup.title
 msgid "Passkey setup"
-msgstr ""
+msgstr "Passkey-Einrichtung"
 
 #. key: passkey.setup.subtitle
 msgid ""
 "Create your passkey to protect your account with state-of-the-art security."
 msgstr ""
+"Erstellen Sie Ihren Passkey, um Ihr Konto mit modernster Sicherheit zu "
+"schützen."
 
 #. key: passkey.setup.button_start
 msgid "Create passkey"
-msgstr ""
+msgstr "Passkey erstellen"
 
 #. key: passkey.setup.button_working
 msgid "Creating passkey..."
-msgstr ""
+msgstr "Passkey erstellen..."
 
 #. key: passkey.setup.error.generic
 msgid "Could not create your passkey. Please try again."
 msgstr ""
+"Ihr Passkey konnte nicht erstellt werden. Bitte versuchen Sie es erneut."
 
 #. key: passkey.setup.error.user_cancelled
 msgid "Passkey creation was cancelled. You can try again at any time."
 msgstr ""
+"Die Passkey-Erstellung wurde abgebrochen. Sie können es jederzeit erneut "
+"versuchen."
 
 #. key: passkey.setup.error.security
 msgid ""
 "Your browser or device blocked the passkey process for security reasons."
 msgstr ""
+"Ihr Browser oder Gerät hat den Passkey-Vorgang aus Sicherheitsgründen "
+"blockiert."
 
 #. key: passkey.setup.back_to_sign_in
 msgid "Back to sign-in"
-msgstr ""
+msgstr "Zurück zur Anmeldung"
 
 #. key: passkey.setup.success.complete
 msgid ""
