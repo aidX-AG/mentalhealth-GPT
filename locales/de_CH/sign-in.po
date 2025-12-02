@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-02 15:24+0000\n"
-"Last-Translator: admin <hello@aidx.ch>\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/de_CH/>\n"
 "Language: de_CH\n"
@@ -96,7 +96,7 @@ msgstr "Benutzername oder E-Mail-Adresse"
 # #####################################################################
 #. key: sign-in.create.error.password_too_short
 msgid "Password is too short. Please use at least 12 characters."
-msgstr ""
+msgstr "Das Passwort ist zu kurz. Bitte verwenden Sie mindestens 12 Zeichen."
 
 #. key: sign-in.create.error.invalid_email
 msgid "Please enter a valid email address."
