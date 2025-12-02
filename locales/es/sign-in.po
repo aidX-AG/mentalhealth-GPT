@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-10-18 13:45+0000\n"
 "Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
-"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
-"sign-in/es/>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/sign-"
+"in/es/>\n"
 "Language: es\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.13.2\n"
@@ -20,7 +20,9 @@ msgid "By creating an account, you agree to our"
 msgstr "Al crear una cuenta, aceptas nuestras"
 
 #. key: sign-in.hero.subtitle
-msgid "Chat with specialized expertise - Experience AI with complete data protection with us"
+msgid ""
+"Chat with specialized expertise - Experience AI with complete data "
+"protection with us"
 msgstr ""
 "Chatee con expertos especializados: experimente la IA con una protección "
 "completa de los datos con nosotros"
@@ -88,3 +90,101 @@ msgstr "Descubre todo el potencial de tu IA privada para la salud mental"
 #. key: sign-in.place.username
 msgid "Username or email"
 msgstr "Nombre de usuario o correo electrónico"
+
+# #####################################################################
+# NEW KEYS FOR CREATE ACCOUNT FLOW (Signup + WebAuthn onboarding)
+# #####################################################################
+#. key: sign-in.create.error.password_too_short
+msgid "Password is too short. Please use at least 12 characters."
+msgstr ""
+
+#. key: sign-in.create.error.invalid_email
+msgid "Please enter a valid email address."
+msgstr ""
+
+#. key: sign-in.create.error.technical
+msgid "A technical error occurred while creating the account."
+msgstr ""
+
+#. key: sign-in.create.error.email_already_registered
+msgid ""
+"This email address is already registered. Please sign in or use a different "
+"address."
+msgstr ""
+
+#. key: sign-in.create.error.password_too_weak
+msgid "Password is too weak. Please use a stronger password."
+msgstr ""
+
+#. key: sign-in.create.error.generic
+msgid "Account could not be created."
+msgstr ""
+
+#. key: sign-in.create.error.technical
+msgid "Technical error while creating the account."
+msgstr ""
+
+#. key: sign-in.create.success.title
+msgid "Account successfully created."
+msgstr ""
+
+#. key: sign-in.create.success.body
+msgid ""
+"You can now set up your personal passkey - the most secure login method "
+"available."
+msgstr ""
+
+#. key: sign-in.create.success.cta_webauthn
+msgid "Set up passkey now"
+msgstr ""
+
+#. key: passkey.hero.title
+#, fuzzy
+#| msgid "Reset your password"
+msgid "Set up your passkey"
+msgstr "Restablecer su contraseña"
+
+#. key: passkey.hero.subtitle
+msgid ""
+"Sign in with the most secure authentication method available – your personal "
+"passkey."
+msgstr ""
+
+#. key: passkey.setup.title
+msgid "Passkey setup"
+msgstr ""
+
+#. key: passkey.setup.subtitle
+msgid ""
+"Create your passkey to protect your account with state-of-the-art security."
+msgstr ""
+
+#. key: passkey.setup.button_start
+msgid "Create passkey"
+msgstr ""
+
+#. key: passkey.setup.button_working
+msgid "Creating passkey..."
+msgstr ""
+
+#. key: passkey.setup.error.generic
+msgid "Could not create your passkey. Please try again."
+msgstr ""
+
+#. key: passkey.setup.error.user_cancelled
+msgid "Passkey creation was cancelled. You can try again at any time."
+msgstr ""
+
+#. key: passkey.setup.error.security
+msgid ""
+"Your browser or device blocked the passkey process for security reasons."
+msgstr ""
+
+#. key: passkey.setup.back_to_sign_in
+msgid "Back to sign-in"
+msgstr ""
+
+#. key: passkey.setup.success.complete
+msgid ""
+"Your passkey has been created successfully. You can now sign in securely."
+msgstr ""
