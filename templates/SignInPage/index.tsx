@@ -9,9 +9,16 @@ type SignInPageProps = {
   heroTitle: string;    // "Unlock the power of AI"
   heroSubtitle: string; // "Chat with the smartest AI ..."
   closeHref?: string;
+  children?: React.ReactNode;
 } & React.ComponentProps<typeof Form>;
 
-const SignInPage = ({ heroTitle, heroSubtitle, closeHref = "/", ...formProps }: SignInPageProps) => {
+const SignInPage = ({
+  heroTitle,
+  heroSubtitle,
+  closeHref = "/",
+  children,
+  ...formProps
+}: SignInPageProps) => {
   return (
     <div className="relative flex min-h-screen min-h-screen-ios lg:p-6 md:px-6 md:pt-16 md:pb-10">
       {/* LINKE SPALTE */}
@@ -34,7 +41,7 @@ const SignInPage = ({ heroTitle, heroSubtitle, closeHref = "/", ...formProps }: 
 
       {/* RECHTE SPALTE */}
       <div className="flex grow my-6 mr-6 p-10 bg-n-1 rounded-[1.25rem] lg:m-0 md:p-0 dark:bg-n-6">
-        <Form {...formProps} />
+        {children ? <>{children}</> : <Form {...formProps} />}
       </div>
 
       <Link
