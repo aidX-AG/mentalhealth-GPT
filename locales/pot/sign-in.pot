@@ -82,10 +82,6 @@ msgstr ""
 msgid "Username or email"
 msgstr ""
 
-######################################################################
-# NEW KEYS FOR CREATE ACCOUNT FLOW (Signup + WebAuthn onboarding)
-######################################################################
-
 #. key: sign-in.create.error.password_too_short
 msgid "Password is too short. Please use at least 12 characters."
 msgstr ""
@@ -125,10 +121,6 @@ msgstr ""
 #. key: sign-in.create.success.cta_webauthn
 msgid "Set up passkey now"
 msgstr ""
-
-######################################################################
-# NEW KEYS: PASSKEY SETUP (NEW PAGE)
-######################################################################
 
 #. key: passkey.hero.title
 msgid "Set up your passkey"
