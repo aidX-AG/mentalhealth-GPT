@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-03 15:05+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -197,7 +197,7 @@ msgstr "Préparation de la configuration de votre clé d'accès…"
 
 #. key: passkey.setup.qr.title
 msgid "Scan the QR code with your smartphone"
-msgstr "Scannez le code QR avec votre smartphone."
+msgstr "Scannez le code QR avec votre smartphone"
 
 #. key: passkey.setup.qr.body
 msgid ""
