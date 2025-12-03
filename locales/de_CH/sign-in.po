@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-03 15:05+0000\n"
+"PO-Revision-Date: 2025-12-03 15:27+0000\n"
 "Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/de_CH/>\n"
@@ -137,14 +137,14 @@ msgstr ""
 
 #. key: sign-in.create.success.cta_webauthn
 msgid "Set up passkey now"
-msgstr "Passwort jetzt einrichten"
+msgstr "Passkey jetzt einrichten"
 
 #. key: sign-in.intro.sign_in
 msgid ""
 "Sign in with your email and password. If you’ve already set up a passkey, "
 "you log in using your smartphone and FaceID or TouchID."
 msgstr ""
-"Melden Sie sich mit Ihrer E-Mail-Adresse und Ihrem Passwort an. Wenn Sie "
+"Melden Sie sich mit Ihrer E-Mail-Adresse und Ihrem Passkey an. Wenn Sie "
 "bereits einen Passkey eingerichtet haben, melden Sie sich mit Ihrem "
 "Smartphone und FaceID oder TouchID an."
 
@@ -154,7 +154,7 @@ msgid ""
 "passkey on your smartphone using FaceID or TouchID."
 msgstr ""
 "Erstellen Sie Ihr Konto mit E-Mail-Adresse und Passwort. Anschließend "
-"richten Sie auf Ihrem Smartphone einen sicheren Passcode mit FaceID oder "
+"richten Sie auf Ihrem Smartphone einen sicheren Passkey mit FaceID oder "
 "TouchID ein."
 
 #. key: passkey.hero.title
@@ -226,15 +226,14 @@ msgstr ""
 #. key: passkey.setup.error.timeout
 msgid "The passkey setup took too long. Please start again."
 msgstr ""
-"Die Einrichtung des Passworts hat zu lange gedauert. Bitte starten Sie "
-"erneut."
+"Die Einrichtung des Passkeys hat zu lange gedauert. Bitte starten Sie erneut."
 
 #. key: passkey.setup.success.complete
 msgid ""
 "Your passkey has been created successfully. You will be redirected to the "
 "sign-in page."
 msgstr ""
-"Ihr Passwort wurde erfolgreich erstellt. Sie werden zur Anmeldeseite "
+"Ihr Passkey wurde erfolgreich erstellt. Sie werden zur Anmeldeseite "
 "weitergeleitet."
 
 #. key: passkey.setup.back_to_signin.prefix
