@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-03 14:06+0000\n"
-"Last-Translator: admin <hello@aidx.ch>\n"
+"PO-Revision-Date: 2025-12-03 15:05+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -145,101 +145,105 @@ msgid ""
 "Sign in with your email and password. If you’ve already set up a passkey, "
 "you log in using your smartphone and FaceID or TouchID."
 msgstr ""
+"Connectez-vous avec votre adresse e-mail et votre mot de passe. Si vous avez "
+"déjà configuré un mot de passe, vous pouvez vous connecter à l'aide de votre "
+"smartphone et de FaceID ou TouchID."
 
 #. key: sign-in.intro.create
 msgid ""
 "Create your account with email and password. Afterwards, you set up a secure "
 "passkey on your smartphone using FaceID or TouchID."
 msgstr ""
+"Créez votre compte avec votre adresse e-mail et votre mot de passe. Ensuite, "
+"configurez un code d'accès sécurisé sur votre smartphone à l'aide de FaceID "
+"ou TouchID."
 
 #. key: passkey.hero.title
-#, fuzzy
-#| msgid "Set up your passkey"
 msgid "Set up your secure smartphone passkey"
-msgstr "Configurez votre clé d'accès"
+msgstr "Configurez votre clé d'accès sécurisée pour smartphone"
 
 #. key: passkey.hero.subtitle
 msgid ""
 "Use your smartphone with FaceID or TouchID as your secure key to sign in to "
 "mentalhealthGPT."
 msgstr ""
+"Utilisez votre smartphone avec FaceID ou TouchID comme clé sécurisée pour "
+"vous connecter à mentalhealthGPT."
 
 #. key: passkey.setup.title
-#, fuzzy
-#| msgid "Set up your passkey"
 msgid "Set up your passkey on your smartphone"
-msgstr "Configurez votre clé d'accès"
+msgstr "Configurez votre clé d'accès sur votre smartphone"
 
 #. key: passkey.setup.body
 msgid ""
 "Scan the QR code with your smartphone to create a secure passkey using "
 "FaceID or TouchID. This will be your primary login method."
 msgstr ""
+"Scannez le code QR avec votre smartphone pour créer une clé d'accès "
+"sécurisée à l'aide de FaceID ou TouchID. Ce sera votre principale méthode de "
+"connexion."
 
 #. key: passkey.setup.for_email
-#, fuzzy
-#| msgid "Passkey setup"
 msgid "Passkey setup for"
-msgstr "Configuration de la clé d'accès"
+msgstr "Configuration de la clé d'accès pour"
 
 #. key: passkey.setup.button_start
 msgid "Generate QR code for passkey setup"
-msgstr ""
+msgstr "Générer un code QR pour la configuration de la clé d'accès"
 
 #. key: passkey.setup.button_working
-#, fuzzy
-#| msgid "Set up your passkey"
 msgid "Preparing your passkey setup…"
-msgstr "Configurez votre clé d'accès"
+msgstr "Préparation de la configuration de votre clé d'accès…"
 
 #. key: passkey.setup.qr.title
 msgid "Scan the QR code with your smartphone"
-msgstr ""
+msgstr "Scannez le code QR avec votre smartphone."
 
 #. key: passkey.setup.qr.body
 msgid ""
 "Open your smartphone camera or your password manager and scan the QR code to "
 "start the passkey setup."
 msgstr ""
+"Ouvrez l'appareil photo de votre smartphone ou votre gestionnaire de mots de "
+"passe et scannez le code QR pour lancer la configuration de la clé d'accès."
 
 #. key: passkey.setup.qr.hint
 msgid ""
 "If nothing happens, try scanning the code again or open the link with your "
 "smartphone directly."
 msgstr ""
+"Si rien ne se passe, essayez de scanner à nouveau le code ou ouvrez "
+"directement le lien avec votre smartphone."
 
 #. key: passkey.setup.status.waiting
 msgid "Waiting for confirmation from your smartphone…"
-msgstr ""
+msgstr "En attente de confirmation depuis votre smartphone…"
 
 #. key: passkey.setup.error.generic
-#, fuzzy
-#| msgid "Could not create your passkey. Please try again."
 msgid "Could not start your passkey setup. Please try again."
-msgstr "Impossible de créer votre clé d'accès. Veuillez réessayer."
+msgstr ""
+"Impossible de démarrer la configuration de votre clé d'accès. Veuillez "
+"réessayer."
 
 #. key: passkey.setup.error.timeout
 msgid "The passkey setup took too long. Please start again."
 msgstr ""
+"La configuration de la clé d'accès a pris trop de temps. Veuillez "
+"recommencer."
 
 #. key: passkey.setup.success.complete
-#, fuzzy
-#| msgid ""
-#| "Your passkey has been created successfully. You can now sign in securely."
 msgid ""
 "Your passkey has been created successfully. You will be redirected to the "
 "sign-in page."
 msgstr ""
-"Votre clé d'accès a été créée avec succès. Vous pouvez désormais vous "
-"connecter en toute sécurité."
+"Votre clé d'accès a été créée avec succès. Vous allez être redirigé vers la "
+"page de connexion."
 
 #. key: passkey.setup.back_to_signin.prefix
 msgid "You can also return to the sign-in page at any time:"
-msgstr ""
+msgstr "Vous pouvez également revenir à la page de connexion à tout moment :"
 
 #. key: passkey.setup.back_to_signin.link
-#, fuzzy
-#| msgid "Back to sign-in"
 msgid "Back to sign in"
 msgstr "Retour à la connexion"
 
