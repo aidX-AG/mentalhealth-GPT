@@ -123,10 +123,6 @@ msgstr ""
 msgid "Account could not be created."
 msgstr "Das Konto konnte nicht erstellt werden."
 
-#. key: sign-in.create.error.technical
-msgid "Technical error while creating the account."
-msgstr "Technischer Fehler beim Erstellen des Kontos."
-
 #. key: sign-in.create.success.title
 msgid "Account successfully created."
 msgstr "Konto erfolgreich erstellt."
@@ -143,64 +139,142 @@ msgstr ""
 msgid "Set up passkey now"
 msgstr "Passwort jetzt einrichten"
 
+#. key: sign-in.intro.sign_in
+msgid ""
+"Sign in with your email and password. If you’ve already set up a passkey, "
+"you log in using your smartphone and FaceID or TouchID."
+msgstr ""
+
+#. key: sign-in.intro.create
+msgid ""
+"Create your account with email and password. Afterwards, you set up a secure "
+"passkey on your smartphone using FaceID or TouchID."
+msgstr ""
+
 #. key: passkey.hero.title
-msgid "Set up your passkey"
+#, fuzzy
+#| msgid "Set up your passkey"
+msgid "Set up your secure smartphone passkey"
 msgstr "Richten Sie Ihren Passkey ein"
 
 #. key: passkey.hero.subtitle
 msgid ""
-"Sign in with the most secure authentication method available – your personal "
-"passkey."
+"Use your smartphone with FaceID or TouchID as your secure key to sign in to "
+"mentalhealthGPT."
 msgstr ""
-"Melden Sie sich mit der sichersten Authentifizierungsmethode an, die es gibt "
-"– Ihrem persönlichen Passkey."
 
 #. key: passkey.setup.title
-msgid "Passkey setup"
+#, fuzzy
+#| msgid "Set up your passkey"
+msgid "Set up your passkey on your smartphone"
+msgstr "Richten Sie Ihren Passkey ein"
+
+#. key: passkey.setup.body
+msgid ""
+"Scan the QR code with your smartphone to create a secure passkey using "
+"FaceID or TouchID. This will be your primary login method."
+msgstr ""
+
+#. key: passkey.setup.for_email
+#, fuzzy
+#| msgid "Passkey setup"
+msgid "Passkey setup for"
 msgstr "Passkey-Einrichtung"
 
-#. key: passkey.setup.subtitle
-msgid ""
-"Create your passkey to protect your account with state-of-the-art security."
-msgstr ""
-"Erstellen Sie Ihren Passkey, um Ihr Konto mit modernster Sicherheit zu "
-"schützen."
-
 #. key: passkey.setup.button_start
-msgid "Create passkey"
-msgstr "Passkey erstellen"
+msgid "Generate QR code for passkey setup"
+msgstr ""
 
 #. key: passkey.setup.button_working
-msgid "Creating passkey..."
-msgstr "Passkey erstellen..."
+#, fuzzy
+#| msgid "Set up your passkey"
+msgid "Preparing your passkey setup…"
+msgstr "Richten Sie Ihren Passkey ein"
+
+#. key: passkey.setup.qr.title
+msgid "Scan the QR code with your smartphone"
+msgstr ""
+
+#. key: passkey.setup.qr.body
+msgid ""
+"Open your smartphone camera or your password manager and scan the QR code to "
+"start the passkey setup."
+msgstr ""
+
+#. key: passkey.setup.qr.hint
+msgid ""
+"If nothing happens, try scanning the code again or open the link with your "
+"smartphone directly."
+msgstr ""
+
+#. key: passkey.setup.status.waiting
+msgid "Waiting for confirmation from your smartphone…"
+msgstr ""
 
 #. key: passkey.setup.error.generic
-msgid "Could not create your passkey. Please try again."
+#, fuzzy
+#| msgid "Could not create your passkey. Please try again."
+msgid "Could not start your passkey setup. Please try again."
 msgstr ""
 "Ihr Passkey konnte nicht erstellt werden. Bitte versuchen Sie es erneut."
 
-#. key: passkey.setup.error.user_cancelled
-msgid "Passkey creation was cancelled. You can try again at any time."
+#. key: passkey.setup.error.timeout
+msgid "The passkey setup took too long. Please start again."
 msgstr ""
-"Die Passkey-Erstellung wurde abgebrochen. Sie können es jederzeit erneut "
-"versuchen."
-
-#. key: passkey.setup.error.security
-msgid ""
-"Your browser or device blocked the passkey process for security reasons."
-msgstr ""
-"Ihr Browser oder Gerät hat den Passkey-Vorgang aus Sicherheitsgründen "
-"blockiert."
-
-#. key: passkey.setup.back_to_sign_in
-msgid "Back to sign-in"
-msgstr "Zurück zur Anmeldung"
 
 #. key: passkey.setup.success.complete
+#, fuzzy
+#| msgid ""
+#| "Your passkey has been created successfully. You can now sign in securely."
 msgid ""
-"Your passkey has been created successfully. You can now sign in securely."
+"Your passkey has been created successfully. You will be redirected to the "
+"sign-in page."
 msgstr ""
 "Ihr Passwort wurde erfolgreich erstellt. Sie können sich nun sicher anmelden."
+
+#. key: passkey.setup.back_to_signin.prefix
+msgid "You can also return to the sign-in page at any time:"
+msgstr ""
+
+#. key: passkey.setup.back_to_signin.link
+#, fuzzy
+#| msgid "Back to sign-in"
+msgid "Back to sign in"
+msgstr "Zurück zur Anmeldung"
+
+#~ msgid "Technical error while creating the account."
+#~ msgstr "Technischer Fehler beim Erstellen des Kontos."
+
+#~ msgid ""
+#~ "Sign in with the most secure authentication method available – your "
+#~ "personal passkey."
+#~ msgstr ""
+#~ "Melden Sie sich mit der sichersten Authentifizierungsmethode an, die es "
+#~ "gibt – Ihrem persönlichen Passkey."
+
+#~ msgid ""
+#~ "Create your passkey to protect your account with state-of-the-art "
+#~ "security."
+#~ msgstr ""
+#~ "Erstellen Sie Ihren Passkey, um Ihr Konto mit modernster Sicherheit zu "
+#~ "schützen."
+
+#~ msgid "Create passkey"
+#~ msgstr "Passkey erstellen"
+
+#~ msgid "Creating passkey..."
+#~ msgstr "Passkey erstellen..."
+
+#~ msgid "Passkey creation was cancelled. You can try again at any time."
+#~ msgstr ""
+#~ "Die Passkey-Erstellung wurde abgebrochen. Sie können es jederzeit erneut "
+#~ "versuchen."
+
+#~ msgid ""
+#~ "Your browser or device blocked the passkey process for security reasons."
+#~ msgstr ""
+#~ "Ihr Browser oder Gerät hat den Passkey-Vorgang aus Sicherheitsgründen "
+#~ "blockiert."
 
 #~ msgid "."
 #~ msgstr "."
