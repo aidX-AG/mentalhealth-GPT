@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-02 15:24+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-12-03 14:06+0000\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -164,7 +164,7 @@ msgstr "Configuration de la clé d'accès"
 msgid ""
 "Create your passkey to protect your account with state-of-the-art security."
 msgstr ""
-"Créez votre mot de passe pour protéger votre compte grâce à une sécurité de "
+"Créez votre clé d'accès pour protéger votre compte grâce à une sécurité de "
 "pointe."
 
 #. key: passkey.setup.button_start
@@ -182,7 +182,7 @@ msgstr "Impossible de créer votre clé d'accès. Veuillez réessayer."
 #. key: passkey.setup.error.user_cancelled
 msgid "Passkey creation was cancelled. You can try again at any time."
 msgstr ""
-"La création du mot de passe a été annulée. Vous pouvez réessayer à tout "
+"La création de la clé d'accès a été annulée. Vous pouvez réessayer à tout "
 "moment."
 
 #. key: passkey.setup.error.security
