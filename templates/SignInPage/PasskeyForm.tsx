@@ -1,77 +1,58 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import QRCode from "react-qr-code";
 import { getT } from "@/lib/i18n-runtime";
 
 const t = getT();
 
-// Zentrale API-Basis, trailing Slash wird entfernt
+type SetupStatus = "idle" | "starting" | "waiting" | "completed" | "error";
+
 const API_BASE = (
   process.env.NEXT_PUBLIC_API_BASE_URL ||
   "https://api.mentalhealth-gpt.ch"
 ).replace(/\/$/, "");
 
-// Hilfsfunktionen für Base64URL ⇆ ArrayBuffer
-const base64UrlToUint8Array = (base64Url: unknown): Uint8Array => {
-  if (typeof base64Url !== "string") {
-    console.error("Expected base64url string for WebAuthn, got:", base64Url);
-    return new Uint8Array();
-  }
+// 🔎 Saubere Email-Validierung
+const isValidEmail = (email: string): boolean => {
+  const trimmed = email.trim();
+  if (!trimmed) return false;
+  if (trimmed.length > 254) return false;
 
-  const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
-  const padLength = (4 - (base64.length % 4)) % 4;
-  const padded = base64 + "=".repeat(padLength);
-  const binary = typeof window !== "undefined" ? atob(padded) : "";
-  const bytes = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i++) {
-    bytes[i] = binary.charCodeAt(i);
-  }
-  return bytes;
-};
-
-const bufferToBase64Url = (buffer: ArrayBuffer): string => {
-  const bytes = new Uint8Array(buffer);
-  let binary = "";
-  for (let i = 0; i < bytes.length; i++) {
-    binary += String.fromCharCode(bytes[i]);
-  }
-  const base64 = btoa(binary);
-  return base64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(trimmed);
 };
 
 const PasskeyForm = () => {
-  const [isWorking, setIsWorking] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
-
   const searchParams = useSearchParams();
   const router = useRouter();
-  const email = searchParams.get("email");
+
+  const emailFromQuery = searchParams.get("email") || "";
+  const email = useMemo(() => emailFromQuery.trim(), [emailFromQuery]);
+
+  const [status, setStatus] = useState<SetupStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [mobileUrl, setMobileUrl] = useState<string | null>(null);
+  const [sessionId, setSessionId] = useState<string | null>(null);
+
+  const isWorking = status === "starting";
 
   const handleStartPasskey = async () => {
     setErrorMessage(null);
     setSuccessMessage(null);
 
-    if (!email) {
-      setErrorMessage(t("passkey.setup.error.generic"));
+    if (!isValidEmail(email)) {
+      setErrorMessage(t("sign-in.create.error.invalid_email"));
+      setStatus("error");
       return;
     }
-
-    if (
-      typeof window === "undefined" ||
-      typeof PublicKeyCredential === "undefined"
-    ) {
-      setErrorMessage(t("passkey.setup.error.generic"));
-      return;
-    }
-
-    setIsWorking(true);
 
     try {
-      // 1) Registrierung-Optionen vom Backend holen
-      const optionsRes = await fetch(`${API_BASE}/auth/webauthn/register-options`, {
+      setStatus("starting");
+
+      const res = await fetch(`${API_BASE}/auth/webauthn/mobile/start`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,141 +60,144 @@ const PasskeyForm = () => {
         body: JSON.stringify({ email }),
       });
 
-      if (!optionsRes.ok) {
-        console.error("register-options failed", await optionsRes.text());
-        setErrorMessage(t("passkey.setup.error.generic"));
-        return;
-      }
+      if (!res.ok) {
+        let payload: any = null;
+        try {
+          payload = await res.json();
+        } catch {
+          // ignorieren, fallback auf text
+        }
 
-      const optionsJson: any = await optionsRes.json();
-      const publicKey: any = optionsJson.publicKey ?? optionsJson;
-
-      // 2) Base64URL-Felder in ArrayBuffer wandeln
-      const challengeBytes = base64UrlToUint8Array(publicKey.challenge);
-      if (!challengeBytes.length) {
-        setErrorMessage(t("passkey.setup.error.generic"));
-        return;
-      }
-      publicKey.challenge = challengeBytes;
-
-      if (publicKey.user && typeof publicKey.user.id === "string") {
-        publicKey.user.id = base64UrlToUint8Array(publicKey.user.id);
-      }
-
-      if (Array.isArray(publicKey.excludeCredentials)) {
-        publicKey.excludeCredentials = publicKey.excludeCredentials.map(
-          (cred: any) => ({
-            ...cred,
-            id:
-              typeof cred.id === "string"
-                ? base64UrlToUint8Array(cred.id)
-                : cred.id,
-          })
+        console.error(
+          "mobile/start failed",
+          payload || (await res.text().catch(() => ""))
         );
-      }
-
-      // 3) WebAuthn im Browser starten
-      const credential = (await navigator.credentials.create({
-        publicKey,
-      })) as PublicKeyCredential | null;
-
-      if (!credential) {
         setErrorMessage(t("passkey.setup.error.generic"));
+        setStatus("error");
         return;
       }
 
-      const response = credential.response as AuthenticatorAttestationResponse;
+      const data = await res.json();
 
-      const finishPayload = {
-        email,
-        id: credential.id,
-        rawId: bufferToBase64Url(credential.rawId),
-        type: credential.type,
-        response: {
-          clientDataJSON: bufferToBase64Url(response.clientDataJSON),
-          attestationObject: bufferToBase64Url(response.attestationObject),
-        },
-        clientExtensionResults:
-          credential.getClientExtensionResults?.() ?? {},
-      };
-
-      // 4) Ergebnis an Backend zurücksenden
-      const finishRes = await fetch(`${API_BASE}/auth/webauthn/register-finish`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(finishPayload),
-      });
-
-      if (!finishRes.ok) {
-        console.error("register-finish failed", await finishRes.text());
+      if (!data?.mobileUrl || !data?.sessionId) {
+        console.error("mobile/start missing fields", data);
         setErrorMessage(t("passkey.setup.error.generic"));
+        setStatus("error");
         return;
       }
 
-      // ✅ Erfolg: Meldung + Redirect zurück zum Login
-      setSuccessMessage(t("passkey.setup.success.complete"));
-
-      setTimeout(() => {
-        router.push("/sign-in");
-      }, 2000);
+      setMobileUrl(data.mobileUrl);
+      setSessionId(data.sessionId);
+      setStatus("waiting");
     } catch (error) {
-      console.error("WebAuthn-Setup error", error);
-
-      // Spezifischere UX für abgebrochene Vorgänge
-      if (error instanceof DOMException) {
-        if (error.name === "NotAllowedError") {
-          setErrorMessage(t("passkey.setup.error.user_cancelled"));
-          setIsWorking(false);
-          return;
-        }
-        if (error.name === "SecurityError") {
-          setErrorMessage(t("passkey.setup.error.security"));
-          setIsWorking(false);
-          return;
-        }
-      }
-
+      console.error("Passkey mobile/start error", error);
       setErrorMessage(t("passkey.setup.error.generic"));
-    } finally {
-      setIsWorking(false);
+      setStatus("error");
     }
   };
 
+  // 🛰️ Polling mit Exponential Backoff + Max Attempts
+  useEffect(() => {
+    if (status !== "waiting" || !sessionId) return;
+
+    let cancelled = false;
+    let attempt = 0;
+    const maxAttempts = 30; // ~ einige Minuten, je nach Backoff
+
+    const poll = async () => {
+      if (cancelled || attempt >= maxAttempts) {
+        if (!cancelled && attempt >= maxAttempts) {
+          setErrorMessage(t("passkey.setup.error.timeout"));
+          setStatus("error");
+        }
+        return;
+      }
+
+      try {
+        const res = await fetch(
+          `${API_BASE}/auth/webauthn/mobile/status?sessionId=${encodeURIComponent(
+            sessionId
+          )}`
+        );
+
+        if (res.ok) {
+          const data = await res.json();
+          if (cancelled) return;
+
+          if (data?.status === "completed") {
+            setStatus("completed");
+            setErrorMessage(null);
+            setSuccessMessage(t("passkey.setup.success.complete"));
+            return;
+          }
+        } else {
+          console.warn("mobile/status not ok", res.status);
+        }
+      } catch (err) {
+        if (!cancelled) {
+          console.warn("mobile/status error", err);
+        }
+      }
+
+      attempt += 1;
+      const delay = Math.min(1000 * Math.pow(1.5, attempt), 10000);
+
+      if (!cancelled) {
+        setTimeout(poll, delay);
+      }
+    };
+
+    poll();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [status, sessionId]);
+
+  // ✅ Nach erfolgreichem Setup automatisch zur Sign-in-Seite
+  useEffect(() => {
+    if (status !== "completed") return;
+
+    const timeoutId = setTimeout(() => {
+      router.push("/sign-in");
+    }, 2000);
+
+    return () => clearTimeout(timeoutId);
+  }, [status, router]);
+
   return (
     <div className="w-full max-w-[31.5rem] m-auto">
-      <div className="mb-6">
-        <h1 className="h4 mb-2">{t("passkey.setup.title")}</h1>
-        <p className="body2 text-n-4">
-          {t("passkey.setup.subtitle")}
+      {/* Kopfbereich – Erklärung */}
+      <div className="mb-6 text-center">
+        <h2 className="mb-2 h5 text-n-7 dark:text-n-1">
+          {t("passkey.setup.title")}
+        </h2>
+        <p className="text-sm text-n-4/80">
+          {t("passkey.setup.body")}
         </p>
         {email && (
-          <p className="mt-2 caption1 text-n-4/70">
-            {email}
+          <p className="mt-2 text-xs text-n-4/70">
+            {t("passkey.setup.for_email")}{" "}
+            <span className="font-medium text-n-7 dark:text-n-1">
+              {email}
+            </span>
           </p>
         )}
       </div>
 
-      {/* Spinner bei laufendem Prozess */}
-      {isWorking && (
-        <div className="flex justify-center mb-3">
-          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-n-4" />
-        </div>
-      )}
-
-      {/* Spinner-Bereich */}
+      {/* Spinner-Bereich – reservierter Platz, kein Layout-Sprung */}
       <div className="h-8 mb-3 flex justify-center items-center">
         {isWorking && (
           <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-1 dark:border-primary-1/70" />
         )}
       </div>
 
+      {/* Haupt-Button */}
       <button
         type="button"
         onClick={handleStartPasskey}
-        className="btn-blue btn-large w-full mb-3"
-        disabled={isWorking}
+        className="btn-blue btn-large w-full mb-4"
+        disabled={isWorking || status === "waiting"}
         aria-label={
           isWorking
             ? t("passkey.setup.button_working")
@@ -226,23 +210,62 @@ const PasskeyForm = () => {
           : t("passkey.setup.button_start")}
       </button>
 
-      {errorMessage && (
-        <div className="mb-3 text-center caption1 text-red-500">
-          {errorMessage}
+      {/* QR-Code-Bereich */}
+      {mobileUrl && (
+        <div className="mt-2 rounded-xl border border-n-3 bg-n-1/40 px-4 py-4 text-center caption1 dark:bg-n-7/60 dark:border-n-5">
+          <div className="mb-2 font-semibold">
+            {t("passkey.setup.qr.title")}
+          </div>
+          <div className="mb-4 text-n-4/80">
+            {t("passkey.setup.qr.body")}
+          </div>
+          <div className="flex justify-center">
+            <div className="w-40 h-40 p-2 bg-white rounded flex items-center justify-center">
+              <QRCode value={mobileUrl} className="w-full h-auto" />
+            </div>
+          </div>
+          <div className="mt-3 text-n-4/70">
+            {t("passkey.setup.qr.hint")}
+          </div>
         </div>
       )}
 
-      {successMessage && (
-        <div className="mb-3 text-center caption1 text-emerald-600">
-          {successMessage}
-        </div>
-      )}
+      {/* Status-/Fehler-/Erfolgs-Meldungen – Screenreader-freundlich */}
+      <div
+        className="mt-4 space-y-2 text-center caption1"
+        role="status"
+        aria-live="polite"
+      >
+        {status === "waiting" && !successMessage && !errorMessage && (
+          <div className="text-n-4/80">
+            {t("passkey.setup.status.waiting")}
+          </div>
+        )}
 
-      <p className="mt-6 text-center text-xs text-n-4/60">
-        <Link href="/sign-in" className="underline">
-          {t("passkey.setup.back_to_sign_in")}
-        </Link>
-      </p>
+        {errorMessage && (
+          <div className="text-red-500">
+            {errorMessage}
+          </div>
+        )}
+
+        {successMessage && (
+          <div className="text-emerald-600 dark:text-emerald-400">
+            {successMessage}
+          </div>
+        )}
+      </div>
+
+      {/* Fallback-Link zurück zur Sign-in-Seite */}
+      <div className="mt-6 text-center text-xs text-n-4/70">
+        {t("passkey.setup.back_to_signin.prefix")}{" "}
+        <button
+          type="button"
+          onClick={() => router.push("/sign-in")}
+          className="underline underline-offset-2 hover:text-n-7 dark:hover:text-n-1"
+        >
+          {t("passkey.setup.back_to_signin.link")}
+        </button>
+      </div>
     </div>
   );
 };

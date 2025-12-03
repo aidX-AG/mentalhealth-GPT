@@ -94,7 +94,6 @@ const CreateAccount = ({
             t("sign-in.create.error.email_already_registered")
           );
         } else if (parsed?.error === "password_too_weak") {
-          // minLength kommt aus dem Backend, UI-Text bleibt über Key steuerbar
           setErrorMessage(
             t("sign-in.create.error.password_too_weak")
           );
@@ -126,14 +125,12 @@ const CreateAccount = ({
       return;
     }
 
-    // Extra-Sicherheit & UX: Email minimal validieren
     const trimmedEmail = email.trim();
     if (!trimmedEmail.includes("@") || trimmedEmail.length < 3) {
       setErrorMessage(t("sign-in.create.error.invalid_email"));
       return;
     }
 
-    // Email für URL encodieren
     const encodedEmail = encodeURIComponent(trimmedEmail);
     router.push(`/passkey-setup?email=${encodedEmail}`);
   };
@@ -151,12 +148,12 @@ const CreateAccount = ({
         required
       />
       <Field
-        className="mb-6"  
+        className="mb-6"
         classInput="dark:bg-n-7 dark:border-n-7 dark:focus:bg-transparent"
         placeholder={passwordPlaceholder}
         icon="lock"
         type="password"
-        value={password}   
+        value={password}
         onChange={(e: any) => setPassword(e.target.value)}
         required
       />
@@ -166,7 +163,7 @@ const CreateAccount = ({
           {submitLabel}
         </button>
       )}
-    
+
       {/* Feedback-Bereich */}
       <div ref={feedbackRef}>
         {errorMessage && (
@@ -194,23 +191,7 @@ const CreateAccount = ({
         )}
       </div>
 
-      <div className="text-center caption1 text-n-4">
-        {tosPrefix}
-        <Link
-          className="text-n-5 transition-colors hover:text-n-7 dark:text-n-3 dark:hover:text-n-1"
-          href={tosHref}
-        >
-          {tosLabel}
-        </Link>{" "}
-        {andLabel}{" "}
-        <Link
-          className="text-n-5 transition-colors hover:text-n-7 dark:text-n-3 dark:hover:text-n-1"
-          href={privacyHref}
-        >
-          {privacyLabel}
-        </Link>
-        {t(".")}
-      </div>
+      {/* ❌ TOS BLOCK HIER ENTFERNT — WIE GEWÜNSCHT */}
     </form>
   );
 };

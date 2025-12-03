@@ -5,16 +5,16 @@ import { Tab } from "@headlessui/react";
 import { useColorMode } from "@chakra-ui/color-mode";
 import { useSearchParams, useRouter } from "next/navigation";
 import Logo from "@/components/Logo";
-import Image from "@/components/Image";
 import SignIn from "./SignIn";
 import CreateAccount from "./CreateAccount";
 import ForgotPassword from "./ForgotPassword";
 
 type FormProps = {
   tabs: string[];
-  continueGoogle: string;
-  continueApple: string;
-  orLabel: string;
+
+  // NEU: kleine Intro-Texte pro Tab
+  signInIntro: string;
+  createIntro: string;
 
   // SignIn
   usernamePlaceholder: string;
@@ -39,9 +39,8 @@ type FormProps = {
 
 const Form = ({
   tabs,
-  continueGoogle,
-  continueApple,
-  orLabel,
+  signInIntro,
+  createIntro,
   usernamePlaceholder,
   passwordPlaceholder,
   forgotPasswordLabel,
@@ -67,7 +66,11 @@ const Form = ({
   const tabParam = searchParams.get("tab");
   const defaultTabIndex = tabParam === "create-account" ? 1 : 0;
 
+  // Für Intro-Text: aktiven Tab tracken
+  const [activeTab, setActiveTab] = useState(defaultTabIndex);
+
   const handleTabChange = (index: number) => {
+    setActiveTab(index);
     const url = index === 1 ? "/sign-in?tab=create-account" : "/sign-in";
     router.replace(url, { scroll: false });
   };
@@ -83,7 +86,13 @@ const Form = ({
         />
       ) : (
         <>
-          <Logo className="max-w-[11.875rem] mx-auto mb-8" dark={isLightMode} />
+          <Logo className="max-w-[11.875rem] mx-auto mb-6" dark={isLightMode} />
+
+          {/* NEUER INTRO-TEXT */}
+          <p className="mb-6 text-center text-sm text-n-1">
+            {activeTab === 0 ? signInIntro : createIntro}
+          </p>
+
           <Tab.Group defaultIndex={defaultTabIndex} onChange={handleTabChange}>
             <Tab.List className="flex mb-8 p-1 bg-n-2 rounded-xl dark:bg-n-7">
               {tabs.map((button, index) => (
@@ -120,28 +129,16 @@ const Form = ({
               </Tab.Panel>
             </Tab.Panels>
 
-            {/* OR direkt NACH den Panels */}
-            <div className="flex items-center my-8 md:my-4">
-              <span className="grow h-0.25 bg-n-4/50"></span>
-              <span className="shrink-0 mx-5 text-n-4/50">{orLabel}</span>
-              <span className="grow h-0.25 bg-n-4/50"></span>
-            </div>
-
-            {/* Social-Buttons UNTEN – Reihenfolge Google, Apple */}
-            <button className="btn-stroke-light btn-large w-full mb-3">
-              <Image src="/images/google.webp" width={24} height={24} alt="" />
-              <span className="ml-4">{continueGoogle}</span>
-            </button>
-            <button className="btn-stroke-light btn-large w-full">
-              <Image src="/images/apple.webp" width={24} height={24} alt="" />
-              <span className="ml-4">{continueApple}</span>
-            </button>
-
             {/* Terms & Conditions wieder unten */}
-            <p className="mt-6 text-center text-xs text-n-4/60">
+            <p className="mt-6 text-center text-xs text-n-4/70">
               {tosPrefix}
-              <a href="/terms" className="underline">{tosLabel}</a> {andLabel}{" "}
-              <a href="/privacy" className="underline">{privacyLabel}</a>
+              <a href="/terms" className="underline">
+                {tosLabel}
+              </a>{" "}
+              {andLabel}{" "}
+              <a href="/privacy" className="underline">
+                {privacyLabel}
+              </a>
             </p>
           </Tab.Group>
         </>

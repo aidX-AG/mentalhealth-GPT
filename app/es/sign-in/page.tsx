@@ -10,6 +10,9 @@ export default function Page() {
       heroSubtitle={t("sign-in.hero.subtitle")}
       // Tabs & Buttons
       tabs={[t("sign-in.tabs.sign_in"), t("sign-in.tabs.create_account")]}
+      // Neue Intro-Texte direkt unter dem Logo
+      signInIntro={t("sign-in.intro.sign_in")}
+      createIntro={t("sign-in.intro.create")}
       // SignIn
       usernamePlaceholder={t("sign-in.place.username")}
       passwordPlaceholder={t("sign-in.place.create_password")}
@@ -23,12 +26,8 @@ export default function Page() {
       createEmailPlaceholder={t("sign-in.place.create_email")}
       createPasswordPlaceholder={t("sign-in.place.create_password")}
       createSubmitLabel={t("sign-in.button.create_account")}
-      // Social Logins
-      continueGoogle={t("sign-in.social.google")}
-      continueApple={t("sign-in.social.apple")}
-      orLabel={t("sign-in.misc.or")}
-      // Terms
-      tosPrefix={t("By creating an account, you agree to our ")}
+      // Terms (bleiben unten) – jetzt mit sauberem Key
+      tosPrefix={t("sign-in.legal.tos_prefix")}
       tosLabel={t("sign-in.legal.tos")}
       andLabel={t("sign-in.legal.and")}
       privacyLabel={t("sign-in.legal.privacy")}

@@ -70,6 +70,18 @@ msgstr ""
 msgid "Sign in with mentalhealthGPT"
 msgstr ""
 
+#. key: sign-in.legal.tos_prefix
+msgid "By creating an account, you agree to our"
+msgstr ""
+
+#. key: sign-in.intro.sign_in
+msgid "Sign in with your email and password. If you’ve already set up a passkey, you can log in using your smartphone and FaceID or TouchID."
+msgstr ""
+
+#. key: sign-in.intro.create
+msgid "Create your secure mentalhealthGPT account with your email and a strong password. In the next step, you’ll set up your biometric passkey on your smartphone."
+msgstr ""
+
 #. key: sign-in.legal.tos
 msgid "Terms of Service"
 msgstr ""
@@ -164,4 +176,76 @@ msgstr ""
 
 #. key: passkey.setup.success.complete
 msgid "Your passkey has been created successfully. You can now sign in securely."
+msgstr ""
+
+#. key: sign-in.intro.sign_in
+msgid "Sign in with your email and password. If you’ve already set up a passkey, you log in using your smartphone and FaceID or TouchID."
+msgstr ""
+
+#. key: sign-in.intro.create
+msgid "Create your account with email and password. Afterwards, you set up a secure passkey on your smartphone using FaceID or TouchID."
+msgstr ""
+
+#. key: passkey.hero.title
+msgid "Set up your secure smartphone passkey"
+msgstr ""
+
+#. key: passkey.hero.subtitle
+msgid "Use your smartphone with FaceID or TouchID as your secure key to sign in to mentalhealthGPT."
+msgstr ""
+
+#. key: passkey.setup.title
+msgid "Set up your passkey on your smartphone"
+msgstr ""
+
+#. key: passkey.setup.body
+msgid "Scan the QR code with your smartphone to create a secure passkey using FaceID or TouchID. This will be your primary login method."
+msgstr ""
+
+#. key: passkey.setup.for_email
+msgid "Passkey setup for"
+msgstr ""
+
+#. key: passkey.setup.button_start
+msgid "Generate QR code for passkey setup"
+msgstr ""
+
+#. key: passkey.setup.button_working
+msgid "Preparing your passkey setup…"
+msgstr ""
+
+#. key: passkey.setup.qr.title
+msgid "Scan the QR code with your smartphone"
+msgstr ""
+
+#. key: passkey.setup.qr.body
+msgid "Open your smartphone camera or your password manager and scan the QR code to start the passkey setup."
+msgstr ""
+
+#. key: passkey.setup.qr.hint
+msgid "If nothing happens, try scanning the code again or open the link with your smartphone directly."
+msgstr ""
+
+#. key: passkey.setup.status.waiting
+msgid "Waiting for confirmation from your smartphone…"
+msgstr ""
+
+#. key: passkey.setup.error.generic
+msgid "Could not start your passkey setup. Please try again."
+msgstr ""
+
+#. key: passkey.setup.error.timeout
+msgid "The passkey setup took too long. Please start again."
+msgstr ""
+
+#. key: passkey.setup.success.complete
+msgid "Your passkey has been created successfully. You will be redirected to the sign-in page."
+msgstr ""
+
+#. key: passkey.setup.back_to_signin.prefix
+msgid "You can also return to the sign-in page at any time:"
+msgstr ""
+
+#. key: passkey.setup.back_to_signin.link
+msgid "Back to sign in"
 msgstr ""
