@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import QRCode from "react-qr-code";
 import { getT } from "@/lib/i18n-runtime";
+import Logo from "@/components/Logo";
+import { useColorMode } from "@chakra-ui/color-mode";
 
 const t = getT();
 
@@ -27,6 +29,8 @@ const isValidEmail = (email: string): boolean => {
 const PasskeyForm = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const { colorMode } = useColorMode();
+  const isLightMode = colorMode === "light";
 
   const emailFromQuery = searchParams.get("email") || "";
   const email = useMemo(() => emailFromQuery.trim(), [emailFromQuery]);
@@ -167,18 +171,24 @@ const PasskeyForm = () => {
 
   return (
     <div className="w-full max-w-[31.5rem] m-auto">
+      {/* Logo – IDENTISCH zu SignIn/CreateAccount */}
+      <Logo
+        className="max-w-[11.875rem] mx-auto mb-6"
+        dark={isLightMode}
+      />
+
       {/* Kopfbereich – Erklärung */}
       <div className="mb-6 text-center">
-        <h2 className="mb-2 h5 text-n-7 dark:text-n-1">
+        <h2 className="mb-2 h5 text-n-1">
           {t("passkey.setup.title")}
         </h2>
-        <p className="text-sm text-n-4/80">
+        <p className="text-lg leading-relaxed text-n-1">
           {t("passkey.setup.body")}
         </p>
         {email && (
-          <p className="mt-2 text-xs text-n-4/70">
+          <p className="mt-2 text-base leading-relaxed text-n-1">
             {t("passkey.setup.for_email")}{" "}
-            <span className="font-medium text-n-7 dark:text-n-1">
+            <span className="font-medium text-n-1">
               {email}
             </span>
           </p>

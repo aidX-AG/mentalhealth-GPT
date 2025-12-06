@@ -28,6 +28,7 @@
     "@emotion/styled": "11.11.5",
     "@headlessui/react": "^1.7.13",
     "@headlessui/tailwindcss": "^0.1.2",
+    "@simplewebauthn/browser": "^13.2.2",
     "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/react-datepicker": "^4.10.0",
     "@types/react-input-mask": "^3.0.2",

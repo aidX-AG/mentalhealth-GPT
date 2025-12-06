@@ -189,3 +189,67 @@ msgstr ""
 #. key: passkey.setup.back_to_signin.link
 msgid "Back to sign in"
 msgstr ""
+
+#. key: passkey.mobile.title
+msgid "Set up your passkey"
+msgstr ""
+
+#. key: passkey.mobile.success
+msgid "Your passkey has been created successfully."
+msgstr ""
+
+#. key: passkey.mobile.success_close_window
+msgid "You can now close this window."
+msgstr ""
+
+#. key: passkey.mobile.status.loading_generic
+msgid "Please wait..."
+msgstr ""
+
+#. key: passkey.mobile.status.loading_options
+msgid "Preparing secure registration…"
+msgstr ""
+
+#. key: passkey.mobile.status.awaiting_biometric
+msgid "Please confirm with Face ID, Touch ID, or your device passcode."
+msgstr ""
+
+#. key: passkey.mobile.status.verifying
+msgid "Finalizing setup…"
+msgstr ""
+
+#. key: passkey.mobile.error.no_session
+msgid "Missing or invalid registration session."
+msgstr ""
+
+#. key: passkey.mobile.error.options_failed
+msgid "We could not start the passkey setup. Please try again."
+msgstr ""
+
+#. key: passkey.mobile.error.invalid_or_expired
+msgid "This registration link is no longer valid. Please scan a new QR code."
+msgstr ""
+
+#. key: passkey.mobile.error.timeout_options
+msgid "The request timed out while loading secure registration data. Please try again."
+msgstr ""
+
+#. key: passkey.mobile.error.registration_failed
+msgid "Passkey creation was interrupted or failed. Please try again."
+msgstr ""
+
+#. key: passkey.mobile.error.timeout_verify
+msgid "The request timed out while verifying your passkey. Please try again."
+msgstr ""
+
+#. key: passkey.mobile.error.verify_failed
+msgid "We could not verify your passkey. Please try again."
+msgstr ""
+
+#. key: passkey.mobile.error.unknown
+msgid "An unexpected error occurred. Please try again."
+msgstr ""
+
+#. key: passkey.mobile.action.retry
+msgid "Try again"
+msgstr ""
