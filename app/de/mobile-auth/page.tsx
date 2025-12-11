@@ -45,7 +45,12 @@ export default function Page() {
   const t = makeT(messages);
 
   const searchParams = useSearchParams();
-  const sessionId = searchParams.get("session_id") || "";
+
+  // Backend kommt mit ?session_id=... im mobile_url
+  const sessionId =
+    searchParams.get("session_id") ??
+    searchParams.get("sessionId") ??
+    "";
 
   const [loading, setLoading] = useState(false);
   const [phase, setPhase] = useState<Phase>("idle");
@@ -98,7 +103,9 @@ export default function Page() {
 
       const data = await res.json();
 
-      if (data.status !== "ok" || !data.registration_options) {
+      // 📌 Änderung: Backend liefert bei Erfolg nur { registration_options }
+      // Kein status: "ok" → wir prüfen nur auf vorhandene registration_options.
+      if (!data || !data.registration_options) {
         setErrorMessage(t("passkey.mobile.error.invalid_or_expired"));
         setPhase("error");
         setLoading(false);
