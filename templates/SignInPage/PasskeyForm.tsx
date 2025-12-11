@@ -56,7 +56,7 @@ const PasskeyForm = () => {
     try {
       setStatus("starting");
 
-      const res = await fetch(`${API_BASE}/auth/webauthn/mobile/start`, {
+      const res = await fetch(`${API_BASE}/auth/webauthn/cross-device/start`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -73,7 +73,7 @@ const PasskeyForm = () => {
         }
 
         console.error(
-          "mobile/start failed",
+          "cross-device/start failed",
           payload || (await res.text().catch(() => ""))
         );
         setErrorMessage(t("passkey.setup.error.generic"));
@@ -83,18 +83,22 @@ const PasskeyForm = () => {
 
       const data = await res.json();
 
-      if (!data?.mobileUrl || !data?.sessionId) {
-        console.error("mobile/start missing fields", data);
+      // 🔁 Backend liefert snake_case (session_id, mobile_url)
+      const sessionIdFromApi = data.session_id ?? data.sessionId;
+      const mobileUrlFromApi = data.mobile_url ?? data.mobileUrl;
+
+      if (!mobileUrlFromApi || !sessionIdFromApi) {
+        console.error("cross-device/start missing fields", data);
         setErrorMessage(t("passkey.setup.error.generic"));
         setStatus("error");
         return;
       }
 
-      setMobileUrl(data.mobileUrl);
-      setSessionId(data.sessionId);
+      setMobileUrl(mobileUrlFromApi);
+      setSessionId(sessionIdFromApi);
       setStatus("waiting");
     } catch (error) {
-      console.error("Passkey mobile/start error", error);
+      console.error("Passkey cross-device/start error", error);
       setErrorMessage(t("passkey.setup.error.generic"));
       setStatus("error");
     }
@@ -119,7 +123,7 @@ const PasskeyForm = () => {
 
       try {
         const res = await fetch(
-          `${API_BASE}/auth/webauthn/mobile/status?sessionId=${encodeURIComponent(
+          `${API_BASE}/auth/webauthn/cross-device/status?session_id=${encodeURIComponent(
             sessionId
           )}`
         );
@@ -135,11 +139,11 @@ const PasskeyForm = () => {
             return;
           }
         } else {
-          console.warn("mobile/status not ok", res.status);
+          console.warn("cross-device/status not ok", res.status);
         }
       } catch (err) {
         if (!cancelled) {
-          console.warn("mobile/status error", err);
+          console.warn("cross-device/status error", err);
         }
       }
 
