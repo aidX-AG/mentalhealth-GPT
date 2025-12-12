@@ -1,46 +1,55 @@
-import { useState } from "react";
+import { ChangeEvent, useRef } from "react";
 import Icon from "@/components/Icon";
-import Modal from "@/components/Modal";
 import { _ } from "@/lib/i18n/_";
 const t = _;
 
-type AddFileProps = {};
+type AddFileProps = {
+  disabled?: boolean;
+  onFileSelected?: (file: File) => void;
+};
 
-const AddFile = ({}: AddFileProps) => {
-  const [visible, setVisible] = useState<boolean>(false);
+const AddFile = ({ disabled = false, onFileSelected }: AddFileProps) => {
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const handleClick = () => {
+    if (disabled) return;
+    inputRef.current?.click();
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (onFileSelected) {
+      onFileSelected(file);
+    }
+
+    // Reset, damit dieselbe Datei später nochmals gewählt werden kann
+    e.target.value = "";
+  };
 
   return (
     <>
       <button
-        className="group absolute left-3 bottom-2 w-10 h-10 outline-none"
-        onClick={() => setVisible(true)}
+        type="button"
+        onClick={handleClick}
+        className={`mr-4 flex h-10 w-10 items-center justify-center rounded-xl border-2 border-dashed border-n-4 transition-colors hover:border-primary-1 hover:text-primary-1 dark:border-n-5 ${
+          disabled
+            ? "cursor-not-allowed opacity-40 hover:border-n-4 hover:text-inherit"
+            : ""
+        }`}
+        aria-disabled={disabled}
+        title={t("Upload file")}
       >
-        <Icon
-          className="w-7 h-7 fill-[#7F8689] transition-colors group-hover:fill-primary-1 dark:fill-n-4"
-          name="plus-circle"  // ← NICHT übersetzen!
-        />
+        <Icon className="w-5 h-5 fill-current" name="plus" />
       </button>
-
-      <Modal
-        classWrap="max-w-[25.2rem] rounded-none bg-transparent"
-        classOverlay="bg-n-7/95 dark:bg-n-7/95"
-        classButtonClose="hidden"
-        visible={visible}
-        onClose={() => setVisible(false)}
-      >
-        <div className="relative p-3 bg-primary-1 rounded-[1.25rem]">
-          <input className="absolute inset-0 opacity-0" type="file" />
-          <div className="px-6 py-14 border-2 border-dashed border-n-1 rounded-xl text-center text-n-1">
-            <div className="flex justify-center items-center w-16 h-16 mx-auto mb-6 bg-n-1 rounded-full">
-              <Icon name="upload" /> {/* ← NICHT übersetzen! */}
-            </div>
-            <div className="h5">{t("Upload to mentalhealthGPT")}</div>
-            <div className="base2">
-              {t("You can add prompts after uploading.")}
-            </div>
-          </div>
-        </div>
-      </Modal>
+      <input
+        ref={inputRef}
+        type="file"
+        className="hidden"
+        onChange={handleChange}
+        disabled={disabled}
+      />
     </>
   );
 };

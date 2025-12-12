@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"thanks/es/>\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: thanks.sections.title
+msgid "Thank you for your purchase!"
+msgstr "¡Gracias por tu compra!"
+
+#. key: thanks.sections.order-received
+msgid ""
+"Your order has been received and is currently being processed. You will "
+"receive an email confirmation with your order details shortly."
+msgstr ""
+"Hemos recibido tu pedido y lo estamos procesando. En breve recibirás un "
+"correo electrónico de confirmación con los detalles de tu pedido."
+
+#. key: thanks.buttons.manage-subscription
+msgid "Manage subscription"
+msgstr "Gestionar suscripción"
+
+#. key: thanks.buttons.start-new-chat
+msgid "Start new chat"
+msgstr "Iniciar nuevo chat"

@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"supervision-training/es/>\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: supervision-training.sections.banner-prefix
+msgid "🚧 The AI model for"
+msgstr "🚧 El modelo de IA para"
+
+#. key: supervision-training.chat.title
+msgid "Supervision & Training"
+msgstr "Supervisión y formación"
+
+#. key: supervision-training.sections.under-development
+msgid "is currently being developed with specialized training data."
+msgstr ""
+"se está desarrollando actualmente con datos de entrenamiento especializados."
+
+#. key: supervision-training.sections.coming-soon
+msgid ""
+"It will be available soon to support expert feedback and mentoring "
+"workflows."
+msgstr ""
+"Pronto estará disponible para respaldar los comentarios de los expertos y "
+"los flujos de trabajo de tutoría."
+
+#. key: supervision-training.sections.question
+msgid "Please review this supervision case and provide constructive feedback for the trainee. Focus on communication, assessment quality, and risk handling."
+msgstr ""
+"Revise este caso de supervisión y proporcione comentarios constructivos al "
+"becario. Céntrese en la comunicación, la calidad de la evaluación y la "
+"gestión de riesgos."

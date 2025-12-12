@@ -47,7 +47,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
     };
 
     // aktuelle Locale aus <html lang>
-    const locale = getClientLocale(); // "de" | "fr" | "en"
+    const locale = getClientLocale(); // "de" | "fr" | "en" | "es"
 
     return (
         <>

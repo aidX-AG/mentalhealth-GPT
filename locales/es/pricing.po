@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"pricing/es/>\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: pricing.sections.hero-title-mental
+msgid "AI chat built for mental health"
+msgstr "Chat con IA diseñado para la salud mental"
+
+#. key: pricing.faq.refund-q
+msgid "Can I get a refund if I cancel my yearly plan early?"
+msgstr "¿Puedo obtener un reembolso si cancelo mi plan anual antes de tiempo?"
+
+#. key: pricing.faq.try-plan-q
+msgid "Can I try mentalhealthGPT before committing to a paid plan?"
+msgstr ""
+"¿Puedo probar mentalhealthGPT antes de comprometerme con un plan de pago?"
+
+#. key: pricing.badges.chat-247
+msgid "Chat 24/7"
+msgstr "Chat 24/7"
+
+#. key: pricing.sections.choose-plan
+msgid "Choose plan"
+msgstr "Elige un plan"
+
+#. key: pricing.sections.core-features
+msgid "Core features"
+msgstr "Características principales"
+
+#. key: pricing.sections.current-plan
+msgid "Current plan"
+msgstr "Plan actual"
+
+#. key: pricing.sections.faq
+msgid "Frequently asked questions"
+msgstr "Preguntas frecuentes"
+
+#. key: pricing.tiers.institution
+msgid "Institution"
+msgstr "Institución"
+
+#. key: pricing.misc.month-lc
+msgid "month"
+msgstr "mes"
+
+#. key: pricing.sections.monthly
+msgid "monthly billing"
+msgstr "facturación mensual"
+
+#. key: pricing.badges.popular-lc
+msgid "popular"
+msgstr "popular"
+
+#. key: pricing.sections.pro
+msgid "Pro"
+msgstr "Pro"
+
+#. key: pricing.tiers.starter
+msgid "Starter"
+msgstr "Starter"
+
+#. key: pricing.faq.cost-a
+msgid "Unlike generic AI chatbots, mentalhealthGPT is designed specifically for mental health professionals and institutions. We invest in data protection, secure hosting in Switzerland/EU, and specialized models for therapy, supervision, diagnostics, and documentation. This focus on quality, trust, and professional use makes the subscription more expensive than mass-market AI tools."
+msgstr ""
+"A diferencia de los chatbots genéricos con IA, mentalhealthGPT está diseñado "
+"específicamente para profesionales e instituciones de salud mental. "
+"Invertimos en protección de datos, alojamiento seguro en Suiza/UE y modelos "
+"especializados para terapia, supervisión, diagnóstico y documentación. Este "
+"enfoque en la calidad, la confianza y el uso profesional hace que la "
+"suscripción sea más cara que las herramientas de IA del mercado masivo."
+
+#. key: pricing.actions.upgrade
+msgid "Upgrade"
+msgstr "Actualizar"
+
+#. key: pricing.sections.hero-subtitle-users
+msgid "User Plans for every needs"
+msgstr "Planes de usuario para todas las necesidades"
+
+#. key: pricing.badges.via-email-lc
+msgid "via email"
+msgstr "por correo electrónico"
+
+#. key: pricing.faq.refund-a
+msgid "We don’t issue refunds for early cancellations. However, you will keep full access to all features until the end of your current subscription period."
+msgstr ""
+"No realizamos reembolsos por cancelaciones anticipadas. Sin embargo, "
+"conservará el acceso completo a todas las funciones hasta el final de su "
+"período de suscripción actual."
+
+#. key: pricing.faq.cost-q
+msgid "Why does mentalhealthGPT cost more than other chat AIs?"
+msgstr "¿Por qué mentalhealthGPT cuesta más que otras IA de chat?"
+
+#. key: pricing.sections.year-lc
+msgid "year"
+msgstr "año"
+
+#. key: pricing.sections.yearly
+msgid "Yearly billing"
+msgstr "Facturación anual"
+
+#. key: pricing.faq.try-plan-a
+msgid "Yes — the Starter and Pro plans include a 7-day free trial. You won’t be charged if you cancel during the trial. Access matches the selected plan, and billing starts only after day 7. You can switch plans or cancel anytime from Settings."
+msgstr ""
+"Sí, los planes Starter y Pro incluyen una prueba gratuita de 7 días. No se "
+"te cobrará nada si cancelas durante el periodo de prueba. El acceso coincide "
+"con el plan seleccionado y la facturación solo comienza después del séptimo "
+"día. Puedes cambiar de plan o cancelar en cualquier momento desde la sección "
+"Configuración."

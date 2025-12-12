@@ -19,7 +19,8 @@
     "i18n:convert:en": "node scripts/po-to-json.cjs en",
     "i18n:convert:de": "node scripts/po-to-json.cjs de_CH",
     "i18n:convert:fr": "node scripts/po-to-json.cjs fr_CH",
-    "i18n:convert:all": "npm run i18n:convert:en && npm run i18n:convert:de && npm run i18n:convert:fr"
+    "i18n:convert:es": "node scripts/po-to-json.cjs es",
+    "i18n:convert:all": "npm run i18n:convert:en && npm run i18n:convert:de && npm run i18n:convert:fr && npm run i18n:convert:es"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
@@ -27,6 +28,7 @@
     "@emotion/styled": "11.11.5",
     "@headlessui/react": "^1.7.13",
     "@headlessui/tailwindcss": "^0.1.2",
+    "@simplewebauthn/browser": "^13.2.2",
     "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/react-datepicker": "^4.10.0",
     "@types/react-input-mask": "^3.0.2",
@@ -51,6 +53,7 @@
     "react-hot-toast": "^2.4.0",
     "react-i18next": "^15.6.1",
     "react-input-mask": "^3.0.0-alpha.2",
+    "react-qr-code": "^2.0.18",
     "react-responsive": "^9.0.2",
     "react-select": "^5.7.2",
     "react-syntax-highlighter": "^15.5.0",

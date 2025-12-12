@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"therapy-support/es/>\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: therapy-support.sections.greeting
+msgid "🧠 Hello! I'm your Therapy Support AI."
+msgstr "🧠 ¡Hola! Soy tu IA de apoyo terapéutico."
+
+#. key: therapy-support.sections.instructions
+msgid ""
+"Feel free to describe your case, the specific symptoms, or ask for "
+"therapeutic strategies."
+msgstr ""
+"No dude en describir su caso, los síntomas específicos o solicitar "
+"estrategias terapéuticas."
+
+#. key: therapy-support.chat.title
+msgid "Therapy Support AI"
+msgstr "Asistencia terapéutica con IA"
+
+#. key: therapy-support.notice.prefix
+msgid "🚧 The AI functionality for "
+msgstr "🚧 La funcionalidad de IA para "
+
+#. key: therapy-support.notice.feature-name
+msgid "Therapy Support"
+msgstr "Apoyo terapéutico"
+
+#. key: therapy-support.notice.suffix
+msgid " is currently under development. It will soon be available with specialized models for therapy planning, reflection, and evidence-based suggestions."
+msgstr ""
+" Actualmente se encuentra en fase de desarrollo. Pronto estará disponible "
+"con modelos especializados para la planificación de terapias, la reflexión y "
+"sugerencias basadas en la evidencia."
+
+#. key: therapy-support.cta.support
+msgid "Want to support mentalhealthGPT or learn more? Email"
+msgstr ""
+"¿Quieres apoyar mentalhealthGPT u obtener más información? Envía un correo "
+"electrónico a"

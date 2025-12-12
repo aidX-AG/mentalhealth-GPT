@@ -1,0 +1,345 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-12-06 12:54+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"sign-in/es/>\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: sign-in.legal.and
+msgid "and"
+msgstr "y"
+
+#. key: sign-in.legal.tos_prefix
+msgid "By creating an account, you agree to our"
+msgstr "Al crear una cuenta, aceptas nuestras"
+
+#. key: sign-in.hero.subtitle
+msgid ""
+"Chat with specialized expertise - Experience AI with complete data "
+"protection with us"
+msgstr ""
+"Chatee con expertos especializados: experimente la IA con una protección "
+"completa de los datos con nosotros"
+
+#. key: sign-in.social.apple
+msgid "Continue with Apple"
+msgstr "Continuar con Apple"
+
+#. key: sign-in.social.google
+msgid "Continue with Google"
+msgstr "Continuar con Google"
+
+#. key: sign-in.tabs.create_account
+msgid "Create account"
+msgstr "Crear cuenta"
+
+#. key: sign-in.button.create_account
+msgid "Create Account"
+msgstr "Crear cuenta"
+
+#. key: sign-in.place.create_email
+msgid "Email"
+msgstr "Correo electrónico"
+
+#. key: sign-in.misc.forgot-password
+msgid "Forgot password?"
+msgstr "¿Olvidó su contraseña?"
+
+#. key: sign-in.misc.or
+msgid "OR"
+msgstr "O"
+
+#. key: sign-in.place.create_password
+msgid "Password"
+msgstr "Contraseña"
+
+#. key: sign-in.legal.privacy
+msgid "Privacy & Cookie Statement"
+msgstr "Declaración de privacidad y cookies"
+
+#. key: sign-in.button.reset_password
+msgid "Reset password"
+msgstr "Restablecer contraseña"
+
+#. key: sign-in.password.reset.title
+msgid "Reset your password"
+msgstr "Restablecer su contraseña"
+
+#. key: sign-in.tabs.sign_in
+msgid "Sign in"
+msgstr "Iniciar sesión"
+
+#. key: sign-in.button.sign_in_with_app
+msgid "Sign in with mentalhealthGPT"
+msgstr "Iniciar sesión con mentalhealthGPT"
+
+#. key: sign-in.legal.tos
+msgid "Terms of Service"
+msgstr "Condiciones del servicio"
+
+#. key: sign-in.hero.title
+msgid "Unlock the power of your private mental health AI"
+msgstr "Descubre todo el potencial de tu IA privada para la salud mental"
+
+#. key: sign-in.place.username
+msgid "Username or email"
+msgstr "Nombre de usuario o correo electrónico"
+
+# #####################################################################
+# NEW KEYS FOR CREATE ACCOUNT FLOW (Signup + WebAuthn onboarding)
+# #####################################################################
+#. key: sign-in.create.error.password_too_short
+msgid "Password is too short. Please use at least 12 characters."
+msgstr "La contraseña es demasiado corta. Utilice al menos 12 caracteres."
+
+#. key: sign-in.create.error.invalid_email
+msgid "Please enter a valid email address."
+msgstr "Introduzca una dirección de correo electrónico válida."
+
+#. key: sign-in.create.error.technical
+msgid "A technical error occurred while creating the account."
+msgstr "Se ha producido un error técnico al crear la cuenta."
+
+#. key: sign-in.create.error.email_already_registered
+msgid ""
+"This email address is already registered. Please sign in or use a different "
+"address."
+msgstr ""
+"Esta dirección de correo electrónico ya está registrada. Inicie sesión o "
+"utilice otra dirección."
+
+#. key: sign-in.create.error.password_too_weak
+msgid "Password is too weak. Please use a stronger password."
+msgstr "La contraseña es demasiado débil. Utilice una contraseña más segura."
+
+#. key: sign-in.create.error.generic
+msgid "Account could not be created."
+msgstr "No se pudo crear la cuenta."
+
+#. key: sign-in.create.success.title
+msgid "Account successfully created."
+msgstr "Cuenta creada correctamente."
+
+#. key: sign-in.create.success.body
+msgid ""
+"You can now set up your personal passkey - the most secure login method "
+"available."
+msgstr ""
+"Ahora puede configurar su clave personal, el método de inicio de sesión más "
+"seguro disponible."
+
+#. key: sign-in.create.success.cta_webauthn
+msgid "Set up passkey now"
+msgstr "Configure la clave de acceso ahora"
+
+#. key: sign-in.intro.sign_in
+msgid ""
+"Sign in with your email and password. If you’ve already set up a passkey, "
+"you log in using your smartphone and FaceID or TouchID."
+msgstr ""
+"Inicie sesión con su correo electrónico y contraseña. Si ya ha configurado "
+"una contraseña, inicie sesión con su smartphone y FaceID o TouchID."
+
+#. key: sign-in.intro.create
+msgid ""
+"Create your account with email and password. Afterwards, you set up a secure "
+"passkey on your smartphone using FaceID or TouchID."
+msgstr ""
+"Crea tu cuenta con tu correo electrónico y contraseña. Después, configura "
+"una contraseña segura en tu smartphone utilizando FaceID o TouchID."
+
+#. key: passkey.hero.title
+msgid "Set up your secure smartphone passkey"
+msgstr "Configure su clave de acceso segura para el smartphone"
+
+#. key: passkey.hero.subtitle
+msgid ""
+"Use your smartphone with FaceID or TouchID as your secure key to sign in to "
+"mentalhealthGPT."
+msgstr ""
+"Utiliza tu smartphone con FaceID o TouchID como clave segura para iniciar "
+"sesión en mentalhealthGPT."
+
+#. key: passkey.setup.title
+msgid "Set up your passkey on your smartphone"
+msgstr "Configura tu contraseña en tu smartphone"
+
+#. key: passkey.setup.body
+msgid ""
+"Scan the QR code with your smartphone to create a secure passkey using "
+"FaceID or TouchID. This will be your primary login method."
+msgstr ""
+"Escanea el código QR con tu smartphone para crear una contraseña segura "
+"utilizando FaceID o TouchID. Este será tu método de inicio de sesión "
+"principal."
+
+#. key: passkey.setup.for_email
+msgid "Passkey setup for"
+msgstr "Configuración de la clave de acceso para"
+
+#. key: passkey.setup.button_start
+msgid "Generate QR code for passkey setup"
+msgstr "Generar código QR para la configuración de la clave de acceso"
+
+#. key: passkey.setup.button_working
+msgid "Preparing your passkey setup…"
+msgstr "Preparando la configuración de su clave de acceso…"
+
+#. key: passkey.setup.qr.title
+msgid "Scan the QR code with your smartphone"
+msgstr "Escanee el código QR con su teléfono inteligente"
+
+#. key: passkey.setup.qr.body
+msgid ""
+"Open your smartphone camera or your password manager and scan the QR code to "
+"start the passkey setup."
+msgstr ""
+"Abre la cámara de tu smartphone o tu gestor de contraseñas y escanea el "
+"código QR para iniciar la configuración de la clave de acceso."
+
+#. key: passkey.setup.qr.hint
+msgid ""
+"If nothing happens, try scanning the code again or open the link with your "
+"smartphone directly."
+msgstr ""
+"Si no ocurre nada, intente escanear el código de nuevo o abra el enlace "
+"directamente con su smartphone."
+
+#. key: passkey.setup.status.waiting
+msgid "Waiting for confirmation from your smartphone…"
+msgstr "Esperando la confirmación desde tu smartphone…"
+
+#. key: passkey.setup.error.generic
+msgid "Could not start your passkey setup. Please try again."
+msgstr ""
+"No se pudo iniciar la configuración de la clave de acceso. Inténtelo de "
+"nuevo."
+
+#. key: passkey.setup.error.timeout
+msgid "The passkey setup took too long. Please start again."
+msgstr ""
+"La configuración de la clave maestra ha tardado demasiado. Vuelva a empezar."
+
+#. key: passkey.setup.success.complete
+msgid ""
+"Your passkey has been created successfully. You will be redirected to the "
+"sign-in page."
+msgstr ""
+"Tu contraseña se ha creado correctamente. Serás redirigido a la página de "
+"inicio de sesión."
+
+#. key: passkey.setup.back_to_signin.prefix
+msgid "You can also return to the sign-in page at any time:"
+msgstr ""
+"También puede volver a la página de inicio de sesión en cualquier momento:"
+
+#. key: passkey.setup.back_to_signin.link
+msgid "Back to sign in"
+msgstr "Volver a iniciar sesión"
+
+#. key: passkey.mobile.title
+msgid "Set up your passkey"
+msgstr "Configure su passkey"
+
+#. key: passkey.mobile.success
+msgid "Your passkey has been created successfully."
+msgstr "Tu passkey se ha creado correctamente."
+
+#. key: passkey.mobile.success_close_window
+msgid "You can now close this window."
+msgstr "Ahora puede cerrar esta ventana."
+
+#. key: passkey.mobile.status.loading_generic
+msgid "Please wait..."
+msgstr "Por favor, espere..."
+
+#. key: passkey.mobile.status.loading_options
+msgid "Preparing secure registration…"
+msgstr "Preparando el registro seguro…"
+
+#. key: passkey.mobile.status.awaiting_biometric
+msgid "Please confirm with Face ID, Touch ID, or your device passcode."
+msgstr "Confirma con Face ID, Touch ID o el código de acceso de tu dispositivo."
+
+#. key: passkey.mobile.status.verifying
+msgid "Finalizing setup…"
+msgstr "Finalizando la configuración…"
+
+#. key: passkey.mobile.error.no_session
+msgid "Missing or invalid registration session."
+msgstr "Sesión de registro inexistente o no válida."
+
+#. key: passkey.mobile.error.options_failed
+msgid "We could not start the passkey setup. Please try again."
+msgstr ""
+"No se ha podido iniciar la configuración de passkey. Inténtelo de nuevo."
+
+#. key: passkey.mobile.error.invalid_or_expired
+msgid "This registration link is no longer valid. Please scan a new QR code."
+msgstr "Este enlace de registro ya no es válido. Escanee un nuevo código QR."
+
+#. key: passkey.mobile.error.timeout_options
+msgid ""
+"The request timed out while loading secure registration data. Please try "
+"again."
+msgstr ""
+"Se ha agotado el tiempo de espera de la solicitud mientras se cargaban los "
+"datos de registro seguros. Inténtalo de nuevo."
+
+#. key: passkey.mobile.error.registration_failed
+msgid "Passkey creation was interrupted or failed. Please try again."
+msgstr ""
+"La creación del passkey se ha interrumpido o ha fallado. Vuelva a intentarlo."
+
+#. key: passkey.mobile.error.timeout_verify
+msgid "The request timed out while verifying your passkey. Please try again."
+msgstr ""
+"Se ha agotado el tiempo de espera de la solicitud mientras se verificaba su "
+"passkey. Inténtelo de nuevo."
+
+#. key: passkey.mobile.error.verify_failed
+msgid "We could not verify your passkey. Please try again."
+msgstr "No hemos podido verificar su passkey. Inténtelo de nuevo."
+
+#. key: passkey.mobile.error.unknown
+msgid "An unexpected error occurred. Please try again."
+msgstr "Se ha producido un error inesperado. Inténtalo de nuevo."
+
+#. key: passkey.mobile.action.retry
+msgid "Try again"
+msgstr "Inténtalo de nuevo"
+
+#~ msgid "Technical error while creating the account."
+#~ msgstr "Error técnico al crear la cuenta."
+
+#~ msgid ""
+#~ "Sign in with the most secure authentication method available – your "
+#~ "personal passkey."
+#~ msgstr ""
+#~ "Inicie sesión con el método de autenticación más seguro disponible: su "
+#~ "clave personal."
+
+#~ msgid ""
+#~ "Create your passkey to protect your account with state-of-the-art "
+#~ "security."
+#~ msgstr ""
+#~ "Crea tu clave de acceso para proteger tu cuenta con la seguridad más "
+#~ "avanzada."
+
+#~ msgid "Create passkey"
+#~ msgstr "Crear clave de acceso"
+
+#~ msgid "Creating passkey..."
+#~ msgstr "Creando clave de acceso..."
+
+#~ msgid ""
+#~ "Your browser or device blocked the passkey process for security reasons."
+#~ msgstr ""
+#~ "Tu navegador o dispositivo ha bloqueado el proceso de clave de acceso por "
+#~ "motivos de seguridad."

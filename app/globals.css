@@ -133,4 +133,11 @@
     .multiselect .multiselect__option--is-focused {
         @apply bg-n-3/50 dark:bg-n-6;
     }
+    input:-moz-ui-valid,
+    input:-moz-ui-invalid,
+    input:-moz-autofill {
+      box-shadow: none !important;
+      background-color: transparent !important;
+      color: inherit !important;
+    }
 }

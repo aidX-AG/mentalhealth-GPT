@@ -12,11 +12,13 @@
  *   - locales/en/<ns>.json from POT/<ns>.pot  (key → msgid)
  *   - locales/de/<ns>.json from de_CH/<ns>.po (key → msgstr || msgid)
  *   - locales/fr/<ns>.json from fr_CH/<ns>.po (key → msgstr || msgid)
+ *   - locales/es/<ns>.json from es/<ns>.po    (key → msgstr || msgid)
  *
  * Usage:
  *   node scripts/po-to-json.cjs en
  *   node scripts/po-to-json.cjs de_CH
  *   node scripts/po-to-json.cjs fr_CH
+ *   node scripts/po-to-json.cjs es
  */
 
 const fs = require('fs');
@@ -27,9 +29,9 @@ const ROOT = process.cwd();
 const LOCALES_DIR = path.join(ROOT, 'locales');
 const POT_DIR = path.join(LOCALES_DIR, 'pot');
 
-const srcArg = process.argv[2]; // 'en' | 'de_CH' | 'fr_CH'
+const srcArg = process.argv[2]; // 'en' | 'de_CH' | 'fr_CH' | 'es'
 if (!srcArg) {
-  console.error('❌ Bitte Quellsprache angeben: en | de_CH | fr_CH');
+  console.error('❌ Bitte Quellsprache angeben: en | de_CH | fr_CH | es');
   process.exit(1);
 }
 
@@ -113,7 +115,7 @@ function buildCore() {
       }
     }
   } else {
-    // de_CH / fr_CH from core.po (msgid → msgstr || msgid)
+    // de_CH / fr_CH / es from core.po (msgid → msgstr || msgid)
     const srcCore = path.join(LOCALES_DIR, srcArg, 'core.po');
     if (!fs.existsSync(srcCore)) {
       console.error(`❌ CORE-PO fehlt: ${srcCore}`);
@@ -180,7 +182,7 @@ function buildNamespaces() {
         }
       }
     } else {
-      // DE/FR from PO: key(s) in comments → msgstr || msgid
+      // DE/FR/ES from PO: key(s) in comments → msgstr || msgid
       const poPath = path.join(LOCALES_DIR, srcArg, `${ns}.po`);
       if (!fs.existsSync(poPath)) {
         console.warn(`⚠️  Überspringe fehlendes Namespace-PO: ${poPath}`);

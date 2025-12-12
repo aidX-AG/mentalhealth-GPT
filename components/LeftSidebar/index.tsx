@@ -16,14 +16,14 @@ import { resultSearch } from "@/mocks/resultSearch";
 import { settings } from "@/constants/settings";
 import { twMerge } from "tailwind-merge";
 
-// ✅ Laufzeit-i18n: Texte aus Transifex-Context holen
+// ✅ Laufzeit-i18n: Texte aus lokalem i18n-Context holen
 import { _ } from "@/lib/i18n/_";
 
 /** Aktives Locale aus <html lang> ermitteln (Fallback 'en') */
-const getActiveLocale = (): "de" | "fr" | "en" => {
+const getActiveLocale = (): "de" | "fr" | "en" | "es" => {
   if (typeof document === "undefined") return "en";
   const lang = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  return (["de", "fr", "en"] as const).includes(lang as any) ? (lang as any) : "en";
+  return (["de", "fr", "en", "es"] as const).includes(lang as any) ? (lang as any) : "en";
 };
 
 type LeftSidebarProps = {

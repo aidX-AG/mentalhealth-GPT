@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-10-18 18:05+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"homepage/es/>\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: homepage.input.placeholder
+msgid "Ask mentalhealthGPT anything"
+msgstr "Pregunta cualquier cosa a mentalhealthGPT"
+
+#. key: homepage.sections.tagline
+msgid "Expertise you trust. Privacy you control. Science that empowers."
+msgstr ""
+"Experiencia en la que confías. Privacidad que tú controlas. Ciencia que "
+"empodera."
+
+#. key: homepage.sections.brand
+msgid "my private mentalhealthGPT"
+msgstr "mi mentalhealthGPT privado"

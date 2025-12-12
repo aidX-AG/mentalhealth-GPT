@@ -1,0 +1,11 @@
+{
+  "audio-transcription.chat.greeting": "¡Hola! ¿En qué puedo ayudarle hoy con la transcripción de audio?",
+  "audio-transcription.text.capability": "Nuestra IA puede transcribir de forma segura las grabaciones de audio de las sesiones de terapia, estructurar el contenido y generar resúmenes claros y profesionales, todo ello con cifrado de extremo a extremo.",
+  "audio-transcription.text.upload-instructions": "Simplemente suba una sesión grabada. Toda la información del paciente permanece estrictamente confidencial y está protegida por un potente cifrado directamente en su navegador, durante la transferencia y de vuelta, lo que garantiza la total privacidad en cada paso.",
+  "audio-transcription.sections.banner-prefix": "🚧 El modelo de IA para",
+  "audio-transcription.chat.title": "Transcripción de audio y notas",
+  "audio-transcription.sections.under-development": "se encuentra actualmente en desarrollo.",
+  "audio-transcription.sections.coming-soon": "Pronto proporcionará transcripciones precisas y asistencia para la toma de notas para la documentación clínica.",
+  "audio-transcription.chat.hello-short": "Hola 🙂",
+  "audio-transcription.chat.demo-request": "Muéstrame lo que puedes hacer"
+}

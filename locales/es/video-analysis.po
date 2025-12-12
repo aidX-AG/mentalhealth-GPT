@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2025-10-18 13:45+0000\n"
+"Last-Translator: Peter Wildhaber <hello@aidx.ch>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"video-analysis/es/>\n"
+"Language: es\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: video-analysis.chat.greeting
+msgid "Hello! How can I assist you with video analysis today?"
+msgstr "¡Hola! ¿En qué puedo ayudarle hoy con el análisis de vídeo?"
+
+#. key: video-analysis.text.coming-soon
+msgid "Our AI-powered video analysis is coming soon."
+msgstr ""
+"Nuestro análisis de vídeo basado en inteligencia artificial estará "
+"disponible próximamente."
+
+#. key: video-analysis.text.value-prop-part1
+msgid "It will help analyze therapy session recordings"
+msgstr "Ayudará a analizar las grabaciones de las sesiones terapéuticas"
+
+#. key: video-analysis.text.value-prop-part2
+msgid ""
+", detect key themes, nonverbal cues, and therapeutic dynamics — all with "
+"full end-to-end security."
+msgstr ""
+", detectar temas clave, señales no verbales y dinámicas terapéuticas, todo "
+"ello con una seguridad integral de extremo a extremo."
+
+#. key: video-analysis.text.security
+msgid ""
+"Your video data is protected at every step: in your browser, during upload, "
+"and throughout the AI-based processing."
+msgstr ""
+"Tus datos de vídeo están protegidos en cada paso: en tu navegador, durante "
+"la carga y a lo largo de todo el procesamiento basado en IA."
+
+#. key: video-analysis.text.in-development
+msgid "This feature is currently in development —"
+msgstr "Esta función se encuentra actualmente en desarrollo"
+
+#. key: video-analysis.text.stay-tuned
+msgid "stay tuned!"
+msgstr "¡Estén atentos!"
+
+#. key: video-analysis.sections.icon
+msgid "🚧"
+msgstr "🚧"
+
+#. key: video-analysis.chat.title
+msgid "Video Analysis"
+msgstr "Análisis de vídeo"
+
+#. key: video-analysis.text.feature-benefit
+msgid ""
+"is a powerful feature that will provide secure, AI-generated insights into "
+"therapeutic sessions."
+msgstr ""
+"Es una potente función que proporcionará información segura, generada por "
+"IA, sobre las sesiones terapéuticas."
+
+#. key: video-analysis.text.launch-excitement
+msgid ""
+"We’re excited to launch this soon — enabling deeper reflection, "
+"supervision, and professional growth."
+msgstr ""
+"Estamos muy emocionados por lanzar esto pronto, ya que permitirá una "
+"reflexión más profunda, una mejor supervisión y un mayor crecimiento "
+"profesional."
+
+#. key: video-analysis.chat.hello-short
+msgid "Hi there 👋"
+msgstr "Hola 👋"
