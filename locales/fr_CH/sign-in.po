@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-06 12:54+0000\n"
+"PO-Revision-Date: 2025-12-12 12:38+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
@@ -324,7 +324,7 @@ msgstr "Réessayer"
 
 #. key: passkey.mobile.action.start
 msgid "Continue"
-msgstr ""
+msgstr "Continuer"
 
 #~ msgid "Technical error while creating the account."
 #~ msgstr "Erreur technique lors de la création du compte."
