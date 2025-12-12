@@ -253,3 +253,7 @@ msgstr ""
 #. key: passkey.mobile.action.retry
 msgid "Try again"
 msgstr ""
+
+#. key: passkey.mobile.action.start
+msgid "Continue"
+msgstr ""
