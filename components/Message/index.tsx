@@ -1,3 +1,16 @@
+// ============================================================================
+// 💬 Message Component – Chat Input mit Prompt-Gating
+// Datei: components/Message/index.tsx
+// Version: v1.1 – 2025-12-11
+//
+// Änderungen v1.1:
+//   - MessageProps um folgende optionale Props erweitert:
+//       isAuthenticated, canSend, remainingFreePrompts,
+//       subscriptionStatus, planType
+//     → damit die Props aus Main/index.tsx typ-sicher durchgereicht werden,
+//       ohne das Verhalten des Components zu ändern.
+// ============================================================================
+
 import { ChangeEventHandler, MouseEvent } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import Icon from "@/components/Icon";
@@ -24,6 +37,13 @@ type MessageProps = {
 
     // 🔼 optional: tatsächliches Senden (kann später verdrahtet werden)
     onSend?: () => void;
+
+    // 🔎 Zusätzliche Infos aus Main/HomePage (nur Typ-Support, im UI aktuell nicht genutzt)
+    isAuthenticated?: boolean;
+    canSend?: boolean;
+    remainingFreePrompts?: number;
+    subscriptionStatus?: string | null;
+    planType?: string | null;
 };
 
 const Message = ({
@@ -149,9 +169,8 @@ const Message = ({
                             </button>
                         ) : (
                             <button
-                                className={`${stylesButton} bg-primary-1 rounded-xl transition-colors hover:bg-primary-1/90 ${
-                                    isSendDisabled ? "cursor-not-allowed opacity-60 hover:bg-primary-1" : ""
-                                }`}
+                                className={`${stylesButton} bg-primary-1 rounded-xl transition-colors hover:bg-primary-1/90 ${isSendDisabled ? "cursor-not-allowed opacity-60 hover:bg-primary-1" : ""
+                                    }`}
                                 type="button"
                                 disabled={isSendDisabled}
                                 onClick={handleSendClick}

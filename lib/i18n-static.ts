@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 type Messages = Record<string, string>;
 export type Locale = "en" | "de" | "fr" | "es";
 

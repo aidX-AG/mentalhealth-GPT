@@ -44,5 +44,21 @@
   "passkey.setup.error.timeout": "La configuración de la clave maestra ha tardado demasiado. Vuelva a empezar.",
   "passkey.setup.success.complete": "Tu contraseña se ha creado correctamente. Serás redirigido a la página de inicio de sesión.",
   "passkey.setup.back_to_signin.prefix": "También puede volver a la página de inicio de sesión en cualquier momento:",
-  "passkey.setup.back_to_signin.link": "Volver a iniciar sesión"
+  "passkey.setup.back_to_signin.link": "Volver a iniciar sesión",
+  "passkey.mobile.title": "Configure su passkey",
+  "passkey.mobile.success": "Tu passkey se ha creado correctamente.",
+  "passkey.mobile.success_close_window": "Ahora puede cerrar esta ventana.",
+  "passkey.mobile.status.loading_generic": "Por favor, espere...",
+  "passkey.mobile.status.loading_options": "Preparando el registro seguro…",
+  "passkey.mobile.status.awaiting_biometric": "Confirma con Face ID, Touch ID o el código de acceso de tu dispositivo.",
+  "passkey.mobile.status.verifying": "Finalizando la configuración…",
+  "passkey.mobile.error.no_session": "Sesión de registro inexistente o no válida.",
+  "passkey.mobile.error.options_failed": "No se ha podido iniciar la configuración de passkey. Inténtelo de nuevo.",
+  "passkey.mobile.error.invalid_or_expired": "Este enlace de registro ya no es válido. Escanee un nuevo código QR.",
+  "passkey.mobile.error.timeout_options": "Se ha agotado el tiempo de espera de la solicitud mientras se cargaban los datos de registro seguros. Inténtalo de nuevo.",
+  "passkey.mobile.error.registration_failed": "La creación del passkey se ha interrumpido o ha fallado. Vuelva a intentarlo.",
+  "passkey.mobile.error.timeout_verify": "Se ha agotado el tiempo de espera de la solicitud mientras se verificaba su passkey. Inténtelo de nuevo.",
+  "passkey.mobile.error.verify_failed": "No hemos podido verificar su passkey. Inténtelo de nuevo.",
+  "passkey.mobile.error.unknown": "Se ha producido un error inesperado. Inténtalo de nuevo.",
+  "passkey.mobile.action.retry": "Inténtalo de nuevo"
 }

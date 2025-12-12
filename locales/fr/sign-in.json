@@ -44,5 +44,21 @@
   "passkey.setup.error.timeout": "La configuration de la clé d'accès a pris trop de temps. Veuillez recommencer.",
   "passkey.setup.success.complete": "Votre clé d'accès a été créée avec succès. Vous allez être redirigé vers la page de connexion.",
   "passkey.setup.back_to_signin.prefix": "Vous pouvez également revenir à la page de connexion à tout moment :",
-  "passkey.setup.back_to_signin.link": "Retour à la connexion"
+  "passkey.setup.back_to_signin.link": "Retour à la connexion",
+  "passkey.mobile.title": "Configurez votre passkey",
+  "passkey.mobile.success": "Votre passkey a été créée avec succès.",
+  "passkey.mobile.success_close_window": "Vous pouvez maintenant fermer cette fenêtre.",
+  "passkey.mobile.status.loading_generic": "Veuillez patienter...",
+  "passkey.mobile.status.loading_options": "Préparation de l'enregistrement sécurisé…",
+  "passkey.mobile.status.awaiting_biometric": "Veuillez confirmer avec Face ID, Touch ID ou le code d'accès de votre appareil.",
+  "passkey.mobile.status.verifying": "Finalisation de la configuration…",
+  "passkey.mobile.error.no_session": "Session d'enregistrement manquante ou non valide.",
+  "passkey.mobile.error.options_failed": "Nous n'avons pas pu démarrer la configuration du passkey. Veuillez réessayer.",
+  "passkey.mobile.error.invalid_or_expired": "Ce lien d'inscription n'est plus valide. Veuillez scanner un nouveau code QR.",
+  "passkey.mobile.error.timeout_options": "La demande a expiré pendant le chargement des données d'enregistrement sécurisées. Veuillez réessayer.",
+  "passkey.mobile.error.registration_failed": "La création du passkey a été interrompue ou a échoué. Veuillez réessayer.",
+  "passkey.mobile.error.timeout_verify": "La demande a expiré pendant la vérification de votre passkey. Veuillez réessayer.",
+  "passkey.mobile.error.verify_failed": "Nous n'avons pas pu vérifier votre passkey. Veuillez réessayer.",
+  "passkey.mobile.error.unknown": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+  "passkey.mobile.action.retry": "Réessayer"
 }
