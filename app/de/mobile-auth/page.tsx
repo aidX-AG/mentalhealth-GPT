@@ -1,21 +1,20 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useState, useCallback, useRef, useMemo } from "react";
+import { useSearchParams, usePathname } from "next/navigation";
 import { startRegistration } from "@simplewebauthn/browser";
 import { loadMessages, makeT } from "@/lib/i18n-static";
 
 // API-Base für Production (kommt aus env)
 const API_BASE = (
-  process.env.NEXT_PUBLIC_API_BASE_URL ||
-  "https://api.mentalhealth-gpt.ch"
+  process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.mentalhealth-gpt.ch"
 ).replace(/\/$/, "");
 
 // Timeout-Helfer für Fetch (Health-Grade)
 async function fetchWithTimeout(
   input: RequestInfo | URL,
   init: RequestInit = {},
-  timeoutMs = 30_000,
+  timeoutMs = 30_000
 ): Promise<Response> {
   const controller = new AbortController();
   const id = setTimeout(() => controller.abort(), timeoutMs);
@@ -40,23 +39,43 @@ type Phase =
   | "error";
 
 export default function Page() {
+  const pathname = usePathname();
+
+  const locale = useMemo((): string => {
+    const path = pathname || "";
+
+    // 1) Priorität: Sprache aus dem URL-Pfad
+    if (path.startsWith("/de/")) return "de";
+    if (path.startsWith("/fr/")) return "fr";
+    if (path.startsWith("/es/")) return "es";
+
+    // 2) Fallback: Browser-Sprache (nur für Basispfade ohne Präfix)
+    const browserLang =
+      typeof navigator !== "undefined"
+        ? navigator.language?.split("-")[0] || "en"
+        : "en";
+
+    const supported = ["de", "fr", "es", "en"];
+    return supported.includes(browserLang) ? browserLang : "en";
+  }, [pathname]);
+
   // 🔤 i18n wie in deinen anderen Pages
-  const messages = loadMessages("de");
+  const messages = loadMessages(locale);
   const t = makeT(messages);
 
   const searchParams = useSearchParams();
 
   // Backend kommt mit ?session_id=... im mobile_url
-  const sessionId =
-    searchParams.get("session_id") ??
-    searchParams.get("sessionId") ??
-    "";
+  const sessionId = searchParams.get("session_id") ?? searchParams.get("sessionId") ?? "";
 
   const [loading, setLoading] = useState(false);
   const [phase, setPhase] = useState<Phase>("idle");
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [completed, setCompleted] = useState(false);
+
+  // ✅ Health-Super-Guard: Flow nur 1× starten (verhindert doppelte WebAuthn-Prompts)
+  const startedRef = useRef(false);
 
   // Zentraler Flow: Optionen holen → Passkey erstellen → Verify
   const runFlow = useCallback(async () => {
@@ -76,7 +95,7 @@ export default function Page() {
       setStatusMessage(t("passkey.mobile.status.loading_options"));
 
       const optionsUrl = `${API_BASE}/auth/webauthn/cross-device/options?session_id=${encodeURIComponent(
-        sessionId,
+        sessionId
       )}`;
 
       let res: Response;
@@ -118,9 +137,7 @@ export default function Page() {
 
       let attestationResponse;
       try {
-        attestationResponse = await startRegistration(
-          data.registration_options,
-        );
+        attestationResponse = await startRegistration(data.registration_options);
       } catch (err: any) {
         console.error("MobileAuth startRegistration error:", err);
         setErrorMessage(t("passkey.mobile.error.registration_failed"));
@@ -148,7 +165,7 @@ export default function Page() {
               attestationResponse,
             }),
           },
-          30_000,
+          30_000
         );
       } catch (err: any) {
         if (err?.name === "AbortError") {
@@ -196,17 +213,25 @@ export default function Page() {
       setErrorMessage(t("passkey.mobile.error.no_session"));
       return;
     }
+
+    // ✅ Start nur 1× (verhindert doppeltes startRegistration → Dialog verschwindet)
+    if (startedRef.current) return;
+    startedRef.current = true;
+
     runFlow();
   }, [sessionId, runFlow, t]);
 
   // Retry-Handler
   const handleRetry = () => {
     if (!sessionId) return;
+
+    // ✅ Retry soll wieder funktionieren
+    startedRef.current = false;
+
     runFlow();
   };
 
-  const showRetry =
-    phase === "error" && !!sessionId && !completed;
+  const showRetry = phase === "error" && !!sessionId && !completed;
 
   return (
     <div className="w-full max-w-md mx-auto mt-10 p-6 rounded-xl bg-white dark:bg-n-7 shadow-lg">
@@ -219,8 +244,7 @@ export default function Page() {
         <div className="flex flex-col items-center gap-2 mb-4">
           <div className="h-6 w-6 rounded-full border-2 border-n-4 border-t-transparent animate-spin" />
           <div className="text-center text-sm text-n-4">
-            {statusMessage ||
-              t("passkey.mobile.status.loading_generic")}
+            {statusMessage || t("passkey.mobile.status.loading_generic")}
           </div>
         </div>
       )}
