@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-06 12:54+0000\n"
+"PO-Revision-Date: 2025-12-12 12:38+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/sign-"
-"in/es/>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"sign-in/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -318,7 +318,7 @@ msgstr "Inténtalo de nuevo"
 
 #. key: passkey.mobile.action.start
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #~ msgid "Technical error while creating the account."
 #~ msgstr "Error técnico al crear la cuenta."
