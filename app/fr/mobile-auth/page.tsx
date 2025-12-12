@@ -23,6 +23,7 @@ async function fetchWithTimeout(
     const res = await fetch(input, {
       ...init,
       signal: controller.signal,
+      cache: "no-store",
     });
     return res;
   } finally {
@@ -66,7 +67,8 @@ export default function Page() {
   const searchParams = useSearchParams();
 
   // Backend kommt mit ?session_id=... im mobile_url
-  const sessionId = searchParams.get("session_id") ?? searchParams.get("sessionId") ?? "";
+  const sessionId =
+    searchParams.get("session_id") ?? searchParams.get("sessionId") ?? "";
 
   const [loading, setLoading] = useState(false);
   const [phase, setPhase] = useState<Phase>("idle");
@@ -74,8 +76,11 @@ export default function Page() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [completed, setCompleted] = useState(false);
 
-  // ✅ Health-Super-Guard: Flow nur 1× starten (verhindert doppelte WebAuthn-Prompts)
+  // ✅ Health-Super-Guard: Flow nur 1× starten
   const startedRef = useRef(false);
+
+  // ✅ NEU: iOS/Safari braucht User-Geste → Flow erst nach Button
+  const [awaitingUserGesture, setAwaitingUserGesture] = useState(true);
 
   // Zentraler Flow: Optionen holen → Passkey erstellen → Verify
   const runFlow = useCallback(async () => {
@@ -122,8 +127,6 @@ export default function Page() {
 
       const data = await res.json();
 
-      // 📌 Änderung: Backend liefert bei Erfolg nur { registration_options }
-      // Kein status: "ok" → wir prüfen nur auf vorhandene registration_options.
       if (!data || !data.registration_options) {
         setErrorMessage(t("passkey.mobile.error.invalid_or_expired"));
         setPhase("error");
@@ -131,7 +134,7 @@ export default function Page() {
         return;
       }
 
-      // 2) Passkey erstellen (WebAuthn)
+      // 2) Passkey erstellen (WebAuthn) — MUSS aus User-Geste kommen
       setPhase("awaitingBiometric");
       setStatusMessage(t("passkey.mobile.status.awaiting_biometric"));
 
@@ -207,28 +210,40 @@ export default function Page() {
     }
   }, [sessionId, t]);
 
-  // Initialer Start beim Laden
+  // ⚠️ WICHTIG: KEIN Auto-Start mehr (sonst flackert iOS weg)
   useEffect(() => {
     if (!sessionId) {
       setErrorMessage(t("passkey.mobile.error.no_session"));
       return;
     }
+  }, [sessionId, t]);
 
-    // ✅ Start nur 1× (verhindert doppeltes startRegistration → Dialog verschwindet)
+  const handleStart = () => {
+    if (!sessionId) {
+      setErrorMessage(t("passkey.mobile.error.no_session"));
+      return;
+    }
+
+    // Start nur 1×
     if (startedRef.current) return;
     startedRef.current = true;
 
+    setAwaitingUserGesture(false);
     runFlow();
-  }, [sessionId, runFlow, t]);
+  };
 
   // Retry-Handler
   const handleRetry = () => {
     if (!sessionId) return;
 
-    // ✅ Retry soll wieder funktionieren
     startedRef.current = false;
+    setAwaitingUserGesture(true);
 
-    runFlow();
+    setPhase("idle");
+    setStatusMessage(null);
+    setErrorMessage(null);
+    setCompleted(false);
+    setLoading(false);
   };
 
   const showRetry = phase === "error" && !!sessionId && !completed;
@@ -238,6 +253,22 @@ export default function Page() {
       <h1 className="text-xl font-semibold mb-4 text-center">
         {t("passkey.mobile.title")}
       </h1>
+
+      {/* ✅ NEU: User-Geste erforderlich */}
+      {awaitingUserGesture && !completed && (
+        <div className="mb-4 text-center">
+          <div className="text-sm text-n-4 mb-3">
+            {t("passkey.mobile.status.awaiting_biometric")}
+          </div>
+          <button
+            type="button"
+            onClick={handleStart}
+            className="px-4 py-2 text-sm rounded-lg bg-primary-1 text-white hover:bg-primary-1/90 w-full"
+          >
+            {t("passkey.mobile.action.start") || "Continue"}
+          </button>
+        </div>
+      )}
 
       {/* Spinner + Status */}
       {loading && (
