@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-06 12:54+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
-"sign-in/es/>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/sign-"
+"in/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -265,7 +265,8 @@ msgstr "Preparando el registro seguro…"
 
 #. key: passkey.mobile.status.awaiting_biometric
 msgid "Please confirm with Face ID, Touch ID, or your device passcode."
-msgstr "Confirma con Face ID, Touch ID o el código de acceso de tu dispositivo."
+msgstr ""
+"Confirma con Face ID, Touch ID o el código de acceso de tu dispositivo."
 
 #. key: passkey.mobile.status.verifying
 msgid "Finalizing setup…"
@@ -314,6 +315,10 @@ msgstr "Se ha producido un error inesperado. Inténtalo de nuevo."
 #. key: passkey.mobile.action.retry
 msgid "Try again"
 msgstr "Inténtalo de nuevo"
+
+#. key: passkey.mobile.action.start
+msgid "Continue"
+msgstr ""
 
 #~ msgid "Technical error while creating the account."
 #~ msgstr "Error técnico al crear la cuenta."

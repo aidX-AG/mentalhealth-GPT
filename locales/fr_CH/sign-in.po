@@ -322,6 +322,10 @@ msgstr "Une erreur inattendue s'est produite. Veuillez réessayer."
 msgid "Try again"
 msgstr "Réessayer"
 
+#. key: passkey.mobile.action.start
+msgid "Continue"
+msgstr ""
+
 #~ msgid "Technical error while creating the account."
 #~ msgstr "Erreur technique lors de la création du compte."
 

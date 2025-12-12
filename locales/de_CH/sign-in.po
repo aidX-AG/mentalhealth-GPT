@@ -315,11 +315,16 @@ msgstr ""
 
 #. key: passkey.mobile.error.unknown
 msgid "An unexpected error occurred. Please try again."
-msgstr "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+msgstr ""
+"Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
 
 #. key: passkey.mobile.action.retry
 msgid "Try again"
 msgstr "Versuchen Sie es erneut"
+
+#. key: passkey.mobile.action.start
+msgid "Continue"
+msgstr ""
 
 #~ msgid "Technical error while creating the account."
 #~ msgstr "Technischer Fehler beim Erstellen des Kontos."
