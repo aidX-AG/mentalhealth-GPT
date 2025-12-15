@@ -130,6 +130,10 @@ msgstr ""
 msgid "Please enter email and password."
 msgstr ""
 
+#. key: sign-in.error.invalid_credentials
+msgid "Email or password is incorrect."
+msgstr ""
+
 #. key: sign-in.error.login_failed
 msgid "Sign in failed."
 msgstr ""
