@@ -67,7 +67,7 @@ msgid "Sign in"
 msgstr ""
 
 #. key: sign-in.button.sign_in_with_app
-msgid "Sign in with mentalhealthGPT"
+msgid "Sign in with Passkey"
 msgstr ""
 
 #. key: sign-in.legal.tos
@@ -124,6 +124,22 @@ msgstr ""
 
 #. key: sign-in.intro.create
 msgid "Create your account with email and password. Afterwards, you set up a secure passkey on your smartphone using FaceID or TouchID."
+msgstr ""
+
+#. key: sign-in.error.missing_credentials
+msgid "Please enter email and password."
+msgstr ""
+
+#. key: sign-in.error.login_failed
+msgid "Sign in failed."
+msgstr ""
+
+#. key: sign-in.error.technical
+msgid "A technical error occurred."
+msgstr ""
+
+#. key: sign-in.button.loading
+msgid "Loading…"
 msgstr ""
 
 #. key: passkey.hero.title
