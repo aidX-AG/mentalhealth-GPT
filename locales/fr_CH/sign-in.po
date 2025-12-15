@@ -76,7 +76,9 @@ msgid "Sign in"
 msgstr "Se connecter"
 
 #. key: sign-in.button.sign_in_with_app
-msgid "Sign in with mentalhealthGPT"
+#, fuzzy
+#| msgid "Sign in with mentalhealthGPT"
+msgid "Sign in with Passkey"
 msgstr "Connectez-vous avec mentalhealthGPT"
 
 #. key: sign-in.legal.tos
@@ -157,6 +159,32 @@ msgstr ""
 "Créez votre compte avec votre adresse e-mail et votre mot de passe. Ensuite, "
 "configurez un code d'accès sécurisé sur votre smartphone à l'aide de FaceID "
 "ou TouchID."
+
+#. key: sign-in.error.missing_credentials
+#, fuzzy
+#| msgid "Please enter a valid email address."
+msgid "Please enter email and password."
+msgstr "Veuillez saisir une adresse e-mail valide."
+
+#. key: sign-in.error.invalid_credentials
+msgid "Email or password is incorrect."
+msgstr ""
+
+#. key: sign-in.error.login_failed
+#, fuzzy
+#| msgid "Sign in"
+msgid "Sign in failed."
+msgstr "Se connecter"
+
+#. key: sign-in.error.technical
+#, fuzzy
+#| msgid "A technical error occurred while creating the account."
+msgid "A technical error occurred."
+msgstr "Une erreur technique s'est produite lors de la création du compte."
+
+#. key: sign-in.button.loading
+msgid "Loading…"
+msgstr ""
 
 #. key: passkey.hero.title
 msgid "Set up your secure smartphone passkey"

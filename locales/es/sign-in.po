@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-12 12:38+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
-"sign-in/es/>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/sign-"
+"in/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -76,7 +76,9 @@ msgid "Sign in"
 msgstr "Iniciar sesión"
 
 #. key: sign-in.button.sign_in_with_app
-msgid "Sign in with mentalhealthGPT"
+#, fuzzy
+#| msgid "Sign in with mentalhealthGPT"
+msgid "Sign in with Passkey"
 msgstr "Iniciar sesión con mentalhealthGPT"
 
 #. key: sign-in.legal.tos
@@ -153,6 +155,32 @@ msgid ""
 msgstr ""
 "Crea tu cuenta con tu correo electrónico y contraseña. Después, configura "
 "una contraseña segura en tu smartphone utilizando FaceID o TouchID."
+
+#. key: sign-in.error.missing_credentials
+#, fuzzy
+#| msgid "Please enter a valid email address."
+msgid "Please enter email and password."
+msgstr "Introduzca una dirección de correo electrónico válida."
+
+#. key: sign-in.error.invalid_credentials
+msgid "Email or password is incorrect."
+msgstr ""
+
+#. key: sign-in.error.login_failed
+#, fuzzy
+#| msgid "Sign in"
+msgid "Sign in failed."
+msgstr "Iniciar sesión"
+
+#. key: sign-in.error.technical
+#, fuzzy
+#| msgid "A technical error occurred while creating the account."
+msgid "A technical error occurred."
+msgstr "Se ha producido un error técnico al crear la cuenta."
+
+#. key: sign-in.button.loading
+msgid "Loading…"
+msgstr ""
 
 #. key: passkey.hero.title
 msgid "Set up your secure smartphone passkey"
