@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-12 12:38+0000\n"
+"PO-Revision-Date: 2025-12-15 15:38+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
@@ -76,10 +76,8 @@ msgid "Sign in"
 msgstr "Se connecter"
 
 #. key: sign-in.button.sign_in_with_app
-#, fuzzy
-#| msgid "Sign in with mentalhealthGPT"
 msgid "Sign in with Passkey"
-msgstr "Connectez-vous avec mentalhealthGPT"
+msgstr "Connectez-vous avec Passkey"
 
 #. key: sign-in.legal.tos
 msgid "Terms of Service"
@@ -161,30 +159,24 @@ msgstr ""
 "ou TouchID."
 
 #. key: sign-in.error.missing_credentials
-#, fuzzy
-#| msgid "Please enter a valid email address."
 msgid "Please enter email and password."
-msgstr "Veuillez saisir une adresse e-mail valide."
+msgstr "Veuillez saisir votre adresse e-mail et votre mot de passe."
 
 #. key: sign-in.error.invalid_credentials
 msgid "Email or password is incorrect."
-msgstr ""
+msgstr "L'adresse e-mail ou le mot de passe est incorrect."
 
 #. key: sign-in.error.login_failed
-#, fuzzy
-#| msgid "Sign in"
 msgid "Sign in failed."
-msgstr "Se connecter"
+msgstr "Échec de la connexion."
 
 #. key: sign-in.error.technical
-#, fuzzy
-#| msgid "A technical error occurred while creating the account."
 msgid "A technical error occurred."
-msgstr "Une erreur technique s'est produite lors de la création du compte."
+msgstr "Une erreur technique s'est produite."
 
 #. key: sign-in.button.loading
 msgid "Loading…"
-msgstr ""
+msgstr "Chargement…"
 
 #. key: passkey.hero.title
 msgid "Set up your secure smartphone passkey"
