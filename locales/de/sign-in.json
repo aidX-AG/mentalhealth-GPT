@@ -60,5 +60,6 @@
   "passkey.mobile.error.timeout_verify": "Die Anfrage ist während der Überprüfung Ihres passkey abgelaufen. Bitte versuchen Sie es erneut.",
   "passkey.mobile.error.verify_failed": "Wir konnten Ihren passkey nicht überprüfen. Bitte versuchen Sie es erneut.",
   "passkey.mobile.error.unknown": "Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
-  "passkey.mobile.action.retry": "Versuchen Sie es erneut"
+  "passkey.mobile.action.retry": "Versuchen Sie es erneut",
+  "passkey.mobile.action.start": "Weiter"
 }

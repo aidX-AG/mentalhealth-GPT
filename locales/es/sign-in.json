@@ -60,5 +60,6 @@
   "passkey.mobile.error.timeout_verify": "Se ha agotado el tiempo de espera de la solicitud mientras se verificaba su passkey. Inténtelo de nuevo.",
   "passkey.mobile.error.verify_failed": "No hemos podido verificar su passkey. Inténtelo de nuevo.",
   "passkey.mobile.error.unknown": "Se ha producido un error inesperado. Inténtalo de nuevo.",
-  "passkey.mobile.action.retry": "Inténtalo de nuevo"
+  "passkey.mobile.action.retry": "Inténtalo de nuevo",
+  "passkey.mobile.action.start": "Continuar"
 }

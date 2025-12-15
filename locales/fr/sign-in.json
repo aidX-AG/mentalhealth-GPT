@@ -60,5 +60,6 @@
   "passkey.mobile.error.timeout_verify": "La demande a expiré pendant la vérification de votre passkey. Veuillez réessayer.",
   "passkey.mobile.error.verify_failed": "Nous n'avons pas pu vérifier votre passkey. Veuillez réessayer.",
   "passkey.mobile.error.unknown": "Une erreur inattendue s'est produite. Veuillez réessayer.",
-  "passkey.mobile.action.retry": "Réessayer"
+  "passkey.mobile.action.retry": "Réessayer",
+  "passkey.mobile.action.start": "Continuer"
 }

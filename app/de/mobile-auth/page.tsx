@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback, useRef, useMemo } from "react";
 import { useSearchParams, usePathname } from "next/navigation";
-import { startRegistration } from "@simplewebauthn/browser";
+import { startRegistration, startAuthentication } from "@simplewebauthn/browser";
 import { loadMessages, makeT } from "@/lib/i18n-static";
 
 // API-Base für Production (kommt aus env)
@@ -69,6 +69,9 @@ export default function Page() {
   // Backend kommt mit ?session_id=... im mobile_url
   const sessionId =
     searchParams.get("session_id") ?? searchParams.get("sessionId") ?? "";
+
+  // ✅ NEU: Flow unterscheiden (registration vs login)
+  const flow = searchParams.get("flow") === "login" ? "login" : "registration";
 
   const [loading, setLoading] = useState(false);
   const [phase, setPhase] = useState<Phase>("idle");
@@ -140,7 +143,15 @@ export default function Page() {
 
       let attestationResponse;
       try {
-        attestationResponse = await startRegistration(data.registration_options);
+        if (flow === "login") {
+          attestationResponse = await startAuthentication(
+            data.registration_options
+          );
+        } else {
+          attestationResponse = await startRegistration(
+            data.registration_options
+          );
+        }
       } catch (err: any) {
         console.error("MobileAuth startRegistration error:", err);
         setErrorMessage(t("passkey.mobile.error.registration_failed"));
@@ -157,16 +168,22 @@ export default function Page() {
 
       try {
         verifyRes = await fetchWithTimeout(
-          `${API_BASE}/auth/webauthn/cross-device/verify`,
+          flow === "login"
+            ? `${API_BASE}/auth/webauthn/assertion/verify`
+            : `${API_BASE}/auth/webauthn/cross-device/verify`,
           {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({
-              session_id: sessionId,
-              attestationResponse,
-            }),
+            body: JSON.stringify(
+              flow === "login"
+                ? { assertionResponse: attestationResponse }
+                : {
+                    session_id: sessionId,
+                    attestationResponse,
+                  }
+            ),
           },
           30_000
         );
@@ -208,7 +225,7 @@ export default function Page() {
       setPhase("error");
       setLoading(false);
     }
-  }, [sessionId, t]);
+  }, [sessionId, t, flow]);
 
   // ⚠️ WICHTIG: KEIN Auto-Start mehr (sonst flackert iOS weg)
   useEffect(() => {

@@ -60,5 +60,6 @@
   "passkey.mobile.error.timeout_verify": "The request timed out while verifying your passkey. Please try again.",
   "passkey.mobile.error.verify_failed": "We could not verify your passkey. Please try again.",
   "passkey.mobile.error.unknown": "An unexpected error occurred. Please try again.",
-  "passkey.mobile.action.retry": "Try again"
+  "passkey.mobile.action.retry": "Try again",
+  "passkey.mobile.action.start": "Continue"
 }
