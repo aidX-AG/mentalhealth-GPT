@@ -9,6 +9,7 @@ import { getT } from "@/lib/i18n-runtime";
 const t = getT();
 
 type SignInProps = {
+  onForgotPassword: () => void;
   usernamePlaceholder: string;
   passwordPlaceholder: string;
   forgotPasswordLabel: string;
@@ -16,6 +17,7 @@ type SignInProps = {
 };
 
 const SignIn = ({
+  onForgotPassword,
   usernamePlaceholder,
   passwordPlaceholder,
   forgotPasswordLabel,
@@ -45,20 +47,17 @@ const SignIn = ({
         process.env.NEXT_PUBLIC_API_BASE_URL ||
         "https://api.mentalhealth-gpt.ch";
 
-      const res = await fetch(
-        `${apiBase.replace(/\/$/, "")}/auth/login-email`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-          body: JSON.stringify({
-            email,
-            password,
-          }),
-        }
-      );
+      const res = await fetch(`${apiBase.replace(/\/$/, "")}/auth/login-email`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
 
       if (!res.ok) {
         setErrorMessage("invalid_credentials");
@@ -107,6 +106,7 @@ const SignIn = ({
         <button
           type="button"
           className="mb-6 base2 text-primary-1 transition-colors hover:text-primary-1/90"
+          onClick={onForgotPassword}
         >
           {forgotPasswordLabel}
         </button>

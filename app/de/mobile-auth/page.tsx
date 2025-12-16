@@ -70,9 +70,6 @@ export default function Page() {
   const sessionId =
     searchParams.get("session_id") ?? searchParams.get("sessionId") ?? "";
 
-  // ✅ NEU: Flow unterscheiden (registration vs login)
-  const flow = searchParams.get("flow") === "login" ? "login" : "registration";
-
   const [loading, setLoading] = useState(false);
   const [phase, setPhase] = useState<Phase>("idle");
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
@@ -130,7 +127,93 @@ export default function Page() {
 
       const data = await res.json();
 
-      if (!data || !data.registration_options) {
+      // ✅ DB-driven: Backend entscheidet Flow und liefert passende Options
+      const flow = data?.flow === "login" ? "login" : "register";
+      const registrationOptions = data?.registration_options;
+      const assertionOptions = data?.assertion_options;
+
+      if (flow === "login") {
+        if (!assertionOptions) {
+          setErrorMessage(t("passkey.mobile.error.invalid_or_expired"));
+          setPhase("error");
+          setLoading(false);
+          return;
+        }
+
+        // 2) Passkey Login (WebAuthn) — MUSS aus User-Geste kommen
+        setPhase("awaitingBiometric");
+        setStatusMessage(t("passkey.mobile.status.awaiting_biometric"));
+
+        let assertionResponse;
+        try {
+          assertionResponse = await startAuthentication(assertionOptions);
+        } catch (err: any) {
+          console.error("MobileAuth startAuthentication error:", err);
+          setErrorMessage(t("passkey.mobile.error.registration_failed"));
+          setPhase("error");
+          setLoading(false);
+          return;
+        }
+
+        // 3) Ergebnis an Backend senden (Login)
+        setPhase("verifying");
+        setStatusMessage(t("passkey.mobile.status.verifying"));
+
+        let verifyRes: Response;
+
+        try {
+          verifyRes = await fetchWithTimeout(
+            `${API_BASE}/auth/webauthn/assertion/verify`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              credentials: "include", // ✅ NEU (kritisch)
+              body: JSON.stringify({
+                session_id: sessionId,
+                assertionResponse,
+              }),
+            },
+            30_000
+          );
+        } catch (err: any) {
+          if (err?.name === "AbortError") {
+            setErrorMessage(t("passkey.mobile.error.timeout_verify"));
+          } else {
+            setErrorMessage(t("passkey.mobile.error.verify_failed"));
+          }
+          setPhase("error");
+          setLoading(false);
+          return;
+        }
+
+        if (!verifyRes.ok) {
+          setErrorMessage(t("passkey.mobile.error.verify_failed"));
+          setPhase("error");
+          setLoading(false);
+          return;
+        }
+
+        const verifyData = await verifyRes.json();
+
+        if (!verifyData.success) {
+          setErrorMessage(t("passkey.mobile.error.verify_failed"));
+          setPhase("error");
+          setLoading(false);
+          return;
+        }
+
+        // 4) Erfolgreich
+        setCompleted(true);
+        setPhase("success");
+        setStatusMessage(t("passkey.mobile.success"));
+        setLoading(false);
+        return;
+      }
+
+      // register
+      if (!registrationOptions) {
         setErrorMessage(t("passkey.mobile.error.invalid_or_expired"));
         setPhase("error");
         setLoading(false);
@@ -143,15 +226,7 @@ export default function Page() {
 
       let attestationResponse;
       try {
-        if (flow === "login") {
-          attestationResponse = await startAuthentication(
-            data.registration_options
-          );
-        } else {
-          attestationResponse = await startRegistration(
-            data.registration_options
-          );
-        }
+        attestationResponse = await startRegistration(registrationOptions);
       } catch (err: any) {
         console.error("MobileAuth startRegistration error:", err);
         setErrorMessage(t("passkey.mobile.error.registration_failed"));
@@ -160,7 +235,7 @@ export default function Page() {
         return;
       }
 
-      // 3) Ergebnis an Backend senden
+      // 3) Ergebnis an Backend senden (Register)
       setPhase("verifying");
       setStatusMessage(t("passkey.mobile.status.verifying"));
 
@@ -168,22 +243,17 @@ export default function Page() {
 
       try {
         verifyRes = await fetchWithTimeout(
-          flow === "login"
-            ? `${API_BASE}/auth/webauthn/assertion/verify`
-            : `${API_BASE}/auth/webauthn/cross-device/verify`,
+          `${API_BASE}/auth/webauthn/cross-device/verify`,
           {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify(
-              flow === "login"
-                ? { assertionResponse: attestationResponse }
-                : {
-                    session_id: sessionId,
-                    attestationResponse,
-                  }
-            ),
+            credentials: "include", // ✅ NEU (sicher, konsistent)
+            body: JSON.stringify({
+              session_id: sessionId,
+              attestationResponse,
+            }),
           },
           30_000
         );
@@ -225,7 +295,7 @@ export default function Page() {
       setPhase("error");
       setLoading(false);
     }
-  }, [sessionId, t, flow]);
+  }, [sessionId, t]);
 
   // ⚠️ WICHTIG: KEIN Auto-Start mehr (sonst flackert iOS weg)
   useEffect(() => {
