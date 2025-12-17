@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-17 14:42+0000\n"
-"Last-Translator: admin <hello@aidx.ch>\n"
+"PO-Revision-Date: 2025-12-17 15:28+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/de_CH/>\n"
 "Language: de_CH\n"
@@ -439,22 +439,16 @@ msgstr ""
 "versuchen Sie es erneut."
 
 #. key: passkey.mobile.login.success
-#, fuzzy
-#| msgid "Your passkey has been created successfully."
 msgid "You are now signed in successfully."
-msgstr "Ihr passkey wurde erfolgreich erstellt."
+msgstr "Sie sind nun erfolgreich angemeldet."
 
 #. key: passkey.signin.status.waiting
-#, fuzzy
-#| msgid "Open your camera on your smartphone and scan the code to continue."
 msgid "Confirm on your phone to continue."
-msgstr ""
-"Öffnen Sie die Kamera Ihres Smartphones und scannen Sie den Code, um "
-"fortzufahren."
+msgstr "Bestätigen Sie auf Ihrem Telefon, um fortzufahren."
 
 #. key: passkey.signin.button_start
 msgid "Create new QR-Code"
-msgstr ""
+msgstr "Neuen QR-Code erstellen"
 
 #~ msgid "You can return to the sign-in page at any time:"
 #~ msgstr "Sie können jederzeit zur Anmeldeseite zurückkehren:"
