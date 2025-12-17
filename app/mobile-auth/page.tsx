@@ -134,7 +134,7 @@ export default function Page() {
 
       if (flow === "login") {
         if (!assertionOptions) {
-          setErrorMessage(t("passkey.mobile.error.invalid_or_expired"));
+          setErrorMessage(t("passkey.signin.error.timeout"));
           setPhase("error");
           setLoading(false);
           return;
@@ -149,7 +149,7 @@ export default function Page() {
           assertionResponse = await startAuthentication(assertionOptions);
         } catch (err: any) {
           console.error("MobileAuth startAuthentication error:", err);
-          setErrorMessage(t("passkey.mobile.error.registration_failed"));
+          setErrorMessage(t("passkey.signin.error.verify_failed"));
           setPhase("error");
           setLoading(false);
           return;
@@ -179,9 +179,9 @@ export default function Page() {
           );
         } catch (err: any) {
           if (err?.name === "AbortError") {
-            setErrorMessage(t("passkey.mobile.error.timeout_verify"));
+            setErrorMessage(t("passkey.signin.error.timeout"));
           } else {
-            setErrorMessage(t("passkey.mobile.error.verify_failed"));
+            setErrorMessage(t("passkey.signin.error.verify_failed"));
           }
           setPhase("error");
           setLoading(false);
@@ -189,7 +189,7 @@ export default function Page() {
         }
 
         if (!verifyRes.ok) {
-          setErrorMessage(t("passkey.mobile.error.verify_failed"));
+          setErrorMessage(t("passkey.signin.error.verify_failed"));
           setPhase("error");
           setLoading(false);
           return;
@@ -198,7 +198,7 @@ export default function Page() {
         const verifyData = await verifyRes.json();
 
         if (!verifyData.success) {
-          setErrorMessage(t("passkey.mobile.error.verify_failed"));
+          setErrorMessage(t("passkey.signin.error.verify_failed"));
           setPhase("error");
           setLoading(false);
           return;
