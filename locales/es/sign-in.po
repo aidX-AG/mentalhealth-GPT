@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-17 14:42+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "sign-in/es/>\n"
 "Language: es\n"
@@ -390,7 +390,7 @@ msgstr "Volver al inicio de sesión por correo electrónico"
 
 #. key: passkey.mobile.login.title
 msgid "Sign in with the passkey"
-msgstr "Inicie sesión con la passkey."
+msgstr "Inicie sesión con la passkey"
 
 #. key: passkey.mobile.login.status.loading_options
 msgid "Preparing secure sign-in…"
