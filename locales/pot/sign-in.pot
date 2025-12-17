@@ -277,3 +277,39 @@ msgstr ""
 #. key: passkey.mobile.action.start
 msgid "Continue"
 msgstr ""
+
+#. key: passkey.signin.title
+msgid "Sign in with passkey"
+msgstr ""
+
+#. key: passkey.signin.body
+msgid "Scan the QR code with your smartphone to sign in securely using Face ID or Touch ID."
+msgstr ""
+
+#. key: passkey.signin.for_email
+msgid "Passkey sign-in for {email}"
+msgstr ""
+
+#. key: passkey.signin.qr.title
+msgid "Scan this QR code"
+msgstr ""
+
+#. key: passkey.signin.qr.body
+msgid "Open your camera on your smartphone and scan the code to continue."
+msgstr ""
+
+#. key: passkey.signin.qr.hint
+msgid "Keep this page open while you complete Face ID or Touch ID on your phone."
+msgstr ""
+
+#. key: passkey.signin.error.timeout
+msgid "The QR code has expired. Please start again."
+msgstr ""
+
+#. key: passkey.signin.back_to_signin.prefix
+msgid "You can return to the sign-in page at any time:"
+msgstr ""
+
+#. key: passkey.signin.back_to_signin.link
+msgid "Back to sign in"
+msgstr ""
