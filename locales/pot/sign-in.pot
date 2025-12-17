@@ -311,5 +311,5 @@ msgid "You can return to the sign-in page at any time:"
 msgstr ""
 
 #. key: passkey.signin.back_to_signin.link
-msgid "Back to sign in"
+msgid "Back to sign in page"
 msgstr ""
