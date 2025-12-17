@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-15 15:38+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2025-12-17 11:58+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/de_CH/>\n"
 "Language: de_CH\n"
@@ -347,8 +347,6 @@ msgid "Continue"
 msgstr "Weiter"
 
 #. key: passkey.signin.title
-#, fuzzy
-#| msgid "Sign in with Passkey"
 msgid "Sign in with passkey"
 msgstr "Mit Passkey anmelden"
 
