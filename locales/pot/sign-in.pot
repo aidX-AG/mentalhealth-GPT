@@ -307,7 +307,7 @@ msgid "The QR code has expired. Please start again."
 msgstr ""
 
 #. key: passkey.signin.error.verify_failed
-msgid "We couldn’t verify your passkey. Please try again."
+msgid "We couldn’t verify the passkey. Please try it again."
 msgstr ""
 
 #. key: passkey.signin.back_to_signin.prefix
@@ -319,7 +319,7 @@ msgid "Back to email sign-in"
 msgstr ""
 
 #. key: passkey.mobile.login.title
-msgid "Sign in with passkey"
+msgid "Sign in with the passkey"
 msgstr ""
 
 #. key: passkey.mobile.login.status.loading_options
@@ -347,5 +347,5 @@ msgid "We couldn’t verify your passkey. Please try again."
 msgstr ""
 
 #. key: passkey.mobile.login.error.timeout_verify
-msgid "The request timed out while verifying your passkey. Please try again."
+msgid "The request timed out while verifying the passkey. Please try it again."
 msgstr ""
