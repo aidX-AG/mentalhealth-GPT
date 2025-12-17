@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-17 11:58+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
-"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/sign-"
-"in/es/>\n"
+"PO-Revision-Date: 2025-12-17 14:42+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"sign-in/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -341,10 +341,8 @@ msgid "Continue"
 msgstr "Continuar"
 
 #. key: passkey.signin.title
-#, fuzzy
-#| msgid "Sign in with passkey"
 msgid "Please sign in with your passkey"
-msgstr "Iniciar sesión con Passkey"
+msgstr "Inicie sesión con su passkey."
 
 #. key: passkey.signin.body
 msgid ""
@@ -378,78 +376,56 @@ msgid "The QR code has expired. Please start again."
 msgstr "El código QR ha caducado. Por favor, vuelva a empezar."
 
 #. key: passkey.signin.error.verify_failed
-#, fuzzy
-#| msgid "We could not verify your passkey. Please try again."
 msgid "We couldn’t verify the passkey on this device. Please try it again."
-msgstr "No hemos podido verificar su passkey. Inténtelo de nuevo."
+msgstr ""
+"No hemos podido verificar la passkey en este dispositivo. Inténtalo de nuevo."
 
 #. key: passkey.signin.back_to_signin.prefix
-#, fuzzy
-#| msgid "Please enter email and password."
 msgid "Want to use email and password instead?"
-msgstr "Introduzca su correo electrónico y contraseña."
+msgstr "¿Prefieres usar tu correo electrónico y contraseña?"
 
 #. key: passkey.signin.back_to_signin.link
-#, fuzzy
-#| msgid "Back to sign in"
 msgid "Back to email sign-in"
-msgstr "Volver a iniciar sesión"
+msgstr "Volver al inicio de sesión por correo electrónico"
 
 #. key: passkey.mobile.login.title
-#, fuzzy
-#| msgid "Sign in with passkey"
 msgid "Sign in with the passkey"
-msgstr "Iniciar sesión con Passkey"
+msgstr "Inicie sesión con la passkey."
 
 #. key: passkey.mobile.login.status.loading_options
-#, fuzzy
-#| msgid "Preparing secure registration…"
 msgid "Preparing secure sign-in…"
-msgstr "Preparando el registro seguro…"
+msgstr "Preparando inicio de sesión seguro…"
 
 #. key: passkey.mobile.login.status.verifying
 msgid "Signing you in…"
-msgstr ""
+msgstr "Iniciando sesión…"
 
 #. key: passkey.mobile.login.error.no_session
-#, fuzzy
-#| msgid "Missing or invalid registration session."
 msgid "Missing or invalid sign-in session."
-msgstr "Sesión de registro inexistente o no válida."
+msgstr "Sesión de inicio de sesión inexistente o no válida."
 
 #. key: passkey.mobile.login.error.invalid_or_expired
-#, fuzzy
-#| msgid ""
-#| "This registration link is no longer valid. Please scan a new QR code."
 msgid "This sign-in link is no longer valid. Please scan a new QR code."
-msgstr "Este enlace de registro ya no es válido. Escanee un nuevo código QR."
+msgstr ""
+"Este enlace de inicio de sesión ya no es válido. Escanea un nuevo código QR."
 
 #. key: passkey.mobile.login.error.timeout_options
-#, fuzzy
-#| msgid ""
-#| "The request timed out while loading secure registration data. Please try "
-#| "again."
 msgid ""
 "The request timed out while loading secure sign-in data. Please try again."
 msgstr ""
 "Se ha agotado el tiempo de espera de la solicitud mientras se cargaban los "
-"datos de registro seguros. Inténtalo de nuevo."
+"datos de inicio de sesión seguro. Inténtalo de nuevo."
 
 #. key: passkey.mobile.login.error.verify_failed
-#, fuzzy
-#| msgid "We could not verify your passkey. Please try again."
 msgid "We couldn’t verify your passkey. Please try again."
-msgstr "No hemos podido verificar su passkey. Inténtelo de nuevo."
+msgstr "No hemos podido verificar tu passkey. Inténtalo de nuevo."
 
 #. key: passkey.mobile.login.error.timeout_verify
-#, fuzzy
-#| msgid ""
-#| "The request timed out while verifying your passkey. Please try again."
 msgid ""
 "The request timed out while verifying your sign-in. Please try it again."
 msgstr ""
-"Se ha agotado el tiempo de espera de la solicitud mientras se verificaba su "
-"passkey. Inténtelo de nuevo."
+"Se ha agotado el tiempo de espera de la solicitud mientras se verificaba tu "
+"inicio de sesión. Inténtalo de nuevo."
 
 #~ msgid "You can return to the sign-in page at any time:"
 #~ msgstr "Puede volver a la página de inicio de sesión en cualquier momento:"
