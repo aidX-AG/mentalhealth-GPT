@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-06 12:54+0000\n"
+"PO-Revision-Date: 2025-12-17 11:58+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
@@ -76,8 +76,8 @@ msgid "Sign in"
 msgstr "Se connecter"
 
 #. key: sign-in.button.sign_in_with_app
-msgid "Sign in with mentalhealthGPT"
-msgstr "Connectez-vous avec mentalhealthGPT"
+msgid "Sign in with Passkey"
+msgstr "Connectez-vous avec Passkey"
 
 #. key: sign-in.legal.tos
 msgid "Terms of Service"
@@ -157,6 +157,26 @@ msgstr ""
 "Créez votre compte avec votre adresse e-mail et votre mot de passe. Ensuite, "
 "configurez un code d'accès sécurisé sur votre smartphone à l'aide de FaceID "
 "ou TouchID."
+
+#. key: sign-in.error.missing_credentials
+msgid "Please enter email and password."
+msgstr "Veuillez saisir votre adresse e-mail et votre mot de passe."
+
+#. key: sign-in.error.invalid_credentials
+msgid "Email or password is incorrect."
+msgstr "L'adresse e-mail ou le mot de passe est incorrect."
+
+#. key: sign-in.error.login_failed
+msgid "Sign in failed."
+msgstr "Échec de la connexion."
+
+#. key: sign-in.error.technical
+msgid "A technical error occurred."
+msgstr "Une erreur technique s'est produite."
+
+#. key: sign-in.button.loading
+msgid "Loading…"
+msgstr "Chargement…"
 
 #. key: passkey.hero.title
 msgid "Set up your secure smartphone passkey"
@@ -321,6 +341,55 @@ msgstr "Une erreur inattendue s'est produite. Veuillez réessayer."
 #. key: passkey.mobile.action.retry
 msgid "Try again"
 msgstr "Réessayer"
+
+#. key: passkey.mobile.action.start
+msgid "Continue"
+msgstr "Continuer"
+
+#. key: passkey.signin.title
+msgid "Sign in with passkey"
+msgstr "Connectez-vous avec Passkey"
+
+#. key: passkey.signin.body
+msgid ""
+"Scan the QR code with your smartphone to sign in securely using Face ID or "
+"Touch ID."
+msgstr ""
+"Scannez le code QR avec votre smartphone pour vous connecter en toute "
+"sécurité à l'aide de Face ID ou Touch ID."
+
+#. key: passkey.signin.for_email
+msgid "Passkey sign-in for {email}"
+msgstr "Connexion par passkey pour {email}"
+
+#. key: passkey.signin.qr.title
+msgid "Scan this QR code"
+msgstr "Scannez ce code QR"
+
+#. key: passkey.signin.qr.body
+msgid "Open your camera on your smartphone and scan the code to continue."
+msgstr ""
+"Ouvrez l'appareil photo de votre smartphone et scannez le code pour "
+"continuer."
+
+#. key: passkey.signin.qr.hint
+msgid ""
+"Keep this page open while you complete Face ID or Touch ID on your phone."
+msgstr ""
+"Gardez cette page ouverte pendant que vous configurez Face ID ou Touch ID "
+"sur votre téléphone."
+
+#. key: passkey.signin.error.timeout
+msgid "The QR code has expired. Please start again."
+msgstr "Le code QR a expiré. Veuillez recommencer."
+
+#. key: passkey.signin.back_to_signin.prefix
+msgid "You can return to the sign-in page at any time:"
+msgstr "Vous pouvez revenir à la page de connexion à tout moment :"
+
+#. key: passkey.signin.back_to_signin.link
+msgid "Back to sign in page"
+msgstr "Retour à la page de connexion"
 
 #~ msgid "Technical error while creating the account."
 #~ msgstr "Erreur technique lors de la création du compte."

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-REPO="$HOME/git/frontend-git"
+REPO="/home/ubuntu/git/frontend-git"
 DEST="/opt/docker/nginx/html"
 
 echo "🚀 DEV DEPLOYMENT - TEST VERSION"

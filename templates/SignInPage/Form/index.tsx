@@ -109,7 +109,7 @@ const Form = ({
             <Tab.Panels>
               <Tab.Panel>
                 <SignIn
-                  onClick={() => setForgot(true)}
+                  onForgotPassword={() => setForgot(true)}
                   usernamePlaceholder={usernamePlaceholder}
                   passwordPlaceholder={passwordPlaceholder}
                   forgotPasswordLabel={forgotPasswordLabel}

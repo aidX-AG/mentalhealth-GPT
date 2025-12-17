@@ -67,7 +67,7 @@ msgid "Sign in"
 msgstr ""
 
 #. key: sign-in.button.sign_in_with_app
-msgid "Sign in with mentalhealthGPT"
+msgid "Sign in with Passkey"
 msgstr ""
 
 #. key: sign-in.legal.tos
@@ -124,6 +124,26 @@ msgstr ""
 
 #. key: sign-in.intro.create
 msgid "Create your account with email and password. Afterwards, you set up a secure passkey on your smartphone using FaceID or TouchID."
+msgstr ""
+
+#. key: sign-in.error.missing_credentials
+msgid "Please enter email and password."
+msgstr ""
+
+#. key: sign-in.error.invalid_credentials
+msgid "Email or password is incorrect."
+msgstr ""
+
+#. key: sign-in.error.login_failed
+msgid "Sign in failed."
+msgstr ""
+
+#. key: sign-in.error.technical
+msgid "A technical error occurred."
+msgstr ""
+
+#. key: sign-in.button.loading
+msgid "Loading…"
 msgstr ""
 
 #. key: passkey.hero.title
@@ -252,4 +272,80 @@ msgstr ""
 
 #. key: passkey.mobile.action.retry
 msgid "Try again"
+msgstr ""
+
+#. key: passkey.mobile.action.start
+msgid "Continue"
+msgstr ""
+
+#. key: passkey.signin.title
+msgid "Please sign in with your passkey"
+msgstr ""
+
+#. key: passkey.signin.body
+msgid "Scan the QR code with your smartphone to sign in securely using Face ID or Touch ID."
+msgstr ""
+
+#. key: passkey.signin.for_email
+msgid "Passkey sign-in for {email}"
+msgstr ""
+
+#. key: passkey.signin.qr.title
+msgid "Scan this QR code"
+msgstr ""
+
+#. key: passkey.signin.qr.body
+msgid "Open your camera on your smartphone and scan the code to continue."
+msgstr ""
+
+#. key: passkey.signin.qr.hint
+msgid "Keep this page open while you complete Face ID or Touch ID on your phone."
+msgstr ""
+
+#. key: passkey.signin.error.timeout
+msgid "The QR code has expired. Please start again."
+msgstr ""
+
+#. key: passkey.signin.error.verify_failed
+msgid "We couldn’t verify the passkey on this device. Please try it again."
+msgstr ""
+
+#. key: passkey.signin.back_to_signin.prefix
+msgid "Want to use email and password instead?"
+msgstr ""
+
+#. key: passkey.signin.back_to_signin.link
+msgid "Back to email sign-in"
+msgstr ""
+
+#. key: passkey.mobile.login.title
+msgid "Sign in with the passkey"
+msgstr ""
+
+#. key: passkey.mobile.login.status.loading_options
+msgid "Preparing secure sign-in…"
+msgstr ""
+
+#. key: passkey.mobile.login.status.verifying
+msgid "Signing you in…"
+msgstr ""
+
+#. key: passkey.mobile.login.error.no_session
+msgid "Missing or invalid sign-in session."
+msgstr ""
+
+#. key: passkey.mobile.login.error.invalid_or_expired
+msgid "This sign-in link is no longer valid. Please scan a new QR code."
+msgstr ""
+
+#. key: passkey.mobile.login.error.timeout_options
+msgid "The request timed out while loading secure sign-in data. Please try again."
+msgstr ""
+
+#. key: passkey.mobile.login.error.verify_failed
+msgid "We couldn’t verify your passkey. Please try again."
+msgstr ""
+
+#. key: passkey.mobile.login.error.timeout_verify
+msgid "The request timed out while verifying your sign-in. Please try it again."
 msgstr ""
