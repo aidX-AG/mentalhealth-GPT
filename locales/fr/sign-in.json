@@ -84,5 +84,8 @@
   "passkey.mobile.login.error.invalid_or_expired": "Ce lien de connexion n'est plus valide. Veuillez scanner un nouveau code QR.",
   "passkey.mobile.login.error.timeout_options": "La demande a expiré pendant le chargement des données de connexion sécurisées. Veuillez réessayer.",
   "passkey.mobile.login.error.verify_failed": "Nous n'avons pas pu vérifier votre passkey. Veuillez réessayer.",
-  "passkey.mobile.login.error.timeout_verify": "La demande a expiré pendant la vérification de votre connexion. Veuillez réessayer."
+  "passkey.mobile.login.error.timeout_verify": "La demande a expiré pendant la vérification de votre connexion. Veuillez réessayer.",
+  "passkey.mobile.login.success": "Vous êtes désormais connecté.",
+  "passkey.signin.status.waiting": "Confirmez sur votre téléphone pour continuer.",
+  "passkey.signin.button_start": "Créer un nouveau QR-Code"
 }

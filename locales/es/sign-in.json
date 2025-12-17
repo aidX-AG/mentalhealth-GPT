@@ -84,5 +84,8 @@
   "passkey.mobile.login.error.invalid_or_expired": "Este enlace de inicio de sesión ya no es válido. Escanea un nuevo código QR.",
   "passkey.mobile.login.error.timeout_options": "Se ha agotado el tiempo de espera de la solicitud mientras se cargaban los datos de inicio de sesión seguro. Inténtalo de nuevo.",
   "passkey.mobile.login.error.verify_failed": "No hemos podido verificar tu passkey. Inténtalo de nuevo.",
-  "passkey.mobile.login.error.timeout_verify": "Se ha agotado el tiempo de espera de la solicitud mientras se verificaba tu inicio de sesión. Inténtalo de nuevo."
+  "passkey.mobile.login.error.timeout_verify": "Se ha agotado el tiempo de espera de la solicitud mientras se verificaba tu inicio de sesión. Inténtalo de nuevo.",
+  "passkey.mobile.login.success": "Ahora ha iniciado sesión correctamente.",
+  "passkey.signin.status.waiting": "Confirma en tu teléfono para continuar.",
+  "passkey.signin.button_start": "Crear nuevo código QR"
 }

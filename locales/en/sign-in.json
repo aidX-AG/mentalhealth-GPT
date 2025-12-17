@@ -84,5 +84,8 @@
   "passkey.mobile.login.error.invalid_or_expired": "This sign-in link is no longer valid. Please scan a new QR code.",
   "passkey.mobile.login.error.timeout_options": "The request timed out while loading secure sign-in data. Please try again.",
   "passkey.mobile.login.error.verify_failed": "We couldn’t verify your passkey. Please try again.",
-  "passkey.mobile.login.error.timeout_verify": "The request timed out while verifying your sign-in. Please try it again."
+  "passkey.mobile.login.error.timeout_verify": "The request timed out while verifying your sign-in. Please try it again.",
+  "passkey.mobile.login.success": "You are now signed in successfully.",
+  "passkey.signin.status.waiting": "Confirm on your phone to continue.",
+  "passkey.signin.button_start": "Create new QR-Code"
 }

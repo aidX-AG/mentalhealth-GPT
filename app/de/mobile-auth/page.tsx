@@ -70,6 +70,12 @@ export default function Page() {
   const sessionId =
     searchParams.get("session_id") ?? searchParams.get("sessionId") ?? "";
 
+  // ✅ PROFESSIONAL: Flow deterministisch aus URL (mobile_url enthält ?flow=login)
+  //    - verhindert "Setup-UI" beim Login-Link
+  //    - Backend darf weiter data.flow liefern, aber UI bleibt konsistent
+  const urlFlowRaw = (searchParams.get("flow") ?? "").toLowerCase();
+  const urlFlow: "login" | "register" = urlFlowRaw === "login" ? "login" : "register";
+
   const [loading, setLoading] = useState(false);
   const [phase, setPhase] = useState<Phase>("idle");
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
@@ -97,7 +103,13 @@ export default function Page() {
 
       // 1) Optionen laden
       setPhase("loadingOptions");
-      setStatusMessage(t("passkey.mobile.status.loading_options"));
+
+      // ✅ Flow-spezifischer Status-Text (kein "Setup" beim Login)
+      setStatusMessage(
+        urlFlow === "login"
+          ? t("passkey.signin.status.waiting")
+          : t("passkey.mobile.status.loading_options")
+      );
 
       const optionsUrl = `${API_BASE}/auth/webauthn/cross-device/options?session_id=${encodeURIComponent(
         sessionId
@@ -127,8 +139,11 @@ export default function Page() {
 
       const data = await res.json();
 
-      // ✅ DB-driven: Backend entscheidet Flow und liefert passende Options
-      const flow = data?.flow === "login" ? "login" : "register";
+      // ✅ PROFESSIONAL: Flow-Entscheid ist URL-first (deterministisch),
+      //    Backend darf "login" liefern, aber UI darf nicht falsch sein.
+      const flow: "login" | "register" =
+        data?.flow === "login" || urlFlow === "login" ? "login" : "register";
+
       const registrationOptions = data?.registration_options;
       const assertionOptions = data?.assertion_options;
 
@@ -295,7 +310,7 @@ export default function Page() {
       setPhase("error");
       setLoading(false);
     }
-  }, [sessionId, t]);
+  }, [sessionId, t, urlFlow]);
 
   // ⚠️ WICHTIG: KEIN Auto-Start mehr (sonst flackert iOS weg)
   useEffect(() => {
@@ -338,21 +353,25 @@ export default function Page() {
   return (
     <div className="w-full max-w-md mx-auto mt-10 p-6 rounded-xl bg-white dark:bg-n-7 shadow-lg">
       <h1 className="text-xl font-semibold mb-4 text-center">
-        {t("passkey.mobile.title")}
+        {urlFlow === "login" ? t("passkey.signin.title") : t("passkey.mobile.title")}
       </h1>
 
       {/* ✅ NEU: User-Geste erforderlich */}
       {awaitingUserGesture && !completed && (
         <div className="mb-4 text-center">
           <div className="text-sm text-n-4 mb-3">
-            {t("passkey.signin.status.waiting")}
+            {urlFlow === "login"
+              ? t("passkey.signin.status.waiting")
+              : t("passkey.mobile.status.awaiting_biometric")}
           </div>
           <button
             type="button"
             onClick={handleStart}
             className="px-4 py-2 text-sm rounded-lg bg-primary-1 text-white hover:bg-primary-1/90 w-full"
           >
-            {t("passkey.signin.button_start")}
+            {urlFlow === "login"
+              ? t("passkey.signin.mobile.button_continue")
+              : t("passkey.mobile.action.start")}
           </button>
         </div>
       )}
