@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-17 11:58+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/de_CH/>\n"
 "Language: de_CH\n"
@@ -351,58 +351,45 @@ msgid "Sign in with passkey"
 msgstr "Mit Passkey anmelden"
 
 #. key: passkey.signin.body
-#, fuzzy
-#| msgid ""
-#| "Scan the QR code with your smartphone to create a secure passkey using "
-#| "FaceID or TouchID. This will be your primary login method."
 msgid ""
 "Scan the QR code with your smartphone to sign in securely using Face ID or "
 "Touch ID."
 msgstr ""
-"Scannen Sie den QR-Code mit Ihrem Smartphone, um einen sicheren Passkey mit "
-"FaceID oder TouchID zu erstellen. Dies wird Ihre primäre Anmeldemethode sein."
+"Scannen Sie den QR-Code mit Ihrem Smartphone, um sich sicher mit Face ID "
+"oder Touch ID anzumelden."
 
 #. key: passkey.signin.for_email
 msgid "Passkey sign-in for {email}"
-msgstr ""
+msgstr "Passkey-Anmeldung für {E-Mail}"
 
 #. key: passkey.signin.qr.title
 msgid "Scan this QR code"
-msgstr ""
+msgstr "Scannen Sie diesen QR-Code"
 
 #. key: passkey.signin.qr.body
-#, fuzzy
-#| msgid ""
-#| "Open your smartphone camera or your password manager and scan the QR code "
-#| "to start the passkey setup."
 msgid "Open your camera on your smartphone and scan the code to continue."
 msgstr ""
-"Öffnen Sie die Kamera Ihres Smartphones oder Ihren Passwort-Manager und "
-"scannen Sie den QR-Code, um die Passkey-Einrichtung zu starten."
+"Öffnen Sie die Kamera Ihres Smartphones und scannen Sie den Code, um "
+"fortzufahren."
 
 #. key: passkey.signin.qr.hint
 msgid ""
 "Keep this page open while you complete Face ID or Touch ID on your phone."
 msgstr ""
+"Lassen Sie diese Seite geöffnet, während Sie Face ID oder Touch ID auf Ihrem "
+"Telefon einrichten."
 
 #. key: passkey.signin.error.timeout
-#, fuzzy
-#| msgid "The passkey setup took too long. Please start again."
 msgid "The QR code has expired. Please start again."
-msgstr ""
-"Die Einrichtung des Passkeys hat zu lange gedauert. Bitte starten Sie erneut."
+msgstr "Der QR-Code ist abgelaufen. Bitte starten Sie erneut."
 
 #. key: passkey.signin.back_to_signin.prefix
-#, fuzzy
-#| msgid "You can also return to the sign-in page at any time:"
 msgid "You can return to the sign-in page at any time:"
-msgstr "Sie können auch jederzeit zur Anmeldeseite zurückkehren:"
+msgstr "Sie können jederzeit zur Anmeldeseite zurückkehren:"
 
 #. key: passkey.signin.back_to_signin.link
-#, fuzzy
-#| msgid "Back to sign in"
 msgid "Back to sign in page"
-msgstr "Zurück zur Anmeldung"
+msgstr "Zurück zur Anmeldeseite"
 
 #~ msgid "Technical error while creating the account."
 #~ msgstr "Technischer Fehler beim Erstellen des Kontos."
