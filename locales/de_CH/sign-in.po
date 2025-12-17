@@ -438,6 +438,24 @@ msgstr ""
 "Die Anfrage ist während der Überprüfung Ihrer Anmeldung abgelaufen. Bitte "
 "versuchen Sie es erneut."
 
+#. key: passkey.mobile.login.success
+#, fuzzy
+#| msgid "Your passkey has been created successfully."
+msgid "You are now signed in successfully."
+msgstr "Ihr passkey wurde erfolgreich erstellt."
+
+#. key: passkey.signin.status.waiting
+#, fuzzy
+#| msgid "Open your camera on your smartphone and scan the code to continue."
+msgid "Confirm on your phone to continue."
+msgstr ""
+"Öffnen Sie die Kamera Ihres Smartphones und scannen Sie den Code, um "
+"fortzufahren."
+
+#. key: passkey.signin.button_start
+msgid "Create new QR-Code"
+msgstr ""
+
 #~ msgid "You can return to the sign-in page at any time:"
 #~ msgstr "Sie können jederzeit zur Anmeldeseite zurückkehren:"
 

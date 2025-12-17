@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-17 14:42+0000\n"
 "Last-Translator: admin <hello@aidx.ch>\n"
-"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
-"sign-in/es/>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/sign-"
+"in/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -426,6 +426,22 @@ msgid ""
 msgstr ""
 "Se ha agotado el tiempo de espera de la solicitud mientras se verificaba tu "
 "inicio de sesión. Inténtalo de nuevo."
+
+#. key: passkey.mobile.login.success
+#, fuzzy
+#| msgid "Your passkey has been created successfully."
+msgid "You are now signed in successfully."
+msgstr "Tu passkey se ha creado correctamente."
+
+#. key: passkey.signin.status.waiting
+#, fuzzy
+#| msgid "Open your camera on your smartphone and scan the code to continue."
+msgid "Confirm on your phone to continue."
+msgstr "Abre la cámara de tu smartphone y escanea el código para continuar."
+
+#. key: passkey.signin.button_start
+msgid "Create new QR-Code"
+msgstr ""
 
 #~ msgid "You can return to the sign-in page at any time:"
 #~ msgstr "Puede volver a la página de inicio de sesión en cualquier momento:"

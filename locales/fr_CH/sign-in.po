@@ -435,6 +435,24 @@ msgstr ""
 "La demande a expiré pendant la vérification de votre connexion. Veuillez "
 "réessayer."
 
+#. key: passkey.mobile.login.success
+#, fuzzy
+#| msgid "Your passkey has been created successfully."
+msgid "You are now signed in successfully."
+msgstr "Votre passkey a été créée avec succès."
+
+#. key: passkey.signin.status.waiting
+#, fuzzy
+#| msgid "Open your camera on your smartphone and scan the code to continue."
+msgid "Confirm on your phone to continue."
+msgstr ""
+"Ouvrez l'appareil photo de votre smartphone et scannez le code pour "
+"continuer."
+
+#. key: passkey.signin.button_start
+msgid "Create new QR-Code"
+msgstr ""
+
 #~ msgid "You can return to the sign-in page at any time:"
 #~ msgstr "Vous pouvez revenir à la page de connexion à tout moment :"
 
