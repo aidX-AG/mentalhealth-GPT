@@ -349,3 +349,15 @@ msgstr ""
 #. key: passkey.mobile.login.error.timeout_verify
 msgid "The request timed out while verifying your sign-in. Please try it again."
 msgstr ""
+
+#. key: passkey.mobile.login.success
+msgid "You are now signed in successfully."
+msgstr ""
+
+#. key: passkey.signin.status.waiting
+msgid "Confirm on your phone to continue."
+msgstr ""
+
+#. key: passkey.signin.button_start
+msgid "Create new QR-Code"
+msgstr ""

@@ -142,7 +142,7 @@ export default function Page() {
 
         // 2) Passkey Login (WebAuthn) — MUSS aus User-Geste kommen
         setPhase("awaitingBiometric");
-        setStatusMessage(t("passkey.mobile.status.awaiting_biometric"));
+        setStatusMessage(t("passkey.signin.status.waiting"));
 
         let assertionResponse;
         try {
@@ -157,7 +157,7 @@ export default function Page() {
 
         // 3) Ergebnis an Backend senden (Login)
         setPhase("verifying");
-        setStatusMessage(t("passkey.mobile.status.verifying"));
+        setStatusMessage(t("passkey.mobile.login.status.verifying"));
 
         let verifyRes: Response;
 
@@ -207,7 +207,7 @@ export default function Page() {
         // 4) Erfolgreich
         setCompleted(true);
         setPhase("success");
-        setStatusMessage(t("passkey.mobile.success"));
+        setStatusMessage(t("passkey.mobile.login.success"));
         setLoading(false);
         return;
       }
@@ -345,14 +345,14 @@ export default function Page() {
       {awaitingUserGesture && !completed && (
         <div className="mb-4 text-center">
           <div className="text-sm text-n-4 mb-3">
-            {t("passkey.mobile.status.awaiting_biometric")}
+            {t("passkey.signin.status.waiting")}
           </div>
           <button
             type="button"
             onClick={handleStart}
             className="px-4 py-2 text-sm rounded-lg bg-primary-1 text-white hover:bg-primary-1/90 w-full"
           >
-            {t("passkey.mobile.action.start") || "Continue"}
+            {t("passkey.signin.button_start")}
           </button>
         </div>
       )}
