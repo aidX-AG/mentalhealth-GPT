@@ -26,7 +26,7 @@
       "@/mocks/*": ["mocks/*"],
       "@/utils/*": ["utils/*"],
       "@/lib/*": ["lib/*"],
-      "@/hooks/*": ["src/hooks/*"]
+      "@/hooks/*": ["hooks/*", "src/hooks/*"]
     },
 
     "plugins": [{ "name": "next" }]

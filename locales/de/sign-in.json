@@ -77,6 +77,8 @@
   "passkey.signin.error.verify_failed": "Wir konnten den Passkey auf diesem Gerät nicht überprüfen. Bitte versuchen Sie es erneut.",
   "passkey.signin.back_to_signin.prefix": "Möchten Sie stattdessen E-Mail und Passwort verwenden?",
   "passkey.signin.back_to_signin.link": "Zurück zur E-Mail-Anmeldung",
+  "passkey.signin.status.waiting": "Bestätigen Sie auf Ihrem Telefon, um fortzufahren.",
+  "passkey.signin.button_start": "Neuen QR-Code erstellen",
   "passkey.mobile.login.title": "Mit dem Passkey anmelden",
   "passkey.mobile.login.status.loading_options": "Sichere Anmeldung wird vorbereitet…",
   "passkey.mobile.login.status.verifying": "Anmeldung läuft…",
@@ -86,6 +88,5 @@
   "passkey.mobile.login.error.verify_failed": "Wir konnten Ihren passkey nicht überprüfen. Bitte versuchen Sie es erneut.",
   "passkey.mobile.login.error.timeout_verify": "Die Anfrage ist während der Überprüfung Ihrer Anmeldung abgelaufen. Bitte versuchen Sie es erneut.",
   "passkey.mobile.login.success": "Sie sind nun erfolgreich angemeldet.",
-  "passkey.signin.status.waiting": "Bestätigen Sie auf Ihrem Telefon, um fortzufahren.",
-  "passkey.signin.button_start": "Neuen QR-Code erstellen"
+  "passkey.signin.mobile.button_continue": "Weiter mit Apple"
 }
