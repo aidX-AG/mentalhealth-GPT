@@ -367,9 +367,9 @@ msgid "Confirm on your phone to continue."
 msgstr ""
 
 #. key: passkey.signin.button_start
-msgid "Create new QR-Code""
+msgid "Create new QR-Code"
 msgstr ""
 
 #. key: passkey.signin.mobile.button_continue
-msgid "Continue to sign in"
+msgid "Continue with the sign in"
 msgstr ""
