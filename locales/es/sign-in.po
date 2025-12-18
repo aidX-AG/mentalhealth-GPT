@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-19 07:43+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "sign-in/es/>\n"
 "Language: es\n"
@@ -449,7 +449,7 @@ msgstr "Crear nuevo código QR"
 
 #. key: passkey.signin.mobile.button_continue
 msgid "Continue with the sign in"
-msgstr "Continúa con el inicio de sesión."
+msgstr "Continúa con el inicio de sesión"
 
 #~ msgid "You can return to the sign-in page at any time:"
 #~ msgstr "Puede volver a la página de inicio de sesión en cualquier momento:"
