@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-17 15:28+0000\n"
+"PO-Revision-Date: 2025-12-19 07:43+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
-"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/sign-"
-"in/es/>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"sign-in/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -389,16 +389,12 @@ msgid "Back to email sign-in"
 msgstr "Volver al inicio de sesión por correo electrónico"
 
 #. key: passkey.signin.status.waiting
-#, fuzzy
-#| msgid "Confirm on your phone to continue."
 msgid "Continue on your phone to sign in…"
-msgstr "Confirma en tu teléfono para continuar."
+msgstr "Continúa en tu teléfono para iniciar sesión…"
 
 #. key: passkey.signin.button_start
-#, fuzzy
-#| msgid "Back to sign in"
 msgid "Continue to sign in"
-msgstr "Volver a iniciar sesión"
+msgstr "Continúa iniciando sesión"
 
 #. key: passkey.mobile.login.title
 msgid "Sign in with the passkey"
@@ -452,10 +448,8 @@ msgid "Create new QR-Code"
 msgstr "Crear nuevo código QR"
 
 #. key: passkey.signin.mobile.button_continue
-#, fuzzy
-#| msgid "Continue with Apple"
 msgid "Continue with the sign in"
-msgstr "Continuar con Apple"
+msgstr "Continúa con el inicio de sesión."
 
 #~ msgid "You can return to the sign-in page at any time:"
 #~ msgstr "Puede volver a la página de inicio de sesión en cualquier momento:"
