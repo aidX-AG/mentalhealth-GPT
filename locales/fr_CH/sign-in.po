@@ -396,6 +396,18 @@ msgstr "Vous préférez utiliser votre adresse e-mail et votre mot de passe ?"
 msgid "Back to email sign-in"
 msgstr "Retour à la connexion par e-mail"
 
+#. key: passkey.signin.status.waiting
+#, fuzzy
+#| msgid "Confirm on your phone to continue."
+msgid "Continue on your phone to sign in…"
+msgstr "Confirmez sur votre téléphone pour continuer."
+
+#. key: passkey.signin.button_start
+#, fuzzy
+#| msgid "Back to sign in"
+msgid "Continue to sign in"
+msgstr "Retour à la connexion"
+
 #. key: passkey.mobile.login.title
 msgid "Sign in with the passkey"
 msgstr "Connectez-vous avec passkey"
@@ -446,6 +458,12 @@ msgstr "Confirmez sur votre téléphone pour continuer."
 #. key: passkey.signin.button_start
 msgid "Create new QR-Code"
 msgstr "Créer un nouveau QR-Code"
+
+#. key: passkey.signin.mobile.button_continue
+#, fuzzy
+#| msgid "Continue with Apple"
+msgid "Continue with the sign in"
+msgstr "Continuer avec Apple"
 
 #~ msgid "You can return to the sign-in page at any time:"
 #~ msgstr "Vous pouvez revenir à la page de connexion à tout moment :"
