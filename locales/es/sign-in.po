@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2025-12-19 07:43+0000\n"
 "Last-Translator: admin <hello@aidx.ch>\n"
-"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
-"sign-in/es/>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/sign-"
+"in/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -182,6 +182,23 @@ msgstr "Configure su clave de acceso segura para el smartphone"
 msgid ""
 "Use your smartphone with FaceID or TouchID as your secure key to sign in to "
 "mentalhealthGPT."
+msgstr ""
+"Utiliza tu smartphone con FaceID o TouchID como clave segura para iniciar "
+"sesión en mentalhealthGPT."
+
+#. key: passkey.signin.hero.title
+#, fuzzy
+#| msgid "Set up your secure smartphone passkey"
+msgid "Sign in with your secure smartphone passkey"
+msgstr "Configure su clave de acceso segura para el smartphone"
+
+#. key: passkey.signin.hero.subtitle
+#, fuzzy
+#| msgid ""
+#| "Use your smartphone with FaceID or TouchID as your secure key to sign in "
+#| "to mentalhealthGPT."
+msgid ""
+"Use your smartphone with FaceID or TouchID to sign in to mentalhealthGPT."
 msgstr ""
 "Utiliza tu smartphone con FaceID o TouchID como clave segura para iniciar "
 "sesión en mentalhealthGPT."
@@ -374,6 +391,12 @@ msgstr ""
 #. key: passkey.signin.error.timeout
 msgid "The QR code has expired. Please start again."
 msgstr "El código QR ha caducado. Por favor, vuelva a empezar."
+
+#. key: passkey.signin.error.generic
+#, fuzzy
+#| msgid "An unexpected error occurred. Please try again."
+msgid "An unexpected error occurred during passkey sign-in. Please try again."
+msgstr "Se ha producido un error inesperado. Inténtalo de nuevo."
 
 #. key: passkey.signin.error.verify_failed
 msgid "We couldn’t verify the passkey on this device. Please try it again."
