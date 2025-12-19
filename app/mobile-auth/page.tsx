@@ -1,3 +1,18 @@
+// ============================================================================
+// 📱 Mobile Passkey Flow — Cross-Device Login/Register (Health-Grade, Cookie-Safe)
+// Datei: app/mobile-auth/page.tsx
+// Version: v1.0.1 — 2025-12-18
+//
+// CHANGELOG v1.0.1
+// - ✅ CRITICAL: Passkey-Verify fetch() calls senden jetzt credentials: "include"
+//   → damit akzeptiert der Browser das Set-Cookie (mhgpt_session) vom API-Host.
+// - ✅ CRITICAL: fetchWithTimeout() setzt cache: "no-store" nur als Default,
+//   aber überschreibt NICHT mehr bewusst gesetzte init.cache Werte.
+//
+// NOTE (wichtig):
+// - Sonst KEINE Logik-/UI-Änderungen. Nur die minimal nötigen Punkte.
+// ============================================================================
+
 "use client";
 
 import { useEffect, useState, useCallback, useRef, useMemo } from "react";
@@ -23,7 +38,10 @@ async function fetchWithTimeout(
     const res = await fetch(input, {
       ...init,
       signal: controller.signal,
-      cache: "no-store",
+
+      // ✅ Health-Grade Default: nur setzen, wenn init.cache NICHT definiert ist
+      //    (damit überschreiben wir keine bewusst gesetzten Werte)
+      cache: init.cache ?? "no-store",
     });
     return res;
   } finally {
@@ -74,7 +92,8 @@ export default function Page() {
   //    - verhindert "Setup-UI" beim Login-Link
   //    - Backend darf weiter data.flow liefern, aber UI bleibt konsistent
   const urlFlowRaw = (searchParams.get("flow") ?? "").toLowerCase();
-  const urlFlow: "login" | "register" = urlFlowRaw === "login" ? "login" : "register";
+  const urlFlow: "login" | "register" =
+    urlFlowRaw === "login" ? "login" : "register";
 
   const [loading, setLoading] = useState(false);
   const [phase, setPhase] = useState<Phase>("idle");
@@ -118,6 +137,7 @@ export default function Page() {
       let res: Response;
 
       try {
+        // (unverändert) Options-Call braucht kein Cookie-Write
         res = await fetchWithTimeout(optionsUrl, {}, 30_000);
       } catch (err: any) {
         if (err?.name === "AbortError") {
@@ -184,7 +204,10 @@ export default function Page() {
               headers: {
                 "Content-Type": "application/json",
               },
-              credentials: "include", // ✅ NEU (kritisch)
+
+              // ✅ CRITICAL: Damit Browser Set-Cookie vom API-Host akzeptiert
+              credentials: "include",
+
               body: JSON.stringify({
                 session_id: sessionId,
                 assertionResponse,
@@ -264,7 +287,10 @@ export default function Page() {
             headers: {
               "Content-Type": "application/json",
             },
-            credentials: "include", // ✅ NEU (sicher, konsistent)
+
+            // ✅ CRITICAL: Auch hier Cookie-Write erlauben (Set-Cookie)
+            credentials: "include",
+
             body: JSON.stringify({
               session_id: sessionId,
               attestationResponse,
@@ -353,7 +379,9 @@ export default function Page() {
   return (
     <div className="w-full max-w-md mx-auto mt-10 p-6 rounded-xl bg-white dark:bg-n-7 shadow-lg">
       <h1 className="text-xl font-semibold mb-4 text-center">
-        {urlFlow === "login" ? t("passkey.signin.title") : t("passkey.mobile.title")}
+        {urlFlow === "login"
+          ? t("passkey.signin.title")
+          : t("passkey.mobile.title")}
       </h1>
 
       {/* ✅ NEU: User-Geste erforderlich */}
