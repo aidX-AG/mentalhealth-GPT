@@ -1,10 +1,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-19 07:43+0000\n"
-"Last-Translator: admin <hello@aidx.ch>\n"
-"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/sign-"
-"in/es/>\n"
+"PO-Revision-Date: 2025-12-19 15:10+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"sign-in/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -187,21 +187,15 @@ msgstr ""
 "sesión en mentalhealthGPT."
 
 #. key: passkey.signin.hero.title
-#, fuzzy
-#| msgid "Set up your secure smartphone passkey"
 msgid "Sign in with your secure smartphone passkey"
-msgstr "Configure su clave de acceso segura para el smartphone"
+msgstr "Inicie sesión con su passkey segura para teléfonos inteligentes."
 
 #. key: passkey.signin.hero.subtitle
-#, fuzzy
-#| msgid ""
-#| "Use your smartphone with FaceID or TouchID as your secure key to sign in "
-#| "to mentalhealthGPT."
 msgid ""
 "Use your smartphone with FaceID or TouchID to sign in to mentalhealthGPT."
 msgstr ""
-"Utiliza tu smartphone con FaceID o TouchID como clave segura para iniciar "
-"sesión en mentalhealthGPT."
+"Utiliza tu smartphone con FaceID o TouchID para iniciar sesión en "
+"mentalhealthGPT."
 
 #. key: passkey.setup.title
 msgid "Set up your passkey on your smartphone"
@@ -393,10 +387,10 @@ msgid "The QR code has expired. Please start again."
 msgstr "El código QR ha caducado. Por favor, vuelva a empezar."
 
 #. key: passkey.signin.error.generic
-#, fuzzy
-#| msgid "An unexpected error occurred. Please try again."
 msgid "An unexpected error occurred during passkey sign-in. Please try again."
-msgstr "Se ha producido un error inesperado. Inténtalo de nuevo."
+msgstr ""
+"Se ha producido un error inesperado durante el inicio de sesión con passkey. "
+"Inténtalo de nuevo."
 
 #. key: passkey.signin.error.verify_failed
 msgid "We couldn’t verify the passkey on this device. Please try it again."
