@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Field from "@/components/Field";
 import { getT } from "@/lib/i18n-runtime";
+import { useRouter } from "next/navigation";
 
 const t = getT();
 
@@ -21,6 +22,7 @@ const SignIn = ({
   forgotPasswordLabel,
   submitLabel,
 }: SignInProps) => {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);

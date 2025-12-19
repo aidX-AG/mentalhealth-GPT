@@ -154,6 +154,15 @@ msgstr ""
 msgid "Use your smartphone with FaceID or TouchID as your secure key to sign in to mentalhealthGPT."
 msgstr ""
 
+#. key: passkey.signin.hero.title
+msgid "Sign in with your secure smartphone passkey"
+msgstr ""
+
+#. key: passkey.signin.hero.subtitle
+msgid "Use your smartphone with FaceID or TouchID to sign in to mentalhealthGPT."
+msgstr ""
+
+
 #. key: passkey.setup.title
 msgid "Set up your passkey on your smartphone"
 msgstr ""
