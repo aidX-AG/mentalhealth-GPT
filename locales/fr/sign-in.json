@@ -88,5 +88,5 @@
   "passkey.mobile.login.error.verify_failed": "Nous n'avons pas pu vérifier votre passkey. Veuillez réessayer.",
   "passkey.mobile.login.error.timeout_verify": "La demande a expiré pendant la vérification de votre connexion. Veuillez réessayer.",
   "passkey.mobile.login.success": "Vous êtes désormais connecté.",
-  "passkey.signin.mobile.button_continue": "Continuer avec Apple"
+  "passkey.signin.mobile.button_continue": "Continuer avec la connexion"
 }

@@ -380,7 +380,7 @@ const PasskeyForm = ({
     const timeoutId = setTimeout(() => {
       if (mode === "signin") onSuccess?.();
       else router.push("/sign-in");
-    }, 2000);
+    }, 800);
 
     return () => clearTimeout(timeoutId);
   }, [status, router, mode, onSuccess]);

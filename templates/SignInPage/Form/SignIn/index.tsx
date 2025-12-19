@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Field from "@/components/Field";
-import PasskeyForm from "../../PasskeyForm";
 import { getT } from "@/lib/i18n-runtime";
 
 const t = getT();
@@ -23,12 +21,9 @@ const SignIn = ({
   forgotPasswordLabel,
   submitLabel,
 }: SignInProps) => {
-  const router = useRouter();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [showPasskey, setShowPasskey] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -65,8 +60,7 @@ const SignIn = ({
         return;
       }
 
-      // ✅ Credentials korrekt → jetzt Passkey erzwingen
-      setShowPasskey(true);
+      // ✅ Login erfolgreich → weiterer Flow passiert außerhalb
       setIsLoading(false);
     } catch (err) {
       console.error("login error", err);
@@ -112,27 +106,16 @@ const SignIn = ({
         </button>
 
         <button
+          type="button"
           className="btn-blue btn-large w-full"
-          type="submit"
-          disabled={isLoading || showPasskey}
+          onClick={() =>
+            router.push(`/passkey-signin?email=${encodeURIComponent(email)}`)
+          }
+          disabled={isLoading}
         >
           {submitLabel}
         </button>
       </form>
-
-      {/* 🔐 Passkey Schritt – erscheint DIREKT darunter */}
-      {showPasskey && (
-        <div className="mt-6">
-          <PasskeyForm
-            email={email}
-            mode="signin"
-            onSuccess={() => {
-              // ✅ Nach erfolgreichem Passkey → Startseite
-              router.push("/");
-            }}
-          />
-        </div>
-      )}
 
       {errorMessage && (
         <div className="mt-4 text-sm text-red-500 text-center">

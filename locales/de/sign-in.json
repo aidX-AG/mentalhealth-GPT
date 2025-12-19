@@ -88,5 +88,5 @@
   "passkey.mobile.login.error.verify_failed": "Wir konnten Ihren passkey nicht überprüfen. Bitte versuchen Sie es erneut.",
   "passkey.mobile.login.error.timeout_verify": "Die Anfrage ist während der Überprüfung Ihrer Anmeldung abgelaufen. Bitte versuchen Sie es erneut.",
   "passkey.mobile.login.success": "Sie sind nun erfolgreich angemeldet.",
-  "passkey.signin.mobile.button_continue": "Weiter mit Apple"
+  "passkey.signin.mobile.button_continue": "Weiter mit der Anmeldung"
 }

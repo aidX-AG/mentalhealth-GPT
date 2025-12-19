@@ -306,6 +306,10 @@ msgstr ""
 msgid "The QR code has expired. Please start again."
 msgstr ""
 
+#. key: passkey.signin.error.generic
+msgid "An unexpected error occurred during passkey sign-in. Please try again."
+msgstr ""
+
 #. key: passkey.signin.error.verify_failed
 msgid "We couldn’t verify the passkey on this device. Please try it again."
 msgstr ""

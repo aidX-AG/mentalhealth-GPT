@@ -88,5 +88,5 @@
   "passkey.mobile.login.error.verify_failed": "No hemos podido verificar tu passkey. Inténtalo de nuevo.",
   "passkey.mobile.login.error.timeout_verify": "Se ha agotado el tiempo de espera de la solicitud mientras se verificaba tu inicio de sesión. Inténtalo de nuevo.",
   "passkey.mobile.login.success": "Ahora ha iniciado sesión correctamente.",
-  "passkey.signin.mobile.button_continue": "Continuar con Apple"
+  "passkey.signin.mobile.button_continue": "Continúa con el inicio de sesión"
 }
