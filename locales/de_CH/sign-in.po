@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-19 07:43+0000\n"
+"PO-Revision-Date: 2025-12-19 15:10+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/de_CH/>\n"
@@ -190,21 +190,15 @@ msgstr ""
 "um sich bei mentalhealthGPT anzumelden."
 
 #. key: passkey.signin.hero.title
-#, fuzzy
-#| msgid "Set up your secure smartphone passkey"
 msgid "Sign in with your secure smartphone passkey"
-msgstr "Richten Sie Ihren sicheren Smartphone-Passkey ein"
+msgstr "Melden Sie sich mit Ihrem sicheren Smartphone-Passkey an."
 
 #. key: passkey.signin.hero.subtitle
-#, fuzzy
-#| msgid ""
-#| "Use your smartphone with FaceID or TouchID as your secure key to sign in "
-#| "to mentalhealthGPT."
 msgid ""
 "Use your smartphone with FaceID or TouchID to sign in to mentalhealthGPT."
 msgstr ""
-"Verwenden Sie Ihr Smartphone mit FaceID oder TouchID als sicheren Schlüssel, "
-"um sich bei mentalhealthGPT anzumelden."
+"Verwenden Sie Ihr Smartphone mit FaceID oder TouchID, um sich bei "
+"mentalhealthGPT anzumelden."
 
 #. key: passkey.setup.title
 msgid "Set up your passkey on your smartphone"
@@ -401,11 +395,10 @@ msgid "The QR code has expired. Please start again."
 msgstr "Der QR-Code ist abgelaufen. Bitte starten Sie erneut."
 
 #. key: passkey.signin.error.generic
-#, fuzzy
-#| msgid "An unexpected error occurred. Please try again."
 msgid "An unexpected error occurred during passkey sign-in. Please try again."
 msgstr ""
-"Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+"Bei der Passkey-Anmeldung ist ein unerwarteter Fehler aufgetreten. Bitte "
+"versuchen Sie es erneut."
 
 #. key: passkey.signin.error.verify_failed
 msgid "We couldn’t verify the passkey on this device. Please try it again."
