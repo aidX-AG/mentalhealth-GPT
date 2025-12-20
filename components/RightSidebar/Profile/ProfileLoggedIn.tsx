@@ -3,12 +3,12 @@
 // ============================================================================
 // 👤 ProfileLoggedIn – Logged-in User Menu
 // Datei: components/RightSidebar/Profile/ProfileLoggedIn.tsx
-// Version: v1.1 – 2025-12-19
+// Version: v1.2 – 2025-12-20
 //
 // Änderungen:
 // - Health-Grade Logout via POST /auth/logout
 // - Kein Redirect, kein Client-State-Fake
-// - UI-Status wird über useAuth().refresh() aktualisiert
+// - UI-Status wird über useAuth().refresh() + router.refresh() aktualisiert
 // ============================================================================
 
 import { useState } from "react";
@@ -21,6 +21,7 @@ import { settings } from "@/constants/settings";
 import { _ } from "@/lib/i18n/_";
 import { logout } from "@/lib/auth/logout";
 import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "next/navigation";
 
 const t = _;
 
@@ -35,12 +36,14 @@ type Props = {
 const ProfileLoggedIn = ({ user }: Props) => {
   const [visibleSettings, setVisibleSettings] = useState(false);
   const { refresh } = useAuth();
+  const router = useRouter();
 
   const handleLogout = async () => {
     try {
       await logout(); // POST /auth/logout (cookie + DB revoke)
     } finally {
-      refresh(); // GET /auth/me → authenticated:false → UI wechselt
+      await refresh(); // GET /auth/me → authenticated:false → UI wechselt
+      router.refresh(); // Server Components (Layout/Header) neu rendern
     }
   };
 
