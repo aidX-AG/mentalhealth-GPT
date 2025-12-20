@@ -3,12 +3,12 @@
 // ============================================================================
 // 👤 ProfileLoggedIn – Logged-in User Menu
 // Datei: components/RightSidebar/Profile/ProfileLoggedIn.tsx
-// Version: v1.2 – 2025-12-20
+// Version: v1.3 – 2025-12-20
 //
 // Änderungen:
-// - Health-Grade Logout via POST /auth/logout
+// - Logout: refresh kommt jetzt vom Parent (Single useAuth Instance)
 // - Kein Redirect, kein Client-State-Fake
-// - UI-Status wird über useAuth().refresh() + router.refresh() aktualisiert
+// - UI-Switch: refreshAuth() aktualisiert exakt den State, der Profile/index.tsx steuert
 // ============================================================================
 
 import { useState } from "react";
@@ -20,8 +20,6 @@ import Settings from "@/components/Settings";
 import { settings } from "@/constants/settings";
 import { _ } from "@/lib/i18n/_";
 import { logout } from "@/lib/auth/logout";
-import { useAuth } from "@/hooks/useAuth";
-import { useRouter } from "next/navigation";
 
 const t = _;
 
@@ -31,19 +29,17 @@ type Props = {
     email?: string;
     displayName?: string | null;
   };
+  refreshAuth: () => Promise<void> | void;
 };
 
-const ProfileLoggedIn = ({ user }: Props) => {
+const ProfileLoggedIn = ({ user, refreshAuth }: Props) => {
   const [visibleSettings, setVisibleSettings] = useState(false);
-  const { refresh } = useAuth();
-  const router = useRouter();
 
   const handleLogout = async () => {
     try {
       await logout(); // POST /auth/logout (cookie + DB revoke)
     } finally {
-      await refresh(); // GET /auth/me → authenticated:false → UI wechselt
-      router.refresh(); // Server Components (Layout/Header) neu rendern
+      await Promise.resolve(refreshAuth()); // GET /auth/me → authenticated:false → UI wechselt
     }
   };
 

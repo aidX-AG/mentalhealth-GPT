@@ -1,16 +1,12 @@
 // ============================================================================
 // 👤 Profile Switch – LoggedIn vs LoggedOut (Health-grade Session UI)
 // Datei: components/RightSidebar/Profile/index.tsx
-// Version: v1.1 – 2025-12-20
+// Version: v2.0 – 2025-12-20
 //
 // Ziel:
-// - Nach Login automatisch Avatar-Menü anzeigen
-// - Kein Fake-State (kein isAuthenticated useState im UI)
-// - Static-export-safe: Client fetch direkt gegen API /auth/me
-//
-// Logout-Erfordernis (wichtig):
-// - UI muss NUR dem Hook-State folgen (isAuthenticated)
-// - user darf NICHT als Gatekeeper dienen (sonst "Logout erst nach Refresh")
+// - Nach Logout sofort UI-Switch (ohne Full Refresh)
+// - Single Source of Truth: useAuth() wird NUR hier verwendet
+// - refresh() wird als Prop nach unten gereicht (keine doppelte Hook-Instanz)
 // ============================================================================
 
 "use client";
@@ -22,7 +18,7 @@ import ProfileLoggedOut from "./ProfileLoggedOut";
 type ProfileProps = {};
 
 const Profile = ({}: ProfileProps) => {
-  const { user, isAuthenticated, isLoading } = useAuth();
+  const { user, isAuthenticated, isLoading, refresh } = useAuth();
 
   if (isLoading) {
     // minimaler Skeleton: hält Layout stabil
@@ -33,10 +29,13 @@ const Profile = ({}: ProfileProps) => {
     );
   }
 
-  // ✅ Logout-robust: Entscheidung basiert NUR auf isAuthenticated.
-  // user kann beim Umschalten kurz null/alt sein → darf UI nicht blockieren.
+  // Health-Guard: Auth=true aber kein User-Objekt => UI bleibt stabil
+  if (isAuthenticated && !user) {
+    return <ProfileLoggedOut />;
+  }
+
   return isAuthenticated ? (
-    <ProfileLoggedIn user={user ?? undefined} />
+    <ProfileLoggedIn user={user ?? undefined} refreshAuth={refresh} />
   ) : (
     <ProfileLoggedOut />
   );
