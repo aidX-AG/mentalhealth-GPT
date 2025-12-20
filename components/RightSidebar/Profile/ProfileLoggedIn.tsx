@@ -20,7 +20,7 @@ import Settings from "@/components/Settings";
 import { settings } from "@/constants/settings";
 import { _ } from "@/lib/i18n/_";
 import { logout } from "@/lib/auth/logout";
-import { useAuth } from "@/src/hooks/useAuth";
+import { useAuth } from "@/hooks/useAuth";
 
 const t = _;
 
