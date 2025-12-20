@@ -1,12 +1,16 @@
 // ============================================================================
 // 👤 Profile Switch – LoggedIn vs LoggedOut (Health-grade Session UI)
 // Datei: components/RightSidebar/Profile/index.tsx
-// Version: v1.0 – 2025-12-18
+// Version: v1.1 – 2025-12-20
 //
 // Ziel:
 // - Nach Login automatisch Avatar-Menü anzeigen
 // - Kein Fake-State (kein isAuthenticated useState im UI)
 // - Static-export-safe: Client fetch direkt gegen API /auth/me
+//
+// Logout-Erfordernis (wichtig):
+// - UI muss NUR dem Hook-State folgen (isAuthenticated)
+// - user darf NICHT als Gatekeeper dienen (sonst "Logout erst nach Refresh")
 // ============================================================================
 
 "use client";
@@ -29,11 +33,8 @@ const Profile = ({}: ProfileProps) => {
     );
   }
 
-  // Health-Guard: Auth=true aber kein User-Objekt => UI bleibt stabil
-  if (isAuthenticated && !user) {
-    return <ProfileLoggedOut />;
-  }
-
+  // ✅ Logout-robust: Entscheidung basiert NUR auf isAuthenticated.
+  // user kann beim Umschalten kurz null/alt sein → darf UI nicht blockieren.
   return isAuthenticated ? (
     <ProfileLoggedIn user={user ?? undefined} />
   ) : (
