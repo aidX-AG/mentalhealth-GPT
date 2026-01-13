@@ -1,7 +1,7 @@
 // lib/crypto/aesgcm.ts
 // ============================================================================
 // Client-side AES-256-GCM encryption helpers
-// Version: v1.1 – 2026-01-12
+// Version: v1.2 – 2026-01-13
 //
 // Purpose:
 // - Pure cryptographic primitives for client-side encryption
@@ -11,6 +11,11 @@
 // IMPORTANT:
 // - Browser-only (Web Crypto API)
 // - Ciphertext is binary; only small metadata is base64url-encoded
+//
+// CHANGELOG:
+// - v1.2 (2026-01-13): toBase64Url() uses TextDecoder("latin1") chunking
+//   instead of String.fromCharCode(...chunk) to avoid TS/target iteration
+//   issues (e.g. target < ES2015) while keeping identical output semantics.
 // ============================================================================
 
 export class CryptoError extends Error {
@@ -35,12 +40,18 @@ function fromString(s: string): Uint8Array {
  * Safe for JSON transport, URLs, and headers.
  */
 export function toBase64Url(u8: Uint8Array): string {
-  // Chunked conversion avoids potential call stack issues.
+  // v1.2:
+  // Avoid spreading typed arrays into fromCharCode(...chunk), which can fail
+  // depending on TS target/downlevel iteration settings.
+  // TextDecoder("latin1") maps bytes 0..255 directly to a binary string
+  // compatible with btoa().
+  const decoder = new TextDecoder("latin1");
+
+  // Chunked conversion avoids memory spikes on large buffers.
   let binary = "";
   const chunkSize = 0x8000; // 32KB
   for (let i = 0; i < u8.length; i += chunkSize) {
-    const chunk = u8.subarray(i, i + chunkSize);
-    binary += String.fromCharCode(...chunk);
+    binary += decoder.decode(u8.subarray(i, i + chunkSize));
   }
 
   return btoa(binary)
