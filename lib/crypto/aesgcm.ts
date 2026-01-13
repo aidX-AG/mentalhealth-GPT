@@ -1,7 +1,7 @@
 // lib/crypto/aesgcm.ts
 // ============================================================================
 // Client-side AES-256-GCM encryption helpers
-// Version: v1.3 – 2026-01-13
+// Version: v1.2 – 2026-01-13
 //
 // Purpose:
 // - Pure cryptographic primitives for client-side encryption
@@ -10,31 +10,43 @@
 //
 // IMPORTANT:
 // - Browser-only (Web Crypto API)
-// - Ciphertext is binary; only small metadata is base64url-encoded
+// - Ciphertext is binary; small metadata is base64url-encoded
 //
-// CHANGELOG:
-// - v1.2 (2026-01-13): toBase64Url() uses TextDecoder("latin1") chunking
-//   instead of String.fromCharCode(...chunk) to avoid TS/target iteration issues.
-// - v1.3 (2026-01-13): importKey() now receives a guaranteed-ArrayBuffer-backed
-//   key copy (Uint8Array copy) to satisfy strict TS BufferSource typing and
-//   avoid SharedArrayBuffer/ArrayBufferLike incompatibilities.
+// Notes on TypeScript:
+// - Some TS DOM lib versions are strict about BufferSource generics and may
+//   infer Uint8Array<ArrayBufferLike>. We normalize all inputs to ArrayBuffer
+//   to ensure compatibility across TS/DOM versions and runtimes.
 // ============================================================================
 
 export class CryptoError extends Error {
-  constructor(message: string, public cause?: unknown) {
+  public cause?: unknown;
+
+  constructor(message: string, cause?: unknown) {
     super(message);
     this.name = "CryptoError";
+    this.cause = cause;
   }
 }
 
-function assertWebCrypto() {
+/** Ensure we are running in a browser environment with WebCrypto. */
+function assertWebCrypto(): void {
   if (typeof window === "undefined" || !window.crypto || !window.crypto.subtle) {
     throw new CryptoError("Web Crypto API is not available in this environment");
   }
 }
 
+/** UTF-8 encode a string. */
 function fromString(s: string): Uint8Array {
   return new TextEncoder().encode(s);
+}
+
+/**
+ * Normalize any Uint8Array-like to a real ArrayBuffer (not SharedArrayBuffer).
+ * This avoids strict TS DOM typing conflicts (ArrayBufferLike vs ArrayBuffer).
+ */
+function toArrayBuffer(u8: Uint8Array): ArrayBuffer {
+  // Copy into a fresh ArrayBuffer (guaranteed ArrayBuffer, not SharedArrayBuffer)
+  return u8.buffer.slice(u8.byteOffset, u8.byteOffset + u8.byteLength) as ArrayBuffer;
 }
 
 /**
@@ -42,18 +54,15 @@ function fromString(s: string): Uint8Array {
  * Safe for JSON transport, URLs, and headers.
  */
 export function toBase64Url(u8: Uint8Array): string {
-  // v1.2:
-  // Avoid spreading typed arrays into fromCharCode(...chunk), which can fail
-  // depending on TS target/downlevel iteration settings.
-  // TextDecoder("latin1") maps bytes 0..255 directly to a binary string
-  // compatible with btoa().
-  const decoder = new TextDecoder("latin1");
-
-  // Chunked conversion avoids memory spikes on large buffers.
+  // Avoid spread on TypedArrays to prevent downlevelIteration / TS target issues.
   let binary = "";
   const chunkSize = 0x8000; // 32KB
+
   for (let i = 0; i < u8.length; i += chunkSize) {
-    binary += decoder.decode(u8.subarray(i, i + chunkSize));
+    const chunk = u8.subarray(i, i + chunkSize);
+    for (let j = 0; j < chunk.length; j++) {
+      binary += String.fromCharCode(chunk[j]);
+    }
   }
 
   return btoa(binary)
@@ -89,7 +98,7 @@ export function fromBase64Url(b64url: string): Uint8Array {
 export function generateDEK(): Uint8Array {
   assertWebCrypto();
 
-  const dek = new Uint8Array(32); // 256 bit
+  const dek = new Uint8Array(32); // 256-bit
   window.crypto.getRandomValues(dek);
   return dek;
 }
@@ -126,27 +135,25 @@ export async function encryptAesGcm(
   if (dek.length !== 32) {
     throw new CryptoError("DEK must be exactly 32 bytes (AES-256)");
   }
-
   if (!aadText || aadText.length === 0) {
     throw new CryptoError("AAD text is required for context binding");
   }
 
-  // Light validation (non-blocking) – helps keep AAD consistent across the codebase.
+  // Light validation (non-blocking)
   const aadParts = aadText.split("|");
   if (aadParts.length < 3) {
     // eslint-disable-next-line no-console
     console.warn("AAD should contain at least: tenant|user|object_type");
   }
 
-  // v1.3:
-  // Ensure the key material is backed by a *real ArrayBuffer* (not ArrayBufferLike),
-  // so TS/lib.dom BufferSource typing stays happy across build targets.
-  // This creates a copy into a new Uint8Array with an ArrayBuffer backing store.
-  const dekBytes = new Uint8Array(dek);
+  // Normalize inputs for WebCrypto + strict TS DOM typings
+  const dekAb: ArrayBuffer = toArrayBuffer(dek);
+  const aadBytes = fromString(aadText);
+  const aadAb: ArrayBuffer = toArrayBuffer(aadBytes);
 
   const key = await window.crypto.subtle.importKey(
     "raw",
-    dekBytes.buffer,
+    dekAb,
     { name: "AES-GCM" },
     false,
     ["encrypt"]
@@ -156,14 +163,12 @@ export async function encryptAesGcm(
   const iv = new Uint8Array(12);
   window.crypto.getRandomValues(iv);
 
-  const aad = fromString(aadText);
-
   try {
     const encrypted = await window.crypto.subtle.encrypt(
       {
         name: "AES-GCM",
         iv,
-        additionalData: aad,
+        additionalData: aadAb,
         tagLength: 128,
       },
       key,
@@ -173,7 +178,7 @@ export async function encryptAesGcm(
     return {
       ciphertext: new Uint8Array(encrypted),
       iv_b64u: toBase64Url(iv),
-      aad_b64u: toBase64Url(aad),
+      aad_b64u: toBase64Url(aadBytes),
       alg: "AES-256-GCM",
     };
   } catch (err) {
