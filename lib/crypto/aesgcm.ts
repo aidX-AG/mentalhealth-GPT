@@ -1,7 +1,7 @@
 // lib/crypto/aesgcm.ts
 // ============================================================================
 // Client-side AES-256-GCM encryption helpers
-// Version: v1.2 – 2026-01-13
+// Version: v1.3 – 2026-01-13
 //
 // Purpose:
 // - Pure cryptographic primitives for client-side encryption
@@ -14,8 +14,10 @@
 //
 // CHANGELOG:
 // - v1.2 (2026-01-13): toBase64Url() uses TextDecoder("latin1") chunking
-//   instead of String.fromCharCode(...chunk) to avoid TS/target iteration
-//   issues (e.g. target < ES2015) while keeping identical output semantics.
+//   instead of String.fromCharCode(...chunk) to avoid TS/target iteration issues.
+// - v1.3 (2026-01-13): importKey() now receives a guaranteed-ArrayBuffer-backed
+//   key copy (Uint8Array copy) to satisfy strict TS BufferSource typing and
+//   avoid SharedArrayBuffer/ArrayBufferLike incompatibilities.
 // ============================================================================
 
 export class CryptoError extends Error {
@@ -136,9 +138,15 @@ export async function encryptAesGcm(
     console.warn("AAD should contain at least: tenant|user|object_type");
   }
 
+  // v1.3:
+  // Ensure the key material is backed by a *real ArrayBuffer* (not ArrayBufferLike),
+  // so TS/lib.dom BufferSource typing stays happy across build targets.
+  // This creates a copy into a new Uint8Array with an ArrayBuffer backing store.
+  const dekBytes = new Uint8Array(dek);
+
   const key = await window.crypto.subtle.importKey(
     "raw",
-    dek,
+    dekBytes.buffer,
     { name: "AES-GCM" },
     false,
     ["encrypt"]
