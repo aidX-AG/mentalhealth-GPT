@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. key: settings.edit-profile.title
+msgid "Edit profile"
+msgstr ""
+
+#. key: settings.edit-profile.avatar.label
+msgid "Avatar"
+msgstr ""
+
+#. key: settings.edit-profile.avatar.alt
+msgid "Avatar"
+msgstr ""
+
+#. key: settings.edit-profile.avatar.upload
+msgid "Upload new image"
+msgstr ""
+
+#. key: settings.edit-profile.avatar.encrypting
+msgid "Encrypting…"
+msgstr ""
+
+#. key: settings.edit-profile.avatar.hint.resolution
+msgid "At least 800x800 px recommended."
+msgstr ""
+
+#. key: settings.edit-profile.avatar.hint.types
+msgid "JPG, PNG, GIF or WEBP allowed."
+msgstr ""
+
+#. key: settings.edit-profile.avatar.error.type
+msgid "Please upload a JPG, PNG, GIF or WEBP image."
+msgstr ""
+
+#. key: settings.edit-profile.avatar.error.size
+msgid "The image is too large. Please choose a file up to 5 MB."
+msgstr ""
+
+#. key: settings.edit-profile.avatar.error.encrypt_failed
+msgid "Encryption failed. Please try again."
+msgstr ""
+
+#. key: settings.edit-profile.name.label
+msgid "Name"
+msgstr ""
+
+#. key: settings.edit-profile.name.placeholder
+msgid "Username"
+msgstr ""
+
+#. key: settings.edit-profile.location.label
+msgid "Location"
+msgstr ""
+
+#. key: settings.edit-profile.location.placeholder
+msgid "My private mentalhealthGPT workspace"
+msgstr ""
+
+#. key: settings.edit-profile.bio.label
+msgid "Bio"
+msgstr ""
+
+#. key: settings.edit-profile.bio.placeholder
+msgid "Short bio"
+msgstr ""
+
+#. key: settings.edit-profile.save
+msgid "Save changes"
+msgstr ""
