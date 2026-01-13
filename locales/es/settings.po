@@ -1,16 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-01-13 16:24+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
+"settings/es/>\n"
 "Language: es\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 #. key: settings.edit-profile.title
 msgid "Edit profile"
-msgstr ""
+msgstr "Editar perfil"
 
 #. key: settings.edit-profile.avatar.label
 msgid "Avatar"
@@ -18,11 +21,11 @@ msgstr ""
 
 #. key: settings.edit-profile.avatar.alt
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 #. key: settings.edit-profile.avatar.upload
 msgid "Upload new image"
-msgstr ""
+msgstr "Subir nueva imagen"
 
 #. key: settings.edit-profile.avatar.encrypting
 msgid "Encrypting…"
@@ -30,7 +33,7 @@ msgstr ""
 
 #. key: settings.edit-profile.avatar.hint.resolution
 msgid "At least 800x800 px recommended."
-msgstr ""
+msgstr "Se recomienda un tamaño mínimo de 800 x 800 píxeles."
 
 #. key: settings.edit-profile.avatar.hint.types
 msgid "JPG, PNG, GIF or WEBP allowed."
@@ -50,15 +53,15 @@ msgstr ""
 
 #. key: settings.edit-profile.name.label
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #. key: settings.edit-profile.name.placeholder
 msgid "Username"
-msgstr ""
+msgstr "Nombre de usuario"
 
 #. key: settings.edit-profile.location.label
 msgid "Location"
-msgstr ""
+msgstr "Ubicación"
 
 #. key: settings.edit-profile.location.placeholder
 msgid "My private mentalhealthGPT workspace"
@@ -66,12 +69,12 @@ msgstr ""
 
 #. key: settings.edit-profile.bio.label
 msgid "Bio"
-msgstr ""
+msgstr "Biografía"
 
 #. key: settings.edit-profile.bio.placeholder
 msgid "Short bio"
-msgstr ""
+msgstr "Breve biografía"
 
 #. key: settings.edit-profile.save
 msgid "Save changes"
-msgstr ""
+msgstr "Guardar cambios"
