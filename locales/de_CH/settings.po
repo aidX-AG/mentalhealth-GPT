@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2026-01-13 16:25+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/settings/de_CH/>\n"
 "Language: de_CH\n"
@@ -29,7 +29,7 @@ msgstr "Neues Bild hochladen"
 
 #. key: settings.edit-profile.avatar.encrypting
 msgid "Encrypting…"
-msgstr ""
+msgstr "Verschlüsseln…"
 
 #. key: settings.edit-profile.avatar.hint.resolution
 msgid "At least 800x800 px recommended."
@@ -37,19 +37,21 @@ msgstr "Mindestens 800 x 800 Pixel empfohlen."
 
 #. key: settings.edit-profile.avatar.hint.types
 msgid "JPG, PNG, GIF or WEBP allowed."
-msgstr ""
+msgstr "JPG, PNG, GIF oder WEBP sind zulässig."
 
 #. key: settings.edit-profile.avatar.error.type
 msgid "Please upload a JPG, PNG, GIF or WEBP image."
-msgstr ""
+msgstr "Bitte laden Sie ein Bild im Format JPG, PNG, GIF oder WEBP hoch."
 
 #. key: settings.edit-profile.avatar.error.size
 msgid "The image is too large. Please choose a file up to 5 MB."
 msgstr ""
+"Das Bild ist zu groß. Bitte wählen Sie eine Datei mit einer Größe von "
+"maximal 5 MB."
 
 #. key: settings.edit-profile.avatar.error.encrypt_failed
 msgid "Encryption failed. Please try again."
-msgstr ""
+msgstr "Verschlüsselung fehlgeschlagen. Bitte versuchen Sie es erneut."
 
 #. key: settings.edit-profile.name.label
 msgid "Name"
@@ -65,7 +67,7 @@ msgstr "Standort"
 
 #. key: settings.edit-profile.location.placeholder
 msgid "My private mentalhealthGPT workspace"
-msgstr ""
+msgstr "Mein privater mentalhealthGPT-Arbeitsbereich"
 
 #. key: settings.edit-profile.bio.label
 msgid "Bio"
