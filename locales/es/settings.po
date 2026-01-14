@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2026-01-13 16:24+0000\n"
+"PO-Revision-Date: 2026-01-14 08:42+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "settings/es/>\n"
@@ -17,11 +17,11 @@ msgstr "Editar perfil"
 
 #. key: settings.edit-profile.avatar.label
 msgid "Profile picture"
-msgstr ""
+msgstr "Foto de perfil"
 
 #. key: settings.edit-profile.avatar.alt
 msgid "User profile picture"
-msgstr ""
+msgstr "Imagen de perfil del usuario"
 
 #. key: settings.edit-profile.avatar.upload
 msgid "Upload new image"
