@@ -18,3 +18,7 @@ locales/*.json
 .env.local
 *~
 .next
+
+# i18n build artifacts (generated from .po/.pot)
+locales/*/*.json
+locales/*.json

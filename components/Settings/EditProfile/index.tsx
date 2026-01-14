@@ -3,7 +3,7 @@ import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Field from "@/components/Field";
 import { getT } from "@/lib/i18n-runtime";
-import { encryptAesGcm, generateDEK, toBase64Url } from "@/lib/crypto/aesgcm";
+import { encryptAesGcm, generateDEK } from "@/lib/crypto/aesgcm";
 
 const t = getT();
 
@@ -23,7 +23,7 @@ const EditProfile = ({}: EditProfileProps) => {
   const [isEncryptingAvatar, setIsEncryptingAvatar] = useState<boolean>(false);
 
   const [name, setName] = useState<string>("");
-  const [location, setLocation] = useState<string>("Sai Gon, Vietnam");
+  const [location, setLocation] = useState<string>("");
   const [bio, setBio] = useState<string>("");
 
   // Avoid memory leaks when users select multiple avatars
@@ -89,14 +89,10 @@ const EditProfile = ({}: EditProfileProps) => {
           fileType: file.type,
           fileSize: file.size,
           cipherSize: enc.ciphertext.byteLength,
-          iv_b64u: enc.iv_b64u,
-          aad_b64u: enc.aad_b64u,
-          dek_b64u: toBase64Url(dek),
           alg: enc.alg,
         });
       } finally {
         // Best-effort zeroization (defense in depth; JS cannot guarantee perfect wiping)
-        // eslint-disable-next-line no-unused-expressions
         dek.fill(0);
       }
 
