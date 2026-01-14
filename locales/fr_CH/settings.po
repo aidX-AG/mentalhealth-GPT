@@ -16,12 +16,12 @@ msgid "Edit profile"
 msgstr "Modifier le profil"
 
 #. key: settings.edit-profile.avatar.label
-msgid "Avatar"
+msgid "Profile picture"
 msgstr ""
 
 #. key: settings.edit-profile.avatar.alt
-msgid "Avatar"
-msgstr "Avatar"
+msgid "User profile picture"
+msgstr ""
 
 #. key: settings.edit-profile.avatar.upload
 msgid "Upload new image"
