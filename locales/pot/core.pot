@@ -44,6 +44,18 @@ msgstr ""
 msgid "😚 Kissing"
 msgstr ""
 
+#: mocks/updates.tsx:XX
+msgid "Sign in with Face ID: Passwords Are Gone"
+msgstr ""
+
+#: mocks/updates.tsx:XX
+msgid "27 December, 2025"
+msgstr ""
+
+#: mocks/updates.tsx:XX
+msgid "We’ve implemented Passkey authentication — the most secure and user-friendly way to sign in today. You can now access mentalhealthGPT using Face ID or your device’s built-in biometric authentication, without passwords, codes, or friction. Passkeys are phishing-resistant by design and keep your identity protected through strong cryptographic guarantees. This marks a major step forward in usability and security, especially for professionals handling sensitive mental health data."
+msgstr ""
+
 #: templates/CheckoutPage/Form/RadioGroup/index.tsx:36
 msgid "$"
 msgstr ""
