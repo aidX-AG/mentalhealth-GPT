@@ -40,6 +40,24 @@ msgstr "😐 Neutral"
 msgid "😚 Kissing"
 msgstr "😚 Küssen"
 
+msgid "Sign in with Face ID: Passwords Are Gone"
+msgstr ""
+
+#, fuzzy
+#| msgid "7 September, 2025"
+msgid "27 December, 2025"
+msgstr "7. September 2025"
+
+msgid ""
+"We’ve implemented Passkey authentication — the most secure and user-friendly "
+"way to sign in today. You can now access mentalhealthGPT using Face ID or "
+"your device’s built-in biometric authentication, without passwords, codes, "
+"or friction. Passkeys are phishing-resistant by design and keep your "
+"identity protected through strong cryptographic guarantees. This marks a "
+"major step forward in usability and security, especially for professionals "
+"handling sensitive mental health data."
+msgstr ""
+
 msgid "$"
 msgstr "CHF"
 
