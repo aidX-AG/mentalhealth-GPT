@@ -22,7 +22,7 @@ export const updates = [
     content: t(
       "We’ve implemented Passkey authentication — the most secure and user-friendly way to sign in today. You can now log in to mentalhealthGPT using Face ID on your smartphone, without passwords or one-time codes. Passkeys protect against phishing and credential leaks while making access faster and more intuitive. Strong security, built directly into your device — designed for trust, privacy, and ease of use."
     ),
-  }
+  },
 
   {
     id: "u3",
