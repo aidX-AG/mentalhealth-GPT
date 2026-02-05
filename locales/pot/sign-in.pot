@@ -154,6 +154,15 @@ msgstr ""
 msgid "Use your smartphone with FaceID or TouchID as your secure key to sign in to mentalhealthGPT."
 msgstr ""
 
+#. key: passkey.signin.hero.title
+msgid "Sign in with your secure smartphone passkey"
+msgstr ""
+
+#. key: passkey.signin.hero.subtitle
+msgid "Use your smartphone with FaceID or TouchID to sign in to mentalhealthGPT."
+msgstr ""
+
+
 #. key: passkey.setup.title
 msgid "Set up your passkey on your smartphone"
 msgstr ""
@@ -306,6 +315,10 @@ msgstr ""
 msgid "The QR code has expired. Please start again."
 msgstr ""
 
+#. key: passkey.signin.error.generic
+msgid "An unexpected error occurred during passkey sign-in. Please try again."
+msgstr ""
+
 #. key: passkey.signin.error.verify_failed
 msgid "We couldn’t verify the passkey on this device. Please try it again."
 msgstr ""
@@ -316,6 +329,14 @@ msgstr ""
 
 #. key: passkey.signin.back_to_signin.link
 msgid "Back to email sign-in"
+msgstr ""
+
+#. key: passkey.signin.status.waiting
+msgid "Continue on your phone to sign in…"
+msgstr ""
+
+#. key: passkey.signin.button_start
+msgid "Continue to sign in"
 msgstr ""
 
 #. key: passkey.mobile.login.title
@@ -348,4 +369,20 @@ msgstr ""
 
 #. key: passkey.mobile.login.error.timeout_verify
 msgid "The request timed out while verifying your sign-in. Please try it again."
+msgstr ""
+
+#. key: passkey.mobile.login.success
+msgid "You are now signed in successfully."
+msgstr ""
+
+#. key: passkey.signin.status.waiting
+msgid "Confirm on your phone to continue."
+msgstr ""
+
+#. key: passkey.signin.button_start
+msgid "Create new QR-Code"
+msgstr ""
+
+#. key: passkey.signin.mobile.button_continue
+msgid "Continue with the sign in"
 msgstr ""

@@ -13,6 +13,17 @@ const t = _;
 
 export const updates = [
   {
+    id: "u4",
+    title: t("Sign in with Face ID: Passwords Are Gone"),
+    date: t("27 December, 2025"),
+    icon: "fingerprint",
+    imageLight: "/images/update-passkey.jpg",
+    imageDark: "/images/update-passkey.jpg",
+    content: t(
+      "We’ve implemented Passkey authentication — the most secure and user-friendly way to sign in today. You can now access mentalhealthGPT using Face ID or your device’s built-in biometric authentication, without passwords, codes, or friction. Passkeys are phishing-resistant by design and keep your identity protected through strong cryptographic guarantees. This marks a major step forward in usability and security, especially for professionals handling sensitive mental health data."
+    ),
+  },
+  {
     id: "u3",
     title: t("Expanding to Three Languages"),
     date: t("7 September, 2025"),

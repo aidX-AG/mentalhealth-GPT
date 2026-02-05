@@ -1,6 +1,24 @@
+// ============================================================================
+// 🔐 PasskeyForm – Cross-Device Passkey Setup/Sign-in (Health-Grade)
+// Datei: templates/SignInPage/PasskeyForm.tsx
+// Version: v1.1 – 2025-12-19
+//
+// Zweck:
+// - Startet Cross-Device WebAuthn Flow (setup/signin) und zeigt QR Code
+// - Pollt status bis "completed"
+// - WICHTIG (Best-of-class): Nach "completed" wird serverseitig via
+//   /auth/webauthn/cross-device/consume das Session-Cookie ausgestellt.
+//   (Ohne consume: kein mhgpt_session Cookie => /auth/me bleibt 401)
+//
+// Sicherheits-/Robustheitsprinzipien:
+// - credentials: "include" bei consume (Cookie Store)
+// - Timeout + Retry + in-flight Guard (keine Doppel-Calls, keine Deadlocks)
+// - "consumed" wird erst NACH erfolgreichem Response als erledigt markiert
+// ============================================================================
+
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import QRCode from "react-qr-code";
 import { getT } from "@/lib/i18n-runtime";
@@ -57,6 +75,77 @@ const PasskeyForm = ({
 
   // ✅ Guard: Autostart nur 1× (nur signin)
   const autoStartedRef = useRef(false);
+
+  // ============================================================================
+  // 🍪 Cross-Device Consume – stellt das Session-Cookie aus (health-grade)
+  // - inFlight Guard: verhindert Parallel-Calls
+  // - success Guard: "consumed" erst nach OK markieren
+  // - Retry: begrenzt + leichtes Backoff (ohne Flickwerk)
+  // ============================================================================
+  const consumeInFlightRef = useRef(false);
+  const consumeCompletedRef = useRef(false);
+
+  const [consumeAttempts, setConsumeAttempts] = useState(0);
+  const MAX_CONSUME_ATTEMPTS = 3;
+
+  // ✅ Fetch mit Timeout (AbortController) – robust, ohne externe deps
+  const fetchWithTimeout = useCallback(
+    async (url: string, init: RequestInit, timeoutMs = 15_000) => {
+      const controller = new AbortController();
+      const id = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        return await fetch(url, { ...init, signal: controller.signal });
+      } finally {
+        clearTimeout(id);
+      }
+    },
+    []
+  );
+
+  // ✅ Consume: Cookie-Ausstellung (idempotent) mit Retries/Backoff
+  const consumeSession = useCallback(async (): Promise<boolean> => {
+    if (!sessionId) return false;
+
+    // bereits erfolgreich consumed -> fertig
+    if (consumeCompletedRef.current) return true;
+
+    // Parallel-Calls verhindern
+    if (consumeInFlightRef.current) return false;
+
+    // Retry-Limit
+    if (consumeAttempts >= MAX_CONSUME_ATTEMPTS) return false;
+
+    consumeInFlightRef.current = true;
+
+    try {
+      const res = await fetchWithTimeout(
+        `${API_BASE}/auth/webauthn/cross-device/consume`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include", // 🔥 KRITISCH: sonst kein Cookie-Store
+          cache: "no-store",
+          body: JSON.stringify({ session_id: sessionId }),
+        },
+        15_000
+      );
+
+      if (res.ok) {
+        // ✅ success-guard: erst NACH OK als completed markieren
+        consumeCompletedRef.current = true;
+        return true;
+      }
+
+      // Versuch zählen (UI/Telemetry) – keine Deadlocks
+      setConsumeAttempts((prev) => prev + 1);
+      return false;
+    } catch {
+      setConsumeAttempts((prev) => prev + 1);
+      return false;
+    } finally {
+      consumeInFlightRef.current = false;
+    }
+  }, [sessionId, consumeAttempts, fetchWithTimeout]);
 
   // ✅ Texte je nach Mode (kein UI-Redesign, nur korrekte Copy)
   const copy = useMemo(() => {
@@ -237,10 +326,26 @@ const PasskeyForm = ({
           if (cancelled) return;
 
           if (data?.status === "completed") {
-            setStatus("completed");
-            setErrorMessage(null);
-            setSuccessMessage(copy.success);
-            return;
+            // ✅ KRITISCH: Cookie wird erst bei consume ausgestellt
+            const ok = await consumeSession();
+
+            if (!ok) {
+              const nextAttempt = consumeAttempts + 1;
+
+              // Hard cap: deterministisch abbrechen statt "ewig"
+              if (nextAttempt >= MAX_CONSUME_ATTEMPTS) {
+                setErrorMessage(copy.errGeneric);
+                setStatus("error");
+                return;
+              }
+
+              // Kleines Backoff – Polling läuft weiter
+            } else {
+              setStatus("completed");
+              setErrorMessage(null);
+              setSuccessMessage(copy.success);
+              return;
+            }
           }
         } else {
           console.warn("cross-device/status not ok", res.status);
@@ -258,7 +363,15 @@ const PasskeyForm = ({
     return () => {
       cancelled = true;
     };
-  }, [status, sessionId, copy.errTimeout, copy.success]);
+  }, [
+    status,
+    sessionId,
+    copy.errTimeout,
+    copy.success,
+    copy.errGeneric,
+    consumeSession,
+    consumeAttempts,
+  ]);
 
   // ✅ Nach Erfolg: setup → /sign-in, signin → onSuccess()
   useEffect(() => {
@@ -267,7 +380,7 @@ const PasskeyForm = ({
     const timeoutId = setTimeout(() => {
       if (mode === "signin") onSuccess?.();
       else router.push("/sign-in");
-    }, 2000);
+    }, 800);
 
     return () => clearTimeout(timeoutId);
   }, [status, router, mode, onSuccess]);

@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"PO-Revision-Date: 2026-01-14 08:41+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/settings/fr_CH/>\n"
+"Language: fr_CH\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.13.2\n"
+
+#. key: settings.edit-profile.title
+msgid "Edit profile"
+msgstr "Modifier le profil"
+
+#. key: settings.edit-profile.avatar.label
+msgid "Profile picture"
+msgstr "Photo de profil"
+
+#. key: settings.edit-profile.avatar.alt
+msgid "User profile picture"
+msgstr "Photo de profil utilisateur"
+
+#. key: settings.edit-profile.avatar.upload
+msgid "Upload new image"
+msgstr "Télécharger une nouvelle image"
+
+#. key: settings.edit-profile.avatar.encrypting
+msgid "Encrypting…"
+msgstr "En cours de cryptage…"
+
+#. key: settings.edit-profile.avatar.hint.resolution
+msgid "At least 800x800 px recommended."
+msgstr "Au moins 800 x 800 pixels recommandés."
+
+#. key: settings.edit-profile.avatar.hint.types
+msgid "JPG, PNG, GIF or WEBP allowed."
+msgstr "JPG, PNG, GIF ou WEBP autorisés."
+
+#. key: settings.edit-profile.avatar.error.type
+msgid "Please upload a JPG, PNG, GIF or WEBP image."
+msgstr "Veuillez télécharger une image au format JPG, PNG, GIF ou WEBP."
+
+#. key: settings.edit-profile.avatar.error.size
+msgid "The image is too large. Please choose a file up to 5 MB."
+msgstr ""
+"L'image est trop volumineuse. Veuillez choisir un fichier dont la taille ne "
+"dépasse pas 5 Mo."
+
+#. key: settings.edit-profile.avatar.error.encrypt_failed
+msgid "Encryption failed. Please try again."
+msgstr "Échec du chiffrement. Veuillez réessayer."
+
+#. key: settings.edit-profile.name.label
+msgid "Name"
+msgstr "Nom"
+
+#. key: settings.edit-profile.name.placeholder
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#. key: settings.edit-profile.location.label
+msgid "Location"
+msgstr "Emplacement"
+
+#. key: settings.edit-profile.location.placeholder
+msgid "My private mentalhealthGPT workspace"
+msgstr "Mon espace de travail privé mentalhealthGPT"
+
+#. key: settings.edit-profile.bio.label
+msgid "Bio"
+msgstr "Biographie"
+
+#. key: settings.edit-profile.bio.placeholder
+msgid "Short bio"
+msgstr "Brève biographie"
+
+#. key: settings.edit-profile.save
+msgid "Save changes"
+msgstr "Enregistrer les modifications"

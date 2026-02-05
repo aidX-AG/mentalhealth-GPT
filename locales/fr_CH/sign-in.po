@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-17 11:58+0000\n"
+"PO-Revision-Date: 2025-12-19 15:10+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
@@ -190,6 +190,17 @@ msgstr ""
 "Utilisez votre smartphone avec FaceID ou TouchID comme clé sécurisée pour "
 "vous connecter à mentalhealthGPT."
 
+#. key: passkey.signin.hero.title
+msgid "Sign in with your secure smartphone passkey"
+msgstr "Connectez-vous à l'aide de votre passkey sécurisée pour smartphone."
+
+#. key: passkey.signin.hero.subtitle
+msgid ""
+"Use your smartphone with FaceID or TouchID to sign in to mentalhealthGPT."
+msgstr ""
+"Utilisez votre smartphone avec FaceID ou TouchID pour vous connecter à "
+"mentalhealthGPT."
+
 #. key: passkey.setup.title
 msgid "Set up your passkey on your smartphone"
 msgstr "Configurez votre clé d'accès sur votre smartphone"
@@ -347,8 +358,8 @@ msgid "Continue"
 msgstr "Continuer"
 
 #. key: passkey.signin.title
-msgid "Sign in with passkey"
-msgstr "Connectez-vous avec Passkey"
+msgid "Please sign in with your passkey"
+msgstr "Veuillez vous connecter avec votre passkey."
 
 #. key: passkey.signin.body
 msgid ""
@@ -383,13 +394,93 @@ msgstr ""
 msgid "The QR code has expired. Please start again."
 msgstr "Le code QR a expiré. Veuillez recommencer."
 
+#. key: passkey.signin.error.generic
+msgid "An unexpected error occurred during passkey sign-in. Please try again."
+msgstr ""
+"Une erreur inattendue s'est produite lors de la connexion avec passkey. "
+"Veuillez réessayer."
+
+#. key: passkey.signin.error.verify_failed
+msgid "We couldn’t verify the passkey on this device. Please try it again."
+msgstr ""
+"Nous n'avons pas pu vérifier passkey sur cet appareil. Veuillez réessayer."
+
 #. key: passkey.signin.back_to_signin.prefix
-msgid "You can return to the sign-in page at any time:"
-msgstr "Vous pouvez revenir à la page de connexion à tout moment :"
+msgid "Want to use email and password instead?"
+msgstr "Vous préférez utiliser votre adresse e-mail et votre mot de passe ?"
 
 #. key: passkey.signin.back_to_signin.link
-msgid "Back to sign in page"
-msgstr "Retour à la page de connexion"
+msgid "Back to email sign-in"
+msgstr "Retour à la connexion par e-mail"
+
+#. key: passkey.signin.status.waiting
+msgid "Continue on your phone to sign in…"
+msgstr "Continuez sur votre téléphone pour vous connecter…"
+
+#. key: passkey.signin.button_start
+msgid "Continue to sign in"
+msgstr "Continuer à se connecter"
+
+#. key: passkey.mobile.login.title
+msgid "Sign in with the passkey"
+msgstr "Connectez-vous avec passkey"
+
+#. key: passkey.mobile.login.status.loading_options
+msgid "Preparing secure sign-in…"
+msgstr "Préparation de la connexion sécurisée…"
+
+#. key: passkey.mobile.login.status.verifying
+msgid "Signing you in…"
+msgstr "Connexion en cours…"
+
+#. key: passkey.mobile.login.error.no_session
+msgid "Missing or invalid sign-in session."
+msgstr "Session de connexion manquante ou non valide."
+
+#. key: passkey.mobile.login.error.invalid_or_expired
+msgid "This sign-in link is no longer valid. Please scan a new QR code."
+msgstr ""
+"Ce lien de connexion n'est plus valide. Veuillez scanner un nouveau code QR."
+
+#. key: passkey.mobile.login.error.timeout_options
+msgid ""
+"The request timed out while loading secure sign-in data. Please try again."
+msgstr ""
+"La demande a expiré pendant le chargement des données de connexion "
+"sécurisées. Veuillez réessayer."
+
+#. key: passkey.mobile.login.error.verify_failed
+msgid "We couldn’t verify your passkey. Please try again."
+msgstr "Nous n'avons pas pu vérifier votre passkey. Veuillez réessayer."
+
+#. key: passkey.mobile.login.error.timeout_verify
+msgid ""
+"The request timed out while verifying your sign-in. Please try it again."
+msgstr ""
+"La demande a expiré pendant la vérification de votre connexion. Veuillez "
+"réessayer."
+
+#. key: passkey.mobile.login.success
+msgid "You are now signed in successfully."
+msgstr "Vous êtes désormais connecté."
+
+#. key: passkey.signin.status.waiting
+msgid "Confirm on your phone to continue."
+msgstr "Confirmez sur votre téléphone pour continuer."
+
+#. key: passkey.signin.button_start
+msgid "Create new QR-Code"
+msgstr "Créer un nouveau QR-Code"
+
+#. key: passkey.signin.mobile.button_continue
+msgid "Continue with the sign in"
+msgstr "Continuer avec la connexion"
+
+#~ msgid "You can return to the sign-in page at any time:"
+#~ msgstr "Vous pouvez revenir à la page de connexion à tout moment :"
+
+#~ msgid "Back to sign in page"
+#~ msgstr "Retour à la page de connexion"
 
 #~ msgid "Technical error while creating the account."
 #~ msgstr "Erreur technique lors de la création du compte."

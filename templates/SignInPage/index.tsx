@@ -22,17 +22,20 @@ const SignInPage = ({
   return (
     <div className="relative flex min-h-screen min-h-screen-ios lg:p-6 md:px-6 md:pt-16 md:pb-10">
       {/* LINKE SPALTE */}
-      <div className="relative shrink-0 w-[40rem] p-20 overflow-hidden 2xl:w-[37.5rem] xl:w-[30rem] xl:p-10 lg:hidden flex flex-col items-center text-center">
-        <div className="max-w-[25.4rem] mx-auto">
+      <div className="relative shrink-0 w-[40rem] p-20 overflow-hidden 2xl:w-[37.5rem] xl:w-[30rem] xl:p-10 lg:hidden flex f$">
+        {/* TEXT – ZENTRIERT */}
+        <div className="max-w-[25.4rem] mx-auto text-center">
           <div className="mb-4 h2 text-n-1">{heroTitle}</div>
           <div className="body1 text-n-3">{heroSubtitle}</div>
         </div>
-        {/* Bild nochmals etwas tiefer (ca. +10 %) */}
-        <div className="absolute left-5 right-5 top-[18rem] 2xl:top-[16rem] xl:top-[15rem] bottom-10 flex justify-center">
+
+        {/* BILD – unten, proportional, ohne Abschneiden */}
+        <div className="absolute left-5 right-5 bottom-10 flex justify-center">
           <Image
-            className="object-contain scale-[0.85] origin-center"
+            className="object-contain"
             src="/images/create-pic.png"
-            fill
+            width={520}
+            height={520}
             sizes="(max-width: 1180px) 50vw, 33vw"
             alt=""
           />
