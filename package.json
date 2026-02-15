@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
     "dev": "next dev",
     "prebuild": "npm run i18n:convert:all",
     "export": "next export",
@@ -89,6 +91,9 @@
     "ts-node": "^10.9.2",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
+    "vitest": "^3.1.1",
+    "happy-dom": "^17.4.4",
+    "fake-indexeddb": "^6.0.0",
     "yargs": "^18.0.0"
   }
 }
