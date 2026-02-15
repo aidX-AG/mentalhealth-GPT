@@ -7,7 +7,7 @@
 // ============================================================================
 
 import type { DetectedPII } from "./types";
-import { SOURCE_PRIORITY, NER_HIGH_CONFIDENCE } from "./types";
+import { SOURCE_PRIORITY, NER_HIGH_CONFIDENCE, STRUCTURED_CATEGORIES } from "./types";
 import { detectRegex } from "./regex";
 import { detectDictionary } from "./dictionary";
 
@@ -20,8 +20,8 @@ interface TaggedDetection extends DetectedPII {
 }
 
 /**
- * Check if [start, end) overlaps any interval in the list.
- * Linear scan — O(n) per check, sufficient for < 100 detections.
+ * Check if [start, end) overlaps any interval in the sorted list.
+ * Intervals are sorted by start → early break when iStart >= end.
  */
 function overlapsAny(
   start: number,
@@ -29,6 +29,7 @@ function overlapsAny(
   intervals: Array<[number, number]>,
 ): boolean {
   for (const [iStart, iEnd] of intervals) {
+    if (iStart >= end) break; // sorted: no further intervals can overlap
     if (start < iEnd && end > iStart) return true;
   }
   return false;
@@ -61,8 +62,16 @@ export function mergeDetections(
   ner: DetectedPII[],
   dictionary: DetectedPII[],
 ): DetectedPII[] {
+  // Regex is authoritative only for structured categories (IBAN, SSN, email, etc.).
+  // For entity categories (PERSON, ORT, ORG), NER is authoritative — regex gets
+  // downgraded to NER priority so the longer, context-aware NER span wins.
   const all: TaggedDetection[] = [
-    ...regex.map((d) => ({ ...d, _priority: SOURCE_PRIORITY.regex })),
+    ...regex.map((d) => ({
+      ...d,
+      _priority: STRUCTURED_CATEGORIES.has(d.category)
+        ? SOURCE_PRIORITY.regex
+        : SOURCE_PRIORITY.ner,
+    })),
     ...ner.map((d) => ({ ...d, _priority: SOURCE_PRIORITY.ner })),
     ...dictionary.map((d) => ({ ...d, _priority: SOURCE_PRIORITY.dictionary })),
   ];

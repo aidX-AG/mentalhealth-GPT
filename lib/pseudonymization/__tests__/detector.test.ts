@@ -44,15 +44,39 @@ describe("Merge Algorithm (§11)", () => {
     expect(result[0].source).toBe("ner");
   });
 
-  it("priority beats length: short regex beats long NER", () => {
-    // Regex matches "Müller" [4,10], NER matches "Max Müller" [0,10]
-    const regex = [mockDetection({ start: 4, end: 10, source: "regex", original: "Müller" })];
-    const ner = [mockDetection({ start: 0, end: 10, source: "ner", original: "Max Müller" })];
+  it("structured regex beats NER: IBAN regex inside NER span", () => {
+    // Regex matches IBAN "CH93 0076 2011" [12,26], NER matches "Firma CH93 0076 2011" [6,26] as ORG
+    const regex = [mockDetection({
+      start: 12, end: 26, source: "regex", original: "CH93 0076 2011",
+      category: "IBAN", patternId: "iban-mod97",
+    })];
+    const ner = [mockDetection({
+      start: 6, end: 26, source: "ner", original: "Firma CH93 0076 2011",
+      category: "ORG",
+    })];
 
     const result = mergeDetections(regex, ner, []);
     expect(result).toHaveLength(1);
     expect(result[0].source).toBe("regex");
-    expect(result[0].original).toBe("Müller");
+    expect(result[0].category).toBe("IBAN");
+  });
+
+  it("NER wins over regex for entity categories (PERSON/ORT/ORG)", () => {
+    // Regex matches "Müller" [4,10] as PERSON, NER matches "Max Müller" [0,10] as PERSON
+    // For entity categories, regex has no priority advantage — NER wins via longer span
+    const regex = [mockDetection({
+      start: 4, end: 10, source: "regex", original: "Müller",
+      category: "PERSON",
+    })];
+    const ner = [mockDetection({
+      start: 0, end: 10, source: "ner", original: "Max Müller",
+      category: "PERSON",
+    })];
+
+    const result = mergeDetections(regex, ner, []);
+    expect(result).toHaveLength(1);
+    expect(result[0].source).toBe("ner");
+    expect(result[0].original).toBe("Max Müller");
   });
 
   it("within same priority: longer span wins", () => {
@@ -91,15 +115,22 @@ describe("Merge Algorithm (§11)", () => {
     expect(result[0].source).toBe("ner");
   });
 
-  it("contained span: regex subset occupies range, blocks NER superset", () => {
-    // Regex matches "079 123 45 67" [0,14], NER matches "Herr 079 123 45 67" [-4,14] — absurd but tests containment
-    // More realistic: regex "756.1234.5678.97" [10,26] inside NER "Herr Müller 756.1234..." [0,26]
-    const regex = [mockDetection({ start: 10, end: 26, source: "regex" })];
-    const ner = [mockDetection({ start: 0, end: 26, source: "ner" })];
+  it("contained span: structural regex subset blocks NER superset", () => {
+    // Regex matches AHV "756.1234.5678.97" [10,26] inside NER "Herr Müller 756.1234..." [0,26]
+    // SOZIALVERS is a structural category → regex has priority 0, NER has priority 1
+    const regex = [mockDetection({
+      start: 10, end: 26, source: "regex",
+      category: "SOZIALVERS", patternId: "ch-ahv",
+    })];
+    const ner = [mockDetection({
+      start: 0, end: 26, source: "ner",
+      category: "PERSON",
+    })];
 
     const result = mergeDetections(regex, ner, []);
     expect(result).toHaveLength(1);
     expect(result[0].source).toBe("regex");
+    expect(result[0].category).toBe("SOZIALVERS");
   });
 
   it("multiple non-overlapping from different sources", () => {

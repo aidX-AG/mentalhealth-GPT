@@ -146,6 +146,21 @@ export const SOURCE_PRIORITY: Record<DetectedPII["source"], number> = {
   dictionary: 2,
 };
 
+/**
+ * Categories where regex is authoritative (structural patterns with checksums).
+ * For entity categories (PERSON, ORT, ORG), NER is authoritative — regex
+ * gets downgraded to NER priority so the longer, context-aware NER span wins.
+ */
+export const STRUCTURED_CATEGORIES: ReadonlySet<PIICategory> = new Set<PIICategory>([
+  "DATUM",
+  "EMAIL",
+  "TELEFON",
+  "SOZIALVERS",
+  "IBAN",
+  "STEUERNR",
+  "PLZ",
+]);
+
 // ---------------------------------------------------------------------------
 // Context Window (§3.8)
 // ---------------------------------------------------------------------------
@@ -164,9 +179,13 @@ export const TOKEN_REGEX =
 export const TOKEN_OPEN = "⟦";   // U+27E6
 export const TOKEN_CLOSE = "⟧";  // U+27E7
 
-/** Escape replacements (§12.2). */
+/** Escape replacements — Level 1 (§12.2): ⟦⟧ → ⦃⦄ */
 export const ESCAPE_OPEN = "\u2983";   // ⦃ LEFT WHITE CURLY BRACKET
 export const ESCAPE_CLOSE = "\u2984";  // ⦄ RIGHT WHITE CURLY BRACKET
+
+/** Escape replacements — Level 2 (§12.2): ⦃⦄ → ⦅⦆ (protects literal ⦃⦄ in user input) */
+export const ESCAPE2_OPEN = "\u2985";  // ⦅ LEFT WHITE PARENTHESIS
+export const ESCAPE2_CLOSE = "\u2986"; // ⦆ RIGHT WHITE PARENTHESIS
 
 // ---------------------------------------------------------------------------
 // Model Config (§4.5)

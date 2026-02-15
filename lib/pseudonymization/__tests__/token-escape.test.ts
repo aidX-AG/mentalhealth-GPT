@@ -4,7 +4,11 @@ import {
   unescapeTokenBrackets,
   containsTokenBrackets,
 } from "../token-escape";
-import { TOKEN_OPEN, TOKEN_CLOSE, ESCAPE_OPEN, ESCAPE_CLOSE } from "../types";
+import {
+  TOKEN_OPEN, TOKEN_CLOSE,
+  ESCAPE_OPEN, ESCAPE_CLOSE,
+  ESCAPE2_OPEN, ESCAPE2_CLOSE,
+} from "../types";
 
 describe("Token Escape (§12)", () => {
   it("escapes ⟦ to ⦃", () => {
@@ -47,11 +51,24 @@ describe("Token Escape (§12)", () => {
     expect(restored).toBe(original);
   });
 
-  it("does not double-escape", () => {
-    const input = `Already escaped ${ESCAPE_OPEN}test${ESCAPE_CLOSE}`;
+  it("2-step: literal ⦃/⦄ in user input are preserved through roundtrip", () => {
+    const input = `User typed ${ESCAPE_OPEN}curly${ESCAPE_CLOSE} brackets`;
     const escaped = escapeTokenBrackets(input);
-    // Should not change the already-escaped chars (they are different Unicode)
-    expect(escaped).toBe(input);
+    // ⦃ should be escaped to ⦅ (level 2), not left as-is
+    expect(escaped).toContain(ESCAPE2_OPEN);
+    expect(escaped).toContain(ESCAPE2_CLOSE);
+    // Roundtrip restores original
+    expect(unescapeTokenBrackets(escaped)).toBe(input);
+  });
+
+  it("2-step: mixed ⟦ and ⦃ in same input", () => {
+    const input = `⟦token⟧ and ⦃curly⦄`;
+    const escaped = escapeTokenBrackets(input);
+    // No ⟦/⟧ remain (escaped to ⦃/⦄)
+    expect(escaped).not.toContain(TOKEN_OPEN);
+    expect(escaped).not.toContain(TOKEN_CLOSE);
+    // Roundtrip restores both
+    expect(unescapeTokenBrackets(escaped)).toBe(input);
   });
 
   it("handles empty string", () => {

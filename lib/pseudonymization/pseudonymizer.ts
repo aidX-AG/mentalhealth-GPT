@@ -30,10 +30,11 @@ function reuseLookupKey(
   if (patternId) {
     const pattern = patternRegistry.get(patternId);
     if (pattern?.normalize) {
-      return `${category}::${pattern.normalize(original)}`;
+      return `${category}::${pattern.normalize(original).normalize("NFC")}`;
     }
   }
-  return `${category}::${original.trim()}`;
+  // NFC normalize for accent-safe matching (French/Spanish: é vs e+́)
+  return `${category}::${original.trim().normalize("NFC")}`;
 }
 
 // ---------------------------------------------------------------------------

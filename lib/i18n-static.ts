@@ -4,8 +4,9 @@ export type Locale = "en" | "de" | "fr" | "es";
 const NAMESPACES = [
   "applications", "audio-transcription", "checkout", "common",
   "diagnosis-support", "documentation-reports", "generation-socials-post",
-  "homepage", "pricing", "settings", "sign-in", "supervision-training", "thanks",
-  "therapy-support", "updates-and-faq", "video-analysis",
+  "homepage", "pricing", "pseudonymization", "settings", "sign-in",
+  "supervision-training", "thanks", "therapy-support", "updates-and-faq",
+  "video-analysis",
 ] as const;
 
 // super-simpler, synchroner Loader

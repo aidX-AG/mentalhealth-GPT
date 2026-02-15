@@ -19,9 +19,14 @@ export {
   TOKEN_REGEX,
   TOKEN_OPEN,
   TOKEN_CLOSE,
+  ESCAPE_OPEN,
+  ESCAPE_CLOSE,
+  ESCAPE2_OPEN,
+  ESCAPE2_CLOSE,
   NER_CONFIDENCE_THRESHOLD,
   NER_HIGH_CONFIDENCE,
   SOURCE_PRIORITY,
+  STRUCTURED_CATEGORIES,
 } from "./types";
 
 // Token escape (§12)
@@ -42,3 +47,14 @@ export { pseudonymize, depseudonymize, createMapping } from "./pseudonymizer";
 
 // NER client (Layer 2)
 export { NERClient } from "./ner-client";
+
+// NER singleton (§4.4 — globalThis lifecycle)
+export {
+  subscribe as nerSubscribe,
+  ensureReady as nerEnsureReady,
+  detect as nerDetect,
+  getStatus as nerGetStatus,
+  getProgress as nerGetProgress,
+  destroy as nerDestroy,
+} from "./ner-singleton";
+export type { NERSingletonListener } from "./ner-singleton";
