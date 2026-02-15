@@ -153,7 +153,7 @@ async function exportPublicKey(key: CryptoKey): Promise<Uint8Array> {
 async function importPeerPublicKey(raw: Uint8Array): Promise<CryptoKey> {
   return window.crypto.subtle.importKey(
     "raw",
-    raw.buffer.slice(raw.byteOffset, raw.byteOffset + raw.byteLength),
+    raw.buffer.slice(raw.byteOffset, raw.byteOffset + raw.byteLength) as ArrayBuffer,
     { name: "ECDH", namedCurve: ECDH_CURVE },
     false,
     [],
@@ -200,7 +200,7 @@ async function deriveEncKey(
       salt: pairingNonce.buffer.slice(
         pairingNonce.byteOffset,
         pairingNonce.byteOffset + pairingNonce.byteLength,
-      ),
+      ) as ArrayBuffer,
       info: HKDF_INFO,
     },
     sharedSecretKey,
@@ -268,13 +268,13 @@ export async function initiatePairing(): Promise<PairingInitResult> {
     const ciphertext = await window.crypto.subtle.encrypt(
       {
         name: "AES-GCM",
-        iv: iv.buffer.slice(iv.byteOffset, iv.byteOffset + iv.byteLength),
+        iv: iv.buffer.slice(iv.byteOffset, iv.byteOffset + iv.byteLength) as ArrayBuffer,
       },
       encKey,
       mkBytes.buffer.slice(
         mkBytes.byteOffset,
         mkBytes.byteOffset + mkBytes.byteLength,
-      ),
+      ) as ArrayBuffer,
     );
 
     return { iv, ciphertext: new Uint8Array(ciphertext) };
@@ -359,13 +359,13 @@ export async function respondToPairing(
           iv: encrypted.iv.buffer.slice(
             encrypted.iv.byteOffset,
             encrypted.iv.byteOffset + encrypted.iv.byteLength,
-          ),
+          ) as ArrayBuffer,
         },
         encKey,
         encrypted.ciphertext.buffer.slice(
           encrypted.ciphertext.byteOffset,
           encrypted.ciphertext.byteOffset + encrypted.ciphertext.byteLength,
-        ),
+        ) as ArrayBuffer,
       );
     } catch (err) {
       throw new CryptoError("Failed to decrypt MK from peer", err);

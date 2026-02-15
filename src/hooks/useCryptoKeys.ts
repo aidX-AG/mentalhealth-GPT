@@ -19,7 +19,7 @@
 // ============================================================================
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { hasDeviceKey } from "../lib/crypto/sk";
+import { hasDeviceKey } from "../../lib/crypto/sk";
 import { useSession } from "./useSession";
 
 const BROADCAST_CHANNEL_NAME = "mhgpt-crypto-keys";

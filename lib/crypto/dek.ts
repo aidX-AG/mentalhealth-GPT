@@ -53,7 +53,7 @@ export async function wrapDEK(
 
   const tempDekKey = await window.crypto.subtle.importKey(
     "raw",
-    dek.buffer.slice(dek.byteOffset, dek.byteOffset + dek.byteLength),
+    dek.buffer.slice(dek.byteOffset, dek.byteOffset + dek.byteLength) as ArrayBuffer,
     { name: "AES-GCM", length: 256 },
     true, // extractable=true required for wrapKey
     ["encrypt", "decrypt"],
@@ -91,7 +91,7 @@ export async function unwrapDEK(
       wrappedDEK.buffer.slice(
         wrappedDEK.byteOffset,
         wrappedDEK.byteOffset + wrappedDEK.byteLength,
-      ),
+      ) as ArrayBuffer,
       sk,
       { name: "AES-KW" },
       { name: "AES-GCM", length: 256 },

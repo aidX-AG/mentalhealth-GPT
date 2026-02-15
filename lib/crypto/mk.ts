@@ -70,7 +70,7 @@ export async function wrapMK(
     mkBytes.buffer.slice(
       mkBytes.byteOffset,
       mkBytes.byteOffset + mkBytes.byteLength,
-    ),
+    ) as ArrayBuffer,
     MK_ALGORITHM,
     true, // extractable=true required for wrapKey operation
     ["encrypt", "decrypt"],
@@ -111,7 +111,7 @@ export async function unwrapMK(
       wrappedMK.buffer.slice(
         wrappedMK.byteOffset,
         wrappedMK.byteOffset + wrappedMK.byteLength,
-      ),
+      ) as ArrayBuffer,
       sk,
       { name: "AES-KW" },
       MK_ALGORITHM,
@@ -183,7 +183,7 @@ export async function importMK(mkBytes: Uint8Array): Promise<CryptoKey> {
     mkBytes.buffer.slice(
       mkBytes.byteOffset,
       mkBytes.byteOffset + mkBytes.byteLength,
-    ),
+    ) as ArrayBuffer,
     MK_ALGORITHM,
     false, // non-extractable for operations
     ["encrypt", "decrypt"],
