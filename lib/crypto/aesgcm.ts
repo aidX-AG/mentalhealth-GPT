@@ -185,3 +185,64 @@ export async function encryptAesGcm(
     throw new CryptoError("AES-GCM encryption failed", err);
   }
 }
+
+// ---------------------------------------------------------------------------
+// Decryption
+// ---------------------------------------------------------------------------
+
+/**
+ * Decrypt data using AES-256-GCM
+ *
+ * @param ciphertext  Encrypted data (ciphertext + 128-bit GCM auth tag)
+ * @param dek         32-byte Data Encryption Key
+ * @param iv          12-byte initialization vector (must match encryption IV)
+ * @param aadText     Additional authenticated data (must match encryption AAD exactly)
+ *
+ * Throws CryptoError if authentication fails (tampered ciphertext, wrong key, or wrong AAD).
+ */
+export async function decryptAesGcm(
+  ciphertext: ArrayBuffer,
+  dek: Uint8Array,
+  iv: Uint8Array,
+  aadText: string,
+): Promise<ArrayBuffer> {
+  assertWebCrypto();
+
+  if (dek.length !== 32) {
+    throw new CryptoError("DEK must be exactly 32 bytes (AES-256)");
+  }
+  if (iv.length !== 12) {
+    throw new CryptoError("IV must be exactly 12 bytes (AES-GCM)");
+  }
+  if (!aadText || aadText.length === 0) {
+    throw new CryptoError("AAD text is required for context binding");
+  }
+
+  const dekAb: ArrayBuffer = toArrayBuffer(dek);
+  const ivAb: ArrayBuffer = toArrayBuffer(iv);
+  const aadBytes = fromString(aadText);
+  const aadAb: ArrayBuffer = toArrayBuffer(aadBytes);
+
+  const key = await window.crypto.subtle.importKey(
+    "raw",
+    dekAb,
+    { name: "AES-GCM" },
+    false,
+    ["decrypt"],
+  );
+
+  try {
+    return await window.crypto.subtle.decrypt(
+      {
+        name: "AES-GCM",
+        iv: ivAb,
+        additionalData: aadAb,
+        tagLength: 128,
+      },
+      key,
+      ciphertext,
+    );
+  } catch (err) {
+    throw new CryptoError("AES-GCM decryption failed", err);
+  }
+}

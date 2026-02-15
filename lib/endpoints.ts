@@ -33,6 +33,28 @@ export const apiPaths = {
     finalize: "/api/v1/media/finalize",
     metadata: "/api/v1/media",
   },
+  crypto: {
+    wrapDek: "/api/v1/crypto/wrap-dek-for-worker",
+  },
+  devices: {
+    register: "/api/v1/devices/mk-wrap",
+    current: "/api/v1/devices/current/mk-wrap",
+    byId: (id: string) => `/api/v1/devices/${id}/mk-wrap` as const,
+    list: "/api/v1/devices",
+    revoke: (id: string) => `/api/v1/devices/${id}/revoke` as const,
+  },
+  pairing: {
+    create: "/api/v1/pairing/sessions",
+    sendResponse: (id: string) => `/api/v1/pairing/${id}/response` as const,
+    getResponse: (id: string) => `/api/v1/pairing/${id}/response` as const,
+    sendData: (id: string) => `/api/v1/pairing/${id}/data` as const,
+    getData: (id: string) => `/api/v1/pairing/${id}/data` as const,
+  },
+  mappings: {
+    presignedUpload: "/api/v1/mappings/presigned-upload",
+    presignedDownload: "/api/v1/mappings/presigned-download",
+    metadata: "/api/v1/mappings/metadata",
+  },
 } as const;
 
 // Full URL builder
