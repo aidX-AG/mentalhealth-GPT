@@ -147,7 +147,7 @@ export async function exportMKForPairing(
     wrappedMK.buffer.slice(
       wrappedMK.byteOffset,
       wrappedMK.byteOffset + wrappedMK.byteLength,
-    ),
+    ) as ArrayBuffer,
     sk,
     { name: "AES-KW" },
     MK_ALGORITHM,
