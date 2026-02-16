@@ -96,7 +96,6 @@ export default function RootLayout({
             `,
           }}
         />
-
         {/* Meta: nur Inhalte übersetzen, Attribut-Namen bleiben statisch */}
         <meta
           name="description"

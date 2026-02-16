@@ -25,8 +25,10 @@ export type I18nProviderProps = {
 };
 
 export function I18nProvider({ locale, dict, children }: I18nProviderProps) {
+  // 🔴 Safety: ensure dict is never undefined (fallback to empty object)
+  const safeDict = dict ?? {};
   return (
-    <I18nContext.Provider value={{ locale, dict }}>
+    <I18nContext.Provider value={{ locale, dict: safeDict }}>
       {children}
     </I18nContext.Provider>
   );
@@ -46,17 +48,19 @@ export function useLocale(): Locale {
  * Works in both SSR and client (as long as I18nProvider is in tree)
  *
  * Usage: const t = useTranslation(); t("nav.search")
+ * 🔴 Safety: uses optional chaining to prevent crashes if dict is undefined
  */
 export function useTranslation() {
   const { dict } = useContext(I18nContext);
-  return (key: string): string => dict[key] ?? key;
+  return (key: string): string => dict?.[key] ?? key;
 }
 
 /**
  * Hook to access both locale and translation function
+ * 🔴 Safety: uses optional chaining to prevent crashes if dict is undefined
  */
 export function useI18n() {
   const { locale, dict } = useContext(I18nContext);
-  const t = (key: string): string => dict[key] ?? key;
+  const t = (key: string): string => dict?.[key] ?? key;
   return { locale, t };
 }
