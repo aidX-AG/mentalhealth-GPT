@@ -16,11 +16,11 @@ import { usePathname } from "next/navigation";
 import Link from "next/link"; // [ALT] bleibt importiert (kein breaking change)
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
-import { _ } from "@/lib/i18n/_";
 
-// [i18n helper]
+// [i18n helper] - SSR-safe via Context
 import LocaleLink from "@/components/LocaleLink";
-import { getClientLocale, withLocalePath } from "@/lib/locale";
+import { withLocalePath } from "@/lib/locale";
+import { useTranslation, useLocale } from "@/lib/i18n/I18nContext";
 
 type NavigationType = {
   title: string;
@@ -37,10 +37,10 @@ type NavigationProps = {
 
 const Navigation = ({ visible, items }: NavigationProps) => {
   const pathname = usePathname();
-  const t = _;
 
-  // aktuelle Locale aus <html lang>
-  const locale = getClientLocale(); // "de" | "fr" | "en" | "es"
+  // 🔴 FIX: SSR-safe locale + translation via Context (no document access during render)
+  const locale = useLocale();
+  const t = useTranslation();
 
   // ⬇️ Mini-Helper (nur lokal hier):
   // "/en/..." → "/..." neutralisieren, damit withLocalePath korrekt prefixed

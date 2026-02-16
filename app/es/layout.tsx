@@ -19,7 +19,7 @@ export default function SpanishLayout({ children }: { children: React.ReactNode 
         }}
       />
       <Suspense fallback={<GlobalLoading />}>
-        <Providers>{children}</Providers>
+        <Providers locale="es" dict={dict}>{children}</Providers>
       </Suspense>
     </>
   );

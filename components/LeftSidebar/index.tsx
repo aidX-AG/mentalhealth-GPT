@@ -16,15 +16,8 @@ import { resultSearch } from "@/mocks/resultSearch";
 import { settings } from "@/constants/settings";
 import { twMerge } from "tailwind-merge";
 
-// ✅ Laufzeit-i18n: Texte aus lokalem i18n-Context holen
-import { _ } from "@/lib/i18n/_";
-
-/** Aktives Locale aus <html lang> ermitteln (Fallback 'en') */
-const getActiveLocale = (): "de" | "fr" | "en" | "es" => {
-  if (typeof document === "undefined") return "en";
-  const lang = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
-  return (["de", "fr", "en", "es"] as const).includes(lang as any) ? (lang as any) : "en";
-};
+// ✅ SSR-safe i18n via Context (no document access during render)
+import { useLocale, useTranslation } from "@/lib/i18n/I18nContext";
 
 type LeftSidebarProps = {
   value: boolean;
@@ -39,19 +32,12 @@ const LeftSidebar = ({
   smallSidebar,
   visibleRightSidebar
 }: LeftSidebarProps) => {
-  const t = _;
-
-  // 🔴 FIX: Locale state to avoid hydration mismatch
-  // SSR uses default "en", client updates after mount
-  const [locale, setLocale] = useState<"de" | "fr" | "en" | "es">("en");
+  // 🔴 FIX: SSR-safe locale + translation via Context (no document access during render)
+  const locale = useLocale();
+  const t = useTranslation();
 
   const [visibleSearch, setVisibleSearch] = useState<boolean>(false);
   const [visibleSettings, setVisibleSettings] = useState<boolean>(false);
-
-  // Update locale after mount (client-side only)
-  useEffect(() => {
-    setLocale(getActiveLocale());
-  }, []);
 
   // ⌘+F öffnet die Suche
   const handleWindowKeyDown = (event: KeyboardEvent) => {

@@ -18,7 +18,7 @@ export default function FrenchLayout({ children }: { children: React.ReactNode }
         }}
       />
       <Suspense fallback={<GlobalLoading />}>
-        <Providers>{children}</Providers>
+        <Providers locale="fr" dict={dict}>{children}</Providers>
       </Suspense>
     </>
   );

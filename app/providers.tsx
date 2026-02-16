@@ -3,12 +3,21 @@
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { Toaster, resolveValue } from "react-hot-toast";
 import theme from "./theme";
+import { I18nProvider, type Locale } from "@/lib/i18n/I18nContext";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+type ProvidersProps = {
+  locale: Locale;
+  dict: Record<string, string>;
+  children: React.ReactNode;
+};
+
+export function Providers({ locale, dict, children }: ProvidersProps) {
     return (
         <>
             <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-            <ChakraProvider>{children}</ChakraProvider>
+            <I18nProvider locale={locale} dict={dict}>
+                <ChakraProvider>{children}</ChakraProvider>
+            </I18nProvider>
             <Toaster
                 containerStyle={{
                     bottom: 40,

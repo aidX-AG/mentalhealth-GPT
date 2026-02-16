@@ -10,7 +10,8 @@ export default function GermanLayout({ children }: { children: React.ReactNode }
 
   return (
     <>
-      {/* läuft vor Hydration, ohne zweites <html>/<head> zu rendern */}
+      {/* ⚠️  Deprecated: Script ist nicht mehr nötig, da Providers locale+dict direkt bekommt */}
+      {/* Wird beibehalten für Abwärtskompatibilität mit altem _() code (falls noch vorhanden) */}
       <Script
         id="i18n-de"
         strategy="beforeInteractive"
@@ -19,7 +20,7 @@ export default function GermanLayout({ children }: { children: React.ReactNode }
         }}
       />
       <Suspense fallback={<GlobalLoading />}>
-        <Providers>{children}</Providers>
+        <Providers locale="de" dict={dict}>{children}</Providers>
       </Suspense>
     </>
   );
