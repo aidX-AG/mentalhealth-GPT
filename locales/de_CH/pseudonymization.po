@@ -1,48 +1,51 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-02-16 13:17+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
+"mentalhealth-gpt/pseudonymization/de_CH/>\n"
 "Language: de_CH\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.13.2\n"
 
 #. key: pseudonymization.status.idle
 msgid "Privacy protection inactive"
-msgstr ""
+msgstr "Datenschutz inaktiv"
 
 #. key: pseudonymization.status.loading
 msgid "Loading advanced detection..."
-msgstr ""
+msgstr "Erweiterte Erkennung wird geladen..."
 
 #. key: pseudonymization.status.loading-progress
 msgid "Loading advanced detection ({percent}%)"
-msgstr ""
+msgstr "Erweiterte Erkennung wird geladen ({Prozent}%)"
 
 #. key: pseudonymization.status.ready
 msgid "Advanced detection active"
-msgstr ""
+msgstr "Erweiterte Erkennung aktiv"
 
 #. key: pseudonymization.status.degraded
 msgid "Basic detection only (pattern-based)"
-msgstr ""
+msgstr "Nur grundlegende Erkennung (musterbasiert)"
 
 #. key: pseudonymization.labels.pii-secure
 msgid "PII detected"
-msgstr ""
+msgstr "PII erkannt"
 
 #. key: pseudonymization.labels.pii-uncertain
 msgid "PII uncertain"
-msgstr ""
+msgstr "PII ungewiss"
 
 #. key: pseudonymization.labels.fachbegriff
 msgid "Technical term detected"
-msgstr ""
+msgstr "Fachbegriff erkannt"
 
 #. key: pseudonymization.labels.category-person
 msgid "Person"
-msgstr ""
+msgstr "Person"
 
 #. key: pseudonymization.labels.category-ort
 msgid "Location"
@@ -50,7 +53,7 @@ msgstr ""
 
 #. key: pseudonymization.labels.category-org
 msgid "Organization"
-msgstr ""
+msgstr "Organisation"
 
 #. key: pseudonymization.labels.category-datum
 msgid "Date"
@@ -62,51 +65,53 @@ msgstr ""
 
 #. key: pseudonymization.labels.category-telefon
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 #. key: pseudonymization.labels.category-sozialvers
 msgid "Social security number"
-msgstr ""
+msgstr "Sozialversicherungsnummer"
 
 #. key: pseudonymization.labels.category-iban
 msgid "IBAN"
-msgstr ""
+msgstr "IBAN"
 
 #. key: pseudonymization.labels.category-steuernr
 msgid "Tax ID"
-msgstr ""
+msgstr "Steuer-ID"
 
 #. key: pseudonymization.labels.category-plz
 msgid "Postal code"
-msgstr ""
+msgstr "Postleitzahl"
 
 #. key: pseudonymization.labels.category-diagnose
 msgid "Diagnosis"
-msgstr ""
+msgstr "Diagnose"
 
 #. key: pseudonymization.labels.category-medikament
 msgid "Medication"
-msgstr ""
+msgstr "Medikamente"
 
 #. key: pseudonymization.labels.category-therapie
 msgid "Therapy"
-msgstr ""
+msgstr "Therapie"
 
 #. key: pseudonymization.review.title
 msgid "Review detected information"
-msgstr ""
+msgstr "Überprüfen Sie die erkannten Informationen."
 
 #. key: pseudonymization.review.description
 msgid "The following personal information was detected in your message. Confirmed items will be replaced with tokens before sending."
 msgstr ""
+"Die folgenden personenbezogenen Daten wurden in Ihrer Nachricht erkannt. "
+"Bestätigte Elemente werden vor dem Senden durch Platzhalter ersetzt."
 
 #. key: pseudonymization.buttons.accept-all
 msgid "Accept all"
-msgstr ""
+msgstr "Alle akzeptieren"
 
 #. key: pseudonymization.buttons.send
 msgid "Send"
-msgstr ""
+msgstr "Senden"
 
 #. key: pseudonymization.buttons.cancel
 msgid "Cancel"
@@ -114,16 +119,16 @@ msgstr ""
 
 #. key: pseudonymization.review.source-regex
 msgid "Pattern"
-msgstr ""
+msgstr "Muster"
 
 #. key: pseudonymization.review.source-ner
 msgid "AI detection"
-msgstr ""
+msgstr "KI-Erkennung"
 
 #. key: pseudonymization.review.source-dictionary
 msgid "Dictionary"
-msgstr ""
+msgstr "Wörterbuch"
 
 #. key: pseudonymization.review.no-detections
 msgid "No personal information detected."
-msgstr ""
+msgstr "Es wurden keine personenbezogenen Daten erkannt."
