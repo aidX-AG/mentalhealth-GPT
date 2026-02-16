@@ -40,10 +40,18 @@ const LeftSidebar = ({
   visibleRightSidebar
 }: LeftSidebarProps) => {
   const t = _;
-  const locale = getActiveLocale();
+
+  // 🔴 FIX: Locale state to avoid hydration mismatch
+  // SSR uses default "en", client updates after mount
+  const [locale, setLocale] = useState<"de" | "fr" | "en" | "es">("en");
 
   const [visibleSearch, setVisibleSearch] = useState<boolean>(false);
   const [visibleSettings, setVisibleSettings] = useState<boolean>(false);
+
+  // Update locale after mount (client-side only)
+  useEffect(() => {
+    setLocale(getActiveLocale());
+  }, []);
 
   // ⌘+F öffnet die Suche
   const handleWindowKeyDown = (event: KeyboardEvent) => {
