@@ -35,10 +35,15 @@ const Layout = ({
 
   // ⚠️ Hydration-Flag: erst nach erstem Effect ist der Client-Status stabil
   // Hintergrund: react-responsive gibt vor Hydration noch keinen korrekten Wert,
-  // dadurch flackern Klassen/States → Overlay war kurz „aktiv“ und überdeckte das +.
+  // dadurch flackern Klassen/States → Overlay war kurz „aktiv" und überdeckte das +.
   const [mounted, setMounted] = useState(false);
 
-  const isDesktop = useMediaQuery({ query: "(max-width: 1179px)" });
+  // 🔧 FIX: useMediaQuery NUR auf Client nutzen, sonst SSR/CSR mismatch
+  const isDesktop = useMediaQuery(
+    { query: "(max-width: 1179px)" },
+    undefined,
+    mounted ? undefined : { width: 1920 } // SSR default: Desktop (prevents hydration error)
+  );
 
   useEffect(() => {
     setMounted(true);
@@ -52,10 +57,12 @@ const Layout = ({
     enablePageScroll();
   };
 
-  // Sidebar-Layout an Viewport anpassen
+  // Sidebar-Layout an Viewport anpassen (nur NACH mount)
   useEffect(() => {
-    setVisibleSidebar(smallSidebar || isDesktop);
-  }, [isDesktop, smallSidebar]);
+    if (mounted) {
+      setVisibleSidebar(smallSidebar || isDesktop);
+    }
+  }, [mounted, isDesktop, smallSidebar]);
 
   // ✅ Nur wenn der Client „stabil“ ist, darf das Overlay überhaupt gerendert werden.
   // Dadurch verschwindet das kurzzeitig „sichtbare/aktive“ Overlay nach Hydration

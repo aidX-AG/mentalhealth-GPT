@@ -12,16 +12,26 @@ const AddFile = ({ disabled = false, onFileSelected }: AddFileProps) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleClick = () => {
+    console.log("[AddFile] handleClick called, disabled:", disabled, "onFileSelected:", typeof onFileSelected);
     if (disabled) return;
     inputRef.current?.click();
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    console.log("[AddFile] handleChange called");
     const file = e.target.files?.[0];
-    if (!file) return;
+    console.log("[AddFile] file selected:", file?.name, file?.type, file?.size);
+    if (!file) {
+      console.log("[AddFile] No file selected");
+      return;
+    }
 
     if (onFileSelected) {
+      console.log("[AddFile] Calling onFileSelected with file:", file.name);
       onFileSelected(file);
+      console.log("[AddFile] onFileSelected completed");
+    } else {
+      console.log("[AddFile] ERROR: onFileSelected is undefined!");
     }
 
     // Reset, damit dieselbe Datei später nochmals gewählt werden kann

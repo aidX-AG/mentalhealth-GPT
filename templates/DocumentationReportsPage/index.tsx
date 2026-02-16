@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import Chat from "@/components/Chat";
 import Message from "@/components/Message";
@@ -35,9 +35,15 @@ const DocumentationReportsPage = ({
   noticeBody,
 }: Props) => {
   const [message, setMessage] = useState<string>("");
+  const [mounted, setMounted] = useState(false);
 
   // SPEC-007a: File upload flow for Context Library (institutional documents, guidelines)
   const uploadFlow = useFileUploadFlow();
+
+  // Only render file upload UI after client-side hydration to avoid SSR mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <Layout>
@@ -65,34 +71,44 @@ const DocumentationReportsPage = ({
       </Chat>
 
       {/* Message Input with File Upload for Context Library */}
-      <div>
-        <Message
-          value={message}
-          onChange={(e: any) => setMessage(e.target.value)}
-          onFileSelected={uploadFlow.handleFileSelected}
-        />
-        {/* NER Status Badge */}
-        <NERStatusBadge status={uploadFlow.status} progress={uploadFlow.progress} />
-      </div>
+      {!mounted ? (
+        // SSR placeholder - no upload functionality during server render
+        <div className="relative z-5 px-10 pb-6 h-24 2xl:px-6 2xl:pb-5 md:px-4 md:pb-4" />
+      ) : (
+        // Client-only - full upload flow after hydration
+        <div>
+          <Message
+            value={message}
+            onChange={(e: any) => setMessage(e.target.value)}
+            onFileSelected={uploadFlow.handleFileSelected}
+          />
+          {/* NER Status Badge */}
+          {uploadFlow.status && (
+            <NERStatusBadge status={uploadFlow.status} progress={uploadFlow.progress} />
+          )}
+        </div>
+      )}
 
-      {/* PII Review Modal (File Mode) */}
-      <ModalPIIReview
-        visible={uploadFlow.reviewVisible}
-        onClose={uploadFlow.handleCancelReview}
-        items={uploadFlow.reviewItems}
-        onToggle={uploadFlow.toggleReviewItem}
-        onAcceptAll={uploadFlow.acceptAllReview}
-        onRejectAll={uploadFlow.rejectAllReview}
-        onSend={async () => {
-          const ok = await uploadFlow.handleConfirmUpload();
-          // On success, document uploaded to Context Library
-        }}
-        sending={uploadFlow.uploading}
-        mode="file"
-        getPageNumber={(item) =>
-          getPageForOffset(item.start, uploadFlow.pageBoundaries)
-        }
-      />
+      {/* PII Review Modal (File Mode) - client-only after hydration */}
+      {mounted && uploadFlow && (
+        <ModalPIIReview
+          visible={uploadFlow.reviewVisible}
+          onClose={uploadFlow.handleCancelReview}
+          items={uploadFlow.reviewItems}
+          onToggle={uploadFlow.toggleReviewItem}
+          onAcceptAll={uploadFlow.acceptAllReview}
+          onRejectAll={uploadFlow.rejectAllReview}
+          onSend={async () => {
+            const ok = await uploadFlow.handleConfirmUpload();
+            // On success, document uploaded to Context Library
+          }}
+          sending={uploadFlow.uploading}
+          mode="file"
+          getPageNumber={(item) =>
+            getPageForOffset(item.start, uploadFlow.pageBoundaries)
+          }
+        />
+      )}
     </Layout>
   );
 };
