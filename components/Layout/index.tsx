@@ -38,10 +38,9 @@ const Layout = ({
   // dadurch flackern Klassen/States → Overlay war kurz „aktiv" und überdeckte das +.
   const [mounted, setMounted] = useState(false);
 
-  // 🔧 FIX: useMediaQuery NUR auf Client nutzen, sonst SSR/CSR mismatch
+  // 🔧 FIX: useMediaQuery mit SSR-safe device default
   const isDesktop = useMediaQuery(
     { query: "(max-width: 1179px)" },
-    undefined,
     mounted ? undefined : { width: 1920 } // SSR default: Desktop (prevents hydration error)
   );
 
