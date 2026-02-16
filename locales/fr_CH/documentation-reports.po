@@ -12,39 +12,34 @@ msgstr ""
 "X-Generator: Weblate 5.13.2\n"
 
 #. key: documentation-reports.chat.greeting
-msgid "Hello! How can I assist you with documentation and reporting today?"
+msgid "Hello! How can I assist you with your Context Library today?"
 msgstr ""
-"Bonjour ! Comment puis-je vous aider aujourd'hui en matière de documentation "
-"et de rapports ?"
 
 #. key: documentation-reports.text.coming-capability
-msgid "Soon you’ll be able to generate"
-msgstr "Bientôt, vous pourrez générer"
+msgid "Build your institutional knowledge base:"
+msgstr ""
 
 #. key: documentation-reports.text.professional-docs
-msgid "professional documentation and reports"
-msgstr "documentation et rapports professionnels"
+msgid "Upload guidelines, regulations, case files, and clinical protocols"
+msgstr ""
 
 #. key: documentation-reports.text.use-cases
 msgid ""
-"— whether for clinical use, insurance submissions, or personal records of "
-"therapy and supervision sessions."
+"to give your AI the context it needs to provide institution-specific, "
+"precise answers tailored to your clinic's standards."
 msgstr ""
-"— que ce soit pour un usage clinique, des demandes de remboursement auprès "
-"des assurances ou des dossiers personnels relatifs aux séances de thérapie "
-"et de supervision."
 
 #. key: documentation-reports.text.ai-helps-transform
-msgid "Our AI will help you transform transcripts into"
-msgstr "Notre IA transforme automatiquement vos transcriptions"
+msgid "Your Context Library creates a"
+msgstr ""
 
 #. key: documentation-reports.text.clear-structured-confidential
-msgid "clear, structured, and confidential"
-msgstr "en rapports clairs, structurés et confidentiels"
+msgid "searchable, secure knowledge base"
+msgstr ""
 
 #. key: documentation-reports.text.reports-automatically
-msgid "reports — automatically."
-msgstr "— automatiquement."
+msgid "that enhances every AI interaction."
+msgstr ""
 
 #. key: documentation-reports.text.data-processed-with
 msgid "All data is processed with"
@@ -66,8 +61,8 @@ msgid "🚧"
 msgstr "🚧"
 
 #. key: documentation-reports.chat.title
-msgid "Documentation & Reporting"
-msgstr "Documentation et rapports"
+msgid "Context Library"
+msgstr ""
 
 #. key: documentation-reports.sections.in-development
 msgid "is an exciting new feature that’s currently in development."
@@ -77,11 +72,9 @@ msgstr ""
 
 #. key: documentation-reports.text.value-prop
 msgid ""
-"We’re building it to save you time, reduce admin load, and enhance the "
-"quality of your documentation —"
+"We're building it to enhance AI precision, preserve institutional knowledge, "
+"and ensure every response aligns with your standards —"
 msgstr ""
-"Nous le développons pour vous faire gagner du temps, réduire la charge "
-"administrative et améliorer la qualité de votre documentation."
 
 #. key: documentation-reports.text.stay-tuned
 msgid "stay tuned!"
@@ -90,3 +83,41 @@ msgstr "restez à l'écoute !"
 #. key: documentation-reports.chat.hello-short
 msgid "Hi there 👋"
 msgstr "Bonjour 👋"
+
+#~ msgid "Hello! How can I assist you with documentation and reporting today?"
+#~ msgstr ""
+#~ "Bonjour ! Comment puis-je vous aider aujourd'hui en matière de "
+#~ "documentation et de rapports ?"
+
+#~ msgid "Soon you’ll be able to generate"
+#~ msgstr "Bientôt, vous pourrez générer"
+
+#~ msgid "professional documentation and reports"
+#~ msgstr "documentation et rapports professionnels"
+
+#~ msgid ""
+#~ "— whether for clinical use, insurance submissions, or personal records of "
+#~ "therapy and supervision sessions."
+#~ msgstr ""
+#~ "— que ce soit pour un usage clinique, des demandes de remboursement "
+#~ "auprès des assurances ou des dossiers personnels relatifs aux séances de "
+#~ "thérapie et de supervision."
+
+#~ msgid "Our AI will help you transform transcripts into"
+#~ msgstr "Notre IA transforme automatiquement vos transcriptions"
+
+#~ msgid "clear, structured, and confidential"
+#~ msgstr "en rapports clairs, structurés et confidentiels"
+
+#~ msgid "reports — automatically."
+#~ msgstr "— automatiquement."
+
+#~ msgid "Documentation & Reporting"
+#~ msgstr "Documentation et rapports"
+
+#~ msgid ""
+#~ "We’re building it to save you time, reduce admin load, and enhance the "
+#~ "quality of your documentation —"
+#~ msgstr ""
+#~ "Nous le développons pour vous faire gagner du temps, réduire la charge "
+#~ "administrative et améliorer la qualité de votre documentation."
