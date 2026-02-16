@@ -38,6 +38,9 @@ type MessageProps = {
     // 🔼 optional: tatsächliches Senden (kann später verdrahtet werden)
     onSend?: () => void;
 
+    // 📎 SPEC-007a: File upload callback
+    onFileSelected?: (file: File) => void;
+
     // 🔎 Zusätzliche Infos aus Main/HomePage (nur Typ-Support, im UI aktuell nicht genutzt)
     isAuthenticated?: boolean;
     canSend?: boolean;
@@ -59,6 +62,7 @@ const Message = ({
     onRequireLogin,
     onRequireSubscription,
     onSend,
+    onFileSelected,
 }: MessageProps) => {
     const stylesButton = "group absolute right-3 bottom-2 w-10 h-10";
 
@@ -128,7 +132,10 @@ const Message = ({
                     <div className="relative flex items-center min-h-[3.5rem] px-16">
                         {/* 📎 Upload: UI-Gating (Backend erzwingt Limits zusätzlich) */}
                         <div className={isUploadDisabled ? "opacity-40 cursor-not-allowed" : ""}>
-                            <AddFile />
+                            <AddFile
+                                disabled={isUploadDisabled}
+                                onFileSelected={onFileSelected}
+                            />
                         </div>
 
                         <TextareaAutosize

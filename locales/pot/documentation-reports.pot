@@ -7,33 +7,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. key: documentation-reports.chat.greeting
-msgid "Hello! How can I assist you with documentation and reporting today?"
+msgid "Hello! How can I assist you with your Context Library today?"
 msgstr ""
 
 #. key: documentation-reports.text.coming-capability
-msgid "Soon you’ll be able to generate"
+msgid "Build your institutional knowledge base:"
 msgstr ""
 
 #. key: documentation-reports.text.professional-docs
-msgid "professional documentation and reports"
+msgid "Upload guidelines, regulations, case files, and clinical protocols"
 msgstr ""
 
 #. key: documentation-reports.text.use-cases
 msgid ""
-"— whether for clinical use, insurance submissions, or personal records of "
-"therapy and supervision sessions."
+"to give your AI the context it needs to provide institution-specific, "
+"precise answers tailored to your clinic's standards."
 msgstr ""
 
 #. key: documentation-reports.text.ai-helps-transform
-msgid "Our AI will help you transform transcripts into"
+msgid "Your Context Library creates a"
 msgstr ""
 
 #. key: documentation-reports.text.clear-structured-confidential
-msgid "clear, structured, and confidential"
+msgid "searchable, secure knowledge base"
 msgstr ""
 
 #. key: documentation-reports.text.reports-automatically
-msgid "reports — automatically."
+msgid "that enhances every AI interaction."
 msgstr ""
 
 #. key: documentation-reports.text.data-processed-with
@@ -55,7 +55,7 @@ msgid "🚧"
 msgstr ""
 
 #. key: documentation-reports.chat.title
-msgid "Documentation & Reporting"
+msgid "Context Library"
 msgstr ""
 
 #. key: documentation-reports.sections.in-development
@@ -64,8 +64,8 @@ msgstr ""
 
 #. key: documentation-reports.text.value-prop
 msgid ""
-"We’re building it to save you time, reduce admin load, and enhance the "
-"quality of your documentation —"
+"We're building it to enhance AI precision, preserve institutional knowledge, "
+"and ensure every response aligns with your standards —"
 msgstr ""
 
 #. key: documentation-reports.text.stay-tuned

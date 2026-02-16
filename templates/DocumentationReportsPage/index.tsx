@@ -6,6 +6,10 @@ import Chat from "@/components/Chat";
 import Message from "@/components/Message";
 import Question from "@/components/Question";
 import Answer from "@/components/Answer";
+import { useFileUploadFlow } from "@/hooks/useFileUploadFlow";
+import ModalPIIReview from "@/components/ModalPIIReview";
+import NERStatusBadge from "@/components/NERStatusBadge";
+import { getPageForOffset } from "../../lib/pseudonymization/file-extract";
 
 type Props = {
   title: string;
@@ -32,6 +36,9 @@ const DocumentationReportsPage = ({
 }: Props) => {
   const [message, setMessage] = useState<string>("");
 
+  // SPEC-007a: File upload flow for Context Library (institutional documents, guidelines)
+  const uploadFlow = useFileUploadFlow();
+
   return (
     <Layout>
       <Chat title={title}>
@@ -57,7 +64,35 @@ const DocumentationReportsPage = ({
         </Answer>
       </Chat>
 
-      <Message value={message} onChange={(e: any) => setMessage(e.target.value)} />
+      {/* Message Input with File Upload for Context Library */}
+      <div>
+        <Message
+          value={message}
+          onChange={(e: any) => setMessage(e.target.value)}
+          onFileSelected={uploadFlow.handleFileSelected}
+        />
+        {/* NER Status Badge */}
+        <NERStatusBadge status={uploadFlow.status} progress={uploadFlow.progress} />
+      </div>
+
+      {/* PII Review Modal (File Mode) */}
+      <ModalPIIReview
+        visible={uploadFlow.reviewVisible}
+        onClose={uploadFlow.handleCancelReview}
+        items={uploadFlow.reviewItems}
+        onToggle={uploadFlow.toggleReviewItem}
+        onAcceptAll={uploadFlow.acceptAllReview}
+        onRejectAll={uploadFlow.rejectAllReview}
+        onSend={async () => {
+          const ok = await uploadFlow.handleConfirmUpload();
+          // On success, document uploaded to Context Library
+        }}
+        sending={uploadFlow.uploading}
+        mode="file"
+        getPageNumber={(item) =>
+          getPageForOffset(item.start, uploadFlow.pageBoundaries)
+        }
+      />
     </Layout>
   );
 };

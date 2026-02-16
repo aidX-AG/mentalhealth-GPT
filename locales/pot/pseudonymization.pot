@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mentalhealthgpt\n"
+"Language: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. key: pseudonymization.status.idle
+msgid "Privacy protection inactive"
+msgstr ""
+
+#. key: pseudonymization.status.loading
+msgid "Loading advanced detection..."
+msgstr ""
+
+#. key: pseudonymization.status.loading-progress
+msgid "Loading advanced detection ({percent}%)"
+msgstr ""
+
+#. key: pseudonymization.status.ready
+msgid "Advanced detection active"
+msgstr ""
+
+#. key: pseudonymization.status.degraded
+msgid "Basic detection only (pattern-based)"
+msgstr ""
+
+#. key: pseudonymization.labels.pii-secure
+msgid "PII detected"
+msgstr ""
+
+#. key: pseudonymization.labels.pii-uncertain
+msgid "PII uncertain"
+msgstr ""
+
+#. key: pseudonymization.labels.fachbegriff
+msgid "Technical term detected"
+msgstr ""
+
+#. key: pseudonymization.labels.category-person
+msgid "Person"
+msgstr ""
+
+#. key: pseudonymization.labels.category-ort
+msgid "Location"
+msgstr ""
+
+#. key: pseudonymization.labels.category-org
+msgid "Organization"
+msgstr ""
+
+#. key: pseudonymization.labels.category-datum
+msgid "Date"
+msgstr ""
+
+#. key: pseudonymization.labels.category-email
+msgid "Email"
+msgstr ""
+
+#. key: pseudonymization.labels.category-telefon
+msgid "Phone"
+msgstr ""
+
+#. key: pseudonymization.labels.category-sozialvers
+msgid "Social security number"
+msgstr ""
+
+#. key: pseudonymization.labels.category-iban
+msgid "IBAN"
+msgstr ""
+
+#. key: pseudonymization.labels.category-steuernr
+msgid "Tax ID"
+msgstr ""
+
+#. key: pseudonymization.labels.category-plz
+msgid "Postal code"
+msgstr ""
+
+#. key: pseudonymization.labels.category-diagnose
+msgid "Diagnosis"
+msgstr ""
+
+#. key: pseudonymization.labels.category-medikament
+msgid "Medication"
+msgstr ""
+
+#. key: pseudonymization.labels.category-therapie
+msgid "Therapy"
+msgstr ""
+
+#. key: pseudonymization.review.title
+msgid "Review detected information"
+msgstr ""
+
+#. key: pseudonymization.review.description
+msgid "The following personal information was detected in your message. Confirmed items will be replaced with tokens before sending."
+msgstr ""
+
+#. key: pseudonymization.buttons.accept-all
+msgid "Accept all"
+msgstr ""
+
+#. key: pseudonymization.buttons.send
+msgid "Send"
+msgstr ""
+
+#. key: pseudonymization.buttons.cancel
+msgid "Cancel"
+msgstr ""
+
+#. key: pseudonymization.review.source-regex
+msgid "Pattern"
+msgstr ""
+
+#. key: pseudonymization.review.source-ner
+msgid "AI detection"
+msgstr ""
+
+#. key: pseudonymization.review.source-dictionary
+msgid "Dictionary"
+msgstr ""
+
+#. key: pseudonymization.review.no-detections
+msgid "No personal information detected."
+msgstr ""
