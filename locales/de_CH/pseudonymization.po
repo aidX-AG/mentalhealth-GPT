@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2026-02-16 13:17+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/pseudonymization/de_CH/>\n"
 "Language: de_CH\n"
@@ -97,7 +97,7 @@ msgstr "Therapie"
 
 #. key: pseudonymization.review.title
 msgid "Review detected information"
-msgstr "Überprüfen Sie die erkannten Informationen."
+msgstr "Überprüfen Sie die erkannten Informationen"
 
 #. key: pseudonymization.review.description
 msgid "The following personal information was detected in your message. Confirmed items will be replaced with tokens before sending."
