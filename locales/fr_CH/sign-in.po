@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-12-19 15:10+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2026-02-16 13:17+0000\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/sign-in/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -192,7 +192,7 @@ msgstr ""
 
 #. key: passkey.signin.hero.title
 msgid "Sign in with your secure smartphone passkey"
-msgstr "Connectez-vous à l'aide de votre passkey sécurisée pour smartphone."
+msgstr "Connectez-vous à l'aide de votre passkey sécurisée pour smartphone"
 
 #. key: passkey.signin.hero.subtitle
 msgid ""
