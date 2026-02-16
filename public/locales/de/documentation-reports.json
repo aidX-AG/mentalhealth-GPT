@@ -1,1 +1,17 @@
-{}
+{
+  "documentation-reports.chat.greeting": "Hallo! Wie kann ich Ihnen heute mit Ihrer Kontextbibliothek helfen?",
+  "documentation-reports.text.coming-capability": "Bauen Sie Ihre institutionelle Wissensbasis auf:",
+  "documentation-reports.text.professional-docs": "Richtlinien, Vorschriften, Fallakten und klinische Protokolle hochladen",
+  "documentation-reports.text.use-cases": "um Ihrer KI den Kontext zu geben, den sie benötigt, um institutionsspezifische, präzise Antworten zu liefern, die auf die Standards Ihrer Klinik zugeschnitten sind.",
+  "documentation-reports.text.ai-helps-transform": "Ihre Kontextbibliothek erstellt eine",
+  "documentation-reports.text.clear-structured-confidential": "durchsuchbare, sichere Wissensdatenbank",
+  "documentation-reports.text.reports-automatically": "die jede KI-Interaktion verbessert.",
+  "documentation-reports.text.data-processed-with": "Alle Daten werden verarbeitet mit",
+  "documentation-reports.text.end-to-end-encryption": "End-to-End-Verschlüsselung",
+  "documentation-reports.text.privacy-protection": "um die Vertraulichkeit der Patientendaten zu schützen und einen sicheren Umgang in jeder Phase zu gewährleisten.",
+  "documentation-reports.chat.title": "Kontextbibliothek",
+  "documentation-reports.sections.in-development": "ist eine spannende neue Funktion, die derzeit entwickelt wird.",
+  "documentation-reports.text.value-prop": "Wir entwickeln es, um die Präzision der KI zu verbessern, institutionelles Wissen zu bewahren und sicherzustellen, dass jede Antwort Ihren Standards entspricht.",
+  "documentation-reports.text.stay-tuned": "Bleiben Sie dran!",
+  "documentation-reports.chat.hello-short": "Hallo 👋"
+}

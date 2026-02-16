@@ -1,1 +1,9 @@
-{}
+{
+  "therapy-support.sections.greeting": "🧠 Bonjour ! Je suis votre IA d'aide à la thérapie.",
+  "therapy-support.sections.instructions": "N'hésitez pas à décrire votre cas, les symptômes spécifiques, ou à demander des stratégies thérapeutiques.",
+  "therapy-support.chat.title": "Assistance thérapeutique IA",
+  "therapy-support.notice.prefix": "🚧 La fonctionnalité IA pour ",
+  "therapy-support.notice.feature-name": "Soutien thérapeutique",
+  "therapy-support.notice.suffix": " est actuellement en cours de développement. Il sera bientôt disponible avec des modèles spécialisés pour la planification thérapeutique, la réflexion et les suggestions fondées sur des preuves.",
+  "therapy-support.cta.support": "Vous souhaitez soutenir mentalhealthGPT ou en savoir plus ? Envoyez-nous un e-mail"
+}

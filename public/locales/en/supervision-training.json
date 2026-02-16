@@ -1,5 +1,7 @@
 {
-  "Please review this supervision case and provide constructive feedback for the trainee. Focus on communication, assessment quality, and risk handling.": "",
-  "Supervision & Training": "",
-  "🚧 The AI model for Supervision & Training is currently being developed with specialized training data. It will be available soon to support expert feedback and mentoring workflows.": ""
+  "supervision-training.sections.banner-prefix": "🚧 The AI model for",
+  "supervision-training.chat.title": "Supervision & Training",
+  "supervision-training.sections.under-development": "is currently being developed with specialized training data.",
+  "supervision-training.sections.coming-soon": "It will be available soon to support expert feedback and mentoring workflows.",
+  "supervision-training.sections.question": "Please review this supervision case and provide constructive feedback for the trainee. Focus on communication, assessment quality, and risk handling."
 }

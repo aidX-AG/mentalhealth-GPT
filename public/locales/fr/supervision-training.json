@@ -1,1 +1,7 @@
-{}
+{
+  "supervision-training.sections.banner-prefix": "🚧 Le modèle d'IA pour",
+  "supervision-training.chat.title": "Supervision et Training",
+  "supervision-training.sections.under-development": "est actuellement en cours de développement à l'aide de données d'entraînement spécialisées.",
+  "supervision-training.sections.coming-soon": "Il sera bientôt disponible pour prendre en charge les commentaires d'experts et les workflows de mentorat.",
+  "supervision-training.sections.question": "Veuillez examiner ce cas de supervision et fournir des commentaires constructifs au stagiaire. Concentrez-vous sur la communication, la qualité de l'évaluation et la gestion des risques."
+}

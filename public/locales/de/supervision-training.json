@@ -1,1 +1,7 @@
-{}
+{
+  "supervision-training.sections.banner-prefix": "🚧 Das KI-Modell für",
+  "supervision-training.chat.title": "Supervision & Training",
+  "supervision-training.sections.under-development": "wird derzeit mit speziellen Trainingsdaten entwickelt.",
+  "supervision-training.sections.coming-soon": "Es wird in Kürze verfügbar sein, um Expertenfeedback und Mentoring-Workflows zu unterstützen.",
+  "supervision-training.sections.question": "Bitte überprüfen Sie diesen Supervisionsfall und geben Sie dem Auszubildenden konstruktives Feedback. Konzentrieren Sie sich dabei auf die Kommunikation, die Qualität der Beurteilung und den Umgang mit Risiken."
+}

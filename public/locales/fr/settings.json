@@ -1,0 +1,19 @@
+{
+  "settings.edit-profile.title": "Modifier le profil",
+  "settings.edit-profile.avatar.label": "Photo de profil",
+  "settings.edit-profile.avatar.alt": "Photo de profil utilisateur",
+  "settings.edit-profile.avatar.upload": "Télécharger une nouvelle image",
+  "settings.edit-profile.avatar.encrypting": "En cours de cryptage…",
+  "settings.edit-profile.avatar.hint.resolution": "Au moins 800 x 800 pixels recommandés.",
+  "settings.edit-profile.avatar.hint.types": "JPG, PNG, GIF ou WEBP autorisés.",
+  "settings.edit-profile.avatar.error.type": "Veuillez télécharger une image au format JPG, PNG, GIF ou WEBP.",
+  "settings.edit-profile.avatar.error.size": "L'image est trop volumineuse. Veuillez choisir un fichier dont la taille ne dépasse pas 5 Mo.",
+  "settings.edit-profile.avatar.error.encrypt_failed": "Échec du chiffrement. Veuillez réessayer.",
+  "settings.edit-profile.name.label": "Nom",
+  "settings.edit-profile.name.placeholder": "Nom d'utilisateur",
+  "settings.edit-profile.location.label": "Emplacement",
+  "settings.edit-profile.location.placeholder": "Mon espace de travail privé mentalhealthGPT",
+  "settings.edit-profile.bio.label": "Biographie",
+  "settings.edit-profile.bio.placeholder": "Brève biographie",
+  "settings.edit-profile.save": "Enregistrer les modifications"
+}

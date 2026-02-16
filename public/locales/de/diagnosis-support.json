@@ -1,1 +1,8 @@
-{}
+{
+  "diagnosis-support.sections.banner-prefix": "🚧 Die KI-Funktionalität für",
+  "diagnosis-support.chat.title": "Diagnoseunterstützung",
+  "diagnosis-support.sections.under-development": "befindet sich derzeit in der Entwicklung.",
+  "diagnosis-support.sections.coming-soon": "Es wird nach und nach verfügbar sein, wenn wir spezialisierte Modelle zur Unterstützung der psychischen Gesundheitsdiagnostik integrieren.",
+  "diagnosis-support.question.document": "Diagnose-Fall.pdf",
+  "diagnosis-support.question.content": "Bitte überprüfen Sie diesen klinischen Fall und schlagen Sie mögliche Diagnosen vor. Heben Sie alle wichtigen Symptome oder Verhaltensmuster hervor."
+}

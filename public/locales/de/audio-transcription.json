@@ -1,1 +1,11 @@
-{}
+{
+  "audio-transcription.chat.greeting": "Hallo! Wie kann ich Ihnen heute bei der Audio-Transkription helfen?",
+  "audio-transcription.text.capability": "Unsere KI kann Audioaufzeichnungen von Therapiesitzungen sicher transkribieren, den Inhalt strukturieren und klare, professionelle Zusammenfassungen erstellen – alles mit End-to-End-Verschlüsselung.",
+  "audio-transcription.text.upload-instructions": "Laden Sie einfach eine aufgezeichnete Sitzung hoch. Alle Patientendaten werden streng vertraulich behandelt und durch eine starke Verschlüsselung direkt in Ihrem Browser, während der Übertragung und beim Zurücksenden geschützt – so ist bei jedem Schritt vollständige Privatsphäre gewährleistet.",
+  "audio-transcription.sections.banner-prefix": "🚧 Das KI-Modell für",
+  "audio-transcription.chat.title": "Audio-Transkription & Notizen",
+  "audio-transcription.sections.under-development": "befindet sich derzeit in der Entwicklung.",
+  "audio-transcription.sections.coming-soon": "Es wird bald genaue Transkriptionen und Unterstützung beim Notieren für die klinische Dokumentation bieten.",
+  "audio-transcription.chat.hello-short": "Hallo 🙂",
+  "audio-transcription.chat.demo-request": "Zeig mir, was du kannst"
+}

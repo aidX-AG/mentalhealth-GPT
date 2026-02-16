@@ -1,6 +1,6 @@
 {
-  "Manage subscription": "",
-  "Start new chat": "",
-  "Thank you for your purchase!": "",
-  "Your order has been received and is currently being processed. You will receive an email confirmation with your order details shortly.": ""
+  "thanks.sections.title": "Thank you for your purchase!",
+  "thanks.sections.order-received": "Your order has been received and is currently being processed. You will receive an email confirmation with your order details shortly.",
+  "thanks.buttons.manage-subscription": "Manage subscription",
+  "thanks.buttons.start-new-chat": "Start new chat"
 }

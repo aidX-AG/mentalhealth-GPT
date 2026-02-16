@@ -6,7 +6,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "dev": "next dev",
-    "prebuild": "npm run i18n:convert:all",
+    "prebuild": "npm run i18n:convert:all && rsync -a locales/ public/locales/ --exclude='*.pot' --exclude='*.po' --exclude='de_CH' --exclude='fr_CH' --exclude='es'",
     "export": "next export",
     "build": "next build",
     "start": "next start",

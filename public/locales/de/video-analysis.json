@@ -1,1 +1,13 @@
-{}
+{
+  "video-analysis.chat.greeting": "Hallo! Wie kann ich Ihnen heute bei der Videoanalyse helfen?",
+  "video-analysis.text.coming-soon": "Unsere KI-gestützte Videoanalyse ist in Kürze verfügbar.",
+  "video-analysis.text.value-prop-part1": "Es wird bei der Analyse von Aufzeichnungen von Therapiesitzungen helfen",
+  "video-analysis.text.value-prop-part2": ", wichtige Themen, nonverbale Signale und therapeutische Dynamiken erkennen – und das alles mit umfassender End-to-End-Sicherheit.",
+  "video-analysis.text.security": "Ihre Videodaten sind bei jedem Schritt geschützt: in Ihrem Browser, während des Uploads und während der gesamten KI-basierten Verarbeitung.",
+  "video-analysis.text.in-development": "Diese Funktion befindet sich derzeit in der Entwicklung —",
+  "video-analysis.text.stay-tuned": "Bleiben Sie dran!",
+  "video-analysis.chat.title": "Videoanalyse",
+  "video-analysis.text.feature-benefit": "ist eine leistungsstarke Funktion, die sichere, KI-generierte Einblicke in Therapiesitzungen liefert.",
+  "video-analysis.text.launch-excitement": "Wir freuen uns darauf, dies bald einzuführen – für tiefere Reflexion, Supervision und berufliches Wachstum.",
+  "video-analysis.chat.hello-short": "Hallo 👋"
+}
