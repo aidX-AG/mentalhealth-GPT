@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
 "PO-Revision-Date: 2026-02-16 13:10+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "pseudonymization/es/>\n"
 "Language: es\n"
@@ -49,7 +49,7 @@ msgstr "Persona"
 
 #. key: pseudonymization.labels.category-ort
 msgid "Location"
-msgstr ""
+msgstr "Ubicación"
 
 #. key: pseudonymization.labels.category-org
 msgid "Organization"
@@ -57,11 +57,11 @@ msgstr "Organización"
 
 #. key: pseudonymization.labels.category-datum
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #. key: pseudonymization.labels.category-email
 msgid "Email"
-msgstr ""
+msgstr "Correo electrónico"
 
 #. key: pseudonymization.labels.category-telefon
 msgid "Phone"
@@ -115,7 +115,7 @@ msgstr "Enviar"
 
 #. key: pseudonymization.buttons.cancel
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #. key: pseudonymization.review.source-regex
 msgid "Pattern"
