@@ -1,10 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
-import { Providers } from "./providers";
 import { Inter, Karla } from "next/font/google";
 import "./globals.css";
-import { Suspense } from "react";
-import GlobalLoading from "./GlobalLoading";
 import type { Locale } from "@/lib/i18n-static";
 
 // ✅ Serverseitige i18n (nutzt eure aus PO generierten JSONs)
@@ -117,9 +114,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${karla.variable} ${inter.variable} bg-white text-black dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}
       >
-        <Suspense fallback={<GlobalLoading />}>
-          <Providers locale={lang} dict={dict}>{children}</Providers>
-        </Suspense>
+        {/* 🔴 NO Providers here! Language Layouts (de/fr/es/en) provide them */}
+        {children}
       </body>
     </html>
   );
