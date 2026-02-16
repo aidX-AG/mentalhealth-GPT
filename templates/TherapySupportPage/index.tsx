@@ -5,7 +5,11 @@ import Layout from "@/components/Layout";
 import Chat from "@/components/Chat";
 import Message from "@/components/Message";
 import Answer from "@/components/Answer";
-import { useI18n } from "@/lib/i18n-client"; // ⬅️ neu
+import { useI18n } from "@/lib/i18n-client";
+import { useFileUploadFlow } from "@/hooks/useFileUploadFlow";
+import ModalPIIReview from "@/components/ModalPIIReview";
+import NERStatusBadge from "@/components/NERStatusBadge";
+import { getPageForOffset } from "../../lib/pseudonymization/file-extract";
 
 type Props = {
   title: string;
@@ -33,10 +37,10 @@ const TherapySupportPage = ({
   contactEmail,
 }: Props) => {
   const [message, setMessage] = useState<string>("");
-  const { t } = useI18n(); // ⬅️ nur t behalten
+  const { t } = useI18n();
 
-  // optionaler Guard gegen Hydration-Mismatch, falls dir das lieber ist:
-  // if (!ready) return null;
+  // SPEC-007a: File upload flow with pseudonymization
+  const uploadFlow = useFileUploadFlow();
 
   return (
     <Layout>
@@ -72,7 +76,35 @@ const TherapySupportPage = ({
         </Answer>
       </Chat>
 
-      <Message value={message} onChange={(e: any) => setMessage(e.target.value)} />
+      {/* Message Input with File Upload */}
+      <div>
+        <Message
+          value={message}
+          onChange={(e: any) => setMessage(e.target.value)}
+          onFileSelected={uploadFlow.handleFileSelected}
+        />
+        {/* NER Status Badge */}
+        <NERStatusBadge status={uploadFlow.status} progress={uploadFlow.progress} />
+      </div>
+
+      {/* PII Review Modal (File Mode) */}
+      <ModalPIIReview
+        visible={uploadFlow.reviewVisible}
+        onClose={uploadFlow.handleCancelReview}
+        items={uploadFlow.reviewItems}
+        onToggle={uploadFlow.toggleReviewItem}
+        onAcceptAll={uploadFlow.acceptAllReview}
+        onRejectAll={uploadFlow.rejectAllReview}
+        onSend={async () => {
+          const ok = await uploadFlow.handleConfirmUpload();
+          // On success, user may want to upload another file (no message to clear)
+        }}
+        sending={uploadFlow.uploading}
+        mode="file"
+        getPageNumber={(item) =>
+          getPageForOffset(item.start, uploadFlow.pageBoundaries)
+        }
+      />
     </Layout>
   );
 };
