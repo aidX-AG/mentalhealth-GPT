@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2025-10-04 19:30+0000\n"
+"PO-Revision-Date: 2026-02-16 13:10+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/documentation-reports/fr_CH/>\n"
@@ -14,32 +14,39 @@ msgstr ""
 #. key: documentation-reports.chat.greeting
 msgid "Hello! How can I assist you with your Context Library today?"
 msgstr ""
+"Bonjour ! Comment puis-je vous aider avec votre bibliothèque contextuelle "
+"aujourd'hui ?"
 
 #. key: documentation-reports.text.coming-capability
 msgid "Build your institutional knowledge base:"
-msgstr ""
+msgstr "Construisez votre base de connaissances institutionnelle :"
 
 #. key: documentation-reports.text.professional-docs
 msgid "Upload guidelines, regulations, case files, and clinical protocols"
 msgstr ""
+"Télécharger les directives, les règlements, les dossiers et les protocoles "
+"cliniques"
 
 #. key: documentation-reports.text.use-cases
 msgid ""
 "to give your AI the context it needs to provide institution-specific, "
 "precise answers tailored to your clinic's standards."
 msgstr ""
+"pour fournir à votre IA le contexte dont elle a besoin afin de fournir des "
+"réponses précises et spécifiques à votre établissement, adaptées aux normes "
+"de votre clinique."
 
 #. key: documentation-reports.text.ai-helps-transform
 msgid "Your Context Library creates a"
-msgstr ""
+msgstr "Votre bibliothèque de contexte crée un"
 
 #. key: documentation-reports.text.clear-structured-confidential
 msgid "searchable, secure knowledge base"
-msgstr ""
+msgstr "base de connaissances sécurisée et consultable"
 
 #. key: documentation-reports.text.reports-automatically
 msgid "that enhances every AI interaction."
-msgstr ""
+msgstr "qui améliore chaque interaction avec l'IA."
 
 #. key: documentation-reports.text.data-processed-with
 msgid "All data is processed with"
@@ -62,7 +69,7 @@ msgstr "🚧"
 
 #. key: documentation-reports.chat.title
 msgid "Context Library"
-msgstr ""
+msgstr "Bibliothèque de contexte"
 
 #. key: documentation-reports.sections.in-development
 msgid "is an exciting new feature that’s currently in development."
@@ -75,6 +82,9 @@ msgid ""
 "We're building it to enhance AI precision, preserve institutional knowledge, "
 "and ensure every response aligns with your standards —"
 msgstr ""
+"Nous le développons afin d'améliorer la précision de l'IA, de préserver les "
+"connaissances institutionnelles et de garantir que chaque réponse soit "
+"conforme à vos normes."
 
 #. key: documentation-reports.text.stay-tuned
 msgid "stay tuned!"
