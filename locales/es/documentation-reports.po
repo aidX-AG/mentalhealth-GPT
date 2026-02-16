@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2026-02-16 13:10+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2026-02-16 13:17+0000\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "documentation-reports/es/>\n"
 "Language: es\n"
@@ -21,7 +21,7 @@ msgstr "Construya su base de conocimientos institucionales:"
 
 #. key: documentation-reports.text.professional-docs
 msgid "Upload guidelines, regulations, case files, and clinical protocols"
-msgstr "Subir directrices, normativas, expedientes y protocolos clínicos."
+msgstr "Subir directrices, normativas, expedientes y protocolos clínicos"
 
 #. key: documentation-reports.text.use-cases
 msgid ""
