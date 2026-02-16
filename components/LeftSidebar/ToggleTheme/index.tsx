@@ -13,6 +13,10 @@ const ToggleTheme = ({
     colorMode,
     setColorMode
   } = useColorMode();
+
+  // 🔴 DEBUG: Log colorMode during render to detect SSR/client mismatch
+  console.log("🎨 [ToggleTheme] colorMode:", colorMode, "visible:", visible);
+
   const items = [{
     title: t("Light"),
     icon: "sun",

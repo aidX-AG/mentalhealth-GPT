@@ -12,9 +12,15 @@ const AddFile = ({ disabled = false, onFileSelected }: AddFileProps) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleClick = () => {
-    console.log("[AddFile] handleClick called, disabled:", disabled, "onFileSelected:", typeof onFileSelected);
-    if (disabled) return;
+    console.log("🔴🔴🔴 [AddFile] CLICK HANDLER CALLED 🔴🔴🔴");
+    console.log("[AddFile] disabled:", disabled, "onFileSelected:", typeof onFileSelected);
+    if (disabled) {
+      console.log("[AddFile] Button is disabled, returning");
+      return;
+    }
+    console.log("[AddFile] Triggering input.click()");
     inputRef.current?.click();
+    console.log("[AddFile] input.click() completed");
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
