@@ -36,7 +36,7 @@
   "sign-in.button.loading": "Chargement…",
   "passkey.hero.title": "Configurez votre clé d'accès sécurisée pour smartphone",
   "passkey.hero.subtitle": "Utilisez votre smartphone avec FaceID ou TouchID comme clé sécurisée pour vous connecter à mentalhealthGPT.",
-  "passkey.signin.hero.title": "Connectez-vous à l'aide de votre passkey sécurisée pour smartphone.",
+  "passkey.signin.hero.title": "Connectez-vous à l'aide de votre passkey sécurisée pour smartphone",
   "passkey.signin.hero.subtitle": "Utilisez votre smartphone avec FaceID ou TouchID pour vous connecter à mentalhealthGPT.",
   "passkey.setup.title": "Configurez votre clé d'accès sur votre smartphone",
   "passkey.setup.body": "Scannez le code QR avec votre smartphone pour créer une clé d'accès sécurisée à l'aide de FaceID ou TouchID. Ce sera votre principale méthode de connexion.",

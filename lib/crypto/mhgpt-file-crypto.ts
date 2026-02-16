@@ -59,14 +59,14 @@ function fromB64(b64: string): Uint8Array {
   const bin = atob(b64);
   const out = new Uint8Array(bin.length);
   for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
-  return out;
+  return new Uint8Array(out.buffer as ArrayBuffer);
 }
 
 function concatBytes(a: Uint8Array, b: Uint8Array): Uint8Array {
   const out = new Uint8Array(a.length + b.length);
   out.set(a, 0);
   out.set(b, a.length);
-  return out;
+  return new Uint8Array(out.buffer as ArrayBuffer);
 }
 
 /**
@@ -102,7 +102,7 @@ function randomFileId(): string {
 
 async function readSlice(file: File, start: number, end: number): Promise<Uint8Array> {
   const ab = await file.slice(start, end).arrayBuffer();
-  return new Uint8Array(ab);
+  return new Uint8Array(ab as ArrayBuffer);
 }
 
 /* ----------------------------- Keying ----------------------------------- */
@@ -161,7 +161,7 @@ export async function encryptFileChunked(
     const ctBuf = await crypto.subtle.encrypt(
       { name: "AES-GCM", iv: nonce, additionalData: aad, tagLength: 128 },
       dek,
-      pt
+      pt as BufferSource
     );
     const ct = new Uint8Array(ctBuf);
 
@@ -214,9 +214,9 @@ export async function decryptToBlob(
     const ct = fromB64(r.ctB64);
 
     const ptBuf = await crypto.subtle.decrypt(
-      { name: "AES-GCM", iv: nonce, additionalData: aad, tagLength: 128 },
+      { name: "AES-GCM", iv: nonce as BufferSource, additionalData: aad as BufferSource, tagLength: 128 },
       dek,
-      ct
+      ct as BufferSource
     );
     parts.push(new Uint8Array(ptBuf));
   }

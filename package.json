@@ -46,6 +46,7 @@
     "lru-cache": "^11.1.0",
     "lucide-react": "0.525.0",
     "next": "14.2.3",
+    "pdfjs-dist": "^5.0.375",
     "rc-slider": "^10.1.1",
     "react": "^18",
     "react-copy-to-clipboard": "^5.1.0",
@@ -80,10 +81,12 @@
     "change-case": "^5.4.4",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.31",
+    "fake-indexeddb": "^6.0.0",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.1",
     "gettext-extractor": "^4.0.1",
     "gettext-parser": "^8.0.0",
+    "happy-dom": "^17.4.4",
     "postcss": "^8",
     "postcss-import": "^15.1.0",
     "tailwindcss": "^3.4.1",
@@ -92,8 +95,6 @@
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "vitest": "^3.1.1",
-    "happy-dom": "^17.4.4",
-    "fake-indexeddb": "^6.0.0",
     "yargs": "^18.0.0"
   }
 }

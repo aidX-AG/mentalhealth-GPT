@@ -66,11 +66,8 @@ export class NERClient {
     if (this.status === "ready" || this.status === "loading") return;
 
     try {
-      // Create worker — path will be resolved by bundler
-      this.worker = new Worker(
-        new URL("./ner-worker.ts", import.meta.url),
-        { type: "module" },
-      );
+      // Create worker — load from public/workers/ (not bundled)
+      this.worker = new Worker("/workers/ner-worker.mjs", { type: "module" });
 
       this.worker.onmessage = (event: MessageEvent<NERWorkerResponse>) => {
         this.handleMessage(event.data);

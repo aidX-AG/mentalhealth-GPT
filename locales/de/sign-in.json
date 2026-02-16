@@ -36,7 +36,7 @@
   "sign-in.button.loading": "Laden…",
   "passkey.hero.title": "Richten Sie Ihren sicheren Smartphone-Passkey ein",
   "passkey.hero.subtitle": "Verwenden Sie Ihr Smartphone mit FaceID oder TouchID als sicheren Schlüssel, um sich bei mentalhealthGPT anzumelden.",
-  "passkey.signin.hero.title": "Melden Sie sich mit Ihrem sicheren Smartphone-Passkey an.",
+  "passkey.signin.hero.title": "Melden Sie sich mit Ihrem sicheren Smartphone-Passkey an",
   "passkey.signin.hero.subtitle": "Verwenden Sie Ihr Smartphone mit FaceID oder TouchID, um sich bei mentalhealthGPT anzumelden.",
   "passkey.setup.title": "Richten Sie Ihren Passkey auf Ihrem Smartphone ein",
   "passkey.setup.body": "Scannen Sie den QR-Code mit Ihrem Smartphone, um einen sicheren Passkey mit FaceID oder TouchID zu erstellen. Dies wird Ihre primäre Anmeldemethode sein.",

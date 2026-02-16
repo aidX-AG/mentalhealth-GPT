@@ -18,7 +18,7 @@
 import Modal from "@/components/Modal";
 import Checkbox from "@/components/Checkbox";
 import { useI18n } from "@/lib/i18n-client";
-import type { ReviewItem } from "../../lib/pseudonymization";
+import type { ReviewItem } from "../../src/hooks/usePIIReview";
 
 type ModalPIIReviewProps = {
   visible: boolean;
@@ -66,9 +66,9 @@ const ModalPIIReview = ({
 
   // Confidence indicator
   const getConfidenceIndicator = (item: ReviewItem) => {
-    const isRegex = item.sources.includes("regex");
-    const isNER = item.sources.includes("ner");
-    const isDictionary = item.sources.includes("dictionary");
+    const isRegex = item.source === "regex";
+    const isNER = item.source === "ner";
+    const isDictionary = item.source === "dictionary";
 
     // Green: Regex or high-confidence NER
     if (isRegex || (isNER && item.confidence >= 0.85)) {

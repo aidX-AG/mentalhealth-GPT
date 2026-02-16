@@ -1,85 +1,74 @@
 // hooks/usePIIReview.ts
 // ============================================================================
-// SPEC-007 §8, §9.3 — PII Review State Management
-//
-// Manages the user's accept/reject decisions for detected PII items.
-// Each item starts with `accepted` set from `detection.defaultAccepted`:
-//   - Regex (confidence 1.0)       → accepted: true
-//   - NER ≥ 0.85                   → accepted: true
-//   - NER 0.60–0.85               → accepted: false  (user must confirm)
-//   - Dictionary (confidence 1.0)  → accepted: true
-//
-// Usage:
-//   const { items, toggleItem, acceptAll, rejectAll, acceptedDetections }
-//     = usePIIReview(detections);
+// SPEC-007 §8, §9.3 — PII Review State Management (id-based, SF-2 fix)
 // ============================================================================
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import type { DetectedPII } from "../../lib/pseudonymization";
 
-// ---------------------------------------------------------------------------
-// Types
-// ---------------------------------------------------------------------------
-
 export interface ReviewItem extends DetectedPII {
+  id: string;
   accepted: boolean;
 }
 
-// ---------------------------------------------------------------------------
-// Hook
-// ---------------------------------------------------------------------------
+// Helper: stable item id
+function itemId(d: DetectedPII): string {
+  return `${d.start}-${d.end}-${d.category}`;
+}
 
 export function usePIIReview(detections: DetectedPII[]) {
-  // Initialize accepted state from defaultAccepted (§8.2)
-  const [acceptedMap, setAcceptedMap] = useState<Record<number, boolean>>(() => {
-    const map: Record<number, boolean> = {};
-    for (let i = 0; i < detections.length; i++) {
-      map[i] = detections[i].defaultAccepted;
+  // Initialize from defaultAccepted
+  const [acceptedMap, setAcceptedMap] = useState<Record<string, boolean>>(() => {
+    const map: Record<string, boolean> = {};
+    for (const d of detections) {
+      map[itemId(d)] = d.defaultAccepted;
     }
     return map;
   });
 
+  // Re-init when detections change (contract: set detections BEFORE opening modal)
+  useEffect(() => {
+    const map: Record<string, boolean> = {};
+    for (const d of detections) {
+      map[itemId(d)] = d.defaultAccepted;
+    }
+    setAcceptedMap(map);
+  }, [detections]);
+
   // Merge detections + accepted state
   const items: ReviewItem[] = useMemo(
-    () =>
-      detections.map((d, i) => ({
-        ...d,
-        accepted: acceptedMap[i] ?? d.defaultAccepted,
-      })),
+    () => detections.map((d) => ({
+      ...d,
+      id: itemId(d),
+      accepted: acceptedMap[itemId(d)] ?? d.defaultAccepted,
+    })),
     [detections, acceptedMap],
   );
 
-  // Toggle a single item
-  const toggleItem = useCallback((index: number) => {
-    setAcceptedMap((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
+  // Toggle by id
+  const toggleItem = useCallback((id: string) => {
+    setAcceptedMap((prev) => ({ ...prev, [id]: !prev[id] }));
   }, []);
 
-  // Accept all items (including low-confidence)
+  // Accept all
   const acceptAll = useCallback(() => {
-    setAcceptedMap((prev) => {
-      const next: Record<number, boolean> = { ...prev };
-      for (let i = 0; i < detections.length; i++) {
-        next[i] = true;
-      }
+    setAcceptedMap(() => {
+      const next: Record<string, boolean> = {};
+      for (const d of detections) next[itemId(d)] = true;
       return next;
     });
-  }, [detections.length]);
+  }, [detections]);
 
-  // Reject all items
+  // Reject all
   const rejectAll = useCallback(() => {
-    setAcceptedMap((prev) => {
-      const next: Record<number, boolean> = { ...prev };
-      for (let i = 0; i < detections.length; i++) {
-        next[i] = false;
-      }
+    setAcceptedMap(() => {
+      const next: Record<string, boolean> = {};
+      for (const d of detections) next[itemId(d)] = false;
       return next;
     });
-  }, [detections.length]);
+  }, [detections]);
 
-  // Filtered list of accepted detections (for pseudonymize())
+  // Extract accepted detections for pseudonymize()
   const acceptedDetections: DetectedPII[] = useMemo(
     () => items.filter((item) => item.accepted),
     [items],
