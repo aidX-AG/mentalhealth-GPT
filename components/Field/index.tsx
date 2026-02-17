@@ -13,6 +13,7 @@ type FieldProps = {
     placeholder?: string;
     required?: boolean;
     icon?: string;
+    autoComplete?: string;
 };
 
 const Field = ({
@@ -27,6 +28,7 @@ const Field = ({
     placeholder,
     required,
     icon,
+    autoComplete,
 }: FieldProps) => {
     const handleKeyDown = (event: any) => {
         const remainingChars = 880 - value.length;
@@ -79,6 +81,7 @@ const Field = ({
                             onChange={onChange}
                             placeholder={placeholder}
                             required={required}
+                            autoComplete={autoComplete}
                         />
                     )}
                     <Icon
