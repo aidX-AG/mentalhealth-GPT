@@ -16,8 +16,7 @@ import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
 import Modal from "@/components/Modal";
 import AddChatList from "@/components/AddChatList";
-import { _ } from "@/lib/i18n/_";
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type ChatListType = {
   id: string;
@@ -36,18 +35,22 @@ const ChatList = ({ visible, items }: ChatListProps) => {
   const [visibleModal, setVisibleModal] = useState<boolean>(false);
   const pathname = usePathname();
 
+  // ✅ Hook-based translation (SSR-safe)
+  const t = useTranslation();
+
   return (
     <>
       <div className="mb-auto pb-6">
         <Disclosure defaultOpen={true}>
           <Disclosure.Button
-            className={`flex items-center w-full h-12 text-left base2 text-n-4/75 transition-colors hover:text-n-3 ${
+            className={twMerge(
+              "flex items-center w-full h-12 text-left base2 text-n-4/75 transition-colors hover:text-n-3",
               visible ? "justify-center px-3" : "px-5"
-            }`}
+            )}
           >
             <Icon
               className="fill-n-4 transition-transform ui-open:rotate-180"
-              name={t("arrow-down")}
+              name="arrow-down"
             />
             {!visible && <div className="ml-5">{t("Chat list")}</div>}
           </Disclosure.Button>
@@ -100,14 +103,16 @@ const ChatList = ({ visible, items }: ChatListProps) => {
         </Disclosure>
 
         <button
-          className={`group flex items-center w-full h-12 text-left base2 text-n-3/75 transition-colors hover:text-n-3 ${
+          type="button"
+          className={twMerge(
+            "group flex items-center w-full h-12 text-left base2 text-n-3/75 transition-colors hover:text-n-3",
             visible ? "justify-center px-3" : "px-5"
-          }`}
+          )}
           onClick={() => setVisibleModal(true)}
         >
           <Icon
             className="fill-n-4 transition-colors group-hover:fill-n-3"
-            name={t("plus-circle")}
+            name="plus-circle"
           />
           {!visible && <div className="ml-5">{t("New list")}</div>}
         </button>
