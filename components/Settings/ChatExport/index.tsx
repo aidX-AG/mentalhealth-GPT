@@ -204,7 +204,7 @@ const ChatExport = ({}: ChatExportProps) => {
           classOptions="min-w-full"
           items={typesFile}
           value={typeFile}
-          onChange={(item) => setTypeFileId(String(item.id))}
+          onChange={(item) => item && setTypeFileId(String(item.id))}
           up
         />
       </div>
