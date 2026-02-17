@@ -59,7 +59,7 @@ const User = ({ item }: UserProps) => {
           classOption="items-end caption1 font-semibold"
           items={typesAccess}
           value={typeAccess}
-          onChange={(value) => value && setTypeAccess(value)}
+          onChange={(value) => value && setTypeAccess(value as { id: string; title: string })}
         />
       )}
     </div>
