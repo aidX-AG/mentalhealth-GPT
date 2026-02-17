@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-05 14:34+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2026-02-18 13:43+0000\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/de_CH/>\n"
 "Language: de_CH\n"
@@ -869,7 +869,7 @@ msgstr ""
 "der Grammatikregeln helfen können."
 
 msgid "Light"
-msgstr "Licht"
+msgstr "hell"
 
 msgid "Light mode"
 msgstr "Hellmodus"
