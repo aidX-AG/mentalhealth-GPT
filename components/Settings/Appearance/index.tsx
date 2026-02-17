@@ -141,7 +141,7 @@ const Appearance = ({}: AppearanceProps) => {
           classButton="bg-n-3/75 dark:bg-n-6 dark:shadow-[inset_0_0_0_0.0625rem_#232627]"
           items={languages}
           value={language}
-          onChange={(item) => setLanguageId(String(item.id))}
+          onChange={(item) => item && setLanguageId(String(item.id))}
           up
         />
       </div>
