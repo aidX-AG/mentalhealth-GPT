@@ -21,7 +21,7 @@ import { useTranslation } from "@/lib/i18n/I18nContext";
  */
 
 type SelectOption = {
-  id: string;
+  id: string | number;
   title: string;
 };
 
