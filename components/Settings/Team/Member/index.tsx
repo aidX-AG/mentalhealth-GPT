@@ -1,28 +1,60 @@
 import { CSSProperties } from "react";
 import Image from "@/components/Image";
 import Actions from "../Actions";
-import { _ } from "@/lib/i18n/_";
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
+
+/**
+ * ============================================================================
+ * Team Member
+ * Version: v1.1 – 2026-02-17
+ * Notes:
+ * - Semantic alt text with title attribute for full name
+ * - "@" symbol not translated (punctuation)
+ * - No cursor-pointer (row is not clickable; Actions menu is)
+ * ============================================================================
+ */
+
 type MemberProps = {
   item: any;
   style: CSSProperties | undefined;
 };
-const Member = ({
-  item,
-  style
-}: MemberProps) => {
-  return <div className="group relative flex items-center py-6 border-t border-n-3 cursor-pointer xl:cursor-default dark:border-n-6" style={style}>
-            <div className="relative w-12 h-12 shrink-0">
-                <Image className="rounded-full object-cover" src={item.avatar} fill alt="" />
+
+const Member = ({ item, style }: MemberProps) => {
+  const t = useTranslation();
+
+  return (
+    <div
+      className="group relative flex items-center py-6 border-t border-n-3 xl:cursor-default dark:border-n-6"
+      style={style}
+    >
+      <div className="relative w-12 h-12 shrink-0">
+        <Image
+          className="rounded-full object-cover"
+          src={item.avatar}
+          fill
+          alt={t("Avatar")}
+          title={item.name}
+        />
+      </div>
+
+      <div className="grow px-4">
+        <div className="flex">
+          <div className="base1 font-semibold">{item.name}</div>
+          {item.admin && (
+            <div className="ml-2 px-3 py-0.5 bg-[#FF97E8] rounded caption1 font-semibold">
+              {t("Admin")}
             </div>
-            <div className="grow px-4">
-                <div className="flex">
-                    <div className="base1 font-semibold">{item.name}</div>
-                    {item.admin && <div className="ml-2 px-3 py-0.5 bg-[#FF97E8] rounded caption1 font-semibold">{t("Admin")}</div>}
-                </div>
-                <div className="caption1 text-n-4/50">{t("@")}{item.login}</div>
-            </div>
-            <Actions className="invisible opacity-0 transition-all group-hover:visible group-hover:opacity-100 xl:visible xl:opacity-100" />
-        </div>;
+          )}
+        </div>
+
+        <div className="caption1 text-n-4/50">
+          @{item.login}
+        </div>
+      </div>
+
+      <Actions className="invisible opacity-0 transition-all group-hover:visible group-hover:opacity-100 xl:visible xl:opacity-100" />
+    </div>
+  );
 };
+
 export default Member;
