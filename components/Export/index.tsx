@@ -34,14 +34,14 @@ const Export = ({ typeImage = false, onSelect }: ExportProps) => {
           </div>
 
           {item.list.map((x) => {
-            const key = String(x.id ?? x.title);
-            const isClickable = Boolean(onSelect && x.id);
+            const key = x.title;
+            const isClickable = false; // No IDs in export data
 
             return (
               <button
                 key={key}
                 type="button"
-                onClick={() => handleSelect(x.id)}
+                onClick={() => handleSelect(undefined)}
                 disabled={!isClickable}
                 aria-disabled={!isClickable}
                 className={[
