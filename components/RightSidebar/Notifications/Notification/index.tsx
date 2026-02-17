@@ -1,13 +1,18 @@
 import Link from "next/link";
 import Image from "@/components/Image";
-import { _ } from "@/lib/i18n/_";
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
+
 type NotificationProps = {
   item: any;
 };
+
 const Notification = ({
   item
-}: NotificationProps) => <Link className="flex items-center p-4 rounded-xl transition-colors hover:bg-n-2 md:hover:bg-transparent md:p-0 dark:hover:bg-n-6 dark:md:hover:bg-transparent" href={item.url}>
+}: NotificationProps) => {
+  // ✅ Hook-based translation (SSR-safe)
+  const t = useTranslation();
+
+  return <Link className="flex items-center p-4 rounded-xl transition-colors hover:bg-n-2 md:hover:bg-transparent md:p-0 dark:hover:bg-n-6 dark:md:hover:bg-transparent" href={item.url}>
         <div className="relative shrink-0 w-15 h-15 md:w-12 md:h-12">
             <Image className="rounded-full object-cover" src={item.avatar} fill alt={t("Avatar")} />
             {item.online && <div className="absolute right-0 bottom-0 w-4.5 h-4.5 rounded-full border-4 border-n-1 bg-primary-2 dark:border-n-7"></div>}
@@ -24,4 +29,6 @@ const Notification = ({
         </div>
         {item.new && <div className=" shrink-0 w-4 h-4 rounded-full bg-accent-1 md:w-3 md:h-3"></div>}
     </Link>;
+};
+
 export default Notification;

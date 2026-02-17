@@ -7,9 +7,7 @@ import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Users from "@/components/Users";
 import Notify from "@/components/Notify";
-import { _ } from "@/lib/i18n/_";
-
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type ChatItemProps = {
   item: any;
@@ -18,12 +16,16 @@ type ChatItemProps = {
 const ChatItem = ({ item }: ChatItemProps) => {
   const [active, setActive] = useState<boolean>(false);
 
+  // ✅ Hook-based translation (SSR-safe)
+  const t = useTranslation();
+
   const handleClick = () => {
     setActive(true);
     toast((toastInst) => (
       <Notify iconCheck>
         <div className="mr-6 ml-3 h6">{t("1 chat archived")}</div>
         <button
+          type="button"
           className="btn-blue btn-medium ml-3"
           onClick={() => toast.dismiss(toastInst.id)}
         >

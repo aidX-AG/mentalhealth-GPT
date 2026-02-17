@@ -11,17 +11,15 @@
 // - UI-Switch: refreshAuth() aktualisiert exakt den State, der Profile/index.tsx steuert
 // ============================================================================
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Modal from "@/components/Modal";
 import Settings from "@/components/Settings";
 import { settings } from "@/constants/settings";
-import { _ } from "@/lib/i18n/_";
+import { useTranslation } from "@/lib/i18n/I18nContext";
 import { logout } from "@/lib/auth/logout";
-
-const t = _;
 
 type Props = {
   user?: {
@@ -35,6 +33,9 @@ type Props = {
 const ProfileLoggedIn = ({ user, refreshAuth }: Props) => {
   const [visibleSettings, setVisibleSettings] = useState(false);
 
+  // ✅ Hook-based translation (SSR-safe)
+  const t = useTranslation();
+
   const handleLogout = async () => {
     try {
       await logout(); // POST /auth/logout (cookie + DB revoke)
@@ -43,18 +44,24 @@ const ProfileLoggedIn = ({ user, refreshAuth }: Props) => {
     }
   };
 
-  const menu = [
-    {
-      title: t("Settings"),
-      icon: "settings-fill",
-      onClick: () => setVisibleSettings(true),
-    },
-    {
-      title: t("Log out"),
-      icon: "logout",
-      onClick: handleLogout,
-    },
-  ];
+  // ✅ Stable menu array with stable keys
+  const menu = useMemo(
+    () => [
+      {
+        key: "settings" as const,
+        title: t("Settings"),
+        icon: "settings-fill",
+        onClick: () => setVisibleSettings(true),
+      },
+      {
+        key: "logout" as const,
+        title: t("Log out"),
+        icon: "logout",
+        onClick: handleLogout,
+      },
+    ],
+    [t, handleLogout]
+  );
 
   const title = user?.displayName || user?.email || t("Account");
 
@@ -98,9 +105,10 @@ const ProfileLoggedIn = ({ user, refreshAuth }: Props) => {
               </div>
 
               <div className="px-4 bg-n-2 rounded-xl dark:bg-n-6">
-                {menu.map((item, index) => (
-                  <Menu.Item key={index}>
+                {menu.map((item) => (
+                  <Menu.Item key={item.key}>
                     <button
+                      type="button"
                       className="group flex items-center w-full h-12 base2 font-semibold transition-colors hover:text-primary-1"
                       onClick={item.onClick}
                     >

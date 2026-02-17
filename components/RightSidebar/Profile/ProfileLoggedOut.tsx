@@ -6,32 +6,40 @@
 
 "use client";
 
+import { useMemo } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
-import { _ } from "@/lib/i18n/_";
+import { useTranslation } from "@/lib/i18n/I18nContext";
 import { usePathname } from "next/navigation";
-
-const t = _;
 
 const ProfileLoggedOut = () => {
   const pathname = usePathname() || "/";
   const m = pathname.match(/^\/(de|fr|es)(?:\/|$)/);
   const base = m ? `/${m[1]}` : "";
 
-  const menu = [
-    {
-      title: t("Log in"),
-      icon: "log-in",
-      onClick: () => (window.location.href = `${base}/sign-in`),
-    },
-    {
-      title: t("Create account"),
-      icon: "arrow-down-circle",
-      onClick: () =>
-        (window.location.href = `${base}/sign-in?tab=create-account`),
-    },
-  ];
+  // ✅ Hook-based translation (SSR-safe)
+  const t = useTranslation();
+
+  // ✅ Stable menu array with stable keys
+  const menu = useMemo(
+    () => [
+      {
+        key: "login" as const,
+        title: t("Log in"),
+        icon: "log-in",
+        onClick: () => (window.location.href = `${base}/sign-in`),
+      },
+      {
+        key: "create" as const,
+        title: t("Create account"),
+        icon: "arrow-down-circle",
+        onClick: () =>
+          (window.location.href = `${base}/sign-in?tab=create-account`),
+      },
+    ],
+    [t, base]
+  );
 
   return (
     <div className="relative z-10 mr-8 lg:mr-6 md:static">
@@ -84,9 +92,10 @@ const ProfileLoggedOut = () => {
             </div>
 
             <div className="px-4 bg-n-2 rounded-xl dark:bg-n-6">
-              {menu.map((item, index) => (
-                <Menu.Item key={index}>
+              {menu.map((item) => (
+                <Menu.Item key={item.key}>
                   <button
+                    type="button"
                     className="group flex items-center w-full h-12 base2 font-semibold transition-colors hover:text-primary-1"
                     onClick={item.onClick}
                   >

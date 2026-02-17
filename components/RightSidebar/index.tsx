@@ -23,8 +23,7 @@ import ChatEmpty from "./ChatEmpty";
 import { notifications } from "@/mocks/notifications";
 import { chatHistory } from "@/mocks/chatHistory";
 
-import { _ } from "@/lib/i18n/_";
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 // [NEU] LocaleLink für Buttons/Links
 import LocaleLink from "@/components/LocaleLink"; // bleibt
@@ -40,6 +39,9 @@ type RightSidebarProps = {
 const RightSidebar = ({ className, visible }: RightSidebarProps) => {
     const [clean, setClean] = useState<boolean>(false);
     const [visibleModal, setVisibleModal] = useState<boolean>(false);
+
+    // ✅ Hook-based translation (SSR-safe)
+    const t = useTranslation();
 
     const handleClickClear = (to: any) => {
         setClean(true);
@@ -63,6 +65,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                     <Profile />
                     {/* LangSwitcher wurde entfernt */}
                     <button
+                        type="button"
                         className="btn-dark btn-medium"
                         onClick={() => setVisibleModal(true)}
                     >
@@ -76,6 +79,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                     </div>
                     {!clean && (
                         <button
+                            type="button"
                             className="group relative ml-auto text-0"
                             onClick={() =>
                                 toast((to) => (
@@ -88,6 +92,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                                         </div>
                                         <div className="flex justify-center">
                                             <button
+                                                type="button"
                                                 className="btn-stroke-light btn-medium md:min-w-[6rem]"
                                                 onClick={() =>
                                                     toast.dismiss(to.id)
@@ -96,6 +101,7 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
                                                 {t("Cancel")}
                                             </button>
                                             <button
+                                                type="button"
                                                 className="btn-blue btn-medium ml-3 md:min-w-[6rem]"
                                                 onClick={() =>
                                                     handleClickClear(to)
