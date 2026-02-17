@@ -52,7 +52,7 @@ const Export = ({ typeImage = false, onSelect }: ExportProps) => {
                 ].join(" ")}
               >
                 <div className="relative shrink-0 flex items-center justify-center w-10 h-10 mr-4 rounded-full">
-                  {x.image && (
+                  {'image' in x && (
                     <Image
                       className="object-contain"
                       src={x.image}
@@ -60,14 +60,14 @@ const Export = ({ typeImage = false, onSelect }: ExportProps) => {
                       alt={x.title ?? ""}
                     />
                   )}
-                  {x.icon && (
+                  {'icon' in x && (
                     <Icon className="dark:fill-n-1" name={x.icon} aria-hidden="true" />
                   )}
                 </div>
 
                 <div className="text-left min-w-0">
                   <div className="base2 font-semibold truncate">{x.title}</div>
-                  {x.details && (
+                  {'details' in x && (
                     <div className="caption2 text-n-4/75 truncate">{x.details}</div>
                   )}
                 </div>
