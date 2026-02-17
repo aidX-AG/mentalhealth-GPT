@@ -1,110 +1,162 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "react-hot-toast";
 import Image from "@/components/Image";
 import Notify from "@/components/Notify";
 import ModalShareChat from "@/components/ModalShareChat";
-import { _ } from "@/lib/i18n/_";
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
-const t = _;
+type ActionsProps = {
+  copyText: string;
+  onRegenerate?: () => void;
+  onRate?: (value: "positive" | "negative") => void;
+  onArchive?: () => void;
+  onUndoArchive?: () => void;
+};
 
-type ActionsProps = {};
-
-const Actions = ({}: ActionsProps) => {
-  const [copied, setCopied] = useState<boolean>(false);
-  const [share, setShare] = useState<boolean>(false);
-  const [archive, setArchive] = useState<boolean>(false);
+const Actions = ({
+  copyText,
+  onRegenerate,
+  onRate,
+  onArchive,
+  onUndoArchive,
+}: ActionsProps) => {
+  const t = useTranslation();
+  const [mode, setMode] = useState<"idle" | "share" | "archive">("idle");
   const [visibleModal, setVisibleModal] = useState<boolean>(false);
 
-  const onCopy = () => {
-    setCopied(true);
+  const onCopy = useCallback(() => {
     toast(() => (
       <Notify iconCheck>
         <div className="ml-3 h6">{t("Content copied")}</div>
       </Notify>
     ));
-  };
+  }, [t]);
 
-  const handleClick = () => {
-    toast((_toast) => (
+  const handleArchive = useCallback(() => {
+    toast((toastObj) => (
       <Notify iconCheck>
         <div className="mr-6 ml-3 h6">{t("1 chat archived")}</div>
         <button
+          type="button"
           className="btn-blue btn-medium ml-3"
-          onClick={() => toast.dismiss(_toast.id)}
+          onClick={() => {
+            onUndoArchive?.();
+            toast.dismiss(toastObj.id);
+          }}
         >
           {t("Undo")}
         </button>
       </Notify>
     ));
-  };
+    onArchive?.();
+  }, [t, onArchive, onUndoArchive]);
+
+  const handleShareToggle = useCallback(() => {
+    setMode((m) => (m === "share" ? "idle" : "share"));
+    onRate?.("positive");
+  }, [onRate]);
+
+  const handleArchiveToggle = useCallback(() => {
+    setMode((m) => (m === "archive" ? "idle" : "archive"));
+    onRate?.("negative");
+  }, [onRate]);
+
+  const handleRegenerate = useCallback(() => {
+    onRegenerate?.();
+  }, [onRegenerate]);
+
+  const openModal = useCallback(() => {
+    setVisibleModal(true);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setVisibleModal(false);
+  }, []);
 
   const styleButton =
-    "h-6 ml-3 px-2 bg-n-3 rounded-md caption1 text-n-6 transition-colors hover:text-primary-1 md:h-8 dark:bg-n-7 dark:text-n-1";
+    "h-6 ml-3 px-2 bg-n-3 rounded-md caption1 text-n-6 transition-colors hover:text-primary-1 md:h-8 dark:bg-n-7 dark:text-n-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-1 focus-visible:ring-offset-2";
 
   return (
     <>
-      <CopyToClipboard text={t("Content")} onCopy={onCopy}>
-        <button className={`${styleButton} md:hidden`}>{t("Copy")}</button>
+      <CopyToClipboard text={copyText} onCopy={onCopy}>
+        <button type="button" className={`${styleButton} md:hidden`}>
+          {t("Copy")}
+        </button>
       </CopyToClipboard>
 
-      <button className={styleButton}>{t("Regenerate response")}</button>
+      <button type="button" className={styleButton} onClick={handleRegenerate}>
+        {t("Regenerate response")}
+      </button>
 
-      {!share && !archive && (
+      {mode === "idle" && (
         <div className="flex ml-3 px-1 space-x-1 bg-n-3 rounded-md md:hidden dark:bg-n-7">
-          <button onClick={() => setShare(true)}>
+          <button
+            type="button"
+            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-1 focus-visible:ring-offset-2 rounded"
+            onClick={handleShareToggle}
+            aria-label={t("Rate positively")}
+            aria-pressed={false}
+          >
             <Image
               src="/images/smile-heart-eyes.png"
               width={24}
               height={24}
-              alt={t("Smile heart eyes")}
+              alt=""
             />
           </button>
-          <button onClick={() => setArchive(true)}>
+          <button
+            type="button"
+            className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-1 focus-visible:ring-offset-2 rounded"
+            onClick={handleArchiveToggle}
+            aria-label={t("Rate negatively")}
+            aria-pressed={false}
+          >
             <Image
               src="/images/smile-unamused.png"
               width={24}
               height={24}
-              alt={t("Smile unamused")}
+              alt=""
             />
           </button>
         </div>
       )}
 
-      {share && (
+      {mode === "share" && (
         <button
+          type="button"
           className={`flex items-center ${styleButton} pl-1 md:hidden`}
-          onClick={() => setVisibleModal(true)}
+          onClick={openModal}
+          aria-pressed={true}
         >
           <Image
             src="/images/smile-heart-eyes.png"
             width={24}
             height={24}
-            alt={t("Smile heart eyes")}
+            alt=""
           />
           <span className="ml-2">{t("Share")}</span>
         </button>
       )}
 
-      {archive && (
+      {mode === "archive" && (
         <button
+          type="button"
           className={`flex items-center ${styleButton} pl-1 md:hidden`}
-          onClick={handleClick}
+          onClick={handleArchive}
+          aria-pressed={true}
         >
           <Image
             src="/images/smile-unamused.png"
             width={24}
             height={24}
-            alt={t("Smile unamused")}
+            alt=""
           />
           <span className="ml-2">{t("Archive chat")}</span>
         </button>
       )}
 
-      <ModalShareChat
-        visible={visibleModal}
-        onClose={() => setVisibleModal(false)}
-      />
+      <ModalShareChat visible={visibleModal} onClose={closeModal} />
     </>
   );
 };
