@@ -1,20 +1,15 @@
-import PageView from "@/templates/HomePage";
-import { loadMessages, makeT } from "@/lib/i18n-static";
-import { makeNavigation, NAV_KEYS } from "@/constants/navigation";
+import { redirect } from "next/navigation";
+
+/**
+ * ============================================================================
+ * Homepage Redirect
+ * Version: v1.0 – 2026-02-17
+ * Notes:
+ * - Avoid duplicate route without Providers
+ * - Single source of truth: "/" for EN default
+ * ============================================================================
+ */
 
 export default function Page() {
-  const messages = loadMessages("en");
-  const t = makeT(messages);
-
-  // Alle Keys einmal berühren, damit sie im POT landen
-  NAV_KEYS.forEach((k) => t(k));
-
-  return (
-    <PageView
-      heroTitle={t("homepage.sections.brand")}
-      heroSubtitle={t("homepage.sections.tagline")}
-      navigationItems={makeNavigation(t)}
-      inputPlaceholder={t("homepage.input.placeholder")}
-    />
-  );
+  redirect("/");
 }

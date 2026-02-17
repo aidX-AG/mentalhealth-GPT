@@ -1,13 +1,21 @@
-// app/de/page.tsx (DE)
+"use client";
+
 import PageView from "@/templates/HomePage";
-import { loadMessages, makeT } from "@/lib/i18n-static";
-import { makeNavigation, NAV_KEYS } from "@/constants/navigation";
+import { makeNavigation } from "@/constants/navigation";
+import { useTranslation } from "@/lib/i18n/I18nContext";
+
+/**
+ * ============================================================================
+ * DE Root Page
+ * Version: v1.0 – 2026-02-17
+ * Notes:
+ * - CRITICAL FIX: No loadMessages here (dict comes from app/de/layout.tsx Providers)
+ * - Uses Provider context for deterministic SSR + hydration stability
+ * ============================================================================
+ */
 
 export default function Page() {
-  const messages = loadMessages("de");
-  const t = makeT(messages);
-
-  NAV_KEYS.forEach((k) => t(k));
+  const t = useTranslation();
 
   return (
     <PageView
