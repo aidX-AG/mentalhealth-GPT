@@ -109,7 +109,7 @@ const AddChatList = ({ onCancel }: AddChatListProps) => {
           className="shrink-0 min-w-[14.5rem]"
           items={colors}
           value={color}
-          onChange={setColor}
+          onChange={(value) => value && setColor(value as ColorItem)}
         />
       </div>
 
