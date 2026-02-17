@@ -1,24 +1,55 @@
+import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
-import { _ } from "@/lib/i18n/_";
-const t = _;
+
 type NotifyProps = {
   className?: string;
   iconCheck?: boolean;
   iconDelete?: boolean;
   children: React.ReactNode;
+  variant?: "status" | "alert"; // optional, defaults to status
 };
+
 const Notify = ({
   className,
   iconCheck,
   iconDelete,
-  children
-}: NotifyProps) => <div className={`flex items-center p-4 rounded-2xl bg-n-7 text-n-1 md:-mb-5 ${className}`}>
-        {iconCheck && <div className="flex justify-center items-center shrink-0 w-10 h-10 rounded-full bg-primary-2">
-                <Icon className="fill-n-7" name={t("check-thin")} />
-            </div>}
-        {iconDelete && <div className="flex justify-center items-center shrink-0 w-10 h-10 rounded-full bg-accent-1">
-                <Icon className="fill-n-1" name={t("trash")} />
-            </div>}
-        {children}
-    </div>;
+  children,
+  variant = "status",
+}: NotifyProps) => {
+  // If both are set, prefer delete (or change to prefer check)
+  const showDelete = Boolean(iconDelete);
+  const showCheck = Boolean(iconCheck) && !showDelete;
+
+  return (
+    <div
+      className={twMerge(
+        "flex items-center gap-3 p-4 rounded-2xl bg-n-7 text-n-1 md:-mb-5",
+        className
+      )}
+      role={variant === "alert" ? "alert" : "status"}
+      aria-live="polite"
+    >
+      {showCheck && (
+        <div
+          className="flex justify-center items-center shrink-0 w-10 h-10 rounded-full bg-primary-2"
+          aria-hidden="true"
+        >
+          <Icon className="fill-n-7" name="check-thin" />
+        </div>
+      )}
+
+      {showDelete && (
+        <div
+          className="flex justify-center items-center shrink-0 w-10 h-10 rounded-full bg-accent-1"
+          aria-hidden="true"
+        >
+          <Icon className="fill-n-1" name="trash" />
+        </div>
+      )}
+
+      <div className="min-w-0">{children}</div>
+    </div>
+  );
+};
+
 export default Notify;

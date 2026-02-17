@@ -1,16 +1,47 @@
+import { twMerge } from "tailwind-merge";
 import Image from "@/components/Image";
-import { _ } from "@/lib/i18n/_";
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
+
 type UsersProps = {
-  items: Array<string>;
+  items: string[];
   borderColor?: string;
+  ariaLabel?: string; // optional: describe the group
 };
-const Users = ({
-  items,
-  borderColor
-}: UsersProps) => <div className="flex -mt-0.5 -ml-0.5">
-        {items.map((image, index) => <div className={`relative w-7 h-7 -ml-2.5 border-2 rounded-full first:ml-0 ${borderColor || "border-n-1 dark:border-n-6"}`} key={index}>
-                <Image className="rounded-full object-cover" src={image} fill alt={t("Avatar")} />
-            </div>)}
-    </div>;
+
+const Users = ({ items, borderColor, ariaLabel }: UsersProps) => {
+  const t = useTranslation();
+
+  if (!items || items.length === 0) return null;
+
+  const borderClass = borderColor ?? "border-n-1 dark:border-n-6";
+
+  return (
+    <div
+      className="flex -mt-0.5 -ml-0.5"
+      aria-label={ariaLabel ?? t("Avatars")}
+      role="group"
+    >
+      {items.map((src, index) => (
+        <div
+          // stable even if src duplicates
+          key={`${src}::${index}`}
+          className={twMerge(
+            "relative w-7 h-7 -ml-2.5 border-2 rounded-full first:ml-0",
+            borderClass
+          )}
+        >
+          <Image
+            className="rounded-full object-cover"
+            src={src}
+            fill
+            // decorative avatars in a group → avoid repeating "Avatar"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      ))}
+    </div>
+  );
+};
+
 export default Users;
