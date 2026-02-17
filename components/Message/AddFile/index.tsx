@@ -1,7 +1,6 @@
 import { ChangeEvent, useRef } from "react";
 import Icon from "@/components/Icon";
-import { _ } from "@/lib/i18n/_";
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type AddFileProps = {
   disabled?: boolean;
@@ -9,38 +8,21 @@ type AddFileProps = {
 };
 
 const AddFile = ({ disabled = false, onFileSelected }: AddFileProps) => {
+  const t = useTranslation();
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleClick = () => {
-    console.log("🔴🔴🔴 [AddFile] CLICK HANDLER CALLED 🔴🔴🔴");
-    console.log("[AddFile] disabled:", disabled, "onFileSelected:", typeof onFileSelected);
-    if (disabled) {
-      console.log("[AddFile] Button is disabled, returning");
-      return;
-    }
-    console.log("[AddFile] Triggering input.click()");
+    if (disabled) return;
     inputRef.current?.click();
-    console.log("[AddFile] input.click() completed");
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    console.log("[AddFile] handleChange called");
     const file = e.target.files?.[0];
-    console.log("[AddFile] file selected:", file?.name, file?.type, file?.size);
-    if (!file) {
-      console.log("[AddFile] No file selected");
-      return;
-    }
+    if (!file) return;
 
-    if (onFileSelected) {
-      console.log("[AddFile] Calling onFileSelected with file:", file.name);
-      onFileSelected(file);
-      console.log("[AddFile] onFileSelected completed");
-    } else {
-      console.log("[AddFile] ERROR: onFileSelected is undefined!");
-    }
+    onFileSelected?.(file);
 
-    // Reset, damit dieselbe Datei später nochmals gewählt werden kann
+    // Reset so the same file can be selected again later
     e.target.value = "";
   };
 

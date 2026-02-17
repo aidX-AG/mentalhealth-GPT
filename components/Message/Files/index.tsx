@@ -1,7 +1,6 @@
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
-import { _ } from "@/lib/i18n/_";
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type FilesProps = {
   image?: string;
@@ -15,32 +14,36 @@ const Files = ({
   document,
   onRemoveImage,
   onRemoveDocument,
-}: FilesProps) => (
-  <div className="p-4 border-b-2 border-n-3 dark:border-n-5">
-    {image && (
-      <div className="relative w-[11.25rem] h-[11.25rem]">
-        <Image
-          className="rounded-xl object-cover"
-          src={image}
-          fill
-          alt={t("Avatar")}
-        />
-        <button
-          type="button"
-          className="group absolute top-2 right-2 w-8 h-8 rounded-full bg-n-1 text-0 transition-colors hover:bg-accent-1"
-          onClick={onRemoveImage}
-          aria-label={t("Remove image")}
-        >
-          <Icon
-            className="w-4 h-4 fill-n-4 transition-colors group-hover:fill-n-1"
-            name={t("trash")}
-          />
-        </button>
-      </div>
-    )}
+}: FilesProps) => {
+  const t = useTranslation();
 
-    {document && (
-      <div className="flex items-center base1 font-semibold mt-3">
+  return (
+    <div className="p-4 border-b-2 border-n-3 dark:border-n-5">
+      {image && (
+        <div className="relative w-[11.25rem] h-[11.25rem]">
+          <Image
+            className="rounded-xl object-cover"
+            src={image}
+            fill
+            alt={t("Uploaded image")}
+          />
+          <button
+            type="button"
+            className="group absolute top-2 right-2 w-8 h-8 rounded-full bg-n-1 text-0 transition-colors hover:bg-accent-1"
+            onClick={onRemoveImage}
+            aria-label={t("Remove image")}
+          >
+            <Icon
+              className="w-4 h-4 fill-n-4 transition-colors group-hover:fill-n-1"
+              name="trash"
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+      )}
+
+      {document && (
+        <div className="flex items-center base1 font-semibold mt-3">
         <div className="w-[2.625rem] mr-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -69,12 +72,14 @@ const Files = ({
         >
           <Icon
             className="w-4 h-4 fill-n-4 transition-colors group-hover:fill-accent-1"
-            name={t("trash")}
+            name="trash"
+            aria-hidden="true"
           />
         </button>
       </div>
     )}
-  </div>
-);
+    </div>
+  );
+};
 
 export default Files;
