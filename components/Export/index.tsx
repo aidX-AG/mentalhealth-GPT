@@ -26,7 +26,7 @@ const Export = ({ typeImage = false, onSelect }: ExportProps) => {
     <div>
       {items.map((item) => (
         <div
-          key={String(item.id ?? item.title)}
+          key={item.title}
           className="mt-3 border-t border-n-3 dark:border-n-6"
         >
           <div className="flex items-center h-8 pl-3 caption1 font-semibold text-n-4/75">
