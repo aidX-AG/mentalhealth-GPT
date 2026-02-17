@@ -3,20 +3,13 @@ import Application from "./Application";
 import { applications } from "@/mocks/applications";
 import { useTranslation } from "@/lib/i18n/I18nContext";
 
-type ApplicationType = {
-  id: string;
-  installed: boolean;
-  [key: string]: unknown;
-};
-
 type ApplicationsProps = Record<string, never>;
 
 const Applications = ({}: ApplicationsProps) => {
   const t = useTranslation();
 
   const installedApps = applications.filter(
-    (app): app is ApplicationType =>
-      (app as ApplicationType).installed === true
+    (app) => app.installed === true
   );
 
   return (
