@@ -41,6 +41,7 @@ export default function FrenchLayout({ children }: { children: ReactNode }) {
   const messages = loadMessages("fr");
 
   return (
+    // eslint-disable-next-line react/no-children-prop
     <Providers locale="fr" dict={messages} children={children} />
   );
 }

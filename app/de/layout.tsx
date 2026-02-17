@@ -41,6 +41,7 @@ export default function GermanLayout({ children }: { children: ReactNode }) {
   const messages = loadMessages("de");
 
   return (
+    // eslint-disable-next-line react/no-children-prop
     <Providers locale="de" dict={messages} children={children} />
   );
 }

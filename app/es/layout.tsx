@@ -41,6 +41,7 @@ export default function SpanishLayout({ children }: { children: ReactNode }) {
   const messages = loadMessages("es");
 
   return (
+    // eslint-disable-next-line react/no-children-prop
     <Providers locale="es" dict={messages} children={children} />
   );
 }
