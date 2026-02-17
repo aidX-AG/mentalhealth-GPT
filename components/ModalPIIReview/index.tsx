@@ -133,8 +133,8 @@ const ModalPIIReview = ({
                   {/* Checkbox */}
                   <div className="pt-0.5">
                     <Checkbox
-                      value={item.accepted}
-                      onChange={() => onToggle(item.id)}
+                      checked={item.accepted}
+                      onCheckedChange={() => onToggle(item.id)}
                     />
                   </div>
 
