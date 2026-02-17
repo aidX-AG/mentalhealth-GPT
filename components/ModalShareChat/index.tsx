@@ -82,7 +82,7 @@ const ModalShareChat = ({ visible, onClose }: ModalShareChatProps) => {
           className="mb-8"
           items={people}
           selectedOptions={selectedOptions}
-          setSelectedOptions={setSelectedOptions}
+          setSelectedOptions={(options) => setSelectedOptions(options as PersonOption[])}
         />
 
         <div className="flex justify-end">
