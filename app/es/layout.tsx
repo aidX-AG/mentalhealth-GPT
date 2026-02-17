@@ -1,15 +1,16 @@
-// app/es/layout.tsx
-import { Suspense } from "react";
-import { Providers } from "../providers";
-import GlobalLoading from "../GlobalLoading";
-import { loadMessages } from "@/lib/i18n-static";
+import type { ReactNode } from "react";
 
-export default function SpanishLayout({ children }: { children: React.ReactNode }) {
-  const dict = loadMessages("es");
+/**
+ * ============================================================================
+ * Spanish Layout (Pass-through)
+ * Version: v1.0 – 2026-02-17
+ * Notes:
+ * - CRITICAL: No loadMessages() here
+ * - CRITICAL: No <Providers> here
+ * - Pages under /es own SSR i18n + Providers, matching root pattern
+ * ============================================================================
+ */
 
-  return (
-    <Suspense fallback={<GlobalLoading />}>
-      <Providers locale="es" dict={dict}>{children}</Providers>
-    </Suspense>
-  );
+export default function SpanishLayout({ children }: { children: ReactNode }) {
+  return children;
 }

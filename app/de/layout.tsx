@@ -1,15 +1,16 @@
-// app/de/layout.tsx
-import { Suspense } from "react";
-import { Providers } from "../providers";
-import GlobalLoading from "../GlobalLoading";
-import { loadMessages } from "@/lib/i18n-static";
+import type { ReactNode } from "react";
 
-export default function GermanLayout({ children }: { children: React.ReactNode }) {
-  const dict = loadMessages("de");
+/**
+ * ============================================================================
+ * German Layout (Pass-through)
+ * Version: v1.0 – 2026-02-17
+ * Notes:
+ * - CRITICAL: No loadMessages() here
+ * - CRITICAL: No <Providers> here
+ * - Pages under /de own SSR i18n + Providers, matching root pattern
+ * ============================================================================
+ */
 
-  return (
-    <Suspense fallback={<GlobalLoading />}>
-      <Providers locale="de" dict={dict}>{children}</Providers>
-    </Suspense>
-  );
+export default function GermanLayout({ children }: { children: ReactNode }) {
+  return children;
 }
