@@ -67,30 +67,9 @@ export default function RootLayout({
   // ⬇️ Strikt als Locale — vermeidet TS-Fehler
   const lang = getSafeLocale(params);
 
-  // Server-seitiges Dict + t()
-  const dict = loadMessages(lang);
-  const t = makeT(dict);
-
   return (
     <html lang={lang} suppressHydrationWarning>
-      <head>
-        {/* Meta: nur Inhalte übersetzen, Attribut-Namen bleiben statisch */}
-        <meta
-          name="description"
-          content={t("home.sections.tagline")}
-        />
-        <meta property="og:title" content={t("home.sections.brand")} /> {/* ✅ Korrigiert */}
-        <meta
-          property="og:description"
-          content={t("home.sections.tagline")}
-        />
-        <meta property="og:image" content="/images/logo.webp" />
-        <meta property="og:url" content="https://www.mentalhealth-gpt.ch" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+      {/* ✅ All meta tags handled by generateMetadata() above - removed manual duplicates */}
       <body
         suppressHydrationWarning
         className={`${karla.variable} ${inter.variable} bg-white text-black dark:bg-n-7 dark:text-n-1 font-sans text-[1rem] leading-6 -tracking-[.01em] antialiased`}
