@@ -178,7 +178,7 @@ const Audio = ({}: AudioProps) => {
           className="mr-4 mt-4 md:w-full md:mr-0"
           items={languages}
           value={language}
-          onChange={(item) => setLanguageId(String(item.id))}
+          onChange={(item) => item && setLanguageId(String(item.id))}
           small
           up
         />
@@ -187,7 +187,7 @@ const Audio = ({}: AudioProps) => {
           title={t("Speed")}
           items={speeds}
           value={speed}
-          onChange={(item) => setSpeedId(String(item.id))}
+          onChange={(item) => item && setSpeedId(String(item.id))}
           small
           up
         />
@@ -197,7 +197,7 @@ const Audio = ({}: AudioProps) => {
             title={t("Voice")}
             items={genders}
             value={gender}
-            onChange={(item) => setGenderId(String(item.id))}
+            onChange={(item) => item && setGenderId(String(item.id))}
             small
             up
           />
@@ -208,7 +208,7 @@ const Audio = ({}: AudioProps) => {
             className=""
             items={voices}
             value={voice}
-            onChange={(item) => setVoiceId(String(item.id))}
+            onChange={(item) => item && setVoiceId(String(item.id))}
             small
             up
           />
@@ -217,7 +217,7 @@ const Audio = ({}: AudioProps) => {
           className="mr-4 mt-4 md:w-full md:mr-0"
           items={smiles}
           value={smile}
-          onChange={(item) => setSmileId(String(item.id))}
+          onChange={(item) => item && setSmileId(String(item.id))}
           small
           up
         />
