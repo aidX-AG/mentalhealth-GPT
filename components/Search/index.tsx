@@ -44,8 +44,8 @@ type SearchGroup = {
 };
 
 type SearchFilters = {
-  createdBy?: string;
-  date?: string;
+  createdBy?: string | number;
+  date?: string | number;
 };
 
 type SearchProps = {
