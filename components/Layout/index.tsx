@@ -11,9 +11,7 @@ import RightSidebar from "@/components/RightSidebar";
 import Icon from "@/components/Icon";
 import Burger from "./Burger";
 
-// ✅ i18n: Title weiterhin per _, aber KEINE Übersetzung von Icon-Namen
-import { _ } from "@/lib/i18n/_";
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type LayoutProps = {
   smallSidebar?: boolean;
@@ -28,8 +26,10 @@ const Layout = ({
   backUrl,
   children,
 }: LayoutProps) => {
+  const t = useTranslation();
+
   // Sichtbarkeit linke Sidebar (kompakt oder groß)
-  const [visibleSidebar, setVisibleSidebar] = useState<any>(smallSidebar || false);
+  const [visibleSidebar, setVisibleSidebar] = useState<boolean>(smallSidebar || false);
   // Sichtbarkeit rechte Sidebar (Notifications/History)
   const [visibleRightSidebar, setVisibleRightSidebar] = useState<boolean>(false);
 

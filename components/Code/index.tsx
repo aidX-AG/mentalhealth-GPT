@@ -4,8 +4,7 @@ import { srcery } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { twMerge } from "tailwind-merge";
 import Icon from "@/components/Icon";
-import { _ } from "@/lib/i18n/_";
-const t = _;
+import { useTranslation } from "@/lib/i18n/I18nContext";
 type CodeType = {
   id: string;
   title: string;
@@ -18,6 +17,7 @@ type CodeProps = {
 const Code = ({
   items
 }: CodeProps) => {
+  const t = useTranslation();
   const [value, setValue] = useState<string>("0");
   const [copied, setCopied] = useState<boolean>(false);
   const onCopy = () => {
@@ -30,13 +30,13 @@ const Code = ({
             <div className="rounded-xl overflow-hidden">
                 <div className="flex items-center pl-2 pr-4 py-1 bg-n-6">
                     <div className="flex mr-auto md:mr-0 md:w-full">
-                        {items.map(item => <button className={twMerge(`min-w-[9rem] h-8 rounded-lg caption1 font-semibold text-n-4 transition-colors hover:text-n-1 2xl:min-w-[1rem] md:basis-1/3 ${value === item.id && "bg-n-5 text-n-1"}`)} key={item.id} onClick={() => setValue(item.id)}>
+                        {items.map(item => <button type="button" className={twMerge(`min-w-[9rem] h-8 rounded-lg caption1 font-semibold text-n-4 transition-colors hover:text-n-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-1 2xl:min-w-[1rem] md:basis-1/3 ${value === item.id && "bg-n-5 text-n-1"}`)} key={item.id} onClick={() => setValue(item.id)}>
                                 {item.title}
                             </button>)}
                     </div>
                     {copied ? <div className="flex items-center caption1 font-semibold text-n-1">
-                            <Icon className="w-4 h-4 mr-1 fill-n-1" name={t("check-thin")} />{t("Copied!")}</div> : items.filter(x => x.id === value).map(item => <CopyToClipboard key={item.id} text={item.value} onCopy={onCopy}>
-                                    <button className="shrink-0 ml-3 caption1 font-semibold text-n-1 transition-colors hover:text-primary-1 md:hidden">{t("Copy code")}</button>
+                            <Icon className="w-4 h-4 mr-1 fill-n-1" name="check-thin" aria-hidden="true" />{t("Copied!")}</div> : items.filter(x => x.id === value).map(item => <CopyToClipboard key={item.id} text={item.value} onCopy={onCopy}>
+                                    <button type="button" className="shrink-0 ml-3 caption1 font-semibold text-n-1 transition-colors hover:text-primary-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-1 md:hidden">{t("Copy code")}</button>
                                 </CopyToClipboard>)}
                 </div>
                 <div className="max-h-[17.625rem] overflow-auto md:max-h-[20rem]">
@@ -52,9 +52,9 @@ const Code = ({
                 </div>
             </div>
             <div className="">{t("Note: This is just an example of a simple HTML form. In a real-world scenario, you would also want to include proper validation and handling of the form data on the server side.")}</div>
-            <div className="flex justify-between items-center pl-4 pr-1 py-1 rounded-xl bg-n-1 shadow-[0_0_1rem_0.5rem_rgba(0,0,0,0.07)] dark:bg-n-6/50">{t("I have created a project in your Codepen account")}<button className="shrink-0 btn-dark btn-medium ml-4">
+            <div className="flex justify-between items-center pl-4 pr-1 py-1 rounded-xl bg-n-1 shadow-[0_0_1rem_0.5rem_rgba(0,0,0,0.07)] dark:bg-n-6/50">{t("I have created a project in your Codepen account")}<button type="button" className="shrink-0 btn-dark btn-medium ml-4">
                     <span>{t("View")}</span>
-                    <Icon name={t("external-link")} />
+                    <Icon name="external-link" />
                 </button>
             </div>
         </div>;
