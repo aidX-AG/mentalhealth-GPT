@@ -78,8 +78,8 @@ const Search = ({ items, onSearch }: SearchProps) => {
   // Search state
   const [search, setSearch] = useState<string>("");
   const [searchTitle, setSearchTitle] = useState<string>("");
-  const [createdById, setCreatedById] = useState<string | undefined>(undefined);
-  const [dateId, setDateId] = useState<string | undefined>(undefined);
+  const [createdById, setCreatedById] = useState<string | number | undefined>(undefined);
+  const [dateId, setDateId] = useState<string | number | undefined>(undefined);
 
   // Unique IDs for inputs
   const searchMainId = useId();
