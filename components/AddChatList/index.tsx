@@ -124,7 +124,7 @@ const AddChatList = ({ onCancel }: AddChatListProps) => {
             classMultiSelectGlobal="multiselect-access"
             items={people}
             selectedOptions={selectedOptions}
-            setSelectedOptions={setSelectedOptions}
+            setSelectedOptions={(options) => setSelectedOptions(options as PersonOption[])}
           />
 
           <Select
@@ -134,7 +134,7 @@ const AddChatList = ({ onCancel }: AddChatListProps) => {
             classOption="items-end caption1 font-semibold"
             items={typesAccess}
             value={typeAccess}
-            onChange={setTypeAccess}
+            onChange={(value) => value && setTypeAccess(value as AccessItem)}
           />
         </div>
 
