@@ -9,9 +9,24 @@ type AnswerProps = {
   loading?: boolean;
   time?: string;      // NOTE: should be pre-formatted/stable string
   onPause?: () => void;
+  copyText?: string;
+  onRegenerate?: () => void;
+  onRate?: (value: "positive" | "negative") => void;
+  onArchive?: () => void;
+  onUndoArchive?: () => void;
 };
 
-const Answer = ({ children, loading = false, time, onPause }: AnswerProps) => {
+const Answer = ({
+  children,
+  loading = false,
+  time,
+  onPause,
+  copyText = "",
+  onRegenerate,
+  onRate,
+  onArchive,
+  onUndoArchive,
+}: AnswerProps) => {
   const t = useTranslation();
   const canPause = typeof onPause === "function";
   const hasTime = typeof time === "string" && time.trim().length > 0;
@@ -67,7 +82,13 @@ const Answer = ({ children, loading = false, time, onPause }: AnswerProps) => {
                 {time}
               </div>
             )}
-            <Actions />
+            <Actions
+              copyText={copyText}
+              onRegenerate={onRegenerate}
+              onRate={onRate}
+              onArchive={onArchive}
+              onUndoArchive={onUndoArchive}
+            />
           </div>
         )}
       </div>
