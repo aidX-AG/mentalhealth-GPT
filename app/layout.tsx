@@ -74,25 +74,6 @@ export default function RootLayout({
   return (
     <html lang={lang} suppressHydrationWarning>
       <head>
-        {/* ✅ Einziger i18n-Script-Block: pfadsensitiv, ändert KEINE DOM-Attribute */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function () {
-                try {
-                  var seg = (location.pathname.split('/')[1] || '').toLowerCase();
-                  var current = (seg === 'de' || seg === 'fr') ? seg : '${lang}';
-                  var dicts = {
-                    en: ${JSON.stringify(loadMessages("en"))},
-                    de: ${JSON.stringify(loadMessages("de"))},
-                    fr: ${JSON.stringify(loadMessages("fr"))}
-                  };
-                  window.__I18N__ = { locale: current, dict: dicts[current] || dicts['en'] };
-                } catch (e) {}
-              })();
-            `,
-          }}
-        />
         {/* Meta: nur Inhalte übersetzen, Attribut-Namen bleiben statisch */}
         <meta
           name="description"
