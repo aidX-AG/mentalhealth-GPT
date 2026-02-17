@@ -99,11 +99,13 @@ const Search = ({ items, onSearch }: SearchProps) => {
   );
 
   // Toggle-off: re-clicking same filter clears it
-  const handleCreatedByChange = useCallback((item: SelectOption) => {
+  const handleCreatedByChange = useCallback((item: SelectOption | null) => {
+    if (!item) return;
     setCreatedById((prev) => (prev === item.id ? undefined : item.id));
   }, []);
 
-  const handleDateChange = useCallback((item: SelectOption) => {
+  const handleDateChange = useCallback((item: SelectOption | null) => {
+    if (!item) return;
     setDateId((prev) => (prev === item.id ? undefined : item.id));
   }, []);
 
