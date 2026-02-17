@@ -1,35 +1,40 @@
 "use client";
 
+import { useMemo } from "react";
 import Layout from "@/components/Layout";
 import Main from "./Main";
+import { useTranslation } from "@/lib/i18n/I18nContext";
+import { makeNavigation } from "@/constants/navigation";
 
-type NavItem = {
-  title: string;
-  icon: string;
-  color: string;
-  url: string;
-};
+/**
+ * ============================================================================
+ * HomePage Template
+ * Version: v1.4 – 2026-02-17
+ * Notes:
+ * - Client component: i18n comes from context (no SSR props required)
+ * - Single source of truth: Layout's Provider
+ * - Avoid "children=" anti-pattern → use <Layout>...</Layout>
+ * - Memoize derived UI props for stability/performance
+ * ============================================================================
+ */
 
-type Props = {
-  heroTitle: string;
-  heroSubtitle: string;
-  navigationItems: NavItem[];
-  inputPlaceholder?: string; // ⬅️ NUR DIESE ZEILE HINZUFÜGEN
-};
+const HomePage = () => {
+  const t = useTranslation();
 
-const HomePage = ({ 
-  heroTitle, 
-  heroSubtitle, 
-  navigationItems, 
-  inputPlaceholder // ⬅️ NUR DIESE ZEILE HINZUFÜGEN
-}: Props) => {
+  const heroTitle = useMemo(() => t("homepage.sections.brand"), [t]);
+  const heroSubtitle = useMemo(() => t("homepage.sections.tagline"), [t]);
+  const inputPlaceholder = useMemo(() => t("homepage.input.placeholder"), [t]);
+
+  // Navigation depends on t() and should not be re-created every render
+  const navigationItems = useMemo(() => makeNavigation(t), [t]);
+
   return (
     <Layout>
       <Main
         heroTitle={heroTitle}
         heroSubtitle={heroSubtitle}
         items={navigationItems}
-        inputPlaceholder={inputPlaceholder} // ⬅️ NUR DIESE ZEILE HINZUFÜGEN
+        inputPlaceholder={inputPlaceholder}
       />
     </Layout>
   );

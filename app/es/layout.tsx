@@ -1,19 +1,22 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { loadMessages, makeT } from "@/lib/i18n-static";
+import { Providers } from "../providers";
 
 /**
  * ============================================================================
  * Spanish Layout
- * Version: v1.1 – 2026-02-17
+ * Version: v1.2 – 2026-02-17
  * Notes:
  * - Provides ES-specific metadata (overrides root layout)
- * - Pages under /es own SSR i18n + Providers
+ * - CRITICAL: Wrap children with <Providers> so useTranslation()/useI18n() works
+ * - Dict is loaded ONCE per request in layout and passed to Providers
  * ============================================================================
  */
 
 export function generateMetadata(): Metadata {
-  const t = makeT(loadMessages("es"));
+  const messages = loadMessages("es");
+  const t = makeT(messages);
 
   return {
     title: {
@@ -35,5 +38,9 @@ export function generateMetadata(): Metadata {
 }
 
 export default function SpanishLayout({ children }: { children: ReactNode }) {
-  return children;
+  const messages = loadMessages("es");
+
+  return (
+    <Providers locale="es" dict={messages} children={children} />
+  );
 }

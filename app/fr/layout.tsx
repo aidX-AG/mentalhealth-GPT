@@ -1,19 +1,22 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { loadMessages, makeT } from "@/lib/i18n-static";
+import { Providers } from "../providers";
 
 /**
  * ============================================================================
  * French Layout
- * Version: v1.1 – 2026-02-17
+ * Version: v1.2 – 2026-02-17
  * Notes:
  * - Provides FR-specific metadata (overrides root layout)
- * - Pages under /fr own SSR i18n + Providers
+ * - CRITICAL: Wrap children with <Providers> so useTranslation()/useI18n() works
+ * - Dict is loaded ONCE per request in layout and passed to Providers
  * ============================================================================
  */
 
 export function generateMetadata(): Metadata {
-  const t = makeT(loadMessages("fr"));
+  const messages = loadMessages("fr");
+  const t = makeT(messages);
 
   return {
     title: {
@@ -35,5 +38,9 @@ export function generateMetadata(): Metadata {
 }
 
 export default function FrenchLayout({ children }: { children: ReactNode }) {
-  return children;
+  const messages = loadMessages("fr");
+
+  return (
+    <Providers locale="fr" dict={messages} children={children} />
+  );
 }
