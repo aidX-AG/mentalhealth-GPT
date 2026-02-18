@@ -92,7 +92,7 @@ const Video = ({ onDownload }: VideoProps) => {
           classOptions="min-w-[12rem]"
           items={languages}
           value={language}
-          onChange={(item) => setLanguageId(item.id)}
+          onChange={(item) => item && setLanguageId(String(item.id))}
           small
           up
         />
@@ -103,7 +103,7 @@ const Video = ({ onDownload }: VideoProps) => {
           className="mr-4 mt-4"
           items={voices}
           value={voice}
-          onChange={(item) => setVoiceId(item.id)}
+          onChange={(item) => item && setVoiceId(String(item.id))}
           small
           up
         />
