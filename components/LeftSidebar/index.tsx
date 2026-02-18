@@ -11,8 +11,8 @@ import Navigation from "./Navigation";
 import ChatList from "./ChatList";
 import Profile from "./Profile";
 import ToggleTheme from "./ToggleTheme";
-import { chatList } from "@/mocks/chatList";
-import { resultSearch } from "@/mocks/resultSearch";
+import { getChatList } from "@/mocks/chatList";
+import { getResultSearch } from "@/mocks/resultSearch";
 import { settings } from "@/constants/settings";
 import { twMerge } from "tailwind-merge";
 
@@ -35,6 +35,9 @@ const LeftSidebar = ({
   // 🔴 FIX: SSR-safe locale + translation via Context (no document access during render)
   const locale = useLocale();
   const t = useTranslation();
+
+  const chatList = getChatList(t);
+  const resultSearch = getResultSearch(t);
 
   const [visibleSearch, setVisibleSearch] = useState<boolean>(false);
   const [visibleSettings, setVisibleSettings] = useState<boolean>(false);

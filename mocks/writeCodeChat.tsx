@@ -1,5 +1,3 @@
-import { _ } from "@/lib/i18n/_";
-const t = _;
 const htmlCode = `<!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +22,7 @@ const cssCode = `.welcome-message {
     text-align: center;
     margin-top: 50px;
 }
-  
+
 form {
     margin: 50px auto;
     width: 80%;
@@ -33,12 +31,12 @@ form {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-  
+
 label {
     display: block;
     margin-bottom: 10px;
 }
-  
+
 input, select {
     width: 100%;
     padding: 10px;
@@ -46,12 +44,12 @@ input, select {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-  
+
 .buttons {
     display: flex;
     justify-content: space-between;
 }
-  
+
 .cancel-button {
     background-color: #ccc;
     color: #fff;
@@ -60,7 +58,7 @@ input, select {
     border-radius: 5px;
     cursor: pointer;
 }
-  
+
 .send-button {
     background-color: #4CAF50;
     color: #fff;
@@ -71,23 +69,23 @@ input, select {
 }`;
 const jsCode = `const form = document.querySelector('form');
 const cancelButton = document.querySelector('.cancel-button');
-        
+
 cancelButton.addEventListener('click', () => {
     form.reset();
 });`;
 export const writeCodeChat = [{
   id: "0",
-  title: t("HTML"),
+  title: "HTML",
   language: "html",
   value: htmlCode
 }, {
   id: "1",
-  title: t("CSS"),
+  title: "CSS",
   language: "css",
   value: cssCode
 }, {
   id: "2",
-  title: t("JS"),
+  title: "JS",
   language: "javascript",
   value: jsCode
 }];

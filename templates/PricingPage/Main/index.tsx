@@ -11,7 +11,8 @@ import { useState } from "react";
 import Radio from "@/components/Radio";
 import Package from "./Package";
 import Features from "./Features";
-import { price, featuresPrice } from "@/mocks/price";
+import { getPrice, getFeaturesPrice } from "@/mocks/price";
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type MainProps = {
   title: string;
@@ -52,6 +53,10 @@ const Main = ({
   viaEmailLabel,
   chat247Label,
 }: MainProps) => {
+  const t = useTranslation();
+  const price = getPrice(t);
+  const featuresPrice = getFeaturesPrice(t);
+
   const [plan, setPlan] = useState(false);
 
   return (

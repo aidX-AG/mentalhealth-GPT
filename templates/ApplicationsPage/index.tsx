@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation";
 import Layout from "@/components/Layout";
 import Icon from "@/components/Icon";
 import Application from "./Application";
-import { applications } from "@/mocks/applications";
+import { getApplications } from "@/mocks/applications";
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type Props = {
   title: string;
@@ -24,6 +25,9 @@ const ApplicationsPage = ({
   addLabel,
   addedLabel,
 }: Props) => {
+  const t = useTranslation();
+  const applications = getApplications(t);
+
   const [search, setSearch] = useState<string>("");
   const router = useRouter();
 

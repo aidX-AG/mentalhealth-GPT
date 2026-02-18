@@ -10,7 +10,8 @@ import SocialsPost from "@/components/SocialsPost";
 import SchedulePost from "@/components/SchedulePost";
 import ScheduleResult from "@/components/ScheduleResult";
 
-import { socailsPost } from "@/mocks/socialsPost";
+import { getSocialsPost } from "@/mocks/socialsPost";
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type Props = {
   chatTitle: string;
@@ -23,6 +24,9 @@ const GenerationSocialsPostPage = ({
   promptContent,
   promptTime,
 }: Props) => {
+  const t = useTranslation();
+  const socailsPost = getSocialsPost(t);
+
   const [message, setMessage] = useState<string>("");
 
   return (

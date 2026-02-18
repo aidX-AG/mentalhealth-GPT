@@ -17,6 +17,7 @@
 import { useCallback, useState } from "react";
 import { usePseudonymization } from "@/hooks/usePseudonymization";
 import { usePIIReview } from "@/hooks/usePIIReview";
+import { uploadEncrypted } from "@/lib/upload/mhgpt-upload-client";
 import {
   validateFile,
   extractText,
@@ -86,27 +87,19 @@ export function useFileUploadFlow() {
   }, []);
 
   // -----------------------------------------------------------------------
-  // Actual upload — console.log stub (replace with encrypt + upload later)
+  // Actual upload — encrypt + 3-phase upload (SPEC-002/003)
   // SF-7: NEVER log file.name — filename is PII metadata
   // -----------------------------------------------------------------------
   const doUpload = useCallback(
-    async (text: string, accepted: DetectedPII[]): Promise<boolean> => {
-      const buffer = new TextEncoder().encode(text).buffer;
+    async (text: string, _accepted: DetectedPII[]): Promise<boolean> => {
+      // TextEncoder().encode().buffer returns ArrayBufferLike — slice to plain ArrayBuffer
+      const encoded = new TextEncoder().encode(text);
+      const buffer = encoded.buffer.slice(
+        encoded.byteOffset,
+        encoded.byteOffset + encoded.byteLength,
+      ) as ArrayBuffer;
 
-      if (process.env.NODE_ENV === "development") {
-        console.log(
-          "[file-upload] size:",
-          buffer.byteLength,
-          "bytes,",
-          accepted.length,
-          "PII items accepted",
-        );
-      }
-
-      // TODO: encryptContent(buffer, dek, { mimeType: "text/plain", ... })
-      //       + Dual-DEK wrap + 3-phase upload (SPEC-002/003 integration)
-      //       The original filename is NOT sent to the server.
-      //       Only pseudonymized text/plain content is uploaded.
+      await uploadEncrypted(buffer, { mimeType: "text/plain" });
       return true;
     },
     [],

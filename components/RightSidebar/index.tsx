@@ -20,7 +20,7 @@ import Profile from "./Profile";
 import ChatItem from "./ChatItem";
 import ChatEmpty from "./ChatEmpty";
 
-import { notifications } from "@/mocks/notifications";
+import { getNotifications } from "@/mocks/notifications";
 import { getChatHistory } from "@/mocks/chatHistory";
 
 import { useTranslation } from "@/lib/i18n/I18nContext";
@@ -51,8 +51,9 @@ const RightSidebar = ({ className, visible }: RightSidebarProps) => {
     // aktuelle Locale aus <html lang>
     const locale = getClientLocale(); // "de" | "fr" | "en" | "es"
 
-    // Chat-History mit Live-Übersetzung (render-time, nicht module-level)
+    // Chat-History + Notifications mit Live-Übersetzung (render-time, nicht module-level)
     const chatHistory = getChatHistory(t);
+    const notifications = getNotifications(t);
 
     return (
         <>

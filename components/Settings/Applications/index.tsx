@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Application from "./Application";
-import { applications } from "@/mocks/applications";
+import { getApplications } from "@/mocks/applications";
 import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type ApplicationsProps = Record<string, never>;
 
 const Applications = ({}: ApplicationsProps) => {
   const t = useTranslation();
+  const applications = getApplications(t);
 
   const installedApps = applications.filter(
     (app) => app.installed === true
