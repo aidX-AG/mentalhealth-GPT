@@ -20,7 +20,13 @@ const AddFile = ({ disabled = false, onFileSelected }: AddFileProps) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    onFileSelected?.(file);
+    console.log("[AddFile] file selected — type:", file.type || "(empty)", "size:", file.size, "name-ext:", file.name.slice(file.name.lastIndexOf(".")));
+
+    // Await the async upload flow so unhandled rejections surface in console
+    const result = onFileSelected?.(file);
+    if (result instanceof Promise) {
+      result.catch((err) => console.error("[AddFile] upload flow error:", err));
+    }
 
     // Reset so the same file can be selected again later
     e.target.value = "";

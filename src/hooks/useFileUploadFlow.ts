@@ -92,6 +92,7 @@ export function useFileUploadFlow() {
   // -----------------------------------------------------------------------
   const doUpload = useCallback(
     async (text: string, _accepted: DetectedPII[]): Promise<boolean> => {
+      console.log("[upload] doUpload — text length:", text.length, "accepted:", _accepted.length);
       // TextEncoder().encode().buffer returns ArrayBufferLike — slice to plain ArrayBuffer
       const encoded = new TextEncoder().encode(text);
       const buffer = encoded.buffer.slice(
@@ -100,6 +101,7 @@ export function useFileUploadFlow() {
       ) as ArrayBuffer;
 
       await uploadEncrypted(buffer, { mimeType: "text/plain" });
+      console.log("[upload] uploadEncrypted OK");
       return true;
     },
     [],
@@ -112,15 +114,18 @@ export function useFileUploadFlow() {
     async (selectedFile: File) => {
       reset();
       setFile(selectedFile);
+      console.log("[upload] handleFileSelected — type:", selectedFile.type || "(empty)", "size:", selectedFile.size);
 
       // Validate
       setPhase("validating");
       const validation = validateFile(selectedFile);
       if (!validation.valid) {
+        console.warn("[upload] validation failed:", validation.errorKey);
         setError(validation.errorKey!);
         setPhase("idle");
         return;
       }
+      console.log("[upload] validation OK");
 
       // Extract text
       setPhase("extracting");
@@ -135,8 +140,10 @@ export function useFileUploadFlow() {
         );
         rawText = result.text;
         boundaries = result.boundaries;
+        console.log("[upload] extracted", rawText.length, "chars");
 
         if (rawText.trim().length === 0) {
+          console.warn("[upload] extracted text is empty");
           setError("pseudonymization.file.error-no-text");
           setPhase("idle");
           return;
@@ -156,21 +163,29 @@ export function useFileUploadFlow() {
 
       // Detect PII (ALWAYS on escaped text — Golden Rule invariant)
       setPhase("detecting");
+      console.log("[upload] detecting PII...");
       const detected = await detectPII(escaped);
+      console.log("[upload] detected", detected.length, "PII items");
       setDetections(detected);
 
       if (detected.length === 0) {
         // No PII → upload directly
+        console.log("[upload] no PII → uploading directly");
         setPhase("uploading");
         setUploading(true);
         try {
           await doUpload(escaped, []);
+          console.log("[upload] upload complete (no-PII path)");
+        } catch (err) {
+          console.error("[upload] doUpload failed:", err);
+          setError("pseudonymization.file.error-upload");
         } finally {
           reset();
         }
         return;
       }
 
+      console.log("[upload] PII found → showing review modal");
       setPhase("review");
       setReviewVisible(true);
     },

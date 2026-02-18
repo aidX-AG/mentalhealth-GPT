@@ -125,3 +125,43 @@ msgstr ""
 #. key: pseudonymization.review.no-detections
 msgid "No personal information detected."
 msgstr ""
+
+#. key: pseudonymization.buttons.reject-all
+msgid "Reject all"
+msgstr ""
+
+#. key: pseudonymization.file.error-type
+msgid "Unsupported file type. Please upload a .txt or .pdf file."
+msgstr ""
+
+#. key: pseudonymization.file.error-size
+msgid "File is too large. Maximum size: 10 MB for text files, 50 MB for PDFs."
+msgstr ""
+
+#. key: pseudonymization.file.error-no-text
+msgid "No text could be extracted from this file."
+msgstr ""
+
+#. key: pseudonymization.file.error-extraction
+msgid "Could not read the file. Please try a different file."
+msgstr ""
+
+#. key: pseudonymization.file.error-upload
+msgid "Upload failed. Please check your connection and try again."
+msgstr ""
+
+#. key: pseudonymization.file.phase-validating
+msgid "Validating file…"
+msgstr ""
+
+#. key: pseudonymization.file.phase-extracting
+msgid "Extracting text…"
+msgstr ""
+
+#. key: pseudonymization.file.phase-detecting
+msgid "Detecting personal information…"
+msgstr ""
+
+#. key: pseudonymization.file.phase-uploading
+msgid "Uploading…"
+msgstr ""

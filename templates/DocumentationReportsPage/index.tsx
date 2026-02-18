@@ -10,6 +10,7 @@ import { useFileUploadFlow } from "@/hooks/useFileUploadFlow";
 import ModalPIIReview from "@/components/ModalPIIReview";
 import NERStatusBadge from "@/components/NERStatusBadge";
 import { getPageForOffset } from "../../lib/pseudonymization/file-extract";
+import { useTranslation } from "@/lib/i18n/I18nContext";
 
 type Props = {
   title: string;
@@ -36,6 +37,7 @@ const DocumentationReportsPage = ({
 }: Props) => {
   const [message, setMessage] = useState<string>("");
   const [mounted, setMounted] = useState(false);
+  const t = useTranslation();
 
   // SPEC-007a: File upload flow for Context Library (institutional documents, guidelines)
   const uploadFlow = useFileUploadFlow();
@@ -82,9 +84,16 @@ const DocumentationReportsPage = ({
             onChange={(e: any) => setMessage(e.target.value)}
             onFileSelected={uploadFlow.handleFileSelected}
           />
-          {/* NER Status Badge */}
-          {uploadFlow.status && (
-            <NERStatusBadge status={uploadFlow.status} progress={uploadFlow.progress} />
+          <NERStatusBadge status={uploadFlow.status} progress={uploadFlow.progress} />
+          {uploadFlow.error && (
+            <div className="mx-10 mt-1 px-4 py-2 rounded-lg bg-accent-1/10 border border-accent-1 text-accent-1 text-sm 2xl:mx-6 md:mx-4">
+              {t(uploadFlow.error)}
+            </div>
+          )}
+          {uploadFlow.phase !== "idle" && (
+            <div className="mx-10 mt-1 text-xs text-n-4 2xl:mx-6 md:mx-4">
+              {t(`pseudonymization.file.phase-${uploadFlow.phase}`)}
+            </div>
           )}
         </div>
       )}
@@ -98,10 +107,7 @@ const DocumentationReportsPage = ({
           onToggle={uploadFlow.toggleReviewItem}
           onAcceptAll={uploadFlow.acceptAllReview}
           onRejectAll={uploadFlow.rejectAllReview}
-          onSend={async () => {
-            const ok = await uploadFlow.handleConfirmUpload();
-            // On success, document uploaded to Context Library
-          }}
+          onSend={uploadFlow.handleConfirmUpload}
           sending={uploadFlow.uploading}
           mode="file"
           getPageNumber={(item) =>

@@ -83,8 +83,17 @@ const TherapySupportPage = ({
           onChange={(e: any) => setMessage(e.target.value)}
           onFileSelected={uploadFlow.handleFileSelected}
         />
-        {/* NER Status Badge */}
         <NERStatusBadge status={uploadFlow.status} progress={uploadFlow.progress} />
+        {uploadFlow.error && (
+          <div className="mx-10 mt-1 px-4 py-2 rounded-lg bg-accent-1/10 border border-accent-1 text-accent-1 text-sm 2xl:mx-6 md:mx-4">
+            {t(uploadFlow.error)}
+          </div>
+        )}
+        {uploadFlow.phase !== "idle" && (
+          <div className="mx-10 mt-1 text-xs text-n-4 2xl:mx-6 md:mx-4">
+            {t(`pseudonymization.file.phase-${uploadFlow.phase}`)}
+          </div>
+        )}
       </div>
 
       {/* PII Review Modal (File Mode) */}
@@ -95,10 +104,7 @@ const TherapySupportPage = ({
         onToggle={uploadFlow.toggleReviewItem}
         onAcceptAll={uploadFlow.acceptAllReview}
         onRejectAll={uploadFlow.rejectAllReview}
-        onSend={async () => {
-          const ok = await uploadFlow.handleConfirmUpload();
-          // On success, user may want to upload another file (no message to clear)
-        }}
+        onSend={uploadFlow.handleConfirmUpload}
         sending={uploadFlow.uploading}
         mode="file"
         getPageNumber={(item) =>

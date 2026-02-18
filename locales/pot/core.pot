@@ -1767,3 +1767,7 @@ msgstr ""
 #: components/Question/Document/index.tsx:12
 msgid "zoom-in"
 msgstr ""
+
+#: components/Message/AddFile/index.tsx:41
+msgid "Upload file"
+msgstr ""
