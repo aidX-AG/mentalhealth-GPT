@@ -13,7 +13,7 @@
 //               → NER failed (integrity, timeout, WASM error), NOT "not downloaded"
 // ============================================================================
 
-import { useI18n } from "@/lib/i18n-client";
+import { useTranslation } from "@/lib/i18n/I18nContext";
 import type { NERStatus } from "../../lib/pseudonymization";
 
 type NERStatusBadgeProps = {
@@ -22,7 +22,7 @@ type NERStatusBadgeProps = {
 };
 
 const NERStatusBadge = ({ status, progress }: NERStatusBadgeProps) => {
-  const { t } = useI18n();
+  const t = useTranslation();
 
   // idle: hidden (worker not started yet)
   if (status === "idle") {

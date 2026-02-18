@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
 import Field from "@/components/Field";
-import { getT } from "@/lib/i18n-runtime";
+import { useTranslation } from "@/lib/i18n/I18nContext";
 import { encryptAesGcm, generateDEK } from "@/lib/crypto/aesgcm";
-
-const t = getT();
 
 type EditProfileProps = {};
 
@@ -18,6 +16,7 @@ const ALLOWED_MIME = new Set([
 ]);
 
 const EditProfile = ({}: EditProfileProps) => {
+  const t = useTranslation();
   const [objectURL, setObjectURL] = useState<string | null>(null);
   const [avatarErrorKey, setAvatarErrorKey] = useState<string>("");
   const [isEncryptingAvatar, setIsEncryptingAvatar] = useState<boolean>(false);
