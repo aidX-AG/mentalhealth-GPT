@@ -34,7 +34,7 @@ export const apiPaths = {
     metadata: "/api/v1/media",
   },
   crypto: {
-    wrapDek: "/api/v1/crypto/wrap-dek-for-worker",
+    wrapDek: "/v1/crypto/wrap-dek-for-worker",
   },
   devices: {
     register: "/api/v1/devices/mk-wrap",
