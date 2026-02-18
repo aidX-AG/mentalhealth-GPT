@@ -139,14 +139,20 @@ type IconProps = {
     name: any;
     size?: number | string;
     fill?: string;
+    focusable?: string;
+    "aria-hidden"?: string;
+    "aria-label"?: string;
 };
 
-const Icon = ({ className, name, size, fill }: IconProps) => (
+const Icon = ({ className, name, size, fill, focusable, "aria-hidden": ariaHidden, "aria-label": ariaLabel }: IconProps) => (
     <svg
         className={twMerge(`inline-block w-6 h-6 ${className}`)}
         width={size || 24}
         height={size || 24}
         viewBox="0 0 24 24"
+        focusable={focusable}
+        aria-hidden={ariaHidden}
+        aria-label={ariaLabel}
     >
         <path fill={fill} d={icons[name]}></path>
     </svg>
