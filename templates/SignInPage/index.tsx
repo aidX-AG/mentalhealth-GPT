@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
 import Image from "@/components/Image";
 import Icon from "@/components/Icon";
@@ -44,7 +45,7 @@ const SignInPage = ({
 
       {/* RECHTE SPALTE */}
       <div className="flex grow my-6 mr-6 p-10 bg-n-1 rounded-[1.25rem] lg:m-0 md:p-0 dark:bg-n-6">
-        {children ? <>{children}</> : <Form {...formProps} />}
+        {children ? <>{children}</> : <Suspense><Form {...formProps} /></Suspense>}
       </div>
 
       <Link

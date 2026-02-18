@@ -1,11 +1,12 @@
 "use client";
 
+import { Suspense } from "react";
 import SignInPage from "@/templates/SignInPage";
 import PasskeyForm from "@/templates/SignInPage/PasskeyForm";
 import { loadMessages, makeT } from "@/lib/i18n-static";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function Page() {
+function PageContent() {
   const t = makeT(loadMessages("en"));
   const sp = useSearchParams();
   const router = useRouter();
@@ -44,4 +45,8 @@ export default function Page() {
       />
     </SignInPage>
   );
+}
+
+export default function Page() {
+  return <Suspense><PageContent /></Suspense>;
 }

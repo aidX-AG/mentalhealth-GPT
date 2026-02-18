@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback, useRef, useMemo } from "react";
+import { Suspense, useEffect, useState, useCallback, useRef, useMemo } from "react";
 import { useSearchParams, usePathname } from "next/navigation";
 import { startRegistration, startAuthentication } from "@simplewebauthn/browser";
 import { loadMessages, makeT } from "@/lib/i18n-static";
@@ -39,7 +39,7 @@ type Phase =
   | "success"
   | "error";
 
-export default function Page() {
+function MobileAuthContent() {
   const pathname = usePathname();
 
   const locale = useMemo((): string => {
@@ -417,4 +417,8 @@ export default function Page() {
       )}
     </div>
   );
+}
+
+export default function Page() {
+  return <Suspense><MobileAuthContent /></Suspense>;
 }

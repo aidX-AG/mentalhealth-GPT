@@ -1,9 +1,10 @@
 "use client";
 
+import { Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import PasskeyForm from "@/templates/SignInPage/PasskeyForm";
 
-export default function Page() {
+function PageContent() {
   const router = useRouter();
   const sp = useSearchParams();
   const email = sp.get("email") || "";
@@ -17,4 +18,8 @@ export default function Page() {
       }}
     />
   );
+}
+
+export default function Page() {
+  return <Suspense><PageContent /></Suspense>;
 }
