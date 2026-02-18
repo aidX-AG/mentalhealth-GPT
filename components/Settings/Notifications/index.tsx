@@ -141,8 +141,8 @@ const Notifications = ({}: NotificationsProps) => {
                 className="mb-4 last:mb-0"
                 label={checkbox.title}
                 key={`${group.id}:${checkbox.id}`}
-                value={checkbox.isChecked}
-                onChange={() => handleCheckboxChange(group.id, checkbox.id)}
+                checked={checkbox.isChecked}
+                onCheckedChange={() => handleCheckboxChange(group.id, checkbox.id)}
                 reverse
               />
             ))}
