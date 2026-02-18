@@ -28,6 +28,10 @@ export interface ExtractionResult {
 const ALLOWED_FILE_TYPES: Record<string, { maxBytes: number; label: string }> = {
   "text/plain": { maxBytes: 10 * 1024 * 1024, label: "Text (.txt)" },
   "application/pdf": { maxBytes: 50 * 1024 * 1024, label: "PDF (.pdf)" },
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document": {
+    maxBytes: 50 * 1024 * 1024,
+    label: "Word (.docx)",
+  },
 };
 
 // Extraction limits (§2.4)
@@ -39,6 +43,7 @@ const MAX_PDF_PAGES = 500;
 const EXT_MIME_FALLBACK: Record<string, string> = {
   ".txt": "text/plain",
   ".pdf": "application/pdf",
+  ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 };
 
 // ---------------------------------------------------------------------------
@@ -161,11 +166,31 @@ async function extractTextFromPdf(
 }
 
 // ---------------------------------------------------------------------------
+// .docx Text Extraction (§2.4) — via mammoth
+// ---------------------------------------------------------------------------
+
+/**
+ * Extract plain text from a .docx file using mammoth.
+ * Dynamically imported to avoid SSR issues. Does not execute macros.
+ * .docx files are treated as a single "page" (no page boundary tracking).
+ */
+async function extractTextFromDocx(file: File): Promise<ExtractionResult> {
+  const mammoth = await import("mammoth");
+  const arrayBuffer = await file.arrayBuffer();
+  const result = await mammoth.extractRawText({ arrayBuffer });
+  const text = result.value.normalize("NFC");
+  return {
+    text,
+    boundaries: [{ page: 1, startOffset: 0, endOffset: text.length }],
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Unified Extraction Entry Point (§2.1)
 // ---------------------------------------------------------------------------
 
 /**
- * Extract text from supported file types (.txt, .pdf).
+ * Extract text from supported file types (.txt, .pdf, .docx).
  * Applies NFC normalization and enforces size limits.
  */
 export async function extractText(
@@ -180,6 +205,10 @@ export async function extractText(
     result = await extractTextFromTxt(file);
   } else if (mime === "application/pdf") {
     result = await extractTextFromPdf(file, onProgress);
+  } else if (
+    mime === "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  ) {
+    result = await extractTextFromDocx(file);
   } else {
     throw new Error(`Unsupported MIME type: ${mime}`);
   }

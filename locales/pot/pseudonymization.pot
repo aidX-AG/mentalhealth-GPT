@@ -131,11 +131,15 @@ msgid "Reject all"
 msgstr ""
 
 #. key: pseudonymization.file.error-type
-msgid "Unsupported file type. Please upload a .txt or .pdf file."
+msgid "Unsupported file type. Please upload a .txt, .pdf or .docx file."
 msgstr ""
 
 #. key: pseudonymization.file.error-size
-msgid "File is too large. Maximum size: 10 MB for text files, 50 MB for PDFs."
+msgid "File is too large. Maximum size: 10 MB for text files, 50 MB for PDFs and Word documents."
+msgstr ""
+
+#. key: pseudonymization.file.error-empty
+msgid "The file is empty. Please select a file with content."
 msgstr ""
 
 #. key: pseudonymization.file.error-no-text

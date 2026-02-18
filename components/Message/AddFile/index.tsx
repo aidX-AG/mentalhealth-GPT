@@ -50,6 +50,7 @@ const AddFile = ({ disabled = false, onFileSelected }: AddFileProps) => {
         ref={inputRef}
         type="file"
         className="hidden"
+        accept=".txt,.pdf,.docx,text/plain,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         onChange={handleChange}
         disabled={disabled}
       />

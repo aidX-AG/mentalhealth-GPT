@@ -15,8 +15,8 @@ git fetch origin
 git fetch github 2>/dev/null || true
 git reset --hard origin/dev
 
-echo "📦  npm ci …"
-npm ci
+echo "📦  npm install …"
+npm install
 
 echo "⚙️  npm run build …"
 npm run build
