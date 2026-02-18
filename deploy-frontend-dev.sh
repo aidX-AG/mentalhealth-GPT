@@ -11,6 +11,8 @@ cd "$REPO"
 
 echo "⬇️  Sicherstellen dass dev aktuell ist …"
 git checkout dev
+git fetch origin
+git fetch github 2>/dev/null || true
 git reset --hard origin/dev
 
 echo "📦  npm ci …"
