@@ -38,8 +38,8 @@ type MessageProps = {
     // 🔼 optional: tatsächliches Senden (kann später verdrahtet werden)
     onSend?: () => void;
 
-    // 📎 SPEC-007a: File upload callback
-    onFileSelected?: (file: File) => void;
+    // 📎 SPEC-007a: File upload callback (sync or async)
+    onFileSelected?: (file: File) => void | Promise<void>;
 
     // 🔎 Zusätzliche Infos aus Main/HomePage (nur Typ-Support, im UI aktuell nicht genutzt)
     isAuthenticated?: boolean;
