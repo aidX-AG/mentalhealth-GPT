@@ -139,7 +139,7 @@ type IconProps = {
     name: any;
     size?: number | string;
     fill?: string;
-    focusable?: string;
+    focusable?: boolean | "true" | "false" | "auto";
     "aria-hidden"?: string;
     "aria-label"?: string;
 };
