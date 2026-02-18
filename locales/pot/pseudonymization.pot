@@ -169,3 +169,11 @@ msgstr ""
 #. key: pseudonymization.file.phase-uploading
 msgid "Uploading…"
 msgstr ""
+
+#. key: pseudonymization.file.upload-button
+msgid "Upload document"
+msgstr ""
+
+#. key: pseudonymization.status.processing
+msgid "Processing…"
+msgstr ""

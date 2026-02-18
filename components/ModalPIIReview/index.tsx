@@ -74,7 +74,7 @@ const ModalPIIReview = ({
     if (isRegex || (isNER && item.confidence >= 0.85)) {
       return {
         color: "bg-primary-2",
-        label: t("pseudonymization.review.confidence-high"),
+        label: t("pseudonymization.labels.pii-secure"),
       };
     }
 
@@ -82,7 +82,7 @@ const ModalPIIReview = ({
     if (isNER && item.confidence >= 0.6) {
       return {
         color: "bg-accent-5",
-        label: t("pseudonymization.review.confidence-medium"),
+        label: t("pseudonymization.labels.pii-uncertain"),
       };
     }
 
@@ -90,14 +90,14 @@ const ModalPIIReview = ({
     if (isDictionary) {
       return {
         color: "bg-primary-1",
-        label: t("pseudonymization.review.confidence-dictionary"),
+        label: t("pseudonymization.labels.fachbegriff"),
       };
     }
 
     // Fallback
     return {
       color: "bg-n-4",
-      label: t("pseudonymization.review.confidence-high"),
+      label: t("pseudonymization.labels.pii-secure"),
     };
   };
 
@@ -178,7 +178,7 @@ const ModalPIIReview = ({
             disabled={sending || items.length === 0}
             className="px-4 py-2 text-sm font-medium rounded-xl bg-n-3 text-n-7 hover:bg-n-4 disabled:opacity-50 disabled:cursor-not-allowed transition-colors dark:bg-n-5 dark:text-n-1 dark:hover:bg-n-4"
           >
-            {t("pseudonymization.review.accept-all")}
+            {t("pseudonymization.buttons.accept-all")}
           </button>
 
           {/* Reject All */}
@@ -187,7 +187,7 @@ const ModalPIIReview = ({
             disabled={sending || items.length === 0}
             className="px-4 py-2 text-sm font-medium rounded-xl border-2 border-n-3 text-n-6 hover:border-n-4 hover:text-n-7 disabled:opacity-50 disabled:cursor-not-allowed transition-colors dark:border-n-5 dark:text-n-3 dark:hover:border-n-4 dark:hover:text-n-1"
           >
-            {t("pseudonymization.review.reject-all")}
+            {t("pseudonymization.buttons.reject-all")}
           </button>
 
           {/* Cancel */}
