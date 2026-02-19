@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2026-02-19 16:32+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2026-02-19 16:34+0000\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/pseudonymization/fr_CH/>\n"
 "Language: fr_CH\n"
@@ -299,4 +299,4 @@ msgstr "Marqué manuellement"
 #. key: pseudonymization.review.manual-hint
 #. Hint shown below document preview to invite manual marking
 msgid "Select text to mark it as PII"
-msgstr "Sélectionnez le texte pour le marquer comme PII."
+msgstr "Sélectionnez le texte pour le marquer comme PII"
