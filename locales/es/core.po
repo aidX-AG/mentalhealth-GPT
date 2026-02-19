@@ -1630,3 +1630,8 @@ msgstr "Reproductor de vídeo de YouTube"
 
 msgid "zoom-in"
 msgstr "ampliar"
+
+#, fuzzy
+#| msgid "Upload"
+msgid "Upload file"
+msgstr "Subir"

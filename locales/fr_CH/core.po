@@ -1650,6 +1650,11 @@ msgstr "Lecteur vidéo YouTube"
 msgid "zoom-in"
 msgstr "zoom avant"
 
+#, fuzzy
+#| msgid "Upload"
+msgid "Upload file"
+msgstr "Télécharger"
+
 #~ msgid ""
 #~ " is currently under development. It will gradually become available as we "
 #~ "integrate specialized models to support mental health diagnostics."

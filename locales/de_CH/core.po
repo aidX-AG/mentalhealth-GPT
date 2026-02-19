@@ -1642,6 +1642,11 @@ msgstr "YouTube-Videoplayer"
 msgid "zoom-in"
 msgstr "vergrößern"
 
+#, fuzzy
+#| msgid "Upload"
+msgid "Upload file"
+msgstr "Hochladen"
+
 #~ msgid ""
 #~ " is currently under development. It will gradually become available as we "
 #~ "integrate specialized models to support mental health diagnostics."
