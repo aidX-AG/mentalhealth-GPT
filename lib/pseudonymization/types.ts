@@ -49,7 +49,7 @@ export interface DetectedPII {
   start: number;
   end: number;
   confidence: number;
-  source: "regex" | "ner" | "dictionary";
+  source: "regex" | "ner" | "dictionary" | "manual";
   patternId?: string;
   defaultAccepted: boolean;
 }
@@ -144,6 +144,7 @@ export const SOURCE_PRIORITY: Record<DetectedPII["source"], number> = {
   regex: 0,
   ner: 1,
   dictionary: 2,
+  manual: 0,  // manual has same priority as regex (user intent = authoritative)
 };
 
 /**

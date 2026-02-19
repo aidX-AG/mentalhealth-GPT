@@ -221,15 +221,15 @@ export function useFileUploadFlow() {
         setPhase("uploading");
         setUploading(true);
         try {
+          // Show chip immediately — upload runs async
+          setPseudonymizedText(escaped);
           const ok = await doUpload(escaped, []);
-          if (ok) {
-            setPseudonymizedText(escaped); // no replacements — set on success only
-          } else {
-            clearAttachment(); // upload returned false → clear chip
+          if (!ok) {
+            setError("pseudonymization.file.error-upload");
           }
         } catch (err) {
           console.error("[upload] doUpload failed:", err);
-          clearAttachment(); // upload failed → clear chip
+          // Keep chip — pseudonymization succeeded
           setError("pseudonymization.file.error-upload");
         } finally {
           reset();
@@ -244,7 +244,7 @@ export function useFileUploadFlow() {
   );
 
   // -----------------------------------------------------------------------
-  // Step 2: User confirms → pseudonymize → encrypt → upload
+  // Step 2: User confirms → pseudonymize → show chip → encrypt + upload
   // -----------------------------------------------------------------------
   const handleConfirmUpload = useCallback(async (): Promise<boolean> => {
     setUploading(true);
@@ -257,22 +257,26 @@ export function useFileUploadFlow() {
       );
       setMapping(newMapping);
 
+      // SPEC-007b §3.5 (updated): show chip immediately after pseudonymization
+      // succeeds — upload runs in background. Chip is the pseudonymization proof,
+      // not the upload proof. Upload failure is shown separately (non-blocking).
+      setPseudonymizedText(pseudonymized);
+
       const ok = await doUpload(pseudonymized, review.acceptedDetections);
-      if (ok) {
-        // SPEC-007b §3.5: set on success only
-        setPseudonymizedText(pseudonymized);
-      } else {
-        clearAttachment();
+      if (!ok) {
+        // Upload failed but pseudonymization succeeded → keep chip, show error
+        setError("pseudonymization.file.error-upload");
       }
       return ok;
     } catch (err) {
       console.error("[useFileUploadFlow] upload failed:", err);
-      clearAttachment(); // upload failed → clear chip
+      // Keep chip — pseudonymization succeeded even if upload failed
+      setError("pseudonymization.file.error-upload");
       return false;
     } finally {
       reset();
     }
-  }, [extractedText, review.acceptedDetections, mapping, pseudonymize, doUpload, reset, clearAttachment]);
+  }, [extractedText, review.acceptedDetections, mapping, pseudonymize, doUpload, reset]);
 
   // -----------------------------------------------------------------------
   // Cancel review → reset + clear attachment (upload not completed)
@@ -313,5 +317,6 @@ export function useFileUploadFlow() {
     toggleReviewItem: review.toggleItem,
     acceptAllReview: review.acceptAll,
     rejectAllReview: review.rejectAll,
+    addManualReviewItem: review.addManualItem,  // SPEC-007a §4.5
   };
 }

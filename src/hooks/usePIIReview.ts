@@ -37,6 +37,7 @@ export function usePIIReview(detections: DetectedPII[]) {
   });
 
   // Re-init when detections change (contract: set detections BEFORE opening modal)
+  // NOTE: does NOT watch manualDetections — avoids resetting user toggle choices
   useEffect(() => {
     const map: Record<string, boolean> = {};
     for (const d of detections) {
@@ -45,14 +46,24 @@ export function usePIIReview(detections: DetectedPII[]) {
     setAcceptedMap(map);
   }, [detections]);
 
-  // Merge detections + accepted state
+  // Manual detections stored separately so useEffect above never resets them
+  // SPEC-007a §4.5.5
+  const [manualDetections, setManualDetections] = useState<DetectedPII[]>([]);
+
+  // Merged auto + manual, sorted by start offset
+  const allDetections = useMemo(
+    () => [...detections, ...manualDetections].sort((a, b) => a.start - b.start),
+    [detections, manualDetections],
+  );
+
+  // Merge allDetections + accepted state
   const items: ReviewItem[] = useMemo(
-    () => detections.map((d) => ({
+    () => allDetections.map((d) => ({
       ...d,
       id: itemId(d),
       accepted: acceptedMap[itemId(d)] ?? d.defaultAccepted,
     })),
-    [detections, acceptedMap],
+    [allDetections, acceptedMap],
   );
 
   // Toggle by id
@@ -60,25 +71,45 @@ export function usePIIReview(detections: DetectedPII[]) {
     setAcceptedMap((prev: Record<string, boolean>) => ({ ...prev, [id]: !prev[id] }));
   }, []);
 
-  // Accept all
+  // Accept all (auto + manual)
   const acceptAll = useCallback(() => {
     setAcceptedMap(() => {
       const next: Record<string, boolean> = {};
-      for (const d of detections) next[itemId(d)] = true;
+      for (const d of allDetections as DetectedPII[]) next[itemId(d)] = true;
       return next;
     });
-  }, [detections]);
+  }, [allDetections]);
 
-  // Reject all
+  // Reject all (auto + manual)
   const rejectAll = useCallback(() => {
     setAcceptedMap(() => {
       const next: Record<string, boolean> = {};
-      for (const d of detections) next[itemId(d)] = false;
+      for (const d of allDetections as DetectedPII[]) next[itemId(d)] = false;
       return next;
     });
-  }, [detections]);
+  }, [allDetections]);
 
-  // Extract accepted detections for pseudonymize()
+  // Add manual item — SPEC-007a §4.5.5
+  const addManualItem = useCallback(
+    (start: number, end: number, original: string) => {
+      // Reject overlap with any existing item (auto or manual)
+      if ((allDetections as DetectedPII[]).some((i: DetectedPII) => i.start < end && i.end > start)) return;
+      const d: DetectedPII = {
+        start,
+        end,
+        original,
+        category: "PERSON",
+        confidence: 1.0,
+        source: "manual",
+        defaultAccepted: true,
+      };
+      setManualDetections((prev: DetectedPII[]) => [...prev, d]);
+      setAcceptedMap((prev: Record<string, boolean>) => ({ ...prev, [itemId(d)]: true }));
+    },
+    [allDetections],
+  );
+
+  // Extract accepted detections for pseudonymize() — includes both auto + manual
   const acceptedDetections: DetectedPII[] = useMemo(
     () => items.filter((item) => item.accepted),
     [items],
@@ -89,6 +120,7 @@ export function usePIIReview(detections: DetectedPII[]) {
     toggleItem,
     acceptAll,
     rejectAll,
+    addManualItem,
     acceptedDetections,
   };
 }

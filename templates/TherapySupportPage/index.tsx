@@ -121,6 +121,7 @@ const TherapySupportPage = ({
         documentLabel={uploadFlow.documentLabel ?? undefined}
         extractedText={uploadFlow.extractedText || undefined}
         pageBoundaries={uploadFlow.pageBoundaries}
+        onManualAdd={uploadFlow.addManualReviewItem}
       />
 
       {/* SPEC-007b §3.4: Post-confirm read-only preview — owner can reveal original */}

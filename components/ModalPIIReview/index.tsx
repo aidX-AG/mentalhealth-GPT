@@ -32,6 +32,8 @@ type ModalPIIReviewProps = {
   documentLabel?: string;      // SF-8: generated label, never file.name
   extractedText?: string;      // if provided → DocumentPreview instead of word-list
   pageBoundaries?: PageBoundary[];
+  // SPEC-007a §4.5: manual PII marking via text selection
+  onManualAdd?: (start: number, end: number, original: string) => void;
   // SPEC-007a: page numbers in word-list fallback
   getPageNumber?: (item: ReviewItem) => number | undefined;
 };
@@ -49,6 +51,7 @@ const ModalPIIReview = ({
   documentLabel,
   extractedText,
   pageBoundaries = [],
+  onManualAdd,
   getPageNumber,
 }: ModalPIIReviewProps) => {
   const { t } = useI18n();
@@ -71,6 +74,9 @@ const ModalPIIReview = ({
     t(`pseudonymization.labels.category-${category.toLowerCase()}`);
 
   const getConfidenceIndicator = (item: ReviewItem) => {
+    if (item.source === "manual") {
+      return { color: "bg-primary-2", label: t("pseudonymization.review.manual-label") };
+    }
     if (item.source === "regex" || (item.source === "ner" && item.confidence >= 0.85)) {
       return { color: "bg-primary-2", label: t("pseudonymization.labels.pii-secure") };
     }
@@ -124,6 +130,7 @@ const ModalPIIReview = ({
               items={items}
               pageBoundaries={pageBoundaries}
               onToggle={onToggle}
+              onManualAdd={onManualAdd}
             />
           </div>
         ) : (

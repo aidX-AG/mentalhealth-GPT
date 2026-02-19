@@ -1,24 +1,28 @@
 // components/ModalPIIReview/DocumentPreview.tsx
 // ============================================================================
 // SPEC-007b v1.2 §2.3 / §2.6 — Full-document view with inline highlights
-//
-// Accepts ReviewItem[] directly — no unsafe cast from DetectedPII[].
-// ReviewItem.id and ReviewItem.accepted are the single source of truth;
-// IDs are produced by makeReviewId() in usePIIReview.ts (exported).
+// SPEC-007a §4.5  v1.1       — Manual PII marking via text selection
 //
 // Segmentation algorithm (§2.3):
-//   1. Filter items by overlap (not strictly "inside") so spans at slice edges render
+//   1. Filter items by overlap so spans at slice edges render
 //   2. Sort by start ascending; walk text, emit plain + DetectionSpan segments
 //   3. cursor = Math.max(cursor, item.end) for robustness
+//   Each plain segment carries a start offset in the full text (data-offset).
 //
 // Pagination (§2.6):
 //   - hasBoundaryPages (totalPages > 1): use real PageBoundary slices
-//   - hasChunkPages (large text, single boundary): chunk at 100 k chars
-//   - no pagination for short single-page text
-//   - currentPage resets to 0 when text or boundaries change (new document)
+//   - hasChunkPages (large text, no boundaries): chunk at 100 k chars
+//   - currentPage resets to 0 when text or boundaries change
+//
+// Manual marking (§4.5) — 5 hardening constraints:
+//   1. NaN-safe resolveOffset via Number.isFinite()
+//   2. Selection must be inside containerRef (no cross-modal selections)
+//   3. Backward selection normalized (docStart/docEnd swapped if inverted)
+//   4. Offsets clamped to current slice (sliceStart..sliceEnd)
+//   5. Popup left/top viewport-clamped with fixed POPUP_W
 // ============================================================================
 
-import { useMemo, useState, useCallback, useEffect } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { ReviewItem } from "../../src/hooks/usePIIReview";
 import type { PageBoundary } from "../../lib/pseudonymization/file-extract";
 import { useI18n } from "@/lib/i18n/I18nContext";
@@ -30,14 +34,23 @@ import Legend from "./Legend";
 // ---------------------------------------------------------------------------
 
 type TextSegment =
-  | { type: "plain"; text: string; key: string }
+  | { type: "plain"; text: string; key: string; start: number }
   | { type: "item"; item: ReviewItem; key: string };
+
+interface SelectionPopup {
+  text: string;
+  start: number;
+  end: number;
+  top: number;
+  left: number;
+}
 
 interface DocumentPreviewProps {
   text: string;
-  items: ReviewItem[];           // from usePIIReview — has id, accepted, start, end
+  items: ReviewItem[];
   pageBoundaries: PageBoundary[];
   onToggle: (id: string) => void;
+  onManualAdd?: (start: number, end: number, original: string) => void;
   readOnly?: boolean;
 }
 
@@ -52,12 +65,7 @@ function buildSegments(
   sliceEnd: number,
 ): TextSegment[] {
   const segments: TextSegment[] = [];
-
-  // Overlap filter: include items that overlap the slice (not just "fully inside"),
-  // so detections at slice boundaries are never silently dropped.
   const visible = items.filter((i) => i.end > sliceStart && i.start < sliceEnd);
-
-  // Sort by start offset (already merged/non-overlapping, but sort defensively)
   const sorted = [...visible].sort((a, b) => a.start - b.start);
 
   let cursor = sliceStart;
@@ -69,14 +77,10 @@ function buildSegments(
         type: "plain",
         text: text.slice(cursor, item.start),
         key: `plain-${plainKey++}`,
+        start: cursor, // absolute offset in full text — drives data-offset (§4.5.3)
       });
     }
-    segments.push({
-      type: "item",
-      item,
-      key: `item-${item.id}`,
-    });
-    // Robust cursor advance: skip past the item end even if items overlap slice edge
+    segments.push({ type: "item", item, key: `item-${item.id}` });
     cursor = Math.max(cursor, item.end);
   }
 
@@ -85,6 +89,7 @@ function buildSegments(
       type: "plain",
       text: text.slice(cursor, sliceEnd),
       key: `plain-${plainKey++}`,
+      start: cursor,
     });
   }
 
@@ -92,29 +97,63 @@ function buildSegments(
 }
 
 // ---------------------------------------------------------------------------
+// Offset resolver — SPEC-007a §4.5.3, hardening fix #1 (NaN-safe)
+// ---------------------------------------------------------------------------
+
+function resolveOffset(node: Node, intraOffset: number): number | null {
+  let el: Element | null =
+    node.nodeType === Node.TEXT_NODE
+      ? (node as Text).parentElement
+      : (node as Element);
+  while (el) {
+    const attr = el.getAttribute("data-offset");
+    if (attr !== null) {
+      const base = Number(attr);
+      if (!Number.isFinite(base)) return null; // NaN/Infinity guard
+      return base + intraOffset;
+    }
+    el = el.parentElement;
+  }
+  return null;
+}
+
+// ---------------------------------------------------------------------------
 // Component
 // ---------------------------------------------------------------------------
 
 const LARGE_TEXT_THRESHOLD = 100_000;
+const POPUP_W = 160; // px — used for viewport clamping (hardening fix #5)
 
 const DocumentPreview = ({
   text,
   items,
   pageBoundaries,
   onToggle,
+  onManualAdd,
   readOnly = false,
 }: DocumentPreviewProps) => {
   const { t } = useI18n();
   const [currentPage, setCurrentPage] = useState(0);
+  const [popup, setPopup] = useState<SelectionPopup | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  // Reset to page 0 when a new document is loaded
   useEffect(() => {
     setCurrentPage(0);
   }, [text, pageBoundaries.length]);
 
+  // Dismiss popup on outside click
+  useEffect(() => {
+    if (!popup) return;
+    const dismiss = (e: MouseEvent) => {
+      if ((e.target as HTMLElement).closest("[data-manual-popup]")) return;
+      setPopup(null);
+    };
+    document.addEventListener("mousedown", dismiss);
+    return () => document.removeEventListener("mousedown", dismiss);
+  }, [popup]);
+
   const totalPages = pageBoundaries.length;
   const isLarge = text.length > LARGE_TEXT_THRESHOLD;
-
   const hasBoundaryPages = totalPages > 1;
   const hasChunkPages = !hasBoundaryPages && isLarge;
   const usePagination = hasBoundaryPages || hasChunkPages;
@@ -148,18 +187,115 @@ const DocumentPreview = ({
     [displayedTotalPages],
   );
 
+  // -------------------------------------------------------------------------
+  // Manual marking — SPEC-007a §4.5 with all 5 hardening fixes
+  // -------------------------------------------------------------------------
+
+  const handleMouseUp = useCallback(() => {
+    if (readOnly || !onManualAdd) return;
+
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed || sel.rangeCount === 0) {
+      setPopup(null);
+      return;
+    }
+
+    const selectedText = sel.toString().trim();
+    if (selectedText.length < 1) {
+      setPopup(null);
+      return;
+    }
+
+    const range = sel.getRangeAt(0);
+
+    // Hardening fix #2: selection must be inside the preview container
+    const container = containerRef.current;
+    if (!container) { setPopup(null); return; }
+    const commonNode = range.commonAncestorContainer;
+    const commonEl =
+      commonNode.nodeType === Node.ELEMENT_NODE
+        ? (commonNode as Element)
+        : commonNode.parentElement;
+    if (!commonEl || !container.contains(commonEl)) {
+      setPopup(null);
+      return;
+    }
+
+    // Resolve endpoints to absolute text offsets
+    const rawStart = resolveOffset(range.startContainer, range.startOffset);
+    const rawEnd   = resolveOffset(range.endContainer,   range.endOffset);
+    if (rawStart === null || rawEnd === null) {
+      setPopup(null); // inside DetectionSpan or unresolvable
+      return;
+    }
+
+    // Hardening fix #3: normalize backward selections
+    const start = Math.min(rawStart, rawEnd);
+    const end   = Math.max(rawStart, rawEnd);
+    if (start === end) { setPopup(null); return; }
+
+    // Hardening fix #4: clamp to current slice
+    if (start < sliceStart || end > sliceEnd) {
+      setPopup(null);
+      return;
+    }
+
+    // Hardening fix #5: viewport-clamped popup position
+    const rect = range.getBoundingClientRect();
+    const xCenter = rect.left + (rect.width || 0) / 2;
+    const left = Math.min(
+      window.innerWidth - POPUP_W - 8,
+      Math.max(8, xCenter - POPUP_W / 2),
+    );
+    const top = Math.max(8, rect.top - 44);
+
+    setPopup({ text: selectedText, start, end, top, left });
+  }, [readOnly, onManualAdd, sliceStart, sliceEnd]);
+
+  const handleManualAdd = useCallback(() => {
+    if (!popup || !onManualAdd) return;
+    onManualAdd(popup.start, popup.end, popup.text);
+    setPopup(null);
+    window.getSelection()?.removeAllRanges();
+  }, [popup, onManualAdd]);
+
   const pageIndicatorText = t("pseudonymization.review.page-indicator")
     .replace("{{current}}", String(safePage + 1))
     .replace("{{total}}", String(displayedTotalPages));
 
   return (
     <div className="flex flex-col gap-3">
+
+      {/* Floating popup — fixed in viewport, above selection */}
+      {popup && !readOnly && onManualAdd && (
+        <div
+          data-manual-popup="true"
+          style={{ position: "fixed", top: popup.top, left: popup.left, zIndex: 9999 }}
+          onMouseDown={(e: any) => e.preventDefault()} // prevent deselection on click
+        >
+          <button
+            type="button"
+            onClick={handleManualAdd}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-2 text-white text-xs font-medium shadow-lg hover:bg-primary-1 transition-colors whitespace-nowrap"
+            style={{ width: POPUP_W }}
+          >
+            <span aria-hidden="true">✎</span>
+            {t("pseudonymization.review.mark-as-pii")}
+          </button>
+        </div>
+      )}
+
       {/* Document text area */}
-      <div className="relative rounded-xl border border-n-3 dark:border-n-5 bg-n-1 dark:bg-n-7 p-4 min-h-32 max-h-72 overflow-y-auto">
+      <div
+        ref={containerRef}
+        className="relative rounded-xl border border-n-3 dark:border-n-5 bg-n-1 dark:bg-n-7 p-4 min-h-32 max-h-72 overflow-y-auto"
+        onMouseUp={handleMouseUp}
+      >
         <p className="text-sm leading-relaxed text-n-7 dark:text-n-1 whitespace-pre-wrap break-words">
           {segments.map((seg: TextSegment) =>
             seg.type === "plain" ? (
-              <span key={seg.key}>{seg.text}</span>
+              // data-offset enables offset resolution for manual marking (§4.5.3)
+              <span key={seg.key} data-offset={seg.start}>{seg.text}</span>
             ) : (
               <DetectionSpan
                 key={seg.key}
@@ -171,7 +307,6 @@ const DocumentPreview = ({
           )}
         </p>
 
-        {/* Page indicator — sticky bottom-right */}
         {usePagination && (
           <div className="sticky bottom-0 right-0 flex justify-end pt-2 pointer-events-none">
             <span className="text-xs text-n-4 dark:text-n-3 bg-n-1 dark:bg-n-7 px-2 py-0.5 rounded-full border border-n-3 dark:border-n-5 pointer-events-auto">

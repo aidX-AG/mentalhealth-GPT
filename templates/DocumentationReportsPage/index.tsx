@@ -124,6 +124,7 @@ const DocumentationReportsPage = ({
           documentLabel={uploadFlow.documentLabel ?? undefined}
           extractedText={uploadFlow.extractedText || undefined}
           pageBoundaries={uploadFlow.pageBoundaries}
+          onManualAdd={uploadFlow.addManualReviewItem}
         />
       )}
 

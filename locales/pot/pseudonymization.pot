@@ -267,3 +267,18 @@ msgstr ""
 #. Export button label for PDF download in ModalDocumentPreview
 msgid "Export PDF"
 msgstr ""
+
+#. key: pseudonymization.review.mark-as-pii
+#. Floating popup button label for manual PII marking (SPEC-007a §4.5)
+msgid "Mark as PII"
+msgstr ""
+
+#. key: pseudonymization.review.manual-label
+#. Badge label in review list for manually marked items (source: 'manual')
+msgid "Manually marked"
+msgstr ""
+
+#. key: pseudonymization.review.manual-hint
+#. Hint shown below document preview to invite manual marking
+msgid "Select text to mark it as PII"
+msgstr ""
