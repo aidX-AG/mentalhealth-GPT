@@ -257,3 +257,13 @@ msgstr ""
 #. Toggle button label: hides original, shows pseudonymized tokens
 msgid "Show pseudonymised"
 msgstr ""
+
+#. key: pseudonymization.attachment.export-word
+#. Export button label for Word (.docx) download in ModalDocumentPreview
+msgid "Export Word"
+msgstr ""
+
+#. key: pseudonymization.attachment.export-pdf
+#. Export button label for PDF download in ModalDocumentPreview
+msgid "Export PDF"
+msgstr ""

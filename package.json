@@ -44,6 +44,8 @@
     "i18next-http-backend": "^3.0.2",
     "i18next-scanner": "^4.6.0",
     "lru-cache": "^11.1.0",
+    "docx": "^9.5.1",
+    "jspdf": "^2.5.2",
     "mammoth": "^1.8.0",
     "lucide-react": "0.525.0",
     "next": "14.2.3",
