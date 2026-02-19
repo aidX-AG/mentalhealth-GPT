@@ -177,3 +177,83 @@ msgstr ""
 #. key: pseudonymization.status.processing
 msgid "Processing…"
 msgstr ""
+
+#. key: pseudonymization.review.attach-button
+#. CTA in file mode — replaces "Send"
+msgid "Pseudonymise & Attach"
+msgstr ""
+
+#. key: pseudonymization.review.legend-secure
+#. Legend entry for regex or NER ≥ 0.85
+msgid "Securely detected"
+msgstr ""
+
+#. key: pseudonymization.review.legend-uncertain
+#. Legend entry for NER 0.60–0.85
+msgid "Uncertain detection"
+msgstr ""
+
+#. key: pseudonymization.review.legend-dictionary
+#. Legend entry for dictionary (medical/therapy terms)
+msgid "Technical term"
+msgstr ""
+
+#. key: pseudonymization.review.detection-singular
+#. Count label when exactly 1 detection
+msgid "1 detection"
+msgstr ""
+
+#. key: pseudonymization.review.detection-plural
+#. Count label when 2+ detections; {{count}} is replaced with the number
+msgid "{{count}} detections"
+msgstr ""
+
+#. key: pseudonymization.review.hint-select-one
+#. Shown when all detections are rejected (Send disabled)
+msgid "Please accept at least one detection to proceed."
+msgstr ""
+
+#. key: pseudonymization.review.page-indicator
+#. Pagination indicator inside document preview; {{current}} and {{total}} are replaced
+msgid "Page {{current}} of {{total}}"
+msgstr ""
+
+#. key: pseudonymization.review.prev-page
+#. Button label / aria-label for previous page
+msgid "Previous"
+msgstr ""
+
+#. key: pseudonymization.review.next-page
+#. Button label / aria-label for next page
+msgid "Next"
+msgstr ""
+
+#. key: pseudonymization.review.click-to-toggle
+#. Interaction hint shown in the document preview legend
+msgid "Click to accept or reject"
+msgstr ""
+
+#. key: pseudonymization.attachment.preview
+#. aria-label for the AttachmentChip button (opens read-only preview)
+msgid "Open document preview"
+msgstr ""
+
+#. key: pseudonymization.attachment.remove
+#. aria-label for the ✕ button on the AttachmentChip
+msgid "Remove attachment"
+msgstr ""
+
+#. key: pseudonymization.attachment.modal-title
+#. Title of the ModalDocumentPreview
+msgid "Attached document"
+msgstr ""
+
+#. key: pseudonymization.attachment.show-original
+#. Toggle button label: reveals original PII (owner-only, client-side)
+msgid "Show original"
+msgstr ""
+
+#. key: pseudonymization.attachment.show-pseudonymized
+#. Toggle button label: hides original, shows pseudonymized tokens
+msgid "Show pseudonymised"
+msgstr ""

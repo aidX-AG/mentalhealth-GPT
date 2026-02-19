@@ -11,10 +11,20 @@ export interface ReviewItem extends DetectedPII {
   accepted: boolean;
 }
 
-// Helper: stable item id
-function itemId(d: DetectedPII): string {
-  return `${d.start}-${d.end}-${d.category}`;
+/**
+ * Single source of truth for stable review-item IDs.
+ * Includes source to avoid collisions when the same span/category appears
+ * from different detection layers (regex + ner or ner + dictionary).
+ *
+ * Exported so DocumentPreview.tsx and tests can use the exact same function —
+ * any consumer building IDs must call this, never re-implement inline.
+ */
+export function makeReviewId(d: DetectedPII): string {
+  return `${d.start}-${d.end}-${d.category}-${d.source}`;
 }
+
+// Internal alias for concise use inside this file
+const itemId = makeReviewId;
 
 export function usePIIReview(detections: DetectedPII[]) {
   // Initialize from defaultAccepted
@@ -47,7 +57,7 @@ export function usePIIReview(detections: DetectedPII[]) {
 
   // Toggle by id
   const toggleItem = useCallback((id: string) => {
-    setAcceptedMap((prev) => ({ ...prev, [id]: !prev[id] }));
+    setAcceptedMap((prev: Record<string, boolean>) => ({ ...prev, [id]: !prev[id] }));
   }, []);
 
   // Accept all

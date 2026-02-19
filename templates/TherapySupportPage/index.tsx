@@ -8,8 +8,9 @@ import Answer from "@/components/Answer";
 import { useI18n } from "@/lib/i18n-client";
 import { useFileUploadFlow } from "@/hooks/useFileUploadFlow";
 import ModalPIIReview from "@/components/ModalPIIReview";
+import ModalDocumentPreview from "@/components/ModalDocumentPreview";
+import AttachmentChip from "@/components/AttachmentChip";
 import NERStatusBadge from "@/components/NERStatusBadge";
-import { getPageForOffset } from "../../lib/pseudonymization/file-extract";
 
 type Props = {
   title: string;
@@ -37,9 +38,10 @@ const TherapySupportPage = ({
   contactEmail,
 }: Props) => {
   const [message, setMessage] = useState<string>("");
+  const [previewVisible, setPreviewVisible] = useState(false);
   const { t } = useI18n();
 
-  // SPEC-007a: File upload flow with pseudonymization
+  // SPEC-007a / SPEC-007b: File upload flow with pseudonymization
   const uploadFlow = useFileUploadFlow();
 
   return (
@@ -78,6 +80,15 @@ const TherapySupportPage = ({
 
       {/* Message Input with File Upload */}
       <div>
+        {/* SPEC-007b §3.3: Attachment chip — only when upload succeeded (pseudonymizedText proof) */}
+        {uploadFlow.pseudonymizedText && uploadFlow.documentLabel && (
+          <AttachmentChip
+            documentLabel={uploadFlow.documentLabel}
+            onRemove={uploadFlow.clearAttachment}
+            onClick={() => setPreviewVisible(true)}
+          />
+        )}
+
         <Message
           value={message}
           onChange={(e: any) => setMessage(e.target.value)}
@@ -96,7 +107,7 @@ const TherapySupportPage = ({
         )}
       </div>
 
-      {/* PII Review Modal (File Mode) */}
+      {/* PII Review Modal (File Mode) — SPEC-007b Phase 1: DocumentPreview */}
       <ModalPIIReview
         visible={uploadFlow.reviewVisible}
         onClose={uploadFlow.handleCancelReview}
@@ -107,10 +118,21 @@ const TherapySupportPage = ({
         onSend={uploadFlow.handleConfirmUpload}
         sending={uploadFlow.uploading}
         mode="file"
-        getPageNumber={(item) =>
-          getPageForOffset(item.start, uploadFlow.pageBoundaries)
-        }
+        documentLabel={uploadFlow.documentLabel ?? undefined}
+        extractedText={uploadFlow.extractedText || undefined}
+        pageBoundaries={uploadFlow.pageBoundaries}
       />
+
+      {/* SPEC-007b §3.4: Post-confirm read-only preview — owner can reveal original */}
+      {uploadFlow.pseudonymizedText && uploadFlow.documentLabel && (
+        <ModalDocumentPreview
+          visible={previewVisible}
+          onClose={() => setPreviewVisible(false)}
+          documentLabel={uploadFlow.documentLabel}
+          pseudonymizedText={uploadFlow.pseudonymizedText}
+          mapping={uploadFlow.mapping}
+        />
+      )}
     </Layout>
   );
 };
