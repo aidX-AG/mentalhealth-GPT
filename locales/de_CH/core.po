@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-18 13:43+0000\n"
+"PO-Revision-Date: 2026-02-19 13:16+0000\n"
 "Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/de_CH/>\n"
@@ -456,10 +456,10 @@ msgid "Customizable institutional AI models"
 msgstr "Anpassbare institutionelle KI-Modelle"
 
 msgid "Dark"
-msgstr "Dunkel"
+msgstr "dunkel"
 
 msgid "Dark mode"
-msgstr "Dunkler Modus"
+msgstr "dunkler Modus"
 
 msgid "Data Privacy Infrastructure Live in Switzerland"
 msgstr "Datenschutzinfrastruktur Live in der Schweiz"
@@ -508,7 +508,7 @@ msgid "Dexter"
 msgstr "Dexter"
 
 msgid "Diagnosis Support"
-msgstr "Diagnoseunterstützung"
+msgstr "Diagnose Support"
 
 msgid "Discord"
 msgstr "Zwietracht"
