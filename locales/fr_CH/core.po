@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-05 14:34+0000\n"
+"PO-Revision-Date: 2026-02-19 13:16+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/core/fr_CH/>\n"
@@ -1650,10 +1650,8 @@ msgstr "Lecteur vidéo YouTube"
 msgid "zoom-in"
 msgstr "zoom avant"
 
-#, fuzzy
-#| msgid "Upload"
 msgid "Upload file"
-msgstr "Télécharger"
+msgstr "Télécharger le fichier"
 
 #~ msgid ""
 #~ " is currently under development. It will gradually become available as we "
