@@ -26,17 +26,13 @@ if [[ ! -d "out" ]]; then
   exit 1
 fi
 
-echo "🧹  Deploye zu Nginx…"
+echo "🖼   Kopiere public/ Inhalte (Images, Worker, Locales) …"
 mkdir -p "$DEST"
-rsync -av --delete \
-  --exclude='images/**' \
-  --exclude='uploads/**' \
-  --exclude='.well-known/**' \
-  out/ "$DEST/"
-
 if [[ -d "public" ]]; then
-  echo "🖼   Kopiere public/ Inhalte…"
   rsync -av public/ "$DEST/"
 fi
+
+echo "🧹  Deploye Next.js Build zu Nginx …"
+rsync -av   --exclude='images/**'   --exclude='uploads/**'   --exclude='.well-known/**'   out/ "$DEST/"
 
 echo "✅  DEV DEPLOYMENT FERTIG! App ist live mit dev Version"
