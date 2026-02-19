@@ -21,7 +21,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Modal from "@/components/Modal";
-import { useI18n } from "@/lib/i18n-client";
+import { useI18n } from "@/lib/i18n/I18nContext";
 import { depseudonymize } from "../../lib/pseudonymization";
 import type { PseudonymizationMapping } from "../../lib/pseudonymization";
 

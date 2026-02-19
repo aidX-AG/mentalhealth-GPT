@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 import Chat from "@/components/Chat";
 import Message from "@/components/Message";
 import Answer from "@/components/Answer";
-import { useI18n } from "@/lib/i18n-client";
+import { useI18n } from "@/lib/i18n/I18nContext";
 import { useFileUploadFlow } from "@/hooks/useFileUploadFlow";
 import ModalPIIReview from "@/components/ModalPIIReview";
 import ModalDocumentPreview from "@/components/ModalDocumentPreview";

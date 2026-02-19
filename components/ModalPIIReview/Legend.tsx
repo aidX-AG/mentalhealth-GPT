@@ -7,7 +7,7 @@
 // - Interaction hint: avoid arrow glyph for SR clarity
 // ============================================================================
 
-import { useI18n } from "@/lib/i18n-client";
+import { useI18n } from "@/lib/i18n/I18nContext";
 
 const Legend = () => {
   const { t } = useI18n();

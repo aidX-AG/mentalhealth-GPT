@@ -21,7 +21,7 @@
 import { useMemo, useState, useCallback, useEffect } from "react";
 import type { ReviewItem } from "../../src/hooks/usePIIReview";
 import type { PageBoundary } from "../../lib/pseudonymization/file-extract";
-import { useI18n } from "@/lib/i18n-client";
+import { useI18n } from "@/lib/i18n/I18nContext";
 import DetectionSpan from "./DetectionSpan";
 import Legend from "./Legend";
 

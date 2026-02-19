@@ -14,7 +14,7 @@
 // - Remove <button>: clears attachment (onRemove), i18n aria-label
 // ============================================================================
 
-import { useI18n } from "@/lib/i18n-client";
+import { useI18n } from "@/lib/i18n/I18nContext";
 
 interface AttachmentChipProps {
   documentLabel: string; // e.g. "PDF-Dokument (12 Seiten)" — never file.name (SF-8)

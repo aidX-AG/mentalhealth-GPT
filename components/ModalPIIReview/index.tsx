@@ -13,7 +13,7 @@
 
 import Modal from "@/components/Modal";
 import Checkbox from "@/components/Checkbox";
-import { useI18n } from "@/lib/i18n-client";
+import { useI18n } from "@/lib/i18n/I18nContext";
 import type { ReviewItem } from "../../src/hooks/usePIIReview";
 import type { PageBoundary } from "../../lib/pseudonymization/file-extract";
 import DocumentPreview from "./DocumentPreview";
