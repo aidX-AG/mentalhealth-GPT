@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2026-02-16 13:17+0000\n"
-"Last-Translator: admin <hello@aidx.ch>\n"
+"PO-Revision-Date: 2026-02-19 13:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "pseudonymization/es/>\n"
 "Language: es\n"
@@ -137,144 +137,146 @@ msgstr "No se ha detectado información personal."
 
 #. key: pseudonymization.buttons.reject-all
 msgid "Reject all"
-msgstr ""
+msgstr "Rechazar todo"
 
 #. key: pseudonymization.file.error-type
 msgid "Unsupported file type. Please upload a .txt, .pdf or .docx file."
-msgstr ""
+msgstr "Tipo de archivo no compatible. Sube un archivo .txt, .pdf o .docx."
 
 #. key: pseudonymization.file.error-size
 msgid ""
 "File is too large. Maximum size: 10 MB for text files, 50 MB for PDFs and "
 "Word documents."
 msgstr ""
+"El archivo es demasiado grande. Tamaño máximo: 10 MB para archivos de texto, "
+"50 MB para archivos PDF y documentos de Word."
 
 #. key: pseudonymization.file.error-empty
 msgid "The file is empty. Please select a file with content."
-msgstr ""
+msgstr "El archivo está vacío. Seleccione un archivo con contenido."
 
 #. key: pseudonymization.file.error-no-text
 msgid "No text could be extracted from this file."
-msgstr ""
+msgstr "No se pudo extraer ningún texto de este archivo."
 
 #. key: pseudonymization.file.error-extraction
 msgid "Could not read the file. Please try a different file."
-msgstr ""
+msgstr "No se pudo leer el archivo. Inténtalo con otro archivo."
 
 #. key: pseudonymization.file.error-upload
 msgid "Upload failed. Please check your connection and try again."
-msgstr ""
+msgstr "Error al cargar. Comprueba tu conexión e inténtalo de nuevo."
 
 #. key: pseudonymization.file.phase-validating
 msgid "Validating file…"
-msgstr ""
+msgstr "Validando archivo…"
 
 #. key: pseudonymization.file.phase-extracting
 msgid "Extracting text…"
-msgstr ""
+msgstr "Extrayendo texto…"
 
 #. key: pseudonymization.file.phase-detecting
 msgid "Detecting personal information…"
-msgstr ""
+msgstr "Detección de información personal…"
 
 #. key: pseudonymization.file.phase-uploading
 msgid "Uploading…"
-msgstr ""
+msgstr "Cargando…"
 
 #. key: pseudonymization.file.upload-button
 msgid "Upload document"
-msgstr ""
+msgstr "Subir documento"
 
 #. key: pseudonymization.status.processing
 msgid "Processing…"
-msgstr ""
+msgstr "Procesando…"
 
 #. key: pseudonymization.review.attach-button
 #. CTA in file mode — replaces "Send"
 msgid "Pseudonymise & Attach"
-msgstr ""
+msgstr "Seudonimizar y adjuntar"
 
 #. key: pseudonymization.review.legend-secure
 #. Legend entry for regex or NER ≥ 0.85
 msgid "Securely detected"
-msgstr ""
+msgstr "Detectado de forma segura"
 
 #. key: pseudonymization.review.legend-uncertain
 #. Legend entry for NER 0.60–0.85
 msgid "Uncertain detection"
-msgstr ""
+msgstr "Detección incierta"
 
 #. key: pseudonymization.review.legend-dictionary
 #. Legend entry for dictionary (medical/therapy terms)
 msgid "Technical term"
-msgstr ""
+msgstr "Término técnico"
 
 #. key: pseudonymization.review.detection-singular
 #. Count label when exactly 1 detection
 msgid "1 detection"
-msgstr ""
+msgstr "1 detección"
 
 #. key: pseudonymization.review.detection-plural
 #. Count label when 2+ detections; {{count}} is replaced with the number
 msgid "{{count}} detections"
-msgstr ""
+msgstr "{{count}} detecciones"
 
 #. key: pseudonymization.review.hint-select-one
 #. Shown when all detections are rejected (Send disabled)
 msgid "Please accept at least one detection to proceed."
-msgstr ""
+msgstr "Acepte al menos una detección para continuar."
 
 #. key: pseudonymization.review.page-indicator
 #. Pagination indicator inside document preview; {{current}} and {{total}} are replaced
 msgid "Page {{current}} of {{total}}"
-msgstr ""
+msgstr "Página {{actual}} de {{total}}"
 
 #. key: pseudonymization.review.prev-page
 #. Button label / aria-label for previous page
 msgid "Previous"
-msgstr ""
+msgstr "Anterior"
 
 #. key: pseudonymization.review.next-page
 #. Button label / aria-label for next page
 msgid "Next"
-msgstr ""
+msgstr "Siguiente"
 
 #. key: pseudonymization.review.click-to-toggle
 #. Interaction hint shown in the document preview legend
 msgid "Click to accept or reject"
-msgstr ""
+msgstr "Haga clic para aceptar o rechazar."
 
 #. key: pseudonymization.attachment.preview
 #. aria-label for the AttachmentChip button (opens read-only preview)
 msgid "Open document preview"
-msgstr ""
+msgstr "Abrir vista previa del documento"
 
 #. key: pseudonymization.attachment.remove
 #. aria-label for the ✕ button on the AttachmentChip
 msgid "Remove attachment"
-msgstr ""
+msgstr "Eliminar archivo adjunto"
 
 #. key: pseudonymization.attachment.modal-title
 #. Title of the ModalDocumentPreview
 msgid "Attached document"
-msgstr ""
+msgstr "Documento adjunto"
 
 #. key: pseudonymization.attachment.show-original
 #. Toggle button label: reveals original PII (owner-only, client-side)
 msgid "Show original"
-msgstr ""
+msgstr "Mostrar original"
 
 #. key: pseudonymization.attachment.show-pseudonymized
 #. Toggle button label: hides original, shows pseudonymized tokens
 msgid "Show pseudonymised"
-msgstr ""
+msgstr "Mostrar seudónimo"
 
 #. key: pseudonymization.attachment.export-word
 #. Export button label for Word (.docx) download in ModalDocumentPreview
 msgid "Export Word"
-msgstr ""
+msgstr "Exportar Word"
 
 #. key: pseudonymization.attachment.export-pdf
 #. Export button label for PDF download in ModalDocumentPreview
 msgid "Export PDF"
-msgstr ""
+msgstr "Exportar PDF"
