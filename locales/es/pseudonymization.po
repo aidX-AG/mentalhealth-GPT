@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2026-02-19 16:32+0000\n"
-"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"PO-Revision-Date: 2026-02-19 16:34+0000\n"
+"Last-Translator: admin <hello@aidx.ch>\n"
 "Language-Team: Spanish <http://10.0.1.74:8080/projects/mentalhealth-gpt/"
 "pseudonymization/es/>\n"
 "Language: es\n"
@@ -244,7 +244,7 @@ msgstr "Siguiente"
 #. key: pseudonymization.review.click-to-toggle
 #. Interaction hint shown in the document preview legend
 msgid "Click to accept or reject"
-msgstr "Haga clic para aceptar o rechazar."
+msgstr "Haga clic para aceptar o rechazar"
 
 #. key: pseudonymization.attachment.preview
 #. aria-label for the AttachmentChip button (opens read-only preview)
@@ -294,4 +294,4 @@ msgstr "Marcado manualmente"
 #. key: pseudonymization.review.manual-hint
 #. Hint shown below document preview to invite manual marking
 msgid "Select text to mark it as PII"
-msgstr "Selecciona el texto para marcarlo como PII."
+msgstr "Selecciona el texto para marcarlo como PII"
