@@ -7,13 +7,13 @@
 // ============================================================================
 
 const TRANSFORMERS_CDN = {
-  baseUrl: "https://models.mentalhealthgpt.ch/vendor/transformers",
+  baseUrl: "https://models.mentalhealth-gpt.ch/vendor/transformers",
   version: "v3.2.0",
   integrity: null, // TODO: Add SHA-256 hash after hosting
 };
 
 const MODEL_CONFIG = {
-  baseUrl: "https://models.mentalhealthgpt.ch/ner",
+  baseUrl: "https://models.mentalhealth-gpt.ch/ner",
   version: "v1.0",
   integrity: null,
 };
