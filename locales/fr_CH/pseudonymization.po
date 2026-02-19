@@ -143,8 +143,8 @@ msgstr "Tout rejeter"
 #. key: pseudonymization.file.error-type
 msgid "Unsupported file type. Please upload a .txt, .pdf or .docx file."
 msgstr ""
-"Type de fichier non pris en charge. Veuillez télécharger un fichier .txt, "
-".pdf ou .docx."
+"Type de fichier non pris en charge. Veuillez télécharger un "
+"fichier .txt, .pdf ou .docx."
 
 #. key: pseudonymization.file.error-size
 msgid ""
@@ -285,3 +285,18 @@ msgstr "Exporter Word"
 #. Export button label for PDF download in ModalDocumentPreview
 msgid "Export PDF"
 msgstr "Exporter au format PDF"
+
+#. key: pseudonymization.review.mark-as-pii
+#. Floating popup button label for manual PII marking (SPEC-007a §4.5)
+msgid "Mark as PII"
+msgstr ""
+
+#. key: pseudonymization.review.manual-label
+#. Badge label in review list for manually marked items (source: 'manual')
+msgid "Manually marked"
+msgstr ""
+
+#. key: pseudonymization.review.manual-hint
+#. Hint shown below document preview to invite manual marking
+msgid "Select text to mark it as PII"
+msgstr ""
