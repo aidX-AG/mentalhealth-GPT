@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mentalhealthgpt\n"
-"PO-Revision-Date: 2026-02-19 13:16+0000\n"
+"PO-Revision-Date: 2026-02-19 16:32+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: German (Switzerland) <http://10.0.1.74:8080/projects/"
 "mentalhealth-gpt/pseudonymization/de_CH/>\n"
@@ -290,14 +290,14 @@ msgstr "PDF exportieren"
 #. key: pseudonymization.review.mark-as-pii
 #. Floating popup button label for manual PII marking (SPEC-007a §4.5)
 msgid "Mark as PII"
-msgstr ""
+msgstr "Als personenbezogene Daten kennzeichnen"
 
 #. key: pseudonymization.review.manual-label
 #. Badge label in review list for manually marked items (source: 'manual')
 msgid "Manually marked"
-msgstr ""
+msgstr "Manuell markiert"
 
 #. key: pseudonymization.review.manual-hint
 #. Hint shown below document preview to invite manual marking
 msgid "Select text to mark it as PII"
-msgstr ""
+msgstr "Text auswählen, um ihn als PII zu markieren"
