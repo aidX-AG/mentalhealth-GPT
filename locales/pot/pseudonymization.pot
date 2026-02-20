@@ -280,5 +280,5 @@ msgstr ""
 
 #. key: pseudonymization.review.manual-hint
 #. Hint shown below document preview to invite manual marking
-msgid "Select text to mark it as PII"
+msgid "Select text with cursor for additional pseudonymization"
 msgstr ""

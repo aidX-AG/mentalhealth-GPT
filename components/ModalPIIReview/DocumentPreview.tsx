@@ -317,7 +317,7 @@ const DocumentPreview = ({
 
       {/* Manual marking hint */}
       {!readOnly && onManualAdd && (
-        <p className="text-xs text-n-4 dark:text-n-3 flex items-center gap-1">
+        <p className="text-xs text-red-500 flex items-center gap-1">
           <span aria-hidden="true">✎</span>
           {t("pseudonymization.review.manual-hint")}
         </p>

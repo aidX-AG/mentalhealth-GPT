@@ -298,5 +298,5 @@ msgstr "Marqué manuellement"
 
 #. key: pseudonymization.review.manual-hint
 #. Hint shown below document preview to invite manual marking
-msgid "Select text to mark it as PII"
-msgstr "Sélectionnez le texte pour le marquer comme PII"
+msgid "Select text with cursor for additional pseudonymization"
+msgstr "Sélectionner du texte avec le curseur pour pseudonymiser davantage"
