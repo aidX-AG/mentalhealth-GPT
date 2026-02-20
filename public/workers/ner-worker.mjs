@@ -8,7 +8,7 @@
 
 const TRANSFORMERS_CDN = {
   baseUrl: "https://models.mentalhealth-gpt.ch/vendor/transformers",
-  version: "v3.2.0",
+  version: "v2.17.2", // @xenova/transformers — browser-ready ESM bundle
   integrity: null, // TODO: Add SHA-256 hash after hosting
 };
 
@@ -79,7 +79,9 @@ async function initModel() {
     env.useBrowserCache = true;
     env.cacheDir = "transformers-cache";
     env.allowRemoteModels = false;
-    env.remoteHost = MODEL_CONFIG.baseUrl;
+    // WASM files come from jsDelivr (onnxruntime-web@1.14.0 = peer of @xenova/transformers@2.17.2)
+    // Required because the self-hosted JS is not at the same path as the WASM files
+    env.backends.onnx.wasm.wasmPaths = "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.14.0/dist/";
 
     postMsg({ type: "progress", percent: 15, message: "Loading NER model..." });
 

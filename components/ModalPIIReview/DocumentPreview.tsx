@@ -122,7 +122,7 @@ function resolveOffset(node: Node, intraOffset: number): number | null {
 // ---------------------------------------------------------------------------
 
 const LARGE_TEXT_THRESHOLD = 100_000;
-const POPUP_W = 160; // px — used for viewport clamping (hardening fix #5)
+const POPUP_W = 220; // px — used for viewport clamping (hardening fix #5), sized for longest translation
 
 const DocumentPreview = ({
   text,
@@ -276,8 +276,7 @@ const DocumentPreview = ({
           <button
             type="button"
             onClick={handleManualAdd}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-2 text-white text-xs font-medium shadow-lg hover:bg-primary-1 transition-colors whitespace-nowrap"
-            style={{ width: POPUP_W }}
+            className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-primary-2 text-white text-xs font-medium shadow-lg hover:bg-primary-1 transition-colors"
           >
             <span aria-hidden="true">✎</span>
             {t("pseudonymization.review.mark-as-pii")}
@@ -288,7 +287,7 @@ const DocumentPreview = ({
       {/* Document text area */}
       <div
         ref={containerRef}
-        className="relative rounded-xl border border-n-3 dark:border-n-5 bg-n-1 dark:bg-n-7 p-4 min-h-32 max-h-72 overflow-y-auto"
+        className="relative rounded-xl border border-n-3 dark:border-n-5 bg-n-1 dark:bg-n-7 p-4 min-h-32 max-h-[22rem] overflow-y-auto"
         onMouseUp={handleMouseUp}
       >
         <p className="text-sm leading-relaxed text-n-7 dark:text-n-1 whitespace-pre-wrap break-words">
@@ -315,6 +314,14 @@ const DocumentPreview = ({
           </div>
         )}
       </div>
+
+      {/* Manual marking hint */}
+      {!readOnly && onManualAdd && (
+        <p className="text-xs text-n-4 dark:text-n-3 flex items-center gap-1">
+          <span aria-hidden="true">✎</span>
+          {t("pseudonymization.review.manual-hint")}
+        </p>
+      )}
 
       {/* Page navigation */}
       {usePagination && displayedTotalPages > 1 && (
